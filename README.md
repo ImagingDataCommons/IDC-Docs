@@ -6,7 +6,7 @@
 * how does it fit into CRDC?
 * who this documentation is for?
 
-
+![](.gitbook/assets/image.png)
 
 {% tabs %}
 {% tab title="First Tab" %}
