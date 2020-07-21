@@ -9,7 +9,6 @@
 * [IDC and Google Cloud Platform](introduction/idc-and-google-cloud-platform.md)
 * [Frequently Asked Questions](introduction/frequently-asked-questions.md)
 * [Support](introduction/support.md)
-* [Untitled](introduction/untitled.md)
 
 ## Data
 

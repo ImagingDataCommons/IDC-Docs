@@ -10,9 +10,5 @@
 
 ### TCIA or IDC?
 
-
-
 ### Where do I learn more about other components of CRDC?
-
-## Something else ...
 
