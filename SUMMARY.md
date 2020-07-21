@@ -17,6 +17,8 @@
 ## Portal
 
 * [Getting Started](portal/getting-started.md)
+* [Data exploration and Cohorts](portal/data-exploration-and-cohorts.md)
+* [Visualization](portal/visualization.md)
 
 ## API
 
