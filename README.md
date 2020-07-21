@@ -2,7 +2,7 @@
 
 ### IDC and Cancer Research Data Commons
 
-* what is IDC?
+* what is IDC?  sd
 * how does it fit into CRDC?
 * who this documentation is for?
 
