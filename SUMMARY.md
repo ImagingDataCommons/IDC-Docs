@@ -10,3 +10,7 @@
 
 * [Getting Started](portal/getting-started.md)
 
+## API
+
+* [Getting Started](api/getting-started.md)
+
