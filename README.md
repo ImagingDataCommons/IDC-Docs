@@ -1,7 +1,5 @@
 # Welcome!
 
-### IDC and Cancer Research Data Commons
-
 Imaging Data Commons \(IDC\) is a new node of the [Cancer Research Data Commons \(CRDC\)](https://datacommons.cancer.gov/) infrastructure being established by the National Cancer Institute.
 
 CRDC is a cloud-based data science infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data. 

@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome!](README.md)
+* [Core functions of IDC](core-functions-of-idc.md)
 * [IDC key pointers](idc-key-pointers.md)
 
 ## Introduction
