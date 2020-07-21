@@ -1,2 +1,2 @@
-# Visualization
+# Image visualization
 
