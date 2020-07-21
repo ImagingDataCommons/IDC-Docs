@@ -1,4 +1,12 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Introduction](README.md)
+
+## Data
+
+* [Introduction](data/introduction.md)
+
+## Portal
+
+* [Getting Started](portal/getting-started.md)
 
