@@ -13,19 +13,3 @@ IDC is a cloud-based resource that **connects** researchers with
 
 ![https://datacommons.cancer.gov/](https://lh4.googleusercontent.com/oYBmev9wh7-07bdVyY-a8xOM7TUXhoDLbBnDWCz8gOfsMTvPeucf02sgwmKtjV__lQIgxJiceWeRsODo4hqpxtQ8_YNplE7_JGEgQzz_Qn00X4knNkjvqR1CtrYr2ZnEF50zbataG78)
 
-![](.gitbook/assets/image.png)
-
-{% tabs %}
-{% tab title="First Tab" %}
-
-{% endtab %}
-
-{% tab title="Second Tab" %}
-
-{% endtab %}
-{% endtabs %}
-
-{% hint style="success" %}
-
-{% endhint %}
-
