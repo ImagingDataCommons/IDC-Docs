@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome!](README.md)
+* [IDC key pointers](idc-key-pointers.md)
 
 ## Introduction
 
