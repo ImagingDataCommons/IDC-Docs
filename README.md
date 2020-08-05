@@ -1,8 +1,10 @@
 # Welcome!
 
-Imaging Data Commons \(IDC\) is a new node of the [Cancer Research Data Commons \(CRDC\)](https://datacommons.cancer.gov/).
+Imaging Data Commons \(IDC\) is a new node of the [Cancer Research Data Commons \(CRDC\)](https://datacommons.cancer.gov/). IDC is being built by a [consortium of partners](https://imagingdatacommons.github.io/team/) led by the Brigham and Women's Hospital. IDC contract was awarded in the Summer 2019, and is funded for 4 years.
 
 CRDC is being established by the National Cancer Institute as a cloud-based data science infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data. 
+
+Other CRDC components include data nodes \(Genomic Data Commons, Proteomics Data Commons, Integrative Canine Data Commons\) and cloud resources that provide computation capabilities \(ISB-CGC, Seven Bridges and Terra\).
 
 IDC is a cloud-based resource that **connects** researchers with 
 
