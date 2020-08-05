@@ -1,4 +1,4 @@
-# IDC overview
+# Features
 
 The following components and capabilities are being developed by IDC:
 

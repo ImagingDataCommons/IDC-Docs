@@ -8,7 +8,7 @@
 
 ## Introduction
 
-* [IDC overview](introduction/idc-and-google-cloud-platform.md)
+* [Features](introduction/idc-and-google-cloud-platform.md)
 * [Google Cloud Platform](introduction/google-cloud-platform.md)
 * [DICOM](introduction/dicom.md)
 
