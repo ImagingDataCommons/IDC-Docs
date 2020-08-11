@@ -1,10 +1,11 @@
 # Table of contents
 
 * [Welcome!](README.md)
-* [Core functions of IDC](core-functions-of-idc.md)
-* [IDC key pointers](idc-key-pointers.md)
-* [Support](support.md)
+* [Core functions](core-functions-of-idc.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
+* [Support](support.md)
+* [Team](team.md)
+* [Key pointers](idc-key-pointers.md)
 
 ## Introduction
 
@@ -15,9 +16,9 @@
 ## Data
 
 * [Introduction](data/introduction.md)
-* [Collections available](data/collections-available.md)
 * [Organization of data](data/organization-of-data.md)
-* [Release notes](data/release-notes.md)
+* [Versioning](data/versioning.md)
+* [Data release notes](data/data-release-notes.md)
 
 ## DICOM
 
@@ -28,7 +29,7 @@
 * [Getting Started](portal/getting-started.md)
 * [Data exploration and Cohorts](portal/data-exploration-and-cohorts.md)
 * [Image visualization](portal/visualization.md)
-* [Release notes](portal/release-notes.md)
+* [Portal release notes](portal/release-notes.md)
 
 ## API
 

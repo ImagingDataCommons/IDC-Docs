@@ -1,4 +1,4 @@
-# IDC key pointers
+# Key pointers
 
 Portal: **TBD**
 

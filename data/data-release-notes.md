@@ -2,7 +2,7 @@
 description: just a placeholder for now
 ---
 
-# Portal release notes
+# Data release notes
 
 ## 15.0.0 - 2042-12-03
 
