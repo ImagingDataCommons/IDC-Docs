@@ -12,3 +12,7 @@ Check out [Data release notes](data-release-notes.md) for the information about 
 
 In the following pages we discuss how to access datasets hosted by IDC, and their organization.
 
+{% hint style="info" %}
+Our goal is to support the user in utilizing cloud resources for data analysis. Therefore, our documentation focuses on how to use IDC data from the cloud resources, and not from your desktop, as the latter would require downloading the data.
+{% endhint %}
+

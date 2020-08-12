@@ -10,7 +10,15 @@ All of the resources listed below are accessible under the [`canceridc-data` GCP
 
 ### Storage Buckets
 
+Storage buckets are named using the format `idc-tcia-<TCIA_COLLECTION_NAME>`, where `TCIA_COLLECTION_NAME` corresponds to the collection name in the collections table here.
 
+Within the bucket, DICOM files are organized using the following directory naming conventions:
+
+`dicom/<StudyInstanceUID>/<SeriesInstanceUID>/<SOPInstanceUID>.dcm`
+
+where `*InstanceUID`s correspond to the respective value of the DICOM attributes in the stored DICOM files.
+
+You can read about accessing GCP storage buckets from a Compute VM [here](https://cloud.google.com/compute/docs/disks/gcs-buckets).
 
 ### DICOM Stores
 
