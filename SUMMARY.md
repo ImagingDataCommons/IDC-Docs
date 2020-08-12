@@ -12,6 +12,8 @@
 * [Features](introduction/idc-and-google-cloud-platform.md)
 * [Google Cloud Platform](introduction/google-cloud-platform.md)
 * [DICOM](introduction/dicom.md)
+* [Getting started with GCP](introduction/getting-started-with-gcp.md)
+* [Requesting GCP cloud credits](introduction/requesting-gcp-cloud-credits.md)
 
 ## Data
 
