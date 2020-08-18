@@ -22,5 +22,7 @@ You can read about accessing GCP storage buckets from a Compute VM [here](https:
 
 ### DICOM Stores
 
+All of the publicly available DICOM collections hosted by IDC are available in the single DICOM store &lt;LINK/LOCATION TBD&gt;
+
 ### BigQuery Tables
 

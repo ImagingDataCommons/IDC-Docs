@@ -1,7 +1,7 @@
 # Requesting GCP cloud credits
 
 {% hint style="info" %}
-Note that if you a first-time user of GCP, [you can get $300 of free GCP credits to be used within 1 year](https://cloud.google.com/free) without any application process! 
+Note that if you a first-time user of GCP, [you can get $300 of GCP credits ](https://cloud.google.com/free)for a 3-month free trial without any application process! 
 {% endhint %}
 
 We are offering free Google Cloud credits for researchers to try out our platform! To get trial funding in an IDC project, please send your request to [canceridc+support-email@discoursemail.com](mailto:canceridc+support-email@discoursemail.com).
