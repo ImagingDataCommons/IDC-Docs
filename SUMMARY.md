@@ -24,7 +24,7 @@
 
 ## DICOM
 
-* [Untitled](dicom/untitled.md)
+* [Getting started](dicom/untitled.md)
 
 ## Portal
 
@@ -44,5 +44,9 @@
 
 ## Cookbook
 
-* [Untitled](cookbook/untitled.md)
+* [DICOM](cookbook/untitled.md)
+* [Notebooks](cookbook/notebooks.md)
+* [BigQuery](cookbook/bigquery.md)
+* [Data Studio](cookbook/data-studio.md)
+* [Virtual Machines](cookbook/virtual-machines.md)
 
