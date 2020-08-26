@@ -2,7 +2,7 @@
 
 While the possibilities of what you can do with the IDC hosted data are endless, we 
 
-1. use the IDC portal to form the cohort
+1. use the IDC portal to build a cohort of cases that are needed for your use case
 2. interrogate the DICOM metadata directly using BigQuery Console
 3. use Google Collab notebooks to operate on the cohort or to explore the data
 4. use Google DataLab to build interactive data dashboards for your cohort

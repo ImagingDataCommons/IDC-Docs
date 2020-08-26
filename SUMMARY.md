@@ -5,7 +5,6 @@
 * [Core functions](core-functions-of-idc.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Support](support.md)
-* [Team](team.md)
 * [Key pointers](idc-key-pointers.md)
 
 ## Introduction
