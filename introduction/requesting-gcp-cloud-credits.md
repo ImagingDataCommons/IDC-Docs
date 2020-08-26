@@ -1,12 +1,12 @@
 # Requesting GCP cloud credits
 
 {% hint style="info" %}
-Note that if you a first-time user of GCP, [you can get $300 of GCP credits ](https://cloud.google.com/free)for a 3-month free trial without any application process! 
+If you a first-time user of GCP, [you can get $300 of GCP credits ](https://cloud.google.com/free)for a 3-month free trial without any application process! 
 {% endhint %}
 
-We are offering free Google Cloud credits for researchers to try out our platform! To get trial funding in an IDC project, please send your request to [canceridc+support-email@discoursemail.com](mailto:canceridc+support-email@discoursemail.com).
+We are offering free Google Cloud credits for researchers to try out our platform! To get trial funding in an IDC project, please send your request to [support@canceridc.dev](mailto:support@canceridc.dev).
 
-In your request, please describe your research goals in some detail, including information such as 
+In your request, please describe your research goals, including information such as 
 
 * details about your research project \(what you plan to do, what is the source of funding that is supporting your research, if applicable, what is the timeline of your project\);
 * the type of data that you plan to use \(whether it is your own data or data already hosted by the IDC\);
@@ -15,7 +15,7 @@ In your request, please describe your research goals in some detail, including i
 
 Please let us know if you have students or collaborators who will also be accessing the same cloud project. Teams working on a single project should all use the same cloud project. If your group is large, we will take this into consideration in determining the funding we can supply.
 
-If you have previous experience using the Google Cloud Platform, that would be useful for us to know – including which specific components \(_e.g._ Compute Engine, BigQuery, Cloud Datalab, _etc_\).
+If you have previous experience using the Google Cloud Platform, that would be useful for us to know – including which specific components such as Compute Engine or BigQuery.
 
 All reasonable requests will receive an initial allocation of $300 towards storage and compute costs. We expect that this amount of funding will be more than enough for you to become familiar with the platform. If you expect that you will need additional funding to complete your planned research, this initial amount may be used to perform prototype analyses and to better estimate your total costs. At that time, you may request additional funding.
 

@@ -3,7 +3,7 @@
 DICOM standard is one of the key foundation components of the IDC. In the following we summarize the relevant characteristics of the DICOM standard, and provide relevant pointers, to support our decision to use DICOM in IDC both for data representation and as a communication protocol.
 
 {% hint style="info" %}
-DICOM is the _comprehensive standard for the management and communication of medical imaging information and imaging-related data_. 
+DICOM is the comprehensive standard for the management and communication of medical imaging information and imaging-related data. 
 {% endhint %}
 
 DICOM is used universally in clinical operations involving acquisition, communication, visualization and interpretation of radiological and cardiological images, and is used increasingly for all enterprise imaging applications, including medical photography, ophthalmology, dermatology, and more recently, for whole slide imaging for histopathology and cytology. 

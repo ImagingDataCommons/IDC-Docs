@@ -16,3 +16,5 @@
 
 ### Is it free to use IDC?
 
+[https://cloud.google.com/free](https://cloud.google.com/free)
+

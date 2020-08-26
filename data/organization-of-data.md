@@ -1,7 +1,5 @@
 # Organization of data
 
-**TODO: need to check with the ISB team where TCGA clinical data lives**
-
 IDC approach to storage and management of DICOM data is relying on the Google Cloud Platform [Healthcare API](https://cloud.google.com/healthcare/docs/how-tos/dicom). We maintain three representations of the data, which are fully synchronized and correspond to the same dataset, but are intended to serve different use cases.
 
 {% hint style="warning" %}
@@ -24,7 +22,9 @@ You can read about accessing GCP storage buckets from a Compute VM [here](https:
 
 ### BigQuery Tables
 
-Google [BigQuery \(BQ\)](https://cloud.google.com/bigquery) is a massively-parallel analytics engine ideal for working with tabular data. IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. IDC users can access this table to conduct detailed exploration of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal.
+Google [BigQuery \(BQ\)](https://cloud.google.com/bigquery) is a massively-parallel analytics engine ideal for working with tabular data. IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Healthcare API documentation article.
+
+IDC users can access this table to conduct detailed exploration of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal.
 
 In addition to the DICOM metadata tables, we maintain several additional tables that curate metadata non-DICOM metadata \(e.g., attribution of a given item to a specific collection and DOI, collection-level metadata, etc\).
 
@@ -35,4 +35,10 @@ In addition to the BQ tables, we maintain several BQ views \(read more about BQ 
 ### DICOM Stores
 
 IDC MVP utilizes a single Google Healthcare DICOM store to host all of the collections. That store, however, is primarily intended to support visualization of the data using OHIF Viewer. At this time, we do not support access of the hosted data via DICOMWeb interface by the IDC users. See more details in the [discussion here](https://discourse.canceridc.dev/t/dicomweb-access-to-hosted-collections/69).
+
+### BigQuery tables external to IDC
+
+In addition to the DICOM data, some of the image-related data hosted by IDC is stored in additional tables. These include the following:
+
+* BigQuery TCGA clinical data: [`isb-cgc:TCGA_bioclin_v0.clinical_v1`](https://console.cloud.google.com/bigquery?project=isb-cgc&p=isb-cgc&d=TCGA_bioclin_v0&t=clinical_v1&page=table) . Note that this table is hosted under the ISB-CGC Google project, as documented [here](https://isb-cancer-genomics-cloud.readthedocs.io/en/latest/sections/BigQuery/ISBCGC-BQ-Projects.html), and its location may change in the future!
 

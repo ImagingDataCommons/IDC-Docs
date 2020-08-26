@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome!](README.md)
+* [Getting started with IDC](getting-started-with-idc.md)
 * [Core functions](core-functions-of-idc.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Support](support.md)
@@ -24,7 +25,9 @@
 
 ## DICOM
 
-* [Getting started](dicom/untitled.md)
+* [Introduction](dicom/untitled.md)
+* [Data model](dicom/data-model.md)
+* [Original vs Derived objects](dicom/original-vs-derived-objects.md)
 
 ## Portal
 
@@ -40,7 +43,7 @@
 
 ## Analysis
 
-* [Untitled](analysis/untitled.md)
+* [Getting Started](analysis/untitled.md)
 
 ## Cookbook
 
@@ -48,5 +51,5 @@
 * [Notebooks](cookbook/notebooks.md)
 * [BigQuery](cookbook/bigquery.md)
 * [Data Studio](cookbook/data-studio.md)
-* [Virtual Machines](cookbook/virtual-machines.md)
+* [Compute Engine](cookbook/virtual-machines.md)
 
