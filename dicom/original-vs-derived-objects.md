@@ -13,7 +13,7 @@ Most of the images stored on IDC are saved as objects that store individual slic
 Open source libraries such as DCMTK, GDCM, ITK, and pydicom can be used to parse such files and load pixel data of the individual slices. Recovering geometry of the individual slices \(spatial location and resolution\) and reconstruction of the individual slices into a volume requires some extra consideration.
 
 {% hint style="danger" %}
-It is not safe to assume that sorting individual instances using file name, or any attribute other than those that communicate image geometry \(`ImagePositionPatient`, `ImageOrientationPatient`, and `PixelSpacing`\) will result in accurate geometric ordering of slices!
+It is not safe to sort individual instances using file name, or any attribute other than those that communicate image geometry \(`ImagePositionPatient`, `ImageOrientationPatient`, and `PixelSpacing`\). This may result in accurate geometric ordering of slices!
 {% endhint %}
 
 We point this out, because even some prominent examples utilize oversimplified approaches to of recovering image geometry from DICOM files. As an example, this [DICOM data preprocessing tutorial from Kaggle](https://www.kaggle.com/gzuidhof/full-preprocessing-tutorial) uses `ImagePositionPatient` alone to infer slice spacing. This approach will result in incorrect computed slice spacing for oblique acquisitions \(i.e., see example below\).
@@ -22,11 +22,21 @@ We point this out, because even some prominent examples utilize oversimplified a
 
 Although in most cases a DICOM image series will correspond to a single traversal of a 3-d volume, in the general case case it may have multiple slices for the same spatial location \(e.g., for temporally-resolved acquisitions\). It is also, unfortunately, possible that DICOM series, as available to you, will have missing slices and, as a result, inconsistent spacing between slices.
 
-It is therefore our recommendation that if your analysis of the IDC data involves anything other than independent analysis of the individual image slices, you use one of the existing tools to reconstruct image volume instead of implementing this on your own:
+You can use one of the existing tools to reconstruct image volume instead of implementing sorting of the slices on your own:
 
 * dcm2niix
 * plastimatch
 * ITK readers?
+
+If you want to sort slices on your own, you can see examples of how this can be done in the following places:
+
+* Slicer - Python
+* DCMTK - somewhere in util
+
+### Derived objects
+
+* add references to dcmqi, highdicom
+* reference DICOM4QI for what are the other tools that support
 
 
 
