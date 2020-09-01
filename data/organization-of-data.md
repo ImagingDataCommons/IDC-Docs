@@ -32,6 +32,8 @@ TODO: transfer the tables summary from [this document ](https://docs.google.com/
 
 In addition to the BQ tables, we maintain several BQ views \(read more about BQ views here\) 
 
+* `canceridc-data.idc_views.dicom_all -` DICOM metadata together with the collection-level metadata
+
 ### DICOM Stores
 
 IDC MVP utilizes a single Google Healthcare DICOM store to host all of the collections. That store, however, is primarily intended to support visualization of the data using OHIF Viewer. At this time, we do not support access of the hosted data via DICOMWeb interface by the IDC users. See more details in the [discussion here](https://discourse.canceridc.dev/t/dicomweb-access-to-hosted-collections/69).

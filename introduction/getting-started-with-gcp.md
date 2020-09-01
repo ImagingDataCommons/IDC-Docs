@@ -8,4 +8,7 @@ TODO \(should be able to reuse ISB-CGC content?\):
 * how to set up billing
 * what to expect
 * good practices to avoid unexpected expenses
+* how to pin useful components on the console
+
+
 

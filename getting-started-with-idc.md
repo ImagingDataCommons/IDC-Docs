@@ -8,3 +8,14 @@ While the possibilities of what you can do with the IDC hosted data are endless,
 4. use Google DataLab to build interactive data dashboards for your cohort
 5. deploy existing tools on a GCP Virtual Machine to support visualization and analysis of the data from your cohort
 
+| What you can do | What you need to do it |
+| :--- | :--- |
+| Interact with the IDC portal to explore and build a cohort | no prerequisites |
+| Visualize images hosted on IDC | no prerequisites, daily quota in place based on your IP |
+| Save cohorts using IDC portal | account on IDC platform |
+| Save your IDC cohort under your project in Google Cloud | Google account, Google Cloud project, free operations under [BigQuery sandbox](https://cloud.google.com/bigquery/docs/sandbox) subject to [limits](https://cloud.google.com/bigquery/docs/sandbox#limits) |
+| Use [Google BigQuery](https://cloud.google.com/bigquery) to further explore metadata for your cohort | Google account, Google Cloud project, free operations under [BigQuery sandbox](https://cloud.google.com/bigquery/docs/sandbox) subject to [limits](https://cloud.google.com/bigquery/docs/sandbox#limits) |
+| Use [Google Colab](https://colab.research.google.com/) notebooks to further explore and do preliminary analysis of your cohort |  |
+| Use [Google DataStudio](https://datastudio.google.com/) to build dashboards for your cohort |  |
+| Use Google Compute or AI Notebooks Virtual Machines to do the analysis of the cohort |  |
+
