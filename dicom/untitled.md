@@ -29,5 +29,9 @@ When you use IDC portal to build your cohort, unique identifiers for the object 
 
 A somewhat relate attribute that hints at the type of object is `Modality`, which is defined by the standard as "Type of equipment that originally acquired the data used to create the images in this Series", and is expected to take one of the values from [this list](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.3.html#sect_C.7.3.1.1.1). However, `Modality` is not equivalent to `SOPClassUID`, and should not be used as a substitute. As an example it is possible that data derived from the original modality could be saved as a different object class, but keep the value of modality identical.
 
+{% hint style="info" %}
+You can see all of the attributes of a DICOM instance using IDC OHIF Viewer as described in ..., or you can use one of the many publicly available tools to examine the DICOM attributes of a downloaded DICOM file.
+{% endhint %}
+
 
 

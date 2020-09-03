@@ -18,7 +18,7 @@ It is not safe to sort individual instances using file name, or any attribute ot
 
 We point this out, because even some prominent examples utilize oversimplified approaches to of recovering image geometry from DICOM files. As an example, this [DICOM data preprocessing tutorial from Kaggle](https://www.kaggle.com/gzuidhof/full-preprocessing-tutorial) uses `ImagePositionPatient` alone to infer slice spacing. This approach will result in incorrect computed slice spacing for oblique acquisitions \(i.e., see example below\).
 
-![Fallacy of using ImagePositionPatient\[2\] for calculating slice spacing](../.gitbook/assets/spacing_issue.png)
+![ImagePositionPatient\[2\] for calculating slice spacing for an oblique acquisition leads to incorrect result](../.gitbook/assets/spacing_issue.png)
 
 Although in most cases a DICOM image series will correspond to a single traversal of a 3-d volume, in the general case case it may have multiple slices for the same spatial location \(e.g., for temporally-resolved acquisitions\). It is also, unfortunately, possible that DICOM series, as available to you, will have missing slices and, as a result, inconsistent spacing between slices.
 
@@ -35,8 +35,26 @@ If you want to sort slices on your own, you can see examples of how this can be 
 
 ### Derived objects
 
-* add references to dcmqi, highdicom
-* reference DICOM4QI for what are the other tools that support
+In IDC we define "derived" DICOM objects as those that are obtained by analyzing or post-processing the "original" image objects. Examples of derived objects can be annotations of the images to define image regions, or to describe findings about those regions, or voxel-wise parametric maps calculated for the original images.
+
+Although DICOM standard provides a variety of mechanisms that can be used to store specific types of derived objects, most of the image-derived objects currently stored in IDC fall into the following categories:
+
+* voxel segmentations stored as DICOM Segmentation objects
+* segmentations defined as a set of planar regions stored as DICOM Radiotherapy Structure Set objects
+* quantitative measurements and qualitative evaluations for the regions defined by DICOM Segmentations, those will be stored as a specific type of DICOM Structured Reporting \(SR\) objects that follows DICOM SR template [TID 1500 "Measurements report"](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_A.html#sect_TID_1500)
+
+The type of the object is defined by the object class unique identifier stored in the `SOPClassUID` attribute of each DICOM object. In the IDC Portal we allow the user to define the search filter based on the human-readable name of the class instead of the value of that identifier.
+
+#### Segmentation objects
+
+DICOM Segmentation object \(SEG\) can be defined by its `SOPClassUID`= .... Unlike most "original" image objects, SEG belongs to the family of _enhanced multiframe_ image objects, which means that it stores all of the frames \(slices\) in a single object. SEG can contain multiple _segments_, segment being a separate label/entity being segmented, with each segment containing one or more frames \(slices\). All of the frames for all of the segments are stored in the `PixelData` attribute of the object. Metadata describing the segments is contained in the `SegmentSequence` of the object.
+
+Typically, it is most expedient to use one of the specialized tools to access the content of SEG. Since the image content of this multi-frame object is often encoded using one bit per pixel representation, and since it can contain multiple segments with potentially spatially overlapping frames, some of the tools that can are commonly used for processing image objects may not be able to parse DICOM SEG correctly. We recommend you use one of the following tools to interpret the content of the DICOM SEG and convert it into alternative representations:
+
+* dcmqi
+* highdicom
+
+#### TID 1500 Structured Reports
 
 
 

@@ -27,6 +27,7 @@
 * [Introduction](dicom/untitled.md)
 * [Data model](dicom/data-model.md)
 * [Original vs Derived objects](dicom/original-vs-derived-objects.md)
+* [Coding schemes](dicom/coding-schemes.md)
 
 ## Portal
 
