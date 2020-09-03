@@ -15,10 +15,6 @@ Datasets that are available within IDC are summarized in this page: URL **TBD**
 
 ### Accessing the IDC Portal
 
-{% hint style="info" %}
-Interaction with the IDC Portal does not require a login!
-{% endhint %}
-
 IDC portal is accessible using a modern web browser such as Chrome, Firefox and Microsoft Edge at the following URL: **https:// ... TBD**
 
 ### Facet Filters
