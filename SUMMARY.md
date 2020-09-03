@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Welcome!](README.md)
-* [Getting started with IDC](getting-started-with-idc.md)
+  * [Getting started with IDC](getting-started-with-idc.md)
 * [Core functions](core-functions-of-idc.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Support](support.md)
