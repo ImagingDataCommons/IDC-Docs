@@ -1,4 +1,4 @@
-# Notebooks
+# Colab Notebooks
 
 Andrey TODO:
 
@@ -6,4 +6,11 @@ Andrey TODO:
 * review items in this folder: [https://drive.google.com/drive/folders/1xX7t3JJB\_IR5j3wTPP4jbcsfLxK5Onmd](https://drive.google.com/drive/folders/1xX7t3JJB_IR5j3wTPP4jbcsfLxK5Onmd)
 
 Add a call for contributions of notebooks! Same for queries or other demos!
+
+
+
+Resources:
+
+* [https://github.com/mdai/ml-lessons/](https://github.com/mdai/ml-lessons/)
+* [http://uwmsk.org/jupyter/](http://uwmsk.org/jupyter/)
 

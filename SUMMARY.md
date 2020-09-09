@@ -26,7 +26,8 @@
 
 * [Introduction](dicom/untitled.md)
 * [Data model](dicom/data-model.md)
-* [Original vs Derived objects](dicom/original-vs-derived-objects.md)
+* [Original objects](dicom/original-vs-derived-objects.md)
+* [Derived objects](dicom/derived-objects.md)
 * [Coding schemes](dicom/coding-schemes.md)
 * [IDC DICOM White papers](dicom/idc-dicom-white-papers.md)
 
@@ -49,7 +50,7 @@
 ## Cookbook
 
 * [DICOM](cookbook/untitled.md)
-* [Notebooks](cookbook/notebooks.md)
+* [Colab Notebooks](cookbook/notebooks.md)
 * [BigQuery](cookbook/bigquery.md)
 * [Data Studio](cookbook/data-studio.md)
 * [Compute Engine](cookbook/virtual-machines.md)
