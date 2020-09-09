@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Welcome!](README.md)
-  * [Getting started with IDC](getting-started-with-idc.md)
+* [Getting started with IDC](getting-started-with-idc.md)
 * [Core functions](core-functions-of-idc.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Support](support.md)
@@ -28,6 +28,7 @@
 * [Data model](dicom/data-model.md)
 * [Original vs Derived objects](dicom/original-vs-derived-objects.md)
 * [Coding schemes](dicom/coding-schemes.md)
+* [IDC DICOM White papers](dicom/idc-dicom-white-papers.md)
 
 ## Portal
 
