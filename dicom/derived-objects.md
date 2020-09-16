@@ -63,3 +63,5 @@ Tools referenced above can be used to 1\) extract qualitative evaluations and qu
 SR-TID1500-specific metadata attributes are available in the table views maintained by IDC. See details [here](../data/organization-of-data.md).
 {% endhint %}
 
+_**TODO: what to do with the results once you generated them**_
+
