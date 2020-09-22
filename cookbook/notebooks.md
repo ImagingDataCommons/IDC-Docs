@@ -1,5 +1,9 @@
 # Colab Notebooks
 
+
+
+Colab limitations: [https://research.google.com/colaboratory/faq.html](https://research.google.com/colaboratory/faq.html)
+
 Andrey TODO:
 
 * transition these to use BQ instead of Pandas? [https://github.com/QIICR/lidc2dicom/blob/master/notebooks/metadata\_verification.ipynb](https://github.com/QIICR/lidc2dicom/blob/master/notebooks/metadata_verification.ipynb) and [https://github.com/QIICR/dicom4miccai-handson/tree/master/notebooks](https://github.com/QIICR/dicom4miccai-handson/tree/master/notebooks)
