@@ -1,10 +1,14 @@
 # Requesting GCP cloud credits
 
 {% hint style="info" %}
-If you a first-time user of GCP, [you can get $300 of GCP credits ](https://cloud.google.com/free)for a 3-month free trial without any application process! 
+Opportunities for free Google Cloud credits provided by Google:
+
+* If you a first-time user of GCP, [you can get $300 of GCP credits ](https://cloud.google.com/free)for a 3-month free trial without any application process
+* You can apply for TPU credits through the [TensorFlow Research Cloud program](https://www.tensorflow.org/tfrc)
+* If you are an academic researcher, you can apply for [Google Research Credits](https://edu.google.com/programs/credits/research/)
 {% endhint %}
 
-We are offering free Google Cloud credits for researchers to try out our platform! To get trial funding in an IDC project, please send your request to [support@canceridc.dev](mailto:support@canceridc.dev).
+IDC is offering free Google Cloud credits for researchers to try out our platform! To get trial funding in an IDC project, please send your request to [support@canceridc.dev](mailto:support@canceridc.dev).
 
 In your request, please describe your research goals, including information such as 
 

@@ -36,7 +36,7 @@
 * [Getting Started](portal/getting-started.md)
 * [Data exploration and Cohorts](portal/data-exploration-and-cohorts.md)
 * [Image visualization](portal/visualization.md)
-* [Portal release notes](portal/release-notes.md)
+* [Portal Release Notes](portal/release-notes.md)
 
 ## API
 
