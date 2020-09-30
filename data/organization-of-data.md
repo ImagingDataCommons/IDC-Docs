@@ -23,7 +23,7 @@ You can read about accessing GCP storage buckets from a Compute VM [here](https:
 All of the IDC buckets are [requester-pays](https://cloud.google.com/storage/docs/requester-pays), which means you will need to provide Project ID for a project that has billing set up if you want to download the data from those buckets. 
 
 {% hint style="warning" %}
-Make sure you understand the [data egress charges](https://cloud.google.com/storage/pricing#network-buckets)! As a general rule of thumb, download of the data to a GCP compute VM is cheap, while download to your local resource is expensive!
+Make sure you understand the [data egress charges](https://cloud.google.com/storage/pricing#network-buckets)! As a general rule of thumb, download of the data to a GCP compute VM is free, while download to your local resource is expensive!
 {% endhint %}
 
 Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below \(see the complete example in :
