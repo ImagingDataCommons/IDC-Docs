@@ -113,7 +113,57 @@ For more detailed information on the OHIF viewer please visit our Image Visualiz
 
 ## Cohort exploration within the Imaging Data Commons ecosystem
 
-TODO - write cohort creation, cohort list table, and download manifest functionality.
+The creation of a cohort is very beneficial when looking for a specific data set within the vast collection of data available at the Imaging Data Commons.
+
+### Cohort creation 
+
+We allow the ability to create cohorts by using three of our main filter panels; a **Search Scope** panel, a **Filter Definition** panel, and the **Search Configuration** panel. 
+
+![image data exploration](../.gitbook/assets/data_portal.png)
+
+For more detailed information on the main filter panels please refer to our Explore Image Data\(insert URL\) section.
+
+![](../.gitbook/assets/pre-confirmation_page.png)
+
+The "Save As New Cohort" button can be found in the top right panel at the top of the web page. 
+
+![cohort confirmation panel](../.gitbook/assets/cohort_confirmation.png)
+
+After you have found a desired filter set, you are prompted with a save cohort confirmation page. 
+
+{% hint style="danger" %}
+Any selection from the **Collections** panel, **Selected Studies** panel, or the **Selected Series** panel alone will not enable the Save New Cohort feature.
+{% endhint %}
+
+You will be required to add a name for your cohort but, the addition of a description is optional. 
+
+### Detailed Cohort information 
+
+Once a cohort has been created you can view the details of the cohort via the cohort details page. 
+
+![](../.gitbook/assets/cohort-details.png)
+
+Here is available the cohort name, cohort description\(optional\), the filters used, and the ability to open any study or series associated to the cohort created using the OHIF viewer. 
+
+For more information regarding image visualization please visit viewers\(insert URL\).
+
+### Download manifest of cohort 
+
+The manifest of the cohort is a very useful tool for running cross analysis when working with the IDC data portal. 
+
+The name, user, filters used, the date generated, and total records found in the header.
+
+![](../.gitbook/assets/cohort-manifest.png)
+
+The default fields provided are the PatientID, collection\_id, StudyInstanceUID, SeriesInstanceUID, SOPInstanceUID, source\_DOI, and the gcs\_path.
+
+
+
+### Cohort List table
+
+
+
+![](../.gitbook/assets/cohort-list.png)
 
 
 

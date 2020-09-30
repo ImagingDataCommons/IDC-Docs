@@ -4,13 +4,18 @@ Viewing Images in the Imaging Data Commons
 
 We currently highlight the Open Health Imaging Foundation\(OHIF\) as our main tool for visualization of images. OHIF provides extensive support for viewing, annotating, and reporting on DICOM images in 2D \(slices\) and 3D \(volumes\).
 
-Below we will give a summary with brief descriptions of the main functionality highlited for the Imaging Data Commons
 
 
+{% hint style="danger" %}
+Segmentations and Real World Value Mapping object classes can only be viewed at the Study level.
+{% endhint %}
 
-To do: Give an overview of the OHIF viewer, and then briefly highlight the main functionality we will highlight within the OHIF viewer for this release.
+Below we will give a summary with brief descriptions of the main functionality highlighted for the Imaging Data Commons
 
 List of features:
 
-* RT struct
+* Segmentations
+* Filter multiple series instances
+* Promote multiple series instances
+* RT Struct
 * 
