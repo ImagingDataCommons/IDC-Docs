@@ -18,4 +18,6 @@ List of features:
 * Filter multiple series instances
 * Promote multiple series instances
 * RT Struct
-* 
+* DICOM Tag viewer
+* Report issues
+

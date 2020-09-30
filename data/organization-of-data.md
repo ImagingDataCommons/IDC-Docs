@@ -20,6 +20,18 @@ where `*InstanceUID`s correspond to the respective value of the DICOM attributes
 
 You can read about accessing GCP storage buckets from a Compute VM [here](https://cloud.google.com/compute/docs/disks/gcs-buckets).
 
+All of the IDC buckets are [requester-pays](https://cloud.google.com/storage/docs/requester-pays), which means you will need to provide Project ID for a project that has billing set up if you want to download the data from those buckets. 
+
+{% hint style="warning" %}
+Make sure you understand the [data egress charges](https://cloud.google.com/storage/pricing#network-buckets)! As a general rule of thumb, download of the data to a GCP compute VM is cheap, while download to your local resource is expensive!
+{% endhint %}
+
+Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below \(see the complete example in :
+
+```text
+$ cat gcs_paths.txt | gsutil -u <ProjectID> -m cp -I .
+```
+
 ### BigQuery Tables
 
 Google [BigQuery \(BQ\)](https://cloud.google.com/bigquery) is a massively-parallel analytics engine ideal for working with tabular data. IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Healthcare API documentation article.
@@ -28,15 +40,22 @@ IDC users can access this table to conduct detailed exploration of the metadata 
 
 In addition to the DICOM metadata tables, we maintain several additional tables that curate metadata non-DICOM metadata \(e.g., attribution of a given item to a specific collection and DOI, collection-level metadata, etc\).
 
-TODO: transfer the tables summary from [this document ](https://docs.google.com/document/d/14Wfu-q3hbRxlOSDGIWC0kkSI3CsYoKyB5EhmgY52TgM/edit#heading=h.sv8u3qvr2f7r)as we get closer to the release!
+* [`canceridc-data.idc.dicom_metadata`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=dicom_metadata&page=table): DICOM metadata for all of the data hosted by ID
+* [`canceridc-data.idc.data_collections_metadata`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=data_collections_metadata&page=table) : collection-level metadata for the original TCIA data collections hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/collections/)
+* [`canceridc-data.idc.analysis_collections_metadata`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=data_collections_metadata&page=table) : collection-level metadata for the TCIA analysis collections hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/tcia-analysis-results/)
 
-In addition to the BQ tables, we maintain several BQ views \(read more about BQ views here\) 
+In addition to the tables above, we provide the following [BigQuery views](https://cloud.google.com/bigquery/docs/views-intro) \(virtual tables defined by queries\) that extract specific subsets of metadata, or combine attributes across different tables, for convenience of the users
 
-* `canceridc-data.idc_views.dicom_all -` DICOM metadata together with the collection-level metadata
+* [`canceridc-data.idc_views.dicom_all`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=dicom_all&page=table): DICOM metadata together with the collection-level metadata
+* [`canceridc-data.idc_views.segmentations`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=data_collections_metadata&page=table): attributes of the segments stored in DICOM Segmentation objects
+* [`canceridc-data.idc_views.segmentations`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=data_collections_metadata&page=table): attributes of the segments stored in DICOM Segmentation object
+* [`canceridc-data.idc_views.measurement_groups`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=measurement_groups&page=table): measurement group sequences extracted from the DICOM SR TID1500 objects
+* [`canceridc-data.idc_views.qualitative_measurements`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=qualitative_measurements&page=table): coded evaluation results extracted from the DICOM SR TID1500 objects
+* [`canceridc-data.idc_views.quantitative_measurements`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=quantitative_measurements&page=table): quantitative evaluation results extracted from the DICOM SR TID1500 objects
 
 ### DICOM Stores
 
-IDC MVP utilizes a single Google Healthcare DICOM store to host all of the collections. That store, however, is primarily intended to support visualization of the data using OHIF Viewer. At this time, we do not support access of the hosted data via DICOMWeb interface by the IDC users. See more details in the [discussion here](https://discourse.canceridc.dev/t/dicomweb-access-to-hosted-collections/69).
+IDC MVP utilizes a single Google Healthcare DICOM store to host all of the collections. That store, however, is primarily intended to support visualization of the data using OHIF Viewer. At this time, we do not support access of the hosted data via DICOMWeb interface by the IDC users. See more details in the [discussion here](https://discourse.canceridc.dev/t/dicomweb-access-to-hosted-collections/69), and please comment about your use case if you have a need to access data via the DICOMweb interface.
 
 ### BigQuery tables external to IDC
 
