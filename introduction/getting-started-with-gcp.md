@@ -9,7 +9,7 @@ Google Cloud platform provides a range of solutions to better understand and ana
 
 **Set up a Google Cloud Project**
 
-You can also follow 
+You can also follow the tutorial 
 
 * See Google’s documentation about how to [create a Google Cloud Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
 * Learn about how to [add members and roles to a project](https://cloud.google.com/iam/docs/quickstart).

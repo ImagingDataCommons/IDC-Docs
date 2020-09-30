@@ -1,9 +1,5 @@
 # Google Cloud Platform
 
-{% hint style="info" %}
-
-{% endhint %}
-
 Google Cloud Platform \(GCP\) is the foundation of the IDC architecture. We rely on GCP to implement the IDC functionality. IDC users can use GCP as the environment to perform the analysis of the data hosted on IDC. Specific GCP components that we utilize and that can be useful to support cancer imaging research use cases include:
 
 * Compute Engine

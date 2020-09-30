@@ -1,16 +1,18 @@
 # Key pointers
 
-Portal: **TBD**
+IDC pointers:
 
-Forum: [https://discourse.canceridc.dev/](https://discourse.canceridc.dev/)
+* portal: **TBD**
+* Discourse \(Forum\): [https://discourse.canceridc.dev/](https://discourse.canceridc.dev/)
+* Documentation: [https://learn.canceridc.dev/](https://learn.canceridc.dev/)
+* Consortium home page: [https://imagingdatacommons.github.io/](https://imagingdatacommons.github.io/)
+* Consortium GitHub organization: [https://github.com/ImagingDataCommons](https://github.com/ImagingDataCommons)
+* Twitter: [https://twitter.com/CancerIDC](https://twitter.com/CancerIDC)
+* [YouTube channel](https://www.youtube.com/channel/UCQxuVp3_3aTJZBA4zZLMQtQ)
 
-Consortium home page: [https://imagingdatacommons.github.io/](https://imagingdatacommons.github.io/)
 
-Consortium GitHub organization: [https://github.com/ImagingDataCommons](https://github.com/ImagingDataCommons)
 
-CRDC home page: [https://datacommons.cancer.gov/](https://datacommons.cancer.gov/)
 
-TODO: reconcile with the public-facing resources [list here](https://docs.google.com/document/d/1W1SMO2KesnOl_qPzfeFEciKzs5tMHqqwE9CngQVxtFc/edit)
 
 
 
