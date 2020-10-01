@@ -19,7 +19,7 @@
 
 * [Introduction](data/introduction.md)
 * [Organization of data](data/organization-of-data.md)
-* [Versioning](data/versioning.md)
+* [Data versioning](data/versioning.md)
 * [Data release notes](data/data-release-notes.md)
 
 ## DICOM
