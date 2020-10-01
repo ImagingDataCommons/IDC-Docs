@@ -6,7 +6,7 @@ We list the core functions of IDC [here](core-functions-of-idc.md). Our overall 
 
 ### What is the status of IDC?
 
-IDC pilot release took place in Fall 2020. We anticipate the production version of IDC to become available in Spring 2020. You can learn about the planned milestones for the IDC development in [these slides presented at RSNA 2019](http://bit.ly/idc-rsna19).
+IDC pilot release took place in Fall 2020. We anticipate the production version of IDC to become available in Spring 2021. You can learn about the planned milestones for the IDC development in [these slides presented at RSNA 2019](http://bit.ly/idc-rsna19).
 
 ### What data is available?
 
