@@ -47,7 +47,6 @@ In addition to the DICOM metadata tables, we maintain several additional tables 
 In addition to the tables above, we provide the following [BigQuery views](https://cloud.google.com/bigquery/docs/views-intro) \(virtual tables defined by queries\) that extract specific subsets of metadata, or combine attributes across different tables, for convenience of the users
 
 * [`canceridc-data.idc_views.dicom_all`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=dicom_all&page=table): DICOM metadata together with the collection-level metadata
-* [`canceridc-data.idc_views.segmentations`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=data_collections_metadata&page=table): attributes of the segments stored in DICOM Segmentation objects
 * [`canceridc-data.idc_views.segmentations`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=data_collections_metadata&page=table): attributes of the segments stored in DICOM Segmentation object
 * [`canceridc-data.idc_views.measurement_groups`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=measurement_groups&page=table): measurement group sequences extracted from the DICOM SR TID1500 objects
 * [`canceridc-data.idc_views.qualitative_measurements`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=qualitative_measurements&page=table): coded evaluation results extracted from the DICOM SR TID1500 objects
