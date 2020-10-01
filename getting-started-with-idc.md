@@ -2,11 +2,11 @@
 
 While the possibilities of what you can do with the IDC hosted data are endless, we 
 
-1. use the IDC portal to build a cohort of cases that are needed for your use case: see [demo video - Introduction to IDC portal](https://youtu.be/GE1rimW0EtM)
-2. interrogate the DICOM metadata directly from a Colab notebook \(or BigQuery Console\): see [demo notebook - Exploration of LIDC collection](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/LIDC_exploration.ipynb)
-3. use Google Collab notebooks to operate on the cohort: see [demo notebook - Working with IDC cohorts](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort_download.ipynb) and [the accompanying tutorial video](https://youtu.be/LeXBmnjYq1Q)
-4. use Google DataStudio to build interactive data dashboards for your cohort: see [example of using DataStudio to build a custom dashboard of IDC content](https://datastudio.google.com/reporting/20683e72-32a9-4c87-8c0f-bfdf62454b75)
-5. deploy existing tools on a GCP Virtual Machine to support visualization and analysis of the data from your cohort: demo and details are coming!
+1. use the IDC portal to build a cohort of cases that are needed for your use case:  see [demo video - Introduction to IDC portal](https://youtu.be/GE1rimW0EtM)
+2. interrogate the DICOM metadata directly from a Colab notebook \(or BigQuery Console\):  see [demo notebook - Exploration of LIDC collection](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/LIDC_exploration.ipynb)
+3. use Google Collab notebooks to operate on the cohort:  see [demo notebook - Working with IDC cohorts](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort_download.ipynb) and [the accompanying tutorial video](https://youtu.be/LeXBmnjYq1Q)
+4. use Google DataStudio to build interactive data dashboards for your cohort:  see [example of using DataStudio to build a custom dashboard of IDC content](https://datastudio.google.com/reporting/20683e72-32a9-4c87-8c0f-bfdf62454b75)
+5. deploy existing tools on a GCP Virtual Machine to support visualization and analysis of the data from your cohort:  demo and details are coming!
 
 | What you can do | What you need to do it |
 | :--- | :--- |
