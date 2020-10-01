@@ -26,10 +26,10 @@ All of the IDC buckets are [requester-pays](https://cloud.google.com/storage/doc
 Make sure you understand the [data egress charges](https://cloud.google.com/storage/pricing#network-buckets)! As a general rule of thumb, download of the data to a GCP compute VM is free, while download to your local resource is expensive!
 {% endhint %}
 
-Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below \(see the complete example in :
+Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below, substituting `$PROJECT_ID` with the valid GCP Project ID \(see the complete example in [this notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort_download.ipynb)\):
 
-```text
-$ cat gcs_paths.txt | gsutil -u <ProjectID> -m cp -I .
+```bash
+$ cat gcs_paths.txt | gsutil -u $PROJECT_ID -m cp -I .
 ```
 
 ### BigQuery Tables
