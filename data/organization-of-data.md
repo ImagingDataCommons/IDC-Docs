@@ -40,7 +40,7 @@ IDC users can access this table to conduct detailed exploration of the metadata 
 
 In addition to the DICOM metadata tables, we maintain several additional tables that curate metadata non-DICOM metadata \(e.g., attribution of a given item to a specific collection and DOI, collection-level metadata, etc\).
 
-* [`canceridc-data.idc.dicom_metadata`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=dicom_metadata&page=table): DICOM metadata for all of the data hosted by ID
+* [`canceridc-data.idc.dicom_metadata`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=dicom_metadata&page=table): DICOM metadata for all of the data hosted by IDC
 * [`canceridc-data.idc.data_collections_metadata`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=data_collections_metadata&page=table) : collection-level metadata for the original TCIA data collections hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/collections/)
 * [`canceridc-data.idc.analysis_collections_metadata`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc&t=data_collections_metadata&page=table) : collection-level metadata for the TCIA analysis collections hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/tcia-analysis-results/)
 
