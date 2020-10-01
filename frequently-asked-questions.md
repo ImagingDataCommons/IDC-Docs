@@ -39,7 +39,7 @@ The main website for the Cancer Research Data Commons \(CRDC\): [https://datacom
 
 ### What about non-imaging data that accompanies many TCIA collections?
 
-At the moment, non-imaging data, such as the spreadsheets with clinical information, is not replicated on IDC. You will need to access this data from TCIA, and it is not possible to search this data.
+At the moment, non-imaging data, such as the spreadsheets with clinical information, is not replicated on IDC and it is not possible to search this data using IDC Portal. You will need to access this data from TCIA.
 
 Our longer-term plan is to work with the CRDC [Center for Cancer Data Harmonization \(CCDH\)](https://datacommons.cancer.gov/center-cancer-data-harmonization) to harmonize the data in these spreadsheets, and identify the appropriate format and location for the resulting harmonized data. 
 
