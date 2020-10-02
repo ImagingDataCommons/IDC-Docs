@@ -1,6 +1,8 @@
 # Getting started with IDC
 
-While the possibilities of what you can do with the IDC hosted data are endless, we 
+The goal of IDC is to _connect_ you with the cloud-based data and compute resources. IDC is not the place that gives you a push-button solution to your analysis needs, but aims to help you do the analyses you would usually do on your local resources faster, with better reproducibility, and at scale. Our goal in the various examples of what you can do with IDC data is to give you a taste of what can be done.
+
+While the possibilities of what you can do with the IDC hosted data are endless, you can ... 
 
 1. use the IDC portal to build a cohort of cases that are needed for your use case:  see [demo video - Introduction to IDC portal](https://youtu.be/GE1rimW0EtM)
 2. interrogate the DICOM metadata directly from a Colab notebook \(or BigQuery Console\):  see [demo notebook - Exploration of LIDC collection](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/LIDC_exploration.ipynb)
