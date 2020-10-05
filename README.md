@@ -1,5 +1,9 @@
 # Welcome!
 
+{% hint style="info" %}
+This documentation accompanies the pilot October 2020 release of Imaging Data Commons. We are aware that this resource has gaps, and we welcome your feedback about what you would like to see improved in the IDC documentation. Please use [IDC Discourse forum](https://discourse.canceridc.dev) for submitting your feedback!
+{% endhint %}
+
 Imaging Data Commons \(IDC\) is a new node in the [Cancer Research Data Commons \(CRDC\)](https://datacommons.cancer.gov/). IDC is being built by a [consortium of partners](https://imagingdatacommons.github.io/team/) led by the Brigham and Women's Hospital. IDC contract was awarded in the Summer 2019, and is funded for 4 years.
 
 CRDC is being established by the National Cancer Institute as a cloud-based data science infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data. 
