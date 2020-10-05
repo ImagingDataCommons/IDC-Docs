@@ -1,6 +1,8 @@
 # Getting started with IDC
 
-The goal of IDC is to _connect_ you with the cloud-based data and compute resources. IDC is not the place that gives you a push-button solution to your analysis needs, but aims to help you do the analyses you would usually do on your local resources faster, with better reproducibility, and at scale. Our goal in the various examples of what you can do with IDC data is to give you a taste of what can be done.
+The goal of IDC is to _connect_ you with the cloud-based data and compute resources. 
+
+IDC is not the place that gives you a push-button solution to your analysis needs, but aims to help you do the analyses you would usually do on your local resources faster, with better reproducibility, and at scale. Our goal in the various examples of what you can do with IDC data is to give you a taste of what can be done.
 
 While the possibilities of what you can do with the IDC hosted data are endless, you can ... 
 
