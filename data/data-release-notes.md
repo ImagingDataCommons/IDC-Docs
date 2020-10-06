@@ -40,5 +40,4 @@ Analysis collections included:
 1. [Standardized representation of the TCIA LIDC-IDRI annotations using DICOM](https://doi.org/10.7937/TCIA.2018.h7umfurq) 
 2. [QIN multi-site collection of Lung CT data with Nodule Segmentations](https://doi.org/10.7937/K9/TCIA.2015.1BUVFJR7) 
 3. [DICOM SR of clinical data and measurement for breast cancer collections to TCIA](https://doi.org/10.7937/TCIA.2019.wgllssg1) 
-4. [Outcome Prediction in Patients with Glioblastoma by Using Imaging, Clinical, and Genomic Biomarkers: Focus on the Nonenhancing Component of the Tumor](https://doi.org/10.7937/K9/TCIA.2014.FAB7YRPZ)
 
