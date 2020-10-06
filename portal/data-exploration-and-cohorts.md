@@ -30,9 +30,9 @@ Each panel provides the same underlying Imaging Data Commons data and metadata.
 
 ### Original Tab
 
-As mentioned within the DICOM documentation this filter set has been built by DICOM objects that are produced by image acquisition equipment - MR, CT or PET images.   
+As mentioned within the DICOM documentation this filter set has been built by DICOM objects that are produced by image acquisition equipment \(e.g., MR, CT or PET images\). This tab also includes groups of attributes that are common across all of the DICOM objects \(e.g., Modality\).  
   
-For more information please go to our DICOM documentation, that can be found by going to Original Objects\(enter url to page\).
+For more information please go to our DICOM documentation describing [Original data](../dicom/original-vs-derived-objects.md).
 
 ### Derived Tab
 
@@ -42,35 +42,31 @@ All analyzed and post processed data, can easily be filtered with our vast list 
 We currently have 25+ filter options available!
 {% endhint %}
 
-Please visit our DICOM documentation related to Derived data, which can be found by going to the Derived objects\(URL to page\) page.
+Please visit our [DICOM documentation related to Derived data](../dicom/derived-objects.md).
 
 Below is a brief description of the three main categories we have sorted the Derived objects by within the data Portal.
 
-* **Segmentations:** Built from enhanced multiframe image objects, all of the frames \(slices\) are stored in a single object.
-* **Qualitative Analysis:** Built from tools that examine, construct and extracts qualitative evaluations e.g., [dcmqi](https://github.com/QIICR/dcmqi).
-* **Quantitative Analysis:** Built from tools that use API extractions for reading, writing, and extracting quantitative measurements.
-
-All derived data generated follows standard-compliant SR-TID1500 object requirements.
+* **Segmentations:** volumetric annotations of the image regions stored as DICOM Segmentation objects.
+* **Qualitative Analysis:** Qualitative evaluation results \(e.g., scores or categories associated with image findings\) stored in DICOM Structured Reporting TID1500 objects.
+* **Quantitative Analysis:** Quantitative evaluation results \(e.g., scores or categories associated with image findings\) stored in DICOM Structured Reporting TID1500 objects.
 
 ### Related Tab
 
-The Cancer Genomic Atlas collection has a rich filter selection for clinical data associated to imaging data. This filter set is useful when working primarily with the collection TCGA.
+[The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) collections have a rich filter selection for clinical data associated to imaging data. This filter set is useful when working primarily with the collection TCGA.
 
 {% hint style="warning" %}
 The number of cases returned when working with this filter may vary due to corresponding data not available for all collections at this time.
 {% endhint %}
 
-For more information on our data structure please visit our Data model\(URL to page\), which will explain the structure in detail.
+The organization of the TCGA related data is described in detail [here](https://isb-cancer-genomics-cloud.readthedocs.io/en/latest/sections/BigQuery/ISBCGC-BQ-Projects.html) under the ISB-CGC documentation.
 
 ## Preview of Collections, Studies, and Series within the Imaging Data Commons
 
 ### Viewing Collections
 
-The Collections panel we provide is very unique to the rest of the interface. This is in part mainly that it can be used to open Studies and/or Series for all collections we have available with or without other filter options being selected e.g., a Derived filter option.
+The Collections panel we provide is very unique to the rest of the interface. This is in part mainly that it can be used to open Studies and/or Series for all collections we have available with or without other filter options being selected \(e.g., a Derived filter option\).
 
 ![](../.gitbook/assets/collections_panel.png)
-
-We currently have available 24 collections for analysis.
 
 ### Viewing Studies per Collection
 
@@ -80,7 +76,7 @@ The **Project Name**, **Case Id**, **Study Id**, and **Study Description** is pr
 
 ![](../.gitbook/assets/selected_studies_panel.png)
 
-We provide the ability to view study objects in the [Open Health Imaging Foundation](https://docs.ohif.org/) \(OHIF\) viewer by selecting any option provided in the **Open Viewer** column.
+We provide the ability to view study objects in the IDC Viewer, which is based on [Open Health Imaging Foundation](https://docs.ohif.org/) \(OHIF\) Viewer, by selecting any option provided in the **Open Viewer** column.
 
 It's possible to also return Imaging Data Commons data in BigQuery that is also displayed in the data Portal. An example query that will return all studies for a selected collection is provided below:
 
@@ -103,17 +99,15 @@ Easily available is the **Study Id**, **Series Number**, **Modality**, **Body Pa
 
 The selection of objects in the **Open Viewer** column is slightly different from the objects provided in the Selected Studies panel.
 
-{% hint style="info" %}
-Some objects are only opened by the OHIF viewer at their related Study level and not at the Series level. 
+{% hint style="warning" %}
+Some objects can only be opened by the OHIF viewer at their related Study level and not at the Series level. This is highlighted by the Portal interface as a disabled option in the **Open Viewer**  column. 
 {% endhint %}
 
-This is highlighted by the Portal interface as a disabled option in the **Open Viewer**  column. 
-
-For more detailed information on the OHIF viewer please visit our Image Visualization documentation.
+For more detailed information on the OHIF viewer please visit our [Image Visualization documentation](visualization.md).
 
 ## Cohort exploration within the Imaging Data Commons ecosystem
 
-The creation of a cohort is very beneficial when looking for a specific data set within the vast collection of data available at the Imaging Data Commons.
+The creation of a cohort is very beneficial when looking for a specific subset of data within the vast collection of data available at the Imaging Data Commons.
 
 ### Cohort creation 
 
@@ -157,11 +151,7 @@ The name, user, filters used, the date generated, and total records found in the
 
 The default fields provided are the PatientID, collection\_id, StudyInstanceUID, SeriesInstanceUID, SOPInstanceUID, source\_DOI, and the gcs\_path.
 
-
-
 ### Cohort List table
-
-
 
 ![](../.gitbook/assets/cohort-list.png)
 

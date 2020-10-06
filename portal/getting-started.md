@@ -11,13 +11,11 @@ IDC Portal provides a web-based interactive interface to browse the data hosted 
 * summary plots for the user-defined cohorts
 * saving of the user-defined cohorts under IDC user account
 
-Datasets that are available within IDC are summarized in this page: URL **TBD**
+Datasets that are available within IDC are summarized in the [Data release notes](../data/data-release-notes.md).
 
 ### Accessing the IDC Portal
 
 IDC portal is accessible using a modern web browser such as Chrome, Firefox and Microsoft Edge at the following URL: **https:// ... TBD**
-
-### Facet Filters
 
 
 
