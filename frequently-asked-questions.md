@@ -10,7 +10,7 @@ IDC pilot release took place in Fall 2020. We anticipate the production version 
 
 ### What data is available?
 
-Our initial goal is to host all of the public collections from [The Cancer Imaging Archive \(TCIA\)](https://www.cancerimagingarchive.net/). The IDC pilot contains a subset of those collections. The complete up to date list of collections included in IDC is available from the IDC portal main page.
+Our initial goal is to host all of the public collections from [The Cancer Imaging Archive \(TCIA\)](https://www.cancerimagingarchive.net/). The IDC pilot contains a subset of those collections. The complete up to date list of collections included in IDC is available [here](https://portal.imaging.datacommons.cancer.gov/collections/).
 
 ### How do I get my data into IDC?
 
