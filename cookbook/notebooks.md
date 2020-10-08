@@ -1,19 +1,18 @@
 # Colab Notebooks
 
+This section contains various pointers that may be helpful working with Google Colab.
 
+{% hint style="info" %}
+If you have an interesting notebook that uses IDC/cloud for imaging research, please let us know and we would be happy to review and reference it here!
+{% endhint %}
 
 Colab limitations: [https://research.google.com/colaboratory/faq.html](https://research.google.com/colaboratory/faq.html)
 
-Andrey TODO:
-
-* transition these to use BQ instead of Pandas? [https://github.com/QIICR/lidc2dicom/blob/master/notebooks/metadata\_verification.ipynb](https://github.com/QIICR/lidc2dicom/blob/master/notebooks/metadata_verification.ipynb) and [https://github.com/QIICR/dicom4miccai-handson/tree/master/notebooks](https://github.com/QIICR/dicom4miccai-handson/tree/master/notebooks)
-* review items in this folder: [https://drive.google.com/drive/folders/1xX7t3JJB\_IR5j3wTPP4jbcsfLxK5Onmd](https://drive.google.com/drive/folders/1xX7t3JJB_IR5j3wTPP4jbcsfLxK5Onmd)
+Transfering data between Colab and Google Drive: [https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7](https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7)
 
 Add a call for contributions of notebooks! Same for queries or other demos!
 
-
-
-Resources:
+Potentially interesting sources of example notebooks:
 
 * [https://github.com/mdai/ml-lessons/](https://github.com/mdai/ml-lessons/)
 * [http://uwmsk.org/jupyter/](http://uwmsk.org/jupyter/)
