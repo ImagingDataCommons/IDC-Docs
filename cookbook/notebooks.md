@@ -3,7 +3,7 @@
 This section contains various pointers that may be helpful working with Google Colab.
 
 {% hint style="info" %}
-If you have an interesting notebook that uses IDC/cloud for imaging research, please let us know and we would be happy to review and reference it here!
+If you would like to share an interesting notebook that uses IDC/cloud for imaging research, please let us know and we would be happy to review and reference it here!
 {% endhint %}
 
 Colab limitations: [https://research.google.com/colaboratory/faq.html](https://research.google.com/colaboratory/faq.html)
