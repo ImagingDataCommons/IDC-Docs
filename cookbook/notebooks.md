@@ -14,6 +14,7 @@ Add a call for contributions of notebooks! Same for queries or other demos!
 
 Potentially interesting sources of example notebooks:
 
+* [SimpleITK notebooks](https://github.com/InsightSoftwareConsortium/SimpleITK-Notebooks/tree/master/Python)
 * [https://github.com/mdai/ml-lessons/](https://github.com/mdai/ml-lessons/)
 * [http://uwmsk.org/jupyter/](http://uwmsk.org/jupyter/)
 
