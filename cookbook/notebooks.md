@@ -8,15 +8,14 @@ Google Colaboratory, or “Colab” for short, is a product from Google Research
 If you would like to share an interesting notebook that uses IDC/cloud for imaging research, please let us know and we would be happy to review and reference it here!
 {% endhint %}
 
-Colab limitations: [https://research.google.com/colaboratory/faq.html](https://research.google.com/colaboratory/faq.html)
+IDC Colab example notebooks are maintained in this repository: [https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks)
 
-Transfering data between Colab and Google Drive: [https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7](https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7)
+### Relevant resources
 
-Add a call for contributions of notebooks! Same for queries or other demos!
-
-Potentially interesting sources of example notebooks:
-
-* [SimpleITK notebooks](https://github.com/InsightSoftwareConsortium/SimpleITK-Notebooks/tree/master/Python)
-* [https://github.com/mdai/ml-lessons/](https://github.com/mdai/ml-lessons/)
-* [http://uwmsk.org/jupyter/](http://uwmsk.org/jupyter/)
+* Colab limitations: [https://research.google.com/colaboratory/faq.html](https://research.google.com/colaboratory/faq.html)
+* Transfering data between Colab and Google Drive: [https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7](https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7)
+* Potentially interesting sources of example notebooks:
+  * [SimpleITK notebooks](https://github.com/InsightSoftwareConsortium/SimpleITK-Notebooks/tree/master/Python)
+  * [https://github.com/mdai/ml-lessons/](https://github.com/mdai/ml-lessons/)
+  * [http://uwmsk.org/jupyter/](http://uwmsk.org/jupyter/)
 
