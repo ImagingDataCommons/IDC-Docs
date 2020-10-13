@@ -1,6 +1,8 @@
 # Colab Notebooks
 
-This section contains various pointers that may be helpful working with Google Colab.
+This section contains various pointers that may be helpful working with [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb).
+
+Google Colaboratory, or “Colab” for short, is a product from Google Research. Colab allows anybody to write and execute arbitrary python code through the browser, and is especially well suited to machine learning, data analysis and education. More technically, Colab is a hosted Jupyter notebook service that requires no setup to use, while providing free access to computing resources including GPUs.
 
 {% hint style="info" %}
 If you would like to share an interesting notebook that uses IDC/cloud for imaging research, please let us know and we would be happy to review and reference it here!
