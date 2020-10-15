@@ -143,15 +143,17 @@ For more information regarding image visualization please visit viewers\(insert 
 
 ### Download manifest of cohort 
 
-The manifest of the cohort is a very useful tool for running cross analysis when working with the IDC data portal. 
+The manifest of the cohort is a very useful tool for running cross analysis when working with the Imaging Data Commons data portal. 
 
 The name, user, filters used, the date generated, and total records found in the header.
 
 ![](../.gitbook/assets/cohort-manifest.png)
 
-The default fields provided are the PatientID, collection\_id, StudyInstanceUID, SeriesInstanceUID, SOPInstanceUID, source\_DOI, and the gcs\_path.
+The default fields provided are the **PatientID**, **collection\_id**, **StudyInstanceUID**, **SeriesInstanceUID**, **SOPInstanceUID**, **source\_DOI**, and the **gcs\_path**.
 
 ### Cohort List table
+
+From the cohort list table all cohorts created will be saved here. 
 
 ![](../.gitbook/assets/cohort-list.png)
 
