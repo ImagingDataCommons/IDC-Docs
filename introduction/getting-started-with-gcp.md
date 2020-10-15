@@ -2,14 +2,15 @@
 
 Google Cloud platform provides a range of solutions to better understand and analyze data hosted by IDC. Depending on what you want to do \(see the range of options [here](../getting-started-with-idc.md)\), you may need to complete one or more of the following steps below.
 
+The steps concerning creating a Google Cloud project and setting up billing are covered in [this short video tutorial](https://youtu.be/i08S0KJLnyw).
+
 **Obtain a Google identity**
 
-* Do you or your institution already have a Google identity, such as a Gmail account? If so, you can proceed to the next step.
-* If not, it only takes a minute to [create a Google identity](https://accounts.google.com/signup/v2/webcreateaccount?dsh=308321458437252901&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount&flowName=GlifWebSignIn&flowEntry=SignUp#FirstName=&LastName=). Note that you do NOT need a Gmail email account - [you can use your non-Gmail email address to create one instead](https://support.google.com/accounts/answer/27441?hl=en#existingemail).
+Do you have a Google identity? If so, you can proceed to the next step.
+
+If not, it only takes a minute to [create a Google identity](https://accounts.google.com/signup/v2/webcreateaccount?dsh=308321458437252901&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount&flowName=GlifWebSignIn&flowEntry=SignUp#FirstName=&LastName=). Note that you do NOT need a Gmail email account - [you can use your non-Gmail email address to create one instead](https://support.google.com/accounts/answer/27441?hl=en#existingemail).
 
 **Set up a Google Cloud Project**
-
-You can also follow the tutorial 
 
 * See Google’s documentation about how to [create a Google Cloud Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
 * Learn about how to [add members and roles to a project](https://cloud.google.com/iam/docs/quickstart).
