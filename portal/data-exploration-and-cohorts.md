@@ -28,6 +28,16 @@ Each panel provides the same underlying Imaging Data Commons data and metadata.
 
 ![](../.gitbook/assets/search_configuration_and_search_results.png)
 
+### Count Clarification of Categorization
+
+The Imaging Data Commons currently hosts multiple nuances of non mutually exclusive attributes. Below provided is detailed information of when non-selected attributes are being pulled in and how it's currently being handled. 
+
+For when using the **Search Configuration** panel you will notice the number of unique cases \(or patients\) for each attribute within a cohort constructed by adding the given attribute \(when absent\) to the defined filter. 
+
+For the **Search Results** panel each chart reports the number of cases \(or patients\) for all values within a given attribute, given the currently defined filter set. Once a case is selected, both instances that meet and do not meet the search criteria corresponding to this case will affect the charts content. E.g., cases selected based on the presence of CT modality may also contain PET modality, counts of which for that given case will also appear in the chart summary.
+
+Hence, this needs to be taken into consideration while analyzing the data based on the following logic. 
+
 ### Original Tab
 
 As mentioned within the DICOM documentation this filter set has been built by DICOM objects that are produced by image acquisition equipment \(e.g., MR, CT or PET images\). This tab also includes groups of attributes that are common across all of the DICOM objects \(e.g., Modality\).  
@@ -59,6 +69,8 @@ The number of cases returned when working with this filter may vary due to corre
 {% endhint %}
 
 The organization of the TCGA related data is described in detail [here](https://isb-cancer-genomics-cloud.readthedocs.io/en/latest/sections/BigQuery/ISBCGC-BQ-Projects.html) under the ISB-CGC documentation.
+
+
 
 ## Preview of Collections, Studies, and Series within the Imaging Data Commons
 
@@ -125,8 +137,8 @@ The "Save As New Cohort" button can be found in the top right panel at the top o
 
 After you have found a desired filter set, you are prompted with a save cohort confirmation page. 
 
-{% hint style="danger" %}
-Any selection from the **Collections** panel, **Selected Studies** panel, or the **Selected Series** panel alone will not enable the Save New Cohort feature.
+{% hint style="warning" %}
+Please be advised only the Search Scope panel and the Search Configuration panel selection define a cohort.
 {% endhint %}
 
 You will be required to add a name for your cohort but, the addition of a description is optional. 
@@ -153,22 +165,13 @@ The default fields provided are the **PatientID**, **collection\_id**, **StudyIn
 
 ### Cohort List table
 
-From the cohort list table all cohorts created will be saved here. 
+The cohort list table consists of all cohorts created. Included is the corresponding **Cohort ID**, **Name**, **Description**, **Ownership**, and how many times it has been **Shared**.
 
 ![](../.gitbook/assets/cohort-list.png)
 
+You are given the ability to easily delete one or multiple cohorts at once.  
 
-
-
-
-  
- 
-
-  
-  
-
-
-
-
-
+{% hint style="success" %}
+More functionality to be added in future releases!
+{% endhint %}
 
