@@ -165,6 +165,8 @@ The default fields provided are the **PatientID**, **collection\_id**, **StudyIn
 
 ### Cohort List table
 
+You are able to easily find any cohorts created in the cohort 
+
 The cohort list table consists of all cohorts created. Included is the corresponding **Cohort ID**, **Name**, **Description**, **Ownership**, and how many times it has been **Shared**.
 
 ![](../.gitbook/assets/cohort-list.png)
