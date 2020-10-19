@@ -97,7 +97,7 @@ WHERE collection_id = 'qin_headneck'
 GROUP BY PatientID, StudyInstanceUID
 ```
 
-This particular example above will return information for the Collection ISPY1.
+This particular example above will return information for the Collection QIN\_HEADNECK.
 
 ### Viewing Series per Study per Collection
 
@@ -107,10 +107,10 @@ Easily available is the **Study Id**, **Series Number**, **Modality**, **Body Pa
 
 ![](../.gitbook/assets/selected_series-panel.png)
 
-The selection of objects in the **Open Viewer** column is slightly different from the objects provided in the Selected Studies panel.
+The selection of objects in the **View** column is slightly different from the objects provided in the Selected Studies panel.
 
 {% hint style="warning" %}
-Some objects can only be opened by the OHIF viewer at their related Study level and not at the Series level. This is highlighted by the Portal interface as a disabled option in the **Open Viewer**  column. 
+Some objects can only be opened by the OHIF viewer at their related Study level and not at the Series level. This is highlighted by the Portal interface as a disabled option in the **View** column. 
 {% endhint %}
 
 For more detailed information on the OHIF viewer please visit our [Image Visualization documentation](visualization.md).
@@ -125,7 +125,7 @@ We allow the ability to create cohorts by using three of our main filter panels;
 
 ![image data exploration](../.gitbook/assets/data_portal.png)
 
-For more detailed information on the main filter panels please refer to our Explore Image Data\(insert URL\) section.
+For more detailed information on the data provided by the main attribute selection panels please refer to our [Explore Image Data](../dicom/data-model.md) section.
 
 ![](../.gitbook/assets/attribute-selection.png)
 
