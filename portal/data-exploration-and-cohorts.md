@@ -84,7 +84,7 @@ The Selected Studies panel will display all possible series we have available fo
 
 The **Project Name**, **Case Id**, **Study Id**, and **Study Description** is provided for each object.
 
-![](../.gitbook/assets/selected_studies_panel.png)
+![](../.gitbook/assets/selected_studies-panel.png)
 
 We provide the ability to view study objects in the IDC Viewer, which is based on [Open Health Imaging Foundation](https://docs.ohif.org/) \(OHIF\) Viewer, by selecting any option provided in the **Open Viewer** column.
 
@@ -93,7 +93,7 @@ It's possible to also return Imaging Data Commons data in BigQuery that is also 
 ```sql
 SELECT PatientID, StudyInstanceUID
 FROM `idc-dev-etl.idc_tcia_mvp_wave0.dicom_derived_all`
-WHERE collection_id = 'ispy1'
+WHERE collection_id = 'qin_headneck'
 GROUP BY PatientID, StudyInstanceUID
 ```
 
@@ -131,7 +131,7 @@ For more detailed information on the main filter panels please refer to our Expl
 
 The "Save As New Cohort" button can be found in the top right panel at the top of the web page. 
 
-![cohort confirmation panel](../.gitbook/assets/cohort_confirmation.png)
+![](../.gitbook/assets/cohort_confirmation.png)
 
 After you have found a desired filter set, you are prompted with a save cohort confirmation page. 
 
