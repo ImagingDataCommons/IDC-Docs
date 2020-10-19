@@ -127,11 +127,11 @@ We allow the ability to create cohorts by using three of our main filter panels;
 
 For more detailed information on the main filter panels please refer to our Explore Image Data\(insert URL\) section.
 
-![](../.gitbook/assets/pre-confirmation_page.png)
+![](../.gitbook/assets/attribute-selection.png)
 
 The "Save As New Cohort" button can be found in the top right panel at the top of the web page. 
 
-![](../.gitbook/assets/cohort_confirmation.png)
+![](../.gitbook/assets/cohort_creation-confirmation.png)
 
 After you have found a desired filter set, you are prompted with a save cohort confirmation page. 
 
@@ -145,7 +145,7 @@ You will be required to add a name for your cohort but, the addition of a descri
 
 Once a cohort has been created you can view the details of the cohort via the cohort details page. 
 
-![](../.gitbook/assets/cohort-details.png)
+![](../.gitbook/assets/cohort_details-page.png)
 
 Here is available the cohort name, cohort description\(optional\), the filters used, and the ability to open any study or series associated to the cohort created using the OHIF viewer. 
 
@@ -157,7 +157,7 @@ The manifest of the cohort is a very useful tool for running cross analysis when
 
 The name, user, filters used, the date generated, and total records found in the header.
 
-![](../.gitbook/assets/cohort-manifest.png)
+![](../.gitbook/assets/manifest_download-screenshot.png)
 
 The default fields provided are the **PatientID**, **collection\_id**, **StudyInstanceUID**, **SeriesInstanceUID**, **SOPInstanceUID**, **source\_DOI**, and the **gcs\_path**.
 
@@ -165,13 +165,13 @@ The default fields provided are the **PatientID**, **collection\_id**, **StudyIn
 
 You are able to easily find any cohorts created in the cohort 
 
-The cohort list table consists of all cohorts created. Included is the corresponding **Cohort ID**, **Name**, **Description**, **Ownership**, and how many times it has been **Shared**.
+The cohort list table consists of all cohorts created. Included is the corresponding **Cohort ID**, **Name**, **Description**, **Ownership**, how many times it has been **Shared**, and the **Data Version** of the cohort created. 
 
-![](../.gitbook/assets/cohort-list.png)
+![](../.gitbook/assets/cohort_list_table-page.png)
 
 You are given the ability to easily delete one or multiple cohorts at once.  
 
 {% hint style="success" %}
-More functionality to be added in future releases!
+More functionality to be added in future releases! 
 {% endhint %}
 
