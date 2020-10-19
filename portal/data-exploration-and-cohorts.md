@@ -47,7 +47,7 @@ For more information please go to our DICOM documentation describing [Original d
 All analyzed and post processed data, can easily be filtered with our vast list of Derived attributes. 
 
 {% hint style="success" %}
-We currently have 25+ attribute options available!
+We currently have 25+ attribute filter options available!
 {% endhint %}
 
 Please visit our [DICOM documentation related to Derived data](../dicom/derived-objects.md).
@@ -171,7 +171,7 @@ The cohort list table consists of all cohorts created. Included is the correspon
 
 You are given the ability to easily delete one or multiple cohorts at once.  
 
-{% hint style="success" %}
-More functionality to be added in future releases! 
+{% hint style="info" %}
+Only the ability to delete a cohort was added in this initial release. This page will be updated once the functionality is released. 
 {% endhint %}
 

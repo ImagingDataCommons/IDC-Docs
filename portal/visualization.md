@@ -42,5 +42,9 @@ RT Structure Sets have set the standard for integration of radiation therapy inf
 
 ![](../.gitbook/assets/rt-structure-sets.png)
 
+For more detailed information please refer to our [Radiotherapy Structure Sets](../dicom/derived-objects.md#radiotherapy-structure-sets) documentation in the DICOM: Derived Objects section.
 
+{% hint style="info" %}
+Only one image viewer was added for this initial release. Multiple viewers will be added in following releases. This page will be updated when other viewers become available. 
+{% endhint %}
 
