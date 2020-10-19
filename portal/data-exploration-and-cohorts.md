@@ -60,10 +60,12 @@ Below is a brief description of the three main categories we have sorted the Der
 
 ### Related Tab
 
+[The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) collections have a rich filter selection for clinical data associated with imaging data. This filter set is useful when working primarily with the TCGA collections.
+
 [The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) collections has a rich attribute selection for clinical data associated to imaging data. This attribute set is useful when working primarily with the collection TCGA.
 
 {% hint style="warning" %}
-The number of cases returned when working with this attribute may vary due to corresponding data not available for all collections at this time.
+Filter attributes in this tab only filter cases within the TCGA collections. Other collections are not affected by these filters. 
 {% endhint %}
 
 The organization of the TCGA related data is described in detail [here](https://isb-cancer-genomics-cloud.readthedocs.io/en/latest/sections/BigQuery/ISBCGC-BQ-Projects.html) under the ISB-CGC documentation.
