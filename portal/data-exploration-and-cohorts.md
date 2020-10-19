@@ -70,8 +70,6 @@ The number of cases returned when working with this filter may vary due to corre
 
 The organization of the TCGA related data is described in detail [here](https://isb-cancer-genomics-cloud.readthedocs.io/en/latest/sections/BigQuery/ISBCGC-BQ-Projects.html) under the ISB-CGC documentation.
 
-
-
 ## Preview of Collections, Studies, and Series within the Imaging Data Commons
 
 ### Viewing Collections
