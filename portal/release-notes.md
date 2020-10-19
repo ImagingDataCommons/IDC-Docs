@@ -2,11 +2,39 @@
 
 ## 1.0.0 - October 2020
 
-The Imaging Data Commons Explore Image Data portal is a platform that allows user to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
+The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
 
 ### Initial release
 
-* * Introduced an**i**mals into the world, we believe they're going to be a neat addition.
+Main features in this initial release include:
+
+* The ability to search for data in BigQuery and Solr
+* The ability to search by multiple attributes:
+  * Collection
+  * Original attributes e.g., Modality
+  * Derived attributes e.g., Segmentations 
+  * Qualitative analysis e.g., Lobular pattern
+  * Quantitative analysis e.g., Volume
+  * related attributes e.g., Country
+* Display of collections results in a tabular format with the following information:
+  * Collection Name
+  * Total Number of Cases
+  * Number of Cases\(this cohort\)
+* Display of the Selected Studies results in tabular format with the following information:
+  * Project Name
+  * Case ID
+  * Study ID
+  * Study Description
+* Display of the Selected Series results in tabular format with the following information:
+  * Study ID
+  * Series Number
+  * Modality
+  * Body Part Examined
+  * Series Description
+* The ability to hide attributes with zero cases present
+* The ability to save cohorts
+* The ability to download the manifest of any cohort created
+* The ability to promote, filter, and load multiple series instances in the OHIF viewer
 
 
 

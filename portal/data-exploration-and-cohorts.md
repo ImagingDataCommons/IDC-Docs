@@ -11,18 +11,18 @@ Below you will find more details regarding our four primary search panels availa
 ![](../.gitbook/assets/collections-panel.png)
 
 * **Search Scope panel:** The Search Scope panel is primarily used to filter by collection. We currently have 20+ collection options present.
-* **Search Configuration panel:** The Search Configuration panel is the more detailed filter options by utilizing various case, Segmentation, Qualitative, and Quantitative Analyses.  
-* **Search Results panel:** The Search Results is the visual representation panel of the detailed filter options we have available in the form of pie charts. 
+* **Search Configuration panel:** The Search Configuration panel is the more detailed attribute filter option by utilizing various case, Segmentation, Qualitative, and Quantitative Analyses.  
+* **Search Results panel:** The Search Results is the visual representation panel of the detailed attribute filter options we have available in the form of pie charts. 
 
 {% hint style="info" %}
-We will cover more in more detail all the filter options we have available within the Search Configuration panel and the Search Results panel.
+We will cover more in more detail all the attribute options we have available within the Search Configuration panel and the Search Results panel.
 {% endhint %}
 
-* **Collections panel:** The Collections panel can be used to view a Selected Study and/or a Specific Series without any additional filter option selected. 
+* **Collections panel:** The Collections panel can be used to view a Selected Study and/or a Specific Series without any additional attribute option selected. 
 
 Each panel provides the same underlying Imaging Data Commons data and metadata.
 
-## Search Configuration and Search Results filter options in detail
+## Search Configuration and Search Results attribute filter options in detail
 
 ![](../.gitbook/assets/search_configuration_and_search_results.png)
 
@@ -38,16 +38,16 @@ Hence, this needs to be taken into consideration while analyzing the data based 
 
 ### Original Tab
 
-As mentioned within the DICOM documentation this filter set has been built by DICOM objects that are produced by image acquisition equipment \(e.g., MR, CT or PET images\). This tab also includes groups of attributes that are common across all of the DICOM objects \(e.g., Modality\).  
+As mentioned within the DICOM documentation this attribute set has been built by DICOM objects that are produced by image acquisition equipment \(e.g., MR, CT or PET images\). This tab also includes groups of attributes that are common across all of the DICOM objects \(e.g., Modality\).  
   
 For more information please go to our DICOM documentation describing [Original data](../dicom/original-vs-derived-objects.md).
 
 ### Derived Tab
 
-All analyzed and post processed data, can easily be filtered with our vast list of Derived filters. 
+All analyzed and post processed data, can easily be filtered with our vast list of Derived attributes. 
 
 {% hint style="success" %}
-We currently have 25+ filter options available!
+We currently have 25+ attribute options available!
 {% endhint %}
 
 Please visit our [DICOM documentation related to Derived data](../dicom/derived-objects.md).
@@ -60,7 +60,7 @@ Below is a brief description of the three main categories we have sorted the Der
 
 ### Related Tab
 
-[The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) collections have a rich filter selection for clinical data associated to imaging data. This filter set is useful when working primarily with the collection TCGA.
+[The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) collections has a rich attribute selection for clinical data associated to imaging data. This attribute set is useful when working primarily with the collection TCGA.
 
 {% hint style="warning" %}
 The number of cases returned when working with this attribute may vary due to corresponding data not available for all collections at this time.
@@ -72,7 +72,7 @@ The organization of the TCGA related data is described in detail [here](https://
 
 ### Viewing Collections
 
-The Collections panel we provide is very unique to the rest of the interface. This is in part mainly that it can be used to open Studies and/or Series for all collections we have available with or without other filter options being selected \(e.g., a Derived filter option\).
+The Collections panel we provide is very unique to the rest of the interface. This is in part mainly that it can be used to open Studies and/or Series for all collections we have available with or without other attribute options being selected \(e.g. a Derived attribute option\).
 
 ![](../.gitbook/assets/collections_panel.png)
 
