@@ -10,8 +10,6 @@ Below you will find more details regarding our four primary search panels availa
 
 ![](../.gitbook/assets/collections-panel.png)
 
-
-
 * **Search Scope panel:** The Search Scope panel is primarily used to filter by collection. We currently have 20+ collection options present.
 * **Search Configuration panel:** The Search Configuration panel is the more detailed filter options by utilizing various case, Segmentation, Qualitative, and Quantitative Analyses.  
 * **Search Results panel:** The Search Results is the visual representation panel of the detailed filter options we have available in the form of pie charts. 
@@ -65,7 +63,7 @@ Below is a brief description of the three main categories we have sorted the Der
 [The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) collections have a rich filter selection for clinical data associated to imaging data. This filter set is useful when working primarily with the collection TCGA.
 
 {% hint style="warning" %}
-The number of cases returned when working with this filter may vary due to corresponding data not available for all collections at this time.
+The number of cases returned when working with this attribute may vary due to corresponding data not available for all collections at this time.
 {% endhint %}
 
 The organization of the TCGA related data is described in detail [here](https://isb-cancer-genomics-cloud.readthedocs.io/en/latest/sections/BigQuery/ISBCGC-BQ-Projects.html) under the ISB-CGC documentation.
@@ -159,7 +157,7 @@ The name, user, filters used, the date generated, and total records found in the
 
 ![](../.gitbook/assets/manifest_download-screenshot.png)
 
-The default fields provided are the **PatientID**, **collection\_id**, **StudyInstanceUID**, **SeriesInstanceUID**, **SOPInstanceUID**, **source\_DOI**, and the **gcs\_path**.
+The default fields provided are the **PatientID**, **collection\_id**, **StudyInstanceUID**, **SeriesInstanceUID**, **SOPInstanceUID**, **source\_DOI**, **crdc** and the **gcs\_path**.
 
 ### Cohort List table
 
