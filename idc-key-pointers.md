@@ -2,7 +2,7 @@
 
 IDC pointers:
 
-* portal: **TBD**
+* **Portal:** [**https://portal.imaging.datacommons.cancer.gov**](https://portal.imaging.datacommons.cancer.gov)\*\*\*\*
 * Discourse \(Forum\): [https://discourse.canceridc.dev/](https://discourse.canceridc.dev/)
 * Documentation: [https://learn.canceridc.dev/](https://learn.canceridc.dev/)
 * Consortium home page: [https://imagingdatacommons.github.io/](https://imagingdatacommons.github.io/)

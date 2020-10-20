@@ -17,7 +17,7 @@ Datasets that are available within IDC are summarized in the [Data release notes
 
 ### Accessing the Imaging Data Commons Portal
 
-The IDC portal is accessible using a modern web browser such as Chrome, Firefox and Microsoft Edge at the following URL: https://TBD
+The IDC portal is accessible using a modern web browser such as Chrome, Firefox and Microsoft Edge at the following URL: [**https://portal.imaging.datacommons.cancer.gov**](https://portal.imaging.datacommons.cancer.gov)\*\*\*\*
 
 
 
