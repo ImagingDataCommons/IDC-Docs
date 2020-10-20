@@ -24,7 +24,7 @@ Each panel provides the same underlying Imaging Data Commons data and metadata.
 
 ## Search Configuration and Search Results attribute filter options in detail
 
-![](../.gitbook/assets/search_configuration_and_search_results.png)
+![](../.gitbook/assets/explore-image-data-detail.png)
 
 ### Count Clarification of Categorization
 
@@ -123,7 +123,7 @@ The creation of a cohort is very beneficial when looking for a specific subset o
 
 We allow the ability to create cohorts by using three of our main filter panels; a **Search Scope** panel, a **Filter Definition** panel, and the **Search Configuration** panel. 
 
-![image data exploration](../.gitbook/assets/data_portal.png)
+![](../.gitbook/assets/cohort-creation.png)
 
 For more detailed information on the data provided by the main attribute selection panels please refer to our [Explore Image Data](../dicom/data-model.md) section.
 
