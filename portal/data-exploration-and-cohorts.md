@@ -6,7 +6,7 @@ The Imaging Data Commons has four possible navigation options to browse Image da
   
 Below you will find more details regarding our four primary search panels available:
 
-![](../.gitbook/assets/explore-image-data.png)
+![](../.gitbook/assets/explore-image-data-landing-page.png)
 
 ![](../.gitbook/assets/collections-panel.png)
 
