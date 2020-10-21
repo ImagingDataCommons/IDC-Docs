@@ -1,8 +1,8 @@
 # Data exploration and Cohorts
 
-## Explore Imaging Data
+## Imaging Data Exploration
 
-The Imaging Data Commons has four possible navigation options to browse Image data; a **Search Scope** panel, a **Filter Definition** panel, a **Search Configuration** panel, and a **Collections** panel.  
+The Imaging Data Commons Portal user interface has four components to support exploration of Imaging data; a **Search Scope** panel, a **Filter Definition** panel, a **Search Configuration** panel, and a **Collections** panel.  
   
 Below you will find more details regarding our four primary search panels available:
 
@@ -115,7 +115,7 @@ Some objects can only be opened by the OHIF viewer at their related Study level 
 
 For more detailed information on the OHIF viewer please visit our [Image Visualization documentation](visualization.md).
 
-## Cohort exploration within the Imaging Data Commons ecosystem
+## Cohorts
 
 The creation of a cohort is very beneficial when looking for a specific subset of data within the vast collection of data available at the Imaging Data Commons.
 
@@ -136,7 +136,7 @@ The "Save As New Cohort" button can be found in the top right panel at the top o
 After you have found a desired filter set, you are prompted with a save cohort confirmation page. 
 
 {% hint style="warning" %}
-Please be advised only the Search Scope panel and the Search Configuration panel selection define a cohort.
+Please be advised only the Search Scope panel and the Search Configuration panel selection define composition of a cohort.
 {% endhint %}
 
 You will be required to add a name for your cohort but, the addition of a description is optional. 
@@ -178,19 +178,17 @@ The default fields provided are:
 * `crdc_instance_uid`: unique identifier of the object maintained by CRDC IndexD \(details on how to use this UID will be shared at a later time, when the corresponding capability is available\)
 * `gcs_path`: `gs://` URL that can be used to access the object using the [GCP `gsutil` tool](https://cloud.google.com/storage/docs/gsutil)
 
-An example of how IDC cohort manifest can be used to retrieve the manifest-defined cohort files is shown in [this colab notebook](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks).
+An example of how IDC cohort manifest can be used to retrieve the manifest-defined cohort files is shown in our[ colab notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks).
 
-### Cohort List table
+### Cohort List
 
-You are able to easily find any cohorts created in the cohort 
-
-The cohort list table consists of all cohorts created. Included is the corresponding **Cohort ID**, **Name**, **Description**, **Ownership**, how many times it has been **Shared**, and the **Data Version** of the cohort created. 
+"Cohorts" section of the IDC portal lists all of the cohorts you created under your account. Included is the corresponding **Cohort ID**, **Name**, **Description**, **Ownership**, how many times it has been **Shared.** **Data Version** defines the version of the IDC data against which the cohort was created. 
 
 ![](../.gitbook/assets/cohort_list_table-page.png)
 
 You are given the ability to easily delete one or multiple cohorts at once.  
 
 {% hint style="info" %}
-Only the ability to delete a cohort was added in this initial release. This page will be updated once the functionality is released. 
+Sharing of the cohort is a feature not available in the current release of IDC.
 {% endhint %}
 
