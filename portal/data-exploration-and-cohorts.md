@@ -149,7 +149,7 @@ Once a cohort has been created you can view the details of the cohort via the co
 
 Here is available the cohort name, cohort description\(optional\), the filters used, and the ability to open any study or series associated to the cohort created using the OHIF viewer. 
 
-For more information regarding image visualization please visit viewers\(insert URL\).
+For more information regarding image visualization please see the [Image visualization](visualization.md) section of the documentation.
 
 ### Download manifest of cohort 
 
