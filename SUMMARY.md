@@ -21,6 +21,7 @@
 * [Organization of data](data/organization-of-data.md)
 * [Data versioning](data/versioning.md)
 * [Data release notes](data/data-release-notes.md)
+* [Data Known Issues](data/data-known-issues.md)
 
 ## DICOM
 
@@ -37,6 +38,7 @@
 * [Data exploration and Cohorts](portal/data-exploration-and-cohorts.md)
 * [Image Visualization](portal/visualization.md)
 * [Portal Release Notes](portal/release-notes.md)
+* [Portal Known Issues](portal/portal-known-issues.md)
 
 ## API
 
