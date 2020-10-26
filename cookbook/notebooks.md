@@ -13,7 +13,7 @@ IDC Colab example notebooks are maintained in this repository: [https://github.c
 ### Relevant resources
 
 * Colab limitations: [https://research.google.com/colaboratory/faq.html](https://research.google.com/colaboratory/faq.html)
-* Transfering data between Colab and Google Drive: [https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7](https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7)
+* Transferring data between Colab and Google Drive: [https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7](https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7)
 * Potentially interesting sources of example notebooks:
   * [SimpleITK notebooks](https://github.com/InsightSoftwareConsortium/SimpleITK-Notebooks/tree/master/Python)
   * [https://github.com/mdai/ml-lessons/](https://github.com/mdai/ml-lessons/)
