@@ -49,6 +49,20 @@ IDC is NOT the right choice for you if you want to ...
 * ... upload and share publicly the imaging dataset you collected 
 * ... de-identify your dataset
 
+### What is the vision of the workflow for the user interacting with IDC?
+
+1. Define relevant imaging data cohorts from public datasets \(based on rich standardized metadata\)
+2. Explore the cohort, check quality \(visualize images and image-derived data\)
+3. Apply off-the-shelf cloud analytics tools to the cohort
+   1. BigQuery, DataStudio, Colab Notebooks
+   2. Further cohort refinement, metadata exploration, analysis
+4. Perform exploratory analysis of data on a cloud VM
+5. Scale up analysis
+6. Integrate with other data sources
+   1. Private data
+   2. Non-imaging data from CRDC \(i.e., genomics and proteomics\)
+7. Share analysis results and workflows
+
 ### Where do I learn more about other components of CRDC?
 
 The main website for the Cancer Research Data Commons \(CRDC\): [https://datacommons.cancer.gov/](https://datacommons.cancer.gov/).
