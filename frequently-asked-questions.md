@@ -16,6 +16,22 @@ Our initial goal is to host all of the public collections from [The Cancer Imagi
 
 For a dataset to become part of the IDC offering, it has to be de-identified and curated by TCIA, and released as [a public TCIA collection](https://www.cancerimagingarchive.net/collections/). Once this is done, it will \(eventually!\) be replicated in IDC.
 
+### What is the difference between IDC and TCIA?
+
+IDC and TCIA are partners in providing FAIR data for cancer imaging researchers. While some of the functions between the two resources are similar, there are also key differences. The table below provides a summary of similarities and differences.
+
+| Function | **IDC** | TCIA |
+| :--- | :--- | :--- |
+| Source of FAIR data for cancer imaging research | yes | yes |
+| Curation of cancer imaging collections | yes | yes |
+| De-identification | no | yes |
+| Cloud-based data co-located with compute resources | yes | no |
+| Recommended mechanism for downloading data to a local resource | no | yes |
+| Conversion of pathology images and image-derived data into DICOM format | yes | no |
+| Cloud-based research use cases | yes | no |
+| Private data collections | no | yes |
+| Public data collections | yes | yes |
+
 ### Is IDC the right choice for my needs?
 
 IDC is the right choice for you if you want to ...
