@@ -58,6 +58,8 @@ Below is a brief description of the three main categories we have sorted the Der
 * **Qualitative Analysis:** Qualitative evaluation results \(e.g., scores or categories associated with image findings\) stored in DICOM Structured Reporting TID1500 objects.
 * **Quantitative Analysis:** Quantitative evaluation results \(e.g., scores or categories associated with image findings\) stored in DICOM Structured Reporting TID1500 objects.
 
+
+
 ### Related Tab
 
 [The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) collections have a rich filter selection for clinical data associated with imaging data. This filter set is useful when working primarily with the TCGA collections.
