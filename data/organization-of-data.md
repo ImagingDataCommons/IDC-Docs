@@ -25,7 +25,7 @@ All of the IDC buckets are [requester-pays](https://cloud.google.com/storage/doc
 {% hint style="warning" %}
 Make sure you understand the [data egress charges](https://cloud.google.com/storage/pricing#network-egress)! As a general rule of thumb, download of the data to a GCP compute VM is free, while download to your laptop or a VM that belongs to a different cloud provider is expensive!
 
-As an example, if you were to download ALL of the DICOM data included in the October 2020 release of IDC, which is about 1 TB, to your laptop, you would need to pay a total of around $120 in egress charges.
+As an example, if you were to download to your laptop ALL of the DICOM data included in the October 2020 release of IDC, which is about 1 TB, you would need to pay a total of around $120 in egress charges.
 {% endhint %}
 
 Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below, substituting `$PROJECT_ID` with the valid GCP Project ID \(see the complete example in [this notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort_download.ipynb)\):
