@@ -9,13 +9,19 @@ The Imaging Data Commons Explore Image Data portal is a platform that allows use
 **Data Exploration**
 
 * Lack of consistent punctuation throughout the web app
+  * [GitHub ticket \#414](https://github.com/ImagingDataCommons/IDC-WebApp/issues/414)
 * Attribute values appear as blank when zero cases are present for the Search Configuration panel
+  * [GitHub ticket \#423](https://github.com/ImagingDataCommons/IDC-WebApp/issues/423)
 * An attribute selection combined with a Quantitative Analysis attribute selection will display all value options when no cases are available in certain use cases
+  * [GitHub ticket \#341](https://github.com/ImagingDataCommons/IDC-WebApp/issues/341)
 * Attribute slider for Quantitative values will display with zero cases present in attribute selection
+  * [GitHub ticket \#425](https://github.com/ImagingDataCommons/IDC-WebApp/issues/425) 
 * The selection of the Age at Diagnosis None attribute is not reflected in the cohorts confirmation pop-up or the cohort details page
-* The download of the cohort manifest is truncated at 65,000 records ordered by PatientID, StudyID, SeriesID, and InstanceID 
-* Typo in collections table for cancer type data pulled for TCGA-GBM and TCGA-LGG
-* Duplication of value Digital Mammography X-Ray Image  for Object Class attribute present in the data portal under the original tab.
+  * [GitHub ticket \#420](https://github.com/ImagingDataCommons/IDC-WebApp/issues/420)
+* The download of the cohort manifest is truncated at 65,000 records ordered by PatientID, StudyID, SeriesID, and InstanceID
+  * [GitHub ticket \#394](https://github.com/ImagingDataCommons/IDC-WebApp/issues/394)
+* Duplication of value Digital Mammography X-Ray Image  for Object Class attribute present in the data portal under the original tab
+  * [GitHub ticket \#233](https://github.com/ImagingDataCommons/IDC-WebApp/issues/233)
 
 More detailed information can be found on GitHub under the ImagingDataCommons/Web-App repository. All tickets related to known issues within the data portal are labeled with either a [bug](https://github.com/ImagingDataCommons/IDC-WebApp/issues?q=is%3Aissue+is%3Aopen+label%3Abug) or an [enhancement](https://github.com/ImagingDataCommons/IDC-WebApp/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) label.
 
