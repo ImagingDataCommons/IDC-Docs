@@ -14,9 +14,9 @@ The Imaging Data Commons Explore Image Data portal is a platform that allows use
 * Attribute slider for Quantitative values will display with zero cases present in attribute selection - [ImagingDataCommons/IDC-WebApp\#425](https://github.com/ImagingDataCommons/IDC-WebApp/issues/425)
 * The selection of the Age at Diagnosis None attribute is not reflected in the cohorts confirmation pop-up or the cohort details page - [ImagingDataCommons/IDC-WebApp\#420](https://github.com/ImagingDataCommons/IDC-WebApp/issues/420)
 * The download of the cohort manifest is truncated at 65,000 records ordered by PatientID, StudyID, SeriesID, and InstanceID
-- [ImagingDataCommons/IDC-WebApp\#394](https://github.com/ImagingDataCommons/IDC-WebApp/issues/394)
+* [ImagingDataCommons/IDC-WebApp\#394](https://github.com/ImagingDataCommons/IDC-WebApp/issues/394)
 * Duplication of value Digital Mammography X-Ray Image  for Object Class attribute present in the data portal under the original tab
-- [ImagingDataCommons/IDC-WebApp\#233](https://github.com/ImagingDataCommons/IDC-WebApp/issues/233)
+* [ImagingDataCommons/IDC-WebApp\#233](https://github.com/ImagingDataCommons/IDC-WebApp/issues/233)
 
 More detailed information can be found on GitHub under the ImagingDataCommons/Web-App repository. All tickets related to known issues within the data portal are labeled with either a [bug](https://github.com/ImagingDataCommons/IDC-WebApp/issues?q=is%3Aissue+is%3Aopen+label%3Abug) or an [enhancement](https://github.com/ImagingDataCommons/IDC-WebApp/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) label.
 
@@ -24,7 +24,7 @@ More detailed information can be found on GitHub under the ImagingDataCommons/We
 
 * The about box of the OHIF viewer reports the incorrect version number - [OHIF/Viewers\#2023](https://github.com/OHIF/Viewers/issues/2023)
 * Selection of the Object class real-world mapping attribute will cause the OHIF viewer not to load
-- [ImagingDataCommons/IDC-WebApp\#332](https://github.com/ImagingDataCommons/IDC-WebApp/issues/332)
+* [ImagingDataCommons/IDC-WebApp\#332](https://github.com/ImagingDataCommons/IDC-WebApp/issues/332)
 * When working with the Safari browser, the 2D MPR functionality causes the viewer to freeze. We recommend using Google Chrome or Firefox when working with the Imaging Data Commons - [ImagingDataCommons/IDC-WebApp\#213](https://github.com/ImagingDataCommons/IDC-WebApp/issues/213)
 * Tag viewer version is currently broken for RT Struct series in the OHIF viewer - [OHIF/Viewers\#2122](https://github.com/OHIF/Viewers/issues/2122)
 * The occasional return of a Chunk Load Error on the viewer load not handled correctly and will cause the viewer to fail - [OHIF/Viewers\#2021](https://github.com/OHIF/Viewers/issues/2021)
@@ -44,6 +44,9 @@ You may occasionally experience black screen while opening images in IDC Viewer,
 
 ![](../.gitbook/assets/96320286-dbc51680-0fc6-11eb-81ba-290e940f2f3f.png)
 
-If this happens, try reloading the page several times, or clearing cache and doing hard reload.
+If this happens, try reloading the page several times, or clearing cache and doing hard reload, as shown below.
 
-To track this issue in GitHub please see [OHIF/Viewers\#2121](https://github.com/OHIF/Viewers/issues/2121).
+![](../.gitbook/assets/hard_reload.gif)
+
+To track the status of this issue in GitHub please see [OHIF/Viewers\#2121](https://github.com/OHIF/Viewers/issues/2121).
+
