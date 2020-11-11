@@ -4,8 +4,6 @@
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
 
-### Initial release
-
 Main features in this initial release include:
 
 * The ability to search for data in BigQuery and Solr
