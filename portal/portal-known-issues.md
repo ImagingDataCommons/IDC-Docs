@@ -38,18 +38,12 @@ More detailed information can be found on GitHub under the ImagingDataCommons/We
 
 More detailed information can be found in GitHub within the OHIF/Viewers repository. All tickets related to the Imaging Data Commons are labeled with either an [IDC:candidate](https://github.com/OHIF/Viewers/labels/IDC%3Acandidate) or an [IDC:priority](https://github.com/OHIF/Viewers/labels/IDC%3Apriority) label.
 
-### Black screen on OHIF load fix
+### Black screen while opening IDC Viewer
 
-At this time we are rapidly updating the OHIF viewer version to fit the communities needs at a very rapid pace. This causes the occasion black screen to load on the OHIF viewer if you have used the viewer on an older version in a previous analysis.
-
-Below is a screenshot of what you could possibly run into and the error in the developers console.
+You may occasionally experience black screen while opening images in IDC Viewer, such as in the image below:
 
 ![](../.gitbook/assets/96320286-dbc51680-0fc6-11eb-81ba-290e940f2f3f.png)
 
-We are actively working to resolve this situation. In the meantime we ask as a workaround if you experience this issue please go back to the data portal and open the study and/or series you would like to view again.
-
-{% hint style="success" %}
-This will be load the most recent version of the OHIF viewer and display the image you wish to view!
-{% endhint %}
+If this happens, try reloading the page several times, or clearing cache and doing hard reload.
 
 To track this issue in GitHub please see [OHIF/Viewers\#2121](https://github.com/OHIF/Viewers/issues/2121).
