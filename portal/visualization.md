@@ -19,6 +19,7 @@ Depending on a variety of factors \(size of the image, your network connection, 
 
 ![](../.gitbook/assets/cine_mpr.jpg)
 
+Note that MPR mode is only available for series that form a consistent volume (i.e. all pixel spacings equal, slices equally spaced, etc).
 ## Functionality
 
 ### General functionality
