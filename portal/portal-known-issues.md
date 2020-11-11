@@ -1,6 +1,6 @@
 # Portal Known Issues
 
-## 1.0.0 - October 2020
+## 1.0.0 - October 2020 \(canceridc.202010190226.4e8597\)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
 
