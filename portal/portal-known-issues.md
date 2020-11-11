@@ -8,12 +8,9 @@ The Imaging Data Commons Explore Image Data portal is a platform that allows use
 
 ### **Data Exploration**
 
-* Lack of consistent punctuation throughout the web app
-  * [GitHub ticket \#414](https://github.com/ImagingDataCommons/IDC-WebApp/issues/414)
-* Attribute values appear as blank when zero cases are present for the Search Configuration panel
-  * [GitHub ticket \#423](https://github.com/ImagingDataCommons/IDC-WebApp/issues/423)
-* An attribute selection combined with a Quantitative Analysis attribute selection will display all value options when no cases are available in certain use cases
-  * [GitHub ticket \#341](https://github.com/ImagingDataCommons/IDC-WebApp/issues/341)
+* Lack of consistent punctuation throughout the web app - [ImagingDataCommons/IDC-WebApp\#414](https://github.com/ImagingDataCommons/IDC-WebApp/issues/414)
+* Attribute values appear as blank when zero cases are present for the Search Configuration panel - [ImagingDataCommons/IDC-WebApp\#423](https://github.com/ImagingDataCommons/IDC-WebApp/issues/423)
+* An attribute selection combined with a Quantitative Analysis attribute selection will display all value options when no cases are available in certain use cases - [ImagingDataCommons/IDC-WebApp\#341](https://github.com/ImagingDataCommons/IDC-WebApp/issues/341)
 * Attribute slider for Quantitative values will display with zero cases present in attribute selection
   * [GitHub ticket \#425](https://github.com/ImagingDataCommons/IDC-WebApp/issues/425) 
 * The selection of the Age at Diagnosis None attribute is not reflected in the cohorts confirmation pop-up or the cohort details page
