@@ -6,7 +6,7 @@ Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.c
 
 ## October 2020
 
-Listed below are all of the [original](https://www.cancerimagingarchive.net/collections/) and [analysis results](https://www.cancerimagingarchive.net/tcia-analysis-results/) collections of [The Cancer Imaging Archive](https://www.cancerimagingarchive.net/) currently hosted by IDC, with the DOIs to those collections.
+Listed below are all of the [original](https://www.cancerimagingarchive.net/collections/) and [analysis results](https://www.cancerimagingarchive.net/tcia-analysis-results/) collections of [The Cancer Imaging Archive](https://www.cancerimagingarchive.net/) currently hosted by IDC, with the links to DOIs to those collections.
 
 Original collections included:
 
