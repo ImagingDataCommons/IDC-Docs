@@ -18,4 +18,5 @@ IDC Colab example notebooks are maintained in this repository: [https://github.c
   * [SimpleITK notebooks](https://github.com/InsightSoftwareConsortium/SimpleITK-Notebooks/tree/master/Python)
   * [https://github.com/mdai/ml-lessons/](https://github.com/mdai/ml-lessons/)
   * [http://uwmsk.org/jupyter/](http://uwmsk.org/jupyter/)
+  * [https://github.com/JoaoSantinha/Medical\_Image\_Analysis\_Workshop](https://github.com/JoaoSantinha/Medical_Image_Analysis_Workshop)
 
