@@ -1,4 +1,4 @@
-# Getting started with IDC
+# Getting started
 
 The goal of IDC is to _connect_ you with the cloud-based data and compute resources. 
 

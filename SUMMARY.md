@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Welcome!](README.md)
-* [Getting started with IDC](getting-started-with-idc.md)
+* [Getting started](getting-started-with-idc.md)
 * [Core functions](core-functions-of-idc.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Support](support.md)
@@ -9,7 +9,7 @@
 
 ## Introduction
 
-* [Features](introduction/idc-and-google-cloud-platform.md)
+* [Features](introduction/features.md)
 * [Google Cloud Platform](introduction/google-cloud-platform.md)
 * [DICOM](introduction/dicom.md)
 * [Getting started with GCP](introduction/getting-started-with-gcp.md)
@@ -25,7 +25,7 @@
 
 ## DICOM
 
-* [Introduction](dicom/untitled.md)
+* [Introduction](dicom/introduction.md)
 * [Data model](dicom/data-model.md)
 * [Original objects](dicom/original-vs-derived-objects.md)
 * [Derived objects](dicom/derived-objects.md)
