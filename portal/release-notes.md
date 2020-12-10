@@ -1,13 +1,11 @@
 # Portal Release Notes
 
 {% hint style="warning" %}
-The version of the portal is shown at the bottom of the portal page. The current semantics of the version is the following:
+The version of the portal is shown at the bottom of the portal page. The semantics of the version is the following:
 
-_canceridc.&lt;date of webapp deployment in YYYYMMDDHHMM&gt;.&lt;last 6 characters of the commit hash&gt;_,
+_canceridc.&lt;date of webapp deployment in YYYYMMDDHHMM&gt;.&lt;first 6 characters of the commit hash&gt;_,
 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
-
-In the future releases, we will be switching to using the first 6 characters of the revision hash \(see [ImagingDataCommons/IDC-WebApp\#434](https://github.com/ImagingDataCommons/IDC-WebApp/issues/434)\)
 {% endhint %}
 
 ## 1.1.0 - December 2020 \(canceridc.202012091728.674fff0\)
