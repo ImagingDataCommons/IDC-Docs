@@ -20,7 +20,7 @@ Main highlights of this release include:
 * Quantitative filter ranges are updated dynamically with the updates to filter selection.
 * Pie charts will display "No data available" message when zero cases are returned for the given filter selection.
 * RTPLAN and Real World Mapping Attribute values are now disabled at the series level, since they cannot be visualized in the IDC Viewer.
-* Quantitative filter sliders return data for all variables available in range.
+* Bug fixes.
 
 ## 1.0.0 - October 2020 \(canceridc.202010190226.4e8597\)
 

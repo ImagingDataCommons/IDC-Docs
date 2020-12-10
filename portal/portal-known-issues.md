@@ -4,8 +4,6 @@
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
 
-### Initial release
-
 ### **Data Exploration**
 
 * Lack of consistent punctuation throughout the web app - [ImagingDataCommons/IDC-WebApp\#414](https://github.com/ImagingDataCommons/IDC-WebApp/issues/414)
