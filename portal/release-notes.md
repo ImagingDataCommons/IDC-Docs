@@ -14,15 +14,15 @@ In the future releases, we will be switching to using the first 6 characters of 
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
 
-Main features in this release include:
+Main highlights of this release include:
 
-* The ability to select a case to open with the OHIF viewer for analysis.
-* The ability to export csv, tsv, json format, and to BigQuery multiple collections using the Export Cohort Manifest button
-* Cohorts less than 650k rows can now be downloaded as a multipart file. Cohorts larger that 600k rows can now be exported to BigQuery \(for Google Accounts\).
-* Quantitative filter ranges update count with each filter selection, and reset selection
-* All pie charts will display no data available when zero cases are returned with certain attribute selections
-* RTPLAN and Real World Mapping Attribute values were disabled at the series level
-* Quantitative filter sliders return data for all variables available in range 
+* Case-level table is added to the portal.
+* Cohorts can now be exported into BigQuery tables using the Export Cohort Manifest button
+* Cohorts less than 650k rows can now be downloaded as a multipart file. Cohorts larger that 600k rows can only be be exported to BigQuery \(for users that are logged in with Google Accounts\).
+* Quantitative filter ranges are updated dynamically with the updates to filter selection.
+* Pie charts will display "No data available" message when zero cases are returned for the given filter selection.
+* RTPLAN and Real World Mapping Attribute values are now disabled at the series level, since they cannot be visualized in the IDC Viewer.
+* Quantitative filter sliders return data for all variables available in range.
 
 ## 1.0.0 - October 2020 \(canceridc.202010190226.4e8597\)
 
