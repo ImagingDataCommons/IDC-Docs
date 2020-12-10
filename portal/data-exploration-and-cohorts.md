@@ -74,13 +74,25 @@ The organization of the TCGA related data is described in detail [here](https://
 
 ## Preview of Collections, Studies, and Series within the Imaging Data Commons
 
-### Viewing Collections
+### Selection of a Collection
 
 The Collections panel we provide is very unique to the rest of the interface. This is in part mainly that it can be used to open Studies and/or Series for all collections we have available with or without other attribute options being selected \(e.g. a Derived attribute option\).
 
 ![](../.gitbook/assets/collections_panel.png)
 
-### Viewing Studies per Collection
+{% hint style="success" %}
+Please be sure to select a Collection option to be able to open the following panels.
+{% endhint %}
+
+### Selection of a Case per Collection
+
+The Selected Case panel will list all cases available for the collection selected in the previous panel. Listed is the **Collection Name**, **Case Id, Total \# of Studies, and the Total \# of Series.** 
+
+![](../.gitbook/assets/selected_cases-panel.png)
+
+The selection of a case will open the Selected Studies available for the case.
+
+### Viewing Studies **p**er Case
 
 The Selected Studies panel will display all possible series we have available for the collections and/or detailed filter options selected. 
 
@@ -101,7 +113,7 @@ GROUP BY PatientID, StudyInstanceUID
 
 This particular example above will return information for the Collection QIN\_HEADNECK.
 
-### Viewing Series per Study per Collection
+### Viewing a Series per Study per Case
 
 The Selected Series panel provides the ability to view each series we have available for the Study selected from the Selected Studies panel.   
   
@@ -155,19 +167,23 @@ For more information regarding image visualization please see the [Image visuali
 
 ### Download manifest of cohort 
 
-{% hint style="danger" %}
-Download of the cohort manifest is currently limited to the first 65,000 rows, ordered by `PatientID`, `StudyInstanceUID`, `SeriesInstanceUID` and `SOPInstanceUID`. Cohorts that are exceeding the 65,000 limit will have a warning next to the download cohort button, as shown below.
+{% hint style="info" %}
+Cohorts less than 650k rows can now be downloaded as a multipart file. Cohorts larger that 600k rows can now be exported to BigQuery \(for Google Accounts\).
 
-![](../.gitbook/assets/cohort_limit_warning.png) 
+The notification below will be visible,
 
-We are working on resolving this limitation. You can monitor progress in [this issue](https://github.com/ImagingDataCommons/IDC-WebApp/issues/394).
+       ![](../.gitbook/assets/mainfest-notification.png)
+
+A Google account is required to be able to use the export to BigQuery functionality.
 {% endhint %}
 
-The manifest of the cohort contains everything you need to download the data corresponding to your cohort, and to understand the sources of data in your cohort. Currently, cohort manifest can be exported in CSV format. In the future, we plan to provide support of alternative formats and export of the manifest as a BigQuery table.
+The manifest of the cohort contains everything you need to download the data corresponding to your cohort, and to understand the sources of data in your cohort. Currently, cohort manifest can be exported in CSV format, TSV format, JSON format and as an export to BigQuery.
 
-The header of the manifest contain the name, user, filters used, the date generated, and the total number of records \(truncated to 65,000 records, if the limit is exceeded\).
+#### Header fields and column selection
 
-![](../.gitbook/assets/manifest_download-screenshot.png)
+The header of the manifest contains the name, user, filters used, the date generated, and the total number of records \(truncated to 65,000 records for CSV and TSV format\).
+
+![](../.gitbook/assets/mainfest-for-cohort.png)
 
 The default fields provided are:
 
@@ -178,9 +194,27 @@ The default fields provided are:
 * `SOPInstanceUID`: value of the corresponding DICOM attribute
 * `source_DOI`: Digital Object Identifier \(DOI\) of the source data collection. Pre-pending `source_DOI` with `https://doi.org/` will give you the URL of the collection dataset
 * `crdc_instance_uid`: unique identifier of the object maintained by CRDC IndexD \(details on how to use this UID will be shared at a later time, when the corresponding capability is available\)
-* `gcs_path`: `gs://` URL that can be used to access the object using the [GCP `gsutil` tool](https://cloud.google.com/storage/docs/gsutil)
+* `gcs_url`: `gs://` URL that can be used to access the object using the [GCP `gsutil` tool](https://cloud.google.com/storage/docs/gsutil)
 
 An example of how IDC cohort manifest can be used to retrieve the manifest-defined cohort files is shown in our[ colab notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks).
+
+{% hint style="warning" %}
+A maximum of ten files will be generated before required to export the manifest via BigQuery.
+{% endhint %}
+
+The JSON export of a file will not have any header information available. This provides the ability for the JSON file to be easily imported into a BigQuery table. 
+
+#### Cohort headers and columns selection/de-selection
+
+![](../.gitbook/assets/header2.png)
+
+On the cohort manifest export confirmation pop-up the option to select/de-select header and column options is available. 
+
+![](../.gitbook/assets/columns.png)
+
+{% hint style="info" %}
+The end user is required to have a column option selected for the export of a manifest. 
+{% endhint %}
 
 ### Cohort List
 

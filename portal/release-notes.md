@@ -10,6 +10,20 @@ where revision hash corresponds to that of the [IDC WebApp repo](https://github.
 In the future releases, we will be switching to using the first 6 characters of the revision hash \(see [ImagingDataCommons/IDC-WebApp\#434](https://github.com/ImagingDataCommons/IDC-WebApp/issues/434)\)
 {% endhint %}
 
+## 1.1.0 - December 2020 \(canceridc.202012091728.674fff0\)
+
+The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
+
+Main features in this release include:
+
+* The ability to select a case to open with the OHIF viewer for analysis.
+* The ability to export csv, tsv, json format, and to BigQuery multiple collections using the Export Cohort Manifest button
+* Cohorts less than 650k rows can now be downloaded as a multipart file. Cohorts larger that 600k rows can now be exported to BigQuery \(for Google Accounts\).
+* Quantitative filter ranges update count with each filter selection, and reset selection
+* All pie charts will display no data available when zero cases are returned with certain attribute selections
+* RTPLAN and Real World Mapping Attribute values were disabled at the series level
+* Quantitative filter sliders return data for all variables available in range 
+
 ## 1.0.0 - October 2020 \(canceridc.202010190226.4e8597\)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
