@@ -1,5 +1,21 @@
 # Portal Known Issues
 
+## 1.1.0 - December 2020 \(canceridc.202012091728.674fff0\)
+
+The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
+
+* Error exporting cohort into BigQuery table with integer filter values - [ImagingDataCommons/IDC-WebApp\#492](https://github.com/ImagingDataCommons/IDC-WebApp/issues/492)
+* Series and Study Tables need to account for 'unfetched data'  - [ImagingDataCommons/IDC-WebApp\#186](https://github.com/ImagingDataCommons/IDC-WebApp/issues/186)
+* Clicking on the 2D MPR freezes the viewer when working on a Safari browser - [ImagingDataCommons/IDC-WebApp\#213](https://github.com/ImagingDataCommons/IDC-WebApp/issues/213)
+* Duplicate entries under object class with the name "Digital Mammography X-Ray Image" - [ImagingDataCommons/IDC-WebApp/issues\#233](https://github.com/ImagingDataCommons/IDC-WebApp/issues/233)
+* "Show more" shows a negative number on ocassion - [ImagingDataCommons/IDC-WebApp\#374](https://github.com/ImagingDataCommons/IDC-WebApp/issues/374)
+* Capitalization of collection names should be consistent with TCIA conventions in all places - [ImagingDataCommons/IDC-WebApp\#414](https://github.com/ImagingDataCommons/IDC-WebApp/issues/414)
+* Age at diagnosis None selection is not listed on the cohort creation confirmation pop-up - [ImagingDataCommons/IDC-WebApp\#420](https://github.com/ImagingDataCommons/IDC-WebApp/issues/420)
+* Check all / uncheck all button below collection list does not work - [ImagingDataCommons/IDC-WebApp\#445](https://github.com/ImagingDataCommons/IDC-WebApp/issues/445)
+* The collection name is labeled Project Name in the studies section of the search results page - [ImagingDataCommons/IDC-WebApp\#452](https://github.com/ImagingDataCommons/IDC-WebApp/issues/452)
+* 500 error returned in developers console, problem fetching data - [ImagingDataCommons/IDC-WebApp\#462](https://github.com/ImagingDataCommons/IDC-WebApp/issues/462)
+* -1 as value range error for standardized added metabolic activity filter - [ImagingDataCommons/IDC-WebApp\#493](https://github.com/ImagingDataCommons/IDC-WebApp/issues/493)
+
 ## 1.0.0 - October 2020 \(canceridc.202010190226.4e8597\)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
