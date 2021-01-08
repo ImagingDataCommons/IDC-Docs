@@ -11,7 +11,7 @@ Imaging Data Commons portal provides a web-based interactive interface to browse
 * summary plots for the user-defined cohorts
 * saving of the user-defined cohorts under Imaging Data Commons user account
 
-![](../.gitbook/assets/homepage.png)
+![](../.gitbook/assets/home-page.png)
 
 Datasets that are available within IDC are summarized in the [Data release notes](../data/data-release-notes.md).
 

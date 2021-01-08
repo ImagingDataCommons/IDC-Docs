@@ -8,7 +8,7 @@ Below you will find more details regarding our four primary search panels availa
 
 ![](../.gitbook/assets/explore-image-data-landing-page.png)
 
-![](../.gitbook/assets/collections-panel.png)
+![](../.gitbook/assets/collections.png)
 
 * **Search Scope panel:** The Search Scope panel is primarily used to filter by collection. We currently have 20+ collection options present.
 * **Search Configuration panel:** The Search Configuration panel is the more detailed attribute filter option by utilizing various case, Segmentation, Qualitative, and Quantitative Analyses.  
