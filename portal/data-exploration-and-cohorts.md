@@ -6,7 +6,7 @@ The Imaging Data Commons Portal user interface has four components to support ex
   
 Below you will find more details regarding our four primary search panels available:
 
-![](../.gitbook/assets/explore-image-data-landing-page.png)
+![](../.gitbook/assets/explore-page.png)
 
 ![](../.gitbook/assets/collections.png)
 
@@ -24,7 +24,7 @@ Each panel provides the same underlying Imaging Data Commons data and metadata.
 
 ## Search Configuration and Search Results attribute filter options in detail
 
-![](../.gitbook/assets/explore-image-data-detail.png)
+![](../.gitbook/assets/cohortexploredetailv2.png)
 
 ### Count Clarification of Categorization
 
@@ -64,8 +64,6 @@ Below is a brief description of the three main categories we have sorted the Der
 
 [The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) collections have a rich filter selection for clinical data associated with imaging data. This filter set is useful when working primarily with the TCGA collections.
 
-[The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) collections has a rich attribute selection for clinical data associated to imaging data. This attribute set is useful when working primarily with the collection TCGA.
-
 {% hint style="warning" %}
 Filter attributes in this tab only filter cases within the TCGA collections. Other collections are not affected by these filters. 
 {% endhint %}
@@ -78,10 +76,10 @@ The organization of the TCGA related data is described in detail [here](https://
 
 The Collections panel we provide is very unique to the rest of the interface. This is in part mainly that it can be used to open Studies and/or Series for all collections we have available with or without other attribute options being selected \(e.g. a Derived attribute option\).
 
-![](../.gitbook/assets/collections_panel.png)
+![](../.gitbook/assets/collections-panelv2.png)
 
 {% hint style="success" %}
-Please be sure to select a Collection option to be able to open the following panels.
+Please be sure to select a Collection option to then be able to open the following panels.
 {% endhint %}
 
 ### Selection of a Case per Collection
@@ -137,15 +135,19 @@ The creation of a cohort is very beneficial when looking for a specific subset o
 
 We allow the ability to create cohorts by using three of our main filter panels; a **Search Scope** panel, a **Filter Definition** panel, and the **Search Configuration** panel. 
 
-![](../.gitbook/assets/cohort-creation.png)
+![](../.gitbook/assets/cohort-creation-v2.png)
 
 For more detailed information on the data provided by the main attribute selection panels please refer to our [Explore Image Data](../dicom/data-model.md) section.
 
-![](../.gitbook/assets/attribute-selection.png)
+![](../.gitbook/assets/cohort-attribute-selection-v2.png)
+
+Attribute filter selections in the search configuration panel that have no data available are highlighted in grey. 
+
+![](../.gitbook/assets/save-cohort-button.png)
 
 The "Save As New Cohort" button can be found in the top right panel at the top of the web page. 
 
-![](../.gitbook/assets/cohort_creation-confirmation.png)
+![](../.gitbook/assets/save-cohort-confirmation-v2.png)
 
 After you have found a desired filter set, you are prompted with a save cohort confirmation page. 
 
