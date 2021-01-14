@@ -8,19 +8,34 @@ _canceridc.&lt;date of webapp deployment in YYYYMMDDHHMM&gt;.&lt;first 6 charact
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 1.2.0 - January 2021 \(canceridc.202101111506.0a8af57\)
+
+The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
+
+Main highlights of this release include:
+
+* Consistent number of files will be returned between the portal and BigQuery
+* When the user clicks a non-gov link a popup will appear
+* Cohort manifest export information now has clickable URLs to take you to the BigQuery console
+* Collections list displays by default 100 entries
+* Any empty search criteria is now highlighted in grey and no data will be listed
+* The user will no longer need to scroll to see search criteria in the left search configuration panel
+* Portal footer is now in compliance with NCI requirements
+* Check/uncheck in the collections panel added for collection TCGA
+
 ## 1.1.0 - December 2020 \(canceridc.202012091728.674fff0\)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
 
 Main highlights of this release include:
 
-* Case-level table is added to the portal.
+* Case-level table is added to the portal
 * Cohorts can now be exported into BigQuery tables using the Export Cohort Manifest button
-* Cohorts less than 650k rows can now be downloaded as a multipart file. Cohorts larger that 600k rows can only be be exported to BigQuery \(for users that are logged in with Google Accounts\).
-* Quantitative filter ranges are updated dynamically with the updates to filter selection.
-* Pie charts will display "No data available" message when zero cases are returned for the given filter selection.
-* RTPLAN and Real World Mapping Attribute values are now disabled at the series level, since they cannot be visualized in the IDC Viewer.
-* Various bug fixes in both the IDC Portal and IDC Viewer.
+* Cohorts less than 650k rows can now be downloaded as a multipart file. Cohorts larger that 600k rows can only be be exported to BigQuery \(for users that are logged in with Google Accounts\)
+* Quantitative filter ranges are updated dynamically with the updates to filter selection
+* Pie charts will display "No data available" message when zero cases are returned for the given filter selection
+* RTPLAN and Real World Mapping Attribute values are now disabled at the series level, since they cannot be visualized in the IDC Viewer
+* Various bug fixes in both the IDC Portal and IDC Viewer
 
 ## 1.0.0 - October 2020 \(canceridc.202010190226.4e8597\)
 

@@ -1,5 +1,20 @@
 # Portal Known Issues
 
+## 1.2.0 - January 2021 \(canceridc.202101111506.0a8af57\)
+
+The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
+
+* Some filter selections are not saved for cohort creation after logging into the interface - [ImagingDataCommons/IDC-WebApp\#519](https://github.com/ImagingDataCommons/IDC-WebApp/issues/519)
+* Entire page will scroll when using the cohort creation confirmation popup - [ImagingDataCommons/IDC-WebApp\#514](https://github.com/ImagingDataCommons/IDC-WebApp/issues/514)
+* Error exporting cohort into BigQuery table with integer filter values - [ImagingDataCommons/IDC-WebApp\#492](https://github.com/ImagingDataCommons/IDC-WebApp/issues/492)
+* 500 error returned in developers console, problem fetching data - [ImagingDataCommons/IDC-WebApp\#462](https://github.com/ImagingDataCommons/IDC-WebApp/issues/462)
+* Age at diagnosis None selection is not listed on the cohort creation confirmation pop-up - [ImagingDataCommons/IDC-WebApp\#420](https://github.com/ImagingDataCommons/IDC-WebApp/issues/420)
+* Capitalization of collection names should be consistent with TCIA conventions in all places - [ImagingDataCommons/IDC-WebApp\#414](https://github.com/ImagingDataCommons/IDC-WebApp/issues/414)
+* "Show more" shows a negative number on occasion - [ImagingDataCommons/IDC-WebApp\#374](https://github.com/ImagingDataCommons/IDC-WebApp/issues/374)
+* Duplicate entries under object class with the name "Digital Mammography X-Ray Image" - [ImagingDataCommons/IDC-WebApp/issues\#233](https://github.com/ImagingDataCommons/IDC-WebApp/issues/233)
+* Series and Study Tables need to account for 'unfetched data'  - [ImagingDataCommons/IDC-WebApp\#186](https://github.com/ImagingDataCommons/IDC-WebApp/issues/186)
+* Clicking on the 2D MPR freezes the viewer when working on a Safari browser - [ImagingDataCommons/IDC-WebApp\#213](https://github.com/ImagingDataCommons/IDC-WebApp/issues/213)
+
 ## 1.1.0 - December 2020 \(canceridc.202012091728.674fff0\)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
@@ -8,7 +23,7 @@ The Imaging Data Commons Explore Image Data portal is a platform that allows use
 * Series and Study Tables need to account for 'unfetched data'  - [ImagingDataCommons/IDC-WebApp\#186](https://github.com/ImagingDataCommons/IDC-WebApp/issues/186)
 * Clicking on the 2D MPR freezes the viewer when working on a Safari browser - [ImagingDataCommons/IDC-WebApp\#213](https://github.com/ImagingDataCommons/IDC-WebApp/issues/213)
 * Duplicate entries under object class with the name "Digital Mammography X-Ray Image" - [ImagingDataCommons/IDC-WebApp/issues\#233](https://github.com/ImagingDataCommons/IDC-WebApp/issues/233)
-* "Show more" shows a negative number on ocassion - [ImagingDataCommons/IDC-WebApp\#374](https://github.com/ImagingDataCommons/IDC-WebApp/issues/374)
+* "Show more" shows a negative number on occasion - [ImagingDataCommons/IDC-WebApp\#374](https://github.com/ImagingDataCommons/IDC-WebApp/issues/374)
 * Capitalization of collection names should be consistent with TCIA conventions in all places - [ImagingDataCommons/IDC-WebApp\#414](https://github.com/ImagingDataCommons/IDC-WebApp/issues/414)
 * Age at diagnosis None selection is not listed on the cohort creation confirmation pop-up - [ImagingDataCommons/IDC-WebApp\#420](https://github.com/ImagingDataCommons/IDC-WebApp/issues/420)
 * Check all / uncheck all button below collection list does not work - [ImagingDataCommons/IDC-WebApp\#445](https://github.com/ImagingDataCommons/IDC-WebApp/issues/445)
