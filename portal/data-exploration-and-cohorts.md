@@ -169,10 +169,10 @@ For more information regarding image visualization please see the [Image visuali
 
 ### Download manifest of cohort 
 
-The manifest of the cohort contains everything you need to download the data corresponding to your cohort, and to understand the sources of data in your cohort. Currently, cohort manifest can be exported in CSV format, TSV format, JSON format and as an export to BigQuery.
+The manifest of the cohort contains everything you need to download the data corresponding to your cohort, and to understand the sources of data in your cohort. Currently, cohort manifest can be exported in CSV format, TSV format, JSON format, and as an export to BigQuery.
 
 {% hint style="info" %}
-Cohorts less than 65k rows can now be downloaded as a multipart file. Cohorts larger that 65k rows can now be exported to BigQuery \(for Google Accounts\).
+Cohorts less than 65,000 rows can now be downloaded as a multipart file. Cohorts larger that 65,000 rows can now be exported to BigQuery \(for Google Accounts\).
 
 A Google account is required to be able to use the export to BigQuery functionality.
 {% endhint %}
