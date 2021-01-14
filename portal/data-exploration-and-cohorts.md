@@ -197,7 +197,9 @@ The default fields provided are:
 An example of how IDC cohort manifest can be used to retrieve the manifest-defined cohort files is shown in our[ colab notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks).
 
 {% hint style="info" %}
-A maximum of six files will be generated before required to export the manifest via BigQuery.
+A maximum of ten files will be generated before required to export the manifest via BigQuery. 
+
+Each file will have 65,000 entries present.
 {% endhint %}
 
 ### Cohort manifest export to BigQuery
