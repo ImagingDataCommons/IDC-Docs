@@ -183,7 +183,7 @@ The manifest of the cohort contains everything you need to download the data cor
 
 #### Header fields and column selection
 
-The header of the manifest contains the name, user, filters used, the date generated, and the total number of records \(truncated to 65,000 records for CSV and TSV format\).
+The header of the manifest contains the name of cohort, user, filters used, the date generated, and the total number of records \(data is separated by multiple files until the max of 65,000 entries then once the limit is reached the data will need to be exported via BigQuery.
 
 ![](../.gitbook/assets/mainfest-for-cohort.png)
 
@@ -200,9 +200,25 @@ The default fields provided are:
 
 An example of how IDC cohort manifest can be used to retrieve the manifest-defined cohort files is shown in our[ colab notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks).
 
-{% hint style="warning" %}
-A maximum of ten files will be generated before required to export the manifest via BigQuery.
+{% hint style="info" %}
+A maximum of six files will be generated before required to export the manifest via BigQuery.
 {% endhint %}
+
+### Cohort manifest export to BigQuery
+
+**From the user interface**
+
+Exporting a manifest to BigQuery enables the end user to take advantage of the functionality the Google BigQuery has to offer. The table is available for seven days after creation. After the initial export a pop-up window will appear on the cohort details page,
+
+![](../.gitbook/assets/manifest-job.png)
+
+{% hint style="warning" %}
+Please be sure to save this URL information or pin the Google BigQuery table to your Google console interface.
+{% endhint %}
+
+After the expiration of a table \(seven days\), the end user can create a new manifest for analysis.
+
+**As a JSON file**
 
 The JSON export of a file will not have any header information available. This provides the ability for the JSON file to be easily imported into a BigQuery table. 
 
@@ -214,7 +230,7 @@ On the cohort manifest export confirmation pop-up the option to select/de-select
 
 ![](../.gitbook/assets/columns.png)
 
-{% hint style="info" %}
+{% hint style="warning" %}
 The end user is required to have a column option selected for the export of a manifest. 
 {% endhint %}
 
