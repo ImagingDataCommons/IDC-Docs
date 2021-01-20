@@ -56,4 +56,5 @@
 * [BigQuery](cookbook/bigquery.md)
 * [Data Studio](cookbook/data-studio.md)
 * [Compute Engine](cookbook/virtual-machines.md)
+* [NCI Data Commons Cloud Resources](cookbook/nci-data-commons-cloud-resources.md)
 
