@@ -167,14 +167,12 @@ Here is available the cohort name, cohort description\(optional\), the filters u
 
 For more information regarding image visualization please see the [Image visualization](visualization.md) section of the documentation.
 
-### Download manifest of cohort 
+### **Access m**anifest of cohort 
 
 The manifest of the cohort contains everything you need to download the data corresponding to your cohort, and to understand the sources of data in your cohort. Currently, cohort manifest can be exported in CSV format, TSV format, JSON format, and as an export to BigQuery.
 
 {% hint style="info" %}
-Cohorts with less than 650,000 rows can now be downloaded as a multipart file. Cohorts larger that 650,000 rows can now be exported to BigQuery \(for Google Accounts\).
-
-A Google account is required to be able to use the export to BigQuery functionality.
+Cohorts up to 650,000 rows will be downloaded as a multipart file, with 65,000 limit on the number of rows in a single file. Cohorts larger that 650,000 rows can only be accessed by exporting to a BigQuery table.
 {% endhint %}
 
 #### Header fields and column selection
@@ -196,13 +194,11 @@ The default fields provided are:
 
 An example of how IDC cohort manifest can be used to retrieve the manifest-defined cohort files is shown in our[ colab notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks).
 
-{% hint style="info" %}
-A maximum of ten files will be generated before required to export the manifest via BigQuery. 
-
-Each file will have 65,000 entries present.
-{% endhint %}
-
 ### Cohort manifest export to BigQuery
+
+{% hint style="warning" %}
+A Google account is required to be able to use the export to BigQuery functionality.
+{% endhint %}
 
 **From the user interface**
 
