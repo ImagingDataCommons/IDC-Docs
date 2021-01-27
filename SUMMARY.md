@@ -54,8 +54,9 @@
 * [DICOM](cookbook/untitled.md)
 * [Colab Notebooks](cookbook/notebooks.md)
 * [BigQuery](cookbook/bigquery.md)
-* [Data Studio](cookbook/data-studio.md)
-  * [Test nesting](cookbook/test-nesting.md)
+* [Data Studio](cookbook/data-studio/README.md)
+  * [Dashboard for your cohort](cookbook/data-studio/test-nesting.md)
+  * [More dashboard examples](cookbook/data-studio/more-dashboard-examples.md)
 * [Compute Engine](cookbook/virtual-machines.md)
 * [NCI Data Commons Cloud Resources](cookbook/nci-data-commons-cloud-resources.md)
 
