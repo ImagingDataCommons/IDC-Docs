@@ -18,9 +18,9 @@ Export the cohort manifest as a BigQuery table, and take note of the location of
 
 **Step 2: Duplicate the template**
 
-Open the dashboard template following this link: [http://bit.ly/2NwHWzV](http://bit.ly/2NwHWzV), and make a copy of the dashboard.
+Open the dashboard template following this link: [http://bit.ly/3jdCmON](http://bit.ly/3jdCmON), and click "Use template" to make a copy of the dashboard.
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
 When prompted, do not change the default options, and click "Copy Report".
 
@@ -36,7 +36,7 @@ Select "Edit" action:
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
-Update the custom query as instructed:
+Update the custom query as instructed. This will select all of the DICOM metadata available for the instances in your cohort.
 
 ![](../../.gitbook/assets/image%20%2812%29.png)
 
