@@ -1,4 +1,4 @@
-# IDC DICOM White papers
+# IDC DICOM white papers
 
 The following white papers are intended to provide explanation and clarification into applying DICOM to encoding specific types of data.
 

@@ -1,4 +1,4 @@
-# Data exploration and Cohorts
+# Data exploration and cohorts
 
 ## Imaging Data Exploration
 

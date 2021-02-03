@@ -1,4 +1,4 @@
-# Portal Known Issues
+# Portal known issues
 
 ## 1.2.0 - January 2021 \(canceridc.202101111506.0a8af57\)
 

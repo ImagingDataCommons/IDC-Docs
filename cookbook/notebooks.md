@@ -1,4 +1,4 @@
-# Colab Notebooks
+# Colab notebooks
 
 This section contains various pointers that may be helpful working with [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb).
 

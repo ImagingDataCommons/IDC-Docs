@@ -1,4 +1,4 @@
-# Portal Release Notes
+# Portal release notes
 
 {% hint style="warning" %}
 The version of the portal is shown at the bottom of the portal page. The semantics of the version is the following:

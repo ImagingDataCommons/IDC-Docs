@@ -1,4 +1,4 @@
-# Getting Started
+# Getting started
 
 IDC data is hosted using standard capabilities of the GCP Storage and BigQuery components. All of the GCP API capabilities provided by GCP to access IDC maintained storage buckets and tables are available to interact with that data.
 

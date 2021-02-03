@@ -1,4 +1,4 @@
-# Image Visualization
+# Image visualization
 
 ## IDC Viewer overview
 

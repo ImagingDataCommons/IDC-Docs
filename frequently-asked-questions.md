@@ -1,4 +1,4 @@
-# Frequently Asked Questions
+# Frequently asked questions
 
 ### What is the purpose of IDC?
 
@@ -34,38 +34,38 @@ IDC and TCIA are partners in providing FAIR data for cancer imaging researchers.
 
 ### Is IDC the right choice for my needs?
 
-IDC is the right choice for you if you want to ...
+IDC is the right choice for you if you want to...
 
-* ... explore metadata, visualize images and annotations, build cohorts from the data included in public TCIA collections
-* ... analyze TCIA public collections data on the cloud
-* ... use existing tools such as Google Colab, BigQuery, DataStudio with the TCIA public collections data
-* ... perform complex queries against any of the DICOM attributes in the TCIA public collections
-* ... utilize other resources available in CRDC, such as CRDC Cloud Resources, for data analysis
-* ... quickly visualize specific images from TCIA public collections
+* explore metadata, visualize images and annotations, build cohorts from the data included in public TCIA collections
+* analyze TCIA public collections data on the cloud
+* use existing tools such as Google Colab, BigQuery, DataStudio with the TCIA public collections data
+* perform complex queries against any of the DICOM attributes in the TCIA public collections
+* utilize other resources available in CRDC, such as CRDC Cloud Resources, for data analysis
+* quickly visualize specific images from TCIA public collections
 
-IDC is NOT the right choice for you if you want to ...
+IDC is NOT the right choice for you if you want to...
 
-* ... download data to your computer
-* ... upload and share publicly the imaging dataset you collected 
-* ... de-identify your dataset
+* download data to your computer
+* upload and share publicly the imaging dataset you collected 
+* de-identify your dataset
 
 ### What is the vision of the workflow for the user interacting with IDC?
 
-1. Define relevant imaging data cohorts from public datasets \(based on rich standardized metadata\)
-2. Explore the cohort, check quality \(visualize images and image-derived data\)
-3. Apply off-the-shelf cloud analytics tools to the cohort
+1. Define relevant imaging data cohorts from public datasets \(based on rich standardized metadata\).
+2. Explore the cohort, check quality \(visualize images and image-derived data\).
+3. Apply off-the-shelf cloud analytics tools to the cohort:
    1. BigQuery, DataStudio, Colab Notebooks
    2. Further cohort refinement, metadata exploration, analysis
-4. Perform exploratory analysis of data on a cloud VM
-5. Scale up analysis
-6. Integrate with other data sources
+4. Perform exploratory analysis of data on a cloud VM.
+5. Scale-up analysis.
+6. Integrate with other data sources:
    1. Private data
    2. Non-imaging data from CRDC \(i.e., genomics and proteomics\)
-7. Share analysis results and workflows
+7. Share analysis results and workflows.
 
 ### Where do I learn more about other components of CRDC?
 
-The main website for the Cancer Research Data Commons \(CRDC\): [https://datacommons.cancer.gov/](https://datacommons.cancer.gov/).
+The main website for the Cancer Research Data Commons \(CRDC\) is [https://datacommons.cancer.gov/](https://datacommons.cancer.gov/).
 
 ### What about non-imaging data that accompanies many TCIA collections?
 

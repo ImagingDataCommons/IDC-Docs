@@ -3,7 +3,7 @@
 * [Welcome!](README.md)
 * [Getting started](getting-started-with-idc.md)
 * [Core functions](core-functions-of-idc.md)
-* [Frequently Asked Questions](frequently-asked-questions.md)
+* [Frequently asked questions](frequently-asked-questions.md)
 * [Support](support.md)
 * [Key pointers](idc-key-pointers.md)
 
@@ -21,7 +21,7 @@
 * [Organization of data](data/organization-of-data.md)
 * [Data versioning](data/versioning.md)
 * [Data release notes](data/data-release-notes.md)
-* [Data Known Issues](data/data-known-issues.md)
+* [Data known issues](data/data-known-issues.md)
 
 ## DICOM
 
@@ -30,33 +30,33 @@
 * [Original objects](dicom/original-vs-derived-objects.md)
 * [Derived objects](dicom/derived-objects.md)
 * [Coding schemes](dicom/coding-schemes.md)
-* [IDC DICOM White papers](dicom/idc-dicom-white-papers.md)
+* [IDC DICOM white papers](dicom/idc-dicom-white-papers.md)
 
 ## Portal
 
-* [Getting Started](portal/getting-started.md)
-* [Data exploration and Cohorts](portal/data-exploration-and-cohorts.md)
-* [Image Visualization](portal/visualization.md)
-* [Portal Release Notes](portal/release-notes.md)
-* [Portal Known Issues](portal/portal-known-issues.md)
+* [Getting started](portal/getting-started.md)
+* [Data exploration and cohorts](portal/data-exploration-and-cohorts.md)
+* [Image visualization](portal/visualization.md)
+* [Portal release notes](portal/release-notes.md)
+* [Portal known issues](portal/portal-known-issues.md)
 
 ## API
 
-* [Getting Started](api/getting-started.md)
+* [Getting started](api/getting-started.md)
 * [Release notes](api/release-notes.md)
 
 ## Analysis
 
-* [Getting Started](analysis/untitled.md)
+* [Getting started](analysis/untitled.md)
 
 ## Cookbook
 
 * [DICOM](cookbook/untitled.md)
-* [Colab Notebooks](cookbook/notebooks.md)
+* [Colab notebooks](cookbook/notebooks.md)
 * [BigQuery](cookbook/bigquery.md)
 * [Data Studio](cookbook/data-studio/README.md)
   * [Dashboard for your cohort](cookbook/data-studio/cohort-dashboard.md)
   * [More dashboard examples](cookbook/data-studio/more-dashboard-examples.md)
-* [Compute Engine](cookbook/virtual-machines.md)
-* [NCI Data Commons Cloud Resources](cookbook/nci-data-commons-cloud-resources.md)
+* [Compute engine](cookbook/virtual-machines.md)
+* [NCI Cloud Resources](cookbook/nci-data-commons-cloud-resources.md)
 
