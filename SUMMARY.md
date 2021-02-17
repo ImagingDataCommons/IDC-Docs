@@ -58,6 +58,6 @@
   * [Dashboard for your cohort](cookbook/data-studio/cohort-dashboard.md)
   * [More dashboard examples](cookbook/data-studio/more-dashboard-examples.md)
 * [Compute engine](cookbook/virtual-machines.md)
-* [Using VS Code with GCP VMs](cookbook/using-vs-code-with-gcp-vms.md)
+  * [Using VS Code with GCP VMs](cookbook/using-vs-code-with-gcp-vms.md)
 * [NCI Cloud Resources](cookbook/nci-data-commons-cloud-resources.md)
 
