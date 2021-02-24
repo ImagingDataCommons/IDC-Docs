@@ -10,7 +10,7 @@
 
 ### **Step 1: Install "Remote - SSH" extension**
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2819%29.png)
 
 ### **Step 2: Populate SSH config files**
 
@@ -24,5 +24,5 @@ $ gcloud compute config-ssh
 
 If the previous step completed successfully, you should see the running VMs in the Remote Explorer of VS Code, as in the screenshot below, and should be able to open a new session to those remove VMs.
 
-![](../.gitbook/assets/image%20%2818%29.png)
+![](../../.gitbook/assets/image%20%2818%29.png)
 

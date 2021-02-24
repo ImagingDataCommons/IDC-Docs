@@ -18,3 +18,5 @@ All reasonable requests will receive an initial allocation of $300 towards stora
 
 Please be aware that we will be monitoring your cloud resource usage on a daily basis and will alert you as you begin to approach your funding limit. If you exceed your allocation limit and we are not able to contact you by email for several days, we may need to take action to shut your project down which could cause you to lose work and data!
 
+Procedures related to administration of the IDC cloud credits are outlined in [this document](https://docs.google.com/document/d/1j8qKwfL0fX3yDjWLTdcnCCjiGiFsy0xXkl09y053FBM/edit#).
+
