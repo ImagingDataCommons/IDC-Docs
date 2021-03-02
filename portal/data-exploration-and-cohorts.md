@@ -6,7 +6,7 @@ The Imaging Data Commons Portal user interface has four components to support ex
   
 Below you will find more details regarding our four primary search panels available:
 
-![](../.gitbook/assets/explore-page.png)
+![](../.gitbook/assets/screen-shot-2021-03-02-at-9.09.49-am.png)
 
 ![](../.gitbook/assets/collections.png)
 
@@ -24,7 +24,7 @@ Each panel provides the same underlying Imaging Data Commons data and metadata.
 
 ## Search Configuration and Search Results attribute filter options in detail
 
-![](../.gitbook/assets/cohortexploredetailv2.png)
+![](../.gitbook/assets/screen-shot-2021-03-02-at-9.10.29-am.png)
 
 ### Count Clarification of Categorization
 
@@ -135,13 +135,13 @@ The creation of a cohort is very beneficial when looking for a specific subset o
 
 We allow the ability to create cohorts by using three of our main filter panels; a **Search Scope** panel, a **Filter Definition** panel, and the **Search Configuration** panel. 
 
-![](../.gitbook/assets/cohort-creation-v2.png)
+![](../.gitbook/assets/screen-shot-2021-03-02-at-9.13.46-am.png)
 
 For more detailed information on the data provided by the main attribute selection panels please refer to our [Explore Image Data](../dicom/data-model.md) section.
 
-![](../.gitbook/assets/cohort-attribute-selection-v2.png)
+![](../.gitbook/assets/screen-shot-2021-03-02-at-9.15.10-am.png)
 
-Attribute filter selections in the search configuration panel that have no data available are highlighted in grey. 
+Attribute filter selections in the search configuration panel that have no data available are greyed out and will have "0 cases". 
 
 ![](../.gitbook/assets/save-cohort-button.png)
 

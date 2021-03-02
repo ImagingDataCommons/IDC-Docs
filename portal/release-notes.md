@@ -8,6 +8,21 @@ _canceridc.&lt;date of webapp deployment in YYYYMMDDHHMM&gt;.&lt;first 6 charact
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 1.3.0 - March 2021 \(canceridc.202103011131.27ce3b3\)
+
+The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
+
+Main highlights of this release include:
+
+* The user details page will no longer return a 500 error when selected
+* Sorting of studies panel is now active for all fields
+* Re-sending of an unreceived verification email is now more clearly explained.
+* IDC identity login header and column selection is disabled for the exportation of a cohort manifest to BigQuery
+* Detailed information panel added to efficiently describe why some pie charts have multiple facets even when a filter is selected
+* Cohort manifest export popup can be scrolled down 
+* Use of Shift or Control \(Command for Mac\) selection of studies will now behave as expected: Shift-select for a contiguous series of rows, Control/Command-select for individual rows.
+* All filter selections are now sorted by alphabetical characters
+
 ## 1.2.0 - January 2021 \(canceridc.202101111506.0a8af57\)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
