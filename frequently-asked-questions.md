@@ -2,7 +2,7 @@
 
 ### What is the purpose of IDC?
 
-We list the core functions of IDC [here](core-functions-of-idc.md). Our overall purpose is to support cancer imaging research on the cloud. While some of the capabilities that are needed for this are outside the scope of IDC, and may necessitate interaction with the other components of the [Cancer Research Data Commons](https://datacommons.cancer.gov/), we welcome IDC users to bring up any use cases that are related to using cloud computing for cancer imaging research. We will work with you to identify relevant component of CRDC that can help you.
+The [core functions](core-functions-of-idc.md) of IDC support our overall purpose, which is to support cancer imaging research on the cloud. While some of the capabilities that are needed for this are outside the scope of IDC, and may necessitate interaction with the other components of the [Cancer Research Data Commons](https://datacommons.cancer.gov/), we welcome IDC users to bring up any use cases that are related to using cloud computing for cancer imaging research. We will work with you to identify relevant component of CRDC that can help you.
 
 ### What is the status of IDC?
 
@@ -10,7 +10,7 @@ IDC pilot release took place in Fall 2020. We anticipate the production version 
 
 ### What data is available?
 
-Our initial goal is to host all of the public collections from [The Cancer Imaging Archive \(TCIA\)](https://www.cancerimagingarchive.net/). The IDC pilot contains a subset of those collections. The complete up to date list of collections included in IDC is available [here](https://portal.imaging.datacommons.cancer.gov/collections/).
+Our initial goal is to host all of the public collections from [The Cancer Imaging Archive \(TCIA\)](https://www.cancerimagingarchive.net/). The IDC pilot contains a subset of those collections. You can review the complete, up-to-date list of [collections included in IDC](https://portal.imaging.datacommons.cancer.gov/collections/).
 
 ### How do I get my data into IDC?
 
@@ -38,7 +38,7 @@ IDC is the right choice for you if you want to...
 
 * explore metadata, visualize images and annotations, build cohorts from the data included in public TCIA collections
 * analyze TCIA public collections data on the cloud
-* use existing tools such as Google Colab, BigQuery, DataStudio with the TCIA public collections data
+* use existing tools such as Google Colab, BigQuery, and DataStudio with the TCIA public collections data
 * perform complex queries against any of the DICOM attributes in the TCIA public collections
 * utilize other resources available in CRDC, such as CRDC Cloud Resources, for data analysis
 * quickly visualize specific images from TCIA public collections
@@ -54,13 +54,13 @@ IDC is NOT the right choice for you if you want to...
 1. Define relevant imaging data cohorts from public datasets \(based on rich standardized metadata\).
 2. Explore the cohort, check quality \(visualize images and image-derived data\).
 3. Apply off-the-shelf cloud analytics tools to the cohort:
-   1. BigQuery, DataStudio, Colab Notebooks
-   2. Further cohort refinement, metadata exploration, analysis
+   * BigQuery, DataStudio, Colab Notebooks
+   * Further cohort refinement, metadata exploration, analysis
 4. Perform exploratory analysis of data on a cloud VM.
 5. Scale-up analysis.
 6. Integrate with other data sources:
-   1. Private data
-   2. Non-imaging data from CRDC \(i.e., genomics and proteomics\)
+   * Private data
+   * Non-imaging data from CRDC \(i.e., genomics and proteomics\)
 7. Share analysis results and workflows.
 
 ### Where do I learn more about other components of CRDC?
@@ -75,5 +75,5 @@ Our longer-term plan is to work with the CRDC [Center for Cancer Data Harmonizat
 
 ### Is it free to use IDC?
 
-We provide a summary of what you can do with IDC, and what you will need to access specific capabilities [here](getting-started-with-idc.md). If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, we have limited resources to support pilot projects exploring the use of IDC in cancer research. Please see details [here](introduction/requesting-gcp-cloud-credits.md).
+We provide a [summary](getting-started-with-idc.md) of what you can do with IDC, and what you will need to access specific capabilities. If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, we have[ limited resources](introduction/requesting-gcp-cloud-credits.md) to support pilot projects exploring the use of IDC in cancer research.
 

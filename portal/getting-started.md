@@ -17,11 +17,11 @@ Datasets that are available within IDC are summarized in the [Data release notes
 
 ### Accessing the Imaging Data Commons Portal
 
-The IDC portal is accessible using a modern web browser such as Chrome, Firefox and Microsoft Edge at the following URL: [**https://imaging.datacommons.cancer.gov**](https://imaging.datacommons.cancer.gov/)**.**
+The IDC portal is accessible using a modern web browser such as Chrome, Firefox, and Microsoft Edge at the following URL: [**https://imaging.datacommons.cancer.gov**](https://imaging.datacommons.cancer.gov/)**.**
 
 While you can browse the data available on IDC without having to log in, you will need to log in to save cohorts and generate cohort manifests. You can create an account to log into IDC using either your existing Google account, or using IDC-specific login.
 
 {% hint style="danger" %}
-In order to activate IDC-specific login, you will need to click the link sent by email to confirm your email address. It is a known issue that those confirmation emails are classified as Spam, or may never arrive. Furthermore, you will need to authenticate with a Google Account to access the files stored in IDC. Because of this, we recommend that you use Google Account for logging into IDC portal.
+In order to activate IDC-specific login, you will need to click the link sent by email to confirm your email address. It is a known issue that those confirmation emails are classified as spam, or may never arrive. Furthermore, you will need to authenticate with a Google account to access the files stored in IDC. Because of this, we recommend that you use a Google account to log into the IDC portal.
 {% endhint %}
 

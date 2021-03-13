@@ -1,24 +1,21 @@
 # Data exploration and cohorts
 
-## Imaging Data Exploration
+## Exploring Imaging Data
 
 The Imaging Data Commons Portal user interface has four components to support exploration of Imaging data; a **Search Scope** panel, a **Filter Definition** panel, a **Search Configuration** panel, and a **Collections** panel.  
   
-Below you will find more details regarding our four primary search panels available:
-
-![](../.gitbook/assets/screen-shot-2021-03-02-at-9.09.49-am.png)
-
-![](../.gitbook/assets/collections.png)
+Four primary search panels are available, as described and shown below.
 
 * **Search Scope panel:** The Search Scope panel is primarily used to filter by collection. We currently have 20+ collection options present.
 * **Search Configuration panel:** The Search Configuration panel is the more detailed attribute filter option by utilizing various case, Segmentation, Qualitative, and Quantitative Analyses.  
 * **Search Results panel:** The Search Results is the visual representation panel of the detailed attribute filter options we have available in the form of pie charts. 
-
-{% hint style="info" %}
-We will cover more in more detail all the attribute options we have available within the Search Configuration panel and the Search Results panel.
-{% endhint %}
-
 * **Collections panel:** The Collections panel can be used to view a Selected Study and/or a Specific Series without any additional attribute option selected. 
+
+  We will cover more in more detail all the attribute options we have available within the Search Configuration panel and the Search Results panel.
+
+![Search Scope, Search Configuration, and Search Results panels](../.gitbook/assets/screen-shot-2021-03-02-at-9.09.49-am.png)
+
+![Collections panel](../.gitbook/assets/collections.png)
 
 Each panel provides the same underlying Imaging Data Commons data and metadata.
 
