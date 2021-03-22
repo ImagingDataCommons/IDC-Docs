@@ -26,3 +26,7 @@ If the previous step completed successfully, you should see the running VMs in t
 
 ![](../../.gitbook/assets/image%20%2818%29.png)
 
+{% hint style="warning" %}
+Note that the SSH configuration may/will change if you restart your VM. In this case you will need to re-configure \(re-run step 2 above\).
+{% endhint %}
+
