@@ -1,4 +1,4 @@
-# Introduction
+# Introduction to DICOM
 
 IDC relies on DICOM for data modeling, representation and communication. Most of the data stored in IDC is in DICOM format. If you want to use IDC, you \(hopefully!\) do not need to become a DICOM expert, but you do need to have a basic understanding how DICOM data is structured, and how to transform DICOM objects into alternative representations that can be used by the tools familiar to you.
 

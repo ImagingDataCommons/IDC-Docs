@@ -25,7 +25,7 @@
 
 ## DICOM
 
-* [Introduction](dicom/introduction.md)
+* [Introduction to DICOM](dicom/introduction.md)
 * [Data model](dicom/data-model.md)
 * [Original objects](dicom/original-vs-derived-objects.md)
 * [Derived objects](dicom/derived-objects.md)
