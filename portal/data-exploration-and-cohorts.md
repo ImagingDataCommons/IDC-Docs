@@ -1,4 +1,4 @@
-# Data exploration and cohorts
+# Exploring data and cohorts
 
 ## Exploring imaging data
 
@@ -139,18 +139,7 @@ Click one or more studies to select them. The selected row or rows are highlight
 
 Click the icon in the View column for a study row to view study objects in the IDC Viewer, which is based on the [Open Health Imaging Foundation](https://docs.ohif.org/) \(OHIF\) Viewer.
 
-For more detailed information on the OHIF viewer, see [Image visualization](visualization.md).
-
-### Viewing data in BigQuery
-
-You can also return IDC data in BigQuery. An example query follows that returns all studies for the collection QIN\_HEADNECK.
-
-```sql
-SELECT PatientID, StudyInstanceUID
-FROM `idc-dev-etl.idc_tcia_mvp_wave0.dicom_derived_all`
-WHERE collection_id = 'qin_headneck'
-GROUP BY PatientID, StudyInstanceUID
-```
+For more detailed information on the OHIF viewer, see [Visualizing images](visualization.md).
 
 ### Viewing a series per study per case
 
@@ -166,15 +155,24 @@ Some objects can only be opened by the OHIF viewer at their related study level 
 
 For more detailed information on the OHIF viewer, see [Image visualization](visualization.md).
 
+### Viewing data in BigQuery
+
+After you export a cohort manifest to BigQuery, you can view IDC data in BigQuery as a BQ table. An example query follows that returns all studies for the collection QIN\_HEADNECK.
+
+```sql
+SELECT PatientID, StudyInstanceUID
+FROM `idc-dev-etl.idc_tcia_mvp_wave0.dicom_derived_all`
+WHERE collection_id = 'qin_headneck'
+GROUP BY PatientID, StudyInstanceUID
+```
+
 ## Understanding cohorts
 
 Creating a cohort helps you quickly return to a subset of interest from the vast collection of data available in the Imaging Data Commons. A cohort is composed of your selections in the Search Scope and Search Configuration panels.
 
 ### Creating a cohort 
 
-To create a cohort, do the following:
-
-![](../.gitbook/assets/screen-shot-2021-03-02-at-9.13.46-am.png)
+Do the following to create a cohort.
 
 1. [Select filters](data-exploration-and-cohorts.md#defining-search-scope-and-configuration) on the Search Scope and Search Configuration panels.
 2. Click the **Save As New Cohort** button in the top-right of the portal. 
@@ -186,39 +184,35 @@ To create a cohort, do the following:
 
 ![Save Cohort dialog box](../.gitbook/assets/save-cohort-confirmation-v2.png)
 
-This cohort details page shows the cohort name, description \(if available\), and filter definition. You can open any study or series associated with the cohort using the OHIF viewer. 
+The cohort details page shows the cohort name, description \(if available\), and filter definition. Attribute filter selections in the Search Configuration panel that have no data available are greyed out and show "0 cases."
 
-![](../.gitbook/assets/screen-shot-2021-03-02-at-9.15.10-am.png)
+![Greyed out filter options on the Search Configuration panel](../.gitbook/assets/screen-shot-2021-03-02-at-9.15.10-am.png)
 
-Attribute filter selections in the search configuration panel that have no data available are greyed out and will have "0 cases". 
-
-For more information regarding image visualization, see [Image visualization](visualization.md).
+You can open any study or series associated with the cohort using the IDC Viewer. For more information on image visualization, see [Visualizing images](visualization.md).
 
 ![Cohort details page](../.gitbook/assets/cohort_details-page.png)
 
 
 
-### **Access m**anifest of cohort 
+### **Accessing the cohort m**anifest
 
-The cohort manifest contains everything you need to identify the sources of data in your cohort and to download its data. You can export a cohort manifest to CSV, TSV, and JSON formats, and as an export to BigQuery.
+The cohort manifest identifies the sources of data in your cohort and allows you to download this data. You can export a cohort manifest to CSV, TSV, and JSON formats, and to BigQuery.
 
 {% hint style="info" %}
-Cohorts up to 650,000 rows will be downloaded as a multipart file, with 65,000 limit on the number of rows in a single file. Cohorts larger that 650,000 rows can only be accessed by exporting to a BigQuery table.
+You can download cohorts of up to 650,000 rows as a multipart file, with each file having a limit of 65,000 rows. Access cohorts larger that 650,000 rows by exporting to BigQuery.
 {% endhint %}
 
 **To export the cohort manifest**
 
-
-
-1. [Create a cohort](data-exploration-and-cohorts.md#creating-a-cohort) or click **Cohorts** on the top menu bar ****and select one you previously created.
+1. [Create a cohort](data-exploration-and-cohorts.md#creating-a-cohort) or click **Cohorts** on the top menu bar ****and select a cohort you previously created.
 2. Click the **Export Cohort Manifest** button. The Export Cohort Manifest dialog box appears.
 3. Select the [header fields and columns](data-exploration-and-cohorts.md#header-fields-and-column-selection) you want to appear in the export file.
 4. Select whether you want to export the cohort as files or using [BigQuery](data-exploration-and-cohorts.md#exporting-the-cohort-manifest-to-bigquery).
-   1. If you want to download the cohort as CSV or TSV files, select **Include header fields** if you want this data in the export file.
-   2. Select which format the files in the export should be by clicking **Download CSV**, **Download TSV**, or **Download JSON**.
-   3. If you want to download the cohort using BigQuery, click **Get BQ Table.**
+   * If you want to download the cohort as CSV or TSV files, select **Include header fields** if you want this data in the export file.
+   * Select which format the files in the export should be by clicking **Download CSV**, **Download TSV**, or **Download JSON**.
+   * If you want to download the cohort using BigQuery, click **Get BQ Table.**
 
-### Header fields and column selection
+### Understanding the cohort manifest
 
 The header of the manifest contains the name of cohort, user, filters used, the date generated, and the total number of records. Data is separated by multiple files until the limit of 65,000 files is reached. If your data set is larger than this, you must export it using BigQuery.
 
@@ -238,18 +232,14 @@ The default fields provided in a cohort are:
 An example of how you can use an IDC cohort manifest to retrieve the manifest-defined cohort files is shown in [colab notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks).
 
 {% hint style="info" %}
-A maximum of ten files will be generated before you are required to export the manifest via BigQuery. 
-
-Each file will have 65,000 entries present.
+A multipart file export can have a maximum of ten files with 65,000 rows each. If your export is larger than this, you must export the manifest via BigQuery. 
 {% endhint %}
 
-### Exporting the cohort manifest to BigQuery
+### Exporting to BigQuery
 
 {% hint style="warning" %}
-A Google account is required to be able to use the export to BigQuery functionality.
+You must have a Google account to use BigQuery.
 {% endhint %}
-
-**From the user interface**
 
 Exporting a manifest to BigQuery allows you to run complex, analytical, SQL-based queries on large sets of data. The export table is available for seven days. After you start the export, the following window appears on the cohort details page, showing your unique link.
 
@@ -261,20 +251,22 @@ Be sure to save this URL information or pin the BigQuery table to your Google co
 
 After the export table expires, you can create a new manifest for analysis.
 
-**As a JSON file**
+### **Exporting as a file**
 
-The JSON export of a file does not have any header information available. You can import the JSON file to a BigQuery table. 
+Comma-Separated Values \(CSV\) and Tab-Separated Values \(TSV\) files include header fields, so you can customize which of those fields you want to include in the export. You can also select which columns to include in the file. 
 
-#### Cohort headers and columns
+On the cohort manifest export confirmation window, you can select or clear header fields that you want to appear in your export. 
+
+
 
 ![Cohort manifest header field options](../.gitbook/assets/header2.png)
 
-On the cohort manifest export confirmation window, you can select or clear header fields that you want to appear in your export. 
+JSON files do not include any header information but like CSV and TSV files, require that you identify which columns to include in your export. You can import the JSON file to a BigQuery table for further analysis. 
 
 ![Cohort manifest column options](../.gitbook/assets/columns.png)
 
 {% hint style="warning" %}
-The end user is required to have a column option selected for the export of a manifest. 
+You must select a column option to export the cohort manifest. 
 {% endhint %}
 
 ### Viewing the cohorts list
