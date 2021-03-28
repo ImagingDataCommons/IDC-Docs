@@ -6,6 +6,10 @@ The first step is to
 
 [export a file manifest into BigQuery](../../portal/data-exploration-and-cohorts.md#exporting-to-bigquery).
 
+
+
+
+
 ## Start up a VM
 
 Start up a VM 
