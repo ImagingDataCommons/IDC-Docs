@@ -58,6 +58,7 @@
   * [Dashboard for your cohort](cookbook/data-studio/cohort-dashboard.md)
   * [More dashboard examples](cookbook/data-studio/more-dashboard-examples.md)
 * [Compute engine](cookbook/virtual-machines/README.md)
+  * [Using a BQ Manifest to Load DICOM Files onto a VM](cookbook/virtual-machines/using-a-bq-manifest-to-load-dicom-files-onto-a-vm.md)
   * [Using VS Code with GCP VMs](cookbook/virtual-machines/using-vs-code-with-gcp-vms.md)
 * [NCI Cloud Resources](cookbook/nci-data-commons-cloud-resources.md)
 
