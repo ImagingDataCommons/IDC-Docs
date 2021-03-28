@@ -4,6 +4,10 @@
 
 The first step is to export a file manifest into BigQuery
 
+
+
+
+
 ## Start up a VM
 
 Start up a VM 
