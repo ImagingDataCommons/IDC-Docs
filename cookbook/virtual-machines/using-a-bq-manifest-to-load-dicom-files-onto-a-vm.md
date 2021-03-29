@@ -10,7 +10,7 @@ The first step is to [export a file manifest for a cohort into BigQuery](../../p
 
 Start up your VM. If you have many files, you will want to speed the loading process by using a VM with multiple CPUs. Google describes the various [machine types](https://cloud.google.com/compute/docs/machine-types), but is not very specific about ingress bandwidth. However, in terms of published egress bandwidth, the larger machines certainly have more. Experimentation showed that an n2-standard-8 (8 vCPUs, 32 GB memory) machine could load 20,000 DICOM files in 2 minutes and 32 secconds, using 16 threads on 8 CPUs. That configuration reached a peak throughput of 68 MiB/s.
 
-You also need to insure the machine has enough disk sapce. One of the checks in the script provided below is to calculate the total file load size. You might want to run that portion of the script and resize the disk as needed before actually doing the load.
+You also need to insure the machine has enough disk space. One of the checks in the script provided below is to calculate the total file load size. You might want to run that portion of the script and resize the disk as needed before actually doing the load.
 
 ## Step 3: Install the code provided
 
@@ -46,8 +46,6 @@ You then need to customize the settings in the script:
 Finally, run the script:
 
 ```text
-cd IDC-Examples/scripts
-chmod u+x *.sh
-./runManifestPull.sh
+~/IDC-Examples/scripts/runManifestPull.sh
 
 ```
