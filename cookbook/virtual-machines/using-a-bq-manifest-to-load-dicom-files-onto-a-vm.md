@@ -17,7 +17,7 @@ You also need to insure the machine has enough disk space. One of the checks in 
 [This Python script](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/scripts/pullManifestToVM.py) performs the following steps:
 
 * Performs a query on the specified BigQuery manifest table and creates a local manifest file on your VM.
-* Performs a query that maps the GCS URLs of each file into DICOM hierarchical directory paths, ands writes this our as a local paths TSV file on your VM.
+* Performs a query that maps the GCS URLs of each file into DICOM hierarchical directory paths, and writes this out as a local TSV file on your VM.
 * Performs a query that calculates the total size of all the downloads, and reports back if there is sufficient space on the filesystem to continue.
 * Uses a multi-threaded bucket reader to pull the files from the GCS buckets and places them in the appropriate DICOM hierarchical directory.
 
