@@ -8,9 +8,15 @@ Google Colaboratory, or “Colab” for short, is a product from Google Research
 If you would like to share an interesting notebook that uses IDC/cloud for imaging research, please let us know and we would be happy to review and reference it here!
 {% endhint %}
 
+## IDC maintained notebooks
+
 IDC Colab example notebooks are maintained in this repository: [https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks)
 
-### Relevant resources
+## Community-contributed notebooks
+
+* [Deep-learning Nodule Segmentation using LIDC dataset on Google Cloud Platform](https://github.com/Mayo-Radiology-Informatics-Lab/IDC_GoogleCloud_Notebook), contributed by [Kuan \(Kevin\) Zhang](https://scholar.google.com/citations?user=ncpFzkYAAAAJ&hl=en), Mayo Clinic
+
+## Relevant resources
 
 * Colab limitations: [https://research.google.com/colaboratory/faq.html](https://research.google.com/colaboratory/faq.html)
 * Transferring data between Colab and Google Drive: [https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7](https://gist.github.com/yt114/dc5d2fd4437f858bb73e38f0aba362c7)
