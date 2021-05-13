@@ -15,6 +15,7 @@ IDC Colab example notebooks are maintained in this repository: [https://github.c
 ## Community-contributed notebooks
 
 * [Deep-learning Nodule Segmentation using LIDC dataset on Google Cloud Platform](https://github.com/Mayo-Radiology-Informatics-Lab/IDC_GoogleCloud_Notebook), contributed by [Kuan \(Kevin\) Zhang](https://www.mayo.edu/research/labs/radiology-informatics/faculty-staff), Mayo Clinic
+* [3D Brain MRI Classification Using Imaging Data Commons, Google Cloud, and NIFTI files](https://github.com/Mayo-Radiology-Informatics-Lab/IDC_GoogleCloud_Notebook_3DClassification), contributed by [Pouria Rouzokh](https://www.mayo.edu/research/labs/radiology-informatics/faculty-staff), Mayo Clinic
 
 ## Relevant resources
 
