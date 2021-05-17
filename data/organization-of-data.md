@@ -10,6 +10,10 @@ All of the resources listed below are accessible under the [`canceridc-data` GCP
 
 ### Storage Buckets
 
+{% hint style="info" %}
+Storage Buckets are basic containers in Google Cloud that provide storage for data objects \(you can read more about the relevant terms in the Google Cloud Storage documentation [here](https://cloud.google.com/storage/docs/key-terms)\).
+{% endhint %}
+
 Storage buckets are named using the format `idc-tcia-<TCIA_COLLECTION_NAME>`, where `TCIA_COLLECTION_NAME` corresponds to the collection name in the collections table here.
 
 Within the bucket, DICOM files are organized using the following directory naming conventions:
