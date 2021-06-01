@@ -24,7 +24,7 @@ IDC and TCIA are partners in providing FAIR data for cancer imaging researchers.
 | :--- | :--- | :--- |
 | Source of FAIR data for cancer imaging research | yes | yes |
 | Curation of cancer imaging collections | yes | yes |
-| De-identification | no | yes |
+| De-identification \(note: IDC hosts data de-identified by TCIA\) | no | yes |
 | Cloud-based data co-located with compute resources | yes | no |
 | Recommended mechanism for downloading data to a local resource | no | yes |
 | Conversion of pathology images and image-derived data into DICOM format | yes | no |
