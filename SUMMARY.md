@@ -18,8 +18,10 @@
 ## Data
 
 * [Introduction](data/introduction.md)
-* [Organization of data](data/organization-of-data.md)
-* [Data versioning](data/versioning.md)
+* [Data Versioning](data/data-versioning.md)
+* [Organization of data](data/organization-of-data-1.md)
+* [Organization of data in V1 \(deprecated\)](data/organization-of-data.md)
+* [GA4GH DRS Objects](data/ga4gh-drs-objects.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
