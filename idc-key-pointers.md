@@ -11,7 +11,3 @@ IDC pointers:
 
 Recording of the IDC presentation by Andrey Fedorov and Dennis Bontempi at the NCI Imaging Informatics Webinar on Nov 16, 2020: [https://youtu.be/RUBKZoWNTfc](https://youtu.be/RUBKZoWNTfc) \([slides](https://bit.ly/2Uza99v)\)
 
-
-
-
-

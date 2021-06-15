@@ -11,5 +11,3 @@ IDC is being built utilizing the Google Cloud Platform \(GCP\) as the foundation
 
 IDC is relying on the [Digital Imaging and Communications in Medicine \(DICOM\)](https://www.dicomstandard.org/) standard for data modeling and representation. Most of the data hosted by IDC is in DICOM format. Our goal is to have all of the imaging \(including digital pathology, microscopy and other non-radiological image types\) and image-derived data \(such as results of segmentation, image annotation, or post-processing\) represented in the DICOM format. You can read more about our motivation and details of our approach in [this section](dicom.md).
 
-
-

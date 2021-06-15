@@ -1,7 +1,5 @@
 # Data known issues
 
-
-
 1. Indexing of the collection of [NSCLC-Radiomics](https://wiki.cancerimagingarchive.net/display/Public/NSCLC-Radiomics)  by the Data Commons Framework is pending.
 2. [QIN multi-site collection of Lung CT data with Nodule Segmentations](https://doi.org/10.7937/K9/TCIA.2015.1BUVFJR7): only items corresponding to the LIDC-IDRI original collection are included
 3. [DICOM SR of clinical data and measurement for breast cancer collections to TCIA](https://doi.org/10.7937/TCIA.2019.wgllssg1): only items corresponding to the ISPY1 original collection are included

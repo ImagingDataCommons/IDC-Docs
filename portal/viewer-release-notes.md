@@ -1,12 +1,12 @@
-# OIHF Viewer release notes
+# Viewer release notes
 
 {% hint style="warning" %}
-The version of the viewer is shown in the Debug Info option. 
+The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
 ## 4.9.19 - June 2020
 
-<p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -15,7 +15,7 @@ Main highlights of this release include:
 
 ## 4.9.17 - May 2020
 
-<p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -24,7 +24,7 @@ Main highlights of this release include:
 
 ## 4.9.13 - April 2020
 
-<p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -35,7 +35,7 @@ Main highlights of this release include:
 
 ## 4.9.7 - March 2020
 
-<p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -51,7 +51,7 @@ Main highlights of this release include:
 
 ## 4.8.10 - February 2020
 
-<p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -60,7 +60,7 @@ Main highlights of this release include:
 
 ## 4.8.5 - Jannuary 2020
 
-<p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -69,11 +69,11 @@ Main highlights of this release include:
 * Add IDC funding acknowledgment;
 * Fix RSTRUCT menu panel undefined variables;
 * Fix RSTRUCT menu visibility when loading a series;
-* Fix segments visibility control (SEG menu) bugs .
+* Fix segments visibility control \(SEG menu\) bugs .
 
 ## 4.8.0 - December 2020
 
-<p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -81,11 +81,11 @@ Main highlights of this release include:
 * Use runtime value configuration to get pkg version;
 * Fix navigation issues in the crosshair tool.
 
-
 ## 4.5.22 - October 2020
 
-<p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
 * Add MPR crosshair tool.
+

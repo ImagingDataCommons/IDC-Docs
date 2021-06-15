@@ -21,8 +21,6 @@ Main highlights of this release include:
 * Species Attribute is included
 * Checkbox and plus/minus icons are now used to select table rows
 
-
-
 ## 1.3.0 - March 2021 \(canceridc.202103011131.27ce3b3\)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
@@ -100,6 +98,4 @@ Main features in this initial release include:
 * The ability to save cohorts
 * The ability to download the manifest of any cohort created
 * The ability to promote, filter, and load multiple series instances in the OHIF viewer
-
-
 

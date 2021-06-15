@@ -2,7 +2,7 @@
 
 Cloud-based hosting of public cancer imaging collections is a key functionality of IDC.
 
-Currently, IDC is hosting a [subset](https://portal.imaging.datacommons.cancer.gov/collections/) of publicly available collections from The Cancer Imaging Archive \(TCIA\). 
+Currently, IDC is hosting a [subset](https://portal.imaging.datacommons.cancer.gov/collections/) of publicly available collections from The Cancer Imaging Archive \(TCIA\).
 
 {% hint style="info" %}
 If you would like us to prioritize an existing public TCIA collection, which is not currently included in the IDC offering, please start the discussion on our [forum](https://discourse.canceridc.dev/c/data/8)!

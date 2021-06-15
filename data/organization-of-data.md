@@ -15,7 +15,7 @@ In order to access the resources listed below, it is assumed you have completed 
 
 All of the resources listed below are accessible under the [`canceridc-data` GCP project](https://console.cloud.google.com/home/dashboard?project=canceridc-data).
 
-### Storage Buckets
+## Storage Buckets
 
 {% hint style="info" %}
 Storage Buckets are basic containers in Google Cloud that provide storage for data objects \(you can read more about the relevant terms in the Google Cloud Storage documentation [here](https://cloud.google.com/storage/docs/key-terms)\).
@@ -31,7 +31,7 @@ where `*InstanceUID`s correspond to the respective value of the DICOM attributes
 
 You can read about accessing GCP storage buckets from a Compute VM [here](https://cloud.google.com/compute/docs/disks/gcs-buckets).
 
-All of the IDC buckets are [requester-pays](https://cloud.google.com/storage/docs/requester-pays), which means you will need to provide Project ID for a project that has billing set up if you want to download the data from those buckets. 
+All of the IDC buckets are [requester-pays](https://cloud.google.com/storage/docs/requester-pays), which means you will need to provide Project ID for a project that has billing set up if you want to download the data from those buckets.
 
 {% hint style="warning" %}
 Make sure you understand the [data egress charges](https://cloud.google.com/storage/pricing#network-egress)! As a general rule of thumb, download of the data to a GCP compute VM is free, while download to your laptop or a VM that belongs to a different cloud provider is expensive!
@@ -45,7 +45,7 @@ Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the co
 $ cat gcs_paths.txt | gsutil -u $PROJECT_ID -m cp -I .
 ```
 
-### BigQuery Tables
+## BigQuery Tables
 
 {% hint style="info" %}
 Google [BigQuery \(BQ\)](https://cloud.google.com/bigquery) is a massively-parallel analytics engine ideal for working with tabular data. Data stored in BQ can be accessed using [standard SQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql) queries.
@@ -76,11 +76,11 @@ In addition to the tables above, we provide the following [BigQuery views](https
 * [`canceridc-data.idc_views.qualitative_measurements`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=qualitative_measurements&page=table): coded evaluation results extracted from the DICOM SR TID1500 objects
 * [`canceridc-data.idc_views.quantitative_measurements`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=quantitative_measurements&page=table): quantitative evaluation results extracted from the DICOM SR TID1500 objects
 
-### DICOM Stores
+## DICOM Stores
 
 IDC MVP utilizes a single Google Healthcare DICOM store to host all of the collections. That store, however, is primarily intended to support visualization of the data using OHIF Viewer. At this time, we do not support access of the hosted data via DICOMWeb interface by the IDC users. See more details in the [discussion here](https://discourse.canceridc.dev/t/dicomweb-access-to-hosted-collections/69), and please comment about your use case if you have a need to access data via the DICOMweb interface.
 
-### BigQuery tables external to IDC
+## BigQuery tables external to IDC
 
 In addition to the DICOM data, some of the image-related data hosted by IDC is stored in additional tables. These include the following:
 

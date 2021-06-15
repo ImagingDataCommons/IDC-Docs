@@ -2,7 +2,7 @@
 
 One of the fundamental principles of DICOM is the use of _controlled terminologies_, or _lexicons_, or _coding schemes_ \(for the purposes of this guide, these can be used interchangeably\). While using the DICOM data stored in IDC, you will encounter various situations where the data is captured using coded terms.
 
-Controlled terminologies define a set of codes, and sometimes their relationships, that are carefully curated to describe entities for a certain application domain. Consistent use of such terminologies helps with uniform data collection and is critical for harmonization of activities conducted by  independent groups.
+Controlled terminologies define a set of codes, and sometimes their relationships, that are carefully curated to describe entities for a certain application domain. Consistent use of such terminologies helps with uniform data collection and is critical for harmonization of activities conducted by independent groups.
 
 When codes are used in DICOM, they are saved as triplets that consist of
 
@@ -10,7 +10,7 @@ When codes are used in DICOM, they are saved as triplets that consist of
 * CodingSchemeDesignator: code for the authority that issued this code
 * CodeMeaning: human-readable code description
 
-DICOM relies on various sources of codes, all of which are listed in [PS3.16 Section 8](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_8.html) of the standard. 
+DICOM relies on various sources of codes, all of which are listed in [PS3.16 Section 8](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_8.html) of the standard.
 
 As an example, if you query the [`canceridc-data:idc_views.segmentations`](https://console.cloud.google.com/bigquery?project=canceridc-data&p=canceridc-data&d=idc_views&t=segmentations&page=table) view with the following query in the BQ console:
 
@@ -32,6 +32,4 @@ As another example, quantitative and qualitative measurements extracted from the
 ![](../.gitbook/assets/volume_srt_bq.png)
 
 ![](../.gitbook/assets/volume_value_bq.png)
-
-
 

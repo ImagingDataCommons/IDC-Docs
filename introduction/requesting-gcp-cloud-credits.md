@@ -8,7 +8,7 @@ Opportunities for free Google Cloud credits provided by Google:
 * If you are an academic researcher, you can apply for [Google Research Credits](https://edu.google.com/programs/credits/research/)
 {% endhint %}
 
-IDC is offering free Google Cloud credits for researchers to try out our platform! 
+IDC is offering free Google Cloud credits for researchers to try out our platform!
 
 All reasonable requests will receive an initial allocation of $300 towards storage and compute costs. We expect that this amount of funding will be more than enough for you to become familiar with the platform. If you expect that you will need additional funding to complete your planned research, this initial amount may be used to perform prototype analyses and to better estimate your total costs. At that time, you may request additional funding.
 
