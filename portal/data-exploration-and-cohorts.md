@@ -266,7 +266,7 @@ Click the **Cohorts** button in the header to view a list of all the cohorts you
 
 ![](../.gitbook/assets/screen-shot-2021-06-07-at-9.12.08-am.png)
 
-The **Cohorts** page supports the creation of a manifest containing one or several cohorts. Click the checkboxes corresponding to the desired cohorts, then click the **Export Manifest** button which opens the Export Cohort Manifest dialog box discussed [above.](https://learn.canceridc.dev/portal/data-exploration-and-cohorts/#accessing-the-cohort-manifest) Complete this dialog box to export a manifest with all selected cohorts. Note that a manifest for multiple cohorts can only be exported to BigQuery and not to a file download. Also cohorts with inactive data versions cannot be downloaded. One or more cohorts can be deleted by clicking the relevant checkboxes and then clicking the **Delete** button.
+Cohort manifests can be exported directly from the **Cohorts** page. Click the checkboxes corresponding to the desired cohorts, then click the **Export Manifest** button which opens the Export Cohort Manifest dialog box discussed [above.](https://learn.canceridc.dev/portal/data-exploration-and-cohorts/#accessing-the-cohort-manifest) Complete this dialog box to export separate manifests for all selected cohorts. Note that only a single cohort manifest can be exported to a file download at one time. Also cohorts with inactive data versions cannot be downloaded to a file. When multiple manifests are exported to BigQuery they are copied to separate BigQuery tables. One or more cohorts can be deleted by clicking the relevant checkboxes and then clicking the **Delete** button.
 
 ### Cohort Versions
 
