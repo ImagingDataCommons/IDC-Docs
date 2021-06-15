@@ -1,4 +1,11 @@
-# Organization of data
+---
+description: >-
+  v1 of IDC followed a different layout of data than subsequent version. Since
+  the corresponding items are still available, we document it here for
+  reference.
+---
+
+# Organization of data in V1 \(deprecated\)
 
 IDC approach to storage and management of DICOM data is relying on the Google Cloud Platform [Healthcare API](https://cloud.google.com/healthcare/docs/how-tos/dicom). We maintain three representations of the data, which are fully synchronized and correspond to the same dataset, but are intended to serve different use cases.
 

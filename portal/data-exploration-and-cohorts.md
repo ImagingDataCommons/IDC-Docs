@@ -184,7 +184,7 @@ Do the following to create a cohort.
 
 ![Save Cohort dialog box](../.gitbook/assets/save-cohort-confirmation-v2.png)
 
-The cohort details page shows the cohort name, description \(if available\), and filter definition. Attribute filter selections in the Search Configuration panel that have no data available are greyed out and show "0 cases."
+The cohort details page shows the cohort name, description \(if available\), and filter definition. 
 
 ![Greyed out filter options on the Search Configuration panel](../.gitbook/assets/screen-shot-2021-03-02-at-9.15.10-am.png)
 
@@ -271,9 +271,21 @@ You must select a column option to export the cohort manifest.
 
 ### Viewing the cohorts list
 
-Click the **Cohorts** button in the header to view a list of all the cohorts you created under your account. The cohorts list includes the corresponding cohort ID, name, description, owner, how many times it has been shared \(the ability to share the cohort is not available in the current version of the portal\), and the version of the IDC data against which the cohort was created. 
+Click the **Cohorts** button in the header to view a list of all the cohorts you created under your account. Each row in the cohorts list includes the corresponding cohort ID, name, the number of cases, studies, and series in the cohort, and the version of the IDC data against which the cohort was created. Pressing the **plus** icon on any row in the cohort list opens a second related row that provides information about the cohort's collections and filters.
 
-![Cohorts list](../.gitbook/assets/cohort_list_table-page.png)
+![](../.gitbook/assets/screen-shot-2021-06-07-at-9.12.08-am.png)
 
-To delete a cohort, click the box in its row and then click the **Delete** button. You can delete multiple cohorts at once.  
+
+
+The **Cohorts** page supports the creation of a manifest containing one or several cohorts. Click the checkboxes corresponding to the desired cohorts, then click the **Export Manifest** button which  opens the Export Cohort Manifest dialog box discussed [above.](https://learn.canceridc.dev/portal/data-exploration-and-cohorts/#accessing-the-cohort-manifest) Complete this dialog box to export a manifest with all selected cohorts. Note that a manifest for multiple cohorts can only be exported to BigQuery and not to a file download. Also cohorts with inactive data versions cannot be downloaded. One or more cohorts can be deleted by clicking the relevant checkboxes and then clicking the **Delete** button.   
+
+### Cohort Versions
+
+To indicate cohorts created with previous data versions in the cohort list the **Data Version** cells of such cohorts will have a grey background. The cohort manifest remains accessible for all cohorts after the active data version changes. However cohorts created with older data versions can no longer be opened within the portal. Clicking on the button in the **Version Compare** cell in the cohort list opens a pop-up window that compares the number of cases, studies, and series in the current cohort with those of a new cohort that would be created by applying the cohort's filters to the current data set.
+
+![](../.gitbook/assets/screen-shot-2021-06-07-at-2.02.08-pm.png)
+
+Clicking on the **Load New Version** button will open the explorer page, applying these cohort filters to the current data version. The user can then save this new cohort or modify the filters as desired.
+
+![](../.gitbook/assets/screen-shot-2021-06-09-at-8.46.36-am.png)
 
