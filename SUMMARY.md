@@ -39,6 +39,7 @@
 * [Getting started](portal/getting-started.md)
 * [Exploring data and cohorts](portal/data-exploration-and-cohorts.md)
 * [Visualizing images](portal/visualization.md)
+* [Viewer release notes](portal/viewer-release-notes.md)
 * [Portal release notes](portal/release-notes.md)
 * [Portal known issues](portal/portal-known-issues.md)
 
