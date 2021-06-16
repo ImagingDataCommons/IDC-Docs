@@ -1,10 +1,8 @@
 # Exploring data and cohorts
 
-## Exploring imaging data
+## [Exploring imaging data](exploring-imaging-data.md)
 
-## Viewing collections, studies, and series
+## [Viewing collections, studies, and series](viewing-collections-studies-and-series.md)
 
-
-
-![](../.gitbook/assets/screen-shot-2021-06-09-at-8.46.36-am%20%281%29.png)
+## [Understanding cohorts](understanding-cohorts.md)
 
