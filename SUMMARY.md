@@ -38,9 +38,9 @@
 
 * [Getting started](portal/getting-started.md)
 * [Exploring data and cohorts](portal/data-exploration-and-cohorts.md)
-* [Exploring imaging data](portal/exploring-imaging-data.md)
-* [Viewing collections, studies, and series](portal/viewing-collections-studies-and-series.md)
-* [Understanding cohorts](portal/understanding-cohorts.md)
+  * [Exploring imaging data](portal/exploring-imaging-data.md)
+  * [Viewing collections, studies, and series](portal/viewing-collections-studies-and-series.md)
+  * [Understanding cohorts](portal/understanding-cohorts.md)
 * [Visualizing images](portal/visualization.md)
 * [Viewer release notes](portal/viewer-release-notes.md)
 * [Portal release notes](portal/release-notes.md)
