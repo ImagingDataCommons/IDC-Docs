@@ -197,7 +197,7 @@ You can download cohorts of up to 650,000 rows as a multipart file, with each fi
 
 **To export the cohort manifest**
 
-1. [Create a cohort](data-exploration-and-cohorts.md#creating-a-cohort) or click **Cohorts** on the top menu bar _\*\*_and select a cohort you previously created.
+1. [Create a cohort](data-exploration-and-cohorts.md#creating-a-cohort) or click **Cohorts** on the top menu bar \_\*\*\_and select a cohort you previously created.
 2. Click the **Export Cohort Manifest** button. The Export Cohort Manifest dialog box appears.
 3. Select the [header fields and columns](data-exploration-and-cohorts.md#header-fields-and-column-selection) you want to appear in the export file.
 4. Select whether you want to export the cohort as files or using [BigQuery](data-exploration-and-cohorts.md#exporting-the-cohort-manifest-to-bigquery).
