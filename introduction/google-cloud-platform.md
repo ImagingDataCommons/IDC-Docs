@@ -13,5 +13,3 @@ Within CRDC, Cloud Resources are intended to support CRDC users' analysis needs.
 * [DataStudio](http://datastudio.google.com/)
 * [Datalab](https://cloud.google.com/datalab/docs)
 
-
-

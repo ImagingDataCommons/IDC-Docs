@@ -18,10 +18,10 @@
 ## Data
 
 * [Introduction](data/introduction.md)
-* [Data Versioning](data/data-versioning.md)
-* [Organization of data](data/organization-of-data-1.md)
-* [Organization of data in V1 \(deprecated\)](data/organization-of-data.md)
-* [GA4GH DRS Objects](data/ga4gh-drs-objects.md)
+* [Data versioning](data/data-versioning.md)
+* [Organization of data](data/organization-of-data-1/README.md)
+  * [Organization of data in v1 \(deprecated\)](data/organization-of-data-1/organization-of-data.md)
+  * [GA4GH DRS objects](data/ga4gh-drs-objects.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
@@ -37,8 +37,12 @@
 ## Portal
 
 * [Getting started](portal/getting-started.md)
-* [Exploring data and cohorts](portal/data-exploration-and-cohorts.md)
+* [Exploring data and cohorts](portal/data-exploration-and-cohorts/README.md)
+  * [Exploring imaging data](portal/data-exploration-and-cohorts/exploring-imaging-data.md)
+  * [Viewing collections, studies, and series](portal/data-exploration-and-cohorts/viewing-collections-studies-and-series.md)
+  * [Understanding cohorts](portal/data-exploration-and-cohorts/understanding-cohorts.md)
 * [Visualizing images](portal/visualization.md)
+* [Viewer release notes](portal/viewer-release-notes.md)
 * [Portal release notes](portal/release-notes.md)
 * [Portal known issues](portal/portal-known-issues.md)
 

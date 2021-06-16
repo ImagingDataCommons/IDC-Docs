@@ -6,9 +6,9 @@ We differentiate between the _original_ and _derived_ DICOM objects in the IDC p
 The search portal of IDC aimed to group attributes into categories that are specific to the original and derived objects. Due to the time constraints, the current listing of attributes as of IDC MVP does not correspond to the final desired organization, and is expected to change.
 {% endhint %}
 
-### Original objects
+## Original objects
 
-Most of the images stored on IDC are saved as objects that store individual slices of the image in separate instances of a series, with the image stored in the `PixelData` attribute. 
+Most of the images stored on IDC are saved as objects that store individual slices of the image in separate instances of a series, with the image stored in the `PixelData` attribute.
 
 Open source libraries such as DCMTK, GDCM, ITK, and pydicom can be used to parse such files and load pixel data of the individual slices. Recovering geometry of the individual slices \(spatial location and resolution\) and reconstruction of the individual slices into a volume requires some extra consideration.
 
@@ -20,7 +20,7 @@ We point this out because even some prominent examples use oversimplified approa
 
 ![ImagePositionPatient\[2\] for calculating slice spacing for an oblique acquisition leads to incorrect result](../.gitbook/assets/spacing_issue.png)
 
-Although in most cases, a DICOM image series will correspond to a single traversal of a 3-d volume, in  general it may have multiple slices for the same spatial location \(e.g., for temporally-resolved acquisitions\). Unfortunately, it is also possible that DICOM series, as available to you, will have missing slices and, as a result, inconsistent spacing between slices.
+Although in most cases, a DICOM image series will correspond to a single traversal of a 3-d volume, in general it may have multiple slices for the same spatial location \(e.g., for temporally-resolved acquisitions\). Unfortunately, it is also possible that DICOM series, as available to you, will have missing slices and, as a result, inconsistent spacing between slices.
 
 You can use one of the existing tools to reconstruct image volume instead of implementing sorting of the slices on your own:
 
@@ -28,6 +28,4 @@ You can use one of the existing tools to reconstruct image volume instead of imp
 * [Plastimatch](https://www.plastimatch.org/): open source software for image computation, which includes [command-line file format converter](https://www.plastimatch.org/plastimatch.html)
 * [dicom2nifti](https://github.com/icometrix/dicom2nifti): python library providing API and command-line tools for converting DICOM images into NIfTI format
 * [SimpleITK](https://simpleitk.readthedocs.io/en/master/index.html): python interface to the [Insight Toolkit](https://github.com/InsightSoftwareConsortium/ITK), includes [DICOM read functionality](https://simpleitk.readthedocs.io/en/master/link_DicomSeriesReader_docs.html).
-
-### 
 

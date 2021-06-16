@@ -8,9 +8,7 @@ The document with the recipes below needs to be updated to work with the layout 
 
 [This notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/LIDC_exploration.ipynb) provides some examples of using BigQuery for exploring metadata of a collection in IDC.
 
-### Learning resources
+## Learning resources
 
 * [Intro to SQL course on Kaggle](https://www.kaggle.com/learn/intro-to-sql)
-
-
 

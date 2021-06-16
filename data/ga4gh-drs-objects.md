@@ -14,11 +14,11 @@ of a  \(version of a\) DICOM instance, and this is the corresponding CRDC GUID:
 A GUID can be resolved at [https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/](https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/) by appending the `G`UID to the above URL.  
   
 For example, the following curl command:   
+
 `>> curl https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/dg.4DFC/641121f1-5ca0-42cc-9156-fb5538c14355`
 
 returns:
-
-  
+ 
 `{  
   "access_methods":[  
     {  
@@ -59,7 +59,7 @@ Thus, we see that when we resolve dg.4DFC/cc9c8541-949d-48d9-beaf-7028aa4906dc, 
 
 we see that the `contents` component includes the GUID of that instance as well as the GUID of another instance:
 
-  
+
 `{  
     "aliases": [],  
     "checksums": [  
@@ -101,6 +101,3 @@ At this time, most GUIDs have not been registered with the CRDC. If such a GUID 
 {% hint style="warning" %}
 As discussed in the _Organization of data_ section of this document, the DICOM instance file naming convention changed with IDC version 2. At this time, when an instance GUID is resolved, the returned DrsObject may method may include a URI to the V1 GCS bucket location. Those GUID will re-indexed such that in the future they point to the new GCS bucket location.
 {% endhint %}
-
-
-

@@ -8,6 +8,19 @@ _canceridc.&lt;date of webapp deployment in YYYYMMDDHHMM&gt;.&lt;first 6 charact
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 2.0.0 - June 2021 - TBD
+
+The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
+
+Main highlights of this release include:
+
+* 112 data collections are now included
+* Cohort data version is reported
+* Cohort statistics - ie the number the cases, studies, and series per cohort are now reported
+* Mechanism included to update a version cohort
+* Species Attribute is included
+* Checkbox and plus/minus icons are now used to select table rows
+
 ## 1.3.0 - March 2021 \(canceridc.202103011131.27ce3b3\)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
@@ -85,6 +98,4 @@ Main features in this initial release include:
 * The ability to save cohorts
 * The ability to download the manifest of any cohort created
 * The ability to promote, filter, and load multiple series instances in the OHIF viewer
-
-
 
