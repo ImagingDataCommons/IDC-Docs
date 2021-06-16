@@ -5,7 +5,7 @@ description: >-
   reference.
 ---
 
-# Organization of data in V1 \(deprecated\)
+# Organization of data in v1 \(deprecated\)
 
 IDC approach to storage and management of DICOM data is relying on the Google Cloud Platform [Healthcare API](https://cloud.google.com/healthcare/docs/how-tos/dicom). We maintain three representations of the data, which are fully synchronized and correspond to the same dataset, but are intended to serve different use cases.
 
