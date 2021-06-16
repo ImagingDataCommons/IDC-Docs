@@ -16,11 +16,11 @@ All of the resources listed below are accessible under the [`canceridc-data` GCP
 Storage Buckets are basic containers in Google Cloud that provide storage for data objects \(you can read more about the relevant terms in the Google Cloud Storage documentation [here](https://cloud.google.com/storage/docs/key-terms)\).
 {% endhint %}
 
-All IDC DICOM file data for all IDC data versions are maintained in Google Cloud Storage \(GCS\), from which it is available to the user on a [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) basis. Currently all DICOM files are in the `idc-open` bucket.
+All IDC DICOM file data for all IDC data versions are maintained in Google Cloud Storage \(GCS\), from which it is available to the user on a [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) basis. Currently all DICOM files are in the `idc-open` bucket. 
 
 The object namespace is flat, where every object name is composed of a standard format UUIDs and with the ".dcm" file extension, e.g. `905c82fd-b1b7-4610-8808-b0c8466b4dee.dcm`. For example, that instance can be accessed using [gsutil](https://cloud.google.com/storage/docs/gsutil) as `gs://idc-open/905c82fd-b1b7-4610-8808-b0c8466b4dee.dcm`
 
-You can read about accessing GCP storage buckets from a Compute VM [here](https://cloud.google.com/compute/docs/disks/gcs-buckets). Because the `idc-open` bucket has a Requester Pays policy, you will need to provide a Project ID for a project for which billing has been configured in order to be able to download data from that bucket.
+You can read about accessing GCP storage buckets from a Compute VM [here](https://cloud.google.com/compute/docs/disks/gcs-buckets). Because the idc-open bucket has a Requester Pays policy, you will need to provide a Project ID for a project for which billing has been configured in order to be able to download data from that bucket. 
 
 {% hint style="warning" %}
 Make sure you understand the [data egress charges](https://cloud.google.com/storage/pricing#network-egress)! As a general rule of thumb, downloading of the data to a GCP compute VM within the same GCS location as the bucket free, while downloading to your laptop, or another Google VM in a different GCS location, or a VM that belongs to a different cloud provider is expensive!
@@ -40,56 +40,61 @@ $ cat gcs_paths.txt | gsutil -u $PROJECT_ID -m cp -I .
 Google [BigQuery \(BQ\)](https://cloud.google.com/bigquery) is a massively-parallel analytics engine ideal for working with tabular data. Data stored in BQ can be accessed using [standard SQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql) queries.
 {% endhint %}
 
-The flat address space of IDC DICOM objects in GCS storage is accompanied by BigQuery tables that allow the researcher to reconstruct the DICOM hierarchy as it exists for any given version.
+
+The flat address space of IDC DICOM objects in GCS storage is accompanied by BigQuery tables that allow the researcher to reconstruct the DICOM hierarchy as it exists for any given version. 
 
 There are several important BQ tables and views in which we keep copies of the metadata exposed via the TCIA interface at the time this version was captured and other pertinent information.
 
-There is an instance of each of the following tables and views per IDC version. The set of tables and views corresponding to an IDC version are collected in a single BQ dataset per IDC version, `idc_<idc_version_number>`. E.G. the BQ tables for IDC version 2 are in the `canceridc-data.idc_v2`dataset.
+There is an instance of each of the following tables and views per IDC version. The set of tables and views corresponding to an IDC version are collected in a single BQ dataset per IDC version, `idc_<idc_version_number>`. E.G. the BQ tables for IDC version 2 are in the ```canceridc-data.idc_v2```dataset. 
 
-Several Google BigQuery \(BQ\) tables support searches against metadata extracted from the data files. Additional BQ tables define the composition of each IDC data version.
+Several Google BigQuery \(BQ\) tables support searches against metadata extracted from the data files. Additional BQ tables define the composition of each IDC data version. 
 
 We maintain several additional tables that curate metadata non-DICOM metadata \(e.g., attribution of a given item to a specific collection and DOI, collection-level metadata, etc\).
 
-* `canceridc-data.idc_v<idc_version_number>.auxiliary_metadata:` This table defines the contents of the corresponding IDC version. There is a row for each instance in the version. Version attributes:
+* `canceridc-data.idc_vx.auxiliary_metadata:`   
+  This table defines the contents of the corresponding IDC version. There is a row for each instance in the version.   
+     Version attributes:
+
   * `idc_version_number:` The IDC version number.
   * `version_hash`: the md5 hash of the sorted `collection_hashes` of all collections in this version
 
-    Collection attributes:
+     Collection attributes:
 
   * `tcia_api_collection_id:` The ID, as accepted by the TCIA API, of the original data collection containing this instance.
   * `idc_webapp_collection_id:`The ID, as accepted by the IDC web app, of the original data collection containing this instance.
   * `source_doi:`A DOI of the TCIA wiki page corresponding to the original data collection or analysis results that is the source of this instance.
   * `collection_hash`: The md5 hash of the sorted `patient_hashes` of all patients in the collection containing this instance.
 
-    Patient attributes:
 
-  * `submitter_case_id:`The submitter’s \(of data to TCIA\) ID of the patient containing this instance. This is the DICOM PatientID.
-  * `idc_case_id:`IDC generated UUID that uniquely identifies the patient containing this instance.
+     Patient attributes:
+
+  * `submitter_case_id:`The submitter’s \(of data to TCIA\) ID of the  patient containing this instance. This is the DICOM PatientID.
+  * `idc_case_id:`IDC generated UUID that uniquely identifies the  patient containing this instance.
 
     This is needed because DICOM PatientIDs are not required to be globally unique.
 
   * `patient_hash`: the md5 hash of the sorted `study_hashes` of all studies in the patient containing this instance.
 
-    Study attributes:
+     Study attributes:
 
   * `StudyInstanceUID:` DICOM UID of the study containing this instance.
   * `study_uuid:`IDC assigned UUID that identifies a version of the study containing this instance.
   * `study_hash`: the md5 hash of the sorted `series_hashes` of all series in study containing this instance.
 
-    Series attributes:
+     Series attributes:
 
   * `SeriesInstanceUID:` DICOM UID of the series containing this instance.
   * `series_uuid:`IDC assigned UUID that identifies a version of the series containing this instance.
   * `series_hash`: the md5 hash of the sorted `instance_hashes` of all instance in the series containing this instance.
 
-    Instance attributes:
+     Instance attributes:
 
   * `SOPInstanceUID:` DICOM UID of this instance.
   * `instance_uuid:`IDC assigned UUID that identifies a version of this instance.
   * `gcs_url:` The GCS URL of a file containing the version of this instance that is identified by the `instance_uuid`
   * `instance_hash`: the md5 hash of the version of this instance that is identified by the `instance_uuid`
   * `instance_size:` the size, in bytes, of this version of the instance that is identified by the `instance_uuid` 
-* `canceridc-data.idc_v<idc_version_number>.dicom_metadata`: DICOM metadata for each instance in the corresponding IDC version. IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Google Healthcare API documentation article. IDC users can access this table to conduct detailed exploration of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. The schema is too large to document here. Refer to the BQ table and the above referenced documentation.
+  * `canceridc-data.idc_v<idc_version_number>.dicom_metadata`: DICOM metadata for each instance in the corresponding IDC version. IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Google Healthcare API documentation article. IDC users can access this table to conduct detailed exploration of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. The schema is too large to document here. Refer to the BQ table and the above referenced documentation.
 
 {% hint style="warning" %}
 Due to the existing limitations of Google Healthcare API, not all of the DICOM attributes are extracted and are available in BigQuery tables. Specifically:
@@ -111,6 +116,7 @@ Due to the existing limitations of Google Healthcare API, not all of the DICOM a
   * `SupportingData:`Type\(s\) of additional data available
   * `Location:`Body location that was studied
   * `Description:`TCIA description of the collection \(HTML format\) 
+
 * `canceridc-data.idc.idc_v<idc_version_number>.analysis_results_metadata` :  Metadata for the TCIA analysis results hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/tcia-analysis-results/). One row per analysis result:
   * `Collection:`Descriptive name
   * `DOI:`DOI that can be resolved at doi.org to the TCIA wiki page for this analysis result
