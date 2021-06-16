@@ -34,7 +34,7 @@ Typically, it is most expedient to use one of the specialized tools to access th
 Tools referenced above can be used to 1\) extract volumetrically reconstructed mask images corresponding to the individual segments stored in DICOM SEG; 2\) extract segment-specific metadata describing its content; 3\) generate standard-compliant DICOM SEG objects from research formats.
 
 {% hint style="info" %}
-SEG-specific metadata attributes are available in the table views maintained by IDC. See details [here](../data/organization-of-data.md).
+SEG-specific metadata attributes are available in the table views maintained by IDC. See details [here](../data/organization-of-data-1/organization-of-data.md).
 {% endhint %}
 
 ## Radiotherapy Structure Sets
@@ -60,7 +60,7 @@ Open source DCMTK [dsr2html](https://support.dcmtk.org/docs/dsr2html.html) tool 
 Tools referenced above can be used to 1\) extract qualitative evaluations and quantitative measurements fro the SR-TID1500 document; 2\) generate standard-compliant SR-TID1500 objects.
 
 {% hint style="info" %}
-SR-TID1500-specific metadata attributes are available in the table views maintained by IDC. See details [here](../data/organization-of-data.md).
+SR-TID1500-specific metadata attributes are available in the table views maintained by IDC. See details [here](../data/organization-of-data-1/organization-of-data.md).
 {% endhint %}
 
 _**TODO: what to do with the results once you generated them**_

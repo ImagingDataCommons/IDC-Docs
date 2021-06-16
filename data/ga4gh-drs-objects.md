@@ -1,10 +1,10 @@
-# GA4GH DRS Objects
+# GA4GH DRS objects
 
 An IDC manifest may include study and/or series _GUIDs_ that can be resolved to the underlying DICOM instance files in GCS. Such use of GUIDs in a manifest enables a much shorter manifest compared to a list of per-instance GCS URLs. Also, as explained below, a GUID is expected to be resolvable even when the data which it represents has been moved.
 
 From the [GA4GH Data Repository Service API](https://github.com/ImagingDataCommons/IDC-Docs-dev/tree/04e03a8f3bbb167cd40c78feaa9de4b7027b7f1d/data-repository-service-schemas/preview/release/drs-1.1.0/docs/README.md) specification:
 
-"The Data Repository Service \(DRS\) API provides a generic interface to data repositories so data consumers, including workflow systems, can access data objects in a single, standard way regardless of where they are stored and how they are managed. The primary functionality of DRS is to map a logical ID to a means for physically retrieving the data represented by the ID."
+> "The Data Repository Service \(DRS\) API provides a generic interface to data repositories so data consumers, including workflow systems, can access data objects in a single, standard way regardless of where they are stored and how they are managed. The primary functionality of DRS is to map a logical ID to a means for physically retrieving the data represented by the ID."
 
 In IDC, we use the term _GUID_ to mean a persistent identifier that can be resolved to a GA4GH DrsObject. GUID persistence ensures that the data which the GUID represents can continue to be located and accessed even if it has been moved to a different hosting site.  
 As described in the [Data Versioning](data-versioning.md) section, a UUID identifies a particular version of an IDC data object. There is a UUID for every version of every DICOM instance, series, and study in IDC hosted data. Each such UUID is used to form a GUID that is registered by the NCI Cancer Research Data Commons \(CRDC\), and can be used to access the data that defines that object. This is a typical UUID:  
@@ -13,7 +13,8 @@ of a \(version of a\) DICOM instance, and this is the corresponding CRDC GUID:
 `dg.4DFC/641121f1-5ca0-42cc-9156-fb5538c14355`  
 A GUID can be resolved at [https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/](https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/) by appending the `G`UID to the above URL.
 
-For example, the following curl command:  
+For example, the following curl command:
+
 `>> curl https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/dg.4DFC/641121f1-5ca0-42cc-9156-fb5538c14355`
 
 returns:
@@ -52,7 +53,7 @@ returns:
 which is a DrsObject. Because we resolved the GUID of an instance, the `access_methods` in the returned DrsObject includes a URL at which the corresponding DICOM entity can be accessed.
 
 When the GUID of a series is resolved, the DrsObject that is returned does not include access methods because there are no series file objects. Instead, the `contents` component of the returned DrsObject contains the URLs that can be accessed to obtain the DrsObjects of the instances in the series.  
-Thus, we see that when we resolve dg.4DFC/cc9c8541-949d-48d9-beaf-7028aa4906dc, the GUID of the series containing the instance above:
+Thus, we see that when we resolve `dg.4DFC/cc9c8541-949d-48d9-beaf-7028aa4906dc`, the GUID of the series containing the instance above:
 
 `curl -o foo https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/dg.4DFC/cc9c8541-949d-48d9-beaf-7028aa4906dc`
 

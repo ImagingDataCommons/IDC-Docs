@@ -29,7 +29,7 @@ You can also explore the IDC data without filters. If you want to view a collect
 Log in to the portal to [save your filter selections as a cohort](./#creating-a-cohort).
 {% endhint %}
 
-![Collections Panel](../../.gitbook/assets/collections-panelv2%20%282%29%20%281%29.png)
+![Collections Panel](../../.gitbook/assets/collections-panelv2%20%282%29%20%282%29%20%281%29.png)
 
 ### **Defining search scope and configuration**
 

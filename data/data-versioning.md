@@ -1,4 +1,4 @@
-# Data Versioning
+# Data versioning
 
 The IDC obtains curated DICOM radiology image and analysis data from The Cancer Imaging Archive \(TCIA\). In the future, IDC will obtain radiology, pathology and microscopy image data from TCIA and additional sources. Data from all these sources evolves over time as new data is added \(common\), existing files are corrected \(rare\), or data is removed \(extremely rare\).
 
@@ -18,5 +18,5 @@ The data in each IDC version, then, can be thought of as some set of versioned D
 
 Note that instances, series and studies do not have an explicit version numbers. Versioning of an object is implicit in the associated UUIDs.
 
-As we will see in [Organization of data](organization-of-data-1.md), the UUID of an instance is used in forming the GCS object name of the corresponding GCS object. Series and studies do not have corresponding GCS objects but each instance, series and study has a corresponding GA4GH DRS object, identified by a GUID based on the instance's, series's or study's UUID. Refer to the [GA4GH DRS Objects](ga4gh-drs-objects.md) section for details.
+As we will see in [Organization of data](organization-of-data-1/), the UUID of an instance is used in forming the GCS object name of the corresponding GCS object. Series and studies do not have corresponding GCS objects but each instance, series and study has a corresponding GA4GH DRS object, identified by a GUID based on the instance's, series's or study's UUID. Refer to the [GA4GH DRS Objects](ga4gh-drs-objects.md) section for details.
 
