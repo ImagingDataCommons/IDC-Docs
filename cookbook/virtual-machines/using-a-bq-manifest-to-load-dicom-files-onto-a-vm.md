@@ -4,7 +4,7 @@ Once a manifest has been created, typically the next step is to load the files o
 
 ## Step 1: Export a file manifest for your cohort into BigQuery.
 
-The first step is to [export a file manifest for a cohort into BigQuery](../../portal/data-exploration-and-cohorts.md#exporting-to-bigquery). You will want to copy this table into the project where you are going to run your VM. Do this using the Google BQ console, since the exported table can be accessed only using your personal credentials provided by your browser. The table copy living in the VM project will be readable by the service account running your VM.
+The first step is to [export a file manifest for a cohort into BigQuery](../../portal/data-exploration-and-cohorts/#exporting-to-bigquery). You will want to copy this table into the project where you are going to run your VM. Do this using the Google BQ console, since the exported table can be accessed only using your personal credentials provided by your browser. The table copy living in the VM project will be readable by the service account running your VM.
 
 ## Step 2: Start up a VM
 
