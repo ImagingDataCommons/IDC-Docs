@@ -19,9 +19,10 @@
 
 * [Introduction](data/introduction.md)
 * [Data versioning](data/data-versioning.md)
-* [Organization of data](data/organization-of-data.md)
-  * [Organization of data in v1 \(deprecated\)](data/organization-of-data-v1.md)
-  * [GA4GH DRS objects](data/ga4gh-drs-objects.md)
+* [Organization of data](data/organization-of-data/README.md)
+  * [Files and metadata](data/organization-of-data/files-and-metadata.md)
+  * [GA4GH DRS objects](data/organization-of-data/ga4gh-drs-objects.md)
+  * [Organization of data in v1 \(deprecated\)](data/organization-of-data/organization-of-data-v1.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
