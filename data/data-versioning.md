@@ -18,5 +18,5 @@ The data in each IDC version, then, can be thought of as some set of versioned D
 
 Note that instances, series and studies do not have an explicit version numbers. Versioning of an object is implicit in the associated UUIDs.
 
-As we will see in [Organization of data](https://github.com/ImagingDataCommons/IDC-Docs/tree/cf5a99f54416a4db98f7fd5feddd4fe5b36ae5e6/data/organization-of-data-1.md), the UUID of an instance is used in forming the GCS object name of the corresponding GCS object. Series and studies do not have corresponding GCS objects but each instance, series and study has a corresponding GA4GH DRS object, identified by a GUID based on the instance's, series's or study's UUID. Refer to the [GA4GH DRS Objects](organization-of-data-1/ga4gh-drs-objects.md) section for details.
+As we will see in [Organization of data](https://github.com/ImagingDataCommons/IDC-Docs-dev/tree/f90c4ff43658a6d016ca80352826c835aee38043/data/organization-of-data-1.md), the UUID of an instance is used in forming the GCS object name of the corresponding GCS object. Series and studies do not have corresponding GCS objects but each instance, series and study has a corresponding GA4GH DRS object, identified by a GUID based on the instance's, series's or study's UUID. Refer to the [GA4GH DRS Objects](organization-of-data-1/ga4gh-drs-objects.md) section for details.
 
