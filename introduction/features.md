@@ -1,6 +1,6 @@
 # Features
 
-The following components and capabilities are being developed by IDC: 
+The following components and capabilities are being developed by IDC:
 
 * [Cloud-hosted imaging data collections](../data/introduction.md)
 * [Search and cohort building portal](../portal/getting-started.md) \(IDC Portal\)
