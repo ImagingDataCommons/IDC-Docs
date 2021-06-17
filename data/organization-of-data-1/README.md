@@ -123,7 +123,7 @@ Due to the existing limitations of Google Healthcare API, not all of the DICOM a
 
 In addition to the tables above, we provide the following [BigQuery views](https://cloud.google.com/bigquery/docs/views-intro) \(virtual tables defined by queries\) that extract specific subsets of metadata, or combine attributes across different tables, for convenience of the users
 
-* `canceridc-data.idc_v<idc_version_number>.idc_views.dicom_all`:  DICOM metadata together with selected auxiliary and collection metadata
+* `canceridc-data.idc_v<idc_version_number>.dicom_all`:  DICOM metadata together with selected auxiliary and collection metadata
 * `canceridc-data.idc_v<idc_version_number>.segmentations`:  Attributes of the segments stored in DICOM Segmentation object
 * `canceridc-data.idc_v<idc_version_number>.measurement_groups`:  Measurement group sequences extracted from the DICOM SR TID1500 objects
 * `canceridc-data.idc_v<idc_version_number>.qualitative_measurements`:  Coded evaluation results extracted from the DICOM SR TID1500 objects

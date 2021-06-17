@@ -2,7 +2,7 @@
 
 Creating a cohort helps you quickly return to a subset of interest from the vast collection of data available in the Imaging Data Commons. A cohort is composed of your selections in the Search Scope and Search Configuration panels.
 
-### Creating a cohort
+## Creating a cohort
 
 Do the following to create a cohort.
 
@@ -24,7 +24,7 @@ You can open any study or series associated with the cohort using the IDC Viewer
 
 ![Cohort details page](../../.gitbook/assets/cohort_details-page.png)
 
-### **Accessing the cohort m**anifest
+## **Accessing the cohort m**anifest
 
 The cohort manifest identifies the sources of data in your cohort and allows you to download this data. You can export a cohort manifest to CSV, TSV, and JSON formats, and to BigQuery.
 
@@ -42,7 +42,7 @@ You can download cohorts of up to 650,000 rows as a multipart file, with each fi
    * Select which format the files in the export should be by clicking **Download CSV**, **Download TSV**, or **Download JSON**.
    * If you want to download the cohort using BigQuery, click **Get BQ Table.**
 
-### Understanding the cohort manifest
+## Understanding the cohort manifest
 
 The header of the manifest contains the name of cohort, user, filters used, the date generated, and the total number of records. Data is separated by multiple files until the limit of 65,000 files is reached. If your data set is larger than this, you must export it using BigQuery.
 
@@ -65,7 +65,7 @@ An example of how you can use an IDC cohort manifest to retrieve the manifest-de
 A multipart file export can have a maximum of ten files with 65,000 rows each. If your export is larger than this, you must export the manifest via BigQuery.
 {% endhint %}
 
-### Exporting to BigQuery
+## Exporting to BigQuery
 
 {% hint style="warning" %}
 You must have a Google account to use BigQuery.
@@ -81,7 +81,7 @@ Be sure to save this URL information or pin the BigQuery table to your Google co
 
 After the export table expires, you can create a new manifest for analysis.
 
-### **Exporting as a file**
+## **Exporting as a file**
 
 Comma-Separated Values \(CSV\) and Tab-Separated Values \(TSV\) files include header fields, so you can customize which of those fields you want to include in the export. You can also select which columns to include in the file.
 
@@ -97,7 +97,7 @@ JSON files do not include any header information but like CSV and TSV files, req
 You must select a column option to export the cohort manifest.
 {% endhint %}
 
-### Viewing the cohorts list
+## Viewing the cohorts list
 
 Click the **Cohorts** button in the header to view a list of all the cohorts you created under your account. Each row in the cohorts list includes the corresponding cohort ID, name, the number of cases, studies, and series in the cohort, and the version of the IDC data against which the cohort was created. Pressing the **plus** icon on any row in the cohort list opens a second related row that provides information about the cohort's collections and filters.
 
@@ -105,7 +105,7 @@ Click the **Cohorts** button in the header to view a list of all the cohorts you
 
 Cohort manifests can be exported directly from the **Cohorts** page. Click the checkboxes corresponding to the desired cohorts, then click the **Export Manifest** button which opens the Export Cohort Manifest dialog box discussed [above.](https://learn.canceridc.dev/portal/data-exploration-and-cohorts/#accessing-the-cohort-manifest) Complete this dialog box to export separate manifests for all selected cohorts. Note that only a single cohort manifest can be exported to a file download at one time. Also cohorts with inactive data versions cannot be downloaded to a file. When multiple manifests are exported to BigQuery they are copied to separate BigQuery tables. One or more cohorts can be deleted by clicking the relevant checkboxes and then clicking the **Delete** button.
 
-### Cohort Versions
+## Cohort Versions
 
 To indicate cohorts created with previous data versions in the cohort list the **Data Version** cells of such cohorts will have a grey background. The cohort manifest remains accessible for all cohorts after the active data version changes. However cohorts created with older data versions can no longer be opened within the portal. Clicking on the button in the **Version Compare** cell in the cohort list opens a pop-up window that compares the number of cases, studies, and series in the current cohort with those of a new cohort that would be created by applying the cohort's filters to the current data set.
 

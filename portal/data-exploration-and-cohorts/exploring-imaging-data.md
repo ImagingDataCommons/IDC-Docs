@@ -31,7 +31,7 @@ Log in to the portal to [save your filter selections as a cohort](./#creating-a-
 
 ![Collections Panel](../../.gitbook/assets/collections-panelv2%20%282%29%20%282%29%20%281%29.png)
 
-### **Defining search scope and configuration**
+## **Defining search scope and configuration**
 
 Do the following to define the scope and configuration of your search.
 
@@ -94,7 +94,7 @@ Do the following to define the scope and configuration of your search.
   </tbody>
 </table>
 
-### Understanding counts in the search results
+## Understanding counts in the search results
 
 The Imaging Data Commons hosts multiple nuances of non-mutually exclusive attributes. This may mean that attributes you did not select appear in your search results. You may want to take this into consideration when analyzing the data in your search results.
 

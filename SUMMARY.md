@@ -21,7 +21,7 @@
 * [Data versioning](data/data-versioning.md)
 * [Organization of data](data/organization-of-data-1/README.md)
   * [Organization of data in v1 \(deprecated\)](data/organization-of-data-1/organization-of-data.md)
-  * [GA4GH DRS objects](data/ga4gh-drs-objects.md)
+  * [GA4GH DRS objects](data/organization-of-data-1/ga4gh-drs-objects.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
