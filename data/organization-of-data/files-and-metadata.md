@@ -1,14 +1,4 @@
-# Organization of data
-
-This section describes the organization of IDC data from IDC Version 2. IDC Version 1 data organization is described in the [Organization of data in V1](./) section.
-
-IDC storage and management of DICOM data relies on the Google Cloud Platform. We maintain three representations of the data, which are fully synchronized and correspond to the same dataset, but are intended to serve different use cases.
-
-{% hint style="warning" %}
-In order to access the resources listed below, it is assumed you have completed the ["getting started" steps](../../introduction/getting-started-with-gcp.md) to access the Google Cloud console!
-{% endhint %}
-
-All of the resources listed below are accessible under the [`canceridc-data` GCP project](https://console.cloud.google.com/home/dashboard?project=canceridc-data).
+# Files and metadata
 
 ## Storage Buckets
 
