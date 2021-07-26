@@ -43,6 +43,7 @@
   * [Viewing collections, studies, and series](portal/data-exploration-and-cohorts/viewing-collections-studies-and-series.md)
   * [Understanding cohorts](portal/data-exploration-and-cohorts/understanding-cohorts.md)
 * [Visualizing images](portal/visualization.md)
+* [Proxy policy](portal/proxy-policy.md)
 * [Viewer release notes](portal/viewer-release-notes.md)
 * [Portal release notes](portal/release-notes.md)
 * [Portal known issues](portal/portal-known-issues.md)
