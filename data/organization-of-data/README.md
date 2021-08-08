@@ -16,5 +16,3 @@ All of the resources listed below are accessible under the [`canceridc-data` GCP
 
 ## [Organization of data in v1 \(deprecated\)](organization-of-data-v1.md)
 
-## 
-

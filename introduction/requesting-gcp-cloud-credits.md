@@ -21,3 +21,4 @@ Please be aware that we will be monitoring your cloud resource usage on a daily 
 Procedures related to administration of the IDC cloud credits are outlined in [this document](https://docs.google.com/document/d/1j8qKwfL0fX3yDjWLTdcnCCjiGiFsy0xXkl09y053FBM/edit#).
 
 Review of requests may take several days and we may contact you if we need further information.
+
