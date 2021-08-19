@@ -8,15 +8,17 @@ Storage Buckets are basic containers in Google Cloud that provide storage for da
 
 All IDC DICOM file data for all IDC data versions are maintained in Google Cloud Storage \(GCS\), from which it is available to the user on a [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) basis. Currently all DICOM files are in the `idc-open` bucket.
 
-The object namespace is flat, where every object name is composed of a standard format UUIDs and with the ".dcm" file extension, e.g. `905c82fd-b1b7-4610-8808-b0c8466b4dee.dcm`. For example, that instance can be accessed using [gsutil](https://cloud.google.com/storage/docs/gsutil) as `gs://idc-open/905c82fd-b1b7-4610-8808-b0c8466b4dee.dcm`
+The object namespace is flat, where every object name is composed of a standard format CRDC UUIDs and with the ".dcm" file extension, e.g. `905c82fd-b1b7-4610-8808-b0c8466b4dee.dcm`. For example, that instance can be accessed using [gsutil](https://cloud.google.com/storage/docs/gsutil) as `gs://idc-open/905c82fd-b1b7-4610-8808-b0c8466b4dee.dcm`
 
 You can read about accessing GCP storage buckets from a Compute VM [here](https://cloud.google.com/compute/docs/disks/gcs-buckets). Because the `idc-open` bucket has a Requester Pays policy, you will need to provide a Project ID for a project for which billing has been configured in order to be able to download data from that bucket.
 
 {% hint style="warning" %}
-Make sure you understand the [data egress charges](https://cloud.google.com/storage/pricing#network-egress)! As a general rule of thumb, downloading of the data to a GCP compute VM within the same GCS location as the bucket free, while downloading to your laptop, or another Google VM in a different GCS location, or a VM that belongs to a different cloud provider is expensive!
+Make sure you understand the [data egress charges](https://cloud.google.com/storage/pricing#network-egress)! As a general rule of thumb, downloading of the data to a GCP compute VM within the same GCS location as the bucket is free, while downloading to your laptop, or another Google VM in a different GCS location, or a VM that belongs to a different cloud provider is expensive!
 
 As an example, if you were to download to your laptop ALL of the DICOM data included in the V2 release of IDC, which is about 6 TB, you would need to pay a total of around $120\) in egress charges.
 {% endhint %}
+
+Typically, the user would not interact with the storage buckets to select and copy files. Instead, one should use either IDC Portal, or IDC BigQuery tables containing metadata corresponding to the files to identify items of interest and define a cohort. The manifest of the cohort will include both the Google Storage URLs for the corresponding files in the bucket, and the [CRDC UUIDs](guids-and-uuids.md), which can be resolved to the Google Storage URLs to access the files.
 
 Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below, substituting `$PROJECT_ID` with the valid GCP Project ID \(see the complete example in [this notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort_download.ipynb)\):
 
