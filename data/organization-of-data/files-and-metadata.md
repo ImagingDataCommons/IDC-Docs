@@ -18,7 +18,7 @@ Make sure you understand the [data egress charges](https://cloud.google.com/stor
 As an example, if you were to download to your laptop ALL of the DICOM data included in the V2 release of IDC, which is about 6 TB, you would need to pay a total of around $120\) in egress charges.
 {% endhint %}
 
-Typically, the user would not interact with the storage buckets to select and copy files. Instead, one should use either IDC Portal, or IDC BigQuery tables containing metadata corresponding to the files to identify items of interest and define a cohort. The manifest of the cohort will include both the Google Storage URLs for the corresponding files in the bucket, and the [CRDC UUIDs](guids-and-uuids.md), which can be resolved to the Google Storage URLs to access the files.
+Typically, the user would not interact with the storage buckets to select and copy files \(unless the intent is to copy the entire content hosted by IDC\). Instead, one should use either IDC Portal, or IDC BigQuery tables containing metadata corresponding to the files to identify items of interest and define a cohort. The manifest of the cohort will include both the Google Storage URLs for the corresponding files in the bucket, and the [CRDC UUIDs](guids-and-uuids.md), which can be resolved to the Google Storage URLs to access the files.
 
 Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below, substituting `$PROJECT_ID` with the valid GCP Project ID \(see the complete example in [this notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort_download.ipynb)\):
 
