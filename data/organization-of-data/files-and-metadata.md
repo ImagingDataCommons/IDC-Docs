@@ -34,7 +34,7 @@ The flat address space of IDC DICOM objects in GCS storage is accompanied by Big
 
 There are several important BQ tables and views in which we keep copies of the metadata exposed via the TCIA interface at the time this version was captured and other pertinent information.
 
-There is an instance of each of the following tables and views per IDC version. The set of tables and views corresponding to an IDC version are collected in a single BQ dataset per IDC version, `idc_<idc_version_number>`. E.G. the BQ tables for IDC version 2 are in the `canceridc-data.idc_v2`dataset.
+There is an instance of each of the following tables and views per IDC version. The set of tables and views corresponding to an IDC version are collected in a single BQ dataset per IDC version, `idc_<idc_version_number>`. As an example, the BQ tables for IDC version 2 are in the `canceridc-data.idc_v2`dataset.
 
 Several Google BigQuery \(BQ\) tables support searches against metadata extracted from the data files. Additional BQ tables define the composition of each IDC data version.
 
