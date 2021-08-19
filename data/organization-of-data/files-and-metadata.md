@@ -40,7 +40,7 @@ Several Google BigQuery \(BQ\) tables support searches against metadata extracte
 
 We maintain several additional tables that curate metadata non-DICOM metadata \(e.g., attribution of a given item to a specific collection and DOI, collection-level metadata, etc\).
 
-* `canceridc-data.idc_v<idc_version_number>.auxiliary_metadata:` This table defines the contents of the corresponding IDC version. There is a row for each instance in the version. Version attributes:
+* `canceridc-data.idc_v<idc_version_number>.auxiliary_metadata` \(also available via [`canceridc-data.idc_current.auxiliary_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=auxiliary_metadata&page=table)  view for the current version of IDC data\) This table defines the contents of the corresponding IDC version. There is a row for each instance in the version. Version attributes:
   * `idc_version_number:` The IDC version number.
   * `version_hash`: the md5 hash of the sorted `collection_hashes` of all collections in this version
 
@@ -79,7 +79,7 @@ We maintain several additional tables that curate metadata non-DICOM metadata \(
   * `gcs_url:` The GCS URL of a file containing the version of this instance that is identified by the `instance_uuid`
   * `instance_hash`: the md5 hash of the version of this instance that is identified by the `instance_uuid`
   * `instance_size:` the size, in bytes, of this version of the instance that is identified by the `instance_uuid` 
-* `canceridc-data.idc_v<idc_version_number>.dicom_metadata`: DICOM metadata for each instance in the corresponding IDC version. IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Google Healthcare API documentation article. IDC users can access this table to conduct detailed exploration of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. The schema is too large to document here. Refer to the BQ table and the above referenced documentation.
+* `canceridc-data.idc_v<idc_version_number>.dicom_metadata` \(also available via [`canceridc-data.idc_current.dicom_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=dicom_metadata&page=table)  view for the current version of IDC data\) DICOM metadata for each instance in the corresponding IDC version. IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Google Healthcare API documentation article. IDC users can access this table to conduct detailed exploration of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. The schema is too large to document here. Refer to the BQ table and the above referenced documentation.
 
 {% hint style="warning" %}
 Due to the existing limitations of Google Healthcare API, not all of the DICOM attributes are extracted and are available in BigQuery tables. Specifically:
@@ -88,7 +88,7 @@ Due to the existing limitations of Google Healthcare API, not all of the DICOM a
 * sequences that contain around 1MiB of data are dropped from BigQuery export and RetrieveMetadata output currently. 1MiB is not an exact limit, but it can be used as a rough estimate of whether or not the API will drop the tag \(this limitation was not documented as of writing this\) - we know that some of the instances in IDC will be affected by this limitation. The fix for this limitation is targeted for sometime in 2021, according to the communication with Google Healthcare support. 
 {% endhint %}
 
-* `canceridc-data.idc_v<idc_version_number>.original_collections_metadata` :  Collection-level metadata for the original TCIA data collections hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/collections/). One row per collection:
+* `canceridc-data.idc_v<idc_version_number>.original_collections_metadata` \(also available via [`canceridc-data.idc_current.original_collections_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=original_collections_metadata&page=table)  view for the current version of IDC data Collection-level metadata for the original TCIA data collections hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/collections/). One row per collection:
   * `tcia_api_collection_id:` The collection ID as is accepted by the TCIA AP
   * `tcia_wiki_collection_id:` The collection ID as on the TCIA wiki page
   * `idc_webapp_collection_id:`The collection ID as accepted by the IDC web app
@@ -101,7 +101,7 @@ Due to the existing limitations of Google Healthcare API, not all of the DICOM a
   * `SupportingData:`Type\(s\) of additional data available
   * `Location:`Body location that was studied
   * `Description:`TCIA description of the collection \(HTML format\) 
-* `canceridc-data.idc.idc_v<idc_version_number>.analysis_results_metadata` :  Metadata for the TCIA analysis results hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/tcia-analysis-results/). One row per analysis result:
+* `canceridc-data.idc.idc_v<idc_version_number>.analysis_results_metadata` \(also available via [`canceridc-data.idc_current.analysis_results_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=analysis_results_metadata&page=table) view for the current version of IDC data\)  Metadata for the TCIA analysis results hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/tcia-analysis-results/). One row per analysis result:
   * `Collection:`Descriptive name
   * `DOI:`DOI that can be resolved at doi.org to the TCIA wiki page for this analysis result
   * `CancerType:`TCIA assigned cancer type of this analysis result
@@ -113,11 +113,14 @@ Due to the existing limitations of Google Healthcare API, not all of the DICOM a
 
 In addition to the tables above, we provide the following [BigQuery views](https://cloud.google.com/bigquery/docs/views-intro) \(virtual tables defined by queries\) that extract specific subsets of metadata, or combine attributes across different tables, for convenience of the users
 
-* `canceridc-data.idc_v<idc_version_number>.dicom_all`:  DICOM metadata together with selected auxiliary and collection metadata
-* `canceridc-data.idc_v<idc_version_number>.segmentations`:  Attributes of the segments stored in DICOM Segmentation object
-* `canceridc-data.idc_v<idc_version_number>.measurement_groups`:  Measurement group sequences extracted from the DICOM SR TID1500 objects
-* `canceridc-data.idc_v<idc_version_number>.qualitative_measurements`:  Coded evaluation results extracted from the DICOM SR TID1500 objects
-* `canceridc-data.idc_v<idc_version_number>.quantitative_measurements`:  Quantitative evaluation results extracted from the DICOM SR TID1500 objects
+* `canceridc-data.idc_v<idc_version_number>.dicom_all` \(also available via [`canceridc-data.idccurrent.dicom_all`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=dicom_all&page=table) view for the current version of IDC data\) DICOM metadata together with selected auxiliary and collection metadata
+* `canceridc-data.idc_v<idc_version_number>.segmentations` \(also available via [`canceridc-data.idc_current.segmentations`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=segmentations&page=table) view for the current version of IDC data\) Attributes of the segments stored in DICOM Segmentation object
+* `canceridc-data.idc_v<idc_version_number>.measurement_groups` \(also available via[`canceridc-data.idc_current.measurement_groups`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=measurement_groups&page=table)\`\`
+
+   view for the current version of IDC data\) Measurement group sequences extracted from the DICOM SR TID1500 objects
+
+* `canceridc-data.idc_v<idc_version_number>.qualitative_measurements` \(also available via [`canceridc-data.idc_current.qualitative_measurements`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=qualitative_measurements&page=table) view for the current version of IDC data\) Coded evaluation results extracted from the DICOM SR TID1500 objects
+* `canceridc-data.idc_v<idc_version_number>.quantitative_measurements` \(also available via [`canceridc-data.idc_current.quantitative_measurements`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=quantitative_measurements&page=table) view for the current version of IDC data\) Quantitative evaluation results extracted from the DICOM SR TID1500 objects
 
 ## DICOM Stores
 
