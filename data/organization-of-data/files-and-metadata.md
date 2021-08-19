@@ -6,7 +6,7 @@
 Storage Buckets are basic containers in Google Cloud that provide storage for data objects \(you can read more about the relevant terms in the Google Cloud Storage documentation [here](https://cloud.google.com/storage/docs/key-terms)\).
 {% endhint %}
 
-All IDC DICOM file data for all IDC data versions are maintained in Google Cloud Storage \(GCS\), from which it is available to the user on a [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) basis. Currently all DICOM files are in the `idc-open` bucket.
+All IDC DICOM file data for all IDC data versions and all of the [collections hosted by IDC](https://imaging.datacommons.cancer.gov/collections/) are maintained in Google Cloud Storage \(GCS\), from which it is available to the user on a [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) basis. Currently all DICOM files are in the `idc-open` bucket.
 
 The object namespace is flat, where every object name is composed of a standard format CRDC UUIDs and with the ".dcm" file extension, e.g. `905c82fd-b1b7-4610-8808-b0c8466b4dee.dcm`. For example, that instance can be accessed using [gsutil](https://cloud.google.com/storage/docs/gsutil) as `gs://idc-open/905c82fd-b1b7-4610-8808-b0c8466b4dee.dcm`
 
