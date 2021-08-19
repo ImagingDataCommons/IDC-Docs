@@ -21,7 +21,7 @@
 * [Data versioning](data/data-versioning.md)
 * [Organization of data](data/organization-of-data/README.md)
   * [Files and metadata](data/organization-of-data/files-and-metadata.md)
-  * [GA4GH DRS objects](data/organization-of-data/ga4gh-drs-objects.md)
+  * [Resolving CRDC Globally Unique Identifiers \(GUIDs\)](data/organization-of-data/guids-and-uuids.md)
   * [Organization of data in v1 \(deprecated\)](data/organization-of-data/organization-of-data-v1.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)

@@ -48,15 +48,23 @@ The header of the manifest contains the name of cohort, user, filters used, the 
 
 ![Example cohort manifest](../../.gitbook/assets/mainfest-for-cohort.png)
 
-The default fields provided in a cohort are:
+{% hint style="warning" %}
+Manifests exported as files are defined at the series level. There will be a single row for each DICOM series included in the manifest. This is due to the limitation on the maximum size of the file that can be exported. To download the individual DICOM files corresponding to the instances included in the series the CRDC UUID corresponding to the series object \(`series_uuid`\) will need to be [ resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md).
+
+Manifests exported into BigQuery are defined at the level of DICOM instances, with one row per instance.
+{% endhint %}
+
+The fields provided in a cohort manifest are:
 
 * `PatientID`: value of the corresponding DICOM attribute
 * `collection_id`: abbreviated identifier of the source data collection 
 * `StudyInstanceUID`: value of the corresponding DICOM attribute
 * `SeriesInstanceUID`: value of the corresponding DICOM attribute
-* `SOPInstanceUID`: value of the corresponding DICOM attribute
+* `SOPInstanceUID`: value of the corresponding DICOM attribute \(NB: included only when manifest is exported into BigQuery!\)
 * `source_DOI`: Digital Object Identifier \(DOI\) of the source data collection. Pre-pending `source_DOI` with `https://doi.org/` will give you the URL of the collection dataset
-* `crdc_instance_uid`: unique identifier of the object maintained by CRDC IndexD \(details on how to use this UID will be shared at a later time, when the corresponding capability is available\)
+* `study_uuid`: CRDC UUID of the object maintained by CRDC IndexD corresponding to the DICOM study, which [can be resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md)  
+* `series_uuid`: CRDC UUID of the object maintained by CRDC IndexD corresponding to the DICOM series, which [can be resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md)  
+* `instance_uuid`: CRDC UUID of the object maintained by CRDC IndexD corresponding to the DICOM instance, which [can be resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md) \(NB: included only when the manifest is exported into BigQuery!\)
 * `gcs_url`: `gs://` URL that can be used to access the object using the [GCP `gsutil` tool](https://cloud.google.com/storage/docs/gsutil)
 
 An example of how you can use an IDC cohort manifest to retrieve the manifest-defined cohort files is shown in [colab notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks).
