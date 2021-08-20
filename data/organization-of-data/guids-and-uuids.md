@@ -58,8 +58,9 @@ returns:
    "updated_time":"2020-09-18T02:14:02.830868",
    "version":"9e13fb30"
 }
-which is a DrsObject. Because we resolved the GUID of an instance, the access_methods in the returned DrsObject includes a URL at which the corresponding DICOM entity can be accessed.
 ```
+which is a DrsObject. Because we resolved the GUID of an instance, the access_methods in the returned DrsObject includes a URL at which the corresponding DICOM entity can be accessed.
+
 
 When the GUID of a series is resolved, the DrsObject that is returned does not include access methods because there are no series file objects. Instead, the `contents` component of the returned DrsObject contains the URLs that can be accessed to obtain the DrsObjects of the instances in the series.  
 Thus, we see that when we resolve `dg.4DFC/cc9c8541-949d-48d9-beaf-7028aa4906dc`, the GUID of the series containing the instance above:
