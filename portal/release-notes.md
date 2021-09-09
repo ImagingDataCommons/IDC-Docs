@@ -8,7 +8,17 @@ _canceridc.&lt;date of webapp deployment in YYYYMMDDHHMM&gt;.&lt;first 6 charact
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
-## 2.0.0 - June 2021 - TBD
+## 2.1.0 - August 2021 \(canceridc.202108261153.70f59e0\)
+
+The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
+
+Main highlights of this release include:
+
+* Support for slide microscopy series from the CPTAC-LSCC and CPTAC-LUAD collections is now included. 
+* The [Slim viewer](https://github.com/MGHComputationalPathology/slim) is now configured to view slide microscopy series
+* Search boxes are included for very attribute to search for specific attribute values by name.
+
+## **2.0.0 - June 2021 - \(**canceridc.202106250849.876f912\)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
 

@@ -4,6 +4,17 @@
 Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net/). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
 {% endhint %}
 
+## v3 - August 2021
+
+The following radiology collections were updated to include DICOM Slide Microscopy \(SM\) images converted from the original vendor-specific representation into [dual personality DICOM-TIFF format](../dicom/dicom-tiff-dual-personality-files.md).
+
+1. [CPTAC-LUAD](https://doi.org/10.7937/K9/TCIA.2018.PAT12TBS)
+2. [CPTAC-LSCC](https://doi.org/10.7937/K9/TCIA.2018.6EMUB5L2)
+
+{% hint style="warning" %}
+The DICOM Slide Microscopy \(SM\) images included in the collections above in IDC are not available in TCIA. TCIA only includes images in the vendor-specific SVS format!
+{% endhint %}
+
 ## v2 - June 2021
 
 Listed below are all of the [original](https://www.cancerimagingarchive.net/collections/) and [analysis results](https://www.cancerimagingarchive.net/tcia-analysis-results/) collections of [The Cancer Imaging Archive](https://www.cancerimagingarchive.net/) currently hosted by IDC, with the links to the Digital Object Identifiers \(DOIs\) of those collections.

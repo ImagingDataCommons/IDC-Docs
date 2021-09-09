@@ -33,6 +33,7 @@
 * [Original objects](dicom/original-vs-derived-objects.md)
 * [Derived objects](dicom/derived-objects.md)
 * [Coding schemes](dicom/coding-schemes.md)
+* [DICOM-TIFF dual personality files](dicom/dicom-tiff-dual-personality-files.md)
 * [IDC DICOM white papers](dicom/idc-dicom-white-papers.md)
 
 ## Portal

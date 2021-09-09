@@ -4,7 +4,7 @@ All collections in IDC as well as their total number of cases and number of case
 
 Click one or more collections to select them. The selected row or rows are highlighted. The available cases for the selected collection\(s\) appear in the Selected Cases panel. Click the up or down arrow to sort the list alphabetically or numerically, as appropriate for the column.
 
-![Collections panel](../../.gitbook/assets/collections-panelv2%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%281%29.png)
+![Collections panel](../../.gitbook/assets/collections-panelv2%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%284%29%20%281%29.png)
 
 {% hint style="info" %}
 You must select a collection _before_ you can view data in the Selected Cases, Selected Studies, and Selected Series panels.
