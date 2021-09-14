@@ -15,6 +15,10 @@ Imaging Data Commons portal provides a web-based interactive interface to browse
 
 Datasets that are available within IDC are summarized in the [Data release notes](../data/data-release-notes.md).
 
+{% hint style="info" %}
+If you have a need to search IDC content using DICOM attributes other than those available through the portal, you can use [this DataStudio dashboard](https://datastudio.google.com/reporting/ab96379c-e134-414f-8996-188e678f1b70/page/KHtxB). You can also [extend this dashboard](../cookbook/data-studio/cohort-dashboard.md) to include additional attributes.
+{% endhint %}
+
 ## Accessing the Imaging Data Commons Portal
 
 The IDC portal is accessible using a modern web browser such as Chrome, Firefox, and Microsoft Edge at the following URL: [**https://imaging.datacommons.cancer.gov**](https://imaging.datacommons.cancer.gov/)**.**
