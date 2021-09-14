@@ -31,6 +31,7 @@ IDC and TCIA are partners in providing FAIR data for cancer imaging researchers.
 | Cloud-based research use cases | yes | no |
 | Private data collections | no | yes |
 | Public data collections | yes | yes |
+| Version control of the data | [yes](data/data-versioning.md) | no |
 
 ## Is IDC the right choice for my needs?
 
@@ -76,4 +77,8 @@ Our longer-term plan is to work with the CRDC [Center for Cancer Data Harmonizat
 ## Is it free to use IDC?
 
 We provide a [summary](getting-started-with-idc.md) of what you can do with IDC, and what you will need to access specific capabilities. If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, we have[ limited resources](introduction/requesting-gcp-cloud-credits.md) to support pilot projects exploring the use of IDC in cancer research.
+
+## I want to search IDC content using an attribute not available in the portal
+
+You can use [this DataStudio dashboard](https://datastudio.google.com/reporting/ab96379c-e134-414f-8996-188e678f1b70/page/KHtxB) to search using some of the attributes that are not available through the portal. You can also [extend this dashboard](cookbook/data-studio/cohort-dashboard.md) to include additional attributes.
 
