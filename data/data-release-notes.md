@@ -12,7 +12,7 @@ Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.c
 
 1\) CT images available as any other imaging collection \(via IDC Portal, BigQuery metadata tables, and storage buckets\);
 
-2\) a subset of clinical data available in the BigQuery tables starting with `nlst_` under the `idc_v4` dataset.
+2\) a subset of clinical data available in the BigQuery tables starting with `nlst_` under the `idc_v4` dataset. **TODO: clinical metadata schema/description will be added and linked here.**
 
 ## v3 - August 2021
 
