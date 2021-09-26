@@ -1,8 +1,18 @@
 # Data release notes
 
+
+
 {% hint style="info" %}
 Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net/). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
 {% endhint %}
+
+## v4 - September 2021
+
+[National Lung Screening Trial \(NLST\) collection](https://doi.org/10.7937/tcia.hmq8-j677) is added. The data included consists of the following components:
+
+1\) CT images available as any other imaging collection \(via IDC Portal, BigQuery metadata tables, and storage buckets\);
+
+2\) a subset of clinical data available in the BigQuery tables starting with `nlst_` under the `idc_v4` dataset.
 
 ## v3 - August 2021
 

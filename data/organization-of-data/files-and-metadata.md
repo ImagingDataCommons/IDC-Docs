@@ -42,7 +42,7 @@ Several Google BigQuery \(BQ\) tables support searches against metadata extracte
 
 We maintain several additional tables that curate metadata non-DICOM metadata \(e.g., attribution of a given item to a specific collection and DOI, collection-level metadata, etc\).
 
-* `canceridc-data.idc_v<idc_version_number>.auxiliary_metadata` \(also available via [`canceridc-data.idc_current.auxiliary_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=auxiliary_metadata&page=table)  view for the current version of IDC data\) This table defines the contents of the corresponding IDC version. There is a row for each instance in the version. Version attributes:
+* `canceridc-data.idc_v<idc_version_number>.auxiliary_metadata` \(also available via [`canceridc-data.idc_current.auxiliary_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=auxiliary_metadata&page=table) view for the current version of IDC data\) This table defines the contents of the corresponding IDC version. There is a row for each instance in the version. Version attributes:
   * `idc_version_number:` The IDC version number.
   * `version_hash`: the md5 hash of the sorted `collection_hashes` of all collections in this version
 
@@ -119,7 +119,7 @@ In addition to the tables above, we provide the following [BigQuery views](https
 * `canceridc-data.idc_v<idc_version_number>.segmentations` \(also available via [`canceridc-data.idc_current.segmentations`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=segmentations&page=table) view for the current version of IDC data\) Attributes of the segments stored in DICOM Segmentation object
 * `canceridc-data.idc_v<idc_version_number>.measurement_groups` \(also available via[`canceridc-data.idc_current.measurement_groups`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=measurement_groups&page=table)\`\`
 
-   view for the current version of IDC data\) Measurement group sequences extracted from the DICOM SR TID1500 objects
+  view for the current version of IDC data\) Measurement group sequences extracted from the DICOM SR TID1500 objects
 
 * `canceridc-data.idc_v<idc_version_number>.qualitative_measurements` \(also available via [`canceridc-data.idc_current.qualitative_measurements`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=qualitative_measurements&page=table) view for the current version of IDC data\) Coded evaluation results extracted from the DICOM SR TID1500 objects
 * `canceridc-data.idc_v<idc_version_number>.quantitative_measurements` \(also available via [`canceridc-data.idc_current.quantitative_measurements`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=quantitative_measurements&page=table) view for the current version of IDC data\) Quantitative evaluation results extracted from the DICOM SR TID1500 objects

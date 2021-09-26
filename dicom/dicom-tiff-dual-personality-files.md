@@ -15,10 +15,8 @@ The dictionary of TIFF tags can be extended with application-specific entries. T
 It is hoped that the dual-personality approach may serve to mitigate the impact of limited support of one format or the other in different clinical and research tools for acquisition, analysis, storage, indexing, distribution, viewing and annotation.
 
 {% hint style="info" %}
-For further information and an example open source implementation, see 
+For further information and an example open source implementation, see
 
-Clunie, D. A. [Dual-Personality DICOM-TIFF for whole slide images: A migration technique for legacy software](http://doi.org/10.4103/jpi.jpi_93_18). J. Pathol. Inform. **10,** 12 \(2019\). 
+Clunie, D. A. [Dual-Personality DICOM-TIFF for whole slide images: A migration technique for legacy software](http://doi.org/10.4103/jpi.jpi_93_18). J. Pathol. Inform. **10,** 12 \(2019\).
 {% endhint %}
-
-
 

@@ -6,11 +6,17 @@ We list the core functions of IDC [here](core-functions-of-idc.md). Our overall 
 
 ## What is the status of IDC?
 
-IDC pilot release took place in Fall 2020. We anticipate the production version of IDC to become available in Spring 2021. You can learn about the planned milestones for the IDC development in [these slides presented at RSNA 2019](http://bit.ly/idc-rsna19).
+IDC pilot release took place in Fall 2020. As of September 2021 IDC entered production stage.
 
 ## What data is available?
 
 Our initial goal is to host all of the public collections from [The Cancer Imaging Archive \(TCIA\)](https://www.cancerimagingarchive.net/). The IDC pilot contains a subset of those collections. The complete up to date list of collections included in IDC is available [here](https://portal.imaging.datacommons.cancer.gov/collections/).
+
+## How to acknowledge IDC?
+
+Please cite the paper below:
+
+> Fedorov, A., Longabaugh, W. J. R., Pot, D., Clunie, D. A., Pieper, S., Aerts, H. J. W. L., Homeyer, A., Lewis, R., Akbarzadeh, A., Bontempi, D., Clifford, W., Herrmann, M. D., Höfener, H., Octaviano, I., Osborne, C., Paquette, S., Petts, J., Punzo, D., Reyes, M., Schacherer, D. P., Tian, M., White, G., Ziegler, E., Shmulevich, I., Pihl, T., Wagner, U., Farahani, K. & Kikinis, R. NCI Imaging Data Commons. Cancer Res. **81,** 4188–4193 \(2021\). [http://dx.doi.org/10.1158/0008-5472.CAN-21-0950](http://dx.doi.org/10.1158/0008-5472.CAN-21-0950)
 
 ## How do I get my data into IDC?
 
@@ -76,4 +82,6 @@ Our longer-term plan is to work with the CRDC [Center for Cancer Data Harmonizat
 ## Is it free to use IDC?
 
 Review the [summary](getting-started-with-idc.md) of what you can do with IDC and what you will need to access specific capabilities. If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, we have [limited resources to support pilot projects](introduction/requesting-gcp-cloud-credits.md) exploring the use of IDC in cancer research.
+
+## 
 
