@@ -48,7 +48,7 @@ SELECT
 FROM
   `canceridc-user-data.user_manifests.manifest_cohort_101_20210127_213746` AS my_cohort
 JOIN
-  `canceridc-data.idc_views.dicom_all` AS all_of_idc
+  `canceridc-data.idc_current.dicom_all` AS all_of_idc
 ON
   all_of_idc.SOPInstanceUID = my_cohort.SOPInstanceUID
 ```
