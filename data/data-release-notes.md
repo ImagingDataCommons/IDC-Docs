@@ -14,6 +14,12 @@ Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.c
 
 2\) a subset of clinical data available in the BigQuery tables starting with `nlst_` under the `idc_v4` dataset. **TODO: clinical metadata schema/description will be added and linked here.**
 
+3\) One instance is missing from patient/study/series:  
+`126153/1.2.840.113654.2.55.319335498043274792486636919135185299851/1.2.840.113654.2.55.262421043240525317038356381369289737801`
+
+4\) Three instances are missing from patient/study/series:  
+`215303/1.3.6.1.4.1.14519.5.2.1.7009.9004.337968382369511017896638591276/1.3.6.1.4.1.14519.5.2.1.7009.9004.180224303090109944523368212991`
+
 ## v3 - August 2021
 
 The following radiology collections were updated to include DICOM Slide Microscopy \(SM\) images converted from the original vendor-specific representation into [dual personality DICOM-TIFF format](../dicom/dicom-tiff-dual-personality-files.md).
