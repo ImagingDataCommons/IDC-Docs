@@ -52,6 +52,9 @@
 ## API
 
 * [Getting started](api/getting-started.md)
+* [IDC Data Model Concepts](api/idc-data-model-concepts.md)
+* [Accessing the API](api/accessing-the-api.md)
+* [Endpoint Details](api/endpoint-details.md)
 * [Release notes](api/release-notes.md)
 
 ## Analysis

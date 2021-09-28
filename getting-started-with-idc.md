@@ -1,5 +1,9 @@
 # Getting started
 
+## 
+
+## 
+
 ## What is the purpose of IDC?
 
 We list the core functions of IDC [here](core-functions-of-idc.md). Our overall purpose is to support cancer imaging research on the cloud. While some of the capabilities that are needed for this are outside the scope of IDC, and may necessitate interaction with the other components of the [Cancer Research Data Commons](https://datacommons.cancer.gov/), we welcome IDC users to bring up any use cases that are related to using cloud computing for cancer imaging research. We will work with you to identify relevant component of CRDC that can help you.
@@ -12,11 +16,7 @@ IDC pilot release took place in Fall 2020. As of September 2021 IDC entered prod
 
 Our initial goal is to host all of the public collections from [The Cancer Imaging Archive \(TCIA\)](https://www.cancerimagingarchive.net/). The IDC pilot contains a subset of those collections. The complete up to date list of collections included in IDC is available [here](https://portal.imaging.datacommons.cancer.gov/collections/).
 
-## How to acknowledge IDC?
-
-Please cite the paper below:
-
-> Fedorov, A., Longabaugh, W. J. R., Pot, D., Clunie, D. A., Pieper, S., Aerts, H. J. W. L., Homeyer, A., Lewis, R., Akbarzadeh, A., Bontempi, D., Clifford, W., Herrmann, M. D., Höfener, H., Octaviano, I., Osborne, C., Paquette, S., Petts, J., Punzo, D., Reyes, M., Schacherer, D. P., Tian, M., White, G., Ziegler, E., Shmulevich, I., Pihl, T., Wagner, U., Farahani, K. & Kikinis, R. NCI Imaging Data Commons. Cancer Res. **81,** 4188–4193 \(2021\). [http://dx.doi.org/10.1158/0008-5472.CAN-21-0950](http://dx.doi.org/10.1158/0008-5472.CAN-21-0950)
+## 
 
 ## How do I get my data into IDC?
 

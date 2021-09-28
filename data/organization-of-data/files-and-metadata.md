@@ -146,7 +146,7 @@ The following [BigQuery views](https://cloud.google.com/bigquery/docs/views-intr
 
 * `canceridc-data.idc_v<idc_version_number>.dicom_all` \(also available via [`canceridc-data.idc_current.dicom_all`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=dicom_all&page=table) view for the current version of IDC data\) DICOM metadata together with selected auxiliary and collection metadata
 * `canceridc-data.idc_v<idc_version_number>.segmentations` \(also available via [`canceridc-data.idc_current.segmentations`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=segmentations&page=table) view for the current version of IDC data\) Attributes of the segments stored in DICOM Segmentation objects
-* `canceridc-data.idc_v<idc_version_number>.measurement_groups` \(also available via[`canceridc-data.idc_current.measurement_groups`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=measurement_groups&page=table)\`\`
+* `canceridc-data.idc_v<idc_version_number>.measurement_groups` \(also available via[`canceridc-data.idc_current.measurement_groups`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=measurement_groups&page=table)
 
   view for the current version of IDC data\) Measurement group sequences extracted from the DICOM SR TID1500 objects
 
@@ -158,13 +158,19 @@ The following tables contain TCGA-specific metadata:
 * `tcga_biospecimen_rel9:` biospecimen metadata
 * `tcga_clinical_rel9:` clinical metadata
 
-The following tables contain NLST specific metadata:
+### Collection-specific BigQuery tables
 
-* nlst\_canc:
-* nlst\_ctab
-* nlst\_ctabc
-* nlst\_prsn
-* nlst\_screen
+Some of the collections are accompanied by BigQuery tables that have not been harmonized to a single data model. Those tables are available within the BigQuery dataset corresponding to a given release, and will have the name prefix corresponding to the short name of the collection. The list below discusses those collection-specific tables.
+
+#### NLST
+
+The following tables contain NLST specific metadata. The detailed schema of those tables is available from the [TCIA NLST collection page](https://doi.org/10.7937/tcia.hmq8-j677).
+
+* [`nlst_canc`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=nlst_canc&page=table): "Lung Cancer"
+* \`\`[`nlst_ctab`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=nlst_ctab&page=table): "SCT Abnormalities"
+* \`\`[`nlst_ctabc`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=nlst_ctabc&page=table): "SCT Comparison Abnormalities"
+* \`\`[`nlst_prsn`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=nlst_prsn&page=table): "Participant"
+* \`\`[`nlst_screen`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=nlst_screen&page=table): "SCT Screening"
 
 ## DICOM Stores
 

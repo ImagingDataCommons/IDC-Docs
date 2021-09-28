@@ -16,6 +16,12 @@ Our initial goal is to host all of the public collections from [The Cancer Imagi
 
 For a dataset to become part of the IDC offering, it has to be de-identified and curated by TCIA, and released as [a public TCIA collection](https://www.cancerimagingarchive.net/collections/). Once this is done, it will \(eventually!\) be replicated in IDC.
 
+## How to acknowledge IDC?
+
+Please cite the paper below:
+
+> Fedorov, A., Longabaugh, W. J. R., Pot, D., Clunie, D. A., Pieper, S., Aerts, H. J. W. L., Homeyer, A., Lewis, R., Akbarzadeh, A., Bontempi, D., Clifford, W., Herrmann, M. D., Höfener, H., Octaviano, I., Osborne, C., Paquette, S., Petts, J., Punzo, D., Reyes, M., Schacherer, D. P., Tian, M., White, G., Ziegler, E., Shmulevich, I., Pihl, T., Wagner, U., Farahani, K. & Kikinis, R. NCI Imaging Data Commons. Cancer Res. **81,** 4188–4193 \(2021\). [http://dx.doi.org/10.1158/0008-5472.CAN-21-0950](http://dx.doi.org/10.1158/0008-5472.CAN-21-0950)
+
 ## What is the difference between IDC and TCIA?
 
 IDC and TCIA are partners in providing FAIR data for cancer imaging researchers. While some of the functions between the two resources are similar, there are also key differences. The table below provides a summary of similarities and differences.
