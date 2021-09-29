@@ -4,7 +4,7 @@ All collections in IDC as well as their total number of cases and number of case
 
 Click one or more collections to select them. The selected row or rows are highlighted. The available cases for the selected collection\(s\) appear in the Selected Cases panel. Click the up or down arrow to sort the list alphabetically or numerically, as appropriate for the column.
 
-![Collections panel](../../.gitbook/assets/collections-panelv2%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%284%29%20%284%29%20%281%29.png)
+![Collections panel](../../.gitbook/assets/collections-panelv2%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%284%29%20%284%29%20%284%29%20%282%29.png)
 
 {% hint style="info" %}
 You must select a collection _before_ you can view data in the Selected Cases, Selected Studies, and Selected Series panels.
@@ -26,9 +26,7 @@ All studies available for the selected case appear in the Selected Studies panel
 
 Click one or more studies to select them. The selected row or rows are highlighted. The available series for the selected case\(s\) appear in the Selected Series panel. Click the up or down arrow to sort the list alphabetically or numerically, as appropriate for the column.
 
-Click the icon in the View column for a study row to view study objects in the IDC Viewer, which is based on the [Open Health Imaging Foundation](https://docs.ohif.org/) \(OHIF\) Viewer.
-
-For more detailed information on the OHIF viewer, see [Visualizing images](../visualization.md).
+Click the icon in the View column for a study row to view study objects in the IDC Viewer. Depending on the type of image, it will be opened using either[ Open Health Imaging Foundation \(OHIF\) Viewer](https://docs.ohif.org/) \(for radiology data\) or [SliM Viewer](https://github.com/MGHComputationalPathology/slim) \(for digital pathology data\).
 
 ## Viewing a series per study per case
 
@@ -36,13 +34,11 @@ All series available for the selected study appear in the Selected Series panel.
 
 ![Selected Series panel](../../.gitbook/assets/selected_series-panel.png)
 
-Click the icon in the View column for a study row to view study objects in the IDC Viewer, which is based on the [Open Health Imaging Foundation](https://docs.ohif.org/) \(OHIF\) Viewer.
+Click the icon in the View column for a study row to view the specific series in IDC Viewer.
 
 {% hint style="warning" %}
 Some objects can only be opened by the OHIF viewer at their related study level and not at the series level. For these objects, the icon in the View column shows that viewing is disabled.
 {% endhint %}
-
-For more detailed information on the OHIF viewer, see [Image visualization](../visualization.md).
 
 ## Viewing data in BigQuery
 
@@ -50,7 +46,7 @@ After you export a cohort manifest to BigQuery, you can view IDC data in BigQuer
 
 ```sql
 SELECT PatientID, StudyInstanceUID
-FROM `idc-dev-etl.idc_tcia_mvp_wave0.dicom_derived_all`
+FROM `canceridc-data.idc_current.dicom_all`
 WHERE collection_id = 'qin_headneck'
 GROUP BY PatientID, StudyInstanceUID
 ```

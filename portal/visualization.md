@@ -2,7 +2,7 @@
 
 ## IDC Viewer overview
 
-IDC Viewer is based on the open-source [Open Health Imaging Foundation \(OHIF\) Viewer](https://github.com/OHIF/Viewers), with some minor customizations that are implemented in the IDC fork of the OHIF Viewer in [GitHub](https://github.com/ImagingDataCommons/Viewers). IDC Viewer is opened every time you click the "eye" icon in the study or series table of the IDC Portal.
+IDC integrates two different viewers, which will be used depending on the type of images being opened. Visualization of radiology images uses the open-source [Open Health Imaging Foundation \(OHIF\) Viewer](https://github.com/OHIF/Viewers). [SliM Viewer](https://github.com/MGHComputationalPathology/slim) is used for visualization of slide microscopy images. We customized both of those viewers slightly to add features specific to IDC. You can find all of those modifications in the respective forks under the IDC GitHub organization for OHIF and SliM viewers: [OHIF Viewer fork](https://github.com/ImagingDataCommons/Viewers) and [SliM Viewer fork](https://github.com/ImagingDataCommons/slim). IDC Viewer is opened every time you click the "eye" icon in the study or series table of the IDC Portal.
 
 IDC Viewer is a "zero-footprint" client-side viewer. What this means is that before you can see the image in the viewer, it has to be downloaded to your browser from the IDC DICOM stores. IDC Viewer communicates the data it receives through a proxy via the [DICOMweb](https://www.dicomstandard.org/dicomweb) interface implemented in GCP [Cloud Healthcare API](https://cloud.google.com/healthcare/docs/concepts/dicom). The proxy is intended to throttle download of data.
 
@@ -21,7 +21,7 @@ CINE and 2D MPR modes are shown with red and yellow arrows in the image below, r
 
 Note that 2D MPR mode is only available for series that form a consistent volume \(that is, all pixel spacings equal, slices equally spaced, and so on, which means you will not see the MPR button for such series as time-resolved MRI, as an example\).
 
-## IDC Viewer functionality
+## IDC radiology viewer functionality
 
 The main functions of the viewer are available via the toolbar controls shown below.
 
@@ -49,12 +49,14 @@ Below is an example of series objects that are not viewable at the series level.
 
 ## Configuring the IDC Viewer URL
 
-You can use IDC Viewer to visualize any of the suitable data in IDC. To configure the IDC Viewer URL, simply append `StudyInstanceUID` of a study available in IDC to the following prefix: [https://viewer.imaging.datacommons.cancer.gov/viewer/](https://viewer.imaging.datacommons.cancer.gov/viewer/). This will open the entire study in the viewer. You can also configure the URL to open specific series of the study, as defined by the list of `SeriesInstanceUID` items. When you open the IDC Viewer from the IDC Portal, the URLs of the pages will be populated following those conventions.
+You can use IDC Viewer to visualize any of the suitable data in IDC. To configure the IDC Viewer URL, simply append `StudyInstanceUID` of a study available in IDC to the following prefix: [https://viewer.imaging.datacommons.cancer.gov/viewer/](https://viewer.imaging.datacommons.cancer.gov/viewer/) \(for the radiology viewer\) and[ https://viewer.imaging.datacommons.cancer.gov/slim/studies](https://viewer.imaging.datacommons.cancer.gov/slim/studies/)/ \(for the digital pathology viewer\). This will open the entire study in the viewer. You can also configure the URL to open specific series of the study, as defined by the list of `SeriesInstanceUID` items. When you open the IDC Viewer from the IDC Portal, the URLs of the pages will be populated following those conventions.
 
 Here are some specific examples, taken from the IDC Portal dashboard:
 
 * open entire study with the `StudyInstanceUID`1.3.6.1.4.1.14519.5.2.1.6279.6001.224985459390356936417021464571: [https://viewer.imaging.datacommons.cancer.gov/viewer/1.3.6.1.4.1.14519.5.2.1.6279.6001.224985459390356936417021464571](https://viewer.imaging.datacommons.cancer.gov/viewer/1.3.6.1.4.1.14519.5.2.1.6279.6001.224985459390356936417021464571?seriesInstanceUID=1.2.276.0.7230010.3.1.3.0.57823.1553343864.578877,1.3.6.1.4.1.14519.5.2.1.6279.6001.273525289046256012743471155680).
 * open the specified subset of series from the study above: [https://viewer.imaging.datacommons.cancer.gov/viewer/1.3.6.1.4.1.14519.5.2.1.6279.6001.224985459390356936417021464571?seriesInstanceUID=1.2.276.0.7230010.3.1.3.0.57823.1553343864.578877,1.3.6.1.4.1.14519.5.2.1.6279.6001.273525289046256012743471155680](https://viewer.imaging.datacommons.cancer.gov/viewer/1.3.6.1.4.1.14519.5.2.1.6279.6001.224985459390356936417021464571?seriesInstanceUID=1.2.276.0.7230010.3.1.3.0.57823.1553343864.578877,1.3.6.1.4.1.14519.5.2.1.6279.6001.273525289046256012743471155680)
+
+Digital pathology viewer uses a slightly different convention, as should be evident from this example URL: [https://viewer.imaging.datacommons.cancer.gov/slim/studies/1.3.6.1.4.1.5962.99.1.2463087261.2121647220.1625960757917.3.0/series/1.3.6.1.4.1.5962.99.1.2463087261.2121647220.1625960757917.2.0](https://viewer.imaging.datacommons.cancer.gov/slim/studies/1.3.6.1.4.1.5962.99.1.2463087261.2121647220.1625960757917.3.0/series/1.3.6.1.4.1.5962.99.1.2463087261.2121647220.1625960757917.2.0).
 
 You can share the viewer URLs if you want to refer to visualizations of the specific items from IDC. You can also use this functionality if you want to visualize specific items from your notebook or a custom dashboard \(e.g., a Google DataStudio dashboard\).
 

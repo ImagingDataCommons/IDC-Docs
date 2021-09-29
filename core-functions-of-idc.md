@@ -1,9 +1,5 @@
 # Core functions
 
-{% hint style="info" %}
-IDC is your go-to place for finding and analyzing cancer imaging data in the cloud. While our initial target is radiology data, IDC plans to support digital pathology imaging research and other cancer imaging data types \(subject to prioritization and resources availability, of course!\).
-{% endhint %}
-
 ## Cloud-based analysis
 
 * Connect cancer researchers with the data and compute resources co-located on the cloud.

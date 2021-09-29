@@ -57,13 +57,8 @@
 * [Endpoint Details](api/endpoint-details.md)
 * [Release notes](api/release-notes.md)
 
-## Analysis
-
-* [Getting started](analysis/untitled.md)
-
 ## Cookbook
 
-* [DICOM](cookbook/untitled.md)
 * [Colab notebooks](cookbook/notebooks.md)
 * [BigQuery](cookbook/bigquery.md)
 * [Data Studio](cookbook/data-studio/README.md)

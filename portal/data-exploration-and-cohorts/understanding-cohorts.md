@@ -75,19 +75,13 @@ A multipart file export can have a maximum of ten files with 65,000 rows each. I
 
 ## Exporting to BigQuery
 
-{% hint style="warning" %}
 You must have a Google account to use BigQuery.
-{% endhint %}
 
-Exporting a manifest to BigQuery allows you to run complex, analytical, SQL-based queries on large sets of data. The export table is available for seven days. After you start the export, the following window appears on the cohort details page, showing your unique link.
+Exporting a manifest to BigQuery allows you to run complex, analytical, SQL-based queries on large sets of data. After you start the export, the following window appears on the cohort details page, showing your unique link.
 
 ![](../../.gitbook/assets/manifest-job.png)
 
-{% hint style="warning" %}
-Be sure to save this URL information or pin the BigQuery table to your Google console interface.
-{% endhint %}
-
-After the export table expires, you can create a new manifest for analysis.
+The exported cohort manifest table is intended for short-term use, and will be deleted after seven days. However, you can always re-export the cohort manifest.
 
 ## **Exporting as a file**
 
@@ -121,5 +115,5 @@ To indicate cohorts created with previous data versions in the cohort list the *
 
 Clicking on the **Load New Version** button will open the explorer page, applying these cohort filters to the current data version. The user can then save this new cohort or modify the filters as desired.
 
-![](../../.gitbook/assets/screen-shot-2021-06-09-at-8.46.36-am%20%281%29%20%281%29%20%281%29.png)
+![](../../.gitbook/assets/screen-shot-2021-06-09-at-8.46.36-am%20%281%29%20%281%29%20%281%29%20%281%29%20%281%29.png)
 
