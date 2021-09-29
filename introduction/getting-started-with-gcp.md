@@ -4,6 +4,10 @@
 Whether you are new to the cloud, or you consider yourself an expert, we encourage you to apply for a free Google cloud credits that we provide to our users to support cancer imaging research projects that work with Imaging Data Commons. All reasonable requests will receive a $300 allocation of credits that do not expire, and we will not require you to provide a credit card information to verify your identity. All you have to do is fill out and submit [this application form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW_YUUWG6A4U8pclvR8MmRQ/viewform).
 {% endhint %}
 
+You are also encouraged to review the slides in the following presentation that provides an introduction into GCE, and shares some best practices the its usage.
+
+> W. Longabaugh. _Introduction to Google Cloud Platform_. Presented at MICCAI 2021. \([slides in Google Slides](https://docs.google.com/presentation/d/1HNZ34xkZCXt6WRDcEtmAUGNq5TM0xzPaK7sojKJfoBc/edit?usp=sharing)\)
+
 Google Cloud platform provides a range of solutions to better understand and analyze data hosted by IDC. Depending on what you want to do \(see the range of options [here](../getting-started-with-idc.md)\), you may need to complete one or more of the following steps below.
 
 The steps concerning creating a Google Cloud project and setting up billing are covered in [this short video tutorial](https://youtu.be/i08S0KJLnyw).
