@@ -6,5 +6,3 @@ You are also encouraged to review the slides in the following presentation that 
 
 > W. Longabaugh. _Introduction to Google Cloud Platform_. Presented at MICCAI 2021. \([slides in Google Slides](https://docs.google.com/presentation/d/1HNZ34xkZCXt6WRDcEtmAUGNq5TM0xzPaK7sojKJfoBc/edit?usp=sharing)\)
 
-
-

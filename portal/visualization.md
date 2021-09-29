@@ -10,10 +10,9 @@ IDC Viewer is a "zero-footprint" client-side viewer. What this means is that bef
 Currently, IDC Viewer proxy limits the amount of data that can be downloaded in one day to **137 GB per IP address**, and enforces a total quota per day over all of the IP addresses. If the quota is exhausted, you will not be able to see any images in IDC Viewer until the limit is reset and instead will be redirected to [this](https://portal.imaging.datacommons.cancer.gov/quota/index.html)[ page](https://portal.imaging.datacommons.cancer.gov/quota/index.html)! We may adjust the current proxy limits in the future, and you are welcome to provide your feedback on the appropriateness of the current quota in [IDC Discourse](https://discourse.canceridc.dev/c/support/feedback-and-features/7). Note that the IDC Viewer proxy is provided only to support this use case The full proxy policy is described [here](https://github.com/ImagingDataCommons/IDC-Docs/tree/e1861e6c939dd20ea2bf643237508dcb9480a661/portal/proxy-policy/README.md)
 {% endhint %}
 
-Depending on a variety of factors \(size of the image, your network connection, responsiveness of the proxy\) the process of loading images into your browser can take some time before the entire image series is loaded. You will know the series is not loaded completely if you cannot scroll to the arbitrary location of the image volume. If you want to ensure the entire series is loaded before you start to explore the reconstructed volume, you can
+Depending on a variety of factors \(size of the image, your network connection, responsiveness of the proxy\) the process of loading images into your browser can take some time before the entire image series is loaded. You will know the series is not loaded completely if you cannot scroll to the arbitrary location of the image volume. This will also be indicated by the incomplete progress bar below the series thumbnail. If you want to ensure the entire series is loaded before you start to explore the reconstructed volume, you can wait until the series load is completed.
 
-* toggle CINE mode and wait until the cine loop is proceeding smoothly through the entire set of slices, or
-* toggle 2D Multi-planar Reconstruction \(MPR\) and wait until reconstructed planes are fully populated.
+![Left: partially loaded series. Right: progress bar indicates the series load is complete.](../.gitbook/assets/image%20%2815%29.png)
 
 CINE and 2D MPR modes are shown with red and yellow arrows in the image below, respectively.
 

@@ -1,7 +1,5 @@
 # Data release notes
 
-
-
 {% hint style="info" %}
 Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net/). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
 {% endhint %}

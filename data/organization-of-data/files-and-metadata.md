@@ -42,7 +42,7 @@ Several Google BigQuery \(BQ\) tables support searches against metadata extracte
 
 We maintain several additional tables that curate metadata non-DICOM metadata \(e.g., attribution of a given item to a specific collection and DOI, collection-level metadata, etc\).
 
-* `canceridc-data.idc_v<idc_version_number>.auxiliary_metadata` \(also available via the[`canceridc-data.idc_current.auxiliary_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=auxiliary_metadata&page=table) view.\) This table defines the contents of the corresponding IDC version. There is a row for each instance in the version.   
+* `canceridc-data.idc_v<idc_version_number>.auxiliary_metadata` \(also available via the[`canceridc-data.idc_current.auxiliary_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=auxiliary_metadata&page=table) view.\) This table defines the contents of the corresponding IDC version. There is a row for each instance in the version.  
   Collection attributes:
 
   * `tcia_api_collection_id:` The ID, as accepted by the TCIA API, of the original data collection containing this instance
@@ -96,7 +96,7 @@ We maintain several additional tables that curate metadata non-DICOM metadata \(
   * `license_long_name:` A long form name of the license governing this instance
   * `license_short_name:` A short form name of the license governing this instance 
 
-* `canceridc-data.idc_v<idc_version_number>.dicom_metadata` \(also available via [`canceridc-data.idc_current.dicom_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=dicom_metadata&page=table)  view for the current version of IDC data\) DICOM metadata for each instance in the corresponding IDC version. IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Google Healthcare API documentation article. IDC users can access this table to conduct detailed exploration of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. The schema is too large to document here. Refer to the BQ table and the above referenced documentation.
+* `canceridc-data.idc_v<idc_version_number>.dicom_metadata` \(also available via [`canceridc-data.idc_current.dicom_metadata`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=dicom_metadata&page=table) view for the current version of IDC data\) DICOM metadata for each instance in the corresponding IDC version. IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Google Healthcare API documentation article. IDC users can access this table to conduct detailed exploration of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. The schema is too large to document here. Refer to the BQ table and the above referenced documentation.
 
 {% hint style="warning" %}
 Due to the existing limitations of Google Healthcare API, not all of the DICOM attributes are extracted and are available in BigQuery tables. Specifically:
@@ -142,7 +142,7 @@ Due to the existing limitations of Google Healthcare API, not all of the DICOM a
   * version\_hash: MD5 hash of hashes of collections in this version
   * version\_timestamp: Version creation timestamp
 
-The following [BigQuery views](https://cloud.google.com/bigquery/docs/views-intro) \(virtual tables defined by queries\)  extract specific subsets of metadata, or combine attributes across different tables, for convenience of the users
+The following [BigQuery views](https://cloud.google.com/bigquery/docs/views-intro) \(virtual tables defined by queries\) extract specific subsets of metadata, or combine attributes across different tables, for convenience of the users
 
 * `canceridc-data.idc_v<idc_version_number>.dicom_all` \(also available via [`canceridc-data.idc_current.dicom_all`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=dicom_all&page=table) view for the current version of IDC data\) DICOM metadata together with selected auxiliary and collection metadata
 * `canceridc-data.idc_v<idc_version_number>.segmentations` \(also available via [`canceridc-data.idc_current.segmentations`](https://console.cloud.google.com/bigquery?p=canceridc-data&d=idc_current&t=segmentations&page=table) view for the current version of IDC data\) Attributes of the segments stored in DICOM Segmentation objects

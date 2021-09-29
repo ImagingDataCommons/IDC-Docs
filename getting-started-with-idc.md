@@ -1,7 +1,7 @@
 # Getting started
 
 {% hint style="info" %}
-Whether you are new to the cloud, or you consider yourself an expert, we encourage you to apply for a free Google cloud credits that we provide to our users to support cancer imaging research projects that work with Imaging Data Commons. All reasonable requests will receive a $300 allocation of credits that do not expire, and we will not require you to provide a credit card information to verify your identity. All you have to do is fill out and submit [this application form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW_YUUWG6A4U8pclvR8MmRQ/viewform). 
+Whether you are new to the cloud, or you consider yourself an expert, we encourage you to apply for a free Google cloud credits that we provide to our users to support cancer imaging research projects that work with Imaging Data Commons. All reasonable requests will receive a $300 allocation of credits that do not expire, and we will not require you to provide a credit card information to verify your identity. All you have to do is fill out and submit [this application form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW_YUUWG6A4U8pclvR8MmRQ/viewform).
 {% endhint %}
 
 The goal of IDC is to _connect_ you with the cloud-based data and compute resources.

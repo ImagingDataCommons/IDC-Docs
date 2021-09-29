@@ -12,109 +12,9 @@ The **about** endpoint returns a short greeting and pointers to both the demo UI
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
- API Description and link to SwaggerUI interface.
-{% endapi-method-response-example-description %}
-
-```text
-{
-  "message": "string",
-  "code": 0,
-  "not_found": [
-    "string"
-  ]
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
- Server error
-{% endapi-method-response-example-description %}
-
-```
-{
-  "message": "string",
-  "code": 0,
-  "not_found": [
-    "string"
-  ]
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
 {% endapi-method %}
 
 {% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/versions" %}
-{% api-method-summary %}
-versions
-{% endapi-method-summary %}
-
-{% api-method-description %}
-Get a list of IDC data versions and per-version data model metadata, including the data sources of which each IDC data version is comprised.
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-A list of IDC data versions. For each IDC data version, the data sources and programs associated with that version are listed.
-{% endapi-method-response-example-description %}
-
-```
-{
-  "idc_data_versions": [
-    {
-      "idc_data_version": "string",
-      "date_active": "string",
-      "active": true,
-      "data_sources": [
-        {
-          "name": "string",
-          "data_type": "Image Data"
-        }
-      ],
-      "programs": [
-        [
-          {
-            "short_name": "string",
-            "name": "string",
-            "description": "string"
-          }
-        ]
-      ]
-    }
-  ],
-  "code": 0
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Server error
-{% endapi-method-response-example-description %}
-
-```
-{
-  "message": "string",
-  "code": 0,
-  "not_found": [
-    "string"
-  ]
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/collections" %}
 {% api-method-summary %}
@@ -122,7 +22,7 @@ collections
 {% endapi-method-summary %}
 
 {% api-method-description %}
- Get list of collections for some IDC data version
+Get list of collections for some IDC data version
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -140,7 +40,7 @@ The IDC data version for which collection data is to be returned. If not specifi
 A list of the collections, with related metadata.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "collections": [
     {
@@ -170,7 +70,7 @@ A list of the collections, with related metadata.
 Bad request
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -186,7 +86,7 @@ Bad request
 Server error
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -224,7 +124,7 @@ The IDC data version for which analysis results are to be returned. If not speci
 A list of analysis results metadata.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "analysisResults": [
     {
@@ -251,11 +151,11 @@ A list of analysis results metadata.
 
 {% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/attributes" %}
 {% api-method-summary %}
-attributes 
+attributes
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Get a list of filter attributes 
+Get a list of filter attributes
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -277,7 +177,7 @@ The data source whose attributes are to be returned. If not specified, the attri
 A list of attribute metadata
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data_sources": [
     {
@@ -301,7 +201,7 @@ A list of attribute metadata
 Bad request
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -317,7 +217,7 @@ Bad request
 Server error
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -333,54 +233,14 @@ Server error
 
 {% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts" %}
 {% api-method-summary %}
-cohorts
+
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Get metadata on the user's cohorts, including cohorts created through the web app. 
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-A list of cohort metadata
-{% endapi-method-response-example-description %}
-
-```
-{
-  "cohorts": [
-    {
-      "cohort_id": 0,
-      "name": "string",
-      "description": "string",
-      "owner": "string",
-      "permission": "OWNER"
-    }
-  ]
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Server error
-{% endapi-method-response-example-description %}
-
-```
-{
-  "message": "string",
-  "code": 0,
-  "not_found": [
-    "string"
-  ]
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
 {% endapi-method %}
 
 {% api-method method="post" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts" %}
@@ -397,27 +257,26 @@ Create a cohort as defined by the specified filterSet and IDC data version.
 {% api-method-body-parameters %}
 {% api-method-parameter name="cohort\_def" type="object" required=true %}
 Structure, including filterSet and IDC data version, defining the cohort. Example:  
-`{  
-  "name": "mycohort",  
-  "description: "Example description",  
-  "filterSet": {  
-    "idc_data_version": "1.0"  
-    "filters": {  
-      "collection_id": [  
-        "TCGA-LUAD",  
-        "TCGA_KIRC"  
-      ],  
-      "Modality": [  
-        "CT",  
-        "MR"  
-      ],  
-      "race": [  
-        "WHITE"  
-      ]  
-    }  
-  }  
-}`  
- 
+`{    
+"name": "mycohort",    
+"description: "Example description",    
+"filterSet": {    
+"idc_data_version": "1.0"    
+"filters": {    
+"collection_id": [    
+"TCGA-LUAD",    
+"TCGA_KIRC"    
+],    
+"Modality": [    
+"CT",    
+"MR"    
+],    
+"race": [    
+"WHITE"    
+]    
+}    
+}    
+}`
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -428,7 +287,7 @@ Structure, including filterSet and IDC data version, defining the cohort. Exampl
 Response includes the cohort's name and description, and the filterSet and IDC data version that define the cohort. The cohort\_id is used to refer to this cohort in other APIs that take a cohort\_id parameter. The response to the example request is like:
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "code": 200,
   "cohort_id": 979,
@@ -459,7 +318,7 @@ Response includes the cohort's name and description, and the filterSet and IDC d
 Bad request
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -475,7 +334,7 @@ Bad request
 Server error
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -503,12 +362,12 @@ cohorts
 {% api-method-body-parameters %}
 {% api-method-parameter name="cohort\_list" type="object" required=true %}
 A list of the user's cohorts to be deleted. Schema:  
-`{  
-  "cohorts: [  
-    "string"  
-  ]  
+`{    
+"cohorts: [    
+"string"    
+]    
 }`  
-    {
+{
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -519,7 +378,7 @@ A list of the user's cohorts to be deleted. Schema:
 A list of each cohort to be deleted and the result, indicating that the cohort was deleted, or could not be deleted for some specified reason.
 {% endapi-method-response-example-description %}
 
-```
+```text
   "cohorts": [
     {
       "cohort_id": 0,
@@ -527,8 +386,7 @@ A list of each cohort to be deleted and the result, indicating that the cohort w
     }
   ]
 }
-500	
-
+500
 ```
 {% endapi-method-response-example %}
 
@@ -537,7 +395,7 @@ A list of each cohort to be deleted and the result, indicating that the cohort w
 Bad request
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -553,7 +411,7 @@ Bad request
 Server error
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -591,7 +449,7 @@ The cohort to be deleted
 If the cohort was successly deleted, the response includes the filterSet that defined the cohort. If the cohort was not successfully deleted, the response indicates the reason it was not deleted.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "cohorts": [
     {
@@ -608,7 +466,7 @@ If the cohort was successly deleted, the response includes the filterSet that de
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -618,7 +476,7 @@ If the cohort was successly deleted, the response includes the filterSet that de
 Bad request
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -634,7 +492,7 @@ Bad request
 Server error
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -647,8 +505,6 @@ Server error
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
 {% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/manifest/{cohort\_id}" %}
 {% api-method-summary %}
@@ -716,7 +572,7 @@ Default: False
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Source\_DOI" type="boolean" required=false %}
-If True, include  the DOI of the TCIA collection description page of each instance.  
+If True, include the DOI of the TCIA collection description page of each instance.  
 Default: False
 {% endapi-method-parameter %}
 
@@ -739,49 +595,51 @@ This is an example response when the query specified that CRDC\_Instance\_GUIDs,
 The `next_page` value in the response can be used in a subsequent call to this API to retrieve the additional results.
 {% endapi-method-response-example-description %}
 
-    {
-      "code": 200,
-      "cohort": {
-        "description": "Example description",
-        "filterSet": {
-          "filters": {
-            "Modality": [
-              "CT",
-              "MR"
-            ],
-            "collection_id": [
-              "tcga_luad",
-              "tcga_kirc"
-            ],
-            "race": [
-              "ASIAN"
-            ]
-          },
-          "idc_data_version": "4.0"
-        },
-        "name": "mycohort",
-        "sql": "\n            #standardSQL\n    \n        SELECT dicom_pivot_v4.collection_id,dicom_pivot_v4.PatientID,dicom_pivot_v4.crdc_instance_uuid,dicom_pivot_v4.gcs_url\n        FROM `idc-dev-etl.idc_v4.dicom_pivot_v4` dicom_pivot_v4 \n        \n        JOIN `idc-dev-etl.idc_v4.tcga_clinical_rel9` tcga_clinical_rel9\n        ON dicom_pivot_v4.PatientID = tcga_clinical_rel9.case_barcode\n    \n        WHERE (dicom_pivot_v4.collection_id IN ('tcga_luad','tcga_kirc')) AND (dicom_pivot_v4.Modality IN ('CT','MR')) AND (tcga_clinical_rel9.race = 'ASIAN')\n        GROUP BY dicom_pivot_v4.collection_id, dicom_pivot_v4.PatientID, dicom_pivot_v4.crdc_instance_uuid, dicom_pivot_v4.gcs_url\n        ORDER BY dicom_pivot_v4.gcs_url ASC\n        \n        \n    "
-      },
-      "manifest": {
-        "json_manifest": [
-          {
-            "CRDC_Instance_GUID": "dg.4DFC/000c8565-76f2-4bc8-9a34-33dd3d3924b3",
-            "Collection_ID": "tcga_kirc",
-            "GCS_URL": "gs://idc_dev/000c8565-76f2-4bc8-9a34-33dd3d3924b3.dcm",
-            "Patient_ID": "TCGA-B0-4821"
-          },
-          {
-            "CRDC_Instance_GUID": "dg.4DFC/002b13fe-8f12-415a-a5e8-401eedba2909",
-            "Collection_ID": "tcga_kirc",
-            "GCS_URL": "gs://idc_dev/002b13fe-8f12-415a-a5e8-401eedba2909.dcm",
-            "Patient_ID": "TCGA-BP-4970"
-          }
+```text
+{
+  "code": 200,
+  "cohort": {
+    "description": "Example description",
+    "filterSet": {
+      "filters": {
+        "Modality": [
+          "CT",
+          "MR"
         ],
-        "rowsReturned": 2,
-        "totalFound": 1581
+        "collection_id": [
+          "tcga_luad",
+          "tcga_kirc"
+        ],
+        "race": [
+          "ASIAN"
+        ]
       },
-      "next_page": "gAAAAABhS2WcO-Ibwdo__0L0z6xMqcnnXoXo5A1EzHeEqqdoQRrupw9PxN29uZxUBvkaJyA_Y3Uf3XEHHA831zGeM9Xae8bOAdL-z_lCFcJ00JC-sGG4BMb4-9UwVsJ1qBkwx1WsXawGWd9jY8W5QnvKKL5eZtEhPwwd_iR-O1i8RWwPLdUsGnUrM78VmsKHXMQmvCZWQEvYuhmXx6uLn8rDSEczfuJLYvF_GzdFNpWgYSGjLzZYibqgZ18eFQyljhcuCX1UjLeW8YNsmO8HMn2Co-fV_W6FyNCt2XyhRFpfg4NOBR2UxLKRuA9b9sPKwJuoqY5-XlPLu6qjWEPKUX48tHNh50dD4FdJoREskSdOw2ulND_jHrg="
-    }
+      "idc_data_version": "4.0"
+    },
+    "name": "mycohort",
+    "sql": "\n            #standardSQL\n    \n        SELECT dicom_pivot_v4.collection_id,dicom_pivot_v4.PatientID,dicom_pivot_v4.crdc_instance_uuid,dicom_pivot_v4.gcs_url\n        FROM `idc-dev-etl.idc_v4.dicom_pivot_v4` dicom_pivot_v4 \n        \n        JOIN `idc-dev-etl.idc_v4.tcga_clinical_rel9` tcga_clinical_rel9\n        ON dicom_pivot_v4.PatientID = tcga_clinical_rel9.case_barcode\n    \n        WHERE (dicom_pivot_v4.collection_id IN ('tcga_luad','tcga_kirc')) AND (dicom_pivot_v4.Modality IN ('CT','MR')) AND (tcga_clinical_rel9.race = 'ASIAN')\n        GROUP BY dicom_pivot_v4.collection_id, dicom_pivot_v4.PatientID, dicom_pivot_v4.crdc_instance_uuid, dicom_pivot_v4.gcs_url\n        ORDER BY dicom_pivot_v4.gcs_url ASC\n        \n        \n    "
+  },
+  "manifest": {
+    "json_manifest": [
+      {
+        "CRDC_Instance_GUID": "dg.4DFC/000c8565-76f2-4bc8-9a34-33dd3d3924b3",
+        "Collection_ID": "tcga_kirc",
+        "GCS_URL": "gs://idc_dev/000c8565-76f2-4bc8-9a34-33dd3d3924b3.dcm",
+        "Patient_ID": "TCGA-B0-4821"
+      },
+      {
+        "CRDC_Instance_GUID": "dg.4DFC/002b13fe-8f12-415a-a5e8-401eedba2909",
+        "Collection_ID": "tcga_kirc",
+        "GCS_URL": "gs://idc_dev/002b13fe-8f12-415a-a5e8-401eedba2909.dcm",
+        "Patient_ID": "TCGA-BP-4970"
+      }
+    ],
+    "rowsReturned": 2,
+    "totalFound": 1581
+  },
+  "next_page": "gAAAAABhS2WcO-Ibwdo__0L0z6xMqcnnXoXo5A1EzHeEqqdoQRrupw9PxN29uZxUBvkaJyA_Y3Uf3XEHHA831zGeM9Xae8bOAdL-z_lCFcJ00JC-sGG4BMb4-9UwVsJ1qBkwx1WsXawGWd9jY8W5QnvKKL5eZtEhPwwd_iR-O1i8RWwPLdUsGnUrM78VmsKHXMQmvCZWQEvYuhmXx6uLn8rDSEczfuJLYvF_GzdFNpWgYSGjLzZYibqgZ18eFQyljhcuCX1UjLeW8YNsmO8HMn2Co-fV_W6FyNCt2XyhRFpfg4NOBR2UxLKRuA9b9sPKwJuoqY5-XlPLu6qjWEPKUX48tHNh50dD4FdJoREskSdOw2ulND_jHrg="
+}
+```
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=400 %}
@@ -789,7 +647,7 @@ The `next_page` value in the response can be used in a subsequent call to this A
 Bad request
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -805,7 +663,7 @@ Bad request
 Server error
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -826,10 +684,10 @@ cohorts/manifest/preview
 
 {% api-method-description %}
 This API is equivalent to the following API sequence:  
-`POST /cohorts  
-GET /cohorts/{cohort_id}/manifest  
+`POST /cohorts    
+GET /cohorts/{cohort_id}/manifest    
 DELETE /cohorts/{cohort_id}`  
-However, this API does not actually create a cohort.  
+However, this API does not actually create a cohort.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -911,7 +769,7 @@ A structure, including filterSet and IDC data version, defining the cohort. See 
 Refer to `GET cohorts/manifest/{cohort_id}` for an example response and discussion.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -921,7 +779,7 @@ Refer to `GET cohorts/manifest/{cohort_id}` for an example response and discussi
 Bad request
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -937,7 +795,7 @@ Bad request
 Server error
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -980,7 +838,7 @@ The next\_page token returned by a previous /cohorts/manifest/xxx request.
 This is an example response when the _page\_size_ was 10.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "code": 200,
   "manifest": {
@@ -1102,84 +960,86 @@ A queryFields object. The _fields_ element is an array of field identifiers whos
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 The following is an example of a response when the queryFields was :  
-{ "fields": \["SOPInstanceUID", "Modality", "BodyPartExamined", "SliceThickness" \] }. sql was True and  page\_size was 5.   
-If SOPInstanceUID had been False, only the distinct combinations of Modality, BodyPartExamined and SliceThickness would have been returned. 
+{ "fields": \["SOPInstanceUID", "Modality", "BodyPartExamined", "SliceThickness" \] }. sql was True and page\_size was 5.  
+If SOPInstanceUID had been False, only the distinct combinations of Modality, BodyPartExamined and SliceThickness would have been returned.
 {% endapi-method-response-example-description %}
 
-    {
-      "code": 200,
-      "cohort_def": {
-        "description": "Example description",
-        "filterSet": {
-          "filters": {
-            "Modality": [
-              "CT",
-              "MR"
-            ],
-            "collection_id": [
-              "tcga_luad",
-              "tcga_kirc"
-            ],
-            "race": [
-              "WHITE"
-            ]
-          },
-          "idc_data_version": "4.0"
-        },
-        "filters": {
-          "Modality": [
-            "CT",
-            "MR"
-          ],
-          "collection_id": [
-            "tcga_luad",
-            "tcga_kirc"
-          ],
-          "race": [
-            "WHITE"
-          ]
-        },
-        "name": "mycohort",
-        "sql": "\n            #standardSQL\n    \n        SELECT dicom_pivot_v4.SOPInstanceUID,dicom_pivot_v4.Modality,dicom_pivot_v4.BodyPartExamined,dicom_pivot_v4.SliceThickness\n        FROM `idc-dev-etl.idc_v4.dicom_pivot_v4` dicom_pivot_v4 \n        \n        JOIN `idc-dev-etl.idc_v4.tcga_clinical_rel9` tcga_clinical_rel9\n        ON dicom_pivot_v4.PatientID = tcga_clinical_rel9.case_barcode\n    \n        WHERE (dicom_pivot_v4.collection_id IN ('tcga_luad','tcga_kirc')) AND (dicom_pivot_v4.Modality IN ('CT','MR')) AND (tcga_clinical_rel9.race = 'WHITE')\n        GROUP BY dicom_pivot_v4.SOPInstanceUID, dicom_pivot_v4.Modality, dicom_pivot_v4.BodyPartExamined, dicom_pivot_v4.SliceThickness\n        ORDER BY dicom_pivot_v4.SOPInstanceUID ASC, dicom_pivot_v4.Modality ASC, dicom_pivot_v4.BodyPartExamined ASC, dicom_pivot_v4.SliceThickness ASC\n        \n        \n    "
-      },
-      "next_page": "gAAAAABhSOtUCk358O_qvpQhFMzWCYA2XlF0Jr1h1Pm8-qAOyYYrxLBUwcAdZZDBcDqh40ryNFcsg6AYmFJ0JCg7D6222-mIoeCaqhYCAEU-YQ6Rvco7sEG-QDJq0UYCRZKqKsldJNgnN1n0CaosdOCHe9rZCsjAMlOsjW6AyZSmgqGjYFbWjlJp7tuiwncR0O6rrnAsb4GfiTt_YG-BEEifJRP0xNFJaOgvjixpr2DCsuwTwp4Hpqk23hzWR-SSlgF1vRSWG-OngxK4MUtytYGnkjWqyfWlYCG3WllmCDrXe4prr23AfG88rTpSLxVjFqsq2-G964ve",
-      "query_results": {
-        "json": [
-          {
-            "BodyPartExamined": "KIDNEY",
-            "Modality": "CT",
-            "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100052696407437114116810952334",
-            "SliceThickness": "2.5"
-          },
-          {
-            "BodyPartExamined": "KIDNEY",
-            "Modality": "CT",
-            "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100100699868028287673029927535",
-            "SliceThickness": "2.5"
-          },
-          {
-            "BodyPartExamined": "KIDNEY",
-            "Modality": "CT",
-            "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100189985561196457997390127394",
-            "SliceThickness": "5"
-          },
-          {
-            "BodyPartExamined": "KIDNEY",
-            "Modality": "CT",
-            "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100190135643049697554629929009",
-            "SliceThickness": "2"
-          },
-          {
-            "BodyPartExamined": "KIDNEY",
-            "Modality": "CT",
-            "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100209053339233505710613826900",
-            "SliceThickness": "2.5"
-          }
+```text
+{
+  "code": 200,
+  "cohort_def": {
+    "description": "Example description",
+    "filterSet": {
+      "filters": {
+        "Modality": [
+          "CT",
+          "MR"
         ],
-        "rowsReturned": 5,
-        "totalFound": 196844
+        "collection_id": [
+          "tcga_luad",
+          "tcga_kirc"
+        ],
+        "race": [
+          "WHITE"
+        ]
+      },
+      "idc_data_version": "4.0"
+    },
+    "filters": {
+      "Modality": [
+        "CT",
+        "MR"
+      ],
+      "collection_id": [
+        "tcga_luad",
+        "tcga_kirc"
+      ],
+      "race": [
+        "WHITE"
+      ]
+    },
+    "name": "mycohort",
+    "sql": "\n            #standardSQL\n    \n        SELECT dicom_pivot_v4.SOPInstanceUID,dicom_pivot_v4.Modality,dicom_pivot_v4.BodyPartExamined,dicom_pivot_v4.SliceThickness\n        FROM `idc-dev-etl.idc_v4.dicom_pivot_v4` dicom_pivot_v4 \n        \n        JOIN `idc-dev-etl.idc_v4.tcga_clinical_rel9` tcga_clinical_rel9\n        ON dicom_pivot_v4.PatientID = tcga_clinical_rel9.case_barcode\n    \n        WHERE (dicom_pivot_v4.collection_id IN ('tcga_luad','tcga_kirc')) AND (dicom_pivot_v4.Modality IN ('CT','MR')) AND (tcga_clinical_rel9.race = 'WHITE')\n        GROUP BY dicom_pivot_v4.SOPInstanceUID, dicom_pivot_v4.Modality, dicom_pivot_v4.BodyPartExamined, dicom_pivot_v4.SliceThickness\n        ORDER BY dicom_pivot_v4.SOPInstanceUID ASC, dicom_pivot_v4.Modality ASC, dicom_pivot_v4.BodyPartExamined ASC, dicom_pivot_v4.SliceThickness ASC\n        \n        \n    "
+  },
+  "next_page": "gAAAAABhSOtUCk358O_qvpQhFMzWCYA2XlF0Jr1h1Pm8-qAOyYYrxLBUwcAdZZDBcDqh40ryNFcsg6AYmFJ0JCg7D6222-mIoeCaqhYCAEU-YQ6Rvco7sEG-QDJq0UYCRZKqKsldJNgnN1n0CaosdOCHe9rZCsjAMlOsjW6AyZSmgqGjYFbWjlJp7tuiwncR0O6rrnAsb4GfiTt_YG-BEEifJRP0xNFJaOgvjixpr2DCsuwTwp4Hpqk23hzWR-SSlgF1vRSWG-OngxK4MUtytYGnkjWqyfWlYCG3WllmCDrXe4prr23AfG88rTpSLxVjFqsq2-G964ve",
+  "query_results": {
+    "json": [
+      {
+        "BodyPartExamined": "KIDNEY",
+        "Modality": "CT",
+        "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100052696407437114116810952334",
+        "SliceThickness": "2.5"
+      },
+      {
+        "BodyPartExamined": "KIDNEY",
+        "Modality": "CT",
+        "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100100699868028287673029927535",
+        "SliceThickness": "2.5"
+      },
+      {
+        "BodyPartExamined": "KIDNEY",
+        "Modality": "CT",
+        "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100189985561196457997390127394",
+        "SliceThickness": "5"
+      },
+      {
+        "BodyPartExamined": "KIDNEY",
+        "Modality": "CT",
+        "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100190135643049697554629929009",
+        "SliceThickness": "2"
+      },
+      {
+        "BodyPartExamined": "KIDNEY",
+        "Modality": "CT",
+        "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1357.4004.100209053339233505710613826900",
+        "SliceThickness": "2.5"
       }
-    }
+    ],
+    "rowsReturned": 5,
+    "totalFound": 196844
+  }
+}
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -1192,9 +1052,9 @@ cohorts/query/preview
 
 {% api-method-description %}
 This API is equivalent to the following API sequence:  
-`POST /cohorts  
-GET /cohorts/{cohort_id}/query  
-DELETE /cohorts/{cohort_id}  
+`POST /cohorts    
+GET /cohorts/{cohort_id}/query    
+DELETE /cohorts/{cohort_id}    
 However, this API does not actually create a cohort.`
 {% endapi-method-description %}
 
@@ -1230,7 +1090,7 @@ The cohort definition and list of fields to query. The queryable fields are enum
 Refer to cohorts/{cohort\_id}/query for an example response.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -1240,7 +1100,7 @@ Refer to cohorts/{cohort\_id}/query for an example response.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -1256,7 +1116,7 @@ Refer to cohorts/{cohort\_id}/query for an example response.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "message": "string",
   "code": 0,
@@ -1299,7 +1159,7 @@ The next\_page token returned by a previous cohorts/query/xxx request.
 This is an example response when the page\_size was 5.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "code": 200,
   "cohort": {},
@@ -1354,7 +1214,7 @@ dicomMetadata
 
 {% api-method-description %}
 Get a defined, fixed set of metadata for all the instances in IDC data.See the example response for the list of attributes.  
-The returned data is paged. If the response includes a non-null next\_page value, additional data is available and can be obtained by passing the returned next page value in a subsequent call of this endpoint.   
+The returned data is paged. If the response includes a non-null next\_page value, additional data is available and can be obtained by passing the returned next page value in a subsequent call of this endpoint.  
 When a non-null next page value is passed, parameters other than page\_size are ignored.
 {% endapi-method-description %}
 
@@ -1379,7 +1239,7 @@ If the empty string is passed, a new BQ query is performed.
 This is an example response when the page\_size query param was 2. As can be seen, the total number of rows found was 3075233. Additional data can be obtained by calling the API again and passing the returned next\_page token.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "code": 200,
   "next_page": "gAAAAABhSS0u_hWWjCxrcGViF0vo0bl-vQ66-RF0HFfeLyr7Y878BsUXehMhEOws4TpicguEVEk7dVe5vHbk147XVrIKkNdvkCd-lwzJGULS90PQ_J7iKaAH_4Q7v5ijPlZ6zO2MSwwWZf8ZzRH6pw1WGYicGYcm_0ErwFlyrDfPZGmrSP0wIZ0EBvK_lKolPvxv77VTMf5DeqqPzuqVHXEIeSe4Lh9v8d58IvT_2Ma8UR5RdyNwzRyi7p8lGhtFmpyUbs8MGAjR336-DnTQEwXIIOVhXEvecJG0AfYvbRR0NoaJu76cgMjkLq8gqxRy8IH7x3TAGsD2",
@@ -1577,7 +1437,7 @@ The next\_page token returned by a previous query.
 This is an example response when the next\_page parameter was 2.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "code": 200,
   "cohort": {},
@@ -1762,10 +1622,10 @@ Get account information for the currently authorized user
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-An AccountDetailsResponse object:  
+An AccountDetailsResponse object:
 {% endapi-method-response-example-description %}
 
-```
+```text
 accountDetailsResponse:
   type: "object"
   properties:
@@ -1814,6 +1674,4 @@ accountDetailsResponse:
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 

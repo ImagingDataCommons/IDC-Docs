@@ -13,7 +13,7 @@ The type of the object is defined by the object class unique identifier stored i
 You can find detailed descriptions of these objects applied to specific datasets in TICA in the following open access publications:
 
 > Fedorov, A., Clunie, D., Ulrich, E., Bauer, C., Wahle, A., Brown, B., Onken, M., Riesmeier, J., Pieper, S., Kikinis, R., Buatti, J. & Beichel, R. R. DICOM for quantitative imaging biomarker development: a standards based approach to sharing clinical data and structured PET/CT analysis results in head and neck cancer research. PeerJ **4,** e2057 \(2016\). [https://peerj.com/articles/2057/](https://peerj.com/articles/2057/)
-
+>
 > Fedorov, A., Hancock, M., Clunie, D., Brochhausen, M., Bona, J., Kirby, J., Freymann, J., Pieper, S., J W L Aerts, H., Kikinis, R. & Prior, F. DICOM re-encoding of volumetrically annotated Lung Imaging Database Consortium \(LIDC\) nodules. Med. Phys. \(2020\). [doi:10.1002/mp.14445 ](http://dx.doi.org/10.1002/mp.14445)
 
 ## Segmentation objects
