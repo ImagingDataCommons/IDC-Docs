@@ -4,7 +4,17 @@
 The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
-## 4.10.1 - September 2020
+## 4.11.2 - October 2021
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+
+Main highlights of this release include:
+
+* Fix issues with segmentation orientations;
+* Fix display of inconsistencies warning for segmentation thumbnails;
+* Fix throttle thumbnail progress updates.
+
+## 4.10.1 - September 2021
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
@@ -14,7 +24,7 @@ Main highlights of this release include:
 * Added display of badge numbers in the segmentation / rtstruct panel tabs;
 * Study prefetcher with loading bar.
 
-## 4.9.20 - June 2020
+## 4.9.20 - June 2021
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
@@ -23,7 +33,7 @@ Main highlights of this release include:
 * Add exponential backoff and retry after 500 error;
 * Update to HTML SR viewport to display missing header tags.
 
-## 4.9.17 - May 2020
+## 4.9.17 - May 2021
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
@@ -32,7 +42,7 @@ Main highlights of this release include:
 * Add disable server cache feature;
 * Additional improvements on series inconsistencies report UI.
 
-## 4.9.13 - April 2020
+## 4.9.13 - April 2021
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
@@ -43,7 +53,7 @@ Main highlights of this release include:
 * Fix slices are not sorted in geometrical order;
 * Extend series inconsistencies checks to segmentation and improve UI.
 
-## 4.9.7 - March 2020
+## 4.9.7 - March 2021
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
@@ -59,7 +69,7 @@ Main highlights of this release include:
 * Fix choppy scrolling in 2D mod;
 * Fix failure to load segmentations when filtering study with '?seriesInstanceUID=' syntax.
 
-## 4.8.10 - February 2020
+## 4.8.10 - February 2021
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
@@ -68,7 +78,7 @@ Main highlights of this release include:
 * Replace instance dropdown to slider for dicom tag browser;
 * Add error page and not found pages if failed to retrieve study data.
 
-## 4.8.5 - Jannuary 2020
+## 4.8.5 - Jannuary 2021
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
