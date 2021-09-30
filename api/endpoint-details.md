@@ -1,6 +1,6 @@
 # Endpoint Details
 
-This section provides documentation on each endpoint.
+This section provides documentation on each endpoint of IDC API.
 
 {% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/about" %}
 {% api-method-summary %}
