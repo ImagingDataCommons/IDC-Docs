@@ -4,14 +4,19 @@
 The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
-## 0.4.0 - October 2021 - Slim
+## 0.4.1 - October 2021 - Slim
 
 **The Slim Viewer** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/MGHComputationalPathology/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/dicomweb/) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
 
 Main highlights of this release include:
 
 **Improvements**
- * Include images with new flavor THUMBNAIL in image pyramid.
+* Include images with new flavor THUMBNAIL in image pyramid;
+* Properly fit overview map into HTML element and disable re-centering of overview map when user navigates main map;
+* Allow drawing of ROIs that extent beyond the slide coordinate system (i.e., allow negative ROI coordinates).
+
+**Bug fixes**
+* Prevent display of annotation marker when ROI is deactivated
 
 ## 4.11.2 - October 2021 - OHIF
 
