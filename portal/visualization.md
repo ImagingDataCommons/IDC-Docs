@@ -46,6 +46,13 @@ Below is an example of series objects that are not viewable at the series level.
 
 ![Selected Series panel showing series objects not viewable at the series level](../.gitbook/assets/2020-10-15-5-.png)
 
+## IDC pathology viewer functionality
+
+The IDC pathology viewer allows for interactive visualization of digital slide microscopy (SM) images.
+
+![Slim Viewer Screenshot](../.gitbook/assets/viewer-pathology-screenshot.png)
+
+
 ## Configuring the IDC Viewer URL
 
 You can use IDC Viewer to visualize any of the suitable data in IDC. To configure the IDC Viewer URL, simply append `StudyInstanceUID` of a study available in IDC to the following prefix: [https://viewer.imaging.datacommons.cancer.gov/viewer/](https://viewer.imaging.datacommons.cancer.gov/viewer/) \(for the radiology viewer\) and[ https://viewer.imaging.datacommons.cancer.gov/slim/studies](https://viewer.imaging.datacommons.cancer.gov/slim/studies/)/ \(for the digital pathology viewer\). This will open the entire study in the viewer. You can also configure the URL to open specific series of the study, as defined by the list of `SeriesInstanceUID` items. When you open the IDC Viewer from the IDC Portal, the URLs of the pages will be populated following those conventions.
