@@ -2,45 +2,33 @@
 
 This section provides documentation on each endpoint of IDC API.
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/about" %}
-{% api-method-summary %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/about" method="get" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+{% endswagger %}
+
 about
-{% endapi-method-summary %}
 
-{% api-method-description %}
 The **about** endpoint returns a short greeting and pointers to both the demo UI and to .
-{% endapi-method-description %}
 
-{% api-method-spec %}
-{% endapi-method %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/versions" method="get" %}
+{% swagger-description %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/versions" %}
+{% endswagger-description %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/collections" %}
-{% api-method-summary %}
-collections
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/collections" method="get" summary="collections" %}
+{% swagger-description %}
 Get list of collections for some IDC data version
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="idc\_data\_version" type="string" required=false %}
+{% swagger-parameter name="idc:data:version" type="string" required="false" in="query" %}
 The IDC data version for which collection data is to be returned. If not specified, collection data for the current IDC data version is returned.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-A list of the collections, with related metadata.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
   "collections": [
     {
@@ -63,14 +51,10 @@ A list of the collections, with related metadata.
   "code": 0
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Bad request
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="400" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -79,14 +63,10 @@ Bad request
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Server error
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="500" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -95,36 +75,20 @@ Server error
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/analysis\_results" %}
-{% api-method-summary %}
-analysis\_results
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/analysis:results" method="get" summary="analysis_results" %}
+{% swagger-description %}
 Get a list of analysis results for some IDC data version
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="idc\_data\_version" type="string" required=false %}
+{% swagger-parameter name="idc:data:version" type="string" required="false" in="query" %}
 The IDC data version for which analysis results are to be returned. If not specified, analysis results for the current IDC data version are returned.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-A list of analysis results metadata.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
   "analysisResults": [
     {
@@ -144,40 +108,24 @@ A list of analysis results metadata.
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/attributes" %}
-{% api-method-summary %}
-attributes
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/attributes" method="get" summary="attributes" %}
+{% swagger-description %}
 Get a list of filter attributes
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="idc\_data\_version" type="string" required=false %}
+{% swagger-parameter name="idc:data:version" type="string" required="false" in="query" %}
 The IDC data version for which attribute data is to be returned. If not specified, attribute data for the current IDC data version is returned.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="data\_source" type="string" required=false %}
+{% swagger-parameter name="data:source" type="string" required="false" in="query" %}
 The data source whose attributes are to be returned. If not specified, the attributes for all data sources are returned.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-A list of attribute metadata
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
   "data_sources": [
     {
@@ -194,14 +142,10 @@ A list of attribute metadata
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Bad request
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="400" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -210,14 +154,10 @@ Bad request
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Server error
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="500" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -226,68 +166,33 @@ Server error
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts" %}
-{% api-method-summary %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts" method="get" %}
+{% swagger-description %}
 
-{% endapi-method-summary %}
+{% endswagger-description %}
+{% endswagger %}
 
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% endapi-method %}
-
-{% api-method method="post" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts" %}
-{% api-method-summary %}
-cohorts
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts" method="post" summary="cohorts" %}
+{% swagger-description %}
 Create a cohort as defined by the specified filterSet and IDC data version.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="cohort\_def" type="object" required=true %}
-Structure, including filterSet and IDC data version, defining the cohort. Example:  
-`{    
-"name": "mycohort",    
-"description: "Example description",    
-"filterSet": {    
-"idc_data_version": "1.0"    
-"filters": {    
-"collection_id": [    
-"TCGA-LUAD",    
-"TCGA_KIRC"    
-],    
-"Modality": [    
-"CT",    
-"MR"    
-],    
-"race": [    
-"WHITE"    
-]    
-}    
-}    
-}`
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter name="cohort:def" type="object" required="true" in="body" %}
+Structure, including filterSet and IDC data version, defining the cohort. Example:
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Response includes the cohort's name and description, and the filterSet and IDC data version that define the cohort. The cohort\_id is used to refer to this cohort in other APIs that take a cohort\_id parameter. The response to the example request is like:
-{% endapi-method-response-example-description %}
+\
 
-```text
+
+
+
+`{ "name": "mycohort", "description: "Example description", "filterSet": { "idc_data_version": "1.0" "filters": { "collection_id": [ "TCGA-LUAD", "TCGA_KIRC" ], "Modality": [ "CT", "MR" ], "race": [ "WHITE" ] } } }`
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```
 {
   "code": 200,
   "cohort_id": 979,
@@ -311,14 +216,10 @@ Response includes the cohort's name and description, and the filterSet and IDC d
   "name": "mycohort"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Bad request
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="400" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -327,14 +228,10 @@ Bad request
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Server error
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="500" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -343,42 +240,32 @@ Server error
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="delete" host="  " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts" %}
-{% api-method-summary %}
-cohorts
-{% endapi-method-summary %}
+{% swagger baseUrl="  " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts" method="delete" summary="cohorts" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter name="cohort:list" type="object" required="true" in="body" %}
+A list of the user's cohorts to be deleted. Schema:
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="cohort\_list" type="object" required=true %}
-A list of the user's cohorts to be deleted. Schema:  
-`{    
-"cohorts: [    
-"string"    
-]    
-}`  
+\
+
+
+
+
+`{ "cohorts: [ "string" ] }`
+
+\
+
+
 {
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-A list of each cohort to be deleted and the result, indicating that the cohort was deleted, or could not be deleted for some specified reason.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
   "cohorts": [
     {
       "cohort_id": 0,
@@ -388,14 +275,10 @@ A list of each cohort to be deleted and the result, indicating that the cohort w
 }
 500
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Bad request
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="400" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -404,14 +287,10 @@ Bad request
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Server error
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="500" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -420,36 +299,20 @@ Server error
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="delete" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/{cohort\_id}" %}
-{% api-method-summary %}
-cohort/{cohort\_id}
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/{cohort:id}" method="delete" summary="cohort/{cohort_id}" %}
+{% swagger-description %}
 Delete a cohort
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="cohort\_id" type="integer" required=true %}
+{% swagger-parameter name="cohort:id" type="integer" required="true" in="path" %}
 The cohort to be deleted
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-If the cohort was successly deleted, the response includes the filterSet that defined the cohort. If the cohort was not successfully deleted, the response indicates the reason it was not deleted.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
   "cohorts": [
     {
@@ -459,24 +322,15 @@ If the cohort was successly deleted, the response includes the filterSet that de
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=302 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-
+{% swagger-response status="302" description="" %}
 ```
-{% endapi-method-response-example %}
+```
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Bad request
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="400" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -485,14 +339,10 @@ Bad request
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Server error
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="500" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -501,101 +351,122 @@ Server error
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/manifest/{cohort\_id}" %}
-{% api-method-summary %}
-cohorts/manifest/{cohort\_id}
-{% endapi-method-summary %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/manifest/{cohort:id}" method="get" summary="cohorts/manifest/{cohort_id}" %}
+{% swagger-description %}
+Return a manifest of access_methods of items in a specified cohort.
 
-{% api-method-description %}
-Return a manifest of access\_methods of items in a specified cohort.  
-The returned data is paged. If the response includes a non-null next\_page value, then additional data is available and can be obtained by passing the returned next page value in a subsequent call of this endpoint. When a non-null next\_page value is passed, parameters other than page\_size are ignored.
-{% endapi-method-description %}
+\
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="cohort\_id" type="integer" required=true %}
-The cohort\_id of the cohort whose manifest is to be returned.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="CRDC\_Study\_GUID" type="boolean" required=false %}
+The returned data is paged. If the response includes a non-null next_page value, then additional data is available and can be obtained by passing the returned next page value in a subsequent call of this endpoint. When a non-null next_page value is passed, parameters other than page_size are ignored.
+{% endswagger-description %}
+
+{% swagger-parameter name="cohort:id" type="integer" required="true" in="path" %}
+The cohort_id of the cohort whose manifest is to be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter name="CRDC:Study:GUID" type="boolean" required="false" in="query" %}
 if True, return the CRDC GUID of each study.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="CRDC\_Series\_GUID" type="boolean" required=false %}
+{% swagger-parameter name="CRDC:Series:GUID" type="boolean" required="false" in="query" %}
 If True, return the CRDC GUID of each series.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="CRDC\_Instance\_GUID" type="boolean" required=false %}
+{% swagger-parameter name="CRDC:Instance:GUID" type="boolean" required="false" in="query" %}
 If True, return the CRDC GUID of each instance.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="GCS\_URL" type="boolean" required=false %}
+{% swagger-parameter name="GCS:URL" type="boolean" required="false" in="query" %}
 If True, return the GCS URL of each instance.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="sql" type="boolean" required=false %}
-If True, return the BigQuery SQL that was used to generate the returned data.  
+{% swagger-parameter name="sql" type="boolean" required="false" in="query" %}
+If True, return the BigQuery SQL that was used to generate the returned data.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Collection\_ID" type="boolean" required=false %}
-If True, return the Collection ID of each instance.  
+{% swagger-parameter name="Collection:ID" type="boolean" required="false" in="query" %}
+If True, return the Collection ID of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Patient\_ID" type="boolean" required=false %}
-If True, return the Patient ID of each instance.  
+{% swagger-parameter name="Patient:ID" type="boolean" required="false" in="query" %}
+If True, return the Patient ID of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="StudyInstanceUID" type="boolean" required=false %}
-If True, return the StudyInstanceUID of each instance.  
+{% swagger-parameter name="StudyInstanceUID" type="boolean" required="false" in="query" %}
+If True, return the StudyInstanceUID of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="SeriesInstanceUID" type="boolean" required=false %}
-If True, return the SeriesInstanceUID of each instance.  
+{% swagger-parameter name="SeriesInstanceUID" type="boolean" required="false" in="query" %}
+If True, return the SeriesInstanceUID of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="SOPInstanceUID" type="boolean" required=false %}
-If True, return the SOPInstanceUID of each instance.  
+{% swagger-parameter name="SOPInstanceUID" type="boolean" required="false" in="query" %}
+If True, return the SOPInstanceUID of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Source\_DOI" type="boolean" required=false %}
-If True, include the DOI of the TCIA collection description page of each instance.  
+{% swagger-parameter name="Source:DOI" type="boolean" required="false" in="query" %}
+If True, include the DOI of the TCIA collection description page of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="page\_size" type="integer" required=false %}
-The maximum number of items to return.  
+{% swagger-parameter name="page:size" type="integer" required="false" in="query" %}
+The maximum number of items to return.
+
+\
+
+
 Default: 1000
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="next\_page" type="string" required=false %}
-A token identifying the next available page of data. This value is obtained from the response to a previous access of this endpoint. If the value of next\_page from the previous access is "null", there is no more available data.  
+{% swagger-parameter name="next:page" type="string" required="false" in="query" %}
+A token identifying the next available page of data. This value is obtained from the response to a previous access of this endpoint. If the value of next_page from the previous access is "null", there is no more available data.
+
+\
+
+
 Default: ""
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-This is an example response when the query specified that CRDC\_Instance\_GUIDs, Collection\_IDs, Patient\_IDs, and GCS\_URLs be returned. The `total_found` value indicates that 196844 rows are available, and the "rows\_returned" value indicates that 2 rows were returned in this response \(`page_size` was 2\).  
-The `next_page` value in the response can be used in a subsequent call to this API to retrieve the additional results.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
   "code": 200,
   "cohort": {
@@ -640,14 +511,10 @@ The `next_page` value in the response can be used in a subsequent call to this A
   "next_page": "gAAAAABhS2WcO-Ibwdo__0L0z6xMqcnnXoXo5A1EzHeEqqdoQRrupw9PxN29uZxUBvkaJyA_Y3Uf3XEHHA831zGeM9Xae8bOAdL-z_lCFcJ00JC-sGG4BMb4-9UwVsJ1qBkwx1WsXawGWd9jY8W5QnvKKL5eZtEhPwwd_iR-O1i8RWwPLdUsGnUrM78VmsKHXMQmvCZWQEvYuhmXx6uLn8rDSEczfuJLYvF_GzdFNpWgYSGjLzZYibqgZ18eFQyljhcuCX1UjLeW8YNsmO8HMn2Co-fV_W6FyNCt2XyhRFpfg4NOBR2UxLKRuA9b9sPKwJuoqY5-XlPLu6qjWEPKUX48tHNh50dD4FdJoREskSdOw2ulND_jHrg="
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Bad request
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="400" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -656,14 +523,10 @@ Bad request
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Server error
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="500" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -672,114 +535,143 @@ Server error
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/manifest/preview" %}
-{% api-method-summary %}
-cohorts/manifest/preview
-{% endapi-method-summary %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/manifest/preview" method="post" summary="cohorts/manifest/preview" %}
+{% swagger-description %}
+This API is equivalent to the following API sequence:
 
-{% api-method-description %}
-This API is equivalent to the following API sequence:  
-`POST /cohorts    
-GET /cohorts/{cohort_id}/manifest    
-DELETE /cohorts/{cohort_id}`  
+\
+
+
+
+
+`POST /cohorts GET /cohorts/{cohort_id}/manifest DELETE /cohorts/{cohort_id}`
+
+\
+
+
 However, this API does not actually create a cohort.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="CRDC\_Study\_GUID" type="boolean" required=false %}
+{% swagger-parameter name="CRDC:Study:GUID" type="boolean" required="false" in="query" %}
 If True, return the CRDC GUID of each study.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="CRDC\_Series\_GUID" type="boolean" required=false %}
+{% swagger-parameter name="CRDC:Series:GUID" type="boolean" required="false" in="query" %}
 If True, return the CRDC GUID of each series.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="CRDC\_Instance\_GUID" type="boolean" required=false %}
+{% swagger-parameter name="CRDC:Instance:GUID" type="boolean" required="false" in="query" %}
 If True, return the CRDC GUID of each instance.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="GCS\_URL" type="boolean" required=false %}
+{% swagger-parameter name="GCS:URL" type="boolean" required="false" in="query" %}
 If True, return the GCS URL of each instance.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="sql" type="boolean" required=false %}
-If True, return the BigQuery SQL that was used to generate the returned data.  
+{% swagger-parameter name="sql" type="boolean" required="false" in="query" %}
+If True, return the BigQuery SQL that was used to generate the returned data.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Collection\_ID" type="boolean" required=false %}
-If True, return the Collection ID of each instance.  
+{% swagger-parameter name="Collection:ID" type="boolean" required="false" in="query" %}
+If True, return the Collection ID of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Patient\_ID" type="boolean" required=false %}
-If True, return the Patient ID of each instance.  
+{% swagger-parameter name="Patient:ID" type="boolean" required="false" in="query" %}
+If True, return the Patient ID of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="StudyInstanceUID" type="boolean" required=false %}
-If True, return the StudyInstanceUID of each instance.  
+{% swagger-parameter name="StudyInstanceUID" type="boolean" required="false" in="query" %}
+If True, return the StudyInstanceUID of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="SeriesInstanceUID" type="boolean" required=false %}
-If True, return the SeriesInstanceUID of each instance..  
+{% swagger-parameter name="SeriesInstanceUID" type="boolean" required="false" in="query" %}
+If True, return the SeriesInstanceUID of each instance..
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="SOPInstanceUID" type="boolean" required=false %}
-If True, return the SOPInstanceUID of each instance.  
+{% swagger-parameter name="SOPInstanceUID" type="boolean" required="false" in="query" %}
+If True, return the SOPInstanceUID of each instance.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Source\_DOI" type="boolean" required=false %}
-If True, include the DOI of the TCIA collection description page of each instance  
+{% swagger-parameter name="Source:DOI" type="boolean" required="false" in="query" %}
+If True, include the DOI of the TCIA collection description page of each instance
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="page\_size" type="integer" required=false %}
-The maximum number of rows to return  
+{% swagger-parameter name="page:size" type="integer" required="false" in="query" %}
+The maximum number of rows to return
+
+\
+
+
 Default: 1000
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="next\_page" type="string" required=false %}
-A token identifying the next available page of data. This value is obtained from the response to a previous access of this endpoint. If the value of next\_page from the previous access is "null", there is no more data available.  
-If the empty string is passed, a new BQ query is performed.  
+{% swagger-parameter name="next:page" type="string" required="false" in="query" %}
+A token identifying the next available page of data. This value is obtained from the response to a previous access of this endpoint. If the value of next_page from the previous access is "null", there is no more data available.
+
+\
+
+
+If the empty string is passed, a new BQ query is performed.
+
+\
+
+
 Default: ""
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="cohort\_def" type="object" required=false %}
-A structure, including filterSet and IDC data version, defining the cohort. See `POST cohorts` for an example.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter name="cohort:def" type="object" required="false" in="body" %}
+A structure, including filterSet and IDC data version, defining the cohort. See 
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Refer to `GET cohorts/manifest/{cohort_id}` for an example response and discussion.
-{% endapi-method-response-example-description %}
+`POST cohorts`
 
-```text
+ for an example.
+{% endswagger-parameter %}
 
+{% swagger-response status="200" description="" %}
 ```
-{% endapi-method-response-example %}
+```
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Bad request
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="400" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -788,14 +680,10 @@ Bad request
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Server error
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="500" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -804,41 +692,29 @@ Server error
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/manifest/nextPage" %}
-{% api-method-summary %}
-cohorts/manifest/nextPage
-{% endapi-method-summary %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/manifest/nextPage" method="get" summary="cohorts/manifest/nextPage" %}
+{% swagger-description %}
+Get the next page of results from a cohorts/manifest/{cohort_id}, cohorts/manifest/preview or cohorts/manifest/nextPage query.
+{% endswagger-description %}
 
-{% api-method-description %}
-Get the next page of results from a cohorts/manifest/{cohort\_id}, cohorts/manifest/preview or cohorts/manifest/nextPage query.
-{% endapi-method-description %}
+{% swagger-parameter name="page:size" type="integer" required="false" in="query" %}
+The maximum number of rows to return
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="page\_size" type="integer" required=false %}
-The maximum number of rows to return  
+\
+
+
 Default: 1000
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="next\_page" type="string" required=true %}
-The next\_page token returned by a previous /cohorts/manifest/xxx request.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter name="next:page" type="string" required="true" in="query" %}
+The next_page token returned by a previous /cohorts/manifest/xxx request.
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-This is an example response when the _page\_size_ was 10.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
   "code": 200,
   "manifest": {
@@ -910,61 +786,55 @@ This is an example response when the _page\_size_ was 10.
   "next_page": "gAAAAABhS2VDWJ23H32nZ2KYUvC4skz15c2uZKpdPc7zvTebFTl6J0IePA8-VU7RMq9S3EOBsfvC-hz2W1GD48q8YB0GOjfLFzja0Y0AKHmWT_BR4na3Ag7B9rmnDSqfj8mOkHG9VS7aUHw6qauORxX5RGejUSUhryJ-e2TcsvbV6C7MAV5n5wknK9gkl900GjTdAksnhObZOPpC7lTd1YZI3vjHAh0H4RSxU8ffdVsvvZsJTHu7uF_JZHc4jNpE5_JLDZzYGUU7jlUlU9qaENv-ErNDkjdht_tK4LScqvrNULPeDEuU1wRa68bK9E6fv3ta3xqQNVduGA8XFIBKxR7TW17lDtRJxiZq47ZjmJ0Wd76P3FAhJSQ="
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/query/{cohort\_id}" %}
-{% api-method-summary %}
-cohorts/query/{cohort\_id}
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/query/{cohort:id}" method="get" summary="cohorts/query/{cohort_id}" %}
+{% swagger-description %}
 Return attributes of the instances in a cohort.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="cohort\_id" type="integer" required=true %}
-The cohort\_id of the cohort on which to perform the query.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter name="cohort:id" type="integer" required="true" in="path" %}
+The cohort_id of the cohort on which to perform the query.
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="sql" type="boolean" required=false %}
-If True, return the BigQuery SQL that was used to generate the returned data.  
+{% swagger-parameter name="sql" type="boolean" required="false" in="query" %}
+If True, return the BigQuery SQL that was used to generate the returned data.
+
+\
+
+
 Default: False
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="page\_size" type="integer" required=false %}
-The maximum number of items to return  
+{% swagger-parameter name="page:size" type="integer" required="false" in="query" %}
+The maximum number of items to return
+
+\
+
+
 Default: 1000
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="next\_page" type="string" required=false %}
-A token identifying the next available page of data. This value is obtained from the response to a previous access of this endpoint. If the value of next\_page from the previous access is "null", there is no more available data.  
+{% swagger-parameter name="next:page" type="string" required="false" in="query" %}
+A token identifying the next available page of data. This value is obtained from the response to a previous access of this endpoint. If the value of next_page from the previous access is "null", there is no more available data.
+
+\
+
+
 Default: Null
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="queryFields" type="array" required=true %}
-A queryFields object. The _fields_ element is an array of field identifiers whose values are to be returned. The supported queryable fields are enumerated in the definition of the queryFields object.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter name="queryFields" type="array" required="true" in="body" %}
+A queryFields object. The 
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-The following is an example of a response when the queryFields was :  
-{ "fields": \["SOPInstanceUID", "Modality", "BodyPartExamined", "SliceThickness" \] }. sql was True and page\_size was 5.  
-If SOPInstanceUID had been False, only the distinct combinations of Modality, BodyPartExamined and SliceThickness would have been returned.
-{% endapi-method-response-example-description %}
+_fields_
 
-```text
+ element is an array of field identifiers whose values are to be returned. The supported queryable fields are enumerated in the definition of the queryFields object.
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```
 {
   "code": 200,
   "cohort_def": {
@@ -1040,67 +910,59 @@ If SOPInstanceUID had been False, only the distinct combinations of Modality, Bo
   }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/query/preview" %}
-{% api-method-summary %}
-cohorts/query/preview
-{% endapi-method-summary %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/query/preview" method="post" summary="cohorts/query/preview" %}
+{% swagger-description %}
+This API is equivalent to the following API sequence:
 
-{% api-method-description %}
-This API is equivalent to the following API sequence:  
-`POST /cohorts    
-GET /cohorts/{cohort_id}/query    
-DELETE /cohorts/{cohort_id}    
-However, this API does not actually create a cohort.`
-{% endapi-method-description %}
+\
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="sql" type="boolean" required=false %}
+
+
+
+`POST /cohorts GET /cohorts/{cohort_id}/query DELETE /cohorts/{cohort_id} However, this API does not actually create a cohort.`
+{% endswagger-description %}
+
+{% swagger-parameter name="sql" type="boolean" required="false" in="query" %}
 If True, return the BigQuery SQL that was used to generate the returned query
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="page\_size" type="integer" required=false %}
-The maximum number of rows to return.  
+{% swagger-parameter name="page:size" type="integer" required="false" in="query" %}
+The maximum number of rows to return.
+
+\
+
+
 Default: 1000
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="next\_page" type="string" required=false %}
-A token identifying the next available page of data. This value is obtained from the response to a previous access of this endpoint. If the value of next\_page from the previous access is "null", there is no more data available.  
-If the empty string is passed, a new BQ query is performed.  
+{% swagger-parameter name="next:page" type="string" required="false" in="query" %}
+A token identifying the next available page of data. This value is obtained from the response to a previous access of this endpoint. If the value of next_page from the previous access is "null", there is no more data available.
+
+\
+
+
+If the empty string is passed, a new BQ query is performed.
+
+\
+
+
 Default: ""
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="queryPreviewBody" type="object" required=false %}
+{% swagger-parameter name="queryPreviewBody" type="object" required="false" in="body" %}
 The cohort definition and list of fields to query. The queryable fields are enumerated in the definition of the queryPreviewBody object.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Refer to cohorts/{cohort\_id}/query for an example response.
-{% endapi-method-response-example-description %}
-
-```text
-
+{% swagger-response status="200" description="" %}
 ```
-{% endapi-method-response-example %}
+```
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="400" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -1109,14 +971,10 @@ Refer to cohorts/{cohort\_id}/query for an example response.
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="500" description="" %}
+```
 {
   "message": "string",
   "code": 0,
@@ -1125,41 +983,29 @@ Refer to cohorts/{cohort\_id}/query for an example response.
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/query/nextPage" %}
-{% api-method-summary %}
-cohorts/query/nextPage
-{% endapi-method-summary %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/query/nextPage" method="get" summary="cohorts/query/nextPage" %}
+{% swagger-description %}
+Get the next page of results from a cohorts/query/{cohort_id}, cohorts/query/preview or cohorts/query/nextPage query.
+{% endswagger-description %}
 
-{% api-method-description %}
-Get the next page of results from a cohorts/query/{cohort\_id}, cohorts/query/preview or cohorts/query/nextPage query.
-{% endapi-method-description %}
+{% swagger-parameter name="page:size" type="integer" required="false" in="query" %}
+The maximum number of rows to return.
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="page\_size" type="integer" required=false %}
-The maximum number of rows to return.  
+\
+
+
 Default: 1000
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="next\_page" type="string" required=true %}
-The next\_page token returned by a previous cohorts/query/xxx request.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter name="next:page" type="string" required="true" in="query" %}
+The next_page token returned by a previous cohorts/query/xxx request.
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-This is an example response when the page\_size was 5.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
   "code": 200,
   "cohort": {},
@@ -1202,44 +1048,44 @@ This is an example response when the page\_size was 5.
   }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/dicomMetadata" %}
-{% api-method-summary %}
-dicomMetadata
-{% endapi-method-summary %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/cohorts/dicomMetadata" method="get" summary="dicomMetadata" %}
+{% swagger-description %}
+Get a defined, fixed set of metadata for all the instances in IDC data.See the example response for the list of attributes.
 
-{% api-method-description %}
-Get a defined, fixed set of metadata for all the instances in IDC data.See the example response for the list of attributes.  
-The returned data is paged. If the response includes a non-null next\_page value, additional data is available and can be obtained by passing the returned next page value in a subsequent call of this endpoint.  
-When a non-null next page value is passed, parameters other than page\_size are ignored.
-{% endapi-method-description %}
+\
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="page\_size" type="integer" required=false %}
-The maximum number of rows to return.  
+
+The returned data is paged. If the response includes a non-null next_page value, additional data is available and can be obtained by passing the returned next page value in a subsequent call of this endpoint.
+
+\
+
+
+When a non-null next page value is passed, parameters other than page_size are ignored.
+{% endswagger-description %}
+
+{% swagger-parameter name="page:size" type="integer" required="false" in="query" %}
+The maximum number of rows to return.
+
+\
+
+
 Default: 1000
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="next\_page" type="string" required=false %}
-A token identifying the next available page of data. This value is obtained from a previous access of this endpoint. If the value of next\_page from the previous response is "null", there is no more data available.  
+{% swagger-parameter name="next:page" type="string" required="false" in="query" %}
+A token identifying the next available page of data. This value is obtained from a previous access of this endpoint. If the value of next_page from the previous response is "null", there is no more data available.
+
+\
+
+
 If the empty string is passed, a new BQ query is performed.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-This is an example response when the page\_size query param was 2. As can be seen, the total number of rows found was 3075233. Additional data can be obtained by calling the API again and passing the returned next\_page token.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
   "code": 200,
   "next_page": "gAAAAABhSS0u_hWWjCxrcGViF0vo0bl-vQ66-RF0HFfeLyr7Y878BsUXehMhEOws4TpicguEVEk7dVe5vHbk147XVrIKkNdvkCd-lwzJGULS90PQ_J7iKaAH_4Q7v5ijPlZ6zO2MSwwWZf8ZzRH6pw1WGYicGYcm_0ErwFlyrDfPZGmrSP0wIZ0EBvK_lKolPvxv77VTMf5DeqqPzuqVHXEIeSe4Lh9v8d58IvT_2Ma8UR5RdyNwzRyi7p8lGhtFmpyUbs8MGAjR336-DnTQEwXIIOVhXEvecJG0AfYvbRR0NoaJu76cgMjkLq8gqxRy8IH7x3TAGsD2",
@@ -1403,41 +1249,29 @@ This is an example response when the page\_size query param was 2. As can be see
   }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/dicomMetadata/nextPage" %}
-{% api-method-summary %}
-dicomMetadata/nextPage
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/dicomMetadata/nextPage" method="get" summary="dicomMetadata/nextPage" %}
+{% swagger-description %}
 Get the next page of results from a /cohorts/dicomMetadata or /cohorts/dicomMetadata/nextPage query.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="page\_size" type="integer" required=false %}
-The maximum number of rows to return.  
+{% swagger-parameter name="page:size" type="integer" required="false" in="query" %}
+The maximum number of rows to return.
+
+\
+
+
 Default: 1000
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="next\_page" type="string" required=true %}
-The next\_page token returned by a previous query.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter name="next:page" type="string" required="true" in="query" %}
+The next_page token returned by a previous query.
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-This is an example response when the next\_page parameter was 2.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
   "code": 200,
   "cohort": {},
@@ -1602,30 +1436,22 @@ This is an example response when the next\_page parameter was 2.
   }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host=" " path="https://api.imaging.datacommons.cancer.gov/v1/user/account\_details" %}
-{% api-method-summary %}
+{% swagger baseUrl=" " path="https://api.imaging.datacommons.cancer.gov/v1/user/account:details" method="get" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+{% endswagger %}
+
 user/account\_details
-{% endapi-method-summary %}
 
-{% api-method-description %}
 Get account information for the currently authorized user
-{% endapi-method-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
 An AccountDetailsResponse object:
-{% endapi-method-response-example-description %}
 
-```text
+```
 accountDetailsResponse:
   type: "object"
   properties:
@@ -1670,8 +1496,3 @@ accountDetailsResponse:
     code:
       type: "integer"
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
