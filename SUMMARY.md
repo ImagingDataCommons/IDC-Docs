@@ -21,8 +21,9 @@
 * [Data versioning](data/data-versioning.md)
 * [Organization of data](data/organization-of-data/README.md)
   * [Files and metadata](data/organization-of-data/files-and-metadata.md)
-  * [Resolving CRDC Globally Unique Identifiers \(GUIDs\)](data/organization-of-data/guids-and-uuids.md)
-  * [Organization of data in v1 \(deprecated\)](data/organization-of-data/organization-of-data-v1.md)
+  * [Resolving CRDC Globally Unique Identifiers (GUIDs)](data/organization-of-data/guids-and-uuids.md)
+  * [Organization of data in v1 (deprecated)](data/organization-of-data/organization-of-data-v1.md)
+* [Downloading data](data/downloading-data.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
@@ -69,4 +70,3 @@
   * [Using a BQ Manifest to Load DICOM Files onto a VM](cookbook/virtual-machines/using-a-bq-manifest-to-load-dicom-files-onto-a-vm.md)
   * [Using VS Code with GCP VMs](cookbook/virtual-machines/using-vs-code-with-gcp-vms.md)
 * [NCI Cloud Resources](cookbook/nci-data-commons-cloud-resources.md)
-
