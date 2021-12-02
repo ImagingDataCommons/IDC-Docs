@@ -4,13 +4,14 @@
 The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
-## 4.12.6 - December 2021 - OHIF
+## 4.12.7 - December 2021 - OHIF
  
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
  
 Main highlights of this release include:
  
 * Fix handling of datasets with unsupported modalities.
+* Fix backward fetch of images for the current active series.
 
 ## 0.4.3 - November 2021 - Slim
 
