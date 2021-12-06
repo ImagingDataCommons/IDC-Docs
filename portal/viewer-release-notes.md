@@ -104,16 +104,16 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **New features**
-*Support for multiplexed immunofluorescence slide microscopy imaging;
-*Client-side additive blending of multiple channels using WebGL;
-*Client-side decoding of compressed frame items using WebAssembly based on Emscripten ports of libjpeg-turbo, openjpeg, and charls C/C++ libraries.
+* Support for multiplexed immunofluorescence slide microscopy imaging;
+* Client-side additive blending of multiple channels using WebGL;
+* Client-side decoding of compressed frame items using WebAssembly based on Emscripten ports of libjpeg-turbo, openjpeg, and charls C/C++ libraries.
 
 **Improvements**
-*Continuous integration testing pipeline using circle CI;
-*Deploy previews for manual regression testing.
+* Continuous integration testing pipeline using circle CI;
+* Deploy previews for manual regression testing.
 
 **Major changes**
-*Introduce new configuration parameter renderer.
+* Introduce new configuration parameter renderer.
 
 ## 4.9.20 - June 2021 - OHIF
 
