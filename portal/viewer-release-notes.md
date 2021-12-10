@@ -12,6 +12,7 @@ Main highlights of this release include:
  
 * Fix handling of datasets with unsupported modalities.
 * Fix backward fetch of images for the current active series.
+* Fix tag browser slider.
 
 ## 0.4.3 - November 2021 - Slim
 
