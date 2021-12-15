@@ -10,7 +10,7 @@ In order to download the data from IDC, you first need to define the list of spe
 
 **Using the IDC Portal**: see instructions [here](https://learn.canceridc.dev/portal/data-exploration-and-cohorts/understanding-cohorts) on how to define, save and export a cohort into BigQuery.&#x20;
 
-**Using BigQuery**: you can utilize the [`dicom_all`](https://console.cloud.google.com/bigquery?p=canceridc-data\&d=idc\_current\&t=dicom\_all\&page=table) BigQuery table discussed in [this documentation article](https://learn.canceridc.dev/data/organization-of-data/files-and-metadata#bigquery-tables) to subset the files you need based on the DICOM metadata attributes as needed utilizing the SQL query interface. The `gcs_url` column contains Google Storage gs:// URLs that can be used to retrieve the files.
+**Using BigQuery**: you can utilize the [`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) BigQuery table discussed in [this documentation article](https://learn.canceridc.dev/data/organization-of-data/files-and-metadata#bigquery-tables) to subset the files you need based on the DICOM metadata attributes as needed utilizing the SQL query interface. The `gcs_url` column contains Google Storage gs:// URLs that can be used to retrieve the files.
 
 If you have a BigQuery table that has a column with `gcs_url` values (such as the BigQuery table with the manifest exported using IDC portal), you can fetch the content of that column into a file using the following GCP Cloud SDK command line (`tail -n +2` is used to skip the header of the exported column). You will need to substitute `MY_COHORT_ID` with the name of the BigQuery table with your manifest.
 
