@@ -1,14 +1,10 @@
 # Downloading data
 
 {% hint style="info" %}
-You will need to have a valid Google Cloud Platform (GCP) ProjectID with billing enabled to download files from IDC buckets (even though you will not be charged if you crossload data to a GCS VM). You can get a sponsored GCP project from IDC through the application form [here](https://learn.canceridc.dev/introduction/requesting-gcp-cloud-credits).&#x20;
+Egress of IDC data out of the cloud is free, since IDC data is participating in [Google Public Datasets Program](https://console.cloud.google.com/marketplace/product/gcp-public-data-idc/nci-idc-data)!&#x20;
 {% endhint %}
 
 In order to download the data from IDC, you first need to define the list of specific files you want to download. The list of files is defined by the Google Storage gs:// URLs. Given that list of files, you can use the Google Cloud SDK `gsutil` command to crossload files to a GCP VM, or to download files to your computer.&#x20;
-
-{% hint style="danger" %}
-Download of the IDC files from GCP to a non-GCP location will incur egress charges to the project you specify while downloading the data! Crossloading of the data to a GCP VM is free within North America regions.
-{% endhint %}
 
 ### How to define the list of files for download&#x20;
 
@@ -29,10 +25,10 @@ bq query --format=csv  --max_rows=2000000 --use_legacy_sql=false \
 
 ### How to retrieve the files defined by Google Storage URLs
 
-If you have the list of GCS URLs stored in a file on disk, you can use the following command (having saved the project ID you chose above in the `ProjectID` shell variable, or replacing the `$ProjectID` argument with the actual project ID, and assuming you want to skip the first line in the manifest if it's a header):
+If you have the list of GCS URLs stored in a file on disk, you can use the following command:
 
 ```shell-session
-$ cat gcs_urls.txt | gsutil -u $ProjectID -m cp -I .
+$ cat gcs_urls.txt | gsutil -m cp -I .
 ```
 
 The command above is quick and simple to get the small number of files from IDC, but it is not very efficient. You can implement parallel download of your cohort using `xargs` as follows:
@@ -40,7 +36,7 @@ The command above is quick and simple to get the small number of files from IDC,
 Save the following into a shell script, such as `gsutil_download.sh` (here, `$DESTINATION` could be a local folder, or another GCP storage bucket):
 
 ```shell-session
-$ echo "gsutil -u $ProjectID cp $* $DESTINATION" > gsutil_download.sh
+$ echo "gsutil cp $* $DESTINATION" > gsutil_download.sh
 $ chmod +x gsutil_download.sh
 ```
 
