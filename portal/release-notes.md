@@ -8,6 +8,18 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 5.0 - December 9, 2021 (canceridc.202112091128.eb0e309)
+
+Main highlights of this release include:
+
+* New attributes including Manufacturer, Manufacturer Model Name, and Slice Thickness added&#x20;
+* Checked attribute values are now shown at the top of the attribute value lists&#x20;
+* Ability to search by CaseID added to the Selected Cases table&#x20;
+* Ability to search by StudyID added to the Selected Studies table&#x20;
+* Study Date added to the Studies Table&#x20;
+* Changed the persistence of the StudyID tooltip in the tables so that the StudyID can be copied from the tooltip&#x20;
+* Specific columns can now be selected in the BigQuery cohort export
+
 ## 2.1.0 - August 2021 (canceridc.202108261153.70f59e0)
 
 The Imaging Data Commons Explore Image Data portal is a platform that allows users to explore, filter, create cohorts, and view image studies and series using cutting-edge technology viewers.
