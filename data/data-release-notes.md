@@ -4,6 +4,29 @@
 Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net/). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
 {% endhint %}
 
+## v5 - December 2021
+
+New collections:
+* [COVID-19-NY-SBU](https://dx.doi.org/10.7937/TCIA.BBAG-2923)
+* [B-mode-and-CEUS-Liver](https://dx.doi.org/10.7937/TCIA.2021.v4z7-tc39)
+* [APOLLO-5-LSCC](https://dx.doi.org/10.7937/TCIA.QQ0G-EB24)
+* [CMMD](https://dx.doi.org/10.7937/tcia.eqde-4b16)
+* [ACRIN-HNSCC-FDG-PET-CT](https://dx.doi.org/10.7937/K9/TCIA.2016.JQEJZZNG)
+* [Duke-Breast-Cancer-MRI](https://dx.doi.org/10.7937/TCIA.e3sv-re93)
+
+New analysis results collections:
+* Outcome Prediction in Patients with Glioblastoma by Using Imaging, Clinical, and Genomic Biomarkers: Focus on the Nonenhancing Component of the Tumor ([GBM-MR-NER-Outcomes](https://dx.doi.org/10.7937/K9/TCIA.2014.FAB7YRPZ))
+* DICOM-SEG Conversions for TCGA-LGG and TCGA-GBM Segmentation Datasets ([DICOM-Glioma-SEG](https://dx.doi.org/10.7937/TCIA.2018.ow6ce3ml))
+
+Updated collections:
+* [TCGA-GBM](https://dx.doi.org/10.7937/K9/TCIA.2014.FAB7YRPZ)
+* [TCGA-LGG](https://dx.doi.org/10.7937/TCIA.2018.ow6ce3ml)
+* [QIN-HEADNECK](https://dx.doi.org/10.7937/K9/TCIA.2015.K0F5CGLI)
+* [Breast-Cancer-Screening-DBT](https://dx.doi.org/10.7937/e4wt-cd02)
+* [NSCLC Radiogenomics](https://dx.doi.org/10.7937/K9/TCIA.2017.7hs46erv)
+* [QIN-HEADNECK](https://dx.doi.org/10.7937/K9/TCIA.2015.K0F5CGLI)
+* [Pseudo-PHI-DICOM-Data](https://dx.doi.org/10.7937/s17z-r072)
+
 ## v4 - September 2021
 
 [National Lung Screening Trial \(NLST\) collection](https://doi.org/10.7937/tcia.hmq8-j677) is added. The data included consists of the following components:
