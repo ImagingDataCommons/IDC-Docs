@@ -1,10 +1,10 @@
 # Downloading data
 
 {% hint style="info" %}
-Egress of IDC data out of the cloud is free, since IDC data is participating in [Google Public Datasets Program](https://console.cloud.google.com/marketplace/product/gcp-public-data-idc/nci-idc-data)!&#x20;
+Egress of IDC data out of the cloud is free, sponsored by [Google Public Datasets Program](https://console.cloud.google.com/marketplace/product/gcp-public-data-idc/nci-idc-data)!&#x20;
 {% endhint %}
 
-In order to download the data from IDC, you first need to define the list of specific files you want to download. The list of files is defined by the Google Storage gs:// URLs. Given that list of files, you can use the Google Cloud SDK `gsutil` command to crossload files to a GCP VM, or to download files to your computer.&#x20;
+In order to download the data from IDC, you first need to define the list of specific files you want to download. The list of files is defined by the Google Storage `gs://` URLs. Given that list of files, you can use the Google Cloud SDK `gsutil` command to crossload files to a GCP VM, or to download files to your computer.&#x20;
 
 ### How to define the list of files for download&#x20;
 
