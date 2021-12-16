@@ -31,3 +31,4 @@ Notebook demonstrating deployment and application of abdominal structures segmen
   * [https://github.com/mdai/ml-lessons/](https://github.com/mdai/ml-lessons/)
   * [http://uwmsk.org/jupyter/](http://uwmsk.org/jupyter/)
   * [https://github.com/JoaoSantinha/Medical\_Image\_Analysis\_Workshop](https://github.com/JoaoSantinha/Medical\_Image\_Analysis\_Workshop)
+* Google Colab Tips for Power Users: [https://amitness.com/2020/06/google-colaboratory-tips/](https://amitness.com/2020/06/google-colaboratory-tips/)
