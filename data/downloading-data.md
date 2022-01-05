@@ -16,7 +16,7 @@ You will need to have [Google Cloud SDK](https://cloud.google.com/sdk/docs/insta
 
 **Using BigQuery**: you can utilize the [`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) BigQuery table discussed in [this documentation article](https://learn.canceridc.dev/data/organization-of-data/files-and-metadata#bigquery-tables) to subset the files you need based on the DICOM metadata attributes as needed utilizing the SQL query interface. The `gcs_url` column contains Google Storage gs:// URLs that can be used to retrieve the files.
 
-If you have a BigQuery table that has a column with `gcs_url` values (such as the BigQuery table with the manifest exported using IDC portal), you can fetch the content of that column into a file using the following GCP Cloud SDK command line (`tail -n +2` is used to skip the header of the exported column). You will need to substitute `MY_COHORT_ID` with the name of the BigQuery table with your manifest.
+If you have a BigQuery table that has a column with `gcs_url` values (such as the BigQuery table with the manifest exported using IDC portal), you can fetch the content of that column into a file using the following GCP Cloud SDK command line (`tail -n +2` is used to skip the header of the exported column). You will need to substitute `MY_COHORT_TABLE` with the name of the BigQuery table with your manifest.
 
 {% hint style="danger" %}
 Make sure you adjust the `--max-rows` parameter in the below to be equal or exceed the number of rows in the result of the query, otherwise your list will be truncated!
@@ -24,7 +24,14 @@ Make sure you adjust the `--max-rows` parameter in the below to be equal or exce
 
 ```shell-session
 bq query --format=csv  --max_rows=2000000 --use_legacy_sql=false \
-  "SELECT gcs_url from \`MY_COHORT_ID\`" | tail -n +2 > gcs_urls.csv
+  "SELECT gcs_url from \`MY_COHORT_TABLE\`" | tail -n +2 > gcs_urls.csv
+```
+
+You can also pass the query against [`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) directly into the command above, if you do not have a cohort table. As an example, the query below will select `gcs_url` column for all instances that belong to collections that start with `cptac` and have `Modality` of `SM` (slide microscopy):
+
+```
+bq query --format=csv  --max_rows=2000000 --use_legacy_sql=false \
+  "SELECT gcs_url FROM \`bigquery-public-data.idc_current.dicom_all\` where Modality = \"SM\"  and collection_id like \"cptac%\"" | tail -n +2 > gcs_urls.csv
 ```
 
 ### How to retrieve the files defined by Google Storage URLs
