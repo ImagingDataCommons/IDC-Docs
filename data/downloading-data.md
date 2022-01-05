@@ -29,7 +29,7 @@ bq query --format=csv  --max_rows=2000000 --use_legacy_sql=false \
 
 You can also pass the query against [`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) directly into the command above, if you do not have a cohort table. As an example, the query below will select `gcs_url` column for all instances that belong to collections that start with `cptac` and have `Modality` of `SM` (slide microscopy):
 
-```
+```shell-session
 bq query --format=csv  --max_rows=2000000 --use_legacy_sql=false \
   "SELECT gcs_url FROM \`bigquery-public-data.idc_current.dicom_all\` where Modality = \"SM\"  and collection_id like \"cptac%\"" | tail -n +2 > gcs_urls.csv
 ```
@@ -54,7 +54,7 @@ $ chmod +x gsutil_download.sh
 Next, feed the file with the list of GCS URLs to `xargs`. You can experiment with the `-n` (number of GCS URLs passed to a single invocation of the download script) and `-P` (number of processes that will run the download script) parameters to optimize performance.
 
 ```shell-session
-$ cat gcs_urls.txt | xargs -n 25 -P 10 ./gsutil_download.sh
+$ t gcs_urls.txt | xargs -n 25 -P 10 ./gsutil_download.sh
 ```
 
 
