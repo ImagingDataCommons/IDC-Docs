@@ -8,6 +8,14 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 6.0 - January 10, 2022 (canceridc.202201101504.eb0e309)
+
+Main highlights of this release include:
+
+* Collections which have limited access are now denoted as such in the Collection tab on the Exploration page&#x20;
+* Links to image files belonging to limited collections have been removed from the Studies and Series tables on the Exploration page&#x20;
+* The quota of image file data that can be served per user per day has been reduced from 137 to 40 GB
+
 ## 5.0 - December 9, 2021 (canceridc.202112091128.eb0e309)
 
 Main highlights of this release include:
