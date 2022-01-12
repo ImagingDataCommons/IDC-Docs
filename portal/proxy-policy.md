@@ -23,8 +23,7 @@ will be considered a denial-of-service attack.
 
 If you, as a researcher, are using the viewer to explore images as a part of your research (e.g. to
 fine-tune your cohort selections) and hit your daily quota, please feel free to reach out to us at
-<support@canceridc.dev> to discuss the restriction. Note that there are resources under active development to
-allow a DICOMWeb interface hosted on a VM that is backed by cloud storage buckets.
+<support@canceridc.dev> to discuss the restriction.
 
 Thus, if any of these conditions are met:
 
