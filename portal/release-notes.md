@@ -14,11 +14,11 @@ Main highlights of this release include:
 
 * Seventeen new collections added
 
-* The big query string corresponding to a cohort can now be displayed in user-readable format by pressing a button on either the cohort or cohort list pages
+* The BigQuery query string corresponding to a cohort can now be displayed in user-readable format by pressing a button on either the cohort or cohort list pages
 
-* On the exploration page, collections can now be sorted alphabetically or by the number of cases. Selected cases are ordered at the top of the collection list
+* On the exploration page collections can now be sorted alphabetically or by the number of cases. Selected cases are ordered at the top of the collection list
 
-* Table rows can be selected by clicking anywhere within the row, and not just on the checkbox.
+* Table rows can be selected by clicking anywhere within the row, not just on the checkbox
  
 
 
