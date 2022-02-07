@@ -8,6 +8,21 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 7.0 - February 7, 2022 (canceridc.202202071117.164252a)
+
+Main highlights of this release include:
+
+* Seventeen new collections added
+
+* The big query string corresponding to a cohort can now be displayed in user-readable format by pressing a button on either the cohort or cohort list pages
+
+* On the exploration page, collections can now be sorted alphabetically or by the number of cases. Selected cases are ordered at the top of the collection list
+
+* Table rows can be selected by clicking anywhere within the row, and not just on the checkbox.
+ 
+
+
+
 ## 6.0 - January 10, 2022 (canceridc.202201101504.eb0e309)
 
 Main highlights of this release include:
