@@ -19,6 +19,8 @@ Main highlights of this release include:
 * On the exploration page collections can now be sorted alphabetically or by the number of cases. Selected cases are ordered at the top of the collection list
 
 * Table rows can be selected by clicking anywhere within the row, not just on the checkbox
+
+* The BigQuery export cohort manifest includes the IDC data version as an optional column  
  
 
 
