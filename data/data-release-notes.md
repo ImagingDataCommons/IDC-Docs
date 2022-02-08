@@ -1,8 +1,35 @@
 # Data release notes
 
 {% hint style="info" %}
-Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net/). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
+Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
 {% endhint %}
+
+## v7 - February 2022
+
+The main highlight of this release is the addition of the Slide Microscopy imaging component to the remaining CPTAC collections.
+
+New collections
+
+1. [APOLLO-5-ESCA](https://dx.doi.org/10.7937/n69a-7a26)&#x20;
+2. [APOLLO-5-LUAD](https://dx.doi.org/10.7937/BDM9-4623)&#x20;
+3. [APOLLO-5-PAAD](https://dx.doi.org/10.7937/tcia.1yeg-5740)&#x20;
+4. [APOLLO-5-THYM](https://dx.doi.org/10.7937/tcia.0pg4-nh82)&#x20;
+5. [CPTAC-AML](https://dx.doi.org/10.7937/tcia.2019.b6foe619)&#x20;
+6. [CPTAC-BRCA](https://dx.doi.org/10.7937/TCIA.CAEM-YS80)&#x20;
+7. [CPTAC-COAD](https://dx.doi.org/10.7937/TCIA.YZWQ-ZZ63)&#x20;
+8. [CPTAC-OV](https://dx.doi.org/10.7937/TCIA.ZS4A-JD58)&#x20;
+9. [Pancreatic-CT-CBCT-SEG](https://dx.doi.org/10.7937/TCIA.ESHQ-4D90)&#x20;
+10. [Pediatric-CT-SEG](https://dx.doi.org/10.7937/TCIA.X0H0-1706)
+
+Updated collections
+
+1. [CPTAC-CCRCC](https://dx.doi.org/10.7937/K9/TCIA.2018.OBLAMN27)&#x20;
+2. [CPTAC-CM](https://dx.doi.org/10.7937/K9/TCIA.2018.ODU24GZE)&#x20;
+3. [CPTAC-LSCC](https://dx.doi.org/10.7937/K9/TCIA.2018.6EMUB5L2)&#x20;
+4. [CPTAC-LUAD](https://dx.doi.org/10.7937/K9/TCIA.2018.PAT12TBS)&#x20;
+5. [CPTAC-PDA](https://dx.doi.org/10.7937/K9/TCIA.2018.SC20FO18)&#x20;
+6. [CPTAC-SAR](https://dx.doi.org/10.7937/TCIA.2019.9bt23r95)&#x20;
+7. [CPTAC-UCEC](https://dx.doi.org/10.7937/K9/TCIA.2018.3R3JUISW)
 
 ## v6 - January 2022
 
@@ -14,7 +41,7 @@ Original collections:
 2. [ACRIN-DSC-MR-Brain](https://doi.org/10.7937/tcia.2019.zr1pjf4i)
 3. [ACRIN-FMISO-Brain](https://doi.org/10.7937/K9/TCIA.2018.vohlekok)
 4. [ACRIN-HNSCC-FDG-PET-CT](https://doi.org/10.7937/K9/TCIA.2016.JQEJZZNG)
-5. [Anti-PD-1_MELANOMA](https://doi.org/10.7937/tcia.2019.1ae0qtcu)
+5. [Anti-PD-1\_MELANOMA](https://doi.org/10.7937/tcia.2019.1ae0qtcu)
 6. [Brain-Tumor-Progression](https://doi.org/10.7937/K9/TCIA.2018.15quzvnb)
 7. [CPTAC-GBM](https://doi.org/10.7937/K9/TCIA.2018.3RJE41Q1)
 8. [CPTAC-HNSCC](https://doi.org/10.7937/K9/TCIA.2018.UW45NH81)
@@ -45,6 +72,7 @@ Analysis results collections:
 ## v5 - December 2021
 
 New collections:
+
 * [COVID-19-NY-SBU](https://dx.doi.org/10.7937/TCIA.BBAG-2923)
 * [B-mode-and-CEUS-Liver](https://dx.doi.org/10.7937/TCIA.2021.v4z7-tc39)
 * [APOLLO-5-LSCC](https://dx.doi.org/10.7937/TCIA.QQ0G-EB24)
@@ -53,10 +81,12 @@ New collections:
 * [Duke-Breast-Cancer-MRI](https://dx.doi.org/10.7937/TCIA.e3sv-re93)
 
 New analysis results collections:
+
 * Outcome Prediction in Patients with Glioblastoma by Using Imaging, Clinical, and Genomic Biomarkers: Focus on the Nonenhancing Component of the Tumor ([GBM-MR-NER-Outcomes](https://dx.doi.org/10.7937/K9/TCIA.2014.FAB7YRPZ))
 * DICOM-SEG Conversions for TCGA-LGG and TCGA-GBM Segmentation Datasets ([DICOM-Glioma-SEG](https://dx.doi.org/10.7937/TCIA.2018.ow6ce3ml))
 
 Updated collections:
+
 * [TCGA-GBM](https://dx.doi.org/10.7937/K9/TCIA.2014.FAB7YRPZ)
 * [TCGA-LGG](https://dx.doi.org/10.7937/TCIA.2018.ow6ce3ml)
 * [QIN-HEADNECK](https://dx.doi.org/10.7937/K9/TCIA.2015.K0F5CGLI)
@@ -67,32 +97,32 @@ Updated collections:
 
 ## v4 - September 2021
 
-[National Lung Screening Trial \(NLST\) collection](https://doi.org/10.7937/tcia.hmq8-j677) is added. The data included consists of the following components:
+[National Lung Screening Trial (NLST) collection](https://doi.org/10.7937/tcia.hmq8-j677) is added. The data included consists of the following components:
 
-1\) CT images available as any other imaging collection \(via IDC Portal, BigQuery metadata tables, and storage buckets\);
+1\) CT images available as any other imaging collection (via IDC Portal, BigQuery metadata tables, and storage buckets);
 
 2\) a subset of clinical data available in the BigQuery tables starting with `nlst_` under the `idc_v4` dataset, as documented in the [Collection-specific BigQuery Tables](organization-of-data/files-and-metadata.md) section.
 
-3\) One instance is missing from patient/study/series:  
+3\) One instance is missing from patient/study/series:\
 `126153/1.2.840.113654.2.55.319335498043274792486636919135185299851/1.2.840.113654.2.55.262421043240525317038356381369289737801`
 
-4\) Three instances are missing from patient/study/series:  
+4\) Three instances are missing from patient/study/series:\
 `215303/1.3.6.1.4.1.14519.5.2.1.7009.9004.337968382369511017896638591276/1.3.6.1.4.1.14519.5.2.1.7009.9004.180224303090109944523368212991`
 
 ## v3 - August 2021
 
-The following radiology collections were updated to include DICOM Slide Microscopy \(SM\) images converted from the original vendor-specific representation into [dual personality DICOM-TIFF format](../dicom/dicom-tiff-dual-personality-files.md).
+The following radiology collections were updated to include DICOM Slide Microscopy (SM) images converted from the original vendor-specific representation into [dual personality DICOM-TIFF format](../dicom/dicom-tiff-dual-personality-files.md).
 
 1. [CPTAC-LUAD](https://doi.org/10.7937/K9/TCIA.2018.PAT12TBS)
 2. [CPTAC-LSCC](https://doi.org/10.7937/K9/TCIA.2018.6EMUB5L2)
 
 {% hint style="warning" %}
-The DICOM Slide Microscopy \(SM\) images included in the collections above in IDC are not available in TCIA. TCIA only includes images in the vendor-specific SVS format!
+The DICOM Slide Microscopy (SM) images included in the collections above in IDC are not available in TCIA. TCIA only includes images in the vendor-specific SVS format!
 {% endhint %}
 
 ## v2 - June 2021
 
-Listed below are all of the [original](https://www.cancerimagingarchive.net/collections/) and [analysis results](https://www.cancerimagingarchive.net/tcia-analysis-results/) collections of [The Cancer Imaging Archive](https://www.cancerimagingarchive.net/) currently hosted by IDC, with the links to the Digital Object Identifiers \(DOIs\) of those collections.
+Listed below are all of the [original](https://www.cancerimagingarchive.net/collections/) and [analysis results](https://www.cancerimagingarchive.net/tcia-analysis-results/) collections of [The Cancer Imaging Archive](https://www.cancerimagingarchive.net) currently hosted by IDC, with the links to the Digital Object Identifiers (DOIs) of those collections.
 
 New original collections:
 
@@ -183,7 +213,7 @@ New analysis results collections:
 
 ## v1 - October 2020
 
-Listed below are all of the [original](https://www.cancerimagingarchive.net/collections/) and [analysis results](https://www.cancerimagingarchive.net/tcia-analysis-results/) collections of [The Cancer Imaging Archive](https://www.cancerimagingarchive.net/) currently hosted by IDC, with the links to the Digital Object Identifiers \(DOIs\) of those collections.
+Listed below are all of the [original](https://www.cancerimagingarchive.net/collections/) and [analysis results](https://www.cancerimagingarchive.net/tcia-analysis-results/) collections of [The Cancer Imaging Archive](https://www.cancerimagingarchive.net) currently hosted by IDC, with the links to the Digital Object Identifiers (DOIs) of those collections.
 
 Original collections included:
 
@@ -208,7 +238,7 @@ Original collections included:
 19. [TCGA-KIRC](https://doi.org/10.7937/K9/TCIA.2016.V6PBVTDR)
 20. [TCGA-LGG](https://doi.org/10.7937/K9/TCIA.2016.L4LTD3TK)
 21. [TCGA-GBM](https://doi.org/10.7937/K9/TCIA.2016.RNYFUYE9)
-22. [ISPY1 \(ACRIN 6657\)](https://doi.org/10.7937/K9/TCIA.2016.HdHpgJLK)
+22. [ISPY1 (ACRIN 6657)](https://doi.org/10.7937/K9/TCIA.2016.HdHpgJLK)
 23. [QIN-HeadNeck](https://doi.org/10.7937/K9/TCIA.2015.K0F5CGLI)
 24. [LIDC-IDRI](https://doi.org/10.7937/K9/TCIA.2015.LO9QL9SX)
 25. [NSCLC-Radiomics](https://wiki.cancerimagingarchive.net/display/Public/NSCLC-Radiomics)
@@ -216,5 +246,5 @@ Original collections included:
 Analysis collections included:
 
 1. [Standardized representation of the TCIA LIDC-IDRI annotations using DICOM](https://doi.org/10.7937/TCIA.2018.h7umfurq)
-2. [QIN multi-site collection of Lung CT data with Nodule Segmentations](https://doi.org/10.7937/K9/TCIA.2015.1BUVFJR7) \(only items corresponding to the LIDC-IDRI original collection are included\)
-3. [DICOM SR of clinical data and measurement for breast cancer collections to TCIA](https://doi.org/10.7937/TCIA.2019.wgllssg1) \(only items corresponding to the ISPY1 original collection are included\)
+2. [QIN multi-site collection of Lung CT data with Nodule Segmentations](https://doi.org/10.7937/K9/TCIA.2015.1BUVFJR7) (only items corresponding to the LIDC-IDRI original collection are included)
+3. [DICOM SR of clinical data and measurement for breast cancer collections to TCIA](https://doi.org/10.7937/TCIA.2019.wgllssg1) (only items corresponding to the ISPY1 original collection are included)
