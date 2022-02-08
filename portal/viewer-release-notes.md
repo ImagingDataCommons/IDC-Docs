@@ -5,14 +5,14 @@ The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
 ## 4.12.17 - February 2022 - OHIF
- 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
- 
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+
 Main highlights of this release include:
- 
+
 * Fix fail to load SEG related to geometry assumptions.
 * Fix fail to load SEG related to tolerance.
-* Add SR annotations.
+* Add initial support for SR planar annotations.
 
 ## 0.4.5 - January 2022 - Slim
 
@@ -21,23 +21,24 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **Bug fixes**
+
 * Fix selection of VOLUME or THUMBNAIL images with different Photometric Interpretation.
 
 ## 4.12.12 - January 2022 - OHIF
- 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
- 
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+
 Main highlights of this release include:
- 
-* Fix rt struct right panel updates.
+
+* Fix RTSTRUCT right panel updates.
 * Fix SEG loading regression.
 
 ## 4.12.7 - December 2021 - OHIF
- 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
- 
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+
 Main highlights of this release include:
- 
+
 * Fix handling of datasets with unsupported modalities.
 * Fix backward fetch of images for the current active series.
 * Fix tag browser slider.
@@ -49,19 +50,19 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **Bug fixes**
+
 * Rotate box in overview map outlining the extent of the current view together with the image
 
 ## 4.12.5 - November 2021 - OHIF
- 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
- 
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+
 Main highlights of this release include:
- 
+
 * Fix segmentation/rtstruct menu badge update when switching current displayed series;
 * Add to series thumbnail link icon if they are connected to any annotation (segmentation, etc...);
 * Fix problems opening series when the study includes many series;
 * Fix segments visibility handler.
-
 
 ## 0.4.1 - October 2021 - Slim
 
@@ -70,16 +71,18 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **Improvements**
+
 * Include images with new flavor THUMBNAIL in image pyramid;
 * Properly fit overview map into HTML element and disable re-centering of overview map when user navigates main map;
 * Allow drawing of ROIs that extent beyond the slide coordinate system (i.e., allow negative ROI coordinates).
 
 **Bug fixes**
+
 * Prevent display of annotation marker when ROI is deactivated
 
 ## 4.11.2 - October 2021 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -94,7 +97,8 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **Bug fixes**
- * Set PUBLIC_URL in Dockerfile.
+
+* Set PUBLIC\_URL in Dockerfile.
 
 ## 0.3.0 - September 2021 - Slim
 
@@ -103,6 +107,7 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **Improvements**
+
 * Add button to display information about application and environment;
 * Add ability to include logo;
 * Verify content of SR documents before attempting to load annotations;
@@ -112,13 +117,14 @@ Main highlights of this release include:
 * Add unit tests.
 
 **Bug fixes**
+
 * Disable zoom of overview map;
 * Fix pagination of worklist;
 * Prevent delay in tile rendering.
 
 ## 4.10.1 - September 2021 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -133,20 +139,23 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **New features**
+
 * Support for multiplexed immunofluorescence slide microscopy imaging;
 * Client-side additive blending of multiple channels using WebGL;
 * Client-side decoding of compressed frame items using WebAssembly based on Emscripten ports of libjpeg-turbo, openjpeg, and charls C/C++ libraries.
 
 **Improvements**
+
 * Continuous integration testing pipeline using circle CI;
 * Deploy previews for manual regression testing.
 
 **Major changes**
+
 * Introduce new configuration parameter renderer.
 
 ## 4.9.20 - June 2021 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -161,7 +170,7 @@ Inital Release.
 
 ## 4.9.17 - May 2021 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -170,7 +179,7 @@ Main highlights of this release include:
 
 ## 4.9.13 - April 2021 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -181,7 +190,7 @@ Main highlights of this release include:
 
 ## 4.9.7 - March 2021 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -197,7 +206,7 @@ Main highlights of this release include:
 
 ## 4.8.10 - February 2021 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -206,7 +215,7 @@ Main highlights of this release include:
 
 ## 4.8.5 - Jannuary 2021 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -215,11 +224,11 @@ Main highlights of this release include:
 * Add IDC funding acknowledgment;
 * Fix RSTRUCT menu panel undefined variables;
 * Fix RSTRUCT menu visibility when loading a series;
-* Fix segments visibility control \(SEG menu\) bugs .
+* Fix segments visibility control (SEG menu) bugs .
 
 ## 4.8.0 - December 2020 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
@@ -229,9 +238,8 @@ Main highlights of this release include:
 
 ## 4.5.22 - October 2020 - OHIF
 
-**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation \(OHIF\)](http://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
 Main highlights of this release include:
 
 * Add MPR crosshair tool.
-
