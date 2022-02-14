@@ -8,7 +8,7 @@ Imaging Data Commons (IDC) is a new node in the [Cancer Research Data Commons (C
 4. Additional data types contained in other Cancer Research Data Commons nodes (e.g., [Genomics Data Commons](https://datacommons.cancer.gov/repository/genomic-data-commons) and [Proteomic Data Commons](https://datacommons.cancer.gov/repository/proteomic-data-commons)).
 
 {% hint style="info" %}
-The overview of IDC is available in this open access publication:
+The overview of IDC is available in this open access publication. If you use IDC, please acknowledge us by citing it!
 
 > Fedorov, A., Longabaugh, W. J. R., Pot, D., Clunie, D. A., Pieper, S., Aerts, H. J. W. L., Homeyer, A., Lewis, R., Akbarzadeh, A., Bontempi, D., Clifford, W., Herrmann, M. D., Höfener, H., Octaviano, I., Osborne, C., Paquette, S., Petts, J., Punzo, D., Reyes, M., Schacherer, D. P., Tian, M., White, G., Ziegler, E., Shmulevich, I., Pihl, T., Wagner, U., Farahani, K. & Kikinis, R. NCI Imaging Data Commons. Cancer Res. **81,** 4188–4193 (2021). [http://dx.doi.org/10.1158/0008-5472.CAN-21-0950](http://dx.doi.org/10.1158/0008-5472.CAN-21-0950)
 
