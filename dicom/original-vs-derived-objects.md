@@ -17,7 +17,7 @@ You can use one of the existing tools to reconstruct image volume instead of imp
 {% endhint %}
 
 * [dcm2niix](https://github.com/rordenlab/dcm2niix): command-line tool to convert neuroimaging data from the DICOM format to the NIfTI format
-* [Plastimatch](https://www.plastimatch.org/): open source software for image computation, which includes [command-line file format converter](https://www.plastimatch.org/plastimatch.html)
+* [Plastimatch](https://plastimatch.org/): open source software for image computation, which includes [command-line file format converter](https://plastimatch.org/plastimatch.html)
 * [dicom2nifti](https://github.com/icometrix/dicom2nifti): python library providing API and command-line tools for converting DICOM images into NIfTI format
 * [SimpleITK](https://simpleitk.readthedocs.io/en/master/index.html): python interface to the [Insight Toolkit](https://github.com/InsightSoftwareConsortium/ITK), includes [DICOM read functionality](https://simpleitk.readthedocs.io/en/master/link_DicomSeriesReader_docs.html).
 
