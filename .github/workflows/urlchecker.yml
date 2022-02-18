@@ -1,0 +1,62 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the prod branch
+  push:
+    branches: [ prod ]
+  pull_request:
+    branches: [ prod ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      - name: urlchecker-action
+        # You may pin to the exact commit or the version.
+        # uses: urlstechie/urlchecker-action@34deb4cef759f25e661415f3597a1ad1d0e7a4c6
+        uses: urlstechie/urlchecker-action@0.0.25
+        with:
+          # A project to clone. If not provided, assumes already cloned in the present working directory.
+          git_path: # optional
+          # A subfolder to parse instead of the root directory.
+          subfolder: # optional
+          # Force pass of checking, regardless of the result.
+          force_pass: # optional
+          # If a project (git_path) is defined, use this branch. Defaults to master
+          branch: prod
+          # Cleanup (delete) repository to check after doing so (appropriate for when clone is done)
+          cleanup: # optional
+          # A comma seperated list of paths or patterns to include.
+          include_files: # optional, default is 
+          # A comma-separated list of file types to cover in the URL checks
+          file_types: # optional, default is .md,.py,.rst,.html
+          # Choose whether to include file with no URLs in the prints.
+          print_all: false # optional
+          # Choose whether to print a more verbose end summary with files and broken URLs.
+          verbose: true # optional
+          # If a request fails, retry this number of times. Defaults to 1
+          retry_count: # optional, default is 1
+          # A csv file path to save the results to.
+          save: # optional, default is 
+          # The timeout (seconds) to provide to requests to wait for a response.
+          timeout: # optional, default is 5
+          # A comma seperated links to exclude during URL checks.
+          exclude_urls: # optional, default is 
+          # A comma seperated patterns to exclude during URL checks.
+          exclude_patterns: # optional, default is 
+          # A comma seperated list of paths or patterns to exclude during URL checks.
+          exclude_files: # optional, default is 
