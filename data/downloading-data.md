@@ -19,7 +19,7 @@ You will need to have [Google Cloud SDK](https://cloud.google.com/sdk/docs/insta
 If you have a BigQuery table that has a column with `gcs_url` values (such as the BigQuery table with the manifest exported using IDC portal), you can fetch the content of that column into a file using the following GCP Cloud SDK command line (`tail -n +2` is used to skip the header of the exported column). You will need to substitute `MY_COHORT_TABLE` with the name of the BigQuery table with your manifest.
 
 {% hint style="danger" %}
-Make sure you adjust the `--max-rows` parameter in the below to be equal or exceed the number of rows in the result of the query, otherwise your list will be truncated!
+Make sure you adjust the `--max_rows` parameter in the below to be equal or exceed the number of rows in the result of the query, otherwise your list will be truncated!
 {% endhint %}
 
 ```shell-session
