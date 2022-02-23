@@ -39,7 +39,7 @@ bq query --format=csv  --max_rows=2000000 --use_legacy_sql=false \
 If you have the list of GCS URLs stored in a file on disk, you can use the following command:
 
 ```shell-session
-$ cat gcs_urls.txt | gsutil -m cp -I .
+$ cat gcs_urls.csv | gsutil -m cp -I .
 ```
 
 The command above is quick and simple to get the small number of files from IDC, but it is not very efficient. You can implement parallel download of your cohort using `xargs` as follows:
@@ -54,7 +54,7 @@ $ chmod +x gsutil_download.sh
 Next, feed the file with the list of GCS URLs to `xargs`. You can experiment with the `-n` (number of GCS URLs passed to a single invocation of the download script) and `-P` (number of processes that will run the download script) parameters to optimize performance.
 
 ```shell-session
-$ t gcs_urls.txt | xargs -n 25 -P 10 ./gsutil_download.sh
+$ cat gcs_urls.csv | xargs -n 25 -P 10 ./gsutil_download.sh
 ```
 
 
