@@ -47,7 +47,7 @@ The command above is quick and simple to get the small number of files from IDC,
 Save the following into a shell script, such as `gsutil_download.sh` (here, `$DESTINATION` could be a local folder, or another GCP storage bucket):
 
 ```shell-session
-$ echo "gsutil cp $* $DESTINATION" > gsutil_download.sh
+$ echo "gsutil cp \$* $DESTINATION" > gsutil_download.sh
 $ chmod +x gsutil_download.sh
 ```
 
