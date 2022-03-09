@@ -1,6 +1,6 @@
 # 3D Slicer desktop VM
 
-You can launch a VM in your project with a command like this in your local terminal (replace vm-name with a name for your machine):
+You can launch a VM in your project with a command like this in your local terminal (replace `vm-name` with a name for your machine):
 
 {% hint style="warning" %}
 The current image we created requires GPU accelerator! If you do not specify the accelerator in the command below, you will not be able to access the machine!
