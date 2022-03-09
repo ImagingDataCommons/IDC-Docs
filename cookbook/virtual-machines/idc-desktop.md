@@ -11,7 +11,7 @@ export VMNAME=vm-name
 gcloud compute instances create ${VMNAME} \
   --machine-type=n1-standard-8 \
   --accelerator=type=nvidia-tesla-k80,count=1 \
-  --image=slicermachine-2021-12-06t10-10-57 \
+  --image-family=slicer \
   --image-project=idc-sandbox-000 \
   --boot-disk-size=200GB \
   --boot-disk-type=pd-balanced \
