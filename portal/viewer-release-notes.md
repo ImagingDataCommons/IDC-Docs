@@ -4,6 +4,15 @@
 The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
+## 4.12.22 - March 2022 - OHIF
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+
+Main highlights of this release include:
+
+* Improve logic for finding segmentations referenced source image
+* Improve debug dialog: fix text overflow and adding active viewports referenced SEGs and RTSTRUCT series.  
+
 ## 4.12.17 - February 2022 - OHIF
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
