@@ -1,5 +1,29 @@
 # Files and metadata
 
+## Limited access content
+
+As discussed in this community forum post, [TCIA made the decision to pull a subset of data](https://discourse.canceridc.dev/t/tcia-collections-of-brain-head-or-head-neck-cancers-are-changing-to-limited-access/241) from public access collections to limited access. At the moment, we still keep those files that used to be public in IDC before the decision made by TCIA, and the metadata for those files is still accessible in our BigQuery tables, but you cannot download those “Limited” access files referenced by `gcs_url` from IDC.
+
+As discussed in [this post](https://discourse.canceridc.dev/t/user-does-not-have-storage-objects-list-access-to-the-google-cloud-storage-bucket/249) the issue will manifest itself in an error accessing `gcs_url` that corresponds to a non-public file:
+
+```
+AccessDeniedException: 403 <user email> does not have storage.objects.list 
+access to the Google Cloud Storage bucket.
+```
+
+[`bigquery-public-data.idc_current.dicom_all` table](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) has a column named `access` , which takes values `Public` or `Limited` that define if the file corresponding to the instance can be accessed. For all practical purposes, if you interact with the IDC BigQuery tables, you should make sure you **exclude “Limited” access items** using the following clause in your query:
+
+```sql
+SELECT
+  ...
+FROM
+  `bigquery-public-data.idc_current.dicom_all`
+WHERE
+  access <> "Limited"
+```
+
+In a future release of IDC we will by default exclude limited access items from what you select in the portal, so the portal selection should be more intuitive. But if you access the data via BigQuery queries you will need to know that “Limited” are not accessible and account for this in your query.
+
 ## Storage Buckets
 
 {% hint style="info" %}
