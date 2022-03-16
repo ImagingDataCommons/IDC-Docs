@@ -4,6 +4,48 @@
 The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
+## 0.5.0 - March 2022 - Slim
+
+**The Slim Viewer** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/MGHComputationalPathology/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/dicomweb/) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
+
+Main highlights of this release include:
+
+**New features**
+* Display of analysis results stored as DICOM Segmentation, Parametric Map, or Microscopy Bulk Simple Annotations instances
+* Dynamic selection of DICOMweb server by user (can be enabled by setting AppConfig.enableServerSelection to true)
+* Dark app mode for fluorescence microscopy (can be enabled by setting App.mode to "dark")
+* Support display of segments stored in DICOM Segmentation instances
+* Support display of parameter mappings stored in DICOM Parametric Map instances
+* Support display of annotation groups stored in DICOM Microscopy Bulk Simple Annotations instances
+* Implement color transformations using ICC Profiles to correct color images client side in a browser-independent manner
+* Implement grayscale transformations using Palette Color Lookup Tables to pseudo-color grayscale images
+
+**Improvements**
+* Unify handling of optical paths for color and grayscale images
+* Add loading indicator
+* Improve styling of overview map
+* Render specimen metadata in compacter form
+* Improve fetching of WASM library code
+* Improve styling of slide viewer sidebar
+* Sort slides by Series Number
+* Work around common standard compliance issues
+* Update docker-compose configuration
+* Upgrade dependencies
+* Show examples in README
+* Decode JPEG, JPEG 2000, and JPEG-LS compressed image frames client side in a browser-independent manner
+* Improve performance of transformation and rendering operations using WebGL for both grayscale as well as color images
+* Optimize display of overview images and keep overview image fixed when zooming or panning volume images
+* Optimize HTTP Accept header field for retrieval of frames to work around issues with various server implementations
+
+**Bug fixes**
+* Ensure ROI annotations are re-rendered upon modification
+* Clean up memory and recreate viewers upon page reload
+* Fix selection of volume images
+* Fix color space conversion during decoding of JPEG 2000 compressed image frames
+* Fix unit of area measurements for ROI annotations
+* Publish events when bulkdata loading starts and ends
+
+
 ## 4.12.22 - March 2022 - OHIF
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
