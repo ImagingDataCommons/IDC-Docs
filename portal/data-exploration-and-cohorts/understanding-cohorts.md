@@ -7,22 +7,21 @@ Creating a cohort helps you quickly return to a subset of interest from the vast
 Do the following to create a cohort.
 
 1. [Select filters](./#defining-search-scope-and-configuration) on the Search Scope and Search Configuration panels.
-2. Click the **Save As New Cohort** button in the top-right of the portal.
+2.  Click the **Save As New Cohort** button in the top-right of the portal.
 
-   The Save Cohort dialog box appears, showing your selected filters.
-
+    The Save Cohort dialog box appears, showing your selected filters.
 3. Enter a name for the cohort. Optionally, enter a description.
-4. Click **Save Cohort**.  The cohort details page appears.
+4. Click **Save Cohort**. The cohort details page appears.
 
 ![Save Cohort dialog box](../../.gitbook/assets/save-cohort-confirmation-v2.png)
 
-The cohort details page shows the cohort name, description \(if available\), and filter definition.
+The cohort details page shows the cohort name, description (if available), and filter definition.
 
 ![Greyed out filter options on the Search Configuration panel](../../.gitbook/assets/screen-shot-2021-03-02-at-9.15.10-am.png)
 
 You can open any study or series associated with the cohort using the IDC Viewer. For more information on image visualization, see [Visualizing images](../visualization.md).
 
-![Cohort details page](../../.gitbook/assets/cohort_details-page.png)
+![Cohort details page](../../.gitbook/assets/cohort\_details-page.png)
 
 ## **Accessing the cohort m**anifest
 
@@ -49,7 +48,7 @@ The header of the manifest contains the name of cohort, user, filters used, the 
 ![Example cohort manifest](../../.gitbook/assets/mainfest-for-cohort.png)
 
 {% hint style="warning" %}
-Manifests exported as files are defined at the series level. There will be a single row for each DICOM series included in the manifest. This is due to the limitation on the maximum size of the file that can be exported. To download the individual DICOM files corresponding to the instances included in the series the CRDC UUID corresponding to the series object \(`series_uuid`\) will need to be [ resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md).
+Manifests exported as files are defined at the series level. There will be a single row for each DICOM series included in the manifest. This is due to the limitation on the maximum size of the file that can be exported. To download the individual DICOM files corresponding to the instances included in the series the CRDC UUID corresponding to the series object (`series_uuid`) will need to be [resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md).
 
 Manifests exported into BigQuery are defined at the level of DICOM instances, with one row per instance.
 {% endhint %}
@@ -57,14 +56,14 @@ Manifests exported into BigQuery are defined at the level of DICOM instances, wi
 The fields provided in a cohort manifest are:
 
 * `PatientID`: value of the corresponding DICOM attribute
-* `collection_id`: abbreviated identifier of the source data collection 
+* `collection_id`: abbreviated identifier of the source data collection
 * `StudyInstanceUID`: value of the corresponding DICOM attribute
 * `SeriesInstanceUID`: value of the corresponding DICOM attribute
-* `SOPInstanceUID`: value of the corresponding DICOM attribute \(NB: included only when manifest is exported into BigQuery!\)
-* `source_DOI`: Digital Object Identifier \(DOI\) of the source data collection. Pre-pending `source_DOI` with `https://doi.org/` will give you the URL of the collection dataset
-* `study_uuid`: CRDC UUID of the object maintained by CRDC IndexD corresponding to the DICOM study, which [can be resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md)  
-* `series_uuid`: CRDC UUID of the object maintained by CRDC IndexD corresponding to the DICOM series, which [can be resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md)  
-* `instance_uuid`: CRDC UUID of the object maintained by CRDC IndexD corresponding to the DICOM instance, which [can be resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md) \(NB: included only when the manifest is exported into BigQuery!\)
+* `SOPInstanceUID`: value of the corresponding DICOM attribute (NB: included only when manifest is exported into BigQuery!)
+* `source_DOI`: Digital Object Identifier (DOI) of the source data collection. Pre-pending `source_DOI` with `https://doi.org/` will give you the URL of the collection dataset
+* `study_uuid`: CRDC UUID of the object maintained by CRDC IndexD corresponding to the DICOM study, which [can be resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md)
+* `series_uuid`: CRDC UUID of the object maintained by CRDC IndexD corresponding to the DICOM series, which [can be resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md)
+* `instance_uuid`: CRDC UUID of the object maintained by CRDC IndexD corresponding to the DICOM instance, which [can be resolved to the URL of the underlying objects](../../data/organization-of-data/guids-and-uuids.md) (NB: included only when the manifest is exported into BigQuery!)
 * `gcs_url`: `gs://` URL that can be used to access the object using the [GCP `gsutil` tool](https://cloud.google.com/storage/docs/gsutil)
 
 An example of how you can use an IDC cohort manifest to retrieve the manifest-defined cohort files is shown in [colab notebooks](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks).
@@ -85,7 +84,7 @@ The exported cohort manifest table is intended for short-term use, and will be d
 
 ## **Exporting as a file**
 
-Comma-Separated Values \(CSV\) and Tab-Separated Values \(TSV\) files include header fields, so you can customize which of those fields you want to include in the export. You can also select which columns to include in the file.
+Comma-Separated Values (CSV) and Tab-Separated Values (TSV) files include header fields, so you can customize which of those fields you want to include in the export. You can also select which columns to include in the file.
 
 On the cohort manifest export confirmation window, you can select or clear header fields that you want to appear in your export.
 
@@ -115,5 +114,4 @@ To indicate cohorts created with previous data versions in the cohort list the *
 
 Clicking on the **Load New Version** button will open the explorer page, applying these cohort filters to the current data version. The user can then save this new cohort or modify the filters as desired.
 
-![](../../.gitbook/assets/screen-shot-2021-06-09-at-8.46.36-am%20%281%29%20%281%29%20%281%29%20%281%29%20%281%29.png)
-
+![](<../../.gitbook/assets/screen-shot-2021-06-09-at-8.46.36-am (1) (1) (1) (1) (1) (1).png>)
