@@ -8,7 +8,7 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
-## 8.0 - April 5, 2022 ()
+## 8.0 - April 4, 2022 (canceridc.202204050856.2920c81)
 
 Main highlights of this release include:
 
@@ -17,7 +17,9 @@ Main highlights of this release include:
 * Number of cases, studies, and series in a cohort are reported in the filter de
 finition
 
-* On the exploration page the Access attribute is placed in the Search Scope
+* On the Exploration page the Access attribute is placed in the Search Scope
+
+* On the Exploration page users are warned when they create a cohort that includes Limited Access collections
 
 * Series Instance UID is reported in the Selected Series table
 
