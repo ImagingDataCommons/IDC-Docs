@@ -12,7 +12,7 @@ New collections
 
 1. [TCGA-ACC](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/adrenocortical)
 2. [TCGA-CHOL](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/cholangiocarcinoma)
-3. [TCGA-DLBC](TCGA-DLBC has no description page)
+3. TCGA-DLBC (TCGA-DLBC collection does not have a description page)
 4. [TCGA-MESO](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/mesothelioma)
 5. [TCGA-PAAD](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/pancreatic)
 6. [TCGA-PCPG](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/paraganglioma)
