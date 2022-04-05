@@ -4,6 +4,47 @@
 Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
 {% endhint %}
 
+## v8 - April 2022
+
+The main highlight of this release is the addition of the NLST and TCGA Slide Microscopy imaging data. New TCGA content includes introduction of new (to IDC) TCGA collections that have only slide microscopy component, and addition of the slide microscopy component to those IDC collections that were available earlier and included only the radiology component.
+
+New collections
+
+1. [TCGA-ACC](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/adrenocortical)
+2. [TCGA-CHOL](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/cholangiocarcinoma)
+3. [TCGA-DLBC](TCGA-DLBC has no description page)
+4. [TCGA-MESO](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/mesothelioma)
+5. [TCGA-PAAD](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/pancreatic)
+6. [TCGA-PCPG](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/paraganglioma)
+7. [TCGA-SKCM](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/melanoma-skin)
+8. [TCGA-TGCT](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/testicular-germ-cell)
+9. [TCGA-THYM](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/thymoma)
+10. [TCGA-UCS](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/uterine-carcinosarcoma)
+11. [TCGA-UVM](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/melanoma-eye)
+
+Updated collections
+
+1. [NLST](https://dx.doi.org/10.7937/TCIA.hmq8-j677)
+2. [TCGA-BLCA](https://dx.doi.org/10.7937/K9/TCIA.2016.8LNG8XDR)
+3. [TCGA-BRCA](https://dx.doi.org/10.7937/K9/TCIA.2016.AB2NAZRP)
+4. [TCGA-BRCA](https://dx.doi.org/10.7937/TCIA.2019.wgllssg1)
+5. [TCGA-CESC](https://dx.doi.org/10.7937/K9/TCIA.2016.SQ4M8YP4)
+6. [TCGA-COAD](https://dx.doi.org/10.7937/K9/TCIA.2016.HJJHBOXZ)
+7. [TCGA-ESCA](https://dx.doi.org/10.7937/K9/TCIA.2016.VPTNRGFY)
+8. [TCGA-KICH](https://dx.doi.org/10.7937/K9/TCIA.2016.YU3RBCZN)
+9. [TCGA-KIRC](https://dx.doi.org/10.7937/K9/TCIA.2016.V6PBVTDR)
+10. [TCGA-KIRP](https://dx.doi.org/10.7937/K9/TCIA.2016.ACWOGBEF)
+11. [TCGA-LIHC](https://dx.doi.org/10.7937/K9/TCIA.2016.IMMQW8UQ)
+12. [TCGA-LUAD](https://dx.doi.org/10.7937/K9/TCIA.2016.JGNIHEP5)
+13. [TCGA-LUSC](https://dx.doi.org/10.7937/K9/TCIA.2016.TYGKKFMQ)
+14. [TCGA-OV](https://dx.doi.org/10.7937/K9/TCIA.2016.NDO1MDFQ)
+15. [TCGA-PRAD](https://dx.doi.org/10.7937/K9/TCIA.2016.YXOGLM4Y)
+16. [TCGA-READ](https://dx.doi.org/10.7937/K9/TCIA.2016.F7PPNPNU)
+17. [TCGA-SARC](https://dx.doi.org/10.7937/K9/TCIA.2016.CX6YLSUX)
+18. [TCGA-STAD](https://dx.doi.org/10.7937/K9/TCIA.2016.GDHL9KIM)
+19. [TCGA-THCA](https://dx.doi.org/10.7937/K9/TCIA.2016.9ZFRVF1B)
+20. [TCGA-UCEC](https://dx.doi.org/10.7937/K9/TCIA.2016.GKJ0ZWAC)
+
 ## v7 - February 2022
 
 The main highlight of this release is the addition of the Slide Microscopy imaging component to the remaining CPTAC collections.
