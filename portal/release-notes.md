@@ -8,11 +8,28 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 8.0 - April 4, 2022 (canceridc.202204050856.2920c81)
+
+Main highlights of this release include:
+
+* Eleven new collections added
+
+* Number of cases, studies, and series in a cohort are reported in the filter de
+finition
+
+* On the Exploration page the Access attribute is placed in the Search Scope
+
+* On the Exploration page users are warned when they create a cohort that includes Limited Access collections
+
+* Series Instance UID is reported in the Selected Series table
+
+
+
 ## 7.0 - February 7, 2022 (canceridc.202202071117.164252a)
 
 Main highlights of this release include:
 
-* Seventeen new collections added
+
 
 * The BigQuery query string corresponding to a cohort can now be displayed in user-readable format by pressing a button on either the cohort or cohort list pages
 
