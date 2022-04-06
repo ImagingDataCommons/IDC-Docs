@@ -12,7 +12,7 @@ Main highlights of this release include:
 
 * Fix regression in logic for finding segmentations referenced source image;
 * Fix segmentations loading issues;
-* fix thumbnail series type for unsupported SOPClassUID.
+* Fix thumbnail series type for unsupported SOPClassUID.
 
 ## 0.5.0 - March 2022 - Slim
 
