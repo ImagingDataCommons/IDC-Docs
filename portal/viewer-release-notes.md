@@ -12,7 +12,8 @@ Main highlights of this release include:
 
 * Fix regression in logic for finding segmentations referenced source image;
 * Fix segmentations loading issues;
-* Fix thumbnail series type for unsupported SOPClassUID.
+* Fix thumbnail series type for unsupported SOPClassUID;
+* Fix toolbar error when getDerivedDatasets finds no referenced series are found.
 
 ## 0.5.0 - March 2022 - Slim
 
