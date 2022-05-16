@@ -14,3 +14,4 @@ The document with the recipes below needs to be updated to work with the layout 
 * Query performance considerations
   * [https://cloud.google.com/bigquery/docs/best-practices-performance-overview](https://cloud.google.com/bigquery/docs/best-practices-performance-overview)
   * [https://cloud.google.com/bigquery/docs/best-practices-performance-compute](https://cloud.google.com/bigquery/docs/best-practices-performance-compute)
+  * Temporary tables: [https://cloud.google.com/bigquery/docs/multi-statement-queries#temporary\_tables](https://cloud.google.com/bigquery/docs/multi-statement-queries#temporary\_tables)

@@ -4,7 +4,7 @@ All collections in IDC as well as their total number of cases and number of case
 
 Click one or more collections to select them. The selected row or rows are highlighted. The available cases for the selected collection(s) appear in the Selected Cases panel. Click the up or down arrow to sort the list alphabetically or numerically, as appropriate for the column.
 
-![Collections panel](<../../.gitbook/assets/collections-panelv2 (2) (2) (2) (2) (2) (4) (4) (4) (2) (4) (4) (1) (1) (4).png>)
+![Collections panel](<../../.gitbook/assets/collections-panelv2 (2) (2) (2) (2) (2) (4) (4) (4) (2) (4) (4) (1) (2) (4).png>)
 
 {% hint style="info" %}
 You must select a collection _before_ you can view data in the Selected Cases, Selected Studies, and Selected Series panels.
@@ -26,7 +26,7 @@ All studies available for the selected case appear in the Selected Studies panel
 
 Click one or more studies to select them. The selected row or rows are highlighted. The available series for the selected case(s) appear in the Selected Series panel. Click the up or down arrow to sort the list alphabetically or numerically, as appropriate for the column.
 
-Click the icon in the View column for a study row to view study objects in the IDC Viewer. Depending on the type of image, it will be opened using either[ Open Health Imaging Foundation (OHIF) Viewer](https://docs.ohif.org/) (for radiology data) or [SliM Viewer](https://github.com/MGHComputationalPathology/slim) (for digital pathology data).
+Click the icon in the View column for a study row to view study objects in the IDC Viewer. Depending on the type of image, it will be opened using either[ Open Health Imaging Foundation (OHIF) Viewer](https://docs.ohif.org) (for radiology data) or [SliM Viewer](https://github.com/MGHComputationalPathology/slim) (for digital pathology data).
 
 ## Viewing a series per study per case
 
