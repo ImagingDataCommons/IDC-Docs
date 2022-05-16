@@ -1,6 +1,6 @@
 # Welcome!
 
-**NCI Imaging Data Commons** **(IDC)** is a cloud-based repository of publicly available cancer imaging data co-located with the analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.
+**NCI Imaging Data Commons** **(IDC)** is a cloud-based repository of publicly available cancer imaging data co-located with the analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.
 
 IDC **connects** researchers with&#x20;
 

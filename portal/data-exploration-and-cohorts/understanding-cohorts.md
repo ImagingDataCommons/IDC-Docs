@@ -114,4 +114,4 @@ To indicate cohorts created with previous data versions in the cohort list the *
 
 Clicking on the **Load New Version** button will open the explorer page, applying these cohort filters to the current data version. The user can then save this new cohort or modify the filters as desired.
 
-![](<../../.gitbook/assets/screen-shot-2021-06-09-at-8.46.36-am (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/screen-shot-2021-06-09-at-8.46.36-am (1) (1) (1) (1) (1).png>)
