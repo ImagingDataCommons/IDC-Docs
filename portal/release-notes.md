@@ -8,18 +8,7 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
-
-## 9.0 - April 4, 2022 (canceridc.202204050856.2920c81)
-
-Main highlights of this release include:
-
-* Ability to select specific Analysis Results collections with segmentation and radiomic features
-
-* Text boxes added to the slider panels to allow the user to input upper and lower slider bounds 
-
-* Pie chart tooltips updated to improve viewability
-
-## 9.0 - May 19, 2022 (canceridc.202205191051)
+## 8.0 - April 4, 2022 (canceridc.202204050856.2920c81)
 
 Main highlights of this release include:
 
