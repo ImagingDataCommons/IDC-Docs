@@ -4,6 +4,25 @@
 Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
 {% endhint %}
 
+## v9 - May 2022
+
+This data release introduces the concept of differential license to IDC: some of the collections maintained by IDC contain items that have different licenses. As an example, radiology component of the TCGA-GBM collection is covered by the TCIA limited access license, and is not available in IDC, while the digital pathology component is covered by CC-BY. With this release, we complete sharing in full of the digital pathology component of the datasets released by tge CPTAC and TCGA programs.
+
+New collections:
+
+1. [ACRIN-Contralateral-Breast-MR](https://dx.doi.org/10.7937/Q1EE-J082)
+2. [StageII-Colorectal-CT](https://dx.doi.org/10.7937/p5k5-tg43)
+
+Updated collections:
+
+1. [B-mode-and-CEUS-Liver](https://dx.doi.org/10.7937/TCIA.2021.v4z7-tc39)
+2. [CPTAC-GBM](https://dx.doi.org/10.7937/K9/TCIA.2018.3RJE41Q1)
+3. [CPTAC-HNSCC](https://dx.doi.org/10.7937/K9/TCIA.2018.UW45NH81)
+4. [Pediatric-CT-SEG](https://dx.doi.org/10.7937/TCIA.X0H0-1706)
+5. [TCGA-GBM](https://dx.doi.org/10.7937/K9/TCIA.2016.RNYFUYE9)
+6. [TCGA-HNSC](https://dx.doi.org/10.7937/K9/TCIA.2016.LXKQ47MS)
+7. [TCGA-LGG](https://dx.doi.org/10.7937/K9/TCIA.2016.L4LTD3TK)
+
 ## v8 - April 2022
 
 The main highlight of this release is the addition of the NLST and TCGA Slide Microscopy imaging data. New TCGA content includes introduction of new (to IDC) TCGA collections that have only slide microscopy component, and addition of the slide microscopy component to those IDC collections that were available earlier and included only the radiology component.
@@ -51,25 +70,25 @@ The main highlight of this release is the addition of the Slide Microscopy imagi
 
 New collections
 
-1. [APOLLO-5-ESCA](https://dx.doi.org/10.7937/n69a-7a26)&#x20;
-2. [APOLLO-5-LUAD](https://dx.doi.org/10.7937/BDM9-4623)&#x20;
-3. [APOLLO-5-PAAD](https://dx.doi.org/10.7937/tcia.1yeg-5740)&#x20;
-4. [APOLLO-5-THYM](https://dx.doi.org/10.7937/tcia.0pg4-nh82)&#x20;
-5. [CPTAC-AML](https://dx.doi.org/10.7937/tcia.2019.b6foe619)&#x20;
-6. [CPTAC-BRCA](https://dx.doi.org/10.7937/TCIA.CAEM-YS80)&#x20;
-7. [CPTAC-COAD](https://dx.doi.org/10.7937/TCIA.YZWQ-ZZ63)&#x20;
-8. [CPTAC-OV](https://dx.doi.org/10.7937/TCIA.ZS4A-JD58)&#x20;
-9. [Pancreatic-CT-CBCT-SEG](https://dx.doi.org/10.7937/TCIA.ESHQ-4D90)&#x20;
+1. [APOLLO-5-ESCA](https://dx.doi.org/10.7937/n69a-7a26)
+2. [APOLLO-5-LUAD](https://dx.doi.org/10.7937/BDM9-4623)
+3. [APOLLO-5-PAAD](https://dx.doi.org/10.7937/tcia.1yeg-5740)
+4. [APOLLO-5-THYM](https://dx.doi.org/10.7937/tcia.0pg4-nh82)
+5. [CPTAC-AML](https://dx.doi.org/10.7937/tcia.2019.b6foe619)
+6. [CPTAC-BRCA](https://dx.doi.org/10.7937/TCIA.CAEM-YS80)
+7. [CPTAC-COAD](https://dx.doi.org/10.7937/TCIA.YZWQ-ZZ63)
+8. [CPTAC-OV](https://dx.doi.org/10.7937/TCIA.ZS4A-JD58)
+9. [Pancreatic-CT-CBCT-SEG](https://dx.doi.org/10.7937/TCIA.ESHQ-4D90)
 10. [Pediatric-CT-SEG](https://dx.doi.org/10.7937/TCIA.X0H0-1706)
 
 Updated collections
 
-1. [CPTAC-CCRCC](https://dx.doi.org/10.7937/K9/TCIA.2018.OBLAMN27)&#x20;
-2. [CPTAC-CM](https://dx.doi.org/10.7937/K9/TCIA.2018.ODU24GZE)&#x20;
-3. [CPTAC-LSCC](https://dx.doi.org/10.7937/K9/TCIA.2018.6EMUB5L2)&#x20;
-4. [CPTAC-LUAD](https://dx.doi.org/10.7937/K9/TCIA.2018.PAT12TBS)&#x20;
-5. [CPTAC-PDA](https://dx.doi.org/10.7937/K9/TCIA.2018.SC20FO18)&#x20;
-6. [CPTAC-SAR](https://dx.doi.org/10.7937/TCIA.2019.9bt23r95)&#x20;
+1. [CPTAC-CCRCC](https://dx.doi.org/10.7937/K9/TCIA.2018.OBLAMN27)
+2. [CPTAC-CM](https://dx.doi.org/10.7937/K9/TCIA.2018.ODU24GZE)
+3. [CPTAC-LSCC](https://dx.doi.org/10.7937/K9/TCIA.2018.6EMUB5L2)
+4. [CPTAC-LUAD](https://dx.doi.org/10.7937/K9/TCIA.2018.PAT12TBS)
+5. [CPTAC-PDA](https://dx.doi.org/10.7937/K9/TCIA.2018.SC20FO18)
+6. [CPTAC-SAR](https://dx.doi.org/10.7937/TCIA.2019.9bt23r95)
 7. [CPTAC-UCEC](https://dx.doi.org/10.7937/K9/TCIA.2018.3R3JUISW)
 
 ## v6 - January 2022
