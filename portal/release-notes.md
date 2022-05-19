@@ -9,7 +9,7 @@ where revision hash corresponds to that of the [IDC WebApp repo](https://github.
 {% endhint %}
 
 
-## 8.0 - April 4, 2022 (canceridc.202204050856.2920c81)
+## 9.0 - April 4, 2022 (canceridc.202204050856.2920c81)
 
 Main highlights of this release include:
 
@@ -19,7 +19,7 @@ Main highlights of this release include:
 
 * Pie chart tooltips updated to improve viewability
 
-## 8.0 - April 4, 2022 (canceridc.202204050856.2920c81)
+## 9.0 - May 19, 2022 (canceridc.202205191051)
 
 Main highlights of this release include:
 
