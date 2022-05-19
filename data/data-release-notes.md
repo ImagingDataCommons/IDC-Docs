@@ -6,7 +6,7 @@ Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.c
 
 ## v9 - May 2022
 
-This data release introduces the concept of differential license to IDC: some of the collections maintained by IDC contain items that have different licenses. As an example, radiology component of the TCGA-GBM collection is covered by the TCIA limited access license, and is not available in IDC, while the digital pathology component is covered by CC-BY. With this release, we complete sharing in full of the digital pathology component of the datasets released by tge CPTAC and TCGA programs.
+This data release introduces the concept of differential license to IDC: some of the collections maintained by IDC contain items that have different licenses. As an example, radiology component of the TCGA-GBM collection is covered by the TCIA limited access license, and is not available in IDC, while the digital pathology component is covered by CC-BY. With this release, we complete sharing in full of the digital pathology component of the datasets released by the CPTAC and TCGA programs.
 
 New collections:
 
