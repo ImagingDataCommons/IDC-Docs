@@ -4,6 +4,29 @@
 The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
+## 0.6.0 - June 2022 - Slim
+
+**The Slim Viewer** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/MGHComputationalPathology/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/dicomweb/) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
+
+Main highlights of this release include:
+
+**New features**
+* Support DICOM Advanced Blending Presentation State to parametrize the display of multiplexed IF microscopy images
+* Add key bindings for annotations tools
+* Enable configuration of tile preload
+* Enable configuration of annotation geometry type per finding
+
+**Enhancements**
+* Improve default presentation of multiplexed IF microscopy images in the absence of presentation state instances
+* Correctly configure DCM4CHEE Archive to use reverse proxy URL prefix for BulkDataURI in served metadata
+* Enlarge display settings interfaces and add input fields for opacity, VOI limits, and colors
+* Update dicom-microscopy-viewer version to use web workers for frame decoding/transformation operations
+* Add button for user logout
+
+**Bug fixes**
+* Fix parsing of URL path upon redirect after successful authentication/authorization
+
+
 ## 0.5.1 - April 2022 - Slim
 
 **The Slim Viewer** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/MGHComputationalPathology/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/dicomweb/) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
