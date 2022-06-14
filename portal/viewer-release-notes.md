@@ -4,6 +4,14 @@
 The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
+## 4.12.27 - June 2022 - OHIF
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+
+Main highlights of this release include:
+
+* Add support for SR qualitative annotation per instance.
+
 ## 0.7.2 - June 2022 - Slim
 
 **The Slim Viewer** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/MGHComputationalPathology/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/dicomweb/) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
