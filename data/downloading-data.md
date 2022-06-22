@@ -46,7 +46,7 @@ WHERE SeriesInstanceUID = "1.3.6.1.4.1.32722.99.99.29899177652134237501086129671
 # Select all files for a given DICOM study
 SELECT gcs_url
 FROM `bigquery-public-data.idc_current.dicom_all`
-WHERE SeriesInstanceUID = "1.3.6.1.4.1.32722.99.99.239341353911714368772597187099978969331"
+WHERE StudyInstanceUID = "1.3.6.1.4.1.32722.99.99.239341353911714368772597187099978969331"
 ```
 
 Next, use Google Cloud SDK `bq query` command (from command line) to run the query and save the result, which will be the list of GCP URLs that can be used to download the data.

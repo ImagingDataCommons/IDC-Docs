@@ -35,7 +35,7 @@ Additional reading materials:
 
 IDC is using BigQuery for managing metadata for the hosted data. In order to locate the tables that contain such metadata, complete the following steps:
 
-1. Open BigQuery console: [https://console.cloud.google.com/bigquery](https://console.cloud.google.com/bigquery?project=idc-tcia)
+1. Open BigQuery console: [https://console.cloud.google.com/bigquery](https://console.cloud.google.com/bigquery)
 2. Click "+ ADD DATA" button, and select "Pin a project > Enter project name"
 3. Type `bigquery-public-data` in the text box and click "PIN" button
 4. In the left panel, expand the `bigquery-public-data` drop-down, and navigate to the items called `idc_v1`, `idc_v2`, ..., `idc_current`, which are the datasets containing metadata tables maintained by IDC. Numbered datasets correspond to the IDC data versions documented in [Data Release Notes](../data/data-release-notes.md). `idc_current` is an alias that always points to the latest IDC version.
