@@ -58,6 +58,12 @@ bq query --use_legacy_sql=false --format=csv --max_rows=2000000 \
   < my_query.txt | tail -n +2 > gcs_urls.csv
 ```
 
+{% hint style="warning" %}
+Windows users will have to use a bit different one-liner, since `tail` command is not available in Windows command prompt:
+
+`bq query --use_legacy_sql=false --format=csv --max_rows=200000 < my_query.txt | more +1 > gcs_urls.csv`
+{% endhint %}
+
 {% hint style="danger" %}
 Make sure you adjust the `--max_rows` parameter in the queries above to be equal or exceed the number of rows in the result of the query, otherwise your list will be truncated!
 {% endhint %}
