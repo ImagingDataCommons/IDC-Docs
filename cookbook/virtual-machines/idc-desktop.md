@@ -1,5 +1,9 @@
 # 3D Slicer desktop VM
 
+{% hint style="info" %}
+In order to follow these instructions, you will need to have a project that has billing enabled. Please follow the instructions in [getting-started-with-gcp.md](../../introduction/getting-started-with-gcp.md "mention") to set up billing.&#x20;
+{% endhint %}
+
 You can launch a VM in your project with a command like this in your local terminal (replace `vm-name` with a name for your machine):
 
 {% hint style="warning" %}
