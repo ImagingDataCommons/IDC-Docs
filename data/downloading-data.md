@@ -13,7 +13,7 @@ Download of data from IDC is a 2-step process covered on this page:
 You will need to complete prerequisites described in [getting-started-with-gcp.md](../introduction/getting-started-with-gcp.md "mention") in order to be able to follow the instructions below!
 {% endhint %}
 
-### First step: How to define the list of files for download&#x20;
+### First step: define the list of files for download&#x20;
 
 ****[`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) BigQuery table discussed in [this documentation article](https://learn.canceridc.dev/data/organization-of-data/files-and-metadata#bigquery-tables) can be used to subset the files you need based on the DICOM metadata attributes as needed utilizing the SQL query interface. The `gcs_url` column contains Google Storage gs:// URLs that can be used to retrieve the files.
 
@@ -57,10 +57,28 @@ bq query --use_legacy_sql=false --format=csv --max_rows=2000000 \
 ```
 
 {% hint style="danger" %}
-Make sure you adjust the `--max_rows` parameter in the below to be equal or exceed the number of rows in the result of the query, otherwise your list will be truncated!
+Make sure you adjust the `--max_rows` parameter in the queries above to be equal or exceed the number of rows in the result of the query, otherwise your list will be truncated!
 {% endhint %}
 
-### Second step: How to retrieve the files defined by Google Storage URLs
+For any of the queries, you can get the count of rows to confirm that the `--max_rows` parameter is sufficiently large (use the [BigQuery console](https://console.cloud.google.com/bigquery) to run these queries):
+
+```sql
+# count the number of rows
+SELECT COUNT(gcs_url) 
+FROM bigquery-public-data.idc_current.dicom_all 
+WHERE collection_id = "nsclc_radiomics"
+```
+
+You can also get the total disk space that will be needed for the files that you will be downloading:
+
+```sql
+# calculate the disk size in GB needed for the files to be downloaded
+SELECT ROUND(SUM(instance_size)/POW(1024,3),2) as size_GB 
+FROM bigquery-public-data.idc_current.dicom_all 
+WHERE collection_id = "nsclc_radiomics"
+```
+
+### Step two: download the files defined by GCS URLs
 
 If you have the list of GCS URLs stored in a file, you can use the following command:
 
