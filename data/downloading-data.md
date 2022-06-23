@@ -9,6 +9,8 @@ Download of data from IDC is a 2-step process covered on this page:
 * **First step:** define the list of specific files you want to download. The list of files is defined by the Google Storage `gs://` URLs.&#x20;
 * **Second step**: given that list of files, download files to your computer or to a cloud VM.&#x20;
 
+If you are analyzing IDC data in Google Colab, check out our [Colab cookbook notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/cookbook.ipynb) that includes examples of how to query and download IDC data!
+
 {% hint style="info" %}
 You will need to complete prerequisites described in [getting-started-with-gcp.md](../introduction/getting-started-with-gcp.md "mention") in order to be able to follow the instructions below!
 {% endhint %}
