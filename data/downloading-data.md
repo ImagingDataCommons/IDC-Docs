@@ -6,8 +6,8 @@ Egress of IDC data out of the cloud is free, sponsored by [Google Public Dataset
 
 Download of data from IDC is a 2-step process covered on this page:
 
-* **First step:** define the list of specific files you want to download. The list of files is defined by the Google Storage `gs://` URLs.&#x20;
-* **Second step**: given that list of files, download files to your computer or to a cloud VM.&#x20;
+* **Step 1:** define the list of specific files you want to download. The list of files is defined by the Google Storage `gs://` URLs.&#x20;
+* **Step 2**: given that list of files, download files to your computer or to a cloud VM.&#x20;
 
 If you are analyzing IDC data in Google Colab, check out our [Colab cookbook notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/cookbook.ipynb) that includes examples of how to query and download IDC data!
 
@@ -15,7 +15,7 @@ If you are analyzing IDC data in Google Colab, check out our [Colab cookbook not
 You will need to complete prerequisites described in [getting-started-with-gcp.md](../introduction/getting-started-with-gcp.md "mention") in order to be able to follow the instructions below!
 {% endhint %}
 
-### First step: define the list of files for download&#x20;
+### Step 1: define the list of files for download&#x20;
 
 ****[`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) BigQuery table discussed in [this documentation article](https://learn.canceridc.dev/data/organization-of-data/files-and-metadata#bigquery-tables) can be used to subset the files you need based on the DICOM metadata attributes as needed utilizing the SQL query interface. The `gcs_url` column contains Google Storage gs:// URLs that can be used to retrieve the files.
 
@@ -95,7 +95,7 @@ FROM bigquery-public-data.idc_current.dicom_all
 WHERE collection_id = "nsclc_radiomics"
 ```
 
-### Step two: download the files defined by GCS URLs
+### Step 2: download the files defined by GCS URLs
 
 If you have the list of GCS URLs stored in a file, you can use the following command:
 
