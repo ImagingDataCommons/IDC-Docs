@@ -51,6 +51,15 @@ FROM `bigquery-public-data.idc_current.dicom_all`
 WHERE StudyInstanceUID = "1.3.6.1.4.1.32722.99.99.239341353911714368772597187099978969331"
 ```
 
+If you defined the content you want to download as a cohort in IDC [Broken link](broken-reference "mention"), substitute the table with the cohort manifest exported into BigQuery in the following query:
+
+```sql
+# select gcs_url from the cohort exported in to BigQuery
+# Replace the table name in FROM with the table containing your exported manifest!
+SELECT gcs_url
+FROM `canceridc-user-data.user_manifests.manifest_cohort_643_20220628_165636`
+```
+
 Next, use Google Cloud SDK `bq query` command (from command line) to run the query and save the result, which will be the list of GCP URLs that can be used to download the data.
 
 ```shell
