@@ -1,8 +1,10 @@
 # Downloading data
 
-{% hint style="success" %}
-Egress of IDC data out of the cloud is free, sponsored by [Google Public Datasets Program](https://console.cloud.google.com/marketplace/product/gcp-public-data-idc/nci-idc-data)!&#x20;
+{% hint style="warning" %}
+You will need to complete prerequisites described in [getting-started-with-gcp.md](../introduction/getting-started-with-gcp.md "mention") in order to be able to follow the instructions below!
 {% endhint %}
+
+IDC does not have an interactive point-and-click download application! If you want to download data from IDC you will need to use command line interface (Terminal on Mac/Linux or Command prompt on Windows).
 
 Download of data from IDC is a 2-step process covered on this page:
 
@@ -10,10 +12,6 @@ Download of data from IDC is a 2-step process covered on this page:
 * **Step 2**: given that list of files, download files to your computer or to a cloud VM.&#x20;
 
 If you are analyzing IDC data in Google Colab, check out our [Colab cookbook notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/cookbook.ipynb) that includes examples of how to query and download IDC data!
-
-{% hint style="info" %}
-You will need to complete prerequisites described in [getting-started-with-gcp.md](../introduction/getting-started-with-gcp.md "mention") in order to be able to follow the instructions below!
-{% endhint %}
 
 ### Step 1: define the list of files for download&#x20;
 
@@ -64,14 +62,8 @@ Next, use Google Cloud SDK `bq query` command (from command line) to run the que
 
 ```shell
 bq query --use_legacy_sql=false --format=csv --max_rows=2000000 \
-  < my_query.txt | tail -n +2 > gcs_urls.csv
+  < my_query.txt > gcs_urls.csv
 ```
-
-{% hint style="warning" %}
-Windows users will have to use a bit different one-liner, since `tail` command is not available in Windows command prompt:
-
-`bq query --use_legacy_sql=false --format=csv --max_rows=200000 < my_query.txt | more +1 > gcs_urls.csv`
-{% endhint %}
 
 {% hint style="danger" %}
 Make sure you adjust the `--max_rows` parameter in the queries above to be equal or exceed the number of rows in the result of the query, otherwise your list will be truncated!
@@ -100,8 +92,14 @@ WHERE collection_id = "nsclc_radiomics"
 If you have the list of GCS URLs stored in a file, you can use the following command:
 
 ```shell-session
-$ cat gcs_urls.csv | gsutil -m cp -I .
+cat gcs_urls.csv | gsutil -m cp -I .
 ```
+
+{% hint style="warning" %}
+Windows users will need to use `type` command in place of `cat`, since the latter is not available in the command line prompt on Windows:
+
+`type gcs_urls.csv | gsutil -m cp -I .`
+{% endhint %}
 
 The command above is quick and simple to get the small number of files from IDC, but it is not very efficient if you need to download a lot of data. We recommend you use [s5cmd](https://github.com/peak/s5cmd) to download large number of files. Please refer to the [GCS download benchmarking Colab notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/download\_benchmarking.ipynb) for instructions on how to use s5cmd with GCS, and let us know on the [IDC user forum](https://discourse.canceridc.dev/) if you have any questions.
 
