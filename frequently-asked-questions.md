@@ -1,5 +1,9 @@
 # Frequently asked questions
 
+## How to download data from IDC?
+
+Check out the [downloading-data.md](data/downloading-data.md "mention") documentation page!
+
 ## What is the purpose of IDC?
 
 The [core functions](core-functions-of-idc.md) of IDC support our overall purpose, which is to support cancer imaging research on the cloud. While some of the capabilities that are needed for this are outside the scope of IDC, and may necessitate interaction with the other components of the [Cancer Research Data Commons](https://datacommons.cancer.gov), we welcome IDC users to bring up any use cases that are related to using cloud computing for cancer imaging research. We will work with you to identify relevant component of CRDC that can help you.
@@ -83,7 +87,7 @@ Our longer-term plan is to work with the CRDC [Center for Cancer Data Harmonizat
 
 ## Is it free to use IDC?
 
-We provide a [summary](getting-started-with-idc.md) of what you can do with IDC, and what you will need to access specific capabilities. If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, you can apply for a free Google cloud credit allocation using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW_YUUWG6A4U8pclvR8MmRQ/viewform).
+We provide a [summary](getting-started-with-idc.md) of what you can do with IDC, and what you will need to access specific capabilities. If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, you can apply for a free Google cloud credit allocation using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW\_YUUWG6A4U8pclvR8MmRQ/viewform).
 
 ## I want to search IDC content using an attribute not available in the portal
 
