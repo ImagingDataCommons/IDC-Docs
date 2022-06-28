@@ -24,6 +24,7 @@ To perform queries against IDC BigQuery tables you will need a cloud project. Yo
 
 1. Go to [https://console.cloud.google.com/](https://console.cloud.google.com/), and accept Terms and conditions.
 2. Click "Select a project" button in the upper left corner of the screen, and then click "New project".
+3. Open the GCP Dashboard ( **≡** > Cloud overview > Dashboard) and take note of the "Project ID" value - you will need it to perform some of the operations.
 
 Additional reading materials:
 
@@ -39,6 +40,12 @@ IDC is using BigQuery for managing metadata for the hosted data. In order to loc
 2. Click "+ ADD DATA" button, and select "Pin a project > Enter project name"
 3. Type `bigquery-public-data` in the text box and click "PIN" button
 4. In the left panel, expand the `bigquery-public-data` drop-down, and navigate to the items called `idc_v1`, `idc_v2`, ..., `idc_current`, which are the datasets containing metadata tables maintained by IDC. Numbered datasets correspond to the IDC data versions documented in [Data Release Notes](../data/data-release-notes.md). `idc_current` is an alias that always points to the latest IDC version.
+
+### Install and configure Cloud SDK
+
+Follow the instructions here to install and configure Google Cloud SDK: [https://cloud.google.com/sdk/docs/install-sdk](https://cloud.google.com/sdk/docs/install-sdk).
+
+Note that you will need to do this only if you want to interact with IDC data from your computer. If you use Google Colab, or Google Compute Engine VMs, Cloud SDK tools will be pre-installed and ready to use.
 
 ### **OPTIONAL: Set up billing for your project**
 
