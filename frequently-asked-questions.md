@@ -4,6 +4,14 @@
 
 Check out the [downloading-data.md](data/downloading-data.md "mention") documentation page!
 
+## How much does it cost to use the cloud?
+
+You can search and [download data from IDC](data/downloading-data.md) for free, and without having to attach your credit card to your GCP account.&#x20;
+
+You can use free tier of [Google Colab](https://colab.research.google.com) to get free access to a cloud-hosted VM with GPU to experiment with analysis workflows for IDC data.
+
+We provide a [summary](getting-started-with-idc.md) of what you can do with IDC, and what you will need to access specific capabilities. If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, you can apply for a free Google cloud credit allocation using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW\_YUUWG6A4U8pclvR8MmRQ/viewform).
+
 ## What is the purpose of IDC?
 
 The [core functions](core-functions-of-idc.md) of IDC support our overall purpose, which is to support cancer imaging research on the cloud. While some of the capabilities that are needed for this are outside the scope of IDC, and may necessitate interaction with the other components of the [Cancer Research Data Commons](https://datacommons.cancer.gov), we welcome IDC users to bring up any use cases that are related to using cloud computing for cancer imaging research. We will work with you to identify relevant component of CRDC that can help you.
@@ -84,10 +92,6 @@ At the moment, non-imaging data, such as the spreadsheets with clinical informat
 Our short term plan is to selectively bring such spreadsheets as collection-specific BigQuery tables available within the release dataset (as an example, [such tables are available for the NLST collection](data/organization-of-data/files-and-metadata.md)). We may expose some of those tables/attributes in the IDC portal.
 
 Our longer-term plan is to work with the CRDC [Center for Cancer Data Harmonization (CCDH)](https://datacommons.cancer.gov/center-cancer-data-harmonization) to harmonize the data in these spreadsheets, and identify the appropriate format and location for the resulting harmonized data.
-
-## Is it free to use IDC?
-
-We provide a [summary](getting-started-with-idc.md) of what you can do with IDC, and what you will need to access specific capabilities. If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, you can apply for a free Google cloud credit allocation using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW\_YUUWG6A4U8pclvR8MmRQ/viewform).
 
 ## I want to search IDC content using an attribute not available in the portal
 
