@@ -14,7 +14,11 @@ We provide a [summary](getting-started-with-idc.md) of what you can do with IDC,
 
 ## What is the purpose of IDC?
 
-The [core functions](core-functions-of-idc.md) of IDC support our overall purpose, which is to support cancer imaging research on the cloud. While some of the capabilities that are needed for this are outside the scope of IDC, and may necessitate interaction with the other components of the [Cancer Research Data Commons](https://datacommons.cancer.gov), we welcome IDC users to bring up any use cases that are related to using cloud computing for cancer imaging research. We will work with you to identify relevant component of CRDC that can help you.
+IDC is a cloud-based repository of publicly available cancer imaging data co-located with the analysis and exploration tools and resources.&#x20;
+
+First, we want to enable you to accomplish a lot of tasks related to data exploration (search, visualization, subsetting, cohort building) without having to download anything to your computer. We accomplish this by co-locating data with the cloud-based tools that support those tasks.
+
+Once you identified data of interest, you can either download it to your computer and proceed with your analysis workflows, or you can cross-load the data to a cloud-based VM for further analysis. The latter should hopefully make it easier to reproduce and share your analysis workflow.&#x20;
 
 ## What is the status of IDC?
 
