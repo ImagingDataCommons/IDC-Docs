@@ -41,6 +41,10 @@ IDC is using BigQuery for managing metadata for the hosted data. In order to loc
 3. Type `bigquery-public-data` in the text box and click "PIN" button
 4. In the left panel, expand the `bigquery-public-data` drop-down, and navigate to the items called `idc_v1`, `idc_v2`, ..., `idc_current`, which are the datasets containing metadata tables maintained by IDC. Numbered datasets correspond to the IDC data versions documented in [Data Release Notes](../data/data-release-notes.md). `idc_current` is an alias that always points to the latest IDC version.
 
+### Enable GCP BigQuery API
+
+Navigate to the GCP [BigQuery API page](https://console.cloud.google.com/marketplace/product/google/bigquery.googleapis.com) and hit blue "ENABLE" button. This is needed in order to be able to query IDC BigQuery tables using Python API.
+
 ### Install and configure Cloud SDK
 
 Follow the instructions here to install and configure Google Cloud SDK: [https://cloud.google.com/sdk/docs/install-sdk](https://cloud.google.com/sdk/docs/install-sdk).
