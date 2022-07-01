@@ -2,11 +2,11 @@
 
 ## How to download data from IDC?
 
-Check out the [downloading-data.md](data/downloading-data.md "mention") documentation page!
+Check out the [downloading-data](data/downloading-data/ "mention") documentation page!
 
 ## How much does it cost to use the cloud?
 
-You can search and [download data from IDC](data/downloading-data.md) for free, and without having to attach your credit card to your GCP account.&#x20;
+You can search and [download data from IDC](data/downloading-data/) for free, and without having to attach your credit card to your GCP account.&#x20;
 
 You can use free tier of [Google Colab](https://colab.research.google.com) to get free access to a cloud-hosted VM with GPU to experiment with analysis workflows for IDC data.
 

@@ -23,7 +23,8 @@
   * [Files and metadata](data/organization-of-data/files-and-metadata.md)
   * [Resolving CRDC Globally Unique Identifiers (GUIDs)](data/organization-of-data/guids-and-uuids.md)
   * [Organization of data in v1 (deprecated)](data/organization-of-data/organization-of-data-v1.md)
-* [Downloading data](data/downloading-data.md)
+* [Downloading data](data/downloading-data/README.md)
+  * [Downloading data with s5cmd](data/downloading-data/downloading-data-with-s5cmd.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
