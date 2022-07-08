@@ -54,7 +54,7 @@ WHERE SeriesInstanceUID = "1.3.6.1.4.1.32722.99.99.29899177652134237501086129671
 Save the query defining the manifest into a file named `s5cmd_query.txt`, and run the query to save the manifest into a file `s5cmd_manifest.txt`:
 
 ```shell
-bq query --use_legacy_sql=false --format=csv --max_rows=20000000sh
+bq query --use_legacy_sql=false --format=csv --max_rows=20000000
 < s5cmd_query.txt > s5cmd_manifest.csv
 ```
 
