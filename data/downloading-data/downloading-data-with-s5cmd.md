@@ -55,7 +55,7 @@ Save the query defining the manifest into a file named `s5cmd_query.txt`, and ru
 
 ```shell
 bq query --use_legacy_sql=false --format=csv --max_rows=20000000
-< s5cmd_query.txt > s5cmd_manifest.csv
+< s5cmd_query.txt > s5cmd_manifest.txt
 ```
 
 ### Step 2: Download the files specified in the manifest
@@ -63,5 +63,5 @@ bq query --use_legacy_sql=false --format=csv --max_rows=20000000
 The following command will download the files specified in `s5cmd_manifest.txt` to the current directory:
 
 ```shell
-s5cmd --endpoint-url https://storage.googleapis.com run s5cmd_manifest.csv
+s5cmd --endpoint-url https://storage.googleapis.com run s5cmd_manifest.txt
 ```
