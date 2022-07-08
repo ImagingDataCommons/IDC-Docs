@@ -26,7 +26,13 @@ aws_secret_access_key=<your HMAC key secret>
 If you want to use `s5cmd` from a Colab notebook, it might be handy to save the credentials file to the `.aws` folder in Google Drive, which you can mount to the Colab notebook and copy your credentials in place. See details on using Google Drive with Colab in the [IDC Colab cookbook notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/cookbook.ipynb).
 {% endhint %}
 
-Next you can proceed with download in 2 steps, as before, but with slight modifications.
+You can verify if your setup was successful by running the following command: it should successfully download one file from IDC using `s5cmd.`
+
+```shell
+s5cmd --endpoint-url https://storage.googleapis.com cp s3://public-datasets-idc/eae91afc-1977-4728-9d6a-06f782c696d4.dcm .
+```
+
+If the command above completes successfully, you can proceed with download in 2 steps, as before, but with slight modifications.
 
 ### Step 1: Generate s5cmd compatible manifest
 
