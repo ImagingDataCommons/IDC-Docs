@@ -45,7 +45,7 @@ IDC is using BigQuery for managing metadata for the hosted data. In order to loc
 
 Navigate to the GCP [BigQuery API page](https://console.cloud.google.com/marketplace/product/google/bigquery.googleapis.com) and hit blue "ENABLE" button. This is needed in order to be able to query IDC BigQuery tables using Python API.
 
-### Install and configure Cloud SDK
+### \[skip if using Google Colab] Install and configure Cloud SDK
 
 Follow the instructions here to install and configure Google Cloud SDK: [https://cloud.google.com/sdk/docs/install-sdk](https://cloud.google.com/sdk/docs/install-sdk).
 
