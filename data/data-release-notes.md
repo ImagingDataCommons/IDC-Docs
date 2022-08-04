@@ -1,12 +1,14 @@
 # Data release notes
 
 {% hint style="info" %}
-Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
+Data hosted by IDC is ingested from several sources, including [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/), [Genomics Data Commons (GDC)](https://gdc.cancer.gov/), [Clinical Proteomic Tumor Analysis Consortium (CPTAC)](https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/clinical-proteomic-tumor-analysis-consortium-cptac) and [Human Tumor Atlas Network (HTAN)](https://humantumoratlas.org/).
+
+Please refer to the license and terms of use, which are defined in the `license_url` and `source_doi` or `source_doi` of the IDC BigQuery [`dicom_all` table](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table). You can filter the data by license type in the [IDC Portal](https://imaging.datacommons.cancer.gov/).
 {% endhint %}
 
 ## IDC releases summary view
 
-{% embed url="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?format=interactive&oid=395334291" %}
+{% embed url="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&format=image" %}
 
 ## v10 - Aug 2022
 
