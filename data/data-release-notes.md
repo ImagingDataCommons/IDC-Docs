@@ -4,6 +4,10 @@
 Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
 {% endhint %}
 
+## IDC releases summary view
+
+{% embed url="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?format=interactive&oid=395334291" %}
+
 ## v10 - Aug 2022
 
 In this release we introduce a new HTAN program including currently three collections release by the [Human Tumor Atlas Network](https://humantumoratlas.org/).
@@ -22,7 +26,7 @@ Updated collections:
 CPTAC, TCGA and NLST collections have been reconverted due to a technical issue identified with a subset of images included in v9.
 
 1. [CPTAC-AML](https://dx.doi.org/10.7937/tcia.2019.b6foe619)
-2. [CPTAC-BRCA](https://dx.doi.org/10.7937/TCIA.CAEM-YS80) *
+2. [CPTAC-BRCA](https://dx.doi.org/10.7937/TCIA.CAEM-YS80) \*
 3. [CPTAC-CCRCC](https://dx.doi.org/10.7937/K9/TCIA.2018.OBLAMN27)
 4. [CPTAC-CM](https://dx.doi.org/10.7937/K9/TCIA.2018.ODU24GZE)
 5. [CPTAC-COAD](https://dx.doi.org/10.7937/TCIA.YZWQ-ZZ63)
@@ -50,7 +54,7 @@ CPTAC, TCGA and NLST collections have been reconverted due to a technical issue 
 27. [TCGA-HNSC](https://dx.doi.org/10.7937/K9/TCIA.2016.LXKQ47MS)
 28. [TCGA-KICH](https://dx.doi.org/10.7937/K9/TCIA.2016.YU3RBCZN)
 29. [TCGA-KIRC](https://dx.doi.org/10.7937/K9/TCIA.2016.V6PBVTDR)
-30. [TCGA-KIRP](https://dx.doi.org/10.7937/K9/TCIA.2016.ACWOGBEF) *
+30. [TCGA-KIRP](https://dx.doi.org/10.7937/K9/TCIA.2016.ACWOGBEF) \*
 31. [TCGA-LGG](https://dx.doi.org/10.7937/K9/TCIA.2016.L4LTD3TK)
 32. [TCGA-LGG](https://dx.doi.org/10.7937/TCIA.2018.ow6ce3ml)
 33. [TCGA-LIHC](https://dx.doi.org/10.7937/K9/TCIA.2016.IMMQW8UQ)
@@ -73,15 +77,13 @@ CPTAC, TCGA and NLST collections have been reconverted due to a technical issue 
 50. [TCGA-UVM](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/melanoma-eye)
 
 Note that the TCGA-KIRP and TCGA-BRCA collections (marked with the asterisk in the list above) are currently missing SM high resolution layer files/instances due to a [known limitation](https://issuetracker.google.com/issues/238920874) of Google Healthcare that makes it not possible to ingest datasets that exceed some internal limits. Specifically, the following patient/studies are affected:
-* TCGA-KIRP: `PatientID` TCGA-5P-A9KA, `StudyInstanceUID` 2.25.191236165605958868867890945341011875563
-* TCGA-BRCA: `PatientID` TCGA-OL-A66H, `StudyInstanceUID` 2.25.82800314486527687800038836287574075736
-The affected files will be included in IDC when the infrastructure limitation is addressed.
 
+* TCGA-KIRP: `PatientID` TCGA-5P-A9KA, `StudyInstanceUID` 2.25.191236165605958868867890945341011875563
+* TCGA-BRCA: `PatientID` TCGA-OL-A66H, `StudyInstanceUID` 2.25.82800314486527687800038836287574075736 The affected files will be included in IDC when the infrastructure limitation is addressed.
 
 Collection access level change:
 
 1. [Vestibular-Schwannoma-SEG](https://doi.org/10.7937/TCIA.9YTJ-5Q73) is now available as public access collection
-
 
 ## v9 - May 2022
 
