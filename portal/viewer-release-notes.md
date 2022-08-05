@@ -6,18 +6,21 @@ The version of the viewer is shown in the Debug Info option.
 
 ## 0.8.1 - June 2022 - Slim
 
-**The Slim Viewer** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/MGHComputationalPathology/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/dicomweb/) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
+**The Slim Viewer** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/MGHComputationalPathology/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/using/dicomweb) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
 
 Main highlights of this release include:
 
 **New features**
+
 * Add panel for clinical trial information to case viewer;
 * Sort digital slides by Container Identifier attribute.
 
 **Enhancements**
+
 * Reset style of optical paths to default when deactivating presentation state.
 
 **Bug fixes**
+
 * Fix rendering of ROI annotations by upgrading to React version 1;
 * Correctly update UIDs of visible/active optical paths;
 * Fix type declarations of DICOMweb search resources.
@@ -37,6 +40,7 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **New features**
+
 * Support DICOM Advanced Blending Presentation State to parametrize the display of multiplexed IF microscopy images;
 * Add key bindings for annotations tools;
 * Enable configuration of tile preload;
@@ -44,6 +48,7 @@ Main highlights of this release include:
 * Expose equipment metadata in user interface.
 
 **Enhancements**
+
 * Improve default presentation of multiplexed IF microscopy images in the absence of presentation state instances;
 * Correctly configure DCM4CHEE Archive to use reverse proxy URL prefix for BulkDataURI in served metadata;
 * Enlarge display settings interfaces and add input fields for opacity, VOI limits, and colors;
@@ -52,13 +57,14 @@ Main highlights of this release include:
 * Disable optical path selection when a presentation state has been selected.
 
 **Bug fixes**
+
 * Fix parsing of URL path upon redirect after successful authentication/authorization;
 * Fix configuration of optical path display settings when switching between presentation states;
 * Fix caching of presentation states and for selection via drop-down menu.
 
 **Security**
-* Update dependencies with critical security issues.
 
+* Update dependencies with critical security issues.
 
 ## 0.5.1 - April 2022 - Slim
 
@@ -67,9 +73,11 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **Enhancements**
+
 * Make overview panel collapsible and hide it entirely if lowest-resolution image is too large.
 
 **Bug fixes**
+
 * Fix update of optical path settings when switching between slides.
 
 ## 4.12.26 - April 2022 - OHIF
@@ -90,6 +98,7 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 **New features**
+
 * Display of analysis results stored as DICOM Segmentation, Parametric Map, or Microscopy Bulk Simple Annotations instances;
 * Dynamic selection of DICOMweb server by user (can be enabled by setting AppConfig.enableServerSelection to true);
 * Dark app mode for fluorescence microscopy (can be enabled by setting App.mode to "dark");
@@ -100,6 +109,7 @@ Main highlights of this release include:
 * Implement grayscale transformations using Palette Color Lookup Tables to pseudo-color grayscale images.
 
 **Improvements**
+
 * Unify handling of optical paths for color and grayscale images;
 * Add loading indicator;
 * Improve styling of overview map;
@@ -117,13 +127,13 @@ Main highlights of this release include:
 * Optimize HTTP Accept header field for retrieval of frames to work around issues with various server implementations.
 
 **Bug fixes**
+
 * Ensure ROI annotations are re-rendered upon modification;
 * Clean up memory and recreate viewers upon page reload;
 * Fix selection of volume images;
 * Fix color space conversion during decoding of JPEG 2000 compressed image frames;
 * Fix unit of area measurements for ROI annotations;
 * Publish events when bulkdata loading starts and ends.
-
 
 ## 4.12.22 - March 2022 - OHIF
 
@@ -132,7 +142,7 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 * Improve logic for finding segmentations referenced source image;
-* Improve debug dialog: fix text overflow and adding active viewports referenced SEGs and RTSTRUCT series.  
+* Improve debug dialog: fix text overflow and adding active viewports referenced SEGs and RTSTRUCT series.
 
 ## 4.12.17 - February 2022 - OHIF
 

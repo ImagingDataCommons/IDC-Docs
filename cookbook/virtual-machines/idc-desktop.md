@@ -28,6 +28,6 @@ Once it boots in about 90 seconds you can type:
 gcloud compute ssh ${VMNAME} -- -L 6080:localhost:6080
 ```
 
-Then you can open [http://localhost:6080/vnc.html?autoconnect=true](http://localhost:6080/vnc.html?autoconnect=true) to get to your desktop.
+Then you can open `http://localhost:6080/vnc.html?autoconnect=true` to get to your desktop.
 
 Note that this effort is a work in progress with a minimal desktop environment. Further refinement is expected and community contributions would be welcome! A description of the background and possible evolution of this work is [in this document](https://docs.google.com/document/d/1jfHqjS7Fer7Lhqea5bjyown0b04AsqeOhIBY2gWUDO4/edit).
