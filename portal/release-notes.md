@@ -12,7 +12,7 @@ where revision hash corresponds to that of the [IDC WebApp repo](https://github.
 
 Main highlights of this release include:
 
-* User control over how selection of multiple filter modalities defines the cohort. Previously, when multiple modalities were selected the cohort would include the cases that had ANY of the selected modalities. Now the user can choose if the cohort includes the cases that contain ANY of the selected modaltiies or just those that have ALL of the selected modalities.  
+* User control over how selection of multiple filter modalities defines the cohort. Previously when multiple modalities were selected the cohort would include the cases that had ANY of the selected modalities. Now the user can choose if the cohort includes the cases that contain ANY of the selected modaltiies or just those that have ALL of the selected modalities.  
 
 Main highlights of this release include:
 
