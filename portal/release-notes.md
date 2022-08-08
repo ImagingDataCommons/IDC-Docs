@@ -12,18 +12,14 @@ where revision hash corresponds to that of the [IDC WebApp repo](https://github.
 
 Main highlights of this release include:
 
-* User control over how selection of multiple filter modalities defines the cohort. Previously when multiple modalities were selected the cohort would include the cases that had ANY of the selected modalities. Now the user can choose if the cohort includes the cases that contain ANY of the selected modaltiies or just those that have ALL of the selected modalities.  
-
-Main highlights of this release include:
+* User control over how selection of multiple filter modalities defines the cohort. Previously when multiple modalities were selected the cohort would include the cases that had ANY of the selected modalities. Now the user can choose if the cohort includes the cases that contain ANY of the selected modaltiies or just those that have ALL of the selected modalities.
 
 ## 9.0 - May 19, 2022 (canceridc.202205191051)
 
 Main highlights of this release include:
 
 * Ability to select specific Analysis Results collections with segmentation and radiomic features
-
-* Text boxes added to the slider panels to allow the user to input upper and lower slider bounds 
-
+* Text boxes added to the slider panels to allow the user to input upper and lower slider bounds
 * Pie chart tooltips updated to improve viewability
 
 ## 8.0 - April 4, 2022 (canceridc.202204050856.2920c81)
@@ -31,53 +27,38 @@ Main highlights of this release include:
 Main highlights of this release include:
 
 * Eleven new collections added
-
-* Number of cases, studies, and series in a cohort are reported in the filter de
-finition
-
+* Number of cases, studies, and series in a cohort are reported in the filter de finition
 * On the Exploration page the Access attribute is placed in the Search Scope
-
 * On the Exploration page users are warned when they create a cohort that includes Limited Access collections
-
 * Series Instance UID is reported in the Selected Series table
-
-
 
 ## 7.0 - February 7, 2022 (canceridc.202202071117.164252a)
 
 Main highlights of this release include:
 
-
-
 * The BigQuery query string corresponding to a cohort can now be displayed in user-readable format by pressing a button on either the cohort or cohort list pages
-
 * On the exploration page collections can now be sorted alphabetically or by the number of cases. Selected cases are ordered at the top of the collection list
-
 * Table rows can be selected by clicking anywhere within the row, not just on the checkbox
-
-* The BigQuery export cohort manifest includes the IDC data version as an optional column  
- 
-
-
+* The BigQuery export cohort manifest includes the IDC data version as an optional column
 
 ## 6.0 - January 10, 2022 (canceridc.202201101504.eb0e309)
 
 Main highlights of this release include:
 
-* Collections which have limited access are now denoted as such in the Collection tab on the Exploration page&#x20;
-* Links to image files belonging to limited collections have been removed from the Studies and Series tables on the Exploration page&#x20;
+* Collections which have limited access are now denoted as such in the Collection tab on the Exploration page
+* Links to image files belonging to limited collections have been removed from the Studies and Series tables on the Exploration page
 * The quota of image file data that can be served per user per day has been reduced from 137 to 40 GB
 
 ## 5.0 - December 9, 2021 (canceridc.202112091128.eb0e309)
 
 Main highlights of this release include:
 
-* New attributes including Manufacturer, Manufacturer Model Name, and Slice Thickness added&#x20;
-* Checked attribute values are now shown at the top of the attribute value lists&#x20;
-* Ability to search by CaseID added to the Selected Cases table&#x20;
-* Ability to search by StudyID added to the Selected Studies table&#x20;
-* Study Date added to the Studies Table&#x20;
-* Changed the persistence of the StudyID tooltip in the tables so that the StudyID can be copied from the tooltip&#x20;
+* New attributes including Manufacturer, Manufacturer Model Name, and Slice Thickness added
+* Checked attribute values are now shown at the top of the attribute value lists
+* Ability to search by CaseID added to the Selected Cases table
+* Ability to search by StudyID added to the Selected Studies table
+* Study Date added to the Studies Table
+* Changed the persistence of the StudyID tooltip in the tables so that the StudyID can be copied from the tooltip
 * Specific columns can now be selected in the BigQuery cohort export
 
 ## 2.1.0 - August 2021 (canceridc.202108261153.70f59e0)
