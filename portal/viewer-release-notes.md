@@ -11,7 +11,8 @@ The version of the viewer is shown in the Debug Info option.
 Main highlights of this release include:
 
 * Fix parsing of qualitative slice annotation;
-* Disable measurements panel interactions in MPR mode.
+* Disable measurements panel interactions in MPR mode;
+* Fix parsing og segmentation when orientation values are close to zero.
 
 
 ## 0.8.1 - June 2022 - Slim
