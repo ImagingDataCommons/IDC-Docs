@@ -4,7 +4,7 @@
 The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
-## 4.12.32 - August 2022 - OHIF
+## 4.12.33 - August 2022 - OHIF
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
