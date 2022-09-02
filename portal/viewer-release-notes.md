@@ -13,7 +13,7 @@ Main highlights of this release include:
 * Fix parsing of qualitative slice annotation;
 * Disable measurements panel interactions in MPR mode;
 * Fix parsing of segmentation when orientation values are close to zero;
-* Raise error if StudyInstanceUID, SeriesInstanceUID and SOPInstanceUID are not conforming with the UID (DICOM UI VR) character repertoire.
+* Raise error if a frame StudyInstanceUID, SeriesInstanceUID and SOPInstanceUID are not conforming with the UID (DICOM UI VR) character repertoire.
 
 
 ## 0.8.1 - June 2022 - Slim
