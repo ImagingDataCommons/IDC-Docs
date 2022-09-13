@@ -18,7 +18,7 @@ Structure of `table_metadata`:
 
 * `idc_table_added_datetime` (STRING,NULLABLE) - the date/time this particular table was first generated 
 
-* `post_process_src` (STRING, NULLABLE) - except for cptac_clinical the tables are curated from ZIP, Excel, and CSV files downloaded from the TCIA wiki. These files do not have a consistent structure and were not meant to be machine readable or to translate directly into BigQuery. A semi-manual curation process results in either a CSV of JSON file that can be directly written into a BigQuery table. _post_process_src_ is the name of the JSON or CSV file that results from this process and is used to create the BigQuery table. This field is not used for the cptac_clinical table   
+* `post_process_src` (STRING, NULLABLE) - except for the CPTAC and TCGA collections the tables are curated from ZIP, Excel, and CSV files downloaded from the TCIA wiki. These files do not have a consistent structure and were not meant to be machine readable or to translate directly into BigQuery. A semi-manual curation process results in either a CSV of JSON file that can be directly written into a BigQuery table. _post_process_src_ is the name of the JSON or CSV file that results from this process and is used to create the BigQuery table. This field is not used for the CPTAC- and TCGA-related tables   
 
 * `post_process_src_add_md5` (STRING, NULLABLE) - the md5 hash of post_process_src when the table was first added
 
@@ -34,9 +34,9 @@ Structure of `table_metadata`:
 
 * `number_batches` (INTEGER, NULLABLE) - records the number of batches. Within the source data patients are sometimes grouped into different 'batches' (i.e. training vs test, responder vs non-responder etc.) and the batches are placed in different locations (i.e. different files or different sheets in the same Excel file)
 
-* `source_info` (RECORD, REPEATED) - an array of records with information about the table sources. These sources are either files downloaded from the TCIA wiki or another BigQuery table (as is the case for CPTAC). There is a source_info record for each source 'batch' described above
+* `source_info` (RECORD, REPEATED) - an array of records with information about the table sources. These sources are either files downloaded from the TCIA wiki or another BigQuery table (as is the case for CPTAC and TCGA collections). There is a source_info record for each source 'batch' described above
 
-* `source_info.srcs` (STRING, REPEATED) - a source file downloaded from the TCIA wiki may be a ZIP file, and CSV file, or an Excel file. Sometimes the ZIP files contain other ZIP files that must be opened to extract the clinical data. In the _source_info.src_ array the first string is the file that is downloaded from TCIA for this particular source batch. The final string is the CSV or Excel file that contains the clinical data. Any intermediate strings are the names of ZIP files 'in between' the downloaded file and the clinical file. For the cptac_clinical table, this field contains the source BigQuery table (isb-cgc-bq.CPTAC.gdc_current)   
+* `source_info.srcs` (STRING, REPEATED) - a source file downloaded from the TCIA wiki may be a ZIP file, and CSV file, or an Excel file. Sometimes the ZIP files contain other ZIP files that must be opened to extract the clinical data. In the _source_info.src_ array the first string is the file that is downloaded from TCIA for this particular source batch. The final string is the CSV or Excel file that contains the clinical data. Any intermediate strings are the names of ZIP files 'in between' the downloaded file and the clinical file. For CPTAC and TCGA collections this field contains the source BigQuery table   
 
 * `source_info.added_md5` (STRING, NULLABLE) - md5 hash of the downloaded file from TCIA when the table was first added
 
@@ -44,34 +44,34 @@ Structure of `table_metadata`:
 
 * `source_info.update_md5` (STRING, NULLABLE) - md5 hash of the downloaded file from TCIA the most recent time the table was updated
 
-* `source_info.table_last_modified` (STRING, NULLABLE) - cptac_clinical only. The date and time the source BigQuery table was most recently modified, as recorded when last copied
+* `source_info.table_last_modified` (STRING, NULLABLE) - CPTAC and TCGA collections only. The date and time the source BigQuery table was most recently modified, as recorded when last copied
 
-* `source_info.table_size` (STRING, NULLABLE) - cptac_clinical only. The size of the source BigQuery table as recorded when last copied
+* `source_info.table_size` (STRING, NULLABLE) - CPTAC and TCGA collections only. The size of the source BigQuery table as recorded when last copied
 
 
 Structure of column_metadata:
 
-* `collection_id` (STRING,NULLABLE) - the collection_id of the collection in the given table. The collection id is in a format used internally by the IDC web app (with only lowercase letters, numbers and _ allowed). It is equivalent to _idc_webapp_id_ in the dicom_all view in the idc_current dataset. Except for cptac_clinical there is only one collection per table. For cptac collection_id it is a comma delimited list of all cptac collections (as determined by the field type it is stored as a string not an array)
+* `collection_id` (STRING,NULLABLE) - the collection_id of the collection in the given table. The collection id is in a format used internally by the IDC Web App (with only lowercase letters, numbers and '_' allowed). It is equivalent to the `idc_webapp_id` field in the `dicom_all` view in the `idc_current` dataset.
 
 
-* `case_col` (BOOLEAN, NULLABLE) - true if the BigQuery column contains the patient or case id, i.e. if this column is used to determine the value of the _dicom_patient_id_ column 
+* `case_col` (BOOLEAN, NULLABLE) - true if the BigQuery column contains the patient or case id, i.e. if this column is used to determine the value of the `dicom_patient_id` column 
 
 * `table_name` (STRING, NULLABLE) - table name
 
-* `column_name` (STRING, NULLABLE) - the actual column field name in the table. This nomenclature is derived from the data structure of the ACRIN programs which use a data dictionary and encoded attribute names. For ACRIN collections the _variable_name_ is that sourced from the provided data dictionary. For other collections it is a name constructed by 'normalizing' the variable_label (see next) in a format that can be used as a BigQuery field name  
+* `column_name` (STRING, NULLABLE) - the actual column name in the table. For ACRIN collections the `column_name` is the `variable_name` from the provided data dictionary. For other collections it is a name constructed by 'normalizing' the `column_label` (see next) in a format that can be used as a BigQuery field name  
 
-* `column_label` (STRING, NULLABLE) - a 'free form' label for the column that does not need to conform to the BigQuery column format requirements. For ACRIN collections this is again provided by a data dictionary that accompanies the collection. For other collections it is the name or label of the clinical attribute as inferred from the source document during the curation process
+* `column_label` (STRING, NULLABLE) - a 'free form' label for the column that does not need to conform to the BigQuery column format requirements. For ACRIN collections this is the `variable_label` given by a data dictionary that accompanies the collection. For other collections it is the name or label of the clinical attribute as inferred from the source document during the curation process
 
 * `data_type` (STRING, NULLABLE) - the type of data in this column. Again for ACRIN collections this is provided in the data dictionary. For other collections it is inferred by analyzing the data during curation
 
-* `original_column_headers` (STRING, REPEATED) - the name(s) or label(s) in the source document that were used to construct the _variable_label_ field. In most cases there is one column label in the source document that perscribes the _variable_label_. In some cases, multiple columns are concantenated and reformated to form the _variable_label_  
+* `original_column_headers` (STRING, REPEATED) - the name(s) or label(s) in the source document that were used to construct the `column_label` field. In most cases there is one column label in the source document that perscribes the `column_label`. In some cases, multiple columns are concantenated and reformated to form the `column_label`  
 
-* `values` (RECORD, REPEATED) - a structure that is again borrowed from the ACRIN data model. This is an array that contains observerd attribute values for this given column. For ACRIN collections these values are reported in the data dictionary. For other collections these values are determined by analyzing the source data. For simplicity this field is left blank when the number of unique values is greater than 20
+* `values` (RECORD, REPEATED) - a structure that is borrowed from the ACRIN data model. This is an array that contains observerd attribute values for this given column. For ACRIN collections these values are reported in the data dictionary. For most other collections these values are determined by analyzing the source data. For simplicity this field is left blank when the number of unique values is greater than 20
 
 * `values.option_code` (STRING, NULLABLE) -  a value for this data column that is present at least once in the source data, and is now found in this BigQuery column 
    
 
-* `values.option_description` (STRING, NULLABLE) -  a description of the _option_code_ (ACRIN only)  
+* `values.option_description` (STRING, NULLABLE) -  a description of the `option_code` as provided by a data dictionary. For collections that do not have a data dictionary this is null. 
 
 * `files` (STRING, REPEATED) - names of the files that contain the source data for each batch. These are the Excel or CSV files directly downloaded from TCIA, or the files extracted from downloaded ZIP files
 
