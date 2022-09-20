@@ -12,7 +12,19 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 ## v11 - Sept 2022
 
+This release introduces clinical data ingested for a subset of collections, and now available via a dedicated BigQuery dataset.
 
+New collections:
+
+1. [CMB-CRC](https://dx.doi.org/10.7937/DJG7-GZ87)
+2. [CMB-GEC](https://dx.doi.org/10.7937/E7KH-R486)
+3. [CMB-LCA](https://dx.doi.org/10.7937/3CX3-S132)
+4. [CMB-MEL](https://dx.doi.org/10.7937/GWSP-WH72)
+5. [CMB-MML](https://dx.doi.org/10.7937/SZKB-SW39)
+6. [CMB-PCA](https://dx.doi.org/10.7937/25T7-6Y12)
+7. [GBM-DSC-MRI-DRO](https://dx.doi.org/10.7937/TCIA.2020.RMWVZWIX)
+8. [HCC-TACE-Seg](https://dx.doi.org/10.7937/TCIA.5FNA-0924)
+9. [PDMR-521955-158-R4](https://dx.doi.org/10.7937/q37d-vh79)
 
 ## v10 - Aug 2022
 
