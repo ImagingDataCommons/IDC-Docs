@@ -1,6 +1,12 @@
 # Welcome!
 
-**NCI Imaging Data Commons** **(IDC)** is a cloud-based repository of publicly available cancer imaging data co-located with the analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.
+{% hint style="info" %}
+Starting May 24, 2022, **we introduce “IDC Community Office Hours”**! Please join us on Google Meet at [https://meet.google.com/xyt-vody-tvb](https://meet.google.com/xyt-vody-tvb) **every Tuesday 16:30 – 17:30 (New York) and Wednesday 10:30-11:30 (New York)**. Everyone is welcome, you can ask any question related to IDC, and Andrey Fedorov will be there to answer them!
+
+The purpose of the Office hours is to understand the needs and pain points of our users, provide support, and collect feedback to help us direct our future developments!
+{% endhint %}
+
+**NCI Imaging Data Commons** **(IDC)** is a cloud-based repository of publicly available cancer imaging data co-located with the analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.
 
 IDC **connects** researchers with&#x20;
 

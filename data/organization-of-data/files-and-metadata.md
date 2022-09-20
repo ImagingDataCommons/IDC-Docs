@@ -183,6 +183,10 @@ Some of the collections are accompanied by BigQuery tables that have not been ha
 
 #### NLST
 
+{% hint style="info" %}
+IDC hosts a subset of the NLST clinical data, which was cleared for public sharing. If you need the full clinical data, please visit the [Cancer Data Access System (CDAS) system](https://biometry.nci.nih.gov/cdas/learn/nlst/trial-summary/).
+{% endhint %}
+
 The following tables contain NLST specific metadata. The detailed schema of those tables is available from the [TCIA NLST collection page](https://doi.org/10.7937/tcia.hmq8-j677).
 
 * ``[`nlst_canc`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=nlst\_canc\&page=table): "Lung Cancer"

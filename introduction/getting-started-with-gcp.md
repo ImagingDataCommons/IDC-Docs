@@ -12,22 +12,55 @@ Google Cloud platform provides a range of solutions to better understand and ana
 
 The steps concerning creating a Google Cloud project and setting up billing are covered in [this short video tutorial](https://youtu.be/i08S0KJLnyw).
 
-**Obtain a Google identity**
+### **Obtain a Google identity**
 
 Do you have a Google identity? If so, you can proceed to the next step.
 
 If not, it only takes a minute to [create a Google identity](https://accounts.google.com/signup/v2/webcreateaccount?dsh=308321458437252901\&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount\&flowName=GlifWebSignIn\&flowEntry=SignUp#FirstName=\&LastName=). Note that you do NOT need a Gmail email account - [you can use your non-Gmail email address to create one instead](https://support.google.com/accounts/answer/27441?hl=en#existingemail).
 
-**Set up a Google Cloud Project**
+### **Set up a Google Cloud Project**
+
+To perform queries against IDC BigQuery tables you will need a cloud project. You can get started with Google Cloud free project with the following steps (they are also illustrated in [this short video](https://youtu.be/i08S0KJLnyw)):
+
+1. Go to [https://console.cloud.google.com/](https://console.cloud.google.com/), and accept Terms and conditions.
+2. Click "Select a project" button in the upper left corner of the screen, and then click "New project".
+3. Open the GCP Dashboard ( **≡** > Cloud overview > Dashboard) and take note of the "Project ID" value - you will need it to perform some of the operations.
+
+Additional reading materials:
 
 * See Google’s documentation about how to [create a Google Cloud Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
 * Learn about how to [add members and roles to a project](https://cloud.google.com/iam/docs/quickstart).
 * [Enable Required Google Cloud APIs](https://cloud.google.com/apis/docs/getting-started#enabling\_apis).
 
-**Set up billing for your project**
+### Locate IDC metadata tables in Cloud BigQuery console
+
+IDC is using BigQuery for managing metadata for the hosted data. In order to locate the tables that contain such metadata, complete the following steps:
+
+1. Open BigQuery console: [https://console.cloud.google.com/bigquery](https://console.cloud.google.com/bigquery)
+2. Click "+ ADD DATA" button, and select "Pin a project > Enter project name"
+3. Type `bigquery-public-data` in the text box and click "PIN" button
+4. In the left panel, expand the `bigquery-public-data` drop-down, and navigate to the items called `idc_v1`, `idc_v2`, ..., `idc_current`, which are the datasets containing metadata tables maintained by IDC. Numbered datasets correspond to the IDC data versions documented in [Data Release Notes](../data/data-release-notes.md). `idc_current` is an alias that always points to the latest IDC version.
+
+### Enable GCP BigQuery API
+
+Navigate to the GCP [BigQuery API page](https://console.cloud.google.com/marketplace/product/google/bigquery.googleapis.com). If the BigQuery API has not been enabled, you will see blue "ENABLE" button that you will need to push to enable that API. This is needed in order to be able to query IDC BigQuery tables using Python API.
+
+### \[skip if using Google Colab] Install and configure Cloud SDK
+
+Follow the instructions here to install and configure Google Cloud SDK: [https://cloud.google.com/sdk/docs/install-sdk](https://cloud.google.com/sdk/docs/install-sdk).
+
+Note that you will need to do this only if you want to interact with IDC data from your computer. If you use Google Colab, or Google Compute Engine VMs, Cloud SDK tools will be pre-installed and ready to use.
+
+### **OPTIONAL: Set up billing for your project**
+
+You will not need to set up billing for your project to do basic operations with IDC, such as running Colab notebooks, or executing queries, as long as you stay within the [GCP free tier](https://cloud.google.com/free).&#x20;
+
+You will need to set up project billing if you want to launch your own VMs, or use resources beyond the free usage tier.
+
+If you are just starting, it may be easiest to take advantage of the IDC "early adopter" free cloud credits allocation by filling out [this form](requesting-gcp-cloud-credits.md).
 
 {% hint style="danger" %}
-We can't stress enough how important it is to be diligent in tracking your usage of GCP resources!
+Once you set up billing, we can't stress enough how important it is to be diligent in tracking your usage of GCP resources!
 
 * **Be sure to shut down anything you aren't using** - free trial credits, IDC-provided credits or your credit card will be charged otherwise for the resources you are not using.
 * Be careful with your login information. If someone takes over your account they **could run up a huge bill that you will be responsible for paying**.
@@ -38,9 +71,3 @@ We can't stress enough how important it is to be diligent in tracking your usage
 {% hint style="info" %}
 You can use [Budget Alerts](https://cloud.google.com/billing/docs/how-to/budgets) to monitor your adherence to a budget!
 {% endhint %}
-
-Depending on your situation, you can consider the following mechanisms to support your work on the cloud:
-
-* Take advantage of a one-time [$300 Google Credit](https://cloud.google.com/free/) (note that you will need to provide credit card information for verifying you are a real person - you won’t be charged unless you manually upgrade to a paid account)
-* If you have already used this one-time offer (or there is some other reason you cannot use it), you can [apply for "early adopter" Cloud Credits from IDC](requesting-gcp-cloud-credits.md).
-* You can use a credit card to cover the cloud charges.

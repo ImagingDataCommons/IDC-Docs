@@ -1,8 +1,110 @@
 # Data release notes
 
 {% hint style="info" %}
-Currently, all of the data hosted by IDC is replicated from [TCIA](https://www.cancerimagingarchive.net). As such, all of the data currently hosted by IDC is subject to the [TCIA Data Usage License and Citation Requirements](https://wiki.cancerimagingarchive.net/x/c4hF).
+Data hosted by IDC is ingested from several sources, including [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/), [Genomics Data Commons (GDC)](https://gdc.cancer.gov/), [Clinical Proteomic Tumor Analysis Consortium (CPTAC)](https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/clinical-proteomic-tumor-analysis-consortium-cptac) and [Human Tumor Atlas Network (HTAN)](https://humantumoratlas.org/).
+
+Please refer to the license and terms of use, which are defined in the `license_url` and `source_doi` or `source_doi` of the IDC BigQuery [`dicom_all` table](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table). You can filter the data by license type in the [IDC Portal](https://imaging.datacommons.cancer.gov/).
 {% endhint %}
+
+## IDC releases summary view
+
+{% embed url="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&format=image" %}
+
+## v10 - Aug 2022
+
+In this release we introduce a new HTAN program including currently three collections release by the [Human Tumor Atlas Network](https://humantumoratlas.org/).
+
+New collections:
+
+1. [ACRIN-6698](https://dx.doi.org/10.7937/tcia.kk02-6d95)
+2. [HTAN-HMS](https://humantumoratlas.org/hta7/)
+3. [HTAN-OHSU](https://humantumoratlas.org/hta9/)
+4. [HTAN-WUSTL](https://humantumoratlas.org/hta12/)
+5. [ISPY2](https://dx.doi.org/10.7937/TCIA.D8Z0-9T85)
+6. [UPENN-GBM](https://dx.doi.org/10.7937/TCIA.709X-DN49)
+
+Updated collections:
+
+CPTAC, TCGA and NLST collections have been reconverted due to a technical issue identified with a subset of images included in v9.
+
+1. [CPTAC-AML](https://dx.doi.org/10.7937/tcia.2019.b6foe619)
+2. [CPTAC-BRCA](https://dx.doi.org/10.7937/TCIA.CAEM-YS80) \*
+3. [CPTAC-CCRCC](https://dx.doi.org/10.7937/K9/TCIA.2018.OBLAMN27)
+4. [CPTAC-CM](https://dx.doi.org/10.7937/K9/TCIA.2018.ODU24GZE)
+5. [CPTAC-COAD](https://dx.doi.org/10.7937/TCIA.YZWQ-ZZ63)
+6. [CPTAC-GBM](https://dx.doi.org/10.7937/K9/TCIA.2018.3RJE41Q1)
+7. [CPTAC-HNSCC](https://dx.doi.org/10.7937/K9/TCIA.2018.UW45NH81)
+8. [CPTAC-LSCC](https://dx.doi.org/10.7937/K9/TCIA.2018.6EMUB5L2)
+9. [CPTAC-LUAD](https://dx.doi.org/10.7937/K9/TCIA.2018.PAT12TBS)
+10. [CPTAC-OV](https://dx.doi.org/10.7937/TCIA.ZS4A-JD58)
+11. [CPTAC-PDA](https://dx.doi.org/10.7937/K9/TCIA.2018.SC20FO18)
+12. [CPTAC-SAR](https://dx.doi.org/10.7937/TCIA.2019.9bt23r95)
+13. [CPTAC-UCEC](https://dx.doi.org/10.7937/K9/TCIA.2018.3R3JUISW)
+14. [Duke-Breast-Cancer-MRI](https://dx.doi.org/10.7937/TCIA.e3sv-re93)
+15. [NLST](https://dx.doi.org/10.7937/TCIA.hmq8-j677)
+16. [TCGA-ACC](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/adrenocortical)
+17. [TCGA-BLCA](https://dx.doi.org/10.7937/K9/TCIA.2016.8LNG8XDR)
+18. [TCGA-BRCA](https://dx.doi.org/10.7937/K9/TCIA.2016.AB2NAZRP)
+19. [TCGA-BRCA](https://dx.doi.org/10.7937/TCIA.2019.wgllssg1)
+20. [TCGA-CESC](https://dx.doi.org/10.7937/K9/TCIA.2016.SQ4M8YP4)
+21. [TCGA-CHOL](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/cholangiocarcinoma)
+22. [TCGA-COAD](https://dx.doi.org/10.7937/K9/TCIA.2016.HJJHBOXZ)
+23. TCGA-DLBC
+24. [TCGA-ESCA](https://dx.doi.org/10.7937/K9/TCIA.2016.VPTNRGFY)
+25. [TCGA-GBM](https://dx.doi.org/10.7937/K9/TCIA.2016.RNYFUYE9)
+26. [TCGA-GBM](https://dx.doi.org/10.7937/TCIA.2018.ow6ce3ml)
+27. [TCGA-HNSC](https://dx.doi.org/10.7937/K9/TCIA.2016.LXKQ47MS)
+28. [TCGA-KICH](https://dx.doi.org/10.7937/K9/TCIA.2016.YU3RBCZN)
+29. [TCGA-KIRC](https://dx.doi.org/10.7937/K9/TCIA.2016.V6PBVTDR)
+30. [TCGA-KIRP](https://dx.doi.org/10.7937/K9/TCIA.2016.ACWOGBEF) \*
+31. [TCGA-LGG](https://dx.doi.org/10.7937/K9/TCIA.2016.L4LTD3TK)
+32. [TCGA-LGG](https://dx.doi.org/10.7937/TCIA.2018.ow6ce3ml)
+33. [TCGA-LIHC](https://dx.doi.org/10.7937/K9/TCIA.2016.IMMQW8UQ)
+34. [TCGA-LUAD](https://dx.doi.org/10.7937/K9/TCIA.2016.JGNIHEP5)
+35. [TCGA-LUSC](https://dx.doi.org/10.7937/K9/TCIA.2016.TYGKKFMQ)
+36. [TCGA-MESO](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/mesothelioma)
+37. [TCGA-OV](https://dx.doi.org/10.7937/K9/TCIA.2016.NDO1MDFQ)
+38. [TCGA-PAAD](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/pancreatic)
+39. [TCGA-PCPG](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/paraganglioma)
+40. [TCGA-PRAD](https://dx.doi.org/10.7937/K9/TCIA.2016.YXOGLM4Y)
+41. [TCGA-READ](https://dx.doi.org/10.7937/K9/TCIA.2016.F7PPNPNU)
+42. [TCGA-SARC](https://dx.doi.org/10.7937/K9/TCIA.2016.CX6YLSUX)
+43. [TCGA-SKCM](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/melanoma-skin)
+44. [TCGA-STAD](https://dx.doi.org/10.7937/K9/TCIA.2016.GDHL9KIM)
+45. [TCGA-TGCT](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/testicular-germ-cell)
+46. [TCGA-THCA](https://dx.doi.org/10.7937/K9/TCIA.2016.9ZFRVF1B)
+47. [TCGA-THYM](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/thymoma)
+48. [TCGA-UCEC](https://dx.doi.org/10.7937/K9/TCIA.2016.GKJ0ZWAC)
+49. [TCGA-UCS](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/uterine-carcinosarcoma)
+50. [TCGA-UVM](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/melanoma-eye)
+
+Note that the TCGA-KIRP and TCGA-BRCA collections (marked with the asterisk in the list above) are currently missing SM high resolution layer files/instances due to a [known limitation](https://issuetracker.google.com/issues/238920874) of Google Healthcare that makes it not possible to ingest datasets that exceed some internal limits. Specifically, the following patient/studies are affected:
+
+* TCGA-KIRP: `PatientID` TCGA-5P-A9KA, `StudyInstanceUID` 2.25.191236165605958868867890945341011875563
+* TCGA-BRCA: `PatientID` TCGA-OL-A66H, `StudyInstanceUID` 2.25.82800314486527687800038836287574075736 The affected files will be included in IDC when the infrastructure limitation is addressed.
+
+Collection access level change:
+
+1. [Vestibular-Schwannoma-SEG](https://doi.org/10.7937/TCIA.9YTJ-5Q73) is now available as public access collection
+
+## v9 - May 2022
+
+This data release introduces the concept of differential license to IDC: some of the collections maintained by IDC contain items that have different licenses. As an example, radiology component of the TCGA-GBM collection is covered by the TCIA limited access license, and is not available in IDC, while the digital pathology component is covered by CC-BY. With this release, we complete sharing in full of the digital pathology component of the datasets released by the CPTAC and TCGA programs.
+
+New collections:
+
+1. [ACRIN-Contralateral-Breast-MR](https://dx.doi.org/10.7937/Q1EE-J082)
+2. [StageII-Colorectal-CT](https://dx.doi.org/10.7937/p5k5-tg43)
+
+Updated collections:
+
+1. [B-mode-and-CEUS-Liver](https://dx.doi.org/10.7937/TCIA.2021.v4z7-tc39)
+2. [CPTAC-GBM](https://dx.doi.org/10.7937/K9/TCIA.2018.3RJE41Q1)
+3. [CPTAC-HNSCC](https://dx.doi.org/10.7937/K9/TCIA.2018.UW45NH81)
+4. [Pediatric-CT-SEG](https://dx.doi.org/10.7937/TCIA.X0H0-1706)
+5. [TCGA-GBM](https://dx.doi.org/10.7937/K9/TCIA.2016.RNYFUYE9)
+6. [TCGA-HNSC](https://dx.doi.org/10.7937/K9/TCIA.2016.LXKQ47MS)
+7. [TCGA-LGG](https://dx.doi.org/10.7937/K9/TCIA.2016.L4LTD3TK)
 
 ## v8 - April 2022
 
@@ -51,25 +153,25 @@ The main highlight of this release is the addition of the Slide Microscopy imagi
 
 New collections
 
-1. [APOLLO-5-ESCA](https://dx.doi.org/10.7937/n69a-7a26)&#x20;
-2. [APOLLO-5-LUAD](https://dx.doi.org/10.7937/BDM9-4623)&#x20;
-3. [APOLLO-5-PAAD](https://dx.doi.org/10.7937/tcia.1yeg-5740)&#x20;
-4. [APOLLO-5-THYM](https://dx.doi.org/10.7937/tcia.0pg4-nh82)&#x20;
-5. [CPTAC-AML](https://dx.doi.org/10.7937/tcia.2019.b6foe619)&#x20;
-6. [CPTAC-BRCA](https://dx.doi.org/10.7937/TCIA.CAEM-YS80)&#x20;
-7. [CPTAC-COAD](https://dx.doi.org/10.7937/TCIA.YZWQ-ZZ63)&#x20;
-8. [CPTAC-OV](https://dx.doi.org/10.7937/TCIA.ZS4A-JD58)&#x20;
-9. [Pancreatic-CT-CBCT-SEG](https://dx.doi.org/10.7937/TCIA.ESHQ-4D90)&#x20;
+1. [APOLLO-5-ESCA](https://dx.doi.org/10.7937/n69a-7a26)
+2. [APOLLO-5-LUAD](https://dx.doi.org/10.7937/BDM9-4623)
+3. [APOLLO-5-PAAD](https://dx.doi.org/10.7937/tcia.1yeg-5740)
+4. [APOLLO-5-THYM](https://dx.doi.org/10.7937/tcia.0pg4-nh82)
+5. [CPTAC-AML](https://dx.doi.org/10.7937/tcia.2019.b6foe619)
+6. [CPTAC-BRCA](https://dx.doi.org/10.7937/TCIA.CAEM-YS80)
+7. [CPTAC-COAD](https://dx.doi.org/10.7937/TCIA.YZWQ-ZZ63)
+8. [CPTAC-OV](https://dx.doi.org/10.7937/TCIA.ZS4A-JD58)
+9. [Pancreatic-CT-CBCT-SEG](https://dx.doi.org/10.7937/TCIA.ESHQ-4D90)
 10. [Pediatric-CT-SEG](https://dx.doi.org/10.7937/TCIA.X0H0-1706)
 
 Updated collections
 
-1. [CPTAC-CCRCC](https://dx.doi.org/10.7937/K9/TCIA.2018.OBLAMN27)&#x20;
-2. [CPTAC-CM](https://dx.doi.org/10.7937/K9/TCIA.2018.ODU24GZE)&#x20;
-3. [CPTAC-LSCC](https://dx.doi.org/10.7937/K9/TCIA.2018.6EMUB5L2)&#x20;
-4. [CPTAC-LUAD](https://dx.doi.org/10.7937/K9/TCIA.2018.PAT12TBS)&#x20;
-5. [CPTAC-PDA](https://dx.doi.org/10.7937/K9/TCIA.2018.SC20FO18)&#x20;
-6. [CPTAC-SAR](https://dx.doi.org/10.7937/TCIA.2019.9bt23r95)&#x20;
+1. [CPTAC-CCRCC](https://dx.doi.org/10.7937/K9/TCIA.2018.OBLAMN27)
+2. [CPTAC-CM](https://dx.doi.org/10.7937/K9/TCIA.2018.ODU24GZE)
+3. [CPTAC-LSCC](https://dx.doi.org/10.7937/K9/TCIA.2018.6EMUB5L2)
+4. [CPTAC-LUAD](https://dx.doi.org/10.7937/K9/TCIA.2018.PAT12TBS)
+5. [CPTAC-PDA](https://dx.doi.org/10.7937/K9/TCIA.2018.SC20FO18)
+6. [CPTAC-SAR](https://dx.doi.org/10.7937/TCIA.2019.9bt23r95)
 7. [CPTAC-UCEC](https://dx.doi.org/10.7937/K9/TCIA.2018.3R3JUISW)
 
 ## v6 - January 2022
