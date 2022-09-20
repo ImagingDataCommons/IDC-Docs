@@ -8,11 +8,15 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 11.0 - September 8, 2022 (canceridc.202209081302.acb8ce3)
+
+This was primarily a data release. There were no significant changes to the portal.
+
 ## 10.0 - August 3, 2022 (canceridc.202208040944.6c798a2)
 
 Main highlights of this release include:
 
-* User control over how selection of multiple filter modalities defines the cohort. Previously when multiple modalities were selected the cohort would include the cases that had ANY of the selected modalities. Now the user can choose if the cohort includes the cases that contain ANY of the selected modaltiies or just those that have ALL of the selected modalities.
+* User control over how selection of multiple filter modalities defines the cohort. Previously when multiple modalities were selected the cohort would include the cases that had ANY of the selected modalities. Now the user can choose if the cohort includes the cases that contain ANY of the selected modaltiies or just those that have ALL of the selected modalities.  
 
 ## 9.0 - May 19, 2022 (canceridc.202205191051)
 
