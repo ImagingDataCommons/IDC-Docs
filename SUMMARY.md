@@ -22,7 +22,7 @@
 * [Organization of data](data/organization-of-data/README.md)
   * [Files and metadata](data/organization-of-data/files-and-metadata.md)
   * [Resolving CRDC Globally Unique Identifiers (GUIDs)](data/organization-of-data/guids-and-uuids.md)
-  * [Clinical datra](data/organization-of-data/clinical.md)
+  * [Clinical data](data/organization-of-data/clinical.md)
   * [Organization of data in v1 (deprecated)](data/organization-of-data/organization-of-data-v1.md)
 * [Downloading data](data/downloading-data/README.md)
   * [Downloading data with s5cmd](data/downloading-data/downloading-data-with-s5cmd.md)
