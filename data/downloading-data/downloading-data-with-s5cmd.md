@@ -8,6 +8,8 @@ Unlike `gsutil`, `s5cmd` does not currently verify file checksum on download (al
 
 ### Prerequisites
 
+It is recommended that you use a Service Account to generate access credentials as discussed below. If all you need to do is download data from IDC, you can create a service account that does not have any privileges, and will be used for authentication only. If you plan to use `s5cmd` to write data to another bucket, you need to make sure service account has the appropriate permissions. Read more about GCP service accounts in [this article](https://cloud.google.com/iam/docs/service-accounts).
+
 Here is the `s5cmd` help article that describes how to use it with Google Cloud Storage: [https://github.com/peak/s5cmd#google-cloud-storage-support](https://github.com/peak/s5cmd#google-cloud-storage-support). In the following we summarize the steps as they apply to IDC.
 
 Install `s5cmd` following the instructions in [https://github.com/peak/s5cmd#installation](https://github.com/peak/s5cmd#installation).
