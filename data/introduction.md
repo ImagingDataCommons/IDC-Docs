@@ -6,12 +6,12 @@ Check out the [IDC "getting started" Colab notebook](https://github.com/ImagingD
 
 Currently, IDC is hosting data from the following data repositories:
 
-* a [subset](https://portal.imaging.datacommons.cancer.gov/collections/) of publicly available radiology collections and analysis results collectins from The Cancer Imaging Archive (TCIA)
-* whole slide pathology images collected by&#x20;
+* a [subset](https://portal.imaging.datacommons.cancer.gov/collections/) of publicly available radiology collections and analysis results collections (in DICOM format) from The Cancer Imaging Archive (TCIA)
+* whole slide pathology images (in [DICOM-TIFF format](../dicom/dicom-tiff-dual-personality-files.md)) collected by&#x20;
   * The Cancer Genome Atlas (TCGA)
   * [Clinical Proteomic Tumor Analysis Consortium (CPTAC)](https://proteomics.cancer.gov/programs/cptac)
   * [National Lung Screening Trial (NLST) ](https://www.cancer.gov/types/lung/research/nlst)
-* fluorescence images collected by the [Human Tumor Atlas Network (HTAN)](https://humantumoratlas.org/)
+* fluorescence images (in [DICOM-TIFF format](../dicom/dicom-tiff-dual-personality-files.md)) collected by the [Human Tumor Atlas Network (HTAN)](https://humantumoratlas.org/)
 
 {% hint style="info" %}
 If you would like us to prioritize an existing public TCIA collection, which is not currently included in the IDC offering, please start the discussion on our [forum](https://discourse.canceridc.dev/c/data/8)!
