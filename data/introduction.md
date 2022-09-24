@@ -1,8 +1,17 @@
 # Introduction
 
-Cloud-based hosting of public cancer imaging collections is a key functionality of IDC.
+{% hint style="info" %}
+Check out the [IDC "getting started" Colab notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/getting\_started.ipynb) for a quick introduction into data organization and main features of our repository!
+{% endhint %}
 
-Currently, IDC is hosting a [subset](https://portal.imaging.datacommons.cancer.gov/collections/) of publicly available collections from The Cancer Imaging Archive \(TCIA\).
+Currently, IDC is hosting data from the following data repositories:
+
+* a [subset](https://portal.imaging.datacommons.cancer.gov/collections/) of publicly available radiology collections and analysis results collectins from The Cancer Imaging Archive (TCIA)
+* whole slide pathology images collected by&#x20;
+  * The Cancer Genome Atlas (TCGA)
+  * [Clinical Proteomic Tumor Analysis Consortium (CPTAC)](https://proteomics.cancer.gov/programs/cptac)
+  * [National Lung Screening Trial (NLST) ](https://www.cancer.gov/types/lung/research/nlst)
+* fluorescence images collected by the [Human Tumor Atlas Network (HTAN)](https://humantumoratlas.org/)
 
 {% hint style="info" %}
 If you would like us to prioritize an existing public TCIA collection, which is not currently included in the IDC offering, please start the discussion on our [forum](https://discourse.canceridc.dev/c/data/8)!
@@ -11,8 +20,3 @@ If you would like us to prioritize an existing public TCIA collection, which is 
 Check out [Data release notes](data-release-notes.md) for the information about the collections added in the individual IDC data releases.
 
 In the following pages we discuss how to access datasets hosted by IDC and their organization.
-
-{% hint style="info" %}
-Our goal is to support you in using cloud resources for data analysis. Therefore, our documentation focuses on how to use IDC data from the cloud resources, and not from your desktop, as the latter would require downloading the data.
-{% endhint %}
-
