@@ -16,15 +16,15 @@ This release introduces clinical data ingested for a subset of collections, and 
 
 New collections:
 
-1. [CMB-CRC](https://dx.doi.org/10.7937/DJG7-GZ87)
-2. [CMB-GEC](https://dx.doi.org/10.7937/E7KH-R486)
-3. [CMB-LCA](https://dx.doi.org/10.7937/3CX3-S132)
-4. [CMB-MEL](https://dx.doi.org/10.7937/GWSP-WH72)
-5. [CMB-MML](https://dx.doi.org/10.7937/SZKB-SW39)
-6. [CMB-PCA](https://dx.doi.org/10.7937/25T7-6Y12)
-7. [GBM-DSC-MRI-DRO](https://dx.doi.org/10.7937/TCIA.2020.RMWVZWIX)
-8. [HCC-TACE-Seg](https://dx.doi.org/10.7937/TCIA.5FNA-0924)
-9. [PDMR-521955-158-R4](https://dx.doi.org/10.7937/q37d-vh79)
+1. [CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_crc)
+2. [CMB-GEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_gec)
+3. [CMB-LCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_lca)
+4. [CMB-MEL](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_mel)
+5. [CMB-MML](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_mml)
+6. [CMB-PCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_pca)
+7. [GBM-DSC-MRI-DRO](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=QIN\&collection\_id=gbm\_dsc\_mri\_dro)
+8. [HCC-TACE-Seg](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=Community\&collection\_id=hcc\_tace\_seg)
+9. [PDMR-521955-158-R4](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=PDMR\&collection\_id=pdmr\_521955\_158\_r4)
 
 ## v10 - Aug 2022
 
