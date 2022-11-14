@@ -25,6 +25,9 @@ Updated collections:
 4. [CMB-PCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_pca)
 5. [Pancreatic-CT-CBCT-SEG](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=pancreatic\_ct\_cbct\_seg)
 
+Other:
+
+All limited access collections are removed.
 
 New clinical data collections:
 
