@@ -14,21 +14,21 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 New collections:
 
-[CT-vs-PET-Ventilation-Imaging](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ct\_vs\_pet\_ventilation\_imaging)
-[CTpred-Sunitinib-panNET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ctpred\_sunitinib\_pannet)
+1. [CT-vs-PET-Ventilation-Imaging](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ct\_vs\_pet\_ventilation\_imaging)
+2. [CTpred-Sunitinib-panNET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ctpred\_sunitinib\_pannet)
 
 Updated collections:
 
-[CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_crc)
-[CMB-LCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_lca)
-[CMB-MEL](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_mel)
-[CMB-PCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_pca)
-[Pancreatic-CT-CBCT-SEG](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=pancreatic\_ct\_cbct\_seg)
+1. [CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_crc)
+2. [CMB-LCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_lca)
+3. [CMB-MEL](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_mel)
+4. [CMB-PCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_pca)
+5. [Pancreatic-CT-CBCT-SEG](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=pancreatic\_ct\_cbct\_seg)
 
 
 New clinical data collections:
 
-CTpred-Sunitinib-panNET(https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ctpred\_sunitinib\_pannet)
+1. [CTpred-Sunitinib-panNET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ctpred\_sunitinib\_pannet)
 
 Other clinical data updates:
 
