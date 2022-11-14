@@ -12,7 +12,7 @@ where revision hash corresponds to that of the [IDC WebApp repo](https://github.
 Main highlights of this release include:
 
 * As limited access collections have been removed from IDC, the portal is now simplified by removing the option of selecting different access levels. All collections in the portal are public.
-* A warning message appears on the cohort browser page when a user views a cohort with an older data version which originally contained limit access records. The limited access records are now removed from the cohort.
+* A warning message appears on the cohort browser page when a user views a cohort that used the Access filter attribute. That attribute is no longer applied if the user migrates the cohort to the current version.
 * On the explorer page the reset button has been moved to improve viewability. 
 
 ## 11.0 - September 8, 2022 (canceridc.202209081302.acb8ce3)
