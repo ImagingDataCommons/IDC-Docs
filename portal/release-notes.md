@@ -8,6 +8,13 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 12.0 - November 2, 2022 (canceridc.202211092039.87ca478)
+Main highlights of this release include:
+
+* As limited access collections have been removed from IDC, the portal is now simplified by removing the option of selecting different access levels. All collections in the portal are public.
+* A warning message appears on the cohort browser page when a user views a cohort that used the Access filter attribute. That attribute is no longer applied if the user migrates the cohort to the current version.
+* On the explorer page the reset button has been moved to improve viewability. 
+
 ## 11.0 - September 8, 2022 (canceridc.202209081302.acb8ce3)
 
 This was primarily a data release. There were no significant changes to the portal.
