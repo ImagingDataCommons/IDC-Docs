@@ -27,7 +27,7 @@ Updated collections:
 
 Other:
 
-All limited access collections are removed.
+Metadata corresponding to "limited" access collections are removed.
 
 New clinical data collections:
 
@@ -35,10 +35,7 @@ New clinical data collections:
 
 Other clinical data updates:
 
-Limited access collections are removed. Clinical metadata for the COVID-19-NY-SUB and ACRIN 6698/I-SPY2 Breast DWI collections now includes information ingested from data dictionaries associated with these collections. In v11 the string value 'NA' was being changed to null during the ETL process for some columns/collections. This is now fixed in v12 and the value 'NA' is preserved.   
-
-
-
+Limited access collections are removed. Clinical metadata for the COVID-19-NY-SUB and ACRIN 6698/I-SPY2 Breast DWI collections now includes information ingested from data dictionaries associated with these collections. In v11 the string value 'NA' was being changed to null during the ETL process for some columns/collections. This is now fixed in v12 and the value 'NA' is preserved.
 
 ## v11 - Sept 2022
 
