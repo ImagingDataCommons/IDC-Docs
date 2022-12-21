@@ -4,6 +4,23 @@
 The version of the viewer is shown in the Debug Info option.
 {% endhint %}
 
+## 4.12.45 - November 2022 - OHIF
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+
+Main highlights of this release include:
+
+* Remove dead code from DICOM SR parsing logic.
+
+## 4.12.41 - October 2022 - OHIF
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
+
+Main highlights of this release include:
+
+* Fix parsing logic for qualitative instance level SR;
+* Update message for segmentation load failure due to orientation tolerance value.
+
 ## 0.11.2 - September 2022 - Slim
 
 **The Slim Viewer** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/MGHComputationalPathology/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/using/dicomweb) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
@@ -29,7 +46,7 @@ Bug fixes
 * Ensure bounding box annotations are axis aligned;
 * Add missing keyboard shortcut for navigation tool.
 
-## 4.12.40 - September 2022 - OHIF
+## 4.12.41 - September 2022 - OHIF
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/dicomweb/).
 
@@ -41,7 +58,8 @@ Main highlights of this release include:
 * Raise error if a frame StudyInstanceUID, SeriesInstanceUID and SOPInstanceUID are not conforming with the UID (DICOM UI VR) character repertoire;
 * Implements runtime tolerance for SEGs loading retry;
 * Fixed popup notifications behavior;
-* Update cornerstoneWADOImageLoader.
+* Update cornerstoneWADOImageLoader;
+* Fix 2d MPR rendering for rendering issue for the sagittal view.
 
 
 ## 0.8.1 - June 2022 - Slim
