@@ -5,7 +5,7 @@ The following characteristics apply to all IDC APIs:
 * You access a resource by sending an HTTP request to the IDC API server. The server replies with a response that either contains the data you requested, or a status indicator.
 * An API request URL has the following structure: &lt;BaseURL&gt;&lt;API version&gt;&lt;QueryEndpoint&gt;?&lt;QueryParameters&gt;. For example, this _curl_ command is a request for metadata on all IDC collections: 
 
-  `curl -X GET "https://api-dot-idc-dev.appspot.com/v1/collections" -H "accept: application/json"`
+  `curl -X GET "https://api.imaging.datacommons.cancer.gov/v1/collections" -H "accept: application/json"`
 
 
 ## API Endpoints
