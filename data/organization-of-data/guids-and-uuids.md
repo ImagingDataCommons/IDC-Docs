@@ -3,7 +3,7 @@
 An IDC manifest may include study and/or series _GUIDs_ that can be resolved to the underlying DICOM instance files in GCS. Such use of GUIDs in a manifest enables a much shorter manifest compared to a list of per-instance GCS URLs. Also, as explained below, a GUID is expected to be resolvable even when the data which it represents has been moved.
 
 {% hint style="info" %}
-From the [GA4GH Data Repository Service API](https://github.com/ImagingDataCommons/IDC-Docs-dev/tree/f90c4ff43658a6d016ca80352826c835aee38043/data-repository-service-schemas/preview/release/drs-1.1.0/docs/README.md) specification:
+From the [GA4GH Data Repository Service API](https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.0.0/docs/#_introduction) specification:
 
 "The Data Repository Service \(DRS\) API provides a generic interface to data repositories so data consumers, including workflow systems, can access data objects in a single, standard way regardless of where they are stored and how they are managed. The primary functionality of DRS is to map a logical ID to a means for physically retrieving the data represented by the ID."
 {% endhint %}

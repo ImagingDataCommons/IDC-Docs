@@ -35,7 +35,7 @@ You can read about accessing GCP storage buckets from a Compute VM [here](https:
 Egress of IDC data out of the cloud is free, since IDC data is participating in Google Public Datasets Program!
 {% endhint %}
 
-Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below, substituting `$PROJECT_ID` with the valid GCP Project ID (see the complete example in [this notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort\_download.ipynb)):
+Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below, substituting `$PROJECT_ID` with the valid GCP Project ID (see the complete example in [this notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort_download.ipynb)):
 
 ```bash
 $ cat gcs_paths.txt | gsutil -u $PROJECT_ID -m cp -I .

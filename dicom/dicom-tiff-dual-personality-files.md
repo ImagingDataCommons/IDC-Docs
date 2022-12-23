@@ -17,5 +17,5 @@ It is hoped that the dual-personality approach may serve to mitigate the impact 
 {% hint style="info" %}
 For further information and an example open source implementation, see
 
-Clunie, D. A. [Dual-Personality DICOM-TIFF for whole slide images: A migration technique for legacy software](http://doi.org/10.4103/jpi.jpi\_93\_18). J. Pathol. Inform. **10,** 12 (2019).
+Clunie, D. A. [Dual-Personality DICOM-TIFF for whole slide images: A migration technique for legacy software](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6489422/). J. Pathol. Inform. **10,** 12 (2019).
 {% endhint %}

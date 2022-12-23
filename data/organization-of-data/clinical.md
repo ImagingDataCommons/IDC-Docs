@@ -1,7 +1,7 @@
 # Clinical data
 
 {% hint style="info" %}
-Check out our [IDC clinical data exploration Colab notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/clinical\_data\_intro.ipynb) tutorial for a brief hands-on introduction into IDC clinical data!
+Check out our [IDC clinical data exploration Colab notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/clinical_data_intro.ipynb) tutorial for a brief hands-on introduction into IDC clinical data!
 {% endhint %}
 
 ### Background

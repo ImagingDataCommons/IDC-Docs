@@ -1,7 +1,7 @@
 # Introduction
 
 {% hint style="info" %}
-Check out the [IDC "getting started" Colab notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/getting\_started.ipynb) for a quick introduction into data organization and main features of our repository!
+Check out the [IDC Getting started tutorial](https://github.com/ImagingDataCommons/IDC-Examples/tree/master/notebooks/getting_started) for a quick introduction into data organization and main features of our repository!
 
 IDC data is replicated as [a public dataset in the Google Marketplace](https://console.cloud.google.com/marketplace/product/bigquery-public-data/nci-idc-data). You can see the summary dashboard of the dataset [here](https://datastudio.google.com/u/0/reporting/04cf5976-4ea0-4fee-a749-8bfd162f2e87).
 {% endhint %}

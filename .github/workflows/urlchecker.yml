@@ -57,6 +57,8 @@ jobs:
           # A comma seperated links to exclude during URL checks.
           exclude_urls: # optional, default is 
           # A comma seperated patterns to exclude during URL checks.
+            http://localhost:6080/vnc.html?autoconnect=true,https://www.linkedin.com/in/fabian-seidl-390147a4/,https://storage.googleapis.com
           exclude_patterns: # optional, default is 
           # A comma seperated list of paths or patterns to exclude during URL checks.
+            viewer.imaging.datacommons.cancer.gov,dx.doi.org
           exclude_files: # optional, default is 
