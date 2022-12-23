@@ -14,7 +14,7 @@ The IDC API is intended to enable exploration of IDC hosted data without the nee
 
 ## Other API Documentation
 
-[SwaggerUI](https://swagger.io/tools/swagger-ui/) is a web based interface that allows users to try out APIs and easily view their documentation. You can access the IDC API SwaggerUI [here](https://api-dot-idc-dev.appspot.com/v1/swagger).
+[SwaggerUI](https://swagger.io/tools/swagger-ui/) is a web based interface that allows users to try out APIs and easily view their documentation. You can access the IDC API SwaggerUI [here](https://api.imaging.datacommons.cancer.gov/v1/swagger).
 
 This [Google Colab notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/API/notebooks/How_to_use_IDC_APIs.ipynb) serves as an interactive tutorial to accessing the IDC API using Python.
 
