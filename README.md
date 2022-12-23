@@ -25,4 +25,4 @@ The overview of IDC is available in this open access publication. If you use IDC
 You can also review the accompanying [demonstration videos](https://www.youtube.com/playlist?list=PLhawVWNiPvwb2H0D9UTOIL23bc5DuDJRu) for a quick summary of some of the key features of the platform.
 {% endhint %}
 
-![https://datacommons.cancer.gov/](https://lh4.googleusercontent.com/oYBmev9wh7-07bdVyY-a8xOM7TUXhoDLbBnDWCz8gOfsMTvPeucf02sgwmKtjV\_\_lQIgxJiceWeRsODo4hqpxtQ8\_YNplE7\_JGEgQzz\_Qn00X4knNkjvqR1CtrYr2ZnEF50zbataG78)
+<figure><img src=".gitbook/assets/crdc.png" alt=""><figcaption></figcaption></figure>
