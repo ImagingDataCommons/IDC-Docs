@@ -8,7 +8,7 @@ Most of the images stored on IDC are saved as objects that store individual slic
 
 As of production release, IDC contains both radiology and digital pathology images. The following publication can serve as a good introduction into the use of DICOM for digital pathology.
 
-> Herrmann, M. D., Clunie, D. A., Fedorov, A., Doyle, S. W., Pieper, S., Klepeis, V., Le, L. P., Mutter, G. L., Milstone, D. S., Schultz, T. J., Kikinis, R., Kotecha, G. K., Hwang, D. H., Andriole, K. P., John Lafrate, A., Brink, J. A., Boland, G. W., Dreyer, K. J., Michalski, M., Golden, J. A., Louis, D. N. & Lennerz, J. K. Implementing the DICOM standard for digital pathology. J. Pathol. Inform. **9,** 37 \(2018\). [http://dx.doi.org/10.4103/jpi.jpi\_42\_18](http://dx.doi.org/10.4103/jpi.jpi_42_18)
+> Herrmann, M. D., Clunie, D. A., Fedorov, A., Doyle, S. W., Pieper, S., Klepeis, V., Le, L. P., Mutter, G. L., Milstone, D. S., Schultz, T. J., Kikinis, R., Kotecha, G. K., Hwang, D. H., Andriole, K. P., John Lafrate, A., Brink, J. A., Boland, G. W., Dreyer, K. J., Michalski, M., Golden, J. A., Louis, D. N. & Lennerz, J. K. Implementing the DICOM standard for digital pathology. J. Pathol. Inform. **9,** 37 \(2018\). [PubMed](https://pubmed.ncbi.nlm.nih.gov/30533276/)
 
 Open source libraries such as DCMTK, GDCM, ITK, and pydicom can be used to parse such files and load pixel data of the individual slices. Recovering geometry of the individual slices \(spatial location and resolution\) and reconstruction of the individual slices into a volume requires some extra consideration.
 
