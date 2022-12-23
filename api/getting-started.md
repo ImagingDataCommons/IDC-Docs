@@ -10,7 +10,7 @@ If you have feedback about the desired features of the IDC API, please let us kn
 
 The API is a RESTful interface, accessed through web URLs. There is no software that an application developer needs to download in order to use the API. The application developer can build their own access routines using just the API documentation provided. The interface employs a set of predefined query functions that access IDC data sources.
 
-The IDC API is intended to enable exploration of IDC hosted data without the need to understand and use the Structure Query Language \(SQL\). To this end, data exploration capabilities through the IDC API are limited. However, IDC data is hosted using the standard capabilities of the the Google Cloud Platform \(GCP\) Storage \(GCS\) and BigQuery \(BQ\) components. Therefore, all of the capabilities provided by GCP to access GCS storage buckets and BQ tables are available for more advanced interaction with that data using GCP API.
+The IDC API is intended to enable exploration of IDC hosted data without the need to understand and use the Structure Query Language \(SQL\). To this end, data exploration capabilities through the IDC API are limited. However, IDC data is hosted using the standard capabilities of the the Google Cloud Platform \(GCP\) Storage \(GCS\) and BigQuery \(BQ\) components. Therefore, all of the capabilities provided by GCP to access GCS storage buckets and BQ tables are available for more advanced interaction with that data.
 
 ## Other API Documentation
 
