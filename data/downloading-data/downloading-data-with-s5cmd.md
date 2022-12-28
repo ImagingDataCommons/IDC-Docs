@@ -24,6 +24,10 @@ aws_access_key_id=<your HMAC key>
 aws_secret_access_key=<your HMAC key secret>
 ```
 
+{% hint style="warning" %}
+Windows users should place the credentials file in this location: `C:\Users\ USERNAME\.aws\credentials`
+{% endhint %}
+
 {% hint style="info" %}
 If you want to use `s5cmd` from a Colab notebook, it might be handy to save the credentials file to the `.aws` folder in Google Drive, which you can mount to the Colab notebook and copy your credentials in place. See details on using Google Drive with Colab in the [IDC Colab cookbook notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/cookbook.ipynb).
 {% endhint %}
