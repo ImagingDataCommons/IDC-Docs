@@ -1,5 +1,9 @@
 # Derived objects
 
+{% hint style="info" %}
+Make sure you complete IDC ["Getting started" tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started) notebooks to get introduced into IDC data organization, download, visualization and other first-order topics.
+{% endhint %}
+
 In this section we discuss derived DICOM objects, including annotations, that are stored in IDC. It is important to recognize that in practice annotations are often shared in non-standard formats. When IDC ingests a dataset where annotations are available in such a non-standard representation,  those need to be harmonized into a suitable DICOM object to be available in IDC. Due to the complexity of this task, we are unable to perform such harmonization for all of the datasets. If you want to check if there are annotations in non-DICOM format available for a given collection, you should locate the original source of the data, and examine the accompanying documentation for available non-DICOM annotations.
 
 As an example, [Breast-Cancer-Screening-DBT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=breast\_cancer\_screening\_dbt) collection is available in IDC. If you mouse over the name of that collection in the IDC Portal, the tooltip will provide the overview of the collection and the link to the source.
