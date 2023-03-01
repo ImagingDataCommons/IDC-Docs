@@ -49,3 +49,19 @@ The following command will download the files specified in `s5cmd_manifest.txt` 
 ```shell
 s5cmd --no-sign-request --endpoint-url https://storage.googleapis.com run s5cmd_manifest.txt
 ```
+
+### Using `s5cmd` with storage buckets that are not public
+
+The approach above uses the `--no-sign-request` argument, which allows download of the files without user credentials. This will work for files hosted by IDC, since they are available from public buckets.&#x20;
+
+If you want to use `s5cmd` to write to a bucket, or to read from a restricted access bucket (which, of course, must be accessible to the account you are using for the copy operation), you will need to complete few more steps to set up access keys, as discussed in this article: [https://github.com/peak/s5cmd#google-cloud-storage-support](https://github.com/peak/s5cmd#google-cloud-storage-support).&#x20;
+
+In short, you will need to first set up the HMAC key following [this procedure](https://cloud.google.com/storage/docs/authentication/managing-hmackeys#create), and create the `~/.aws/credentials` credentials file (Windows users should place the credentials file in this location: `C:\Users\ USERNAME\.aws\credentials` with the following content:
+
+```
+[default]
+aws_access_key_id=<your HMAC key>
+aws_secret_access_key=<your HMAC key secret>
+```
+
+Once you set up the key, you can use `s5cmd` in the same manner as for the public IDC files, while omitting the `--no-sign-request` argument, which will use your credentials to access the bucket.
