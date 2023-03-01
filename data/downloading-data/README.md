@@ -11,7 +11,7 @@ Download of data from IDC is a 2-step process covered on this page:
 * **Step 1:** create the manifest - the list of files defined by the Google Storage `gs://` URLs;
 * **Step 2**: given that list of files, download files to your computer or to a cloud VM.&#x20;
 
-If you are analyzing IDC data in Google Colab, check out our [Colab cookbook notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/cookbook.ipynb) that includes examples of how to query and download IDC data!
+If you are analyzing IDC data in Google Colab, check out our part 3 of our ["Getting started" tutorial series](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started), which demonstrates how to query and download IDC data!
 
 ### Step 1: Create the manifest&#x20;
 
@@ -101,4 +101,4 @@ Windows users will need to use `type` command in place of `cat`, since the latte
 `type manifest.txt | gsutil -m cp -I .`
 {% endhint %}
 
-The command above is quick and simple to get the small number of files from IDC, but it is not very efficient if you need to download a lot of data. We recommend you use [s5cmd](https://github.com/peak/s5cmd) to download large number of files. Read on to the next section to learn how to use \`s5cmd\` with IDC data: [downloading-data-with-s5cmd.md](downloading-data-with-s5cmd.md "mention").
+The command above is quick and simple to get the small number of files from IDC, but it is not very efficient if you need to download a lot of data. We recommend you use [s5cmd](https://github.com/peak/s5cmd) to download large number of files. Read on to the next section to learn how to use `s5cmd` with IDC data: [downloading-data-with-s5cmd.md](downloading-data-with-s5cmd.md "mention").
