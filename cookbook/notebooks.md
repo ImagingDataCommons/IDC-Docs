@@ -16,11 +16,11 @@ Notebook demonstrating deployment and application of abdominal structures segmen
 
 ## Community-contributed notebooks
 
-* [Deep-learning Nodule Segmentation using LIDC dataset on Google Cloud Platform](https://github.com/Mayo-Radiology-Informatics-Lab/IDC\_GoogleCloud\_Notebook), contributed by [Kuan (Kevin) Zhang](https://www.mayo.edu/research/labs/radiology-informatics/faculty-staff), Mayo Clinic
-* [3D Brain MRI Classification Using Imaging Data Commons, Google Cloud, and NIFTI files](https://github.com/Mayo-Radiology-Informatics-Lab/IDC\_GoogleCloud\_Notebook\_3DClassification), contributed by [Pouria Rouzokh](https://www.mayo.edu/research/labs/radiology-informatics/faculty-staff), Mayo Clinic
+* [Deep-learning Nodule Segmentation using LIDC dataset on Google Cloud Platform](https://github.com/Mayo-Radiology-Informatics-Lab/IDC_GoogleCloud_Notebook), contributed by [Kuan (Kevin) Zhang](https://www.mayo.edu/research/labs/radiology-informatics/faculty-staff), Mayo Clinic
+* [3D Brain MRI Classification Using Imaging Data Commons, Google Cloud, and NIFTI files](https://github.com/Mayo-Radiology-Informatics-Lab/IDC_GoogleCloud_Notebook_3DClassification), contributed by [Pouria Rouzokh](https://www.mayo.edu/research/labs/radiology-informatics/faculty-staff), Mayo Clinic
 * Notebooks contributed by [Fabian Seidl](https://www.linkedin.com/in/fabian-seidl-390147a4/), ISB-CGC, demonstrating the utility of BigQuery in correlative analysis of radiomics and genomics data:
-  * [How to compare tumor features with gene expression data](https://github.com/isb-cgc/Community-Notebooks/blob/master/Notebooks/How\_to\_compare\_tumor\_features\_with\_gene\_expression\_data.ipynb)
-  * [How to compare tumor features with mutation data](https://github.com/isb-cgc/Community-Notebooks/blob/master/Notebooks/How\_to\_compare\_tumor\_features\_with\_mutation\_data.ipynb)
+  * [How to compare tumor features with gene expression data](https://github.com/isb-cgc/Community-Notebooks/blob/master/Notebooks/How_to_compare_tumor_features_with_gene_expression_data.ipynb)
+  * [How to compare tumor features with mutation data](https://github.com/isb-cgc/Community-Notebooks/blob/master/Notebooks/How_to_compare_tumor_features_with_mutation_data.ipynb)
 
 ## Relevant resources
 
@@ -30,6 +30,6 @@ Notebook demonstrating deployment and application of abdominal structures segmen
   * [SimpleITK notebooks](https://github.com/InsightSoftwareConsortium/SimpleITK-Notebooks/tree/master/Python)
   * [https://github.com/mdai/ml-lessons/](https://github.com/mdai/ml-lessons/)
   * [http://uwmsk.org/jupyter/](http://uwmsk.org/jupyter/)
-  * [https://github.com/JoaoSantinha/Medical\_Image\_Analysis\_Workshop](https://github.com/JoaoSantinha/Medical\_Image\_Analysis\_Workshop)
+  * [https://github.com/JoaoSantinha/Medical_Image_Analysis_Workshop](https://github.com/JoaoSantinha/Medical_Image_Analysis_Workshop)
 * Google Colab Tips for Power Users: [https://amitness.com/2020/06/google-colaboratory-tips/](https://amitness.com/2020/06/google-colaboratory-tips/)
 * Mounting GCS bucket using `gcsfuse`: [https://pub.towardsai.net/connect-colab-to-gcs-bucket-using-gcsfuse-29f4f844d074](https://pub.towardsai.net/connect-colab-to-gcs-bucket-using-gcsfuse-29f4f844d074)

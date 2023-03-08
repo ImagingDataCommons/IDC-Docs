@@ -27,7 +27,7 @@ Updated collections:
 
 Other:
 
-All limited access collections are removed.
+Metadata corresponding to "limited" access collections are removed.
 
 New clinical data collections:
 
@@ -35,10 +35,7 @@ New clinical data collections:
 
 Other clinical data updates:
 
-Limited access collections are removed. Clinical metadata for the COVID-19-NY-SUB and ACRIN 6698/I-SPY2 Breast DWI collections now includes information ingested from data dictionaries associated with these collections. In v11 the string value 'NA' was being changed to null during the ETL process for some columns/collections. This is now fixed in v12 and the value 'NA' is preserved.   
-
-
-
+Limited access collections are removed. Clinical metadata for the COVID-19-NY-SUB and ACRIN 6698/I-SPY2 Breast DWI collections now includes information ingested from data dictionaries associated with these collections. In v11 the string value 'NA' was being changed to null during the ETL process for some columns/collections. This is now fixed in v12 and the value 'NA' is preserved.
 
 ## v11 - Sept 2022
 
@@ -320,7 +317,7 @@ New original collections:
 3. [LungCT-Diagnosis](https://doi.org/10.7937/K9/TCIA.2015.A6V7JIWX)
 4. [HEAD-NECK-RADIOMICS-HN1](https://doi.org/10.7937/tcia.2019.8kap372n)
 5. [Prostate Fused-MRI-Pathology](https://doi.org/10.7937/K9/TCIA.2016.TLPMR1AM)
-6. [APOLLO](https://doi.org/https://wiki.cancerimagingarchive.net/x/N4NyAQ)
+6. [APOLLO](https://wiki.cancerimagingarchive.net/x/N4NyAQ)
 7. [LGG-1p19qDeletion](https://doi.org/10.7937/K9/TCIA.2017.dwehtz9v)
 8. [Soft-tissue-Sarcoma](https://doi.org/10.7937/K9/TCIA.2015.7GO2GSKS)
 9. [NSCLC-Radiomics-Genomics](https://doi.org/10.7937/K9/TCIA.2015.L4FRET6Z)

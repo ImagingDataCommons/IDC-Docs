@@ -10,7 +10,7 @@ You can search and [download data from IDC](data/downloading-data/) for free, an
 
 You can use free tier of [Google Colab](https://colab.research.google.com) to get free access to a cloud-hosted VM with GPU to experiment with analysis workflows for IDC data.
 
-We provide a [summary](getting-started-with-idc.md) of what you can do with IDC, and what you will need to access specific capabilities. If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, you can apply for a free Google cloud credit allocation using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW\_YUUWG6A4U8pclvR8MmRQ/viewform).
+We provide a [summary](getting-started-with-idc.md) of what you can do with IDC, and what you will need to access specific capabilities. If you want to explore the capabilities of the cloud that require a billing account, and would like to develop a better understanding of the costs before committing your credit card, you can apply for a free Google cloud credit allocation using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW_YUUWG6A4U8pclvR8MmRQ/viewform).
 
 ## What is the purpose of IDC?
 
@@ -91,11 +91,7 @@ The main website for the Cancer Research Data Commons (CRDC) is [https://datacom
 
 ## What about non-imaging data that accompanies many TCIA collections?
 
-At the moment, non-imaging data, such as the spreadsheets with clinical information, is not replicated on IDC and it is not possible to search this data using IDC Portal. You will need to access this data from TCIA.
-
-Our short term plan is to selectively bring such spreadsheets as collection-specific BigQuery tables available within the release dataset (as an example, [such tables are available for the NLST collection](data/organization-of-data/files-and-metadata.md)). We may expose some of those tables/attributes in the IDC portal.
-
-Our longer-term plan is to work with the CRDC [Center for Cancer Data Harmonization (CCDH)](https://datacommons.cancer.gov/center-cancer-data-harmonization) to harmonize the data in these spreadsheets, and identify the appropriate format and location for the resulting harmonized data.
+Clinical data that was shared by the submitters is available in a dedicated BigQuery dataset. Please see [this tutorial](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/clinical_data_intro.ipynb) on how to search that data and how to link clinical data with imaging metadata!
 
 ## I want to search IDC content using an attribute not available in the portal
 

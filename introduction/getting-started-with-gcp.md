@@ -1,7 +1,7 @@
 # Getting started with GCP
 
 {% hint style="info" %}
-Whether you are new to the cloud, or you consider yourself an expert, we encourage you to apply for a free Google cloud credits that we provide to our users to support cancer imaging research projects that work with Imaging Data Commons. All reasonable requests will receive a $300 allocation of credits that do not expire, and we will not require you to provide a credit card information to verify your identity. All you have to do is fill out and submit [this application form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW\_YUUWG6A4U8pclvR8MmRQ/viewform).
+Whether you are new to the cloud, or you consider yourself an expert, we encourage you to apply for a free Google cloud credits that we provide to our users to support cancer imaging research projects that work with Imaging Data Commons. All reasonable requests will receive a $300 allocation of credits that do not expire, and we will not require you to provide a credit card information to verify your identity. All you have to do is fill out and submit [this application form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW_YUUWG6A4U8pclvR8MmRQ/viewform).
 {% endhint %}
 
 You are also encouraged to review the slides in the following presentation that provides an introduction into GCP, and shares some best practices the its usage.
@@ -16,7 +16,7 @@ The steps concerning creating a Google Cloud project and setting up billing are 
 
 Do you have a Google identity? If so, you can proceed to the next step.
 
-If not, it only takes a minute to [create a Google identity](https://accounts.google.com/signup/v2/webcreateaccount?dsh=308321458437252901\&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount\&flowName=GlifWebSignIn\&flowEntry=SignUp#FirstName=\&LastName=). Note that you do NOT need a Gmail email account - [you can use your non-Gmail email address to create one instead](https://support.google.com/accounts/answer/27441?hl=en#existingemail).
+If not, it only takes a minute to [create a Google account](https://support.google.com/accounts/answer/27441?hl=en). Note that you do NOT need a Gmail email account - [you can use your non-Gmail email address to create one instead](https://support.google.com/accounts/answer/27441?hl=en#existingemail).
 
 ### **Set up a Google Cloud Project**
 
