@@ -20,7 +20,7 @@ Export the cohort manifest as a BigQuery table, and take note of the location of
 
 Open the dashboard template following this link: [http://bit.ly/3jdCmON](http://bit.ly/3jdCmON), and click "Use template" to make a copy of the dashboard.
 
-![](<../../.gitbook/assets/image (16).png>)
+![](<../../.gitbook/assets/image (16) (1).png>)
 
 When prompted, do not change the default options, and click "Copy Report".
 
@@ -75,4 +75,4 @@ Click "Close" on the next screen:
 
 **You are Done!** The dashboard for your cohort is now live: you can "View" it to interact with the content, you can edit it to explore additional attributes in the cohort, and you can choose to keep it private or share with a link!
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (2) (1).png>)

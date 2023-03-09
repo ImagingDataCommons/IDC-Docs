@@ -8,34 +8,12 @@ Unlike `gsutil`, `s5cmd` does not currently verify file checksum on download (al
 
 ### Prerequisites
 
-It is recommended that you use a Service Account to generate access credentials as discussed below. If all you need to do is download data from IDC, you can create a service account that does not have any privileges, and will be used for authentication only. If you plan to use `s5cmd` to write data to another bucket, you need to make sure service account has the appropriate permissions. Read more about GCP service accounts in [this article](https://cloud.google.com/iam/docs/service-accounts).
-
-Here is the `s5cmd` help article that describes how to use it with Google Cloud Storage: [https://github.com/peak/s5cmd#google-cloud-storage-support](https://github.com/peak/s5cmd#google-cloud-storage-support). In the following we summarize the steps as they apply to IDC.
-
 Install `s5cmd` following the instructions in [https://github.com/peak/s5cmd#installation](https://github.com/peak/s5cmd#installation).
-
-Set up the HMAC key following [this procedure](https://cloud.google.com/storage/docs/authentication/managing-hmackeys#create).&#x20;
-
-Create a file `~/.aws/credentials` with the following content:
-
-```
-[default]
-aws_access_key_id=<your HMAC key>
-aws_secret_access_key=<your HMAC key secret>
-```
-
-{% hint style="warning" %}
-Windows users should place the credentials file in this location: `C:\Users\ USERNAME\.aws\credentials`
-{% endhint %}
-
-{% hint style="info" %}
-If you want to use `s5cmd` from a Colab notebook, it might be handy to save the credentials file to the `.aws` folder in Google Drive, which you can mount to the Colab notebook and copy your credentials in place. See details on using Google Drive with Colab in the [IDC Colab cookbook notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/cookbook.ipynb).
-{% endhint %}
 
 You can verify if your setup was successful by running the following command: it should successfully download one file from IDC using `s5cmd.`
 
 ```shell
-s5cmd --endpoint-url https://storage.googleapis.com cp s3://public-datasets-idc/eae91afc-1977-4728-9d6a-06f782c696d4.dcm .
+s5cmd --no-sign-request --endpoint-url https://storage.googleapis.com cp s3://public-datasets-idc/eae91afc-1977-4728-9d6a-06f782c696d4.dcm .
 ```
 
 If the command above completes successfully, you can proceed with download in 2 steps, as before, but with slight modifications.
@@ -49,7 +27,7 @@ cp s3://<bucket>/<file1> .
 cp s3://<bucket>/<file1> .
 ```
 
-You can generate such manifest by just slightly modifying the query for preparing the manifest as described in [.](./ "mention"):
+You can generate such manifest by just slightly modifying the query for preparing the manifest as described in [.](./ "mention") (here we demonstrate the query that selects a sample series, but you should adjust the selection based on your needs):
 
 ```sql
 SELECT CONCAT("cp ",REPLACE(gcs_url, "gs://", "s3://"), " .") 
@@ -69,5 +47,21 @@ bq query --use_legacy_sql=false --format=csv --max_rows=20000000
 The following command will download the files specified in `s5cmd_manifest.txt` to the current directory:
 
 ```shell
-s5cmd --endpoint-url https://storage.googleapis.com run s5cmd_manifest.txt
+s5cmd --no-sign-request --endpoint-url https://storage.googleapis.com run s5cmd_manifest.txt
 ```
+
+### Using `s5cmd` with storage buckets that are not public
+
+The approach above uses the `--no-sign-request` argument, which allows download of the files without user credentials. This will work for files hosted by IDC, since they are available from public buckets.&#x20;
+
+If you want to use `s5cmd` to write to a bucket, or to read from a restricted access bucket (which, of course, must be accessible to the account you are using for the copy operation), you will need to complete few more steps to set up access keys, as discussed in this article: [https://github.com/peak/s5cmd#google-cloud-storage-support](https://github.com/peak/s5cmd#google-cloud-storage-support).&#x20;
+
+In short, you will need to first set up the HMAC key following [this procedure](https://cloud.google.com/storage/docs/authentication/managing-hmackeys#create), and create the `~/.aws/credentials` credentials file (Windows users should place the credentials file in this location: `C:\Users\ USERNAME\.aws\credentials` with the following content:
+
+```
+[default]
+aws_access_key_id=<your HMAC key>
+aws_secret_access_key=<your HMAC key secret>
+```
+
+Once you set up the key, you can use `s5cmd` in the same manner as for the public IDC files, while omitting the `--no-sign-request` argument, which will use your credentials to access the bucket.
