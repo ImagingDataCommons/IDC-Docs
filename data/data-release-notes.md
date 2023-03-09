@@ -12,9 +12,11 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 ## v13 - Mar 2023
 
-New analysys result:
-
+New analysys results collection:
 1. [nnU-Net-BPR-annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=nnU-Net-BPR-annotations)
+
+New clinical data collections:
+1. [PROSTATEx](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=prostatex)
 
 ## v12 - Nov 2022
 

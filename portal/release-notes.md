@@ -8,6 +8,13 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 13.0 March 7, 2022 (canceridc.202303071044.57def9a)
+Main highlights of this release include:
+
+* Three new Original Image attributes Max Total Pixel Matrix Columns, Max Total Pixel Matrix Rows, and Min Pixel Spacing are added.
+* Two new Quantitative Analysis attributes Sphericity (Quant) and Volume of Mesh are added.
+* Default attribute value order is changed from alphanumeric (by value name) to value count. 
+
 ## 12.0 - November 2, 2022 (canceridc.202211092039.87ca478)
 Main highlights of this release include:
 
