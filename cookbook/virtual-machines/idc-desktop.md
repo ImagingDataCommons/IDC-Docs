@@ -23,7 +23,7 @@ You can launch a VM with a GPU in your project with a command like this in your 
 ```
 export VMNAME=vm-name
 export PROJECT=project-name
-export ZONE="use-east1-a"
+export ZONE="us-east1-a"
 gcloud compute instances create ${VMNAME} \
   --machine-type=n1-standard-8 \
   --accelerator=type=nvidia-tesla-k80,count=1 \
@@ -73,7 +73,7 @@ sudo apt-get update
 sudo apt-get -y install tigervnc-standalone-server websockify
 ```
 
-Each time you reboot the machine, run these commands:
+Then run these commands, which will also need to be rerun every time you reboot the machine:
 ```
 vncserver -xstartup xfce4-session 
 # here you will be prompted for a password for vnc if you haven't already
@@ -83,6 +83,8 @@ nohup websockify --web /opt/novnc/noVNC/ 6080 localhost:5901 &
 
 
 Then you can open [http://localhost:6080/vnc.html?autoconnect=true](http://localhost:6080/vnc.html?autoconnect=true) to get to your desktop.
+
+Note that when you log out from your ssh session in your local terminal you may need to type Control-C if the VCN session is still connected via the tunnel.
 
 ## Note 
 This effort is a work in progress with a minimal desktop environment. Further refinement is expected and community contributions would be welcome! A description of the background and possible evolution of this work is [in this document](https://docs.google.com/document/d/1jfHqjS7Fer7Lhqea5bjyown0b04AsqeOhIBY2gWUDO4/edit).
