@@ -3,7 +3,7 @@ deployed on the Google Cloud Platform, along with the interactions between the c
 and the entry-points for end-users (“Researchers” in the diagram).  All component 
 interactions use HTTPS for secure communications, combined with OAuth2 for authentication.
 
-![Imaging Data Commons Architecture](../../.gitbook/assets/IDC-Arch-04-23)
+![Imaging Data Commons Architecture](../../.gitbook/assets/IDC-Arch-04-23.png)
 
 
 * First, the diagram indicates that users may interact with the IDC web app (deployed on App 
