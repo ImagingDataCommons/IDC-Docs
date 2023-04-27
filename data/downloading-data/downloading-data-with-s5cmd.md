@@ -1,6 +1,10 @@
 # Downloading data with s5cmd
 
-[`s5cmd`](https://github.com/peak/s5cmd) is a very fast S3 and local filesystem execution tool, which, as experiments showed, is significantly faster than the Google-provided `gsutil`.
+{% hint style="warning" %}
+You will need to complete prerequisites described in [getting-started-with-gcp.md](../../introduction/getting-started-with-gcp.md "mention") in order to be able to follow the instructions below!
+{% endhint %}
+
+[`s5cmd`](https://github.com/peak/s5cmd) is a very fast S3 and local filesystem execution tool, which is significantly faster than the Google-provided `gsutil`. Note that `s5cmd` is a command-line tool.
 
 {% hint style="info" %}
 Unlike `gsutil`, `s5cmd` does not currently verify file checksum on download (although, this feature appears to be added to the `v2.1.0` milestone). See related discussion in [https://github.com/peak/s5cmd/issues/398](https://github.com/peak/s5cmd/issues/398). If you need help verifying checksum of the downloaded files, please post a question on [IDC forum](https://discourse.canceridc.dev).

@@ -15,7 +15,7 @@ If you are analyzing IDC data in Google Colab, check out our part 3 of our ["Get
 
 ### Step 1: Create the manifest&#x20;
 
-****[`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) BigQuery table discussed in [this documentation article](https://learn.canceridc.dev/data/organization-of-data/files-and-metadata#bigquery-tables) can be used to subset the files you need based on the DICOM metadata attributes as needed utilizing the SQL query interface. The `gcs_url` column contains Google Storage gs:// URLs that can be used to retrieve the files.
+[`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) BigQuery table discussed in [this documentation article](https://learn.canceridc.dev/data/organization-of-data/files-and-metadata#bigquery-tables) can be used to subset the files you need based on the DICOM metadata attributes as needed utilizing the SQL query interface. The `gcs_url` column contains Google Storage gs:// URLs that can be used to retrieve the files.
 
 Start with the query templates provided below, modify them based on your needs, and save the result in a file `query.txt`. The specific values for `PatientID`, `SeriesInstanceUID`, `StudyInstanceUID` are chosen to serve as examples.&#x20;
 
