@@ -10,10 +10,12 @@
 ## Introduction
 
 * [Features](introduction/features.md)
-* [Google Cloud Platform](introduction/google-cloud-platform.md)
+* [Google Cloud Platform (GCP)](introduction/google-cloud-platform/README.md)
+  * [Getting started with GCP](introduction/google-cloud-platform/getting-started-with-gcp.md)
+* [Amazon AWS platform](introduction/amazon-aws-platform.md)
 * [DICOM](introduction/dicom.md)
-* [Getting started with GCP](introduction/getting-started-with-gcp.md)
 * [Requesting GCP cloud credits](introduction/requesting-gcp-cloud-credits.md)
+* [Requesting AWS cloud credits](introduction/requesting-aws-cloud-credits.md)
 
 ## Data
 
@@ -23,6 +25,10 @@
   * [Files and metadata](data/organization-of-data/files-and-metadata.md)
   * [Resolving CRDC Globally Unique Identifiers (GUIDs)](data/organization-of-data/guids-and-uuids.md)
   * [Clinical data](data/organization-of-data/clinical.md)
+  * [Organization of data, v2 through V13 (deprecated)](data/organization-of-data/organization-of-data-v2-through-v13-deprecated/README.md)
+    * [Files and metadata](data/organization-of-data/organization-of-data-v2-through-v13-deprecated/files-and-metadata.md)
+    * [Resolving CRDC Globally Unique Identifiers (GUIDs)](data/organization-of-data/organization-of-data-v2-through-v13-deprecated/guids-and-uuids.md)
+    * [Clinical data](data/organization-of-data/organization-of-data-v2-through-v13-deprecated/clinical.md)
   * [Organization of data in v1 (deprecated)](data/organization-of-data/organization-of-data-v1.md)
 * [Downloading data](data/downloading-data/README.md)
   * [Downloading data with s5cmd](data/downloading-data/downloading-data-with-s5cmd.md)
@@ -49,6 +55,7 @@
   * [Exploring imaging data](portal/data-exploration-and-cohorts/exploring-imaging-data.md)
   * [Viewing collections, studies, and series](portal/data-exploration-and-cohorts/viewing-collections-studies-and-series.md)
   * [Understanding cohorts](portal/data-exploration-and-cohorts/understanding-cohorts.md)
+* [Cohort manifests](portal/cohort-manifests.md)
 * [Visualizing images](portal/visualization.md)
 * [Proxy policy](portal/proxy-policy.md)
 * [Viewer release notes](portal/viewer-release-notes.md)

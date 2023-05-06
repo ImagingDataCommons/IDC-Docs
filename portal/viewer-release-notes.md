@@ -1,7 +1,9 @@
 # Viewer release notes
 
-{% hint style="warning" %}
-The version of the viewer is shown in the Debug Info option.
+{% hint style="danger" %}
+The version of the viewer is available from the "About" menu for the OHIF (radiology) viewer, and "Get app info" menu for the Slim (pathology) viewers. Both of those menus are in the upper right corner of the window.
+
+<img src="../.gitbook/assets/ohif_version (1).png" alt="radiology viewer version location" data-size="original">![pathology viewer version location](../.gitbook/assets/slim\_version.png)
 {% endhint %}
 
 ## 0.11.2 - September 2022 - Slim
@@ -42,7 +44,6 @@ Main highlights of this release include:
 * Implements runtime tolerance for SEGs loading retry;
 * Fixed popup notifications behavior;
 * Update cornerstoneWADOImageLoader.
-
 
 ## 0.8.1 - June 2022 - Slim
 

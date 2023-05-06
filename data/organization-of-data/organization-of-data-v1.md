@@ -10,7 +10,7 @@ description: >-
 IDC approach to storage and management of DICOM data is relying on the Google Cloud Platform [Healthcare API](https://cloud.google.com/healthcare/docs/how-tos/dicom). We maintain three representations of the data, which are fully synchronized and correspond to the same dataset, but are intended to serve different use cases.
 
 {% hint style="warning" %}
-In order to access the resources listed below, it is assumed you have completed the ["getting started" steps](../../introduction/getting-started-with-gcp.md) to access Google Cloud console!
+In order to access the resources listed below, it is assumed you have completed the ["getting started" steps](../../introduction/google-cloud-platform/getting-started-with-gcp.md) to access Google Cloud console!
 {% endhint %}
 
 All of the resources listed below are accessible under the [`canceridc-data` GCP project](https://console.cloud.google.com/home/dashboard?project=canceridc-data).
@@ -35,7 +35,7 @@ You can read about accessing GCP storage buckets from a Compute VM [here](https:
 Egress of IDC data out of the cloud is free, since IDC data is participating in Google Public Datasets Program!
 {% endhint %}
 
-Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below, substituting `$PROJECT_ID` with the valid GCP Project ID (see the complete example in [this notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort_download.ipynb)):
+Assuming you have a list of GCS URLs in `gcs_paths.txt`, you can download the corresponding items using the command below, substituting `$PROJECT_ID` with the valid GCP Project ID (see the complete example in [this notebook](https://github.com/ImagingDataCommons/IDC-Examples/blob/master/notebooks/Cohort\_download.ipynb)):
 
 ```bash
 $ cat gcs_paths.txt | gsutil -u $PROJECT_ID -m cp -I .
