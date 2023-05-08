@@ -6,6 +6,7 @@
 * [Frequently asked questions](frequently-asked-questions.md)
 * [Support](support.md)
 * [Key pointers](idc-key-pointers.md)
+* [IDC team](idc-team.md)
 
 ## Introduction
 
