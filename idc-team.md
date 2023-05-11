@@ -31,7 +31,7 @@ Our team includes the following sites and project leads:
   * Daniela Schacherer, MS
   * Henning Höfener, PhD
 * Massachusetts General Hospital, Boston, MA, USA (MGH)
-  * Chris Bridge, PhD - site PI
+  * Chris Bridge, DPhil - site PI
   * Chris Gorman, PhD
 * Radical Imaging LLC, Boston, MA, USA (Radical Imaging)
   * Rob Lewis, PhD - site PI
