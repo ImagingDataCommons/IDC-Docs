@@ -10,7 +10,7 @@ The following components and capabilities are being developed by IDC:
 
 IDC is being built utilizing the Google Cloud Platform (GCP) as the foundation. We use a range of products developed by GCP, most notably Google Healthcare, to implement the capabilities listed above. We discuss the role of the major GCP components used by IDC in [this section](google-cloud-platform/).
 
-IDC data in files is hosted both in Google Cloud Storage (GCS) buckets and (starting from v14) in Amazon AWS S3 buckets. GCS data storage and egress are sponsored by [Google Public Data Program](https://console.cloud.google.com/marketplace/product/bigquery-public-data/nci-idc-data). AWS data storage and egress sponsored by AWS Open Data Sponsorship Program.&#x20;
+IDC data in files is hosted both in Google Cloud Storage (GCS) buckets and (starting from v14) in Amazon AWS S3 buckets. GCS data storage and egress are sponsored by [Google Public Data Program](https://console.cloud.google.com/marketplace/product/bigquery-public-data/nci-idc-data). AWS data storage and egress sponsored by [AWS Open Data Sponsorship Program](https://registry.opendata.aws/nci-imaging-data-commons/).
 
 {% hint style="success" %}
 You can download IDC data (either to your computer or to a cloud VM) from either GCS or AWS buckets without the need to login, and without having to pay for egress!
