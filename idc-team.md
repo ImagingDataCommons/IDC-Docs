@@ -1,6 +1,8 @@
 # IDC team
 
-Imaging Data Commons is being developed by a team of engineers and imaging scientists with decades of experience in cancer imaging informatics, cloud computing, imaging standards, security, open source tool development and data sharing.&#x20;
+Imaging Data Commons is being developed by a team of engineers and imaging scientists with decades of experience in cancer imaging informatics, cloud computing, imaging standards, security, open source tool development and data sharing.
+
+<figure><img src=".gitbook/assets/PXL_20230511_195856016.MP (1).jpg" alt=""><figcaption></figcaption></figure>
 
 Our team includes the following sites and project leads:
 
