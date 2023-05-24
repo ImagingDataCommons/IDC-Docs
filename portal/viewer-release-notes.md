@@ -6,6 +6,60 @@ The version of the viewer is available from the "About" menu for the OHIF (radio
 <img src="../.gitbook/assets/ohif_version (1).png" alt="radiology viewer version location" data-size="original">![pathology viewer version location](../.gitbook/assets/slim\_version.png)
 {% endhint %}
 
+## OHIF v2 [deprecated]
+
+The final OHIF v2 published version is 4.12.45.
+
+Main highlights merged but not published:
+
+* Fix high and critical dependency issues reported by dependabot
+* Update SEG tolerance popup and update SEG thumbnail warning: Jump to first segment item image and show warning message only once on onChange events
+* Update to issues and PR templates
+* Address segmentation visibility toggle applied to all segmentations instead of the active one only
+* Update dcmjs version so it throws 'Failed to find the reference image in the source data. Cannot load this segmentation' error instead of logging a warning to console 
+* Address eye icon for segment not shown when segment name is long
+* Change message for segmentation when it fails to load duo to orientation tolerance
+
+## 4.12.45 - Oct 2022 - OHIF
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/using/dicomweb).
+
+Main highlights of this release include:
+
+* Handle missing ReferencedInstanceSequence attribute: Update parsing logic to consider attribute as optional.
+
+## 4.12.44 - Oct 2022 - OHIF
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/using/dicomweb).
+
+Main highlights of this release include:
+
+* Remove unused code from DICOM SR parsing: Remove referecenedImages attribute from SR display sets. Within TID 1500, sub-template TID 1600 (Image Library) is not required while parsing SR for image references for annotations and planar measurements. The same is obtained from sub template TID 1501>TID 300>TID 320.
+
+## 4.12.43 - Oct 2022 - OHIF
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/using/dicomweb).
+
+Main highlights of this release include:
+
+* Update message for segmentation error loading due to orientation tolerance
+
+## 4.12.42 - Oct 2022 - OHIF
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/using/dicomweb).
+
+Main highlights of this release include:
+
+* Correct Parsing Logic for Qualitative Instance Level SR
+
+## 4.12.41 - Sep 2022 - OHIF
+
+**The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/using/dicomweb).
+
+Main highlights of this release include:
+
+* Fix 2d MPR rendering issue for the sagittal view
+
 ## 0.13.0 - April 2023 - Slim
 
 **Slim** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/ImagingDataCommons/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/using/dicomweb) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
