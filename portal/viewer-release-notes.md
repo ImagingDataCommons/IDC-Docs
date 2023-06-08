@@ -6,11 +6,12 @@ The version of the viewer is available from the "About" menu for the OHIF (radio
 <img src="../.gitbook/assets/ohif_version (1).png" alt="radiology viewer version location" data-size="original">![pathology viewer version location](../.gitbook/assets/slim\_version.png)
 {% endhint %}
 
-## OHIF v2 [deprecated]
+## v2-legacy - 8 Jun 2023 - OHIF
 
-The final OHIF v2 published version is 4.12.45.
+The final OHIF v2 published version is 4.12.45. Upstream changes based on v2 will be accessible 
+through the v2-legacy branch (will not be published to NPM).
 
-Main highlights merged but not published:
+Main highlights from v2-legacy since 4.12.45:
 
 * Fix high and critical dependency issues reported by dependabot
 * Update SEG tolerance popup and update SEG thumbnail warning: Jump to first segment item image and show warning message only once on onChange events
