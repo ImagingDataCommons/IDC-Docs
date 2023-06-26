@@ -1,20 +1,15 @@
 # Organization of data
 
-This section describes the current organization of IDC data. The organization of data has been static since IDC Version 2 except that [clinical data](clinical.md) was added in Version 11. Development of the clinical data resource is an ongoing project. IDC Version 1 data organization is described in the [Organization of data in V1](organization-of-data-v1.md) section.
+This section describes the current organization of IDC data. The organization of data was static from IDC Version 2  through IDC Version 13 except that [clinical data](organization-of-data-v2-through-v13-deprecated/clinical.md) was added in Version 11. Development of the clinical data resource is an ongoing project. From IDC v14, our data [became available](https://registry.opendata.aws/nci-imaging-data-commons/) from the Amazon AWS Open Data Registry, and the files in storage buckets were organized into series-level folders.
 
-IDC storage and management of DICOM data relies on the Google Cloud Platform. We maintain three representations of the data \(namely, as files in Storage buckets, metadata tables in BigQuery tables, and DICOM instances within DICOM stores\), which are fully synchronized and correspond to the same content, but are intended to serve different use cases.
-
-{% hint style="warning" %}
-In order to access the resources listed below, it is assumed you have completed the ["getting started" steps](../../introduction/getting-started-with-gcp.md) to access the Google Cloud console!
-{% endhint %}
-
-All of the resources listed below are accessible under the [`canceridc-data` GCP project](https://console.cloud.google.com/home/dashboard?project=canceridc-data).
+We maintain three representations of the data (namely, as files in GCS and AWS Storage buckets, metadata tables in Google BigQuery tables, and DICOM instances within a Google Cloud Healthcare DICOM store). These different representations are fully synchronized and correspond to the same content, but are intended to serve different use cases.
 
 ## [Files and metadata](files-and-metadata.md)
 
-## [GA4GH DRS objects](guids-and-uuids.md)
+## [GA4GH DRS objects](organization-of-data-v2-through-v13-deprecated/guids-and-uuids.md)
 
-## [Clinical Data](clinical.md)
+## [Clinical Data](organization-of-data-v2-through-v13-deprecated/clinical.md)
 
-## [Organization of data in v1 \(deprecated\)](organization-of-data-v1.md)
+### [Organization of data, v1 through V13 (deprecated)](./#organization-of-data-v1-through-v13-deprecated)
 
+## [Organization of data in v1 (deprecated)](organization-of-data-v1.md)

@@ -1,8 +1,27 @@
 # Viewer release notes
 
-{% hint style="warning" %}
-The version of the viewer is shown in the Debug Info option.
+{% hint style="danger" %}
+The version of the viewer is available from the "About" menu for the OHIF (radiology) viewer, and "Get app info" menu for the Slim (pathology) viewers. Both of those menus are in the upper right corner of the window.
+
+<img src="../.gitbook/assets/ohif_version (1).png" alt="radiology viewer version location" data-size="original">![pathology viewer version location](../.gitbook/assets/slim\_version.png)
 {% endhint %}
+
+## 0.13.0 - April 2023 - Slim
+
+**Slim** is a lightweight server-less single-page application for interactive visualization of digital slide microscopy (SM) images and associated image annotations in standard DICOM format. The application is based on the [dicom-microscopy-viewer](https://github.com/ImagingDataCommons/dicom-microscopy-viewer) library and can simply be placed in front of a [DICOMweb](https://www.dicomstandard.org/using/dicomweb) compatible Image Management System (IMS), Picture Archiving and Communication (PACS), or Vendor Neutral Archive (VNA).
+
+New Features
+
+* Support configuration of multiple origin servers for different types of DICOM objects (SOP Storage Classes)
+
+Enhancements
+
+* Improved error handling
+* Check Pyramid UID (if available) when grouping images into digital slides
+
+Bug Fixes
+
+* Use Acquisition UID (if available) to group images into digital slides
 
 ## 0.11.2 - September 2022 - Slim
 
@@ -42,7 +61,6 @@ Main highlights of this release include:
 * Implements runtime tolerance for SEGs loading retry;
 * Fixed popup notifications behavior;
 * Update cornerstoneWADOImageLoader.
-
 
 ## 0.8.1 - June 2022 - Slim
 

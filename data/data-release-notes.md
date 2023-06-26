@@ -10,12 +10,18 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## v14 - May 2023
+
+This release does not introduce any new data, but changes the bucket organization and introduces replication of IDC files in Amazon AWS storage buckets, as described in [this section](organization-of-data/files-and-metadata.md).
+
 ## v13 - Mar 2023
 
 New analysys results collection:
+
 1. [nnU-Net-BPR-annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=nnU-Net-BPR-annotations)
 
 New clinical data collections:
+
 1. [PROSTATEx](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=prostatex)
 
 ## v12 - Nov 2022

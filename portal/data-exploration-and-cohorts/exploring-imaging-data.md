@@ -6,22 +6,16 @@ Below you will find more details regarding our four primary search panels availa
 
 You can explore IDC data and metadata by selecting filters in the **Search Scope** and **Search Configuration** panels on the IDC portal home page. Selecting filters narrows down the available image series to meet your criteria. You can then save your filter selection as a [cohort ](./#understanding-cohorts)for later use.
 
-* **Search Scope panel:** The Search Scope panel is primarily used to filter by collection. We currently have 20+ collection options present.
+* **Search Scope panel:** The Search Scope panel is primarily used to filter by collection. We currently have 120+ collection options present.
 * **Search Configuration panel:** The Search Configuration panel is the more detailed attribute filter option by utilizing various case, Segmentation, Qualitative, and Quantitative Analyses.
 * **Search Results panel:** The Search Results is the visual representation panel of the detailed attribute filter options we have available in the form of pie charts.
 *   **Collections panel:** The Collections panel can be used to view a Selected Study and/or a Specific Series without any additional attribute option selected.
 
-    We will cover more in more detail all the attribute options we have available within the Search Configuration panel and the Search Results panel.
+    We will cover in more detail all the attribute options we have available within the Search Configuration panel and the Search Results panel.
 
 ![Search Scope, Search Configuration, and Search Results panels](../../.gitbook/assets/screen-shot-2021-03-02-at-9.09.49-am.png)
 
-![Search Scope, Search Configuration, Filter Definition, and Search Results Panels](../../.gitbook/assets/explore-page.png)
-
-![Collections panel](../../.gitbook/assets/collections.png)
-
 The pie charts in the Search Results panel show the number of cases (or patients) in your search results by Anatomical Region, Segmentation Category, and Segmentation Type. Hover over a pie slice to see the name of the Anatomical Region, Segmentation Category, and Segmentation Type, number of each, and percent of the total in your search results.
-
-![](../../.gitbook/assets/screen-shot-2021-03-02-at-9.10.29-am.png)
 
 You can also explore the IDC data without filters. If you want to view a collection's cases, studies, and series, scroll down the IDC portal home page until you reach the Collections panel. Click any link on the Collections panel to view available data about your selection in tabular form in the _Filter Definition_, _Selected Cases_, _Selected Studies_, and _Selected Series_ panels.
 
@@ -29,13 +23,13 @@ You can also explore the IDC data without filters. If you want to view a collect
 Log in to the portal to [save your filter selections as a cohort](./#creating-a-cohort).
 {% endhint %}
 
-![Collections Panel](<../../.gitbook/assets/collections-panelv2 (2) (2) (2) (2) (2) (4) (4) (4) (2) (4) (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (3).png>)
+![Collections Panel](<../../.gitbook/assets/collections-panelv2 (2) (2) (2) (2) (2) (4) (4) (4) (2) (4) (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (1) (4).png>)
 
 ## **Defining search scope and configuration**
 
 Do the following to define the scope and configuration of your search.
 
-1. In the Search Scope panel, click **COLLECTION** to view the collections in the portal.
+1. In the Search Scope panel, click **Collection** to view the collections organized by Program in the portal.
 2. Click the box to the left of a collection name to select one or more collections. You can hover over a collection name to view more information about the collection.
 3. In the Search Configuration panel, select filters on the **Original**, **Derived**, and **Related** tabs to narrow down the available image series. Click any of the filter names on these tabs to view and select the available options. Attribute filter selections in the Search Configuration panel that have no data available are highlighted in grey. Optionally, hide attributes with 0 cases by selecting the checkbox at the top of the panel. The following table describes each of the tabs in this panel.
 
