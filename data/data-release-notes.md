@@ -28,42 +28,42 @@ New pathology collections
 
 Revised radiology collections
 
-1. [CPTAC-CCRCC](https://doi.org/10.7937/K9/TCIA.2018.OBLAMN27) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-2. [CPTAC-CM](https://doi.org/10.7937/K9/TCIA.2018.ODU24GZE) (“TCIA description: Radiology modality data cleanup to remove extraneous scans.”)
-3. [CPTAC-LSCC](https://doi.org/10.7937/K9/TCIA.2018.6EMUB5L2) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-4. [CPTAC-LUAD](https://doi.org/10.7937/K9/TCIA.2018.PAT12TBS) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-5. [CPTAC-PDA](https://doi.org/10.7937/K9/TCIA.2018.SC20FO18) (TCIA description: TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-6. [CPTAC-SAR](https://doi.org/10.7937/TCIA.2019.9bt23r95) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-7. [CPTAC-UCEC](https://doi.org/10.7937/K9/TCIA.2018.3R3JUISW) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-8. [CT Lymph Nodes](https://doi.org/10.7937/K9/TCIA.2015.AQIIDCNM) (TCIA description: “Added DICOM version of MED\_ABD\_LYMPH\_MASKS.zip segmentations that were previously available”)
-9. [RIDER Lung CT](https://doi.org/10.7937/K9/TCIA.2015.U1X8A5NR) (Revised because QIBA-VolCT-1B analysis results were added)
-10. [NLST](https://doi.org/10.7937/TCIA.HMQ8-J677) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
-11. [NSCLC-Radiomics](https://www.cancerimagingarchive.net/collections/) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
+1. [CPTAC-CCRCC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_ccrcc) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+2. [CPTAC-CM](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_cm) (“TCIA description: Radiology modality data cleanup to remove extraneous scans.”)
+3. [CPTAC-LSCC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_lscc) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+4. [CPTAC-LUAD](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_luad) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+5. [CPTAC-PDA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_pda) (TCIA description: TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+6. [CPTAC-SAR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_sar) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+7. [CPTAC-UCEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_ucec) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+8. [CT Lymph Nodes](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=ct\_lymph\_nodes) (TCIA description: “Added DICOM version of MED\_ABD\_LYMPH\_MASKS.zip segmentations that were previously available”)
+9. [RIDER Lung CT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=RIDER\&collection\_id=rider\_lung\_ct) (Revised because QIBA-VolCT-1B analysis results were added)
+10. [NLST](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=RIDER\&collection\_id=nlst) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
+11. [NSCLC-Radiomics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=nsclc\_radiomics) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
 
 Revised pathology collections
 
-1. [CPTAC-GBM](https://doi.org/10.7937/K9/TCIA.2018.3RJE41Q1) (11 pathology-only patients removed at request of data owner)
-2. [CPTAC-SAR](https://doi.org/10.7937/TCIA.2019.9bt23r95) (1 pathology-only patient removed at request of data owner)
+1. [CPTAC-GBM](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=cptac\_gbm) (11 pathology-only patients removed at request of data owner)
+2. [CPTAC-SAR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_sar) (1 pathology-only patient removed at request of data owner)
 
 New analysis results
 
-1. [QIBA-VolCT-1B](https://doi.org/10.7937/tcia.2020.1c3h-vp70) (Analysis of NLST and NSCLC-Radiomics)
+1. [QIBA-VolCT-1B](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=qiba\_ct\_1c) (Analysis of NLST and NSCLC-Radiomics)
 
 Revised analysis results
 
-1. [nnU-Net-BPR-Annotations](https://https/zenodo.org/record/7539035) (Annotations of NLST and NSCLC-Radiomics radiology)
+1. [nnU-Net-BPR-Annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=nnU-Net-BPR-annotations) (Annotations of NLST and NSCLC-Radiomics radiology)
 
 New clinical metadata tables
 
-1. [adrenal\_acc\_ki67\_seg\_clinical](https://doi.org/10.7937/1FPG-VM46)
-2. [cc\_tumor\_heterogeneity\_clinical](https://doi.org/10.7937/ERZ5-QZ59)
-3. [colorectal\_liver\_metastases\_clinical](https://doi.org/10.7937/QXK2-QG03)
-4. [duke\_breast\_cancer\_mri\_clinical](https://doi.org/10.7937/TCIA.e3sv-re93)
-5. [nlst\_clinical](https://doi.org/10.7937/TCIA.HMQ8-J677)
-6. [nlst\_ctab](https://doi.org/10.7937/TCIA.HMQ8-J677)
-7. [nlst\_ctabc](https://doi.org/10.7937/TCIA.HMQ8-J677)
-8. [nlst\_prsn](https://doi.org/10.7937/TCIA.HMQ8-J677)
-9. [nlst\_screen](https://doi.org/10.7937/TCIA.HMQ8-J677)
+1. [adrenal\_acc\_ki67\_seg\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=adrenal\_acc\_ki67\_seg)
+2. [cc\_tumor\_heterogeneity\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=cc\_tumor\_heterogeneity)
+3. [colorectal\_liver\_metastases\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=colorectal\_liver\_metastases)
+4. [duke\_breast\_cancer\_mri\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=duke\_breast\_cancer\_mri)
+5. [nlst\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
+6. [nlst\_ctab](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
+7. [nlst\_ctabc](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
+8. [nlst\_prsn](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
+9. [nlst\_screen](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
 
 ## v14 - May 2023
 
