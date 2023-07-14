@@ -10,13 +10,68 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## v15 - July 2023
+
+New radiology collections
+
+1. [Adrenal-ACC-Ki67-Seg](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=adrenal\_acc\_ki67\_seg)
+2. [CC-Tumor-Heterogeneity](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=cc\_tumor\_heterogeneity)
+3. [Colorectal-Liver-Metastases](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=cc\_tumor\_heterogeneity)
+4. [NLM-Visible-Human-Project](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nlm\_visible\_human\_project)
+5. [Prostate-Anatomical-Edge-Cases](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=prostate\_anatomical\_edge\_cases)
+6. [RIDER Pilot](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=RIDER\&collection\_id=rider\_pilot)
+
+New pathology collections
+
+1. [HTAN-VANDERBILT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=HTAN\&collection\_id=htan\_vanderbilt)
+2. [ICDC-Glioma](https://portal.imaging.datacommons.cancer.gov/explore/filters/?Modality\_op=OR\&Modality=SM\&collection\_id=icdc\_glioma) (ICDC-Glioma radiology added in a previous version)
+
+Revised radiology collections
+
+1. [CPTAC-CCRCC](https://doi.org/10.7937/K9/TCIA.2018.OBLAMN27) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+2. [CPTAC-CM](https://doi.org/10.7937/K9/TCIA.2018.ODU24GZE) (“TCIA description: Radiology modality data cleanup to remove extraneous scans.”)
+3. [CPTAC-LSCC](https://doi.org/10.7937/K9/TCIA.2018.6EMUB5L2) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+4. [CPTAC-LUAD](https://doi.org/10.7937/K9/TCIA.2018.PAT12TBS) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+5. [CPTAC-PDA](https://doi.org/10.7937/K9/TCIA.2018.SC20FO18) (TCIA description: TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+6. [CPTAC-SAR](https://doi.org/10.7937/TCIA.2019.9bt23r95) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+7. [CPTAC-UCEC](https://doi.org/10.7937/K9/TCIA.2018.3R3JUISW) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+8. [CT Lymph Nodes](https://doi.org/10.7937/K9/TCIA.2015.AQIIDCNM) (TCIA description: “Added DICOM version of MED\_ABD\_LYMPH\_MASKS.zip segmentations that were previously available”)
+9. [RIDER Lung CT](https://doi.org/10.7937/K9/TCIA.2015.U1X8A5NR) (Revised because QIBA-VolCT-1B analysis results were added)
+10. [NLST](https://doi.org/10.7937/TCIA.HMQ8-J677) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
+11. [NSCLC-Radiomics](https://www.cancerimagingarchive.net/collections/) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
+
+Revised pathology collections
+
+1. [CPTAC-GBM](https://doi.org/10.7937/K9/TCIA.2018.3RJE41Q1) (11 pathology-only patients removed at request of data owner)
+2. [CPTAC-SAR](https://doi.org/10.7937/TCIA.2019.9bt23r95) (1 pathology-only patient removed at request of data owner)
+
+New analysis results
+
+1. [QIBA-VolCT-1B](https://doi.org/10.7937/tcia.2020.1c3h-vp70) (Analysis of NLST and NSCLC-Radiomics)
+
+Revised analysis results
+
+1. [nnU-Net-BPR-Annotations](https://https/zenodo.org/record/7539035) (Annotations of NLST and NSCLC-Radiomics radiology)
+
+New clinical metadata tables
+
+1. [adrenal\_acc\_ki67\_seg\_clinical](https://doi.org/10.7937/1FPG-VM46)
+2. [cc\_tumor\_heterogeneity\_clinical](https://doi.org/10.7937/ERZ5-QZ59)
+3. [colorectal\_liver\_metastases\_clinical](https://doi.org/10.7937/QXK2-QG03)
+4. [duke\_breast\_cancer\_mri\_clinical](https://doi.org/10.7937/TCIA.e3sv-re93)
+5. [nlst\_clinical](https://doi.org/10.7937/TCIA.HMQ8-J677)
+6. [nlst\_ctab](https://doi.org/10.7937/TCIA.HMQ8-J677)
+7. [nlst\_ctabc](https://doi.org/10.7937/TCIA.HMQ8-J677)
+8. [nlst\_prsn](https://doi.org/10.7937/TCIA.HMQ8-J677)
+9. [nlst\_screen](https://doi.org/10.7937/TCIA.HMQ8-J677)
+
 ## v14 - May 2023
 
 This release does not introduce any new data, but changes the bucket organization and introduces replication of IDC files in Amazon AWS storage buckets, as described in [this section](organization-of-data/files-and-metadata.md).
 
 ## v13 - Mar 2023
 
-New analysys results collection:
+New analysis results collection:
 
 1. [nnU-Net-BPR-annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=nnU-Net-BPR-annotations)
 
