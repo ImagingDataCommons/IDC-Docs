@@ -8,6 +8,11 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 15.0 July 14, 2023 (canceridc.202307141313.c80a691)
+Main highlights of this release include:
+
+* The file manifest for a filter can be downloaded without logging into the portal and creating a persistent cohort
+
 ## 14.0 May 3, 2023 (canceridc.202305031458.443ea83)
 Main highlights of this release include:
 
