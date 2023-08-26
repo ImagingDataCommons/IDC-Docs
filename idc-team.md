@@ -38,7 +38,7 @@ Our team includes the following sites and project leads:
 * Radical Imaging LLC, Boston, MA, USA (Radical Imaging)
   * Rob Lewis, PhD - site PI
   * Igor Octaviano
-  * Jose Ulloa
+  * Rodrigo Basilio
 * PixelMed Publishing, Bangor, PA, USA (PixelMed)
   * David Clunie, MB, BS - site PI
 * Isomics Inc, Cambridge, MA, USA (Isomics)
@@ -51,16 +51,18 @@ Oversight:
   * Todd Pihl - project manager
 * National Cancer Institute
   * Erika Kim - federal lead
-  * Keyvan Farahani
 
 ### IDC Alumni
 
 We are grateful to the following individuals who contributed to IDC in the past, but are no longer directly involved in the development of IDC.
 
+* Keyvan Farahani (NCI)
 * Markus Herrmann (MGH)
 * Davide Punzo (Radical Imaging)
 * James Petts (Radical Imaging)
 * Erik Ziegler (Radical Imaging)
+* Gitanjali Chhetri (Radical Imaging)
+* Jose Ulloa (Radical Imaging)
 * Madelyn Reyes (GDIT)
 * Derrick Moore (GDIT)
 * Mark Backus (GDIT)
