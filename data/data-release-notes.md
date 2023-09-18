@@ -10,6 +10,29 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## v16 - August 2023
+
+New radiology collections
+
+1. [PDMR-Texture-Analysis](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=PDMR\&collection\_id=pdmr\_texture\_analysis)
+
+New pathology collections
+
+1. [RMS-Mutation-Prediction](https://dev-portal.canc=ccdieridc.dev/explore/filters/?collection\_id=CCDI\&collection\_id=rms\_mutation\_prediction)
+
+Revised radiology collections
+
+1. [Breast-MRI-NACT-Pilot](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=Community\&collection\_id=breast\_mri\_nact\_pilot) (TCIA description: (Repair of DICOM tag(0008,0005) to value "ISO\_IR 100" in 79 series)
+2. [CPTAC-CRCC](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_crcc) (Revised because results from CPTAC-CRCC-Tumor-Annotations were added)
+3. [CPTAC-UCEC](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_ucec) (Revised because results from CPTAC-UCEC-Tumor-Annotations were added)
+4. [CPTAC-PDA](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_pda) (Revised because results from CPTAC-PDA-Tumor-Annotations were added)
+
+New analysis results
+
+1. [CPTAC-CRCC-Tumor-Annotations ](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=157288300)
+2. [CPTAC-UCEC-Tumor-Annotations](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=157288358)
+3. [CPTAC-PDA-Tumor-Annotations](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=157288334)
+
 ## v15 - July 2023
 
 New radiology collections

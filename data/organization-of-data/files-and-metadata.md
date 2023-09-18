@@ -173,6 +173,21 @@ Due to the existing limitations of Google Healthcare API, not all of the DICOM a
 * sequences that contain around 1MiB of data are dropped from BigQuery export and RetrieveMetadata output currently. 1MiB is not an exact limit, but it can be used as a rough estimate of whether or not the API will drop the tag (this limitation was not documented as of writing this) - we know that some of the instances in IDC will be affected by this limitation. The fix for this limitation is targeted for sometime in 2021, according to the communication with Google Healthcare support.
 {% endhint %}
 
+#### mutable\_metadata
+
+Some non-DICOM metadata may change over time. This includes the GCS and AWS URLs of instance data, the accessibility of each instance and the URL of an instance's associated description page. BigQuery metadata tables such as the auxiliary\_metadata and dicom\_all tables are never revised even when such metadata changes. However, tables in the datasets of previous IDC versions can be joined with the mutable\_metadata table to obtain the current values of these mutable attributes.
+
+The table has one row for each version of each instances:
+
+* crdc\_instance\_uuid: The uuid of an instance version
+* crdc\_series\_uuid: The uuid of a series version that contains this instance version
+* crdc\_study\_uuid: The uuid of a study version that contains the series version
+* gcs\_url: URL to the Google Cloud Storage (GCS) object containing this instance version
+* aws\_url: URL to the Amazon Web Services (AWS) object containing this instance version
+* access: Current access status of this instance (Public or Limited)
+* source\_url: The URL of a page that describes the original collection or analysis result that includes this instance
+* source\_doi: The DOI of a page that describes the original collection or analysis result that includes this instance
+
 #### original\_collections\_metadata
 
 This table is comprised of IDC data collection-level metadata for the original TCIA data collections hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/collections/). One row per collection:
