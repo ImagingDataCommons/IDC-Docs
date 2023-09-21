@@ -33,6 +33,31 @@ New analysis results
 2. [CPTAC-UCEC-Tumor-Annotations](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=157288358)
 3. [CPTAC-PDA-Tumor-Annotations](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=157288334)
 
+New clinical metadata tables
+
+1. [htan\_hms\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
+2. [htan\_hms\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
+3. [htan\_hms\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
+4. [htan\_hms\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
+5. [htan\_hms\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
+6. [htan\_hms\_moleculartheraphy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
+7. [htan\_oshu\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_oshu)
+8. [htan\_oshu\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_oshu)
+9. [htan\_oshu\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_oshu)
+10. [htan\_oshu\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_oshu)
+11. [htan\_oshu\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_oshu)
+12. [htan\_oshu\_moleculartheraphy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_oshu)
+13. [htan\_wustl\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
+14. [htan\_wustl\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
+15. [htan\_wustl\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
+16. [htan\_wustl\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
+17. [htan\_wustl\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
+18. [htan\_wustl\_moleculartheraphy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
+19. [rms\_mutation\_prediction\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rms\_mutation\_prediction)
+20. [rms\_mutation\_prediction\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rms\_mutation\_prediction)
+21. [rms\_mutation\_prediction\_sample](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rms\_mutation\_prediction)
+
+
 ## v15 - July 2023
 
 New radiology collections
