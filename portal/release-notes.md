@@ -8,6 +8,11 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 16.0 September 15, 2023 (canceridc.202309151254.a6dfd6a)
+Main highlights of this release include:
+
+* s5cmd file manifests can now be generated from the Explore images page for individual studies and series
+
 ## 15.0 July 14, 2023 (canceridc.202307141313.c80a691)
 Main highlights of this release include:
 
