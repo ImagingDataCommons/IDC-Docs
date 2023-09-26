@@ -100,12 +100,28 @@ In addition to the per-version datasets, the `bigquery-public-data.idc-current` 
 
 Several Google BigQuery (BQ) tables support searches against metadata extracted from the DICOM data files. Additional BQ tables define the composition of each IDC data version. We maintain several additional tables that curate non-DICOM metadata (e.g., attribution of a given item to a specific collection and DOI, collection-level metadata, etc).
 
-The set of BQ tables and views has grown over time. The enumeration below documents the BQ tables and views as of IDC V14. Some of these tables will not be found in earlier IDC BQ datasets.
+The set of BQ tables and views has grown over time. The enumeration below documents the BQ tables and views as of IDC v14. Some of these tables will not be found in earlier IDC BigQuery datasets.
 
-#### auxiliary\_metadata
+#### `dicom_metadata`
 
-This table defines the contents of the corresponding IDC version. There is a row for each instance in the version. We group the attributes for convenience:\
-\
+* Table in BigQuery: [`dicom_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_metadata&page=table)
+
+Each row in the `dicom_metadata` table holds the DICOM metadata of an instance in the corresponding IDC version. There is a single row for each DICOM instance in the corresponding IDC version.\
+IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Google Healthcare API documentation article. IDC users can `dicom_metadata` to conduct detailed explorations of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. (However, the `dicom_all` table, described below, is probably a better choice for such explorations.) The schema is too large to document here. Refer to the BQ table and the above referenced documentation.
+
+{% hint style="warning" %}
+Due to the existing limitations of Google Healthcare API, not all of the DICOM attributes are extracted and are available in BigQuery tables. Specifically:
+
+* sequences that have more than 15 levels of nesting are not extracted (see [https://cloud.google.com/bigquery/docs/nested-repeated](https://cloud.google.com/bigquery/docs/nested-repeated)) - we believe this limitation does not affect the data stored in IDC
+* sequences that contain around 1MiB of data are dropped from BigQuery export and RetrieveMetadata output currently. 1MiB is not an exact limit, but it can be used as a rough estimate of whether or not the API will drop the tag (this limitation was not documented as of writing this) - we know that some of the instances in IDC will be affected by this limitation. The fix for this limitation is targeted for sometime in 2021, according to the communication with Google Healthcare support.
+{% endhint %}
+
+#### `auxiliary_metadata`
+
+* Table in BigQuery: [`auxiliary_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=auxiliary_metadata&page=table)
+
+This table defines the contents of the corresponding IDC version. There is a row for each instance in the version. We group the attributes for convenience:
+
 Collection attributes:
 
 * `tcia_api_collection_id:` The ID, as accepted by the TCIA API, of the original data collection containing this instance (will be Null for collections not sourced from TCIA)
@@ -161,34 +177,26 @@ Instance attributes:
 * `license_long_name:` A long form name of the license governing this version of this instance
 * `license_short_name:` A short form name of the license governing this version of this instance
 
-#### `dicom_metadata`
+#### `mutable_metadata`
 
-Each row in the `dicom_metadata` table holds the DICOM metadata of an instance in the corresponding IDC version. There is a single row for each DICOM instance in the corresponding IDC version.\
-IDC utilizes the standard capabilities of the Google Healthcare API to extract all of the DICOM metadata from the hosted collections into a single BQ table. Conventions of how DICOM attributes of various types are converted into BQ form are covered in the [Understanding the BigQuery DICOM schema](https://cloud.google.com/healthcare/docs/how-tos/dicom-bigquery-schema) Google Healthcare API documentation article. IDC users can `dicom_metadata` to conduct detailed explorations of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. (However, the `dicom_all` table, described below, is probably a better choice for such explorations.) The schema is too large to document here. Refer to the BQ table and the above referenced documentation.
-
-{% hint style="warning" %}
-Due to the existing limitations of Google Healthcare API, not all of the DICOM attributes are extracted and are available in BigQuery tables. Specifically:
-
-* sequences that have more than 15 levels of nesting are not extracted (see [https://cloud.google.com/bigquery/docs/nested-repeated](https://cloud.google.com/bigquery/docs/nested-repeated)) - we believe this limitation does not affect the data stored in IDC
-* sequences that contain around 1MiB of data are dropped from BigQuery export and RetrieveMetadata output currently. 1MiB is not an exact limit, but it can be used as a rough estimate of whether or not the API will drop the tag (this limitation was not documented as of writing this) - we know that some of the instances in IDC will be affected by this limitation. The fix for this limitation is targeted for sometime in 2021, according to the communication with Google Healthcare support.
-{% endhint %}
-
-#### mutable\_metadata
+* Table in BigQuery: [`mutable_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=original_collections_metadata&page=table)
 
 Some non-DICOM metadata may change over time. This includes the GCS and AWS URLs of instance data, the accessibility of each instance and the URL of an instance's associated description page. BigQuery metadata tables such as the auxiliary\_metadata and dicom\_all tables are never revised even when such metadata changes. However, tables in the datasets of previous IDC versions can be joined with the mutable\_metadata table to obtain the current values of these mutable attributes.
 
 The table has one row for each version of each instances:
 
-* crdc\_instance\_uuid: The uuid of an instance version
-* crdc\_series\_uuid: The uuid of a series version that contains this instance version
-* crdc\_study\_uuid: The uuid of a study version that contains the series version
-* gcs\_url: URL to the Google Cloud Storage (GCS) object containing this instance version
-* aws\_url: URL to the Amazon Web Services (AWS) object containing this instance version
-* access: Current access status of this instance (Public or Limited)
-* source\_url: The URL of a page that describes the original collection or analysis result that includes this instance
-* source\_doi: The DOI of a page that describes the original collection or analysis result that includes this instance
+* `crdc_instance_uuid`: The uuid of an instance version
+* `crdc_series_uuid`: The uuid of a series version that contains this instance version
+* `crdc_study_uuid`: The uuid of a study version that contains the series version
+* `gcs_url`: URL to the Google Cloud Storage (GCS) object containing this instance version
+* `aws_url`: URL to the Amazon Web Services (AWS) object containing this instance version
+* `access: Current access status of this instance (Public or Limited)
+* `source_url`: The URL of a page that describes the original collection or analysis result that includes this instance
+* `source_doi`: The DOI of a page that describes the original collection or analysis result that includes this instance
 
-#### original\_collections\_metadata
+#### `original_collections_metadata`
+
+* Table in BigQuery: [`original_collections_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=original_collections_metadata&page=table)
 
 This table is comprised of IDC data collection-level metadata for the original TCIA data collections hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/collections/). One row per collection:
 
@@ -212,7 +220,9 @@ This table is comprised of IDC data collection-level metadata for the original T
 * `license_long_name:` A long form name of the license governing this collection
 * `license_short_name:` A short form name of the license governing this collection
 
-#### analysis\_results\_metadata
+#### `analysis_results_metadata`
+
+* Table in BigQuery: [`analysis_results_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=analysis_results_metadata&page=table)
 
 Metadata for the TCIA analysis results hosted by IDC, for the most part corresponding to the content available in [this table at TCIA](https://www.cancerimagingarchive.net/tcia-analysis-results/). One row per analysis result:
 
@@ -230,56 +240,73 @@ Metadata for the TCIA analysis results hosted by IDC, for the most part correspo
 * `license_short_name:` A short form name of the license governing this collection
 * `description:` Description of analysis result
 
-#### version\_metadata
+#### `version_metadata`
 
-* [`version_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=version_metadata&page=table)
+* Table in BigQuery: [`version_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=version_metadata&page=table)
 
 Metadata for each IDC version, one row per version:
 
-* idc\_version: IDC version number
-* version\_hash: MD5 hash of hashes of collections in this version
-* version\_timestamp: Version creation timestamp
+* `idc_version`: IDC version number
+* `version_hash`: MD5 hash of hashes of collections in this version
+* `version_timestamp`: Version creation timestamp
 
 The following tables and views consist of metadata derived from one or more other IDC tables tables for convenience of the user. For each such table, `<table_name>`, there is also a corresponding view, `<table_name>_view`, that, when queried, generates an equivalent table. These views are intended as a reference; each view's SQL is available to be used for further investigation.
 
 Several of these tables/views are discussed more completely [here](../../dicom/derived-objects/).
 
-#### dicom\_all, dicom\_all\_view
+#### `dicom_all`, `dicom_all_view`
 
-* [`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_all&page=table)
-* [`dicom_all_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_all_view&page=table)
+* Table in BigQuery: [`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_all&page=table)
+* Table in BigQuery: [`dicom_all_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_all_view&page=table)
 
 
 All columns from `dicom_metadata` together with selected date from the `auxiliary_metadata`, `original_collections_metadata`, and `analysis_results_metadata` tables
 
-#### segmentations, segmentations\_view
+#### `segmentations`, `segmentations_view`
 
-Attributes of the segments stored in DICOM Segmentation objects
+* Table in BigQuery: [`segmentations`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=segmentations&page=table)
+* Table in BigQuery: [`segmentations_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=segmentations_view&page=table)
 
-#### measurement\_groups, measurement\_groups\_view
+This table is derived from `dicom_all` to simplify access to the attributes of DICOM Segmentation objects available in IDC. 
 
-Measurement group sequences extracted from DICOM SR TID1500 objects
+#### `measurement_groups`, `measurement_groups_view`
 
-#### qualitative\_measurements, qualitative\_measurements\_view
+* Table in BigQuery: [`measurement_groups`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=measurement_groups&page=table)
+* Table in BigQuery: [`measurement_groups_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=measurement_groups_view&page=table)
 
-Coded evaluation results extracted from the DICOM SR TID1500 objects
+This table is derived from `dicom_all` to simplify access to the measurement groups encoded in DICOM Structured Report TID 1500 objects available in IDC. Specifically, this table contains measurement groups corresponding to the "Measurement group" content item in the [TID 1500 Measurement report](https://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_A.html#sect_TID_1500) DICOM SR objects.
 
-#### quantitative\_measurements, quantitative\_measurements\_view
+#### `qualitative_measurements`, `qualitative_measurements_view`
 
-Quantitative evaluation results extracted from the DICOM SR TID1500 objects
+* Table in BigQuery: [`qualitative_measurements`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=qualitative_measurements&page=table)
+* Table in BigQuery: [`qualitative_measurements_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=qualitative_measurements_view&page=table)
 
-#### dicom\_metadata\_curated,  dicom\_metadata\_curated\_view
+This table is derived from `dicom_all` to simplify access to the qualitative measurements in DICOM SR TID1500 objects. It contains coded evaluation results extracted from the DICOM SR TID1500 objects. Each row in this table corresponds to a single qualitative measurement extracted.
 
-Curated columns from dicom\_metadata
+#### `quantitative_measurements`, `quantitative_measurements_view`
 
-#### dicom\_metadata\_curated\_series\_level, dicom\_metadata\_curated\_series\_level\_view
+* Table in BigQuery: [`quantitative_measurements`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=quantitative_measurements&page=table)
+* Table in BigQuery: [`quantitative_measurements_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=quantitative_measurements_view&page=table)
 
-Curated columns from dicom\_metadata that have been aggregated/cleaned up to describe content at the series level
+This table is derived from `dicom_all` to simplify access to the quantitative measurements in DICOM SR TID1500 objects. It contains quantitative evaluation results extracted from the DICOM SR TID1500 objects. Each row in this table corresponds to a single quantitative measurement extracted.
 
-#### idc\_pivot\_v\<idc\_version>
+#### `dicom_metadata_curated`,  `dicom_metadata_curated_view`
 
-A view that is the basis for the queries performed by the IDC web app.&#x20;
+* Table in BigQuery: [`dicom_metadata_curated`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_metadata_curated&page=table)
+* Table in BigQuery: [`dicom_metadata_curated_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_metadata_curated_view&page=table)
 
+Curated values of DICOM metadata extracted from `dicom_metadata`.
+
+#### `dicom_metadata_curated_series_level`, `dicom_metadata_curated_series_level_view`
+
+* Table in BigQuery: [`dicom_metadata_curated_series_level`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_metadata_curated_series_level&page=table)
+* Table in BigQuery: [`dicom_metadata_curated_series_level_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_metadata_curated_series_level_view&page=table)
+
+Curated columns from `dicom_metadata` that have been aggregated/cleaned up to describe content at the series level. Each row in this table corresponds to a DICOM instance in IDC. The columns are curated by defining queries that apply transformations to the original values of DICOM attributes. 
+
+#### `idc_pivot_v<idc version>`
+
+A view that is the basis for the queries performed by the IDC web app.
 
 
 ### Collection-specific BigQuery tables
