@@ -232,7 +232,9 @@ Metadata for the TCIA analysis results hosted by IDC, for the most part correspo
 
 #### version\_metadata
 
-&#x20;Metadata for each IDC version, one row per version:
+* [`version_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=version_metadata&page=table)
+
+Metadata for each IDC version, one row per version:
 
 * idc\_version: IDC version number
 * version\_hash: MD5 hash of hashes of collections in this version
@@ -244,7 +246,11 @@ Several of these tables/views are discussed more completely [here](../../dicom/d
 
 #### dicom\_all, dicom\_all\_view
 
-All date from `dicom_metadata` together with selected date from the `auxiliary_metadata`, `original_collections_metadata`, and `analysis_results_metadata` tables
+* [`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_all&page=table)
+* [`dicom_all_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=idc_current&t=dicom_all_view&page=table)
+
+
+All columns from `dicom_metadata` together with selected date from the `auxiliary_metadata`, `original_collections_metadata`, and `analysis_results_metadata` tables
 
 #### segmentations, segmentations\_view
 
