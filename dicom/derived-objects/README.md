@@ -8,11 +8,11 @@ In this section we discuss derived DICOM objects, including annotations, that ar
 
 As an example, the [Breast-Cancer-Screening-DBT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=breast\_cancer\_screening\_dbt) collection is available in IDC. If you mouse over the name of that collection in the IDC Portal, the tooltip will provide the overview of the collection and the link to the source.
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (2) (2).png>)
 
 You will also find the link to the source in the [list of collections available in IDC](https://portal.imaging.datacommons.cancer.gov/collections/).
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (2).png>)
 
 Finally, if you select data using SQL, you can use the `source_DOI` and/or the source\_URL column to identify the source of each file in the subset you selected (learn more about `source_DOI`, licenses and attribution in the part 3 of our [Getting started tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started)).
 
