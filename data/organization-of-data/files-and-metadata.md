@@ -12,6 +12,8 @@ Think of IDC as a library, where each file is a book. With that many books, it i
 
 To provide you with a catalog of our data, along with the files, we maintain _metadata_ that makes it possible to understand what is contained within files, and select the files that are of interest for your project, so that you can download just the files you need. We make that metadata available in **BigQuery tables** searchable using standard SQL.
 
+In the following we describe organization of both the metadata catalog and the buckets containing the files. As you go over this documentation, please consider completing our ["Getting started" tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started) - it will give you the opportunity to apply the knowledge you gain by reading this article while interacting with the data, and should help better understand this content.
+
 ## BigQuery Tables and Views
 
 {% hint style="info" %}
@@ -357,7 +359,7 @@ The following tables contain NLST specific metadata. The detailed schema of thos
 Storage Buckets are basic containers in Google Cloud Storage and AWS S3 that provide storage for data objects (you can read more about the relevant terms in the Google Cloud Storage documentation [here](https://cloud.google.com/storage/docs/key-terms) and in S3 [here](https://aws.amazon.com/s3/)).
 {% endhint %}
 
-All IDC DICOM file data for all IDC data versions across all of the [collections hosted by IDC](https://imaging.datacommons.cancer.gov/collections/) are maintained in Google Cloud Storage (GCS) and AWS S3 (S3). Currently all DICOM files are maintained in buckets that allow for free egress within or out of the cloud. This is enabled through the partnership of IDC with [Google Public Data Program](https://console.cloud.google.com/marketplace/product/gcp-public-data-idc/nci-idc-data) and the [AWS Open Data Sponsorship Program](https://registry.opendata.aws/nci-imaging-data-commons/).
+All IDC DICOM file data for all IDC data versions across all of the [collections hosted by IDC](https://imaging.datacommons.cancer.gov/collections/) are maintained in Google Cloud Storage (GCS) and AWS S3 (S3) buckets. Currently all DICOM files are maintained in buckets that allow for free egress within or out of the cloud. This is enabled through the partnership of IDC with [Google Public Data Program](https://console.cloud.google.com/marketplace/product/gcp-public-data-idc/nci-idc-data) and the [AWS Open Data Sponsorship Program](https://registry.opendata.aws/nci-imaging-data-commons/).
 
 {% hint style="warning" %}
 Note that only (versions of) DICOM instances have associated files (as discussed in [DICOM Data Model](../../dicom/data-model.md). There are no per-series or per-study files.
