@@ -1,8 +1,14 @@
 # Visualizing images
 
-{% hint style="info" %}
-In the following we describe the capabilities of IDC-maintained viewer instances that can be used with the data hosted by IDC. If you would like to deploy your own instance of the viewer to be used with your data on GCP, please check out [this tutorial](https://tinyurl.com/idc-ohif-gcp)!
-{% endhint %}
+In the following section we describe the capabilities of IDC-maintained viewer instances that can be used with the data hosted by IDC.&#x20;
+
+If you want to visualize your own images, or if you would like to combine IDC images with the analysis results or annotations you generated, you do have several options:
+
+* You can use Google FireCloud to deploy [OHIF](https://github.com/OHIF/Viewers) v2 radiology or [Slim](https://github.com/ImagingDataCommons/slim) microscopy viewers as web applications, without having to use virtual machines or docker, and for free!
+  * [OHIF FireCloud deployment tutorial](https://tinyurl.com/idc-ohif-gcp)
+  * [Slim FireCloud deployment tutorial](https://tinyurl.com/idc-slim-gcp)
+* If you want to visualize images inside a Colab/Jupyter notebook - you can use [itkWidgets](https://github.com/InsightSoftwareConsortium/itkwidgets) - details in [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part3\_exploring\_cohorts.ipynb)
+* You can use open source [VolView](https://volview.kitware.com/) zero-footprint viewer to visualize and volume render any image series by simply pointing it to the cloud bucket with the files - see details in [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part3\_exploring\_cohorts.ipynb)
 
 ## IDC Viewer overview
 
