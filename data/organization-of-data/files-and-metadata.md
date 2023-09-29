@@ -1,5 +1,9 @@
 # Files and metadata
 
+{% hint style="info" %}
+We gratefully acknowledge [Google Public Data Program](https://console.cloud.google.com/marketplace/product/bigquery-public-data/nci-idc-data) and the [AWS Open Data Sponsorship Program](https://registry.opendata.aws/nci-imaging-data-commons/) that support public hosting of IDC-curated content, and cover out-of-cloud egress fees!
+{% endhint %}
+
 Let's start with the overall principles of how we organize data in IDC.
 
 IDC brings you (as of v16) over 45 TB of publicly available DICOM images and image-derived content. We share those with you as DICOM files, and those DICOM files are available in cloud-based **storage buckets** - both in Google and AWS.&#x20;
@@ -7,7 +11,7 @@ IDC brings you (as of v16) over 45 TB of publicly available DICOM images and ima
 Sharing just the files, however, is not particularly helpful. With that much data, it is no longer practical to just download all of those files to later sort through them to select those you need.&#x20;
 
 {% hint style="success" %}
-Think of IDC as a library, where each file is a book. With that many books, it is no feasible to read them all, or even open each one to understand what is inside. Libraries are of little use without a catalog! &#x20;
+Think of IDC as a library, where each file is a book. With that many books, it is not feasible to read them all, or even open each one to understand what is inside. Libraries are of little use without a catalog! &#x20;
 {% endhint %}
 
 To provide you with a catalog of our data, along with the files, we maintain _metadata_ that makes it possible to understand what is contained within files, and select the files that are of interest for your project, so that you can download just the files you need. We make that metadata available in **BigQuery tables** searchable using standard SQL.
@@ -20,7 +24,7 @@ In the following we describe organization of both the metadata catalog and the b
 Google [BigQuery (BQ)](https://cloud.google.com/bigquery) is a massively-parallel analytics engine ideal for working with tabular data. Data stored in BQ can be accessed using [standard SQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql) queries.
 {% endhint %}
 
-IDC utilizes BigQuery tables to organize metadata accompanying the files we host. If you have never worked with BigQuery before, you need to understand the basics of data organization in BigQuery (BQ).&#x20;
+IDC utilizes BigQuery tables to organize metadata accompanying the files we host. If you have never worked with BigQuery before, you need to understand the basics of data organization in BQ.&#x20;
 
 BQ **tables** are organized in BQ **datasets**. BQ datasets are not unlike folders on your computer, but contain tables related to each other instead of files. BQ datasets, in turn, are organized under Google Cloud **projects**. GCP projects can be thought of as containers that are managed by a particular organization. To continue with the file system analogy, think about projects as hard drives that contain folders.
 
@@ -38,7 +42,7 @@ All of the IDC tables are organized into datasets by data release version. If yo
 
 Following the prefix, you will find the number that corresponds to the IDC data release version. IDC data releases version numbers start from 1 and are incremented by one for each subsequent release. As of writing this, the most recent version of IDC is 16, and you can find dataset `idc_v16` corresponding to this version.
 
-In addition to `idc_v16` you will find a dataset named `idc_v16_clinical`. That dataset contains clinical data accompanying IDC collections. We started clinical data ingestion in IDC v11. If you want to learn more about the organization and searching of clinical data, take a look at our [Clinical data introduction notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/clinical\_data\_intro.ipynb)!
+In addition to `idc_v16` you will find a dataset named `idc_v16_clinical`. That dataset contains clinical data accompanying IDC collections. We started clinical data ingestion in IDC v11. If you want to learn more about the organization and searching of clinical data, take a look at the [clinical data documentation](clinical.md).
 
 Finally, you will also see two special datasets: `idc_current` and `idc_current_clinical`. Those two datasets are essentially aliases, or links, to the versioned datasets corresponding to the latest release of IDC data.&#x20;
 
@@ -81,7 +85,7 @@ IDC utilizes the standard capabilities of the Google Healthcare API to extract a
 
 Sequence DICOM attributes, however,  may have content that is highly variable across different DICOM instances (especially in Structured Reports). Those attributes will map to [`STRUCT` BQ SQL type](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#struct\_type), and it is not unusual to see drastic differences in the corresponding columns of the table between different releases.
 
-`dicom_metadata` to conduct detailed explorations of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. Note that the `dicom_all` table, described below, is probably a better choice for such explorations.&#x20;
+`dicom_metadata` can be used to conduct detailed explorations of the metadata content, and build cohorts using fine-grained controls not accessible from the IDC portal. Note that the `dicom_all` table, described below, is probably a better choice for such explorations.&#x20;
 
 {% hint style="warning" %}
 Due to the existing limitations of Google Healthcare API, not all of the DICOM attributes are extracted and are available in BigQuery tables. Specifically:
