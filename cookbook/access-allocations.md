@@ -2,7 +2,7 @@
 
 [Advanced Cyberinfrastructure Coordination Ecosystem (ACCESS)](https://access-ci.org/) is a program supported by the US National Science Foundation (NSF) to provide educators with **free** and convenient access to advanced computational resources.
 
-If you have a university email account, you can complete a relatively easy application process to receive an allocation of free credits that you can then use to create pre-configured GPU-enabled cloud-based linux virtual machines with desktop interface available via browser. You can use those machines, for example, to have a convenient access to an instance of 3D Slicer for experimenting with AI models, or for training DL networks.
+If you have a university email account, you can complete a relatively easy application process to receive an allocation of free credits that you can then use to create pre-configured GPU-enabled cloud-based linux virtual machines with desktop interface available via browser. You can use those machines, for example, to have a convenient access to an instance of [3D Slicer](https://www.slicer.org/) for experimenting with AI models, or for training DL networks.
 
 <figure><img src="../.gitbook/assets/image.png" alt="" width="319"><figcaption><p>Example of the configurations available for the Ubuntu 22.04 base image</p></figcaption></figure>
 
