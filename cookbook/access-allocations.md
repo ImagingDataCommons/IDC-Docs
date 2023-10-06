@@ -15,7 +15,7 @@ Follow these steps:
 3. Once you get the SU’s you can access JetStream interface to configure and create VMs here: [https://jetstream2.exosphere.app/](https://jetstream2.exosphere.app/) (you can lean more about available configurations from this documentation page: [https://docs.jetstream-cloud.org/general/vmsizes/](https://docs.jetstream-cloud.org/general/vmsizes/)).
 4. Once you created a VM and your setup is complete, it’s very easy to connect to your VMs through ssh or Web desktop interface.&#x20;
 
-## Observations based on our experience
+## Why we recommend ACCESS allocations
 
 * **It is free to educators!**
 * **Very easy to set up.** As of writing, there is no similar product available from Google Cloud, which would provide desktop access to a VM with a comparable ease of access. AWS provides [AppStream2](https://aws.amazon.com/appstream2/), but we have yet to experiment to evaluate it.
