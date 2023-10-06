@@ -79,6 +79,7 @@
 * [Data Studio](cookbook/data-studio/README.md)
   * [Dashboard for your cohort](cookbook/data-studio/cohort-dashboard.md)
   * [More dashboard examples](cookbook/data-studio/more-dashboard-examples.md)
+* [ACCESS allocations](cookbook/access-allocations.md)
 * [Compute engine](cookbook/virtual-machines/README.md)
   * [3D Slicer desktop VM](cookbook/virtual-machines/idc-desktop.md)
   * [Using a BQ Manifest to Load DICOM Files onto a VM](cookbook/virtual-machines/using-a-bq-manifest-to-load-dicom-files-onto-a-vm.md)

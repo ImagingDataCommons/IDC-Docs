@@ -38,7 +38,7 @@ All of the IDC tables are stored under the `bigquery-public-data` project. That 
 
 All of the IDC tables are organized into datasets by data release version. If you complete the tutorial mentioned above, open the BQ console, and scroll down the list of datasets, you will find those that are named starting with the `idc_v` prefix - those are IDC datasets.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="309"><figcaption><p>Some of the BigQuery datasets curated by IDC.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="309"><figcaption><p>Some of the BigQuery datasets curated by IDC.</p></figcaption></figure>
 
 Following the prefix, you will find the number that corresponds to the IDC data release version. IDC data releases version numbers start from 1 and are incremented by one for each subsequent release. As of writing this, the most recent version of IDC is 16, and you can find dataset `idc_v16` corresponding to this version.
 
@@ -60,7 +60,7 @@ BQ views can be very handy when you want to simplify your queries by factoring o
 
 As we will discuss further, most of the tables maintained by IDC are created by joining and/or post-processing other tables. Because of this we rely heavily on BQ views to improve transparency of the provenance of those "derived" tables. BQ views can be easily distinguished from the tables in a given dataset by a different icon. IDC datasets also follow a convention that all views in the versioned datasets include suffix `_view` in the name, and are accompanied by the result of running the query used by the view in a table that has the same name _sans_ the `_view` suffix. See the figure below for an illustration of this convention.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>In this example, <code>dicom_all_view</code> is a BQ view, as indicated by the icon to the left from the table name. <code>dicom_all</code> table is the result of running the query that defines the <code>dicom_all_view</code>. </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>In this example, <code>dicom_all_view</code> is a BQ view, as indicated by the icon to the left from the table name. <code>dicom_all</code> table is the result of running the query that defines the <code>dicom_all_view</code>. </p></figcaption></figure>
 
 If you are ever curious (and you should be, at least once in a while!) about the queries behind individual views, you can click on the view in the BQ console, and see the query in the "Details" tab. Try this out yourself to check the query for [`dicom_all_view`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\_view\&page=table)
 
