@@ -8,6 +8,7 @@
 * [Key pointers](idc-key-pointers.md)
 * [Publications](publications.md)
 * [IDC team](idc-team.md)
+* [Acknowledgments](acknowledgments.md)
 
 ## Introduction
 
