@@ -23,4 +23,4 @@ Follow these steps:
   * it takes about 1 hour to build Slicer application from scratch on a medium-sized VM using 7 threads
   * it took \~7 days and \~5000 SUs to train the model in [this repository](https://github.com/pieper/nnmouse) (see summary in the slides [here](https://docs.google.com/presentation/d/1zlTCcGPwYRzuZnXhJ3RHJ7\_AQM4Nr8aU8Me1A6TQJjM/edit?usp=sharing)) using `g3.large` VM configuration
 * **Geared to help you save!** Unlike the VMs you get from the commercial providers, JetStream VMs can be _shelved._ Once a VM is shelved, you spend zero SUs for keeping it around (in comparison, you will keep paying for the disk storage of your GCP VMs even when they are turned off).
-* **Customer support is excellent!** We received responses within 1-2 days. On some occasions, we observed glitches with Web Desktop, but those could often be resolved by restarting the sequence.
+* **Customer support is excellent!** We received responses within 1-2 days. On some occasions, we observed glitches with Web Desktop, but those could often be resolved by restarting the VM.
