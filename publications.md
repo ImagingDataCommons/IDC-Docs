@@ -8,6 +8,7 @@
 4. Bridge, C. P., Gorman, C., Pieper, S., Doyle, S. W., Lennerz, J. K., Kalpathy-Cramer, J., Clunie, D. A., Fedorov, A. Y. & Herrmann, M. D. Highdicom: a Python Library for Standardized Encoding of Image Annotations and Machine Learning Model Outputs in Pathology and Radiology. _J. Digit. Imaging_ 35, 1719–1737 (2022). [http://dx.doi.org/10.1007/s10278-022-00683-y](http://dx.doi.org/10.1007/s10278-022-00683-y)
 5. Krishnaswamy, D., Bontempi, D., Thiriveedhi, V., Punzo, D., Clunie, D., Bridge, C. P., Aerts, H. J., Kikinis, R. & Fedorov, A. Enrichment of the NLST and NSCLC-Radiomics computed tomography collections with AI-derived annotations. arXiv \[cs.CV] (2023). at <[http://arxiv.org/abs/2306.00150](http://arxiv.org/abs/2306.00150)>
 6. Bontempi, D., Nuernberg, L., Krishnaswamy, D., Hosny, A., Farahani, K., Kikinis, R., Fedorov, A. & Aerts, H. J. Transparent and reproducible AI-based medical imaging pipelines using the cloud. _Research Square_ (2023). [https://dx.doi.org/10.21203/rs.3.rs-3142996/v1](https://dx.doi.org/10.21203/rs.3.rs-3142996/v1)
+7. Schacherer, D. P., Herrmann, M. D., Clunie, D. A., Höfener, H., Clifford, W., Longabaugh, W. J. R., Pieper, S., Kikinis, R., Fedorov, A. & Homeyer, A. The NCI Imaging Data Commons as a platform for reproducible research in computational pathology. _Comput. Methods Programs Biomed._ 107839 (2023). doi:[10.1016/j.cmpb.2023.107839](https://dx.doi.org/10.1016/j.cmpb.2023.107839)
 
 ## Publications referencing IDC (a subset)
 
