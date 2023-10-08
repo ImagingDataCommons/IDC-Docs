@@ -8,7 +8,7 @@ You can contact IDC support by sending email to [<mark style="color:blue;">suppo
 **“IDC Community Office Hours”** take place weekly on Google Meet at [https://meet.google.com/xyt-vody-tvb](https://meet.google.com/xyt-vody-tvb) **every Tuesday 16:30 – 17:30 (New York) and Wednesday 10:30-11:30 (New York)**. Join us to find answers to any questions you might have about IDC!
 {% endhint %}
 
-**NCI Imaging Data Commons** **(IDC)** is a cloud-based repository of publicly available cancer imaging data co-located with analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.&#x20;
+**NCI Imaging Data Commons** **(IDC)** is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.&#x20;
 
 IDC maintains data and makes it available for download (free egress) both in the Google GCP and Amazon AWS clouds.
 
