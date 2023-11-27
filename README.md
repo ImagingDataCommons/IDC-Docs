@@ -22,9 +22,5 @@ IDC **connects** researchers with&#x20;
 {% hint style="info" %}
 The overview of IDC is available in this open access publication. If you use IDC, please acknowledge us by citing it!
 
-> Fedorov, A., Longabaugh, W. J. R., Pot, D., Clunie, D. A., Pieper, S., Aerts, H. J. W. L., Homeyer, A., Lewis, R., Akbarzadeh, A., Bontempi, D., Clifford, W., Herrmann, M. D., Höfener, H., Octaviano, I., Osborne, C., Paquette, S., Petts, J., Punzo, D., Reyes, M., Schacherer, D. P., Tian, M., White, G., Ziegler, E., Shmulevich, I., Pihl, T., Wagner, U., Farahani, K. & Kikinis, R. NCI Imaging Data Commons. Cancer Res. **81,** 4188–4193 (2021). [http://dx.doi.org/10.1158/0008-5472.CAN-21-0950](http://dx.doi.org/10.1158/0008-5472.CAN-21-0950)
-
-You can also review the accompanying [demonstration videos](https://www.youtube.com/playlist?list=PLhawVWNiPvwb2H0D9UTOIL23bc5DuDJRu) for a quick summary of some of the key features of the platform.
+> Fedorov, A., Longabaugh, W. J. R., Pot, D., Clunie, D. A., Pieper, S. D., Gibbs, D. L., Bridge, C., Herrmann, M. D., Homeyer, A., Lewis, R., Aerts, H. J. W., Krishnaswamy, D., Thiriveedhi, V. K., Ciausu, C., Schacherer, D. P., Bontempi, D., Pihl, T., Wagner, U., Farahani, K., Kim, E. & Kikinis, R. _National Cancer Institute Imaging Data Commons: Toward Transparency, Reproducibility, and Scalability in Imaging Artificial Intelligence_. RadioGraphics (2023). [https://doi.org/10.1148/rg.230180](https://doi.org/10.1148/rg.230180)
 {% endhint %}
-
-{% embed url="https://youtu.be/P9ateg9ZUEs" %}
