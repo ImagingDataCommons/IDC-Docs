@@ -10,6 +10,44 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## v17 - December 2023
+
+New radiology collections
+
+1. [CMB-AML](https://doi.org/10.7937/PCTE-6M66)
+2. [CT-Phantom4Radiomics](https://doi.org/10.7937/a1v1-rc66)
+3. [EA1141](https://doi.org/10.7937/2BAS-HR33)
+4. [ReMIND](https://doi.org/10.7937/3RAG-D070)
+5. [Vestibular-Schwannoma-MC-RC](https://doi.org/10.7937/HRZH-2N82)
+
+New analysis results
+
+1. [BAMF-AIMI-Annotations](https://doi.org/10.5281/zenodo.10081112)\*
+2. [Prostate-MRI-US-Biopsy-DICOM-Annotations](https://doi.org/10.5281/zenodo.10069911)\*\*
+
+Revised radiology collections\
+(starred collections were revised due to new analysis results)
+
+1. [ACRIN-NSCLC-FDG-PET\*Anti-PD-1-Lung](https://doi.org/10.7937/tcia.2019.30ilqfcl)\*
+2. [CMB-CRC](https://doi.org/10.7937/DJG7-GZ87)
+3. [CMB-GEC](https://doi.org/10.7937/E7KH-R486)
+4. [CMB-LCA](https://doi.org/10.7937/3CX3-S132)
+5. [CMB-MEL](https://doi.org/10.7937/GWSP-WH72)
+6. [CMB-MML](https://doi.org/10.7937/SZKB-SW39)
+7. [CMB-PCA](https://doi.org/10.7937/25T7-6Y12)
+8. [CPTAC-CCRCC](https://doi.org/10.7937/K9/TCIA.2018.OBLAMN27)
+9. [CPTAC-PDA](https://doi.org/10.7937/K9/TCIA.2018.SC20FO18)
+10. [LUNG-PET-CT-Dx](https://doi.org/10.7937/TCIA.2020.NNC2-0461)\*
+11. [NSCLC Radiogenomics](https://doi.org/10.7937/K9/TCIA.2017.7hs46erv)\*
+12. [Prostate-MRI-US-Biopsy](https://doi.org/10.7937/TCIA.2020.A61IOC1A)\*\*
+13. [ProstateX](https://doi.org/10.7937/K9TCIA.2017.MURS5CL)\*
+14. [QIN-Breast](https://doi.org/10.7937/K9/TCIA.2016.21JUebH0)\*
+15. [RIDER Lung PET-CT](https://doi.org/10.7937/K9/TCIA.2015.OFIP7TVM)\*
+16. [TCGA-KIRC](https://doi.org/10.7937/K9/TCIA.2016.V6PBVTDR)\*
+17. [TCGA-LIHC](https://doi.org/10.7937/K9/TCIA.2016.IMMQW8UQ)\*
+18. [TCGA-LUAD](https://doi.org/10.7937/K9/TCIA.2016.JGNIHEP5)\*
+19. [TCGA-LUSC](https://doi.org/10.7937/K9/TCIA.2016.TYGKKFMQ)\*
+
 ## v16 - September 2023
 
 New radiology collections
@@ -29,7 +67,7 @@ Revised radiology collections
 
 New analysis results
 
-1. [CPTAC-CRCC-Tumor-Annotations ](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=157288300)
+1. [CPTAC-CRCC-Tumor-Annotations](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=157288300)
 2. [CPTAC-UCEC-Tumor-Annotations](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=157288358)
 3. [CPTAC-PDA-Tumor-Annotations](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=157288334)
 
@@ -56,7 +94,6 @@ New clinical metadata tables
 19. [rms\_mutation\_prediction\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rms\_mutation\_prediction)
 20. [rms\_mutation\_prediction\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rms\_mutation\_prediction)
 21. [rms\_mutation\_prediction\_sample](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rms\_mutation\_prediction)
-
 
 ## v15 - July 2023
 
