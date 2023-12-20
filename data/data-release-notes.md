@@ -14,56 +14,60 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 New radiology collections
 
-1. [CMB-AML](https://doi.org/10.7937/PCTE-6M66)
-2. [CT-Phantom4Radiomics](https://doi.org/10.7937/a1v1-rc66)
-3. [EA1141](https://doi.org/10.7937/2BAS-HR33)
-4. [ReMIND](https://doi.org/10.7937/3RAG-D070)
-5. [Vestibular-Schwannoma-MC-RC](https://doi.org/10.7937/HRZH-2N82)
+1. [CMB-AML](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CMB\&collection\_id=cmb\_aml)
+2. [CT-Phantom4Radiomics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=ct\_phantom4radiomics)
+3. [EA1141](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=ea1141)
+4. [ReMIND](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=remind)
+5. [Vestibular-Schwannoma-MC-RC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=vestibular\_schwannoma\_mc\_rc)
 
 New analysis results
 
-1. [BAMF-AIMI-Annotations](https://doi.org/10.5281/zenodo.10081112)\*
-2. [Prostate-MRI-US-Biopsy-DICOM-Annotations](https://doi.org/10.5281/zenodo.10069911)\*\*
+1.  [BAMF-AIMI-Annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=BAMF-AIMI-Annotations)
 
-Revised radiology collections\
-(starred collections were revised due to new analysis results)
+    Collections analyzed:
 
-1. [ACRIN-NSCLC-FDG-PET\*Anti-PD-1-Lung](https://doi.org/10.7937/tcia.2019.30ilqfcl)\*
-2. [CMB-CRC](https://doi.org/10.7937/DJG7-GZ87)
-3. [CMB-GEC](https://doi.org/10.7937/E7KH-R486)
-4. [CMB-LCA](https://doi.org/10.7937/3CX3-S132)
-5. [CMB-MEL](https://doi.org/10.7937/GWSP-WH72)
-6. [CMB-MML](https://doi.org/10.7937/SZKB-SW39)
-7. [CMB-PCA](https://doi.org/10.7937/25T7-6Y12)
-8. [CPTAC-CCRCC](https://doi.org/10.7937/K9/TCIA.2018.OBLAMN27)
-9. [CPTAC-PDA](https://doi.org/10.7937/K9/TCIA.2018.SC20FO18)
-10. [LUNG-PET-CT-Dx](https://doi.org/10.7937/TCIA.2020.NNC2-0461)\*
-11. [NSCLC Radiogenomics](https://doi.org/10.7937/K9/TCIA.2017.7hs46erv)\*
-12. [Prostate-MRI-US-Biopsy](https://doi.org/10.7937/TCIA.2020.A61IOC1A)\*\*
-13. [ProstateX](https://doi.org/10.7937/K9TCIA.2017.MURS5CL)\*
-14. [QIN-Breast](https://doi.org/10.7937/K9/TCIA.2016.21JUebH0)\*
-15. [RIDER Lung PET-CT](https://doi.org/10.7937/K9/TCIA.2015.OFIP7TVM)\*
-16. [TCGA-KIRC](https://doi.org/10.7937/K9/TCIA.2016.V6PBVTDR)\*
-17. [TCGA-LIHC](https://doi.org/10.7937/K9/TCIA.2016.IMMQW8UQ)\*
-18. [TCGA-LUAD](https://doi.org/10.7937/K9/TCIA.2016.JGNIHEP5)\*
-19. [TCGA-LUSC](https://doi.org/10.7937/K9/TCIA.2016.TYGKKFMQ)\*
+    1. [ACRIN-NSCLC-FDG-PET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=acrin\_nsclc\_fdg\_pet)
+    2. [Anti-PD-1-Lung](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=anti\_pd\_1\_lung)
+    3. [LUNG-PET-CT-Dx](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=lung\_pet\_ct\_dx)
+    4. [NSCLC Radiogenomics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=nsclc\_radiogenomics)
+    5. [ProstateX](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=prostatex)
+    6. [QIN-Breast](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=QIN\&collection\_id=qin\_breast)
+    7. [RIDER Lung PET-CT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=RIDER\&collection\_id=rider\_lung\_pet\_ct)
+    8. [TCGA-KIRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=TCGA\&collection\_id=tcga\_kirc)
+    9. [TCGA-LIHC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=TCGA\&collection\_id=tcga\_lihc)
+    10. [TCGA-LUAD](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=TCGA\&collection\_id=tcga\_luad)
+    11. [TCGA-LUSC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=TCGA\&collection\_id=tcga\_lusc)
+2. [Prostate-MRI-US-Biopsy-DICOM-Annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=Prostate-MRI-US-Biopsy-DICOM-Annotations)\
+   Collections analyzed:
+   1. [Prostate-MRI-US-Biopsy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=prostate\_mri\_us\_biopsy)
+
+Revised radiology collections
+
+1. [CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CMB\&collection\_id=cmb\_crc)
+2. [CMB-GEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CMB\&collection\_id=cmb\_cgec)
+3. [CMB-LCA](https://doi.org/10.7937/3CX3-S132)
+4. [CMB-MEL](https://doi.org/10.7937/GWSP-WH72)
+5. [CMB-MML](https://doi.org/10.7937/SZKB-SW39)
+6. [CMB-PCA](https://doi.org/10.7937/25T7-6Y12)
+7. [CPTAC-CCRCC](https://doi.org/10.7937/K9/TCIA.2018.OBLAMN27)
+8. [CPTAC-PDA](https://doi.org/10.7937/K9/TCIA.2018.SC20FO18)
 
 ## v16 - September 2023
 
 New radiology collections
 
-1. [PDMR-Texture-Analysis](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=PDMR\&collection\_id=pdmr\_texture\_analysis)
+1. [PDMR-Texture-Analysis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=PDMR\&collection\_id=pdmr\_texture\_analysis)
 
 New pathology collections
 
-1. [RMS-Mutation-Prediction](https://dev-portal.canc=ccdieridc.dev/explore/filters/?collection\_id=CCDI\&collection\_id=rms\_mutation\_prediction)
+1. [RMS-Mutation-Prediction](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CCDI\&collection\_id=rms\_mutation\_prediction)
 
 Revised radiology collections
 
-1. [Breast-MRI-NACT-Pilot](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=Community\&collection\_id=breast\_mri\_nact\_pilot) (TCIA description: (Repair of DICOM tag(0008,0005) to value "ISO\_IR 100" in 79 series)
-2. [CPTAC-CRCC](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_crcc) (Revised because results from CPTAC-CRCC-Tumor-Annotations were added)
-3. [CPTAC-UCEC](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_ucec) (Revised because results from CPTAC-UCEC-Tumor-Annotations were added)
-4. [CPTAC-PDA](https://dev-portal.canceridc.dev/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_pda) (Revised because results from CPTAC-PDA-Tumor-Annotations were added)
+1. [Breast-MRI-NACT-Pilot](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=breast\_mri\_nact\_pilot) (TCIA description: (Repair of DICOM tag(0008,0005) to value "ISO\_IR 100" in 79 series)
+2. [CPTAC-CRCC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_crcc) (Revised because results from CPTAC-CRCC-Tumor-Annotations were added)
+3. [CPTAC-UCEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_ucec) (Revised because results from CPTAC-UCEC-Tumor-Annotations were added)
+4. [CPTAC-PDA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_pda) (Revised because results from CPTAC-PDA-Tumor-Annotations were added)
 
 New analysis results
 
