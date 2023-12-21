@@ -8,6 +8,13 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+
+## 17.0 December 19, 2023 (canceridc.202312191019.53f66ba)
+Main highlights of this release include:
+
+* add a choice of several viewers (OHIF v2, OHIF v3, VolView, Slim) for viewing image files
+
+
 ## 16.0 September 15, 2023 (canceridc.202309151254.a6dfd6a)
 Main highlights of this release include:
 

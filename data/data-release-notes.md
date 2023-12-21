@@ -52,6 +52,26 @@ Revised radiology collections
 7. [CPTAC-CCRCC](https://doi.org/10.7937/K9/TCIA.2018.OBLAMN27)
 8. [CPTAC-PDA](https://doi.org/10.7937/K9/TCIA.2018.SC20FO18)
 
+New clinical metadata tables
+
+1. [ea1141\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+2. [ea1141\_mri](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141) 
+3. [ea1141\_risk\_model](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+4. [ea1141\_screening](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+5. [ea1141\_status\_12mo](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+6. [ea1141\_status\_6mo](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+7. [ea1141\_tomosynthesis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+8. [htan\_ohsu\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_ohsu)
+9. [htan\_vanderbilt\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+10. [htan\_vanderbilt\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+11. [htan\_vanderbilt\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+12. [htan\_vanderbilt\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+13. [htan\_vanderbilt\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+14. [htan\_vanderbilt\_moleculartest](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+15. [htan\_vanderbilt\_therapy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+16. [remind\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=remind)
+ 
+
 ## v16 - September 2023
 
 New radiology collections
