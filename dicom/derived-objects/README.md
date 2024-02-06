@@ -4,19 +4,19 @@
 Make sure you complete IDC ["Getting started" tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started) notebooks to get introduced into IDC data organization, download, visualization and other first-order topics.
 {% endhint %}
 
-In this section we discuss derived DICOM objects, including annotations, that are stored in IDC. It is important to recognize that in practice annotations are often shared in non-standard formats. When IDC ingests a dataset where annotations are available in such a non-standard representation,  those need to be harmonized into a suitable DICOM object to be available in IDC. Due to the complexity of this task, we are unable to perform such harmonization for all of the datasets. If you want to check if there are annotations in non-DICOM format available for a given collection, you should locate the original source of the data, and examine the accompanying documentation for available non-DICOM annotations.
+In this section we discuss derived DICOM objects, including annotations, that are stored in IDC. It is important to recognize that, in practice, annotations are often shared in non-standard formats. When IDC ingests a dataset where annotations are available in such a non-standard representation, those need to be harmonized into a suitable DICOM object to be available in IDC. Due to the complexity of this task, we are unable to perform such harmonization for all of the datasets. If you want to check if there are annotations in non-DICOM format available for a given collection, you should locate the original source of the data, and examine the accompanying documentation for available non-DICOM annotations.
 
-As an example, [Breast-Cancer-Screening-DBT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=breast\_cancer\_screening\_dbt) collection is available in IDC. If you mouse over the name of that collection in the IDC Portal, the tooltip will provide the overview of the collection and the link to the source.
+As an example, the [Breast-Cancer-Screening-DBT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=breast\_cancer\_screening\_dbt) collection is available in IDC. If you mouse over the name of that collection in the IDC Portal, the tooltip will provide the overview of the collection and the link to the source.
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (2) (2).png>)
 
 You will also find the link to the source in the [list of collections available in IDC](https://portal.imaging.datacommons.cancer.gov/collections/).
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (2).png>)
 
-Finally, if you select data using SQL, you can use the `source_DOI` column to identify the source of each file in the subset you selected (lean more about `source_DOI`, licenses and attribution in the part 3 of our [Getting started tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started)).
+Finally, if you select data using SQL, you can use the `source_DOI` and/or the source\_URL column to identify the source of each file in the subset you selected (learn more about `source_DOI`, licenses and attribution in the part 3 of our [Getting started tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started)).
 
-For the collection in question, the source DOI is [https://doi.org/10.7937/e4wt-cd02](https://doi.org/10.7937/e4wt-cd02), and examining that page you will see a pointer to the CSV file with the coordinates of the bounding boxes defining regions containing lesions.
+For the collection in question, the source DOI is [https://doi.org/10.7937/e4wt-cd02](https://doi.org/10.7937/e4wt-cd02), and on examining that page you will see a pointer to the CSV file with the coordinates of the bounding boxes defining regions containing lesions.
 
 Non-standard annotations are not searchable, usually are not possible to visualize in off-the-shelf tools, and require custom code to interpret and parse. The situation is different for the DICOM derived objects that we discuss in the following sections.
 
