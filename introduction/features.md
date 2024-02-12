@@ -5,7 +5,7 @@ The following components and capabilities are being developed by IDC:
 * [Cloud-hosted imaging data collections](../data/introduction.md)
 * [Search and cohort building portal](../portal/getting-started.md) (IDC Portal)
 * Visualization of the hosted imaging data supported by the integrated [OHIF Viewer](https://github.com/OHIF/Viewers) (radiology data) and [SliM viewer](https://github.com/MGHComputationalPathology/slim) (digital pathology data)
-* [Application Programming Interface (API)](../api/getting-started.md) to support programmatic use of the IDC functionality
+* [Application Programming Interface (API)](../api-1/getting-started.md) to support programmatic use of the IDC functionality
 * [Interactive self-guided tutorials](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started) to help you get started
 
 IDC is being built utilizing the Google Cloud Platform (GCP) as the foundation. We use a range of products developed by GCP, most notably Google Healthcare, to implement the capabilities listed above. We discuss the role of the major GCP components used by IDC in [this section](google-cloud-platform/).

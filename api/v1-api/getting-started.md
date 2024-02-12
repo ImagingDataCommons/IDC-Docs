@@ -1,8 +1,6 @@
 # Getting Started
 
-This section describes version 2 of the IDC REST API . The documentation for the version 1 API will be found [here](broken-reference).
-
-This API is designed for use by developers of image analysis and data mining tools to directly query the public resources of the IDC and retrieve information into their applications. The API complements the IDC web application but eliminates the need for users to visit the IDC web pages to perform cohort creation, manifest export, and transfer of image data to some local file system.
+This section describes v1 of the IDC REST API . This API is designed for use by developers of image analysis and data mining tools to directly query the public resources of the IDC and retrieve information into their applications. The API complements the IDC web application but eliminates the need for users to visit the IDC web pages to perform cohort creation, manifest export, and transfer of image data to some local file system.
 
 The IDC API conforms to the [OpenAPI 2.0](https://swagger.io/specification/) specification which "_defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection_."
 
@@ -18,4 +16,4 @@ The IDC API is intended to enable exploration of IDC hosted data without the nee
 
 [SwaggerUI](https://swagger.io/tools/swagger-ui/) is a web based interface that allows users to try out APIs and easily view their documentation. You can access the IDC API SwaggerUI [here](https://api.imaging.datacommons.cancer.gov/v1/swagger).
 
-This [Google Colab notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/idc\_api/How\_to\_use\_the\_IDC\_V2\_API.ipynb) serves as an interactive tutorial to accessing the IDC API using Python.
+This [Google Colab notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/idc\_api/How\_to\_Use\_the\_IDC\_API.ipynb) serves as an interactive tutorial to accessing the IDC API using Python.

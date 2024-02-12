@@ -1,0 +1,2230 @@
+# [START swagger]
+swagger: "2.0"
+info:
+  description: "IDC API Endpoints, version 2"
+  title: "IDC API"
+  version: "2.0"
+
+# Host for external deployment. ********Uncomment the following for deployment**********
+# Uncomment the following for dev
+#host: "dev-api.canceridc.dev"
+# Uncomment the following for test
+#host: "testing-api.canceridc.dev"
+# Uncomment the following for prod
+#host: "api.imaging.datacommons.cancer.gov"
+basePath: "/v2"
+# [END swagger]
+consumes:
+- "application/json"
+produces:
+- "application/json"
+- "application/xml"
+schemes:
+# ***********Uncomment https and comment http for deploymwnt***********
+#- "https"
+- "http"
+tags:
+  - name: about
+  - name: data model
+  - name: cohorts
+  - name: manifests
+  - name: users
+paths:
+  /about:
+    get:
+      tags:
+        - about
+      description: "Get links to the IDC API Swagger UI and IDC documentation"
+      operationId: "root-get"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "API Description and link to SwaggerUI interface."
+          schema:
+            $ref: "#/definitions/aboutResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /swagger:
+    get:
+      tags:
+        - about
+      description: "Swagger UI of the API spec"
+      operationId: "swaggerUI"
+      produces:
+        - "text/html"
+      responses:
+        200:
+          description: "Swagger UI of the API spec"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /oauth2callback:
+    get:
+      description: "OAuth2 Redirect URI"
+      operationId: "oauth2redirect"
+      produces:
+        - "text/html"
+      responses:
+        200:
+          description: "OAuth2 Redirect URI"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /versions:
+    get:
+      description: "Returns a list of IDC data versions and activation dates"
+      tags:
+        - data model
+      operationId: "getVersions"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A list of IDC data versions and metadata"
+          schema:
+            $ref: "#/definitions/versionsListResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /collections:
+    get:
+      description: "Returns a list of collections, and associated metadata, in the current IDC data version. "
+      tags:
+        - data model
+      operationId: "getCollections"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A list of collections"
+          schema:
+            $ref: "#/definitions/collectionsListResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /analysis_results:
+    get:
+      description: "Returns a list of the analysis results, and associated metadata, in the current IDC data version"
+      tags:
+        - data model
+      operationId: "getAnalysisResults"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A list of analysis results"
+          schema:
+            $ref: "#/definitions/analysisResultsListResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /filters:
+    get:
+      description: "Returns a list of 'filters', organized by data source (BQ table), for the current IDC data version. An IDC cohort is defined by a 'filterset', a set of (filter,[values]) pairs, and the IDC version against which the filterset is applied. The returned data is grouped by source (the BQ table that contains the corresponding filter values). For each filter, its data type and units, when available, are reported."
+      tags:
+        - data model
+      operationId: "getFilters"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A list of filters"
+          schema:
+            $ref: "#/definitions/filtersListResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /filters/values/{filter}:
+    get:
+      description: "Return a list of the values accepted for a 'categorical filter'. A categorical filter is a filter having a data type of 'Categorical String' or 'Categorical Number'. "
+      tags:
+        - data model
+      operationId: "getFilterValues"
+      produces:
+        - "application/json"
+      parameters:
+        - name: filter
+          in: path
+          description: "Categorical filter whose values are to be returned"
+          type: "string"
+          required: true
+      responses:
+        200:
+          description: "A list of accepted values"
+          schema:
+            $ref: "#/definitions/filterValues"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /fields:
+    get:
+      description: "Return a list of manifest fields for the current IDC data version"
+      tags:
+        - data model
+      operationId: "getFields"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A list of fields"
+          schema:
+            $ref: "#/definitions/fieldsListResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /cohorts:
+    get:
+      description: "Returns a list of the user's cohorts and associated metadata. Authorization is required in order to access this endpoint."
+      tags:
+        - cohorts
+      operationId: "getCohorts"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A list of the user's cohorts."
+          schema:
+            $ref: "#/definitions/cohortsListResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+      security:
+        - google_id_token: []
+
+    post:
+      description: "Create a cohort as defined by a specified 'filterset' and IDC version. Authorization is required in order to access this endpoint."
+      tags:
+        -   cohorts
+      operationId: "cohortCreate"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: body
+          name: "cohort_def"
+          required: true
+          description: "Filters, name, and description used to create this cohort."
+          schema:
+            $ref: "#/definitions/cohortSpec"
+      responses:
+        200:
+          description: "Summary information about the cohort created."
+          schema:
+            $ref: "#/definitions/cohortCreateResponse"
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/errorMessage"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+      security:
+        - google_id_token: []
+
+    delete:
+      description: "Delete a list of the user's cohorts. Authorization is required in order to access this endpoint."
+      tags:
+        -   cohorts
+      operationId: "cohortsDelete"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: body
+          name: "cohort_list"
+          required: true
+          description: "List of IDs of cohorts to be deleted."
+          schema:
+            $ref: "#/definitions/cohortIdList"
+      responses:
+        200:
+          description: "Summary of cohort deletion."
+          schema:
+            $ref: "#/definitions/cohortDeleteResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+      security:
+        - google_id_token: []
+
+  /cohorts/{cohort_id}:
+    delete:
+      description: "Delete a specified cohort. Authorization is required in order to access this endpoint."
+      tags:
+        -   cohorts
+      operationId: "cohortDelete"
+      produces:
+        - "application/json"
+      parameters:
+        - in: path
+          name: "cohort_id"
+          required: true
+          description: "ID of cohort to be deleted."
+          type: "integer"
+      responses:
+        200:
+          description: "A list of the user's remaining cohorts."
+          schema:
+            $ref: "#/definitions/cohortDeleteResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+      security:
+        - google_id_token: []
+
+
+  /cohorts/manifest/preview:
+    post:
+      description:  "Returns a manifest of a 'previewed cohort' as defined by a specified filterset. The filterset is always applied to the current IDC version. The metadata to be returned in the manifest is configurable. A previewed cohort is not saved in the user's IDC account."
+      tags:
+        - manifests
+      operationId: "cohortManifestPreview"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "manifestPreviewBody"
+          in: body
+          description: "Cohort definition and list of fields to query."
+          schema:
+            $ref: "#/definitions/manifestPreviewBody"
+          required: true
+      responses:
+        200:
+          description: "Preview cohort spec and manifest"
+          schema:
+            $ref: "#/definitions/manifestPreviewResponse"
+        202:
+          description: "Timeout waiting for BQ job to complete"
+          schema:
+            $ref: "#/definitions/timeoutResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /cohorts/manifest/{cohort_id}:
+    post:
+      description: "Returns a manifest of a cohort that was previously saved under the user's IDC account. The metadata to be returned in the manifest is configurable. Authorization is required in order to access this endpoint."
+      tags:
+        - manifests
+      operationId: "cohortManifest"
+      produces:
+        - "application/json"
+      parameters:
+        - name: cohort_id
+          in: path
+          description: "Numeric IDC Cohort ID"
+          type: integer
+          required: true
+        - name: manifestBody
+          in: body
+          description: "List of fields to return."
+          schema:
+            $ref: "#/definitions/manifestBody"
+          required: true
+      responses:
+        200:
+          description: "Cohort spec and anifest"
+          schema:
+            $ref: "#/definitions/manifestResponse"
+        202:
+          description: "Timeout waiting for BQ job to complete"
+          schema:
+            $ref: "#/definitions/timeoutResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+      security:
+        - google_id_token: []
+
+  /cohorts/manifest/preview/nextPage:
+    get:
+      description: "Returns the next page of a /cohorts/manifest/preview request, when additional data is available."
+      tags:
+        - manifests
+      operationId: "cohortManifestPreviewNextPage"
+      produces:
+        - "application/json"
+      parameters:
+        - name: next_page
+          in: query
+          description: "The next_page token returned by a previous access of the /cohorts/manifest/preview endpoint. The token identifies the next page to be retrieved"
+          type: "string"
+          required: true
+        - name: page_size
+          in: query
+          description: "The maximum number of rows to be returned. If the manifest  contains additional rows, another 'next_page' token is returned."
+          type: "integer"
+          required: false
+          default: 1000
+      responses:
+        200:
+          description: "Preview manifest page"
+          schema:
+            $ref: "#/definitions/manifestNextPageResponse"
+        202:
+          description: "Timeout waiting for BQ job to complete"
+          schema:
+            $ref: "#/definitions/timeoutResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+
+  /cohorts/manifest/nextPage:
+    get:
+      description: "Returns the next page of a /cohorts/manifest request, when additional data is available.  Authorization is required in order to access this endpoint."
+      tags:
+        - manifests
+      operationId: "cohortManifestNextPage"
+      produces:
+        - "application/json"
+      parameters:
+        - name: next_page
+          in: query
+          description: "The next_page token returned by a previous access of the /cohorts/manifest endpoint. The token identifies the next page to be retrieved"
+          type: "string"
+          required: true
+        - name: page_size
+          in: query
+          description: "The maximum number of rows to be returned. If the manifest contains additional rows, another 'next_page' token is returned."
+          type: "integer"
+          required: false
+          default: 1000
+      responses:
+        200:
+          description: "manifest page"
+          schema:
+            $ref: "#/definitions/manifestNextPageResponse"
+        202:
+          description: "Timeout waiting for BQ job to complete"
+          schema:
+            $ref: "#/definitions/timeoutResponse"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+      security:
+        - google_id_token: []
+
+  /users/account_details:
+    get:
+      description: "Retrieve user's account information. Authorization is required in order to access this endpoint."
+      tags:
+        -   users
+      operationId: "getUserAccountDetails"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Current account information for the validated user."
+          schema:
+            $ref: "#/definitions/accountDetailsResponse"
+        400:
+          description: "Invalid request error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+        403:
+          description: "Unauthorized. User not registered with the IDC web app"
+          schema:
+            $ref: "#/definitions/errorMessage"
+        500:
+          description: "Server error message"
+          schema:
+            $ref: "#/definitions/errorMessage"
+      security:
+        - google_id_token: []
+
+definitions:
+  aboutResponse:
+    type: "object"
+    properties:
+      message:
+        type: "string"
+      documentation:
+        type: "string"
+      code:
+        type: "integer"
+
+  versionsListResponse:
+    type: "object"
+    properties:
+      idc_data_versions:
+        type: "array"
+        items:
+          type: "object"
+          properties:
+            idc_data_version:
+              type: "string"
+            date_active:
+              type: "string"
+            active:
+              type: "string"
+      code:
+        type: "integer"
+
+  collectionsListResponse:
+    type: "object"
+    properties:
+      collections:
+        type: "array"
+        items:
+          $ref: "#/definitions/collectionMetadata"
+      code:
+        type: "integer"
+
+  analysisResultsListResponse:
+    type: "object"
+    properties:
+      analysisResults:
+        type: "array"
+        items:
+          $ref: "#/definitions/analysisResultsMetadata"
+      code:
+        type: "integer"
+
+  dataSetType:
+      type: "array"
+      items:
+        type: "string"
+        enum: ['Clinical, Biospecimen, and Mutation Data', 'Image Data', 'Derived Data']
+
+  data_source:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      data_type:
+        type: "string"
+        enum: ["Image Data", "Clinical, Biospecimen, and Mutation Data", "Derived Data"]
+
+  filtersListResponse:
+    type: "object"
+    properties:
+      idc_data_version:
+        type: "string"
+      data_sources:
+        type: "array"
+        items:
+          $ref: "#/definitions/data_source_filters"
+      code:
+        type: "integer"
+
+  data_source_filters:
+    type: "object"
+    properties:
+      data_source:
+        type: "string"
+      filters:
+        type: "array"
+        items:
+          $ref: "#/definitions/filter"
+
+  filter:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      data_type:
+        type: "string"
+        enum: ["CONTINUOUS_NUMERIC", "CATEGORICAL_NUMERIC", "CATEGORICAL_STRING", "TEXT", "STRING"]
+      units:
+        type: "string"
+
+  filterValues:
+    type: "object"
+    properties:
+      values:
+        type: "array"
+        items:
+          type: "string"
+
+  fieldsListResponse:
+    type: "object"
+    properties:
+      idc_data_version:
+        type: "string"
+      data_sources:
+        type: "array"
+        items:
+          $ref: "#/definitions/data_source_fields"
+      code:
+        type: "integer"
+
+  data_source_fields:
+    type: "object"
+    properties:
+      data_source:
+        type: "string"
+      fields:
+        type: "array"
+        items:
+          type: "string"
+
+  collectionMetadata:
+    type: "object"
+    properties:
+      collection_id:
+        type: "string"
+      cancer_type:
+        type: "string"
+      date_updated:
+        type: "string"
+      description:
+        type: "string"
+      source_doi:
+        type: "string"
+      source_url:
+        type: "string"
+      image_types:
+        type: "string"
+      location:
+        type: "string"
+      species:
+        type: "string"
+      subject_count:
+        type: "integer"
+      supporting_data:
+        type: "string"
+
+  analysisResultsMetadata:
+    type: "object"
+    properties:
+      analysis_result_id:
+        type: "string"
+      analysisArtifacts:
+        type: "string"
+      cancer_type:
+        type: "string"
+      collections:
+        type: "string"
+      date_updated:
+        type: "string"
+      description:
+        type: "string"
+      doi:
+        type: "string"
+      location:
+        type: "string"
+      subjects:
+        type: "integer"
+      title:
+        type: "string"
+
+  cohortsListResponse:
+    type: "object"
+    properties:
+      cohorts:
+        type: "array"
+        items:
+          $ref: "#/definitions/cohortMetadata"
+
+  cohortDeleteResponse:
+    type: "object"
+    properties:
+      cohorts:
+        type: "array"
+        items:
+          type: "object"
+          properties:
+            cohort_id:
+              type: integer
+            result:
+              type: "string"
+
+  cohortMetadata:
+    type: "object"
+    properties:
+      cohort_id:
+        type: "integer"
+      name:
+        type: "string"
+      description:
+        type: "string"
+      owner:
+        type: "string"
+      permission:
+        type: "string"
+        enum: ["OWNER","READER"]
+      filterSet:
+        $ref: "#/definitions/filterSet"
+
+  cohortSpec:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+        default: ""
+      description:
+        type: "string"
+        default: ""
+      filters:
+        $ref: "#/definitions/filters"
+    required:
+      - filters
+    example:
+      name: "mycohort"
+      description: "Example description"
+      filters:
+        collection_id: ["tcga_luad", "tcga_kirc"]
+        Modality: ["CT", "MR"]
+        race: ["WHITE"]
+        age_at_diagnosis_btw: [65, 75]
+
+  cohortIdList:
+    type: "object"
+    properties:
+      cohorts:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+
+  cohortCreateResponse:
+    type: "object"
+    properties:
+      cohort_properties:
+        type: "object"
+        properties:
+          cohort_id:
+            type: "string"
+          name:
+            type: "string"
+          description:
+            type: "string"
+          filter:
+            $ref: "#/definitions/filterSet"
+      code:
+        type: "integer"
+
+  timeoutResponse:
+    type: "object"
+    properties:
+      next_page:
+        type: "string"
+      message:
+        type: "string"
+      code:
+        type: "integer"
+
+#  cohortPropertiesResponse:
+#    type: "object"
+#    properties:
+#      cohort:
+#        type: "object"
+#        properties:
+#          cohort_id:
+#            type: "string"
+#          name:
+#            type: "string"
+#          description:
+#            type: "string"
+#          filterSet:
+#            $ref: "#/definitions/filterSet"
+#          sql:
+#            type: "string"
+#      cohortObjects:
+#        $ref: "#/definitions/cohortObjects"
+#      next_page:
+#        type: "string"
+#      code:
+#        type: "integer"
+
+  filterSet:
+    type: "object"
+    properties:
+      idc_data_version:
+        type: "string"
+      filters:
+        $ref: '#/definitions/filters'
+
+  filters:
+    type: "object"
+    properties:
+      project_short_name:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      sample_type:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      age_at_diagnosis_btw:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      age_at_diagnosis_ebtw:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      age_at_diagnosis_btwe:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      age_at_diagnosis_ebtwe:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      age_at_diagnosis_gte:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      age_at_diagnosis_lte:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      age_at_diagnosis_gt:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      age_at_diagnosis_lt:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      age_at_diagnosis_eq:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      bmi_btw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      bmi_ebtw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      bmi_btwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      bmi_ebtwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      bmi_gte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      bmi_lte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      bmi_gt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      bmi_lt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      bmi_eq:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      country:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      disease_code:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      ethnicity:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      gender:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      histological_type:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      pathologic_stage:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      project_name:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      race:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      tumor_tissue_site:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      vital_status:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      analysis_results_id:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      AnatomicRegionSequence:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Apparent_Diffusion_Coefficient_btw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Apparent_Diffusion_Coefficient_ebtw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Apparent_Diffusion_Coefficient_btwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Apparent_Diffusion_Coefficient_ebtwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Apparent_Diffusion_Coefficient_gte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Apparent_Diffusion_Coefficient_lte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Apparent_Diffusion_Coefficient_gt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Apparent_Diffusion_Coefficient_lt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Apparent_Diffusion_Coefficient_eq:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      BodyPartExamined:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Calcification:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      CancerType:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      collection_id:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Diameter_btw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Diameter_ebtw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Diameter_btwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Diameter_ebtwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Diameter_gte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Diameter_lte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Diameter_gt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Diameter_lt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Diameter_eq:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      illuminationType:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Internal_structure:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      license_short_name:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Lobular_Pattern:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Malignancy:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Manufacturer:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      ManufacturerModelName:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Margin:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      max_TotalPixelMatrixColumns_btw:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      max_TotalPixelMatrixColumns_ebtw:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      max_TotalPixelMatrixColumns_btwe:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      max_TotalPixelMatrixColumns_ebtwe:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      max_TotalPixelMatrixColumns_gte:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      max_TotalPixelMatrixColumns_lte:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      max_TotalPixelMatrixColumns_gt:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      max_TotalPixelMatrixColumns_lt:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      max_TotalPixelMatrixColumns_eq:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      max_TotalPixelMatrixRows_btw:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      max_TotalPixelMatrixRows_ebtw:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      max_TotalPixelMatrixRows_btwe:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      max_TotalPixelMatrixRows_ebtwe:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      max_TotalPixelMatrixRows_gte:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      max_TotalPixelMatrixRows_lte:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      max_TotalPixelMatrixRows_gt:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      max_TotalPixelMatrixRows_lt:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      max_TotalPixelMatrixRows_eq:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      min_PixelSpacing_btw:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      min_PixelSpacing_ebtw:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      min_PixelSpacing_btwe:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      min_PixelSpacing_ebtwe:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 2
+        maxItems: 2
+      min_PixelSpacing_gte:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      min_PixelSpacing_lte:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      min_PixelSpacing_gt:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      min_PixelSpacing_lt:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      min_PixelSpacing_eq:
+        type: "array"
+        items:
+          type: "integer"
+        minItems: 1
+        maxItems: 1
+      Modality:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      ObjectiveLensPower:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+      PatientID:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      primaryAnatomicStructure:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      SamplesPerPixel:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      SegmentedPropertyCategoryCodeSequence:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      SegmentedPropertyTypeCodeSequence:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      SeriesDescription:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      SeriesInstanceUID:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      SeriesNumber:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      SliceThickness_btw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      SliceThickness_ebtw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      SliceThickness_btwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      SliceThickness_ebtwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      SliceThickness_gte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      SliceThickness_lte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      SliceThickness_gt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      SliceThickness_lt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      SliceThickness_eq:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      SOPClassUID:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      SOPInstanceUID:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Sphericity:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Sphericity_quant_btw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Sphericity_quant_ebtw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Sphericity_quant_btwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Sphericity_quant_ebtwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Sphericity_quant_gte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Sphericity_quant_lte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Sphericity_quant_gt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Sphericity_quant_lt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Sphericity_quant_eq:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Spiculation:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      StudyDate:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      StudyDescription:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      StudyInstanceUID:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Subtlety_score:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Surface_area_of_mesh_btw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Surface_area_of_mesh_ebtw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Surface_area_of_mesh_btwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Surface_area_of_mesh_ebtwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Surface_area_of_mesh_gte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Surface_area_of_mesh_lte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Surface_area_of_mesh_gt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Surface_area_of_mesh_lt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Surface_area_of_mesh_eq:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      tcia_species:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      tcia_tumorLocation:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Texture:
+        type: "array"
+        items:
+          type: "string"
+        minItems: 1
+      Volume_btw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Volume_ebtw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Volume_btwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Volume_ebtwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Volume_gte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Volume_lte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Volume_gt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Volume_lt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Volume_eq:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Volume_of_Mesh_btw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Volume_of_Mesh_ebtw:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Volume_of_Mesh_btwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Volume_of_Mesh_ebtwe:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 2
+        maxItems: 2
+      Volume_of_Mesh_gte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Volume_of_Mesh_lte:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Volume_of_Mesh_gt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Volume_of_Mesh_lt:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+      Volume_of_Mesh_eq:
+        type: "array"
+        items:
+          type: "number"
+        minItems: 1
+        maxItems: 1
+    additionalProperties: False
+
+  fields:
+    type: "array"
+    items:
+      type: "string"
+      enum: [
+        "age_at_diagnosis",
+        "analysis_results_id",
+        "AnatomicRegionSequence",
+        "Apparent_Diffusion_Coefficient",
+        "aws_bucket",
+        "aws_url",
+        "bmi",
+        "BodyPartExamined",
+        "Calcification",
+        "CancerType",
+        "collection_id",
+        "country",
+        "crdc_instance_uuid",
+        "crdc_series_uuid",
+        "crdc_study_uuid",
+        "Diameter",
+        "disease_code",
+        "ethnicity",
+        "FrameOfReferenceUID",
+        "gcs_bucket",
+        "gcs_url",
+        "gender",
+        "histological_type",
+        "illuminationType",
+        "instance_size",
+        "Internal_structure",
+        "license_short_name",
+        "Lobular_Pattern",
+        "Malignancy",
+        "Manufacturer",
+        "ManufacturerModelName",
+        "Margin",
+        "max_TotalPixelMatrixColumns",
+        "max_TotalPixelMatrixRows",
+        "min_PixelSpacing",
+        "Modality",
+        "ObjectiveLensPower",
+        "pathologic_stage",
+        "PatientAge",
+        "PatientID",
+        "PatientSex",
+        "PatientSize",
+        "PatientWeight",
+        "primaryAnatomicStructure",
+        "Program",
+        "project_name",
+        "project_short_name",
+        "race",
+        "sample_type",
+        "SamplesPerPixel",
+        "SegmentAlgorithmType",
+        "SegmentedPropertyCategoryCodeSequence",
+        "SegmentedPropertyTypeCodeSequence",
+        "SegmentNumber",
+        "SeriesDescription",
+        "SeriesInstanceUID",
+        "SeriesNumber",
+        "SliceThickness",
+        "SOPClassUID",
+        "SOPInstanceUID",
+        "source_DOI",
+        "Sphericity",
+        "Sphericity_quant",
+        "Spiculation",
+        "StudyDate",
+        "StudyDescription",
+        "StudyInstanceUID",
+        "Subtlety_score",
+        "Surface_area_of_mesh",
+        "tcia_species",
+        "tcia_tumorLocation",
+        "Texture",
+        "tumor_tissue_site",
+        "vital_status",
+        "Volume",
+        "Volume_of_Mesh",
+  ]
+
+  manifestBody:
+    type: "object"
+    properties:
+      fields:
+        $ref: "#/definitions/fields"
+      counts:
+        type: "string"
+        description: If True, return counts of DICOM objects
+        default: "False"
+      group_size:
+        type: "string"
+        description: If True, return size in bytes of instances in group
+        default: "False"
+      sql:
+        type: "string"
+        description: "If True, return the BQ SQL for this query."
+        default: "False"
+      page_size:
+        type: "integer"
+        description: "Maximum number of rows to return"
+        default: 1000
+    required:
+      - fields
+    example:
+      fields: [ "Age_At_Diagnosis", "aws_bucket", "crdc_series_uuid", "Modality", "SliceThickness" ]
+      counts: True
+      group_size: True
+      sql: True
+      page_size: 1000
+
+
+  manifestPreviewBody:
+    type: "object"
+    properties:
+      cohort_def:
+        $ref: "#/definitions/cohortSpec"
+      fields:
+        $ref: "#/definitions/fields"
+      counts:
+        type: "string"
+        description: If True, return counts of DICOM objects
+        default: "False"
+      group_size:
+        type: "string"
+        description: If True, return size in bytes of instances in group
+        default: "False"
+      sql:
+        type: "string"
+        description: "If True, return the BQ SQL for this query."
+        default: "False"
+      page_size:
+        type: "integer"
+        description: "Maximum number of rows to return"
+        default: 1000
+    required:
+      - cohort_def
+      - fields
+    example:
+      cohort_def:
+        name: "mycohort"
+        description: "Example description"
+        filters:
+          collection_id: [ "TCGA_luad", "tcga_kirc" ]
+          Modality: [ "CT", "MR" ]
+          Race: [ "WHITE" ]
+          age_at_diagnosis_btw: [65,75]
+      fields: [ "Age_At_Diagnosis", "aws_bucket", "crdc_series_uuid", "Modality", "SliceThickness" ]
+      counts: True
+      group_size: True
+      sql: True
+      page_size: 1000
+
+#  cohortObjects:
+#    type: "object"
+#    properties:
+#      totalFound:
+#        type: "integer"
+#      rowsReturned:
+#        type: "integer"
+#      collections:
+#        type: "array"
+#        items:
+#          $ref: "#/definitions/collectionObject"
+#
+#  collectionObject:
+#    type: "object"
+#    properties:
+#      collection_id:
+#        type: "string"
+#      patients:
+#        type: "array"
+#        items:
+#          $ref: "#/definitions/patientObject"
+#
+#  patientObject:
+#    type: "object"
+#    properties:
+#      patientID:
+#        type: "string"
+#      studies:
+#        type: "array"
+#        items:
+#          $ref: "#/definitions/studyObject"
+#
+#  studyObject:
+#    type: "object"
+#    properties:
+#      StudyInstanceUID:
+#        type: "string"
+#      series:
+#        type: "array"
+#        items:
+#          $ref: "#/definitions/seriesObject"
+#
+#
+#  seriesObject:
+#    type: "object"
+#    properties:
+#      SeriesInstanceUID:
+#        type: "string"
+#      instances:
+#        type: "array"
+#        items:
+#          $ref: "#/definitions/instanceObject"
+#
+#  instanceObject:
+#    type: "object"
+#    properties:
+#      SOPInstanceUID:
+#        type: "string"
+
+  manifestPreviewResponse:
+    type: "object"
+    properties:
+      cohort:
+        type: "object"
+        properties:
+          name:
+            type: "string"
+          description:
+            type: "string"
+          filterSet:
+            $ref: "#/definitions/filterSet"
+          sql:
+            type: "string"
+      manifest:
+        type: "object"
+        properties:
+          manifest_data:
+            $ref: "#/definitions/manifestData"
+          totalFound:
+            type: "integer"
+          rowsReturned:
+            type: "integer"
+      next_page:
+        type: "string"
+      code:
+        type: "integer"
+
+  manifestResponse:
+    type: "object"
+    properties:
+      cohort:
+        type: "object"
+        properties:
+          cohort_id:
+            type: "integer"
+          name:
+            type: "string"
+          description:
+            type: "string"
+          user_email:
+            type: "string"
+          filterSet:
+            $ref: "#/definitions/filterSet"
+          sql:
+            type: "string"
+      manifest:
+        type: "object"
+        properties:
+          manifest_data:
+            $ref: "#/definitions/manifestData"
+          totalFound:
+            type: "integer"
+          rowsReturned:
+            type: "integer"
+      next_page:
+        type: "string"
+      code:
+        type: "integer"
+
+  manifestNextPageResponse:
+    type: "object"
+    properties:
+      manifest:
+        type: "object"
+        properties:
+          manifest_data:
+            $ref: "#/definitions/manifestData"
+          totalFound:
+            type: "integer"
+          rowsReturned:
+            type: "integer"
+      next_page:
+        type: "string"
+      code:
+        type: "integer"
+
+  manifestData:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        age_at_diagnosis:
+          type:  "integer"
+        analysis_results_id:
+          type:  "string"
+        AnatomicRegionSequence:
+          type:  "string"
+        Apparent_Diffusion_Coefficient:
+          type:  "number"
+        aws_bucket:
+          type:  "string"
+        aws_url:
+          type:  "string"
+        bmi:
+          type:  "number"
+        BodyPartExamined:
+          type:  "string"
+        Calcification:
+          type:  "string"
+        CancerType:
+          type:  "string"
+        collection_id:
+          type:  "string"
+        country:
+          type:  "string"
+        crdc_instance_uuid:
+          type:  "string"
+        crdc_series_uuid:
+          type:  "string"
+        crdc_study_uuid:
+          type:  "string"
+        Diameter:
+          type:  "number"
+        disease_code:
+          type:  "string"
+        ethnicity:
+          type:  "string"
+        FrameOfReferenceUID:
+          type:  "string"
+        gcs_bucket:
+          type:  "string"
+        gcs_url:
+          type:  "string"
+        gender:
+          type:  "string"
+        histological_type:
+          type:  "string"
+        illuminationType:
+          type:  "string"
+        instance_size:
+          type:  "integer"
+        Internal_structure:
+          type:  "string"
+        license_short_name:
+          type:  "string"
+        Lobular_Pattern:
+          type:  "string"
+        Malignancy:
+          type:  "string"
+        Manufacturer:
+          type:  "string"
+        ManufacturerModelName:
+          type:  "string"
+        Margin:
+          type:  "string"
+        max_TotalPixelMatrixColumns:
+          type:  "integer"
+        max_TotalPixelMatrixRows:
+          type:  "integer"
+        min_PixelSpacing:
+          type:  "number"
+        Modality:
+          type:  "string"
+        ObjectiveLensPower:
+          type:  "integer"
+        pathologic_stage:
+          type:  "string"
+        PatientID:
+          type:  "string"
+        primaryAnatomicStructure:
+          type:  "string"
+        Program:
+          type:  "string"
+        project_name:
+          type:  "string"
+        project_short_name:
+          type:  "string"
+        race:
+          type:  "string"
+        sample_type:
+          type:  "string"
+        SamplesPerPixel:
+          type:  "integer"
+        SegmentAlgorithmType:
+          type:  "string"
+        SegmentedPropertyCategoryCodeSequence:
+          type:  "string"
+        SegmentedPropertyTypeCodeSequence:
+          type:  "string"
+        SegmentNumber:
+          type:  "integer"
+        SeriesDescription:
+          type:  "string"
+        SeriesInstanceUID:
+          type:  "string"
+        SeriesNumber:
+          type:  "string"
+        SliceThickness:
+          type:  "number"
+        SOPClassUID:
+          type:  "string"
+        SOPInstanceUID:
+          type:  "string"
+        source_DOI:
+          type:  "string"
+        Sphericity:
+          type:  "string"
+        Sphericity_quant:
+          type:  "number"
+        Spiculation:
+          type:  "string"
+        StudyDate:
+          type:  "string"
+        StudyDescription:
+          type:  "string"
+        StudyInstanceUID:
+          type:  "string"
+        Subtlety_score:
+          type:  "string"
+        Surface_area_of_mesh:
+          type:  "number"
+        tcia_species:
+          type:  "string"
+        tcia_tumorLocation:
+          type:  "string"
+        Texture:
+          type:  "string"
+        tumor_tissue_site:
+          type:  "string"
+        vital_status:
+          type:  "string"
+        Volume:
+          type:  "number"
+        Volume_of_Mesh:
+          type:  "number"
+        instance_count:
+          type:  "number"
+        series_count:
+          type:  "number"
+        study_count:
+          type:  "number"
+        patient_count:
+          type:  "number"
+        collection_count:
+          type:  "number"
+        group_size:
+          type:  "number"
+
+  accountDetailsResponse:
+    type: "object"
+    properties:
+      account_details:
+        type: "object"
+        properties:
+          date_joined:
+            type: "string"
+          email:
+            type: "string"
+          id:
+            type: "string"
+          last_login:
+            type: "string"
+          username:
+            type:  "string"
+          extra_data:
+            $ref: "#/definitions/extra_data"
+          first_name:
+            type:  "string"
+          last_name:
+            type: "string"
+      code:
+        type: "integer"
+
+  extra_data:
+    type: "object"
+    properties:
+      id':
+        type: "string"
+      email:
+        type: "string"
+      verified_email:
+        type: "string"
+      name':
+        type: "string"
+      given_name:
+        type: "string"
+      family_name:
+        type: "string"
+      picture:
+        type: "string"
+      locale:
+        type: "string"
+      hd:
+        type: "string"
+
+  errorMessage:
+    type: "object"
+    properties:
+      message:
+        type: "string"
+      code:
+        type: "integer"
+      not_found:
+        type: "array"
+        items:
+          type: "string"
+
+## [START securityDef]
+securityDefinitions:
+#  # This section configures basic authentication with an API key.
+#  api_key:
+#    type: "apiKey"
+#    name: "key"
+#    in: "query"
+## [END securityDef]
+#  # This section configures authentication using Google API Service Accounts
+#  # to sign a json web token. This is mostly used for server-to-server
+#  # communication.
+#  google_jwt:
+#    authorizationUrl: ""
+#    flow: "implicit"
+#    type: "oauth2"
+#    # This must match the 'iss' field in the JWT.
+#    x-google-issuer: "jwt-client.endpoints.sample.google.com"
+#    # Update this with your service account's email address.
+#    x-google-jwks_uri: "https://www.googleapis.com/service_accounts/v1/jwk/YOUR-SERVICE-ACCOUNT-EMAIL"
+#    # This must match the "aud" field in the JWT. You can add multiple audiences to accept JWTs from multiple clients.
+#    x-google-audiences: "echo.endpoints.sample.google.com"
+#  # This section configures authentication using Google App Engine default
+#  # service account to sign a json web token. This is mostly used for
+#  # server-to-server communication.
+#  gae_default_service_account:
+#    authorizationUrl: ""
+#    flow: "implicit"
+#    type: "oauth2"
+#    # Replace YOUR-CLIENT-PROJECT-ID with your client project ID.
+#    x-google-issuer: "YOUR-CLIENT-PROJECT-ID@appspot.gserviceaccount.com"
+#    # Replace YOUR-CLIENT-PROJECT-ID with your client project ID.
+#    x-google-jwks_uri: "https://www.googleapis.com/robot/v1/metadata/x509/YOUR-CLIENT-PROJECT-ID@appspot.gserviceaccount.com"
+#    # This must match the "aud" field in the JWT. You can add multiple audiences to accept JWTs from multiple clients.
+#    x-google-audiences: "echo.endpoints.sample.google.com"
+#  # This section configures authentication using a service account
+#  # to sign a json web token. This is mostly used for server-to-server
+#  # communication.
+#  google_service_account:
+#    authorizationUrl: ""
+#    flow: "implicit"
+#    type: "oauth2"
+#    # Replace YOUR-SERVICE-ACCOUNT-EMAIL with your service account email.
+#    x-google-issuer: "YOUR-SERVICE-ACCOUNT-EMAIL"
+#    # Replace YOUR-SERVICE-ACCOUNT-EMAIL with your service account email.
+#    x-google-jwks_uri: "https://www.googleapis.com/robot/v1/metadata/x509/YOUR-SERVICE-ACCOUNT-EMAIL"
+#    # This must match the "aud" field in the JWT. You can add multiple audiences to accept JWTs from multiple clients.
+#    x-google-audiences: "echo.endpoints.sample.google.com"
+#  # This section configures authentication using Google OAuth2 ID Tokens.
+#  # ID Tokens can be obtained using OAuth2 clients, and can be used to access
+#  # your API on behalf of a particular user.
+  google_id_token:
+    authorizationUrl: ""
+    flow: "implicit"
+    type: "oauth2"
+    x-google-issuer: "https://accounts.google.com"
+    x-google-jwks_uri: "https://www.googleapis.com/oauth2/v3/certs"
+    # Your OAuth2 client's Client ID must be added here. You can add multiple client IDs to accept tokens from multiple clients.
+    # Uncomment the following for dev, local:
+    x-google-audiences: "940486172223-j7gli4f67fb29dicuug89p89kuj23iuh.apps.googleusercontent.com,940486172223-69cjerk6429tp5ruumu1kc6p23eibdso.apps.googleusercontent.com"
+    # Uncomment the following for test:
+    #x-google-audiences: "1012163776171-bplog5j2a130av5cid0e6ma3jnqabecj.apps.googleusercontent.com,1012163776171-1kv7rl8uc6pbhcbaj97jnvnk6snuf5o2.apps.googleusercontent.com"
+    # Uncomment the following for prod:
+    #x-google-audiences: "198650116749-ukpufn2o9tjn88q1a5vplovpkm08o2kq.apps.googleusercontent.com,198650116749-jold6g3160renk0nm566m7tguvpdktga.apps.googleusercontent.com"
