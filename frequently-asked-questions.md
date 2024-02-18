@@ -4,6 +4,16 @@
 
 Check out the [downloading-data](data/downloading-data/ "mention") documentation page!
 
+## How do I get my data into IDC?
+
+Currently IDC will consider submissions from NCI-funded driving projects and data from special selected projects.
+
+IDC only hosts public datasets. It does not support access limitations, such as data embargoes or sequestration.
+
+Submitters of data to IDC must ensure that the data have been de-identified with respect to protected health information (PHI). Currently, IDC accepts data de-identified by [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/). Datasets de-identified by other data coordinating centers (DCC) may be considered but in such cases further information will be required.
+
+If you are interested in making your data available within IDC, please contact us by sending email to [support+submissions@canceridc.dev](https://mail.google.com/mail/?view=cm\&fs=1\&tf=1\&to=support+submissions@canceridc.dev).
+
 ## How much does it cost to use the cloud?
 
 You can search and [download data from IDC](data/downloading-data/) for free, and without having to attach your credit card to your GCP or AWS account.
@@ -27,16 +37,6 @@ IDC pilot release took place in Fall 2020, followed by the production release in
 ## What data is available?
 
 We host most of the public collections from [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net). We also host HTAN and other pathology images not hosted by TCIA. You can review the complete, up-to-date list of [collections included in IDC](https://portal.imaging.datacommons.cancer.gov/collections/).
-
-## How do I get my data into IDC?
-
-Currently IDC will consider submissions from NCI-funded driving projects and data from special selected projects.
-
-IDC only hosts public datasets. It does not support access limitations, such as data embargoes or sequestration.
-
-Submitters of data to IDC must ensure that the data have been de-identified with respect to protected health information (PHI). Currently, IDC accepts data de-identified by [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/). Datasets de-identified by other data coordinating centers (DCC) may be considered but in such cases further information will be required.
-
-If you are interested in making your data available within IDC, please contact us by sending email to [support+submissions@canceridc.dev](https://mail.google.com/mail/?view=cm\&fs=1\&tf=1\&to=support+submissions@canceridc.dev).
 
 ## How to acknowledge IDC?
 
