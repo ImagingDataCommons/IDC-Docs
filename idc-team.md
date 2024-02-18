@@ -38,7 +38,7 @@ Our team includes the following sites and project leads:
 * Radical Imaging LLC, Boston, MA, USA (Radical Imaging)
   * Rob Lewis, PhD - site PI
   * Igor Octaviano
-  * Rodrigo Basilio
+  * Pedro Kohler
 * PixelMed Publishing, Bangor, PA, USA (PixelMed)
   * David Clunie, MB, BS - site PI
 * Isomics Inc, Cambridge, MA, USA (Isomics)
@@ -62,6 +62,7 @@ We are grateful to the following individuals who contributed to IDC in the past,
 * James Petts (Radical Imaging)
 * Erik Ziegler (Radical Imaging)
 * Gitanjali Chhetri (Radical Imaging)
+* Rodrigo Basilio (Radical Imaging)
 * Jose Ulloa (Radical Imaging)
 * Madelyn Reyes (GDIT)
 * Derrick Moore (GDIT)
