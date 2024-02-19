@@ -1,6 +1,4 @@
-# Downloading data
-
-IDC does not have an interactive point-and-click download application! If you want to download data from IDC you will need to use a command line interface (Terminal on Mac/Linux or Command prompt on Windows) or a GCS or AWS API. This section emphasizes the use of s5cmd CLI.
+# Downloading data with `s5cmd`
 
 Download of data from IDC is a 2-step process covered on this page:
 
