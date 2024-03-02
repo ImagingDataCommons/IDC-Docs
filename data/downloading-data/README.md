@@ -63,4 +63,4 @@ client.download_from_selection(seriesInstanceUID=\
 
 ```
 
-`idc-index` includes a varioety of other helper functions, such as download from the manifest created using IDC portal, automatic generation of the viewer URLs, information about disk space needed for a given collection, and more. We are very interested in your feedback to define the additional functionality to add to this package! Please reach out via [IDC Forum](https://discourse.canceridc.dev/) if you have any suggestions.
+`idc-index` includes a variety of other helper functions, such as download from the manifest created using IDC portal, automatic generation of the viewer URLs, information about disk space needed for a given collection, and more. We are very interested in your feedback to define the additional functionality to add to this package! Please reach out via [IDC Forum](https://discourse.canceridc.dev/) if you have any suggestions.
