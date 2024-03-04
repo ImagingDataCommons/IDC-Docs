@@ -1,25 +1,19 @@
 # Proxy policy
 
-
-
 {% hint style="info" %}
 TL;DR: if you want to download images from IDC, you can do it without charge, limits or sign-ins from our cloud storage buckets. See instructions in [this article](../data/downloading-data/).
 {% endhint %}
 
-The mission of the Imaging Data Commons (IDC) is to support cancer imaging research in the cloud. In general, downloading data from the cloud incurs egress charges. Fortunately, starting in November 2021, the IDC partnered with the Google Public Data Program, which makes it possible to download [IDC DICOM files](https://console.cloud.google.com/marketplace/product/gcp-public-data-idc/nci-idc-data) for free.
+The primary mechanism for accessing data from IDC is by searching the metadata using the idc-index python package or BigQuery tables, and downloading the binary files from public cloud buckets, as discussed in [this article](https://app.gitbook.com/o/-MCNUE8xpdPUJwWRz6xu/s/-MCTG4fXybYgGMalZnmf-2668963341/data/downloading-data). There is no limit, quota or fees associated with downloading IDC files from the buckets.
 
-That free access is for files hosted in Google Cloud Storage buckets. Of course, one crucial aspect of imaging research that requires downloads is viewing image data, and this service is provided through a DICOMWeb API hosted on Google, which does not provide free downloads. To support this use case, IDC image viewers provide free viewing (i.e. downloading) of the IDC image collection, up to a generous daily quota. This quota is enforced by a proxy service that sits in front of an IDC-private Google Cloud Healthcare DICOMWeb service.
+Effective March 2024, as a pilot project, IDC also provides access to the DICOM data via the DICOMweb interface available at this endpoint: [https://proxy.imaging.datacommons.cancer.gov/current/viewer-only-no-downloads-see-tinyurl-dot-com-slash-3j3d9jyp/dicomWeb](https://proxy.imaging.datacommons.cancer.gov/current/viewer-only-no-downloads-see-tinyurl-dot-com-slash-3j3d9jyp/dicomWeb). This endpoint is read-only. It will route the requests to the Google Healthcare API DICOM store containing IDC data.
 
-It is the policy of the IDC that this proxy service is only to be used to support our IDC viewers, and should not be used for other purposes. Our DICOMWeb endpoint is not provided as a way to extract the entire IDC collection out of the cloud for free, nor as an API to provide IDC data for analysis, even to cloud-based VMs. Thus, it is not acceptable to “IP hop” in an attempt to circumvent individual daily quotas, since there is also a global daily cap as well to prevent full egress of the imaging collection. Note that if this global cap is hit, all other users of the site would be unable to use the viewers for the rest of the day (using the UTC clock). Thus, IP hopping against the proxy that causes the global quota to be hit will be considered a denial-of-service attack.
+Our DICOMWeb endpoint should only be used when data access needs cannot be satisfied using other mechanisms (e.g., when accessing individual frames of the microscopy images without having to download the entire binary file).&#x20;
 
-If you, as a researcher, are using the viewer to explore images as a part of your research (e.g. to fine-tune your cohort selections) and hit your daily quota, please feel free to reach out to us at [support@canceridc.dev](mailto:support@canceridc.dev) to discuss the restriction.
+Egress of data via the DICOMweb interface is capped at a non-disclosed limit that is tracked per IP. It is not acceptable to “IP hop” in an attempt to circumvent individual daily quotas, since there is also a global daily cap as well to prevent full egress of the imaging collection. Note that if this global cap is hit, all other users of the site would be unable to use the viewers for the rest of the day (using the UTC clock). Thus, IP hopping against the proxy that causes the global quota to be hit will be considered a denial-of-service attack.
 
-Thus, if any of these conditions are met:
+If you reach your daily quota, but feel you have a compelling cancer imaging research use case to request an exception to the policy and an increase in your daily quota, please reach out to us at support@canceridc.dev to discuss the situation.
 
-1. You repeatedly hit the daily quota
-2. There is evidence that multiple IPs are being used to circumvent the quota (and thus are creating a condition where the global cap might be hit)
-3. You are consistently downloading to a level just under the quota for an extended stretch of time
-4. You are extracting a very large number of DICOM studies in a limited time period, inconsistent with a usage pattern of interactive viewing
-5. You are demonstrating other access behaviors or patterns that are inconsistent with individual researchers using the viewer as intended
+We are continuously monitoring the usage of the proxy. Depending on the actual costs and usage, this policy may be revisited in the future to restrict access via the DICOMweb interface for any uses other than IDC viewers.
 
-then the IDC will block the offending IP addresses from using the proxy service. If you are denied from using our proxy service, and feel that you have been using it in accordance with our policy, or were unaware of our policy and have violated it unintentionally, please contact us at [support@canceridc.dev](mailto:support@canceridc.dev) to lift the restriction.
+\
