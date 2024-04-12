@@ -10,6 +10,32 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## v18 - April 2024
+
+New clinical metadata tables
+
+1. [acrin_nsclc_fdg_pet_bamf_lung_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_nsclc\_fdg\_pet)
+2. [anti_pd_1_lung_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
+3. [anti_pd_1_lung_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
+4. [lung_pet_ct_dx_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx)
+5.  [lung_pet_ct_dx_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx) 
+6.  [nsclc_radiogenomics_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
+7. [nsclc_radiogenomics_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
+8. [prostatex_bamf_segmentations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=prostatex)
+9. [qin_breast_bamf_breast_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=qin\_breast) 
+10. [rider_lung_pet_ct_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
+11. [rider_lung_pet_ct_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
+12. [tcga_kirc_bamf_kidney_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_kirc)
+13. [tcga_lihc_bamf_liver_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
+14. [tcga_lihc_bamf_liver_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
+15. [tcga_luad_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
+16. [tcga_luad_bamf_lung_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
+17. [tcga_lusc_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
+18. [tcga_lusc_bamf_lung_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
+
+
+
+
 ## v17 - December 2023
 
 New radiology collections
