@@ -34,7 +34,7 @@ Once you installed the package with pip install idc-index, you can use it to exp
 You can also take a look at a short tutorial on using `idc-index` [here](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/labs/idc\_rsna2023.ipynb).
 
 ```shell-session
-pip install idc-index
+pip install idc-index --upgrade
 ```
 
 ```python
