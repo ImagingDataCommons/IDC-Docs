@@ -10,6 +10,69 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## v18 - April 2024
+
+### New radiology collections
+
+1. [Advanced-MRI-Breast-Lesions](https://doi.org/10.7937/C7X1-YN57)
+
+### New analysis results
+
+1. [RMS-Mutation-Prediction-Expert-Annotations](https://doi.org/10.5281/zenodo.10462857)\*\
+   Collections analyzed:
+   1. [RMS-Mutation-Prediction](https://doi.org/10.5281/zenodo.8225131)
+2. [TotalSegmentator-CT-Segmentations](https://doi.org/10.5281/zenodo.8347011)\*\*\
+   Collections analyzed:
+   1. [NLST](https://doi.org/10.7937/TCIA.HMQ8-J677)
+
+### Revised radiology collections
+
+(starred collections are revised due to new or revised analysis results)
+
+1. [Breast-Cancer-Screening-DBT](https://doi.org/10.7937/E4WT-CD02) (revisions only to clinical data)
+2. [NLST](https://doi.org/10.7937/TCIA.HMQ8-J677)\*\*
+
+### Revised pathology collections
+
+(starred collections are revised due to new or revised analysis results)
+
+1. [CPTAC-BRCA](https://doi.org/10.7937/TCIA.CAEM-YS80) (fix PatientAges > 090Y)
+2. [CPTAC-COAD](https://doi.org/10.7937/TCIA.YZWQ-ZZ63) (fix PatientAges > 090Y)
+3. [RMS-Mutation-Prediction](https://doi.org/10.5281/zenodo.8225131)\*
+   1. Also added missing instance \
+      SOPInstanceUID: 1.3.6.1.4.1.5962.99.1.3459553143.523311062.1687086765943.9.0
+   2. Removed corrupted instances
+      1. SOPInstanceUID: 1.3.6.1.4.1.5962.99.1.2164023716.1899467316.1685791236516.37.0
+      2. SOPInstanceUID: 1.3.6.1.4.1.5962.99.1.2411736851.773458418.1686038949651.37.0
+      3. SOPInstanceUID: 1.3.6.1.4.1.5962.99.1.2411736851.773458418.16860389
+4. [TCGA-BLCA](https://doi.org/10.7937/K9/TCIA.2016.8LNG8XDR) (All TCGA revisions are to correct multiple manufacturer values within same series)
+5. [TCGA-BRCA](https://doi.org/10.7937/K9/TCIA.2016.AB2NAZRP)
+6. [TCGA-CHOL](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/cholangiocarcinoma)
+7. [TCGA-COAD](https://doi.org/10.7937/K9/TCIA.2016.HJJHBOXZ)
+8. TCGA-DLBC (No description page)
+9. [TCGA-ESCA](https://doi.org/10.7937/K9/TCIA.2016.VPTNRGFY)
+10. [TCGA-HNSC](https://doi.org/10.7937/K9/TCIA.2016.LXKQ47MS)
+11. [TCGA-KIRC](https://doi.org/10.7937/K9/TCIA.2016.V6PBVTDR)
+12. [TCGA-KIRP](https://doi.org/10.7937/K9/TCIA.2016.ACWOGBEF)
+13. [TCGA-LIHC](https://doi.org/10.7937/K9/TCIA.2016.IMMQW8UQ)
+14. [TCGA-LUAD](https://doi.org/10.7937/K9/TCIA.2016.JGNIHEP5)
+15. [TCGA-LUSC](https://doi.org/10.7937/K9/TCIA.2016.TYGKKFMQ)
+16. [TCGA-PAAD](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/pancreatic)
+17. [TCGA-PRAD](https://doi.org/10.7937/K9/TCIA.2016.YXOGLM4Y)
+18. [TCGA-READ](https://doi.org/10.7937/K9/TCIA.2016.F7PPNPNU)
+19. [TCGA-SARC](https://doi.org/10.7937/K9/TCIA.2016.CX6YLSUX)
+20. [TCGA-SKCM](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/melanoma-skin)
+21. [TCGA-STAD](https://doi.org/10.7937/K9/TCIA.2016.GDHL9KIM)
+22. [TCGA-TGCT](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/testicular-germ-cell)
+23. [TCGA-THCA](https://doi.org/10.7937/K9/TCIA.2016.9ZFRVF1B)
+24. [TCGA-THYM](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/thymoma)
+25. [TCGA-UCEC](https://doi.org/10.7937/K9/TCIA.2016.GKJ0ZWAC)
+26. [TCGA-UCS](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/uterine-carcinosarcoma)
+
+### Notes
+
+The deprecated columns `tcia_api_collection_id` and `idc_webapp_collection_id` have been removed from the `auxiliary_metadata` table in the `idc_v18` BQ dataset.  These columns were duplicates of columns `collection_name` and `collection_id` respectively.&#x20;
+
 ## v17 - December 2023
 
 New radiology collections
