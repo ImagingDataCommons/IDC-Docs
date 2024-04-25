@@ -31,8 +31,8 @@ Queries below demonstrate how to get the Google Storage URLs to download cohort 
 
 {% code overflow="wrap" %}
 ```sql
-# Select all files from GCS for a given PatientID
-SELECT DISTINCT(CONCAT("cp s3://", SPLIT(gcs_url,"/")[SAFE_OFFSET(2)], "/", crdc_series_uuid, "/* .")) 
+# Select all files for a given PatientID
+SELECT DISTINCT(CONCAT(series_aws_url, "* .")) 
 FROM `bigquery-public-data.idc_current.dicom_all`
 WHERE PatientID = "LUNG1-001"
 ```
@@ -40,8 +40,8 @@ WHERE PatientID = "LUNG1-001"
 
 {% code overflow="wrap" %}
 ```sql
-# Select all files from GCS for a given collection
-SELECT DISTINCT(CONCAT("cp s3://", SPLIT(gcs_url,"/")[SAFE_OFFSET(2)], "/", crdc_series_uuid, "/* .")) 
+# Select all files for a given collection
+SELECT DISTINCT(CONCAT(series_aws_url, "* .")) 
 FROM `bigquery-public-data.idc_current.dicom_all`
 WHERE collection_id = "nsclc_radiomics"
 ```
@@ -49,8 +49,8 @@ WHERE collection_id = "nsclc_radiomics"
 
 {% code overflow="wrap" %}
 ```sql
-# Select all files from GCS for a given DICOM series
-SELECT DISTINCT(CONCAT("cp s3://", SPLIT(gcs_url,"/")[SAFE_OFFSET(2)], "/", crdc_series_uuid, "/* .")) 
+# Select all files for a given DICOM series
+SELECT DISTINCT(CONCAT(series_aws_url, "* .")) 
 FROM `bigquery-public-data.idc_current.dicom_all`
 WHERE SeriesInstanceUID = "1.3.6.1.4.1.32722.99.99.298991776521342375010861296712563382046"
 ```
@@ -58,18 +58,18 @@ WHERE SeriesInstanceUID = "1.3.6.1.4.1.32722.99.99.29899177652134237501086129671
 
 {% code overflow="wrap" %}
 ```sql
-# Select all files from GCS for a given DICOM study
-SELECT DISTINCT(CONCAT("cp s3://", SPLIT(gcs_url,"/")[SAFE_OFFSET(2)], "/", crdc_series_uuid, "/* .")) 
+# Select all files for a given DICOM study
+SELECT DISTINCT(CONCAT(series_aws_url, "* .")) 
 FROM `bigquery-public-data.idc_current.dicom_all`
 WHERE StudyInstanceUID = "1.3.6.1.4.1.32722.99.99.239341353911714368772597187099978969331"
 ```
 {% endcode %}
 
-If you want to download the files corresponding to the cohort from AWS instead of GCP, substitute aws`_url` for gc`s_url` in the `SELECT` statement of the query, such as in the following SELECT clause:
+If you want to download the files corresponding to the cohort from GCP instead of AWS, substitute `series_aws_url` for `series_gcp_url` in the `SELECT` statement of the query, such as in the following SELECT clause:
 
 {% code overflow="wrap" %}
 ```sql
-SELECT DISTINCT(CONCAT("cp s3://", SPLIT(aws_url,"/")[SAFE_OFFSET(2)], "/", crdc_series_uuid, "/* .")) 
+SELECT DISTINCT(CONCAT(series_gcp_url, "* ."))
 ```
 {% endcode %}
 
@@ -107,7 +107,7 @@ WHERE collection_id = "nsclc_radiomics"
 
 [`s5cmd`](https://github.com/peak/s5cmd) is a very fast S3 and local filesystem execution tool that can be used for accessing IDC buckets and downloading files both from GCS and AWS.
 
-Install `s5cmd` following the instructions in [https://github.com/peak/s5cmd#installation](https://github.com/peak/s5cmd#installation).
+Install `s5cmd` following the instructions in [https://github.com/peak/s5cmd#installation](https://github.com/peak/s5cmd#installation), or if you have Python pip on you system you can just do `pip install s5cmd --upgrade`.
 
 You can verify if your setup was successful by running the following command: it should successfully download one file from IDC.
 
