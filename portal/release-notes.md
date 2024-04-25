@@ -8,6 +8,11 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+## 18.0 April 9, 2024 (canceridc.202404091237.841769c)
+
+* on the Explore Images page the IDC internal id for each collection can now be copied from the Collections table by clicking the corresponding copy icon
+
+* on the Explore Images page the IDC case id can now be copied from the Selected Cases table by clicking the corresponding copy icon
 
 ## 17.0 December 19, 2023 (canceridc.202312191019.53f66ba)
 Main highlights of this release include:

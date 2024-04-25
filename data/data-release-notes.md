@@ -69,6 +69,28 @@ Please refer to the license and terms of use, which are defined in the `license_
 25. [TCGA-UCEC](https://doi.org/10.7937/K9/TCIA.2016.GKJ0ZWAC)
 26. [TCGA-UCS](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/uterine-carcinosarcoma)
 
+### New clinical metadata tables
+
+1. [acrin_nsclc_fdg_pet_bamf_lung_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_nsclc\_fdg\_pet)
+2. [anti_pd_1_lung_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
+3. [anti_pd_1_lung_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
+4. [lung_pet_ct_dx_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx)
+5.  [lung_pet_ct_dx_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx) 
+6.  [nsclc_radiogenomics_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
+7. [nsclc_radiogenomics_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
+8. [prostatex_bamf_segmentations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=prostatex)
+9. [qin_breast_bamf_breast_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=qin\_breast) 
+10. [rider_lung_pet_ct_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
+11. [rider_lung_pet_ct_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
+12. [tcga_kirc_bamf_kidney_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_kirc)
+13. [tcga_lihc_bamf_liver_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
+14. [tcga_lihc_bamf_liver_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
+15. [tcga_luad_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
+16. [tcga_luad_bamf_lung_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
+17. [tcga_lusc_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
+18. [tcga_lusc_bamf_lung_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
+
+
 ### Notes
 
 The deprecated columns `tcia_api_collection_id` and `idc_webapp_collection_id` have been removed from the `auxiliary_metadata` table in the `idc_v18` BQ dataset.  These columns were duplicates of columns `collection_name` and `collection_id` respectively.&#x20;
