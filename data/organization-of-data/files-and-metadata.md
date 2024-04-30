@@ -6,7 +6,7 @@ We gratefully acknowledge [Google Public Data Program](https://console.cloud.goo
 
 Let's start with the overall principles of how we organize data in IDC.
 
-IDC brings you (as of v16) over 45 TB of publicly available DICOM images and image-derived content. We share those with you as DICOM files, and those DICOM files are available in cloud-based **storage buckets** - both in Google and AWS.&#x20;
+IDC brings you (as of v18) over 60 TB of publicly available DICOM images and image-derived content. We share those with you as DICOM files, and those DICOM files are available in cloud-based **storage buckets** - both in Google and AWS.&#x20;
 
 Sharing just the files, however, is not particularly helpful. With that much data, it is no longer practical to just download all of those files to later sort through them to select those you need.&#x20;
 
