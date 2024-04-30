@@ -1,23 +1,40 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Welcome!
 
-{% hint style="info" %}
-You can contact IDC support by sending email to [<mark style="color:blue;">support@canceridc.dev</mark>](mailto:support@canceridc.dev) or posting your question on [IDC User forum](https://discourse.canceridc.dev).
-{% endhint %}
+[**NCI Imaging Data Commons** **(IDC)**](https://imaging.datacommons.cancer.gov) is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.&#x20;
 
-{% hint style="info" %}
-**“IDC Community Office Hours”** take place weekly on Google Meet at [https://meet.google.com/xyt-vody-tvb](https://meet.google.com/xyt-vody-tvb) **every Tuesday 16:30 – 17:30 (New York) and Wednesday 10:30-11:30 (New York)**. Join us to find answers to any questions you might have about IDC!
-{% endhint %}
+<figure><img src=".gitbook/assets/idc_v18_summary.jpg" alt=""><figcaption><p>Summary of the selected aspects of IDC content; see interactive dashboard <a href="https://lookerstudio.google.com/reporting/04cf5976-4ea0-4fee-a749-8bfd162f2e87/page/p_s7mk6eybqc">here</a></p></figcaption></figure>
 
-**NCI Imaging Data Commons** **(IDC)** is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.&#x20;
+## Highlights
 
-IDC maintains data and makes it available for download (free egress) both in the Google GCP and Amazon AWS clouds.
+* **>60 TB**: IDC contains radiology, brightfield (H\&E) and fluorescence slide microscopy images, along with image-derived data (annotations, segmentations, quantitative measurements) and accompanying clinical data
+* **free**: all of the data in IDC is publicly available: no registration, no access requests
+* **commercial-friendly**: >95% of the data in IDC is covered by the permissive CC-BY license, which allows commercial reuse (small subset of data is covered by the CC-NC license); each file in IDC is tagged with the license to make it easier for you to understand and follow the rules
+* **cloud-based**: all of the data in IDC is available from both Google and AWS public buckets: fast and free to download, no out-of-cloud egress fees
+* **harmonized**: all of the images and image-derived data in IDC is harmonized into standard DICOM representation
 
-IDC **connects** researchers with&#x20;
+## Functionality
 
-1. Cancer image collections
-2. Robust infrastructure that contains imaging data, subject and sample metadata, and experimental metadata from disparate sources
-3. Resources for searching, identifying, and viewing images, and
-4. Additional data types contained in other Cancer Research Data Commons nodes (e.g., [Genomics Data Commons](https://datacommons.cancer.gov/repository/genomic-data-commons) and [Proteomic Data Commons](https://datacommons.cancer.gov/repository/proteomic-data-commons)).
+IDC is as much about data as it is about what you can do with the data! We maintain and actively develop a variety of tools that are designed to help you efficiently navigate, access and analyze IDC data:
+
+* **exploration**: start with the [IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/) to get an idea of the data available
+* **visualization**: examine images and image-derived annotations and analysis results from the convenience of your browser using integrated OHIF, VolView and Slim open source viewers
+* **cohort building**: use rich and extensive metadata to build subsets of data programmatically using SQL
+* **download**: use your favorite S3 API client, or `pip install`[`idc-index`](https://github.com/ImagingDataCommons/idc-index), to efficiently fetch any of the IDC files from our public buckets
+* **analysis**: conveniently access IDC files and metadata from the tools that are cloud-native, such as Google Colab or Looker; fetch IDC data directly into 3D Slicer using [SlicerIDCBrowser extension](https://github.com/ImagingDataCommons/SlicerIDCBrowser/)
 
 {% hint style="info" %}
 The overview of IDC is available in this open access publication. If you use IDC, please acknowledge us by citing it!

@@ -1,8 +1,18 @@
-# Getting started
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-{% hint style="info" %}
-Whether you are new to the cloud, or you consider yourself an expert, we encourage you to apply for free Google cloud credits that we provide to our users to support cancer imaging research projects that work with Imaging Data Commons. All reasonable requests will receive a $300 allocation of credits that do not expire, and we will not require you to provide a credit card information to verify your identity. All you have to do is fill out and submit [this application form](https://docs.google.com/forms/d/e/1FAIpQLSfXvXqficGaVEalJI3ym6rKqarmW\_YUUWG6A4U8pclvR8MmRQ/viewform).
-{% endhint %}
+# Getting started
 
 IDC is not the place that gives you a push-button solution to your analysis needs, but aims to help you do the analyses you would usually do on your local resources, but faster, and with better reproducibility, and at scale. Our goal in the various examples is to give you a taste of what can be done with IDC data.
 
