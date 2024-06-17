@@ -14,10 +14,6 @@ This page provides details on each of the IDC API endpoints.
 [openapi-appengine.v2.yaml](../.gitbook/assets/openapi-appengine.v2.yaml)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/openapi-appengine.v2.yaml" path="/analysis_results" method="get" %}
-[openapi-appengine.v2.yaml](../.gitbook/assets/openapi-appengine.v2.yaml)
-{% endswagger %}
-
 {% swagger src="../.gitbook/assets/openapi-appengine.v2.yaml" path="/filters" method="get" %}
 [openapi-appengine.v2.yaml](../.gitbook/assets/openapi-appengine.v2.yaml)
 {% endswagger %}
@@ -26,8 +22,8 @@ This page provides details on each of the IDC API endpoints.
 [openapi-appengine.v2.yaml](../.gitbook/assets/openapi-appengine.v2.yaml)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/openapi-appengine.v2.yaml" path="/fields" method="get" %}
-[openapi-appengine.v2.yaml](../.gitbook/assets/openapi-appengine.v2.yaml)
+{% swagger src="../.gitbook/assets/openapi-appengine.v2 (1).yaml" path="/fields/{version}" method="get" %}
+[openapi-appengine.v2 (1).yaml](<../.gitbook/assets/openapi-appengine.v2 (1).yaml>)
 {% endswagger %}
 
 {% swagger src="../.gitbook/assets/openapi-appengine.v2.yaml" path="/cohorts" method="get" %}

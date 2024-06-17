@@ -80,14 +80,6 @@
     * [Endpoint Details](api/v1-api/endpoint-details.md)
     * [Release Notes](api/v1-api/release-notes.md)
 
-## API
-
-* [Getting started](api-1/getting-started.md)
-* [IDC Data Model Concepts](api-1/idc-data-model-concepts.md)
-* [Accessing the API](api-1/accessing-the-api.md)
-* [Endpoint Details](api-1/endpoint-details.md)
-* [Release notes](api-1/release-notes.md)
-
 ## Cookbook
 
 * [Colab notebooks](cookbook/notebooks.md)
