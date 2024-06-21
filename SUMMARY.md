@@ -65,20 +65,19 @@
 * [Portal release notes](portal/release-notes.md)
 * [Portal known issues](portal/portal-known-issues.md)
 
-***
+## API
 
-* [API](api/README.md)
-  * [Getting Started](api/getting-started.md)
-  * [IDC API Concepts](api/idc-api-concepts.md)
-  * [Manifests](api/manifests.md)
-  * [Accessing the API](api/accessing-the-api.md)
-  * [Endpoint Details](api/endpoint-details.md)
-  * [V1 API](api/v1-api/README.md)
-    * [Getting Started](api/v1-api/getting-started.md)
-    * [IDC Data Model Concepts](api/v1-api/idc-data-model-concepts.md)
-    * [Accessing the API](api/v1-api/accessing-the-api.md)
-    * [Endpoint Details](api/v1-api/endpoint-details.md)
-    * [Release Notes](api/v1-api/release-notes.md)
+* [Getting Started](api/getting-started.md)
+* [IDC API Concepts](api/idc-api-concepts.md)
+* [Manifests](api/manifests.md)
+* [Accessing the API](api/accessing-the-api.md)
+* [Endpoint Details](api/endpoint-details.md)
+* [V1 API](api/v1-api/README.md)
+  * [Getting Started](api/v1-api/getting-started.md)
+  * [IDC Data Model Concepts](api/v1-api/idc-data-model-concepts.md)
+  * [Accessing the API](api/v1-api/accessing-the-api.md)
+  * [Endpoint Details](api/v1-api/endpoint-details.md)
+  * [Release Notes](api/v1-api/release-notes.md)
 
 ## Cookbook
 
