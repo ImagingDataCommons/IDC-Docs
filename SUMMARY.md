@@ -91,4 +91,5 @@
   * [3D Slicer desktop VM](cookbook/virtual-machines/idc-desktop.md)
   * [Using a BQ Manifest to Load DICOM Files onto a VM](cookbook/virtual-machines/using-a-bq-manifest-to-load-dicom-files-onto-a-vm.md)
   * [Using VS Code with GCP VMs](cookbook/virtual-machines/using-vs-code-with-gcp-vms.md)
+  * [Security considerations](cookbook/virtual-machines/security-considerations.md)
 * [NCI Cloud Resources](cookbook/nci-data-commons-cloud-resources.md)
