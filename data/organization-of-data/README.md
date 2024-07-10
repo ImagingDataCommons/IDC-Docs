@@ -4,7 +4,7 @@ This section describes the current organization of IDC data. The organization of
 
 ### [Files and metadata](files-and-metadata.md)
 
-### [GA4GH DRS objects](organization-of-data-v2-through-v13-deprecated/guids-and-uuids.md)
+### [GA4GH DRS objects](https://learn.canceridc.dev/data/organization-of-data/guids-and-uuids)
 
 ### [Clinical Data](organization-of-data-v2-through-v13-deprecated/clinical.md)
 
