@@ -20,7 +20,7 @@ layout:
 
 ## Highlights
 
-* **>60 TB**: IDC contains radiology, brightfield (H\&E) and fluorescence slide microscopy images, along with image-derived data (annotations, segmentations, quantitative measurements) and accompanying clinical data
+* **>65 TB of data**: IDC contains radiology, brightfield (H\&E) and fluorescence slide microscopy images, along with image-derived data (annotations, segmentations, quantitative measurements) and accompanying clinical data
 * **free**: all of the data in IDC is publicly available: no registration, no access requests
 * **commercial-friendly**: >95% of the data in IDC is covered by the permissive CC-BY license, which allows commercial reuse (small subset of data is covered by the CC-NC license); each file in IDC is tagged with the license to make it easier for you to understand and follow the rules
 * **cloud-based**: all of the data in IDC is available from both Google and AWS public buckets: fast and free to download, no out-of-cloud egress fees
@@ -32,8 +32,9 @@ IDC is as much about data as it is about what you can do with the data! We maint
 
 * **exploration**: start with the [IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/) to get an idea of the data available
 * **visualization**: examine images and image-derived annotations and analysis results from the convenience of your browser using integrated OHIF, VolView and Slim open source viewers
-* **cohort building**: use rich and extensive metadata to build subsets of data programmatically using SQL
-* **download**: use your favorite S3 API client, or `pip install`[`idc-index`](https://github.com/ImagingDataCommons/idc-index), to efficiently fetch any of the IDC files from our public buckets
+* **programmatic access**: use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) we provide to perform search, download and other operations programmatically
+* **cohort building**: use rich and extensive metadata to build subsets of data programmatically using `idc-index` or BigQuery SQL
+* **download**: use your favorite S3 API client or `idc-index`, to efficiently fetch any of the IDC files from our public buckets
 * **analysis**: conveniently access IDC files and metadata from the tools that are cloud-native, such as Google Colab or Looker; fetch IDC data directly into 3D Slicer using [SlicerIDCBrowser extension](https://github.com/ImagingDataCommons/SlicerIDCBrowser/)
 
 {% hint style="info" %}
