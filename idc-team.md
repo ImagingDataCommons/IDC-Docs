@@ -9,9 +9,7 @@ Our team includes the following sites and project leads:
 * Brigham and Women's Hospital, Boston, MA, USA (BWH)
   * Andrey Fedorov, PhD, and Ron Kikinis, MD - Co-PIs of the project
   * Hugo Aerts, PhD
-  * Dennis Bontempi
   * Cosmin Ciausu, MS
-  * Vamsi Thiriveedhi, MS
   * Deepa Krishnaswamy, PhD
   * Katie Mastrogiacomo
   * Maria Loy
@@ -51,6 +49,7 @@ Oversight:
   * Todd Pihl - project manager
 * National Cancer Institute
   * Erika Kim - federal lead
+  * Granger Sutton - federal lead
 
 ### IDC Alumni
 
@@ -71,6 +70,8 @@ We are grateful to the following individuals who contributed to IDC in the past,
 * Rasmus Kiehl (Fraunhofer MEVIS)
 * Chad Osborne (GDIT)
 * Afshin Akbarzadeh (BWH)
+* Dennis Bontempi (BWH)
+* Vamsi Thiriveedhi (BWH)
 * Jessica Cienda (GDIT)
 * Bernard Larbi (GDIT)
 * Mi Tian (ISB)
