@@ -119,28 +119,17 @@ s5cmd --no-sign-request --endpoint-url https://storage.googleapis.com cp s3://pu
 
 Once `s5cmd` is installed, you can use `s5cmd run` command to download the files corresponding to the manifest.
 
-If you defined manifest that references GCP buckets:
+If you defined manifest that references AWS buckets:
+
+{% code overflow="wrap" %}
+```bash
+s5cmd --no-sign-request run manifest_file_name
+```
+{% endcode %}
+
+If you defined manifest that references GCP buckets, you will need to specify GCS endpoint:
 
 <pre class="language-bash" data-overflow="wrap"><code class="lang-bash">s5cmd --no-sign-request <a data-footnote-ref href="#user-content-fn-1">--endpoint-url https://storage.googleapis.com</a> run manifest_file_name
 </code></pre>
 
-If you defined manifest that references AWS buckets:
-
-<pre class="language-bash" data-overflow="wrap"><code class="lang-bash">s5cmd --no-sign-request <a data-footnote-ref href="#user-content-fn-2">--endpoint-url https://s3.amazonaws.com</a> run manifest_file_name
-</code></pre>
-
-{% hint style="info" %}
-If you created the manifest using IDC Portal, you will have the instructions to install `s5cmd` and the exact command to download its content in the header of the manifest, which will look like this:
-
-{% code overflow="wrap" %}
-```
-# To download the files in this manifest, first install s5cmd (https://github.com/peak/s5cmd),
-# then run the following command:
-# s5cmd --no-sign-request --endpoint-url https://s3.amazonaws.com run cohorts_996_20230505_72608_aws.s5cmd
-```
-{% endcode %}
-{% endhint %}
-
 [^1]: Use this endpoint for accessing GCS buckets
-
-[^2]: Use this endpoint for accessing AWS buckets
