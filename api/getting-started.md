@@ -1,6 +1,6 @@
 # Getting Started
 
-This section describes version 2 of the IDC REST API . The documentation for the version 1 API will be found [here](broken-reference).
+This section describes version 2 of the IDC REST API . The documentation for the version 1 API will be found [here](https://learn.canceridc.dev/api/v1-api).
 
 This API is designed for use by developers of image analysis and data mining tools to directly query the public resources of the IDC and retrieve information into their applications. The API complements the IDC web application but eliminates the need for users to visit the IDC web pages to perform cohort creation, manifest export, and transfer of image data to some local file system.
 
