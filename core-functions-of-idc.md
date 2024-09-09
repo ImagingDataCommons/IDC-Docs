@@ -20,6 +20,7 @@ We are actively developing a variety of capabilities to make it easier for the u
 * we are the maintainers of [Slim](https://github.com/ImagingDataCommons/slim) - an open-source viewer of DICOM digital pathology images; Slim is integrated with IDC Portal for visualizing pathology images and image-derived data available in IDC
 * we are actively contributing to the [OHIF Viewer](https://github.com/OHIF/Viewers), and rely on it for visualizing radiology images and image-derived data
 * [`idc-index`](https://github.com/ImagingDataCommons/idc-index) is a python package that provides convenience functions for accessing IDC data, including efficient download from IDC public S3 buckets
+* [3D Slicer](https://slicer.org) extensions [SlicerIDCBrowser](https://github.com/ImagingDataCommons/SlicerIDCBrowser) can be used for interactive download of IDC data
 * we are contributing to a variety of tools that aim to simplify the use of DICOM in cancer imaging research; these include [OpenSlide](https://openslide.org/formats/dicom/) and [BioFormats bfconvert](https://bio-formats.readthedocs.io/en/v7.3.1/formats/dicom.html) library that can be used for conversion between DICOM Whole Slide Imaging (WSI) format and other slide microscopy formats, [dcmqi](https://github.com/QIICR/dcmqi) library for converting image analysis results to and from DICOM representation
 
 {% embed url="https://docs.google.com/presentation/d/13NQKWfauODArO4A6BrxJNZQODKoq5tJEQ0xg_Dvji7s/edit?usp=sharing" %}
