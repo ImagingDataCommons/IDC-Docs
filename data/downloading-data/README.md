@@ -46,6 +46,15 @@ Downloading data:   7%|█████                                          
 
 Similarly, you can copy identifiers for patient/study/series and download the corresponding content!
 
+```sh
+# download all files for patient ID 100002
+$ idc download 100002
+# download all files for DICOM StudyInstanceUID 1.2.840.113654.2.55.192012426995727721871016249335309434385
+$ idc download 1.2.840.113654.2.55.192012426995727721871016249335309434385
+# download all files for DICOM SeriesInstanceUID 1.2.840.113654.2.55.305538394446738410906709753576946604022
+$ idc download 1.2.840.113654.2.55.305538394446738410906709753576946604022
+```
+
 #### Programmatic download
 
 ```python
