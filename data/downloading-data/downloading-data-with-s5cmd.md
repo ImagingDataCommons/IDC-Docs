@@ -123,7 +123,7 @@ If you defined manifest that references AWS buckets:
 
 {% code overflow="wrap" %}
 ```bash
-s5cmd --no-sign-request run manifest_file_name
+s5cmd --no-sign-request --endpoint-url=https://s3.amazonaws.com run manifest_file_name
 ```
 {% endcode %}
 
