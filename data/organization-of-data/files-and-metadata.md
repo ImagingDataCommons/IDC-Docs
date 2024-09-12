@@ -75,7 +75,9 @@ The set of BQ tables and views has grown over time. The enumeration below docume
 
 #### `dicom_metadata`
 
-* Table in BigQuery: [`dicom_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_metadata\&page=table)
+{% hint style="info" %}
+Table in BigQuery: [`dicom_metadata`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_metadata\&page=table)
+{% endhint %}
 
 Each row in the `dicom_metadata` table holds the DICOM metadata of an instance in the corresponding IDC version. There is a single row for each DICOM instance in the corresponding IDC version, and the columns correspond to the DICOM attributes encountered in the data across all of the ingested instances.
 
