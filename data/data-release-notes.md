@@ -12,7 +12,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 ## v19 - September 2024
 
-### New pathology collections
+**New pathology collections**
 
 1. [CCDI-MCI](https://doi.org/10.5281/zenodo.11099087)
 2. [CMB-AML](https://doi.org/10.5281/zenodo.11099111)
@@ -24,7 +24,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 8. [CMB-PCA](https://doi.org/10.5281/zenodo.11099111)
 9. [GTEx](https://doi.org/10.5281/zenodo.11099099)
 
-### New analysis results
+**New analysis results**
 
 1. [Pancreas-CT-SEG](https://doi.org/10.5281/zenodo.12130275)\
    Collections analyzed:
@@ -46,7 +46,7 @@ Please refer to the license and terms of use, which are defined in the `license_
    13. [TCGA-UCEC](https://doi.org/10.5281/zenodo.12689968)
    14. [TCGA-UVM](https://doi.org/10.5281/zenodo.12690041)
 
-### Revised radiology collections
+**Revised radiology collections**
 
 1. [Advanced-MRI-Breast-Lesions](https://www.cancerimagingarchive.net/collection/advanced-mri-breast-lesions/)
 2. [CMB-AML](https://www.cancerimagingarchive.net/collection/cmb-aml/)
@@ -62,7 +62,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 12. [NLM-Visible-Human-Project](https://doi.org/10.5281/zenodo.12690049)
 13. [RIDER Lung CT](https://www.cancerimagingarchive.net/collection/rider-lung-ct/)
 
-### Revised analysis results
+**Revised analysis results**
 
 1. [BAMF-AIMI-Annotations](https://doi.org/10.5281/zenodo.8345959)\
    Collections analyzed:
@@ -91,11 +91,11 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 ## v18 - April 2024
 
-### New radiology collections
+**New radiology collections**
 
 1. [Advanced-MRI-Breast-Lesions](https://doi.org/10.7937/C7X1-YN57)
 
-### New analysis results
+**New analysis results**
 
 1. [RMS-Mutation-Prediction-Expert-Annotations](https://doi.org/10.5281/zenodo.10462857)\*\
    Collections analyzed:
@@ -104,14 +104,14 @@ Please refer to the license and terms of use, which are defined in the `license_
    Collections analyzed:
    1. [NLST](https://doi.org/10.7937/TCIA.HMQ8-J677)
 
-### Revised radiology collections
+**Revised radiology collections**
 
 (starred collections are revised due to new or revised analysis results)
 
 1. [Breast-Cancer-Screening-DBT](https://doi.org/10.7937/E4WT-CD02) (revisions only to clinical data)
 2. [NLST](https://doi.org/10.7937/TCIA.HMQ8-J677)\*\*
 
-### Revised pathology collections
+**Revised pathology collections**
 
 (starred collections are revised due to new or revised analysis results)
 
@@ -148,7 +148,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 25. [TCGA-UCEC](https://doi.org/10.7937/K9/TCIA.2016.GKJ0ZWAC)
 26. [TCGA-UCS](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers/uterine-carcinosarcoma)
 
-### New clinical metadata tables
+**New clinical metadata tables**
 
 1. [acrin\_nsclc\_fdg\_pet\_bamf\_lung\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_nsclc\_fdg\_pet)
 2. [anti\_pd\_1\_lung\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
@@ -169,7 +169,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 17. [tcga\_lusc\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
 18. [tcga\_lusc\_bamf\_lung\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
 
-### Notes
+**Notes**
 
 The deprecated columns `tcia_api_collection_id` and `idc_webapp_collection_id` have been removed from the `auxiliary_metadata` table in the `idc_v18` BQ dataset. These columns were duplicates of columns `collection_name` and `collection_id` respectively.
 
