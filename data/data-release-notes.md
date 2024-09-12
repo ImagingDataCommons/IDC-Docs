@@ -10,6 +10,85 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## v19 - September 2024
+
+### New pathology collections
+
+1. [CCDI-MCI](https://doi.org/10.5281/zenodo.11099087)
+2. [CMB-AML](https://doi.org/10.5281/zenodo.11099111)
+3. [CMB-CRC](https://doi.org/10.5281/zenodo.11099111)
+4. [CMB-GEC](https://doi.org/10.5281/zenodo.11099111)
+5. [CMB-LCA](https://doi.org/10.5281/zenodo.11099111)
+6. [CMB-MEL](https://doi.org/10.5281/zenodo.11099111)
+7. [CMB-MML](https://doi.org/10.5281/zenodo.11099111)
+8. [CMB-PCA](https://doi.org/10.5281/zenodo.11099111)
+9. [GTEx](https://doi.org/10.5281/zenodo.11099099)
+
+### New analysis results
+
+1. [Pancreas-CT-SEG](https://doi.org/10.5281/zenodo.12130275)\
+   Collections analyzed:
+   1. [Pancreas-CT](https://doi.org/10.7937/k9/tcia.2016.tnb1kqbu)
+2. [Pan-Cancer-Nuclei-Seg-DICOM](https://doi.org/10.5281/zenodo.11099004)\
+   Collections analyzed:
+   1. [TCGA-BLCA](https://doi.org/10.5281/zenodo.12690045)
+   2. [TCGA-BRCA](https://doi.org/10.5281/zenodo.12689962)
+   3. [TCGA-CESC](https://doi.org/10.5281/zenodo.12689956)
+   4. [TCGA-COAD](https://doi.org/10.5281/zenodo.12689970)
+   5. [TCGA-GBM](https://doi.org/10.5281/zenodo.12690010)
+   6. [TCGA-LUAD](https://doi.org/10.5281/zenodo.12689915)
+   7. [TCGA-LUSC](https://doi.org/10.5281/zenodo.12690008)
+   8. [TCGA-PAAD](https://doi.org/10.5281/zenodo.12689972)
+   9. [TCGA-PRAD](https://doi.org/10.5281/zenodo.12689935)
+   10. [TCGA-READ](https://doi.org/10.5281/zenodo.12689998)
+   11. [TCGA-SKCM](https://doi.org/10.5281/zenodo.12690039)
+   12. [TCGA-STAD](https://doi.org/10.5281/zenodo.12690037)
+   13. [TCGA-UCEC](https://doi.org/10.5281/zenodo.12689968)
+   14. [TCGA-UVM](https://doi.org/10.5281/zenodo.12690041)
+
+### Revised radiology collections
+
+1. [Advanced-MRI-Breast-Lesions](https://www.cancerimagingarchive.net/collection/advanced-mri-breast-lesions/)
+2. [CMB-AML](https://www.cancerimagingarchive.net/collection/cmb-aml/)
+3. [CMB-CRC](https://www.cancerimagingarchive.net/collection/cmb-crc/)
+4. [CMB-GEC](https://www.cancerimagingarchive.net/collection/cmb-gec/)
+5. [CMB-LCA](https://www.cancerimagingarchive.net/collection/cmb-lca/)
+6. [CMB-MEL](https://www.cancerimagingarchive.net/collection/cmb-mel/)
+7. [CMB-MML](https://www.cancerimagingarchive.net/collection/cmb-mml/)
+8. [CMB-PCA](https://www.cancerimagingarchive.net/collection/cmb-pca/)
+9. [CPTAC-CCRCC](https://www.cancerimagingarchive.net/collection/cptac-ccrcc/)
+10. [CPTAC-LSCC](https://www.cancerimagingarchive.net/collection/cptac-lscc/)
+11. [CPTAC-UCEC](https://www.cancerimagingarchive.net/collection/cptac-ucec/)
+12. [NLM-Visible-Human-Project](https://doi.org/10.5281/zenodo.12690049)
+13. [RIDER Lung CT](https://www.cancerimagingarchive.net/collection/rider-lung-ct/)
+
+### Revised analysis results
+
+1. [BAMF-AIMI-Annotations](https://doi.org/10.5281/zenodo.8345959)\
+   Collections analyzed:
+   1. [ ACRIN-NSCLC-FDG-PET](https://doi.org/10.7937/tcia.2019.30ilqfcl)
+   2. &#x20;[Anti-PD-1\_Lung](https://doi.org/10.7937/tcia.2019.zjjwb9ip)
+   3. &#x20;[Colorectal-Liver-Metastases](https://doi.org/10.7937/qxk2-qg03)
+   4. &#x20;[CPTAC-CCRCC](https://doi.org/10.7937/k9/tcia.2018.oblamn27)
+   5. &#x20;[Duke-Breast-Cancer-MRI](https://doi.org/10.7937/tcia.e3sv-re93)
+   6. &#x20;[HCC-TACE-Seg](https://doi.org/10.7937/tcia.5fna-0924)
+   7. &#x20;[Lung-PET-CT-Dx](https://doi.org/10.7937/tcia.2020.nnc2-0461)
+   8. &#x20;[NLST](https://doi.org/10.7937/tcia.hmq8-j677)
+   9. &#x20;[NSCLC Radiogenomics](https://doi.org/10.7937/k9/tcia.2017.7hs46erv)
+   10. &#x20;[Prostate-MRI-US-Biopsy](https://doi.org/10.7937/tcia.2020.a61ioc1a)
+   11. &#x20;[PROSTATEx](https://doi.org/10.7937/k9tcia.2017.murs5cl)
+   12. [ QIN-BREAST](https://doi.org/10.7937/k9/tcia.2016.21juebh0)
+   13. &#x20;[QIN LUNG CT](https://doi.org/10.7937/k9/tcia.2015.npgzyzbz)
+   14. &#x20;[RIDER Lung PET-CT](https://doi.org/10.7937/k9/tcia.2015.ofip7tvm)
+   15. &#x20;[SPIE-AAPM Lung CT Challenge](https://doi.org/10.7937/k9/tcia.2015.uzlsu3fl)
+   16. &#x20;[TCGA-KICH](https://doi.org/10.7937/k9/tcia.2016.yu3rbczn)
+   17. &#x20;[TCGA-KIRC](https://doi.org/10.7937/k9/tcia.2016.v6pbvtdr)
+   18. &#x20;[TCGA-KIRP](https://doi.org/10.7937/k9/tcia.2016.acwogbef)
+   19. &#x20;[TCGA-LIHC](https://doi.org/10.7937/k9/tcia.2016.immqw8uq)
+   20. &#x20;[TCGA-LUAD](https://doi.org/10.7937/k9/tcia.2016.jgnihep5)
+   21. &#x20;[TCGA-LUSC](https://doi.org/10.7937/k9/tcia.2016.tygkkfmq)
+   22. &#x20;[UPENN-GBM](https://doi.org/10.7937/tcia.709x-dn49)
+
 ## v18 - April 2024
 
 ### New radiology collections
@@ -39,7 +118,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 1. [CPTAC-BRCA](https://doi.org/10.7937/TCIA.CAEM-YS80) (fix PatientAges > 090Y)
 2. [CPTAC-COAD](https://doi.org/10.7937/TCIA.YZWQ-ZZ63) (fix PatientAges > 090Y)
 3. [RMS-Mutation-Prediction](https://doi.org/10.5281/zenodo.8225131)\*
-   1. Also added missing instance \
+   1. Also added missing instance\
       SOPInstanceUID: 1.3.6.1.4.1.5962.99.1.3459553143.523311062.1687086765943.9.0
    2. Removed corrupted instances
       1. SOPInstanceUID: 1.3.6.1.4.1.5962.99.1.2164023716.1899467316.1685791236516.37.0
@@ -71,29 +150,28 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 ### New clinical metadata tables
 
-1. [acrin_nsclc_fdg_pet_bamf_lung_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_nsclc\_fdg\_pet)
-2. [anti_pd_1_lung_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
-3. [anti_pd_1_lung_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
-4. [lung_pet_ct_dx_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx)
-5.  [lung_pet_ct_dx_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx) 
-6.  [nsclc_radiogenomics_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
-7. [nsclc_radiogenomics_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
-8. [prostatex_bamf_segmentations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=prostatex)
-9. [qin_breast_bamf_breast_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=qin\_breast) 
-10. [rider_lung_pet_ct_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
-11. [rider_lung_pet_ct_bamf_lung_fdg_pet_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
-12. [tcga_kirc_bamf_kidney_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_kirc)
-13. [tcga_lihc_bamf_liver_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
-14. [tcga_lihc_bamf_liver_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
-15. [tcga_luad_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
-16. [tcga_luad_bamf_lung_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
-17. [tcga_lusc_bamf_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
-18. [tcga_lusc_bamf_lung_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
-
+1. [acrin\_nsclc\_fdg\_pet\_bamf\_lung\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_nsclc\_fdg\_pet)
+2. [anti\_pd\_1\_lung\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
+3. [anti\_pd\_1\_lung\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
+4. [lung\_pet\_ct\_dx\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx)
+5. [lung\_pet\_ct\_dx\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx)
+6. [nsclc\_radiogenomics\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
+7. [nsclc\_radiogenomics\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
+8. [prostatex\_bamf\_segmentations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=prostatex)
+9. [qin\_breast\_bamf\_breast\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=qin\_breast)
+10. [rider\_lung\_pet\_ct\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
+11. [rider\_lung\_pet\_ct\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
+12. [tcga\_kirc\_bamf\_kidney\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_kirc)
+13. [tcga\_lihc\_bamf\_liver\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
+14. [tcga\_lihc\_bamf\_liver\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
+15. [tcga\_luad\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
+16. [tcga\_luad\_bamf\_lung\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
+17. [tcga\_lusc\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
+18. [tcga\_lusc\_bamf\_lung\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
 
 ### Notes
 
-The deprecated columns `tcia_api_collection_id` and `idc_webapp_collection_id` have been removed from the `auxiliary_metadata` table in the `idc_v18` BQ dataset.  These columns were duplicates of columns `collection_name` and `collection_id` respectively.&#x20;
+The deprecated columns `tcia_api_collection_id` and `idc_webapp_collection_id` have been removed from the `auxiliary_metadata` table in the `idc_v18` BQ dataset. These columns were duplicates of columns `collection_name` and `collection_id` respectively.
 
 ## v17 - December 2023
 
