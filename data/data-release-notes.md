@@ -62,6 +62,8 @@ Please refer to the license and terms of use, which are defined in the `license_
 12. [NLM-Visible-Human-Project](https://doi.org/10.5281/zenodo.12690049)
 13. [RIDER Lung CT](https://www.cancerimagingarchive.net/collection/rider-lung-ct/)
 
+Cancer Moonshot Biobank (CMB) radiology images were updated to fix incorrect values assigned to `PatientID` (see details on the collection pages linked above). The updated images have different DICOM Study/Series/SOPInstanceUIDs.&#x20;
+
 **Revised analysis results**
 
 1. [BAMF-AIMI-Annotations](https://doi.org/10.5281/zenodo.8345959)\
