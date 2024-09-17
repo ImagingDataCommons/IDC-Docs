@@ -110,9 +110,7 @@ Cancer Moonshot Biobank (CMB) radiology images were updated to fix incorrect val
 15. [acrin\_contralateral\_breast\_mr\_PR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
 16. [acrin\_contralateral\_breast\_mr\_QA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
 17. [advanced\_mri\_breast\_lesions\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=advanced\_mri\_breast\_lesions)
-18. [tcga_lusc_lung_ct_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
-19. [tcga_lusc_lung_mr_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
-20. [upenn\_gbm](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=upenn\_gbm)
+18. [upenn\_gbm](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=upenn\_gbm)
 
 
 ## v18 - April 2024
