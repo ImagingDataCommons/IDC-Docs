@@ -91,6 +91,28 @@ Cancer Moonshot Biobank (CMB) radiology images were updated to fix incorrect val
    21. &#x20;[TCGA-LUSC](https://doi.org/10.7937/k9/tcia.2016.tygkkfmq)
    22. &#x20;[UPENN-GBM](https://doi.org/10.7937/tcia.709x-dn49)
 
+**New clinical metadata tables**
+
+1. [acrin\_contralateral\_breast\_mr\_A0](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+2. [acrin\_contralateral\_breast\_mr\_AB](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+3. [acrin\_contralateral\_breast\_mr\_F1](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+4. [acrin\_contralateral\_breast\_mr\_I1](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+5. [acrin\_contralateral\_breast\_mr\_IA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+6. [acrin\_contralateral\_breast\_mr\_IM](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+7. [acrin\_contralateral\_breast\_mr\_IS](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+8. [acrin\_contralateral\_breast\_mr\_KS](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+9. [acrin\_contralateral\_breast\_mr\_MS](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+10. [acrin\_contralateral\_breast\_mr\_M4](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+11. [acrin\_contralateral\_breast\_mr\_P8](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+12. [acrin\_contralateral\_breast\_mr\_PA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+13. [acrin\_contralateral\_breast\_mr\_PD](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+14. [acrin\_contralateral\_breast\_mr\_PE](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+15. [acrin\_contralateral\_breast\_mr\_PR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+16. [acrin\_contralateral\_breast\_mr\_QA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
+17. [advanced\_mri\_breast\_lesions\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=advanced\_mri\_breast\_lesions)
+18. [upenn\_gbm](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=upenn\_gbm)
+
+
 ## v18 - April 2024
 
 **New radiology collections**
