@@ -20,6 +20,10 @@
 * [Requesting GCP cloud credits](introduction/requesting-gcp-cloud-credits.md)
 * [Requesting AWS cloud credits](introduction/requesting-aws-cloud-credits.md)
 
+## Tutorials
+
+* [Working with DICOM slide microscopy](tutorials/slide-microscopy.md)
+
 ## Data
 
 * [Introduction](data/introduction.md)
