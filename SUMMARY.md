@@ -22,7 +22,9 @@
 
 ## Tutorials
 
-* [Working with DICOM slide microscopy](tutorials/slide-microscopy.md)
+* [Python notebook tutorials](https://github.com/ImagingDataCommons/IDC-Tutorials)
+* [Working with DICOM slide microscopy](tutorials/slide-microscopy/README.md)
+  * [Using QuPath for visualization](tutorials/slide-microscopy/qpath-for-sm-visualization.md)
 
 ## Data
 
