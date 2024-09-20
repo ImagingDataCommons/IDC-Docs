@@ -63,6 +63,5 @@ Many of the imaging collections are also accompanied by the genomics or proteomi
 IDC Portal gives you access to just a small subset of the metadata accompanying IDC images. If you want to learn more about what is available, you have several options:
 
 * [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part2\_searching\_basics.ipynb) from our Getting Started tutorial series explains how to use [`idc-index`](https://github.com/ImagingDataCommons/idc-index) - a python package that aims to simplify access to IDC data
-*
-
-If you are not comfortable writing queries, you can use [this DataStudio dashboard](https://datastudio.google.com/reporting/ab96379c-e134-414f-8996-188e678f1b70/page/KHtxB) to search using some of the attributes that are not available through the portal. You can also [extend this dashboard](cookbook/data-studio/cohort-dashboard.md) to include additional attributes.
+* [this more advanced notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part3\_exploring\_cohorts.ipynb) will help you get started with searching IDC metadata in BigQuery, which gives you access to all of the DICOM metadata extracted from IDC-hosted files
+* if you are not comfortable writing queries or coding in pyhon, you can use [this DataStudio dashboard](https://datastudio.google.com/reporting/ab96379c-e134-414f-8996-188e678f1b70/page/KHtxB) to search using some of the attributes that are not available through the portal. You can also [extend this dashboard](cookbook/data-studio/cohort-dashboard.md) to include additional attributes.
