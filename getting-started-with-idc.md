@@ -45,7 +45,7 @@ We want to make it easier to understand performance of the latest advances in AI
 
 * if you have a Google account, you have free access to Google Colab, which allows you to run python notebooks on cloud VMs equipped with GPU - for free! Combined with `idc-index` for data access, this makes it rather easy to experiment with the latest AI tools! As an example, take a look at [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/MedSAM\_with\_IDC.ipynb) that allows you to apply MedSAM model to IDC data. You will find a growing number of notebooks to help you use IDC in [this repository](https://github.com/ImagingDataCommons/IDC-Tutorials).
 * use IDC to develop HuggingFace spaces that demonstrate the power of your models on real data: see [this space](https://huggingface.co/spaces/ImagingDataCommons/SegVolOnIDC) we developed for SegVol
-* growing number of AI medical imaging models is being curated on the MHub.ai platform; see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/mhubai\_tutorial.ipynb) to learn how to apply those models on data from IDC
+* growing number of AI medical imaging models is being curated on the [MHub.ai](https://mhub.ai) platform; see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/mhubai\_tutorial.ipynb) to learn how to apply those models on data from IDC
 
 How about accompanying your next publication by a working demonstration notebook on relevant samples from IDC? You can see an example how we did this in [this recent publication](https://dx.doi.org/10.1016/j.cmpb.2023.107839).
 
