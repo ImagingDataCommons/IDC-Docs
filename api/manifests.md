@@ -413,7 +413,7 @@ This tells us that the group of instances corresponding to the first row of the 
 
 #### Study Granularity
 
-A manifest will have _**study granularity**_ if it goes _not_ have _**series**_** or **_**instance granularity**_ and the queryFields list includes one or more of the fields:
+A manifest will have _**study granularity**_ if it goes _not_ have _**series**_**&#x20;or&#x20;**_**instance granularity**_ and the queryFields list includes one or more of the fields:
 
 * _StudyInstanceUID_
 * _crdc\_study\_uuid_

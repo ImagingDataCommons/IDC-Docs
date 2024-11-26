@@ -4,7 +4,7 @@
 
 If you have a university email account, you can complete a relatively easy application process to receive an allocation of free credits that you can then use to create pre-configured GPU-enabled cloud-based linux virtual machines with desktop interface available via browser. You can use those machines, for example, to have a convenient access to an instance of [3D Slicer](https://www.slicer.org/) for experimenting with AI models, or for training DL networks.
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="319"><figcaption><p>Example of the configurations available for the Ubuntu 22.04 base image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt="" width="319"><figcaption><p>Example of the configurations available for the Ubuntu 22.04 base image</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption><p>GPU configurations available, from <a href="https://docs.jetstream-cloud.org/general/vmsizes/#jetstream2-gpu">https://docs.jetstream-cloud.org/general/vmsizes/#jetstream2-gpu</a></p></figcaption></figure>
 
@@ -23,7 +23,7 @@ Follow these steps:
 * **Very easy to set up.** As of writing, there is no similar product available from Google Cloud, which would provide desktop access to a VM with a comparable ease of access. AWS provides [AppStream2](https://aws.amazon.com/appstream2/), but we have yet to experiment to evaluate it.
 * **You can do a lot with the basic credit allocation!** Entry-level allocations can be on the order of 100,000s, while the burn rate is, for example, 8 SUs/hour for a medium size VM (8 CPUs/30 GB RAM). As a reference:&#x20;
   * it takes about 1 hour to build Slicer application from scratch on a medium-sized VM using 7 threads
-  * it took \~7 days and \~5000 SUs to train the model in [this repository](https://github.com/pieper/nnmouse) (see summary in the slides [here](https://docs.google.com/presentation/d/1zlTCcGPwYRzuZnXhJ3RHJ7\_AQM4Nr8aU8Me1A6TQJjM/edit?usp=sharing)) using `g3.large` VM configuration
+  * it took \~7 days and \~5000 SUs to train the model in [this repository](https://github.com/pieper/nnmouse) (see summary in the slides [here](https://docs.google.com/presentation/d/1zlTCcGPwYRzuZnXhJ3RHJ7_AQM4Nr8aU8Me1A6TQJjM/edit?usp=sharing)) using `g3.large` VM configuration
 * **Geared to help you save!** Unlike the VMs you get from the commercial providers, JetStream VMs can be _shelved._ Once a VM is shelved, you spend zero SUs for keeping it around (in comparison, you will keep paying for the disk storage of your GCP VMs even when they are turned off).
 * **Customer support is excellent!** We received responses within 1-2 days. On some occasions, we observed glitches with Web Desktop, but those could often be resolved by restarting the VM.
 
