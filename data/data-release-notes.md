@@ -3,12 +3,117 @@
 {% hint style="info" %}
 Data hosted by IDC is ingested from several sources, including [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/), [Genomics Data Commons (GDC)](https://gdc.cancer.gov/), [Clinical Proteomic Tumor Analysis Consortium (CPTAC)](https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/clinical-proteomic-tumor-analysis-consortium-cptac) and [Human Tumor Atlas Network (HTAN)](https://humantumoratlas.org/).
 
-Please refer to the license and terms of use, which are defined in the `license_url` and `source_doi` or `source_doi` of the IDC BigQuery [`dicom_all` table](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table). You can filter the data by license type in the [IDC Portal](https://imaging.datacommons.cancer.gov/).
+Please refer to the license and terms of use, which are defined in the `license_url` and `source_doi` or `source_doi` of the IDC BigQuery [`dicom_all` table](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc_current\&t=dicom_all\&page=table). You can filter the data by license type in the [IDC Portal](https://imaging.datacommons.cancer.gov/).
 {% endhint %}
 
 ## IDC releases summary view
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
+
+## V20 - November 2024
+
+#### New radiology collections
+
+1. [Mediastinal-Lymph-Node-SEG](https://www.cancerimagingarchive.net/collection/mediastinal-lymph-node-seg/)
+2. [Spine-Mets-CT-SEG](https://doi.org/10.7937/kh36-ds04)
+
+#### New pathology collections&#x20;
+
+1. [CMB-BRCA](https://doi.org/10.5281/zenodo.13993761)
+2. [CMB-OV](https://doi.org/10.5281/zenodo.13993796)
+
+#### Revised radiology collections
+
+1. [CMB-AML](https://www.cancerimagingarchive.net/collection/cmb-aml/)
+2. [CMB-CRC](https://www.cancerimagingarchive.net/collection/cmb-crc/)
+3. [CMB-GEC](https://www.cancerimagingarchive.net/collection/cmb-gec/)
+4. [CMB-LCA](https://www.cancerimagingarchive.net/collection/cmb-lca/)
+5. [CMB-MEL](https://www.cancerimagingarchive.net/collection/cmb-mel/)
+6. [CMB-MML](https://www.cancerimagingarchive.net/collection/cmb-mml/)
+7. [CMB-PCA](https://www.cancerimagingarchive.net/collection/cmb-ov/)
+
+#### Revised pathology collections
+
+1. [CCDI-MCI](https://doi.org/10.5281/zenodo.11099086)
+2. [CMB-AML](https://doi.org/10.5281/zenodo.13993759)
+3. [CMB-CRC](https://doi.org/10.5281/zenodo.13993769)
+4. [CMB-GEC](https://doi.org/10.5281/zenodo.13993773)
+5. [CMB-LCA](https://doi.org/10.5281/zenodo.13993776)
+6. [CMB-MEL](https://doi.org/10.5281/zenodo.13993787)
+7. [CMB-MML](https://doi.org/10.5281/zenodo.13993792)
+8. [CMB-PCA](https://doi.org/10.5281/zenodo.13993798)
+
+#### Revised analysis results
+
+1. [BAMF-AIMI-Annotations\
+   ](https://doi.org/10.5281/zenodo.8345959)\
+   Collections analyzed:
+   1. &#x20;[UPENN-GBM](https://doi.org/10.5281/zenodo.8345959)
+2.  [Pan-Cancer-Nuclei-Seg-DICOM\
+    ](https://doi.org/10.5281/zenodo.11099004)\
+    Collections analyzed:
+
+    1. [TCGA-BLCA](https://doi.org/10.5281/zenodo.12690045)
+    2. &#x20;[TCGA-BRCA](https://doi.org/10.5281/zenodo.12689962)
+    3. &#x20;[TCGA-CESC](https://doi.org/10.5281/zenodo.12689956)
+    4. &#x20;[TCGA-COAD](https://doi.org/10.5281/zenodo.12689970)
+    5. [ TCGA-GBM](https://doi.org/10.5281/zenodo.12690010)
+    6. [TCGA-LUAD](https://doi.org/10.5281/zenodo.12689915)
+    7. &#x20;[TCGA-LUSC](https://doi.org/10.5281/zenodo.12690008)
+    8. &#x20;[TCGA-PAAD](https://doi.org/10.5281/zenodo.12689972)
+    9. &#x20;[TCGA-PRAD](https://doi.org/10.5281/zenodo.12689935)
+    10. &#x20;[TCGA-READ](https://doi.org/10.5281/zenodo.12689998)
+    11. &#x20;[TCGA-SKCM](https://doi.org/10.5281/zenodo.12690039)
+    12. &#x20;[TCGA-STAD](https://doi.org/10.5281/zenodo.12690037)
+    13. &#x20;[TCGA-UCEC](https://doi.org/10.5281/zenodo.12689968)
+    14. &#x20;[TCGA-UVM](https://doi.org/10.5281/zenodo.12690041)
+
+    \
+    The segmentation of an instance in each of the following series was excluded due to having a DICOM PixelData size greater than or equal to 2GB:
+
+    1. 1.2.826.0.1.3680043.10.511.3.10544506665348704312902213950958190
+    2. 1.2.826.0.1.3680043.10.511.3.11183783347037364699862133130586654
+    3. 1.2.826.0.1.3680043.10.511.3.11834745481756047014039855874680259
+    4. 1.2.826.0.1.3680043.10.511.3.11901667084519361717338400810055642
+    5. 1.2.826.0.1.3680043.10.511.3.12041600048156613329793822566495651
+    6. 1.2.826.0.1.3680043.10.511.3.12718116375608495830041119776887887
+    7. 1.2.826.0.1.3680043.10.511.3.13386724401829265460622415500801368
+    8. 1.2.826.0.1.3680043.10.511.3.14042734131864468280344737986870899
+    9. 1.2.826.0.1.3680043.10.511.3.17374765903080083648409690755539184
+    10. 1.2.826.0.1.3680043.10.511.3.17429002643681869326389465422353495
+    11. 1.2.826.0.1.3680043.10.511.3.20359930476040698387716730891020638
+    12. 1.2.826.0.1.3680043.10.511.3.28397033639127902823368316410884210
+    13. 1.2.826.0.1.3680043.10.511.3.28425539132321749931109935391487352
+    14. 1.2.826.0.1.3680043.10.511.3.34574227972763695321794092913087775
+    15. 1.2.826.0.1.3680043.10.511.3.36216094237641867532902805456135029
+    16. 1.2.826.0.1.3680043.10.511.3.39533936694797964318706337783276378
+    17. 1.2.826.0.1.3680043.10.511.3.39900930856460689132625586523683939
+    18. 1.2.826.0.1.3680043.10.511.3.41633795217567037218184715094985555
+    19. 1.2.826.0.1.3680043.10.511.3.42218106649761752724553401155203874
+    20. 1.2.826.0.1.3680043.10.511.3.49098870621170235412220976183110770
+    21. 1.2.826.0.1.3680043.10.511.3.50064322235999800062455171235601125
+    22. 1.2.826.0.1.3680043.10.511.3.50905421517530127976832505410705816
+    23. 1.2.826.0.1.3680043.10.511.3.62935684444056080516153739948364303
+    24. 1.2.826.0.1.3680043.10.511.3.73572792121235596011940904319511291
+    25. 1.2.826.0.1.3680043.10.511.3.74494366757564543824303304482444570
+    26. 1.2.826.0.1.3680043.10.511.3.79988146996803179892075404247166692
+    27. 1.2.826.0.1.3680043.10.511.3.80004293150506819482091023564947091
+    28. 1.2.826.0.1.3680043.10.511.3.82774274518897141254234567300292686
+    29. 1.2.826.0.1.3680043.10.511.3.84202416467561501610598853920808906
+    30. 1.2.826.0.1.3680043.10.511.3.86214492184712627544696209982376598
+    31. 1.2.826.0.1.3680043.10.511.3.90193069664920622990317347485104073
+    32. 1.2.826.0.1.3680043.10.511.3.95666157880521064637011880609274546
+    33. 1.2.826.0.1.3680043.10.511.3.96676982370873257329281821215166082
+    34. 1.2.826.0.1.3680043.10.511.3.98258035017480972315346136181769675
+3. [RMS-Mutation-Prediction-Expert-Annotations\
+   ](https://doi.org/10.5281/zenodo.10462857)\
+   Collections analyzed:
+   1. [RMS-Mutation-Prediction](https://doi.org/10.5281/zenodo.8225131)
+
+#### New Clinical Metadata Tables
+
+1. [mediastinal\_lymph\_node\_seg\_clinical](https://ortal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=mediastinal_lymph_node_seg)
+2. [spine\_mets\_ct\_seg\_clinical](https://testing-portal.canceridc.dev/explore/filters/?collection_id=spine_mets_ct_seg)
 
 ## v19 - September 2024
 
@@ -62,56 +167,55 @@ Please refer to the license and terms of use, which are defined in the `license_
 12. [NLM-Visible-Human-Project](https://doi.org/10.5281/zenodo.12690049)
 13. [RIDER Lung CT](https://www.cancerimagingarchive.net/collection/rider-lung-ct/)
 
-Cancer Moonshot Biobank (CMB) radiology images were updated to fix incorrect values assigned to `PatientID` (see details on the collection pages linked above). The updated images have different DICOM Study/Series/SOPInstanceUIDs.&#x20;
+Cancer Moonshot Biobank (CMB) radiology images were updated to fix incorrect values assigned to `PatientID` (see details on the collection pages linked above). The updated images have different DICOM Study/Series/SOPInstanceUIDs.
 
 **Revised analysis results**
 
 1. [BAMF-AIMI-Annotations](https://doi.org/10.5281/zenodo.8345959)\
    Collections analyzed:
-   1. [ ACRIN-NSCLC-FDG-PET](https://doi.org/10.7937/tcia.2019.30ilqfcl)
-   2. &#x20;[Anti-PD-1\_Lung](https://doi.org/10.7937/tcia.2019.zjjwb9ip)
-   3. &#x20;[Colorectal-Liver-Metastases](https://doi.org/10.7937/qxk2-qg03)
-   4. &#x20;[CPTAC-CCRCC](https://doi.org/10.7937/k9/tcia.2018.oblamn27)
-   5. &#x20;[Duke-Breast-Cancer-MRI](https://doi.org/10.7937/tcia.e3sv-re93)
-   6. &#x20;[HCC-TACE-Seg](https://doi.org/10.7937/tcia.5fna-0924)
-   7. &#x20;[Lung-PET-CT-Dx](https://doi.org/10.7937/tcia.2020.nnc2-0461)
-   8. &#x20;[NLST](https://doi.org/10.7937/tcia.hmq8-j677)
-   9. &#x20;[NSCLC Radiogenomics](https://doi.org/10.7937/k9/tcia.2017.7hs46erv)
-   10. &#x20;[Prostate-MRI-US-Biopsy](https://doi.org/10.7937/tcia.2020.a61ioc1a)
-   11. &#x20;[PROSTATEx](https://doi.org/10.7937/k9tcia.2017.murs5cl)
-   12. [ QIN-BREAST](https://doi.org/10.7937/k9/tcia.2016.21juebh0)
-   13. &#x20;[QIN LUNG CT](https://doi.org/10.7937/k9/tcia.2015.npgzyzbz)
-   14. &#x20;[RIDER Lung PET-CT](https://doi.org/10.7937/k9/tcia.2015.ofip7tvm)
-   15. &#x20;[SPIE-AAPM Lung CT Challenge](https://doi.org/10.7937/k9/tcia.2015.uzlsu3fl)
-   16. &#x20;[TCGA-KICH](https://doi.org/10.7937/k9/tcia.2016.yu3rbczn)
-   17. &#x20;[TCGA-KIRC](https://doi.org/10.7937/k9/tcia.2016.v6pbvtdr)
-   18. &#x20;[TCGA-KIRP](https://doi.org/10.7937/k9/tcia.2016.acwogbef)
-   19. &#x20;[TCGA-LIHC](https://doi.org/10.7937/k9/tcia.2016.immqw8uq)
-   20. &#x20;[TCGA-LUAD](https://doi.org/10.7937/k9/tcia.2016.jgnihep5)
-   21. &#x20;[TCGA-LUSC](https://doi.org/10.7937/k9/tcia.2016.tygkkfmq)
-   22. &#x20;[UPENN-GBM](https://doi.org/10.7937/tcia.709x-dn49)
+   1. [ACRIN-NSCLC-FDG-PET](https://doi.org/10.7937/tcia.2019.30ilqfcl)
+   2. [Anti-PD-1\_Lung](https://doi.org/10.7937/tcia.2019.zjjwb9ip)
+   3. [Colorectal-Liver-Metastases](https://doi.org/10.7937/qxk2-qg03)
+   4. [CPTAC-CCRCC](https://doi.org/10.7937/k9/tcia.2018.oblamn27)
+   5. [Duke-Breast-Cancer-MRI](https://doi.org/10.7937/tcia.e3sv-re93)
+   6. [HCC-TACE-Seg](https://doi.org/10.7937/tcia.5fna-0924)
+   7. [Lung-PET-CT-Dx](https://doi.org/10.7937/tcia.2020.nnc2-0461)
+   8. [NLST](https://doi.org/10.7937/tcia.hmq8-j677)
+   9. [NSCLC Radiogenomics](https://doi.org/10.7937/k9/tcia.2017.7hs46erv)
+   10. [Prostate-MRI-US-Biopsy](https://doi.org/10.7937/tcia.2020.a61ioc1a)
+   11. [PROSTATEx](https://doi.org/10.7937/k9tcia.2017.murs5cl)
+   12. [QIN-BREAST](https://doi.org/10.7937/k9/tcia.2016.21juebh0)
+   13. [QIN LUNG CT](https://doi.org/10.7937/k9/tcia.2015.npgzyzbz)
+   14. [RIDER Lung PET-CT](https://doi.org/10.7937/k9/tcia.2015.ofip7tvm)
+   15. [SPIE-AAPM Lung CT Challenge](https://doi.org/10.7937/k9/tcia.2015.uzlsu3fl)
+   16. [TCGA-KICH](https://doi.org/10.7937/k9/tcia.2016.yu3rbczn)
+   17. [TCGA-KIRC](https://doi.org/10.7937/k9/tcia.2016.v6pbvtdr)
+   18. [TCGA-KIRP](https://doi.org/10.7937/k9/tcia.2016.acwogbef)
+   19. [TCGA-LIHC](https://doi.org/10.7937/k9/tcia.2016.immqw8uq)
+   20. [TCGA-LUAD](https://doi.org/10.7937/k9/tcia.2016.jgnihep5)
+   21. [TCGA-LUSC](https://doi.org/10.7937/k9/tcia.2016.tygkkfmq)
+   22. [UPENN-GBM](https://doi.org/10.7937/tcia.709x-dn49)
 
 **New clinical metadata tables**
 
-1. [acrin\_contralateral\_breast\_mr\_A0](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-2. [acrin\_contralateral\_breast\_mr\_AB](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-3. [acrin\_contralateral\_breast\_mr\_F1](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-4. [acrin\_contralateral\_breast\_mr\_I1](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-5. [acrin\_contralateral\_breast\_mr\_IA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-6. [acrin\_contralateral\_breast\_mr\_IM](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-7. [acrin\_contralateral\_breast\_mr\_IS](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-8. [acrin\_contralateral\_breast\_mr\_KS](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-9. [acrin\_contralateral\_breast\_mr\_MS](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-10. [acrin\_contralateral\_breast\_mr\_M4](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-11. [acrin\_contralateral\_breast\_mr\_P8](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-12. [acrin\_contralateral\_breast\_mr\_PA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-13. [acrin\_contralateral\_breast\_mr\_PD](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-14. [acrin\_contralateral\_breast\_mr\_PE](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-15. [acrin\_contralateral\_breast\_mr\_PR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-16. [acrin\_contralateral\_breast\_mr\_QA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_contralateral\_breast\_mr)
-17. [advanced\_mri\_breast\_lesions\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=advanced\_mri\_breast\_lesions)
-18. [upenn\_gbm](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=upenn\_gbm)
-
+1. [acrin\_contralateral\_breast\_mr\_A0](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+2. [acrin\_contralateral\_breast\_mr\_AB](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+3. [acrin\_contralateral\_breast\_mr\_F1](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+4. [acrin\_contralateral\_breast\_mr\_I1](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+5. [acrin\_contralateral\_breast\_mr\_IA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+6. [acrin\_contralateral\_breast\_mr\_IM](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+7. [acrin\_contralateral\_breast\_mr\_IS](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+8. [acrin\_contralateral\_breast\_mr\_KS](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+9. [acrin\_contralateral\_breast\_mr\_MS](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+10. [acrin\_contralateral\_breast\_mr\_M4](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+11. [acrin\_contralateral\_breast\_mr\_P8](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+12. [acrin\_contralateral\_breast\_mr\_PA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+13. [acrin\_contralateral\_breast\_mr\_PD](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+14. [acrin\_contralateral\_breast\_mr\_PE](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+15. [acrin\_contralateral\_breast\_mr\_PR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+16. [acrin\_contralateral\_breast\_mr\_QA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_contralateral_breast_mr)
+17. [advanced\_mri\_breast\_lesions\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=advanced_mri_breast_lesions)
+18. [upenn\_gbm](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=upenn_gbm)
 
 ## v18 - April 2024
 
@@ -174,24 +278,24 @@ Cancer Moonshot Biobank (CMB) radiology images were updated to fix incorrect val
 
 **New clinical metadata tables**
 
-1. [acrin\_nsclc\_fdg\_pet\_bamf\_lung\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=acrin\_nsclc\_fdg\_pet)
-2. [anti\_pd\_1\_lung\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
-3. [anti\_pd\_1\_lung\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=anti\_pd\_1\_lung)
-4. [lung\_pet\_ct\_dx\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx)
-5. [lung\_pet\_ct\_dx\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=lung\_pet\_ct\_dx)
-6. [nsclc\_radiogenomics\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
-7. [nsclc\_radiogenomics\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nsclc\_radiogenomics)
-8. [prostatex\_bamf\_segmentations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=prostatex)
-9. [qin\_breast\_bamf\_breast\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=qin\_breast)
-10. [rider\_lung\_pet\_ct\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
-11. [rider\_lung\_pet\_ct\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rider\_lung\_pet\_ct)
-12. [tcga\_kirc\_bamf\_kidney\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_kirc)
-13. [tcga\_lihc\_bamf\_liver\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
-14. [tcga\_lihc\_bamf\_liver\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lihc)
-15. [tcga\_luad\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
-16. [tcga\_luad\_bamf\_lung\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_luad)
-17. [tcga\_lusc\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
-18. [tcga\_lusc\_bamf\_lung\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=tcga\_lusc)
+1. [acrin\_nsclc\_fdg\_pet\_bamf\_lung\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=acrin_nsclc_fdg_pet)
+2. [anti\_pd\_1\_lung\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=anti_pd_1_lung)
+3. [anti\_pd\_1\_lung\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=anti_pd_1_lung)
+4. [lung\_pet\_ct\_dx\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=lung_pet_ct_dx)
+5. [lung\_pet\_ct\_dx\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=lung_pet_ct_dx)
+6. [nsclc\_radiogenomics\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=nsclc_radiogenomics)
+7. [nsclc\_radiogenomics\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=nsclc_radiogenomics)
+8. [prostatex\_bamf\_segmentations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=prostatex)
+9. [qin\_breast\_bamf\_breast\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=qin_breast)
+10. [rider\_lung\_pet\_ct\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=rider_lung_pet_ct)
+11. [rider\_lung\_pet\_ct\_bamf\_lung\_fdg\_pet\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=rider_lung_pet_ct)
+12. [tcga\_kirc\_bamf\_kidney\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=tcga_kirc)
+13. [tcga\_lihc\_bamf\_liver\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=tcga_lihc)
+14. [tcga\_lihc\_bamf\_liver\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=tcga_lihc)
+15. [tcga\_luad\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=tcga_luad)
+16. [tcga\_luad\_bamf\_lung\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=tcga_luad)
+17. [tcga\_lusc\_bamf\_lung\_ct\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=tcga_lusc)
+18. [tcga\_lusc\_bamf\_lung\_mr\_segmentation](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=tcga_lusc)
 
 **Notes**
 
@@ -201,38 +305,38 @@ The deprecated columns `tcia_api_collection_id` and `idc_webapp_collection_id` h
 
 New radiology collections
 
-1. [CMB-AML](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CMB\&collection\_id=cmb\_aml)
-2. [CT-Phantom4Radiomics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=ct\_phantom4radiomics)
-3. [EA1141](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=ea1141)
-4. [ReMIND](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=remind)
-5. [Vestibular-Schwannoma-MC-RC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=vestibular\_schwannoma\_mc\_rc)
+1. [CMB-AML](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CMB\&collection_id=cmb_aml)
+2. [CT-Phantom4Radiomics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=ct_phantom4radiomics)
+3. [EA1141](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=NCI_Trials\&collection_id=ea1141)
+4. [ReMIND](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=remind)
+5. [Vestibular-Schwannoma-MC-RC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=vestibular_schwannoma_mc_rc)
 
 New analysis results
 
-1.  [BAMF-AIMI-Annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=BAMF-AIMI-Annotations)
+1.  [BAMF-AIMI-Annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis_results_id=BAMF-AIMI-Annotations)
 
     Collections analyzed:
 
-    1. [ACRIN-NSCLC-FDG-PET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=acrin\_nsclc\_fdg\_pet)
-    2. [Anti-PD-1-Lung](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=anti\_pd\_1\_lung)
-    3. [LUNG-PET-CT-Dx](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=lung\_pet\_ct\_dx)
-    4. [NSCLC Radiogenomics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=nsclc\_radiogenomics)
-    5. [ProstateX](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=prostatex)
-    6. [QIN-Breast](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=QIN\&collection\_id=qin\_breast)
-    7. [RIDER Lung PET-CT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=RIDER\&collection\_id=rider\_lung\_pet\_ct)
-    8. [TCGA-KIRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=TCGA\&collection\_id=tcga\_kirc)
-    9. [TCGA-LIHC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=TCGA\&collection\_id=tcga\_lihc)
-    10. [TCGA-LUAD](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=TCGA\&collection\_id=tcga\_luad)
-    11. [TCGA-LUSC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=TCGA\&collection\_id=tcga\_lusc)
-2. [Prostate-MRI-US-Biopsy-DICOM-Annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=Prostate-MRI-US-Biopsy-DICOM-Annotations)\
+    1. [ACRIN-NSCLC-FDG-PET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=NCI_Trials\&collection_id=acrin_nsclc_fdg_pet)
+    2. [Anti-PD-1-Lung](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=anti_pd_1_lung)
+    3. [LUNG-PET-CT-Dx](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=lung_pet_ct_dx)
+    4. [NSCLC Radiogenomics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=nsclc_radiogenomics)
+    5. [ProstateX](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=prostatex)
+    6. [QIN-Breast](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=QIN\&collection_id=qin_breast)
+    7. [RIDER Lung PET-CT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=RIDER\&collection_id=rider_lung_pet_ct)
+    8. [TCGA-KIRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=TCGA\&collection_id=tcga_kirc)
+    9. [TCGA-LIHC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=TCGA\&collection_id=tcga_lihc)
+    10. [TCGA-LUAD](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=TCGA\&collection_id=tcga_luad)
+    11. [TCGA-LUSC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=TCGA\&collection_id=tcga_lusc)
+2. [Prostate-MRI-US-Biopsy-DICOM-Annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis_results_id=Prostate-MRI-US-Biopsy-DICOM-Annotations)\
    Collections analyzed:
-   1. [Prostate-MRI-US-Biopsy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=prostate\_mri\_us\_biopsy)
+   1. [Prostate-MRI-US-Biopsy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=prostate_mri_us_biopsy)
 
 Revised radiology collections
 
-1. [Prostate-MRI-US-Biopsy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=prostate\_mri\_us\_biopsy)
-2. [CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CMB\&collection\_id=cmb\_crc)
-3. [CMB-GEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CMB\&collection\_id=cmb\_cgec)
+1. [Prostate-MRI-US-Biopsy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=prostate_mri_us_biopsy)
+2. [CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CMB\&collection_id=cmb_crc)
+3. [CMB-GEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CMB\&collection_id=cmb_cgec)
 4. [CMB-LCA](https://doi.org/10.7937/3CX3-S132)
 5. [CMB-MEL](https://doi.org/10.7937/GWSP-WH72)
 6. [CMB-MML](https://doi.org/10.7937/SZKB-SW39)
@@ -242,39 +346,39 @@ Revised radiology collections
 
 New clinical metadata tables
 
-1. [ea1141\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ea1141)
-2. [ea1141\_mri](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ea1141)
-3. [ea1141\_risk\_model](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ea1141)
-4. [ea1141\_screening](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ea1141)
-5. [ea1141\_status\_12mo](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ea1141)
-6. [ea1141\_status\_6mo](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ea1141)
-7. [ea1141\_tomosynthesis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ea1141)
-8. [htan\_ohsu\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_ohsu)
-9. [htan\_vanderbilt\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_vanderbilt)
-10. [htan\_vanderbilt\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_vanderbilt)
-11. [htan\_vanderbilt\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_vanderbilt)
-12. [htan\_vanderbilt\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_vanderbilt)
-13. [htan\_vanderbilt\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_vanderbilt)
-14. [htan\_vanderbilt\_moleculartest](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_vanderbilt)
-15. [htan\_vanderbilt\_therapy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_vanderbilt)
-16. [remind\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=remind)
+1. [ea1141\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+2. [ea1141\_mri](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+3. [ea1141\_risk\_model](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+4. [ea1141\_screening](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+5. [ea1141\_status\_12mo](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+6. [ea1141\_status\_6mo](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+7. [ea1141\_tomosynthesis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ea1141)
+8. [htan\_ohsu\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_ohsu)
+9. [htan\_vanderbilt\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+10. [htan\_vanderbilt\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+11. [htan\_vanderbilt\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+12. [htan\_vanderbilt\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+13. [htan\_vanderbilt\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+14. [htan\_vanderbilt\_moleculartest](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+15. [htan\_vanderbilt\_therapy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_vanderbilt)
+16. [remind\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=remind)
 
 ## v16 - September 2023
 
 New radiology collections
 
-1. [PDMR-Texture-Analysis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=PDMR\&collection\_id=pdmr\_texture\_analysis)
+1. [PDMR-Texture-Analysis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=PDMR\&collection_id=pdmr_texture_analysis)
 
 New pathology collections
 
-1. [RMS-Mutation-Prediction](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CCDI\&collection\_id=rms\_mutation\_prediction)
+1. [RMS-Mutation-Prediction](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CCDI\&collection_id=rms_mutation_prediction)
 
 Revised radiology collections
 
-1. [Breast-MRI-NACT-Pilot](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=breast\_mri\_nact\_pilot) (TCIA description: (Repair of DICOM tag(0008,0005) to value "ISO\_IR 100" in 79 series)
-2. [CPTAC-CRCC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_crcc) (Revised because results from CPTAC-CRCC-Tumor-Annotations were added)
-3. [CPTAC-UCEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_ucec) (Revised because results from CPTAC-UCEC-Tumor-Annotations were added)
-4. [CPTAC-PDA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_pda) (Revised because results from CPTAC-PDA-Tumor-Annotations were added)
+1. [Breast-MRI-NACT-Pilot](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=breast_mri_nact_pilot) (TCIA description: (Repair of DICOM tag(0008,0005) to value "ISO\_IR 100" in 79 series)
+2. [CPTAC-CRCC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_crcc) (Revised because results from CPTAC-CRCC-Tumor-Annotations were added)
+3. [CPTAC-UCEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_ucec) (Revised because results from CPTAC-UCEC-Tumor-Annotations were added)
+4. [CPTAC-PDA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_pda) (Revised because results from CPTAC-PDA-Tumor-Annotations were added)
 
 New analysis results
 
@@ -284,82 +388,82 @@ New analysis results
 
 New clinical metadata tables
 
-1. [htan\_hms\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
-2. [htan\_hms\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
-3. [htan\_hms\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
-4. [htan\_hms\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
-5. [htan\_hms\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
-6. [htan\_hms\_moleculartheraphy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_hms)
-7. [htan\_ohsu\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_ohsu)
-8. [htan\_ohsu\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_ohsu)
-9. [htan\_ohsu\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_ohsu)
-10. [htan\_ohsu\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_ohsu)
-11. [htan\_ohsu\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_ohsu)
-12. [htan\_ohsu\_moleculartheraphy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_ohsu)
-13. [htan\_wustl\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
-14. [htan\_wustl\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
-15. [htan\_wustl\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
-16. [htan\_wustl\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
-17. [htan\_wustl\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
-18. [htan\_wustl\_moleculartheraphy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=htan\_wustl)
-19. [rms\_mutation\_prediction\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rms\_mutation\_prediction)
-20. [rms\_mutation\_prediction\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rms\_mutation\_prediction)
-21. [rms\_mutation\_prediction\_sample](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=rms\_mutation\_prediction)
+1. [htan\_hms\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_hms)
+2. [htan\_hms\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_hms)
+3. [htan\_hms\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_hms)
+4. [htan\_hms\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_hms)
+5. [htan\_hms\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_hms)
+6. [htan\_hms\_moleculartheraphy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_hms)
+7. [htan\_ohsu\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_ohsu)
+8. [htan\_ohsu\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_ohsu)
+9. [htan\_ohsu\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_ohsu)
+10. [htan\_ohsu\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_ohsu)
+11. [htan\_ohsu\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_ohsu)
+12. [htan\_ohsu\_moleculartheraphy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_ohsu)
+13. [htan\_wustl\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_wustl)
+14. [htan\_wustl\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_wustl)
+15. [htan\_wustl\_exposure](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_wustl)
+16. [htan\_wustl\_familyhistory](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_wustl)
+17. [htan\_wustl\_followup](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_wustl)
+18. [htan\_wustl\_moleculartheraphy](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_wustl)
+19. [rms\_mutation\_prediction\_demographics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=rms_mutation_prediction)
+20. [rms\_mutation\_prediction\_diagnosis](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=rms_mutation_prediction)
+21. [rms\_mutation\_prediction\_sample](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=rms_mutation_prediction)
 
 ## v15 - July 2023
 
 New radiology collections
 
-1. [Adrenal-ACC-Ki67-Seg](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=adrenal\_acc\_ki67\_seg)
-2. [CC-Tumor-Heterogeneity](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=cc\_tumor\_heterogeneity)
-3. [Colorectal-Liver-Metastases](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=cc\_tumor\_heterogeneity)
-4. [NLM-Visible-Human-Project](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=nlm\_visible\_human\_project)
-5. [Prostate-Anatomical-Edge-Cases](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=prostate\_anatomical\_edge\_cases)
-6. [RIDER Pilot](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=RIDER\&collection\_id=rider\_pilot)
+1. [Adrenal-ACC-Ki67-Seg](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=adrenal_acc_ki67_seg)
+2. [CC-Tumor-Heterogeneity](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=cc_tumor_heterogeneity)
+3. [Colorectal-Liver-Metastases](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=cc_tumor_heterogeneity)
+4. [NLM-Visible-Human-Project](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=nlm_visible_human_project)
+5. [Prostate-Anatomical-Edge-Cases](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=prostate_anatomical_edge_cases)
+6. [RIDER Pilot](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=RIDER\&collection_id=rider_pilot)
 
 New pathology collections
 
-1. [HTAN-VANDERBILT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=HTAN\&collection\_id=htan\_vanderbilt)
-2. [ICDC-Glioma](https://portal.imaging.datacommons.cancer.gov/explore/filters/?Modality\_op=OR\&Modality=SM\&collection\_id=icdc\_glioma) (ICDC-Glioma radiology added in a previous version)
+1. [HTAN-VANDERBILT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=HTAN\&collection_id=htan_vanderbilt)
+2. [ICDC-Glioma](https://portal.imaging.datacommons.cancer.gov/explore/filters/?Modality_op=OR\&Modality=SM\&collection_id=icdc_glioma) (ICDC-Glioma radiology added in a previous version)
 
 Revised radiology collections
 
-1. [CPTAC-CCRCC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_ccrcc) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-2. [CPTAC-CM](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_cm) (“TCIA description: Radiology modality data cleanup to remove extraneous scans.”)
-3. [CPTAC-LSCC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_lscc) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-4. [CPTAC-LUAD](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_luad) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-5. [CPTAC-PDA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_pda) (TCIA description: TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-6. [CPTAC-SAR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_sar) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-7. [CPTAC-UCEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_ucec) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
-8. [CT Lymph Nodes](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=ct\_lymph\_nodes) (TCIA description: “Added DICOM version of MED\_ABD\_LYMPH\_MASKS.zip segmentations that were previously available”)
-9. [RIDER Lung CT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=RIDER\&collection\_id=rider\_lung\_ct) (Revised because QIBA-VolCT-1B analysis results were added)
-10. [NLST](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=RIDER\&collection\_id=nlst) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
-11. [NSCLC-Radiomics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=nsclc\_radiomics) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
+1. [CPTAC-CCRCC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_ccrcc) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+2. [CPTAC-CM](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_cm) (“TCIA description: Radiology modality data cleanup to remove extraneous scans.”)
+3. [CPTAC-LSCC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_lscc) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+4. [CPTAC-LUAD](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_luad) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+5. [CPTAC-PDA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_pda) (TCIA description: TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+6. [CPTAC-SAR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_sar) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+7. [CPTAC-UCEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_ucec) (TCIA description: “Radiology modality data cleanup to remove extraneous scans.”)
+8. [CT Lymph Nodes](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=ct_lymph_nodes) (TCIA description: “Added DICOM version of MED\_ABD\_LYMPH\_MASKS.zip segmentations that were previously available”)
+9. [RIDER Lung CT](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=RIDER\&collection_id=rider_lung_ct) (Revised because QIBA-VolCT-1B analysis results were added)
+10. [NLST](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=RIDER\&collection_id=nlst) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
+11. [NSCLC-Radiomics](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=nsclc_radiomics) (Revised because analysis results from nnU-Net-BPR-Annotations were revised)
 
 Revised pathology collections
 
-1. [CPTAC-GBM](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=cptac\_gbm) (11 pathology-only patients removed at request of data owner)
-2. [CPTAC-SAR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=CPTAC\&collection\_id=cptac\_sar) (1 pathology-only patient removed at request of data owner)
+1. [CPTAC-GBM](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=cptac_gbm) (11 pathology-only patients removed at request of data owner)
+2. [CPTAC-SAR](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=CPTAC\&collection_id=cptac_sar) (1 pathology-only patient removed at request of data owner)
 
 New analysis results
 
-1. [QIBA-VolCT-1B](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=qiba\_ct\_1c) (Analysis of NLST and NSCLC-Radiomics)
+1. [QIBA-VolCT-1B](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=qiba_ct_1c) (Analysis of NLST and NSCLC-Radiomics)
 
 Revised analysis results
 
-1. [nnU-Net-BPR-Annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=nnU-Net-BPR-annotations) (Annotations of NLST and NSCLC-Radiomics radiology)
+1. [nnU-Net-BPR-Annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis_results_id=nnU-Net-BPR-annotations) (Annotations of NLST and NSCLC-Radiomics radiology)
 
 New clinical metadata tables
 
-1. [adrenal\_acc\_ki67\_seg\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=adrenal\_acc\_ki67\_seg)
-2. [cc\_tumor\_heterogeneity\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=cc\_tumor\_heterogeneity)
-3. [colorectal\_liver\_metastases\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=colorectal\_liver\_metastases)
-4. [duke\_breast\_cancer\_mri\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=Community\&collection\_id=duke\_breast\_cancer\_mri)
-5. [nlst\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
-6. [nlst\_ctab](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
-7. [nlst\_ctabc](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
-8. [nlst\_prsn](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
-9. [nlst\_screen](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=NCI\_Trials\&collection\_id=nlst)
+1. [adrenal\_acc\_ki67\_seg\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=adrenal_acc_ki67_seg)
+2. [cc\_tumor\_heterogeneity\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=cc_tumor_heterogeneity)
+3. [colorectal\_liver\_metastases\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=colorectal_liver_metastases)
+4. [duke\_breast\_cancer\_mri\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=Community\&collection_id=duke_breast_cancer_mri)
+5. [nlst\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=NCI_Trials\&collection_id=nlst)
+6. [nlst\_ctab](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=NCI_Trials\&collection_id=nlst)
+7. [nlst\_ctabc](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=NCI_Trials\&collection_id=nlst)
+8. [nlst\_prsn](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=NCI_Trials\&collection_id=nlst)
+9. [nlst\_screen](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=NCI_Trials\&collection_id=nlst)
 
 ## v14 - May 2023
 
@@ -369,26 +473,26 @@ This release does not introduce any new data, but changes the bucket organizatio
 
 New analysis results collection:
 
-1. [nnU-Net-BPR-annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis\_results\_id=nnU-Net-BPR-annotations)
+1. [nnU-Net-BPR-annotations](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis_results_id=nnU-Net-BPR-annotations)
 
 New clinical data collections:
 
-1. [PROSTATEx](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=prostatex)
+1. [PROSTATEx](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=prostatex)
 
 ## v12 - Nov 2022
 
 New collections:
 
-1. [CT-vs-PET-Ventilation-Imaging](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ct\_vs\_pet\_ventilation\_imaging)
-2. [CTpred-Sunitinib-panNET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ctpred\_sunitinib\_pannet)
+1. [CT-vs-PET-Ventilation-Imaging](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ct_vs_pet_ventilation_imaging)
+2. [CTpred-Sunitinib-panNET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ctpred_sunitinib_pannet)
 
 Updated collections:
 
-1. [CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_crc)
-2. [CMB-LCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_lca)
-3. [CMB-MEL](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_mel)
-4. [CMB-PCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_pca)
-5. [Pancreatic-CT-CBCT-SEG](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=pancreatic\_ct\_cbct\_seg)
+1. [CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_crc)
+2. [CMB-LCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_lca)
+3. [CMB-MEL](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_mel)
+4. [CMB-PCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_pca)
+5. [Pancreatic-CT-CBCT-SEG](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=pancreatic_ct_cbct_seg)
 
 Other:
 
@@ -396,7 +500,7 @@ Metadata corresponding to "limited" access collections are removed.
 
 New clinical data collections:
 
-1. [CTpred-Sunitinib-panNET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection\_id=ctpred\_sunitinib\_pannet)
+1. [CTpred-Sunitinib-panNET](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ctpred_sunitinib_pannet)
 
 Other clinical data updates:
 
@@ -408,15 +512,15 @@ This release introduces clinical data ingested for a subset of collections, and 
 
 New collections:
 
-1. [CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_crc)
-2. [CMB-GEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_gec)
-3. [CMB-LCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_lca)
-4. [CMB-MEL](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_mel)
-5. [CMB-MML](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_mml)
-6. [CMB-PCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=CMB\&collection\_id=cmb\_pca)
-7. [GBM-DSC-MRI-DRO](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=QIN\&collection\_id=gbm\_dsc\_mri\_dro)
-8. [HCC-TACE-Seg](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=Community\&collection\_id=hcc\_tace\_seg)
-9. [PDMR-521955-158-R4](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection\_id=PDMR\&collection\_id=pdmr\_521955\_158\_r4)
+1. [CMB-CRC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_crc)
+2. [CMB-GEC](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_gec)
+3. [CMB-LCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_lca)
+4. [CMB-MEL](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_mel)
+5. [CMB-MML](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_mml)
+6. [CMB-PCA](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=CMB\&collection_id=cmb_pca)
+7. [GBM-DSC-MRI-DRO](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=QIN\&collection_id=gbm_dsc_mri_dro)
+8. [HCC-TACE-Seg](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=Community\&collection_id=hcc_tace_seg)
+9. [PDMR-521955-158-R4](https://portal.imaging.datacommons.cancer.gov/explore/filters/?access=Public\&collection_id=PDMR\&collection_id=pdmr_521955_158_r4)
 
 ## v10 - Aug 2022
 
