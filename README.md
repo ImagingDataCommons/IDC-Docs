@@ -14,6 +14,10 @@ layout:
 
 # Welcome!
 
+{% hint style="info" %}
+**If you need support with IDC or have any questions, please open a new topic in** [**IDC User Forum**](https://discourse.canceridc.dev/) **(preferred) or send email to support@canceridc.dev.**&#x20;
+{% endhint %}
+
 [**NCI Imaging Data Commons** **(IDC)**](https://imaging.datacommons.cancer.gov) is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.&#x20;
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>IDC data release v20 summary; see live dashboard <a href="https://lookerstudio.google.com/reporting/04cf5976-4ea0-4fee-a749-8bfd162f2e87/page/p_s7mk6eybqc">here</a>.</p></figcaption></figure>
