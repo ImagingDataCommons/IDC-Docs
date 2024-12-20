@@ -107,7 +107,7 @@ Please refer to the license and terms of use, which are defined in the `license_
     34. 1.2.826.0.1.3680043.10.511.3.98258035017480972315346136181769675
 3.  [RMS-Mutation-Prediction-Expert-Annotations ](https://doi.org/10.5281/zenodo.10462857)
 
-    **WARNING**: by accident, AI annotations class assignment was mistakenly swapped between the ARMS and ERMS classes! This error will be fixed in the next revision of the dataset.[\
+    **WARNING**: After the release of v20, it was discovered that a mistake had been made during data conversion that affected the newly-released segmentations accompanying the "RMS-Mutation-Prediction" collection. Segmentations released in v20 for this collection have the segment labels for alveolar rhabdomyosarcoma (ARMS) and embryonal rhabdomyosarcoma (ERMS) switched in the metadata relative to the correct labels. Thus segment 3 in the released files is labelled in the metadata (the SegmentSequence) as ARMS but should correctly be interpreted as ERMS, and conversely segment 4 in the released files is labelled as ERMS but should be correctly interpreted as ARMS. We apologize for the mistake and any confusion that it has caused, and will be releasing a corrected version of the files in the next release as soon as possible.[\
     ](https://doi.org/10.5281/zenodo.10462857)\
     Collections analyzed:
 
