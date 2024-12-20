@@ -105,10 +105,13 @@ Please refer to the license and terms of use, which are defined in the `license_
     32. 1.2.826.0.1.3680043.10.511.3.95666157880521064637011880609274546
     33. 1.2.826.0.1.3680043.10.511.3.96676982370873257329281821215166082
     34. 1.2.826.0.1.3680043.10.511.3.98258035017480972315346136181769675
-3. [RMS-Mutation-Prediction-Expert-Annotations\
-   ](https://doi.org/10.5281/zenodo.10462857)\
-   Collections analyzed:
-   1. [RMS-Mutation-Prediction](https://doi.org/10.5281/zenodo.8225131)
+3.  [RMS-Mutation-Prediction-Expert-Annotations ](https://doi.org/10.5281/zenodo.10462857)
+
+    **WARNING**: by accident, AI annotations class assignment was mistakenly swapped between the ARMS and ERMS classes! This error will be fixed in the next revision of the dataset.[\
+    ](https://doi.org/10.5281/zenodo.10462857)\
+    Collections analyzed:
+
+    1. [RMS-Mutation-Prediction](https://doi.org/10.5281/zenodo.8225131)
 
 #### New Clinical Metadata Tables
 
