@@ -9,6 +9,7 @@
 * [Publications](publications.md)
 * [IDC team](idc-team.md)
 * [Acknowledgments](acknowledgments.md)
+* [Jobs](jobs.md)
 
 ## Introduction
 
