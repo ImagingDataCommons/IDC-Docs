@@ -321,7 +321,7 @@ Curated values of DICOM metadata extracted from `dicom_metadata`.
 #### `dicom_metadata_curated_series_level`, `dicom_metadata_curated_series_level_view`
 
 {% hint style="info" %}
-Table in BigQuery: [`dicom_metadata_curated_series_lev`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc_current\&t=dicom_metadata_curated_series_level\&page=table)
+Table in BigQuery: [`dicom_metadata_curated_series_level`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc_current\&t=dicom_metadata_curated_series_level\&page=table)
 {% endhint %}
 
 {% hint style="info" %}
