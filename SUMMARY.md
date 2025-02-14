@@ -32,6 +32,7 @@
 * [Introduction](data/introduction.md)
 * [Data versioning](data/data-versioning.md)
 * [Organization of data](data/organization-of-data/README.md)
+  * [IDC data model](data/organization-of-data/idc-data-model.md)
   * [Files and metadata](data/organization-of-data/files-and-metadata.md)
   * [Resolving CRDC Globally Unique Identifiers (GUIDs)](data/organization-of-data/guids-and-uuids.md)
   * [Clinical data](data/organization-of-data/clinical.md)
