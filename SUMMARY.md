@@ -30,9 +30,9 @@
 ## Data
 
 * [Introduction](data/introduction.md)
+* [Data model](data/data-model.md)
 * [Data versioning](data/data-versioning.md)
 * [Organization of data](data/organization-of-data/README.md)
-  * [IDC data model](data/organization-of-data/idc-data-model.md)
   * [Files and metadata](data/organization-of-data/files-and-metadata.md)
   * [Resolving CRDC Globally Unique Identifiers (GUIDs)](data/organization-of-data/guids-and-uuids.md)
   * [Clinical data](data/organization-of-data/clinical.md)
@@ -49,7 +49,7 @@
 ## DICOM
 
 * [Introduction to DICOM](dicom/introduction.md)
-* [Data model](dicom/data-model.md)
+* [DICOM data model](dicom/data-model.md)
 * [Original objects](dicom/original-vs-derived-objects.md)
 * [Derived objects](dicom/derived-objects/README.md)
   * [DICOM Segmentations](dicom/derived-objects/dicom-segmentations.md)
