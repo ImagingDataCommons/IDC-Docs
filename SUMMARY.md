@@ -91,7 +91,7 @@
 
 * [Colab notebooks](cookbook/notebooks.md)
 * [BigQuery](cookbook/bigquery.md)
-* [Data Studio](cookbook/data-studio/README.md)
+* [Looker dashboards](cookbook/data-studio/README.md)
   * [Dashboard for your cohort](cookbook/data-studio/cohort-dashboard.md)
   * [More dashboard examples](cookbook/data-studio/more-dashboard-examples.md)
 * [ACCESS allocations](cookbook/access-allocations.md)

@@ -1,12 +1,12 @@
 ---
 description: >-
-  Use IDC-provided DataStudio template to build a custom dashboard for your
+  Use IDC-provided Looker Studio template to build a custom dashboard for your
   cohort
 ---
 
 # Dashboard for your cohort
 
-You can use [this DataStudio template](http://bit.ly/3jdCmON) to build a custom dashboard for your own cohort, which will look like the screenshot below in three relatively simple steps.
+You can use [this Looker Studio template](http://bit.ly/3jdCmON) to build a custom dashboard for your own cohort, which will look like the screenshot below in three relatively simple steps.
 
 ![Screenshot of the DataStudio dashboard template you can use to explore your cohort.](<../../.gitbook/assets/image (11).png>)
 
@@ -48,7 +48,7 @@ SELECT
 FROM
   `canceridc-user-data.user_manifests.manifest_cohort_101_20210127_213746` AS my_cohort
 JOIN
-  `canceridc-data.idc_current.dicom_all` AS all_of_idc
+  `bigquery-public-data.idc_current.dicom_all` AS all_of_idc
 ON
   all_of_idc.SOPInstanceUID = my_cohort.SOPInstanceUID
 ```
