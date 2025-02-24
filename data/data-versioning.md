@@ -1,11 +1,40 @@
 # Data versioning
 
+## Summary
+
+IDC updates its data offering at the intervals of 2-4 months, with the data releases timing driven by the availability of new data, updates of existing data, introduction of new capabilities and various priority considerations. You can see the historical summary of IDC releases in [this page](data-release-notes.md#idc-releases-summary-view).&#x20;
+
+When you work with IDC data at any given time, you should be aware of the data release version. If you build cohorts using filters or queries, the result of those queries will change as the IDC content is evolving. Building queries that refer to the specific data release version will ensure that the result is the same.
+
+Here is how you can learn what version of IDC data you are interacting with, depending on what interface to the data you are using:
+
+*   **IDC Portal**: data version and release date are displayed in the summary strip
+
+    <figure><img src="../.gitbook/assets/image (36).png" alt="" width="375"><figcaption></figcaption></figure>
+* **idc-index**: use `get_idc_version()`function
+
+```python
+from idc_index import IDCClient
+
+idc_version = IDCClient.get_idc_version()
+```
+
+* **BigQuery**: within `bigquery-public-data`project, `idc_current`dataset contains table "views" to effectively provide an alias for the latest IDC data release. To find the actual IDC data release number, expand the list of datasets under `bigquery-public-data`project, and search for the ones that follow the pattern \`idc\_v\<number>\`. The one with the largest number corresponds to the latest released version, and will match the content in `idc_current` (related Google bug [here](https://issuetracker.google.com/issues/324112186)).
+
+<figure><img src="../.gitbook/assets/image (38).png" alt="" width="408"><figcaption></figcaption></figure>
+
+* **3D Slicer / SlicerIDCBrowser**: version information is provided in the SlicerIDCBrowser module top panel, and in the pop-up window title.
+
+<figure><img src="../.gitbook/assets/image (39).png" alt="" width="563"><figcaption></figcaption></figure>
+
+## Implementation details
+
 The IDC obtains curated DICOM radiology, pathology and microscopy image and analysis data from The Cancer Imaging Archive (TCIA) and additional sources. Data from all these sources evolves over time as new data is added (common), existing files are corrected (rare), or data is removed (extremely rare).
 
 Users interact with IDC using one of the following interfaces to define cohorts, and then perform analyses on these cohorts:
 
 * [IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/) directly or using [IDC API](https://learn.canceridc.dev/api/getting-started): while this approach is most convenient, it allows searching using a small subset of attributes, defines cohorts only in terms of cases that meet the defined criteria, and has very limited options for combining multiple search criteria
-* [IDC BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) tables via [SQL interface](https://cloud.google.com/bigquery/docs/reference/standard-sql/introduction): this approach is most powerful, as it allows the use of [any of the DICOM metadata attributes](https://cloud.google.com/healthcare-api/docs/how-tos/dicom-bigquery-schema) to define the cohort, while leveraging the expressiveness of SQL in defining the selection logic, and allows to define cohort at any level of the data model hierarchy (i.e., instances, series, studies or cases)
+* [IDC BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc_current\&t=dicom_all\&page=table) tables via [SQL interface](https://cloud.google.com/bigquery/docs/reference/standard-sql/introduction): this approach is most powerful, as it allows the use of [any of the DICOM metadata attributes](https://cloud.google.com/healthcare-api/docs/how-tos/dicom-bigquery-schema) to define the cohort, while leveraging the expressiveness of SQL in defining the selection logic, and allows to define cohort at any level of the data model hierarchy (i.e., instances, series, studies or cases)
 
 The goal of IDC versioning is to create a series of "snapshots” over time of the entirety of the evolving IDC imaging dataset, such that searching an IDC version according to some criteria (creating a cohort) will always identify exactly the same set of objects. Here “identify” particularly means providing URLs or other access methods to the corresponding physical data objects.
 
@@ -24,7 +53,7 @@ There are various reasons that can cause modification of the existing collection
 
 These and other possible changes mean that DICOM instances, series and studies can change from one IDC data version to the next, while their DICOM UIDs remain unchanged. This motivates the need for maintaining versioning of the DICOM entities.
 
-Because DICOM `SOPInstanceUIDs`, `SeriesInstanceUIDs` or `StudyInstanceUIDs` can remain invariant even when the composition of an instance, series or study changes, IDC assigns each version of each instance, series or study a [_UUID_](https://en.wikipedia.org/wiki/Universally\_unique\_identifier) to uniquely identify it and differentiate it from other versions of the same DICOM object.
+Because DICOM `SOPInstanceUIDs`, `SeriesInstanceUIDs` or `StudyInstanceUIDs` can remain invariant even when the composition of an instance, series or study changes, IDC assigns each version of each instance, series or study a [_UUID_](https://en.wikipedia.org/wiki/Universally_unique_identifier) to uniquely identify it and differentiate it from other versions of the same DICOM object.
 
 {% hint style="info" %}
 It is very important to appreciate the difference between DICOM Unique Identifiers (UIDs) and CRDC Universally Unique Identifiers (UUIDs) assigned at the various levels of the DICOM hierarchy:
