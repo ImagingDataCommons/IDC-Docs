@@ -157,7 +157,7 @@ volume = seg.get_volume(
 See [this][11] page for more information on highdicom's `Image` class, and
 [this][12] page for the `Segmentation` class.
 
-### The Importance Offset Tables
+### The Importance of Offset Tables
 
 Achieving good performance for these frame-level retrievals requires the
 presence of a "Basic Offset Table" or "Extended Offset Table" in the file.
@@ -173,7 +173,8 @@ probably because highdicom is constucting the offset table.
 
 Most IDC images do include an offset table, but some of the older pathology
 slide images do not. [This page][14] contains some notes about whether
-individual collections include offset table.
+individual collections include offset table because it wasn't included in
+the file.
 
 
 [1]: https://cloud.google.com/python/docs/reference/storage/latest/
