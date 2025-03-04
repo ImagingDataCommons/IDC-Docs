@@ -113,7 +113,7 @@ plt.show()
 Running this code should produce an output that looks like this:
 
 <p align="center">
-  <img src="../../.gitbook/assets/slide_screenshot.png" alt="Screenshot of slide region" width="512" height="512">
+  <img src="../../.gitbook/assets/slide_screenshot.png" alt="Screenshot of slide region" width="524" height="454">
 </p>
 
 As a further example, we use lazy frame retrieval to load only a specific set
