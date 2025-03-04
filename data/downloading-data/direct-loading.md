@@ -3,19 +3,22 @@
 The [official Python SDK for Google Cloud Storage][1]
 (installable from pip and PyPI as `google-cloud-storage`) provides a
 "file-like" interface allowing other Python libraries to work with blobs as if
-it were a "normal" file on the local filesystem. This allows some of the DICOM
-packages in the Python ecosystem to work directly with the copy of the IDC data
-in Google Cloud storage first download them to a local drive.
+they were "normal" files on the local filesystem. This allows some of the DICOM
+packages in the Python ecosystem to work directly with the IDC data on Google
+Cloud Storage without having to first download files to a local drive.
 
 We are not currently aware of a convenient way to do this with blobs in AWS S3
-buckets. Please let us know if you know of one!
+buckets. Please let us know if you find one!
 
-### Reading Images With Pydicom
+### Reading Files With Pydicom
 
 [Pydicom][2]'s [dcmread][3] function can accept a "file-like" object, meaning
-you can read a file straight from a blob. The `dcmread` function also has some
-other options that allow you to control what is read. For example you can choose
-to read only the metadata and not the frames, or read only certain attributes.
+you can read a file straight from a blob if you know its path.
+See [this page](../organization-of-data/files-and-metadata.md#storage-buckets)
+for information on finding the paths of the blobs for DICOM objects in IDC.
+The `dcmread` function also has some other options that allow you to control
+what is read. For example you can choose to read only the metadata and not
+the frames, or read only certain attributes.
 
 ```python
 from pydicom import dcmread
@@ -42,7 +45,7 @@ dcm = dcmread(blob.open("rb"), stop_before_pixels=True)
 dcm = dcmread(blob.open("rb"), specific_tags=[0x0008_0070, 0x0008_1090])
 ```
 
-Reading only metadata, or only specific attributes will *usually* reduce the
+Reading only metadata or only specific attributes will *usually* reduce the
 amount of data that needs to be pulled down and therefore make the loading
 process faster.
 
@@ -52,9 +55,6 @@ the ``seek``, ``read``, and ``tell`` methods). There are further parameters
 of the `open()` method that may improve performance, for example the
 `chunk_size`, which you may wish to explore in performance-critical situations.
 
-See [this page](../organization-of-data/files-and-metadata.md#storage-buckets)
-for information on finding the paths of the blobs for DICOM objects in IDC.
-
 ### Frame Level Access With Highdicom
 
 [Highdicom][6] is a higher-level library providing several features to work
@@ -62,11 +62,13 @@ with images and image-derived DICOM objects. As of the release 0.25.1, its
 various reading methods including [imread][7], [segread][8], [annread][9],
 and [srread][10] can read any file-like object, including Google Cloud blobs.
 
-Coupling this with :ref:`"lazy" frame retrieval <lazy>` option of `imread` and
-`segread`is especially powerful, because it allows frames to be retrieved from
-the blobs only as and when they are needed. This is particularly useful for
+A particularly useful feature when working with blobs is ["lazy" frame retrieval][13]
+for images and segmentations. This feature allows you to download the metadata,
+use it to determine which frames are of interest, and request only frames of
+interest as and when they are needed. This is particularly useful for
 large multiframe files such as those found in slide microscopy or multi-segment
-binary or fractional segmentations.
+binary or fractional segmentations as it can significantly reduce the amount
+of data that needs to be downloaded to access a subset of the frames.
 
 In this first example, we use lazy frame retrieval to load only a specific
 spatial patch from a large whole slide image from the IDC.
@@ -108,7 +110,7 @@ plt.imshow(region)
 plt.show()
 ```
 
-![Screenshot of slide region](../.gitbook/assets/slide_screenshot.png)
+![Screenshot of slide region](../../.gitbook/assets/slide_screenshot.png)
 
 As a further example, we use lazy frame retrieval to load only a specific set
 of segments from a large multi-organ segmentation of a CT image in the IDC
@@ -166,3 +168,4 @@ See [this][11] page for more information on highdicom's `Image` class, and
 [10]: https://highdicom.readthedocs.io/en/latest/package.html#highdicom.sr.srread
 [11]: https://highdicom.readthedocs.io/en/latest/image.html
 [12]: https://highdicom.readthedocs.io/en/latest/seg.html
+[13]: https://highdicom.readthedocs.io/en/latest/image.html#lazy
