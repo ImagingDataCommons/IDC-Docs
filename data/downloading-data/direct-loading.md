@@ -157,6 +157,24 @@ volume = seg.get_volume(
 See [this][11] page for more information on highdicom's `Image` class, and
 [this][12] page for the `Segmentation` class.
 
+### The Importance Offset Tables
+
+Achieving good performance for these frame-level retrievals requires the
+presence of a "Basic Offset Table" or "Extended Offset Table" in the file.
+These tables specify the starting positions of each frame within the file.
+Without an offset table being present, libraries such as highdicom have to
+parse through the pixel data to find markers that tell it where frame
+boundaries are, which involves pulling down significantly more data and is
+therefore very slow. This mostly eliminates the potential speed benefits of
+frame-level retrieval. Unfortunately there is no simple way to know whether
+a file has an offset table without downloading the pixel data and checking it.
+If you find that an image takes a long time to load initially, it is
+probably because highdicom is constucting the offset table.
+
+Most IDC images do include an offset table, but some of the older pathology
+slide images do not. [This page][14] contains some notes about whether
+individual collections include offset table.
+
 
 [1]: https://cloud.google.com/python/docs/reference/storage/latest/
 [2]: https://pydicom.github.io/pydicom/stable/index.html
@@ -171,3 +189,4 @@ See [this][11] page for more information on highdicom's `Image` class, and
 [11]: https://highdicom.readthedocs.io/en/latest/image.html
 [12]: https://highdicom.readthedocs.io/en/latest/seg.html
 [13]: https://highdicom.readthedocs.io/en/latest/image.html#lazy
+[14]: https://github.com/ImagingDataCommons/idc-wsi-conversion?tab=readme-ov-file#overview
