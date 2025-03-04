@@ -169,12 +169,12 @@ therefore very slow. This mostly eliminates the potential speed benefits of
 frame-level retrieval. Unfortunately there is no simple way to know whether
 a file has an offset table without downloading the pixel data and checking it.
 If you find that an image takes a long time to load initially, it is
-probably because highdicom is constucting the offset table.
+probably because highdicom is constucting the offset table itself because it
+wasn't included in the file.
 
 Most IDC images do include an offset table, but some of the older pathology
 slide images do not. [This page][14] contains some notes about whether
-individual collections include offset table because it wasn't included in
-the file.
+individual collections include offset tables.
 
 
 [1]: https://cloud.google.com/python/docs/reference/storage/latest/
