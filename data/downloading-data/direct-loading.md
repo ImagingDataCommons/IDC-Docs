@@ -112,7 +112,9 @@ plt.show()
 
 Running this code should produce an output that looks like this:
 
-<img src="../../.gitbook/assets/slide_screenshot.png" alt="Screenshot of slide region" width="512" height="512">
+<p align="center">
+  <img src="../../.gitbook/assets/slide_screenshot.png" alt="Screenshot of slide region" width="512" height="512">
+</p>
 
 As a further example, we use lazy frame retrieval to load only a specific set
 of segments from a large multi-organ segmentation of a CT image in the IDC
