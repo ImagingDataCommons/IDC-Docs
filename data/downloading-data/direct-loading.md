@@ -41,7 +41,7 @@ dcm = dcmread(blob.open("rb"))
 dcm = dcmread(blob.open("rb"), stop_before_pixels=True)
 
 # Read only specific attributes, identified by their tag
-# (here the Manufacturer and ManufacturerModelName # attributes)
+# (here the Manufacturer and ManufacturerModelName attributes)
 dcm = dcmread(blob.open("rb"), specific_tags=[0x0008_0070, 0x0008_1090])
 ```
 
