@@ -1,4 +1,4 @@
-# Directly Loading DICOM from Google Cloud in Python
+# Directly Loading DICOM Objects from Google Cloud in Python
 
 The [official Python SDK for Google Cloud Storage][1]
 (installable from pip and PyPI as `google-cloud-storage`) provides a
@@ -18,7 +18,7 @@ See [this page](../organization-of-data/files-and-metadata.md#storage-buckets)
 for information on finding the paths of the blobs for DICOM objects in IDC.
 The `dcmread` function also has some other options that allow you to control
 what is read. For example you can choose to read only the metadata and not
-the frames, or read only certain attributes.
+the pixel data, or read only certain attributes.
 
 ```python
 from pydicom import dcmread
@@ -40,8 +40,8 @@ dcm = dcmread(blob.open("rb"))
 # Read metadata only (no pixel data)
 dcm = dcmread(blob.open("rb"), stop_before_pixels=True)
 
-# Read only specific attributes (here the Manufacturer and ManufacturerModelName
-# attributes)
+# Read only specific attributes, identified by their tag
+# (here the Manufacturer and ManufacturerModelName # attributes)
 dcm = dcmread(blob.open("rb"), specific_tags=[0x0008_0070, 0x0008_1090])
 ```
 
@@ -53,7 +53,8 @@ This works because running the [open][4] method on a Blob object returns
 a [BlobReader][5] object, which has a "file-like" interface (specifically
 the ``seek``, ``read``, and ``tell`` methods). There are further parameters
 of the `open()` method that may improve performance, for example the
-`chunk_size`, which you may wish to explore in performance-critical situations.
+`chunk_size`, which you may wish to explore if performance is important to
+you.
 
 ### Frame Level Access With Highdicom
 
