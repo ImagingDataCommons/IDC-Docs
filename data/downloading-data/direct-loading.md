@@ -9,6 +9,14 @@ download them onto a local drive.
 
 ### Reading Files With Pydicom
 
+[Pydicom][2]'s [dcmread][3] function is such a function, able to accept a "file-like"
+object, meaning you can read a file straight from a blob if you know its path.
+See [this page](../organization-of-data/files-and-metadata.md#storage-buckets)
+for information on finding the paths of the blobs for DICOM objects in IDC.
+The `dcmread` function also has some other options that allow you to control
+what is read. For example you can choose to read only the metadata and not
+the pixel data, or read only certain attributes.
+
 ##### From Google Cloud Storage Blobs
 
 The [official Python SDK for Google Cloud Storage][1]
@@ -19,14 +27,6 @@ they were "normal" files on the local filesystem.
 First create a storage client and blob object, representing a remote blob object
 stored on the cloud, then simply use the `.open('rb')` method to create a readable
 file-like object that can be passed to any function accepting file-like objects.
-
-[Pydicom][2]'s [dcmread][3] function is such a function, able to accept a "file-like"
-object, meaning you can read a file straight from a blob if you know its path.
-See [this page](../organization-of-data/files-and-metadata.md#storage-buckets)
-for information on finding the paths of the blobs for DICOM objects in IDC.
-The `dcmread` function also has some other options that allow you to control
-what is read. For example you can choose to read only the metadata and not
-the pixel data, or read only certain attributes.
 
 ```python
 from pydicom import dcmread
