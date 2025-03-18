@@ -83,7 +83,7 @@ dcm = dcmread(
 
 You may want to look into the the other options of `smart_open`'s `open` [method][16] to improve performance (in particular the `buffering` parameter).
 
-In the remainder of the examples, we will use only the GSC access method for brevity. However, you should be able to straightforwardly swap out the opened GCS blob for the opened AWS S3 blob to achieve the same effect with Amazon S3.
+In the remainder of the examples, we will use only the GCS access method for brevity. However, you should be able to straightforwardly swap out the opened GCS blob for the opened AWS S3 blob to achieve the same effect with Amazon S3.
 
 ### Frame-level access with Highdicom
 
