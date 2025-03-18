@@ -1,4 +1,4 @@
-# Directly Loading DICOM Objects from Google Cloud or AWS in Python
+# Directly loading DICOM objects from Google Cloud or AWS in Python
 
 DICOM files in the IDC are stored as "blobs" on the cloud, with one copy housed
 on Google Cloud Storage (GCS) and another on Amazon Web Services (AWS) S3 storage.

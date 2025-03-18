@@ -43,7 +43,7 @@
   * [Organization of data in v1 (deprecated)](data/organization-of-data/organization-of-data-v1.md)
 * [Downloading data](data/downloading-data/README.md)
   * [Downloading data with s5cmd](data/downloading-data/downloading-data-with-s5cmd.md)
-  * [Directly Loading DICOM Objects from Google Cloud in Python](data/downloading-data/direct-loading.md)
+  * [Directly loading DICOM objects from Google Cloud in Python](data/downloading-data/direct-loading.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
