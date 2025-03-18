@@ -1,11 +1,11 @@
 # Directly loading DICOM objects from Google Cloud or AWS in Python
 
 DICOM files in the IDC are stored as "blobs" on the cloud, with one copy housed on Google Cloud Storage (GCS) and another on Amazon Web Services (AWS) S3 storage. By using the right tools, these blobs can be wrapped to appear as "file-like" objects to Python DICOM libraries, enabling intelligent loading of DICOM files directly from cloud storage as if they were local files without having to first download them onto a local drive.
-### Reading Files With Pydicom
+### Reading files with Pydicom
 
 [Pydicom][2] is popular library for working with DICOM files in Python. Its [dcmread][3] function is able to accept any "file-like" object, meaning you can read a file straight from a cloud blob if you know its path. See [this page](../organization-of-data/files-and-metadata.md#storage-buckets) for information on finding the paths of the blobs for DICOM objects in IDC. The `dcmread` function also has some other options that allow you to control what is read. For example you can choose to read only the metadata and not the pixel data, or read only certain attributes. In the following two sections, we demonstrate these abilities using first Google Cloud Storage blobs and then AWS S3 blobs.
 
-##### From Google Cloud Storage Blobs
+##### From Google Cloud Storage blobs
 
 The [official Python SDK for Google Cloud Storage][1] (installable from pip and PyPI as `google-cloud-storage`) provides a "file-like" interface allowing other Python libraries, such as Pydicom, to work with blobs as if they were "normal" files on the local filesystem.
 
@@ -40,7 +40,7 @@ Reading only metadata or only specific attributes will *usually* reduce the amou
 
 This works because running the [open][4] method on a Blob object returns a [BlobReader][5] object, which has a "file-like" interface (specifically the ``seek``, ``read``, and ``tell`` methods). There are further parameters of the `open()` method that may improve performance, for example the `chunk_size`, which you may wish to explore if performance is important to you.
 
-##### From AWS S3 Blobs
+##### From AWS S3 blobs
 
 The `smart_open` [package][15] wraps an S3 client to expose a "file-like" interface for accessing blobs. It can be installed with `pip install 'smart_open[s3]'`.
 
@@ -85,7 +85,7 @@ You may want to look into the the other options of `smart_open`'s `open` [method
 
 In the remainder of the examples, we will use only the GSC access method for brevity. However, you should be able to straightforwardly swap out the opened GCS blob for the opened AWS S3 blob to achieve the same effect with Amazon S3.
 
-### Frame Level Access With Highdicom
+### Frame-level access with Highdicom
 
 [Highdicom][6] is a higher-level library providing several features to work with images and image-derived DICOM objects. As of the release 0.25.1, its various reading methods (including [imread][7], [segread][8], [annread][9], and [srread][10]) can read any file-like object, including Google Cloud blobs and anything opened with `smart_open` (including S3 blobs).
 
@@ -172,7 +172,7 @@ volume = seg.get_volume(
 
 See [this][11] page for more information on highdicom's `Image` class, and [this][12] page for the `Segmentation` class.
 
-### The Importance of Offset Tables
+### The importance of offset tables
 
 Achieving good performance for these frame-level retrievals requires the presence of a "Basic Offset Table" or "Extended Offset Table" in the file. These tables specify the starting positions of each frame within the file's byte stream. Without an offset table being present, libraries such as highdicom have to parse through the pixel data to find markers that tell it where frame boundaries are, which involves pulling down significantly more data and is therefore very slow. This mostly eliminates the potential speed benefits of frame-level retrieval. Unfortunately there is no simple way to know whether a file has an offset table without downloading the pixel data and checking it. If you find that an image takes a long time to load initially, it is probably because highdicom is constucting the offset table itself because it wasn't included in the file.
 
