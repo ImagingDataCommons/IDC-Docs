@@ -7,9 +7,9 @@ DICOM files in the IDC are stored as "blobs" on the cloud, with one copy housed 
 
 ##### From Google Cloud Storage Blobs
 
-The [official Python SDK for Google Cloud Storage][1] (installable from pip and PyPI as `google-cloud-storage`) provides a "file-like" interface allowing other Python libraries to work with blobs as if they were "normal" files on the local filesystem.
+The [official Python SDK for Google Cloud Storage][1] (installable from pip and PyPI as `google-cloud-storage`) provides a "file-like" interface allowing other Python libraries, such as Pydicom, to work with blobs as if they were "normal" files on the local filesystem.
 
-First create a storage client and blob object, representing a remote blob object stored on the cloud, then simply use the `.open('rb')` method to create a readable file-like object that can be passed to any function accepting file-like objects.
+To read from a GSD blob with Pydicom, first create a storage client and blob object, representing a remote blob object stored on the cloud, then simply use the `.open('rb')` method to create a readable file-like object that can be passed to the `dcmread` function.
 
 ```python
 from pydicom import dcmread
@@ -87,7 +87,7 @@ In the remainder of the examples, we will use only the GSC access method for bre
 
 ### Frame Level Access With Highdicom
 
-[Highdicom][6] is a higher-level library providing several features to work with images and image-derived DICOM objects. As of the release 0.25.1, its various reading methods (including [imread][7], [segread][8], [annread][9], and [srread][10]) can read any file-like object, including Google Cloud blobs and anything opened with `smart_open`.
+[Highdicom][6] is a higher-level library providing several features to work with images and image-derived DICOM objects. As of the release 0.25.1, its various reading methods (including [imread][7], [segread][8], [annread][9], and [srread][10]) can read any file-like object, including Google Cloud blobs and anything opened with `smart_open` (including S3 blobs).
 
 A particularly useful feature when working with blobs is ["lazy" frame retrieval][13] for images and segmentations. This downloads only the image metadata when the file is initially loaded, uses it to create a frame-level index, and downloads specific frames as and when they are requested by the user. This is especially useful for large multiframe files (such as those found in slide microscopy or multi-segment binary or fractional segmentations) as it can significantly reduce the amount of data that needs to be downloaded to access a subset of the frames.
 
