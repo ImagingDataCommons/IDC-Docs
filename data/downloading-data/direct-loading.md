@@ -17,7 +17,7 @@ from google.cloud import storage
 
 
 # Create a client and bucket object representing the IDC public data bucket
-client = storage.Client()
+client = storage.Client.create_anonymous_client()
 bucket = client.bucket("idc-open-data")
 
 # This is the path (within the above bucket) to a CT image in the IDC
@@ -101,7 +101,7 @@ from google.cloud import storage
 
 
 # Create a storage client and use it to access the IDC's public data package
-client = storage.Client()
+client = storage.Client.create_anonymous_client()
 bucket = client.bucket("idc-open-data")
 
 # This is the path (within the above bucket) to a whole slide image from the
@@ -145,7 +145,7 @@ from google.cloud import storage
 
 
 # Create a storage client and use it to access the IDC's public data package
-client = storage.Client()
+client = storage.Client.create_anonymous_client()
 bucket = client.bucket("idc-open-data")
 
 # This is the path (within the above bucket) to a segmentation of a CT series
