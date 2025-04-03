@@ -1,12 +1,12 @@
 # Support
 
-## IDC-specific support channel
 
-Our goal is to build an open and inclusive community of users and developers of IDC.
 
-We encourage you to use the [IDC Discourse forum](https://discourse.canceridc.dev) for all discussions related to IDC.
+{% hint style="warning" %}
+**If you need support with IDC or have any questions, please open a new topic in** [**IDC User Forum**](https://discourse.canceridc.dev/) **(preferred) or send email to support@canceridc.dev.**&#x20;
 
-If have reservations about discussing the issue you want to raise in a public forum, you can send email to [support@canceridc.dev](mailto:support@canceridc.dev), and start the discussion with the IDC support team, who will then triage the issue.
+**Would you rather discuss your questions in an meeting with an expert from the IDC team? Book a 1-on-1 support session here:** [**https://tinyurl.com/idc-help-request**](https://tinyurl.com/idc-help-request)
+{% endhint %}
 
 ## Discounted use and training materials for NIH-funded investigators
 

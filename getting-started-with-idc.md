@@ -28,9 +28,9 @@ IDC Portal is integrated with powerful visualization tools: just with your web b
 
 We have many tools to help you search data in IDC, so that you download only what you need!
 
-* you can do basic filtering/subsetting of the data using IDC Portal, but if you are developer, you will want to learn how to use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) for programmatic access. [This python notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part2\_searching\_basics.ipynb) will introduce you to the basics of `idc-index` for interaction with IDC content.
-* search clinical data: many of the IDC collections are accompanied by clinical data, which we parsed for you into searchable tabular representation - no need to download or parse CSV/Excel/PDF files! Dive into searching clinical data using [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/exploring\_clinical\_data.ipynb).
-* if advanced content does not scare you, check out [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part3\_exploring\_cohorts.ipynb) to learn how to search **all** of the metadata accompanying IDC using SQL and Google BigQuery.
+* you can do basic filtering/subsetting of the data using IDC Portal, but if you are developer, you will want to learn how to use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) for programmatic access. [This python notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) will introduce you to the basics of `idc-index` for interaction with IDC content.
+* search clinical data: many of the IDC collections are accompanied by clinical data, which we parsed for you into searchable tabular representation - no need to download or parse CSV/Excel/PDF files! Dive into searching clinical data using [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/exploring_clinical_data.ipynb).
+* if advanced content does not scare you, check out [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part3_exploring_cohorts.ipynb) to learn how to search **all** of the metadata accompanying IDC using SQL and Google BigQuery.
 
 ### **Download the data you liked**
 
@@ -43,9 +43,9 @@ We provide various tools for downloading data from IDC, as discussed in the [Dow
 
 We want to make it easier to understand performance of the latest advances in AI on real-world cancer imaging data!
 
-* if you have a Google account, you have free access to Google Colab, which allows you to run python notebooks on cloud VMs equipped with GPU - for free! Combined with `idc-index` for data access, this makes it rather easy to experiment with the latest AI tools! As an example, take a look at [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/MedSAM\_with\_IDC.ipynb) that allows you to apply MedSAM model to IDC data. You will find a growing number of notebooks to help you use IDC in [this repository](https://github.com/ImagingDataCommons/IDC-Tutorials).
+* if you have a Google account, you have free access to Google Colab, which allows you to run python notebooks on cloud VMs equipped with GPU - for free! Combined with `idc-index` for data access, this makes it rather easy to experiment with the latest AI tools! As an example, take a look at [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/MedSAM_with_IDC.ipynb) that allows you to apply MedSAM model to IDC data. You will find a growing number of notebooks to help you use IDC in [this repository](https://github.com/ImagingDataCommons/IDC-Tutorials).
 * use IDC to develop HuggingFace spaces that demonstrate the power of your models on real data: see [this space](https://huggingface.co/spaces/ImagingDataCommons/SegVolOnIDC) we developed for SegVol
-* growing number of AI medical imaging models is being curated on the [MHub.ai](https://mhub.ai) platform; see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/mhubai\_tutorial.ipynb) to learn how to apply those models on data from IDC
+* growing number of AI medical imaging models is being curated on the [MHub.ai](https://mhub.ai) platform; see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/mhubai_tutorial.ipynb) to learn how to apply those models on data from IDC
 
 How about accompanying your next publication by a working demonstration notebook on relevant samples from IDC? You can see an example how we did this in [this recent publication](https://dx.doi.org/10.1016/j.cmpb.2023.107839).
 
@@ -62,9 +62,11 @@ If you have an algorithm, that you evaluated/published, that can enrich data in 
 
 * IDC maintains a [Zenodo community](https://zenodo.org/communities/nci-idc) where we curate contributions of analysis results and other datasets produced by IDC (see the [expert annotations of the RMS-Mutations-Prediction microscopy images collection](https://zenodo.org/records/10462858) as one example of such contribution)
 * through a dedicated Zenodo record you will have a citation and DOI to get credit for your work; your data is ingested from Zenodo into IDC, and citation will be generated for the users of your data in IDC
-* once your data is in IDC, it should be easier to discover it, combine with other datasets, visualize and use from analysis workflows (as an example, see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/collections\_demos/rms\_mutation\_prediction/RMS-Mutation-Prediction-Expert-Annotations\_exploration.ipynb) accompanying the RMS annotations)
+* once your data is in IDC, it should be easier to discover it, combine with other datasets, visualize and use from analysis workflows (as an example, see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/collections_demos/rms_mutation_prediction/RMS-Mutation-Prediction-Expert-Annotations_exploration.ipynb) accompanying the RMS annotations)
 * email us at [support+submissions@canceridc.dev](https://mail.google.com/mail/?view=cm\&fs=1\&tf=1\&to=support+submissions@canceridc.dev) to inquire about contributing your annotations/analysis results to IDC!
 
 ### Questions?
 
-Join [IDC forum](https://discourse.canceridc.dev) with any inquiries about IDC - we want to hear from you! As you will see from the historical posts, we typically respond to user questions very quickly.&#x20;
+If you need support with IDC or have any questions, please open a new topic in [IDC User Forum](https://discourse.canceridc.dev/) (preferred) or send email to support@canceridc.dev.&#x20;
+
+Would you rather discuss your questions in an meeting with an expert from the IDC team? Book a 1-on-1 support session here: [https://tinyurl.com/idc-help-request](https://tinyurl.com/idc-help-request)
