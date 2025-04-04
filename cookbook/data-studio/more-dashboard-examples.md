@@ -5,6 +5,7 @@ Topic-specific dashboards
 * [Digital pathology / slide microscopy dashboard](https://lookerstudio.google.com/reporting/e4795618-80ad-4cfe-a668-89a8090d560b/page/NM1rD)
 * [Preclinical images dashboard](https://lookerstudio.google.com/reporting/053952fa-0290-4273-a0f2-9f7811270edd)
 * [CT contrast images exploration](https://lookerstudio.google.com/reporting/a5497bdc-54a5-4f48-b617-6dfc5a80a492)&#x20;
+* [MRI dashboard](https://lookerstudio.google.com/reporting/e7507e51-8a97-41d9-9dac-fe87c6e3a482)
 
 Program- and Collection-specific dashboards
 
