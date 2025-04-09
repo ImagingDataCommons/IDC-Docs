@@ -14,7 +14,7 @@ Depending on whether you would like to download data interactively or programmat
 pip install idc-index --upgrade
 ```
 
-Once installed, you can use it to explore, search, select and download corresponding files as shown in the examples below. You can also take a look at a short tutorial on using `idc-index` [here](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/labs/idc\_rsna2023.ipynb).
+Once installed, you can use it to explore, search, select and download corresponding files as shown in the examples below. You can also take a look at a short tutorial on using `idc-index` [here](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/labs/idc_rsna2023.ipynb).
 
 #### Command line download interface
 
@@ -60,7 +60,7 @@ $ idc download 1.2.840.113654.2.55.305538394446738410906709753576946604022
 ```python
 from idc_index import index
 
-client = index.IDCClient()
+client = IDCClient()
 
 # get identifiers of all collections available in IDC
 all_collection_ids = client.get_collections()

@@ -23,6 +23,7 @@
 
 ## Tutorials
 
+* [Portal tutorial](tutorials/portal-tutorial.md)
 * [Python notebook tutorials](https://github.com/ImagingDataCommons/IDC-Tutorials)
 * [Slide microscopy](tutorials/slide-microscopy/README.md)
   * [Using QuPath for visualization](tutorials/slide-microscopy/qpath-for-sm-visualization.md)
@@ -62,11 +63,11 @@
 ## Portal
 
 * [Getting started](portal/getting-started.md)
-* [Exploring data and cohorts](portal/data-exploration-and-cohorts/README.md)
-  * [Exploring imaging data](portal/data-exploration-and-cohorts/exploring-imaging-data.md)
-  * [Viewing collections, studies, and series](portal/data-exploration-and-cohorts/viewing-collections-studies-and-series.md)
-  * [Understanding cohorts](portal/data-exploration-and-cohorts/understanding-cohorts.md)
-* [Cohort manifests](portal/cohort-manifests.md)
+* [Exploring and subsetting data](portal/data-exploration-and-cohorts/README.md)
+  * [Configuring your search](portal/data-exploration-and-cohorts/exploring-imaging-data.md)
+  * [Exploring search results](portal/data-exploration-and-cohorts/viewing-collections-studies-and-series.md)
+  * [Data selection and download](portal/data-exploration-and-cohorts/understanding-cohorts.md)
+* [Manifests: selecting data subsets](portal/cohort-manifests.md)
 * [Visualizing images](portal/visualization.md)
 * [Proxy policy](portal/proxy-policy.md)
 * [Viewer release notes](portal/viewer-release-notes.md)

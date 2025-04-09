@@ -1,6 +1,4 @@
-# Getting started
-
-## Overview
+# Portal tutorial
 
 The[ Imaging Data Commons Portal ](https://portal.imaging.datacommons.cancer.gov/)provides a web-based interactive interface to browse the data hosted by IDC, visualize images, build manifests describing selected cohorts, and download images defined by the manifests.
 

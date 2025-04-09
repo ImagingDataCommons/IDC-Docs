@@ -1,42 +1,24 @@
 # Visualizing images
 
-In the following section we describe the capabilities of IDC-maintained viewer instances that can be used with the data hosted by IDC.&#x20;
+IDC integrates two different viewers, which will be used depending on the type of images being opened. Visualization of radiology images uses the open-source [Open Health Imaging Foundation (OHIF) Viewer](https://github.com/OHIF/Viewers) v3. The [SliM Viewer](https://github.com/MGHComputationalPathology/slim) is used for visualization of pathology and slide microscopy images. We customized both of those viewers slightly to add features specific to IDC. You can find all of those modifications in the respective forks under the IDC GitHub organization for OHIF and SliM viewers: [OHIF Viewer fork](https://github.com/ImagingDataCommons/Viewers) and [SliM Viewer fork](https://github.com/ImagingDataCommons/slim). IDC Viewer is opened every time you click the "eye" icon in the study or series table of the IDC Portal.
 
-If you want to visualize your own images, or if you would like to combine IDC images with the analysis results or annotations you generated, you do have several options:
-
-* You can use Google FireCloud to deploy [OHIF](https://github.com/OHIF/Viewers) v2 radiology or [Slim](https://github.com/ImagingDataCommons/slim) microscopy viewers as web applications, without having to use virtual machines or docker, and for free!
-  * [OHIF FireCloud deployment tutorial](https://tinyurl.com/idc-ohif-gcp)
-  * [Slim FireCloud deployment tutorial](https://tinyurl.com/idc-slim-gcp)
-* If you want to visualize images inside a Colab/Jupyter notebook - you can use [itkWidgets](https://github.com/InsightSoftwareConsortium/itkwidgets) - details in [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part3\_exploring\_cohorts.ipynb)
-* You can use open source [VolView](https://volview.kitware.com/) zero-footprint viewer to visualize and volume render any image series by simply pointing it to the cloud bucket with the files - see details in [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part3\_exploring\_cohorts.ipynb)
-
-## IDC Viewer overview
-
-IDC integrates two different viewers, which will be used depending on the type of images being opened. Visualization of radiology images uses the open-source [Open Health Imaging Foundation (OHIF) Viewer](https://github.com/OHIF/Viewers). The [SliM Viewer](https://github.com/MGHComputationalPathology/slim) is used for visualization of pathology and slide microscopy images. We customized both of those viewers slightly to add features specific to IDC. You can find all of those modifications in the respective forks under the IDC GitHub organization for OHIF and SliM viewers: [OHIF Viewer fork](https://github.com/ImagingDataCommons/Viewers) and [SliM Viewer fork](https://github.com/ImagingDataCommons/slim). IDC Viewer is opened every time you click the "eye" icon in the study or series table of the IDC Portal.
-
+{% hint style="danger" %}
 **The OHIF and SliM viewers do not support 32 bit browsers.**
-
-IDC Viewer is a "zero-footprint" client-side viewer. What this means is that before you can see the image in the viewer, it has to be downloaded to your browser from the IDC DICOM stores. IDC Viewer communicates the data it receives through a proxy via the [DICOMweb](https://www.dicomstandard.org/using/dicomweb) interface implemented in GCP [Cloud Healthcare API](https://cloud.google.com/healthcare/docs/concepts/dicom). The proxy is intended to throttle download of data.
-
-{% hint style="info" %}
-Currently, IDC Viewer proxy limits the amount of data that can be downloaded in one day to **137 GB per IP address**, and enforces a total quota per day over all of the IP addresses. If the quota is exhausted, you will not be able to see any images in IDC Viewer until the limit is reset and instead will be redirected to [this](https://portal.imaging.datacommons.cancer.gov/quota/index.html)[ page](https://portal.imaging.datacommons.cancer.gov/quota/index.html)! We may adjust the current proxy limits in the future, and you are welcome to provide your feedback on the appropriateness of the current quota in [IDC Discourse](https://discourse.canceridc.dev/c/support/feedback-and-features/7). Note that the IDC Viewer proxy is provided only to support this use case The full proxy policy is described [here](proxy-policy.md)
 {% endhint %}
 
-Depending on a variety of factors (size of the image, your network connection, responsiveness of the proxy) the process of loading images into your browser can take some time before the entire image series is loaded. You will know the series is not loaded completely if you cannot scroll to the arbitrary location of the image volume. This will also be indicated by the incomplete progress bar below the series thumbnail. If you want to ensure the entire series is loaded before you start to explore the reconstructed volume, you can wait until the series load is completed.
+IDC Viewer is a "zero-footprint" client-side viewer: before you can see the image in the viewer, it has to be downloaded to your browser from the IDC DICOM stores. IDC Viewer communicates the data it receives through a proxy via the [DICOMweb](https://www.dicomstandard.org/using/dicomweb) interface implemented in GCP [Cloud Healthcare API](https://cloud.google.com/healthcare/docs/concepts/dicom).&#x20;
 
-![Left: partially loaded series. Right: progress bar indicates the series load is complete.](<../.gitbook/assets/image (15).png>)
+{% hint style="info" %}
+Currently, IDC Viewer proxy limits the amount of data that can be downloaded in one day to **137 GB per IP address**, and enforces a total quota per day over all of the IP addresses. If the quota is exhausted, you will not be able to see any images in IDC Viewer until the limit is reset and instead will be redirected to [this](https://portal.imaging.datacommons.cancer.gov/quota/index.html)[ page](https://portal.imaging.datacommons.cancer.gov/quota/index.html)! We may adjust the current proxy limits in the future, and you are welcome to provide your feedback on the appropriateness of the current quota in [IDC Discourse](https://discourse.canceridc.dev/c/support/feedback-and-features/7).&#x20;
+{% endhint %}
 
-CINE and 2D MPR modes are shown with red and yellow arrows in the image below, respectively.
 
-![CINE and 2D MPR tools in the IDC Viewer](../.gitbook/assets/cine\_mpr.jpg)
-
-Note that 2D MPR mode is only available for series that form a consistent volume (that is, all pixel spacings equal, slices equally spaced, and so on, which means you will not see the MPR button for such series as time-resolved MRI, as an example).
 
 ## IDC radiology viewer functionality
 
 The main functions of the viewer are available via the toolbar controls shown below.
 
-![IDC Viewer tools](../.gitbook/assets/viewer\_toolbar.jpg)
+<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 The functionality supported by those tools should be self-explanatory, or can be discovered via quick experimentation.
 
@@ -46,9 +28,9 @@ If you want to report a problem related to visualization of a specific study in 
 
 ### Visualizing annotations
 
-IDC Viewer supports visualization of DICOM Segmentation objects (SEG) and DICOM Radiotherapy Structure Sets (RTSTRUCT). When available in a given study, you will see those modalities labeled as such in the left-hand panel of the viewer, as shown below. To see a specific SEG or RTSTRUCT, drag the thumbnail to the viewer. After that you can open the RTSTRUCT/SEG panel in the upper right corner to jump to the locations of the specific structure sets or segments, and to control their individual visibility.
+IDC Viewer supports visualization of DICOM Segmentation objects (SEG) and DICOM Radiotherapy Structure Sets (RTSTRUCT). When available in a given study, you will see those modalities labeled as such in the left-hand panel of the viewer, as shown below. To see a specific SEG or RTSTRUCT, double-click on the corresponding thumbnail. After that you can open the RTSTRUCT/SEG panel in the upper right corner to jump to the locations of the specific structure sets or segments, and to control their individual visibility.
 
-![IDC Viewer](../.gitbook/assets/rtstruct\_load.gif)
+<figure><img src="https://github.com/ImagingDataCommons/IDC-Docs/releases/download/v20/viewer.gif" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Note that certain modalities, such as Segmentation (SEG) and Real World Value Mapping (RWVM) objects, cannot be selected for visualization from the IDC Portal. SEG can only be viewed in the context of the image series segmented, and RWVM series are not viewable and will not show up in the left panel of the viewer.
@@ -75,4 +57,14 @@ Here are some specific examples, taken from the IDC Portal dashboard:
 
 Digital pathology viewer uses a slightly different convention, as should be evident from this example URL: [https://viewer.imaging.datacommons.cancer.gov/slim/studies/2.25.211094631316408413440371843585977094852/series/1.3.6.1.4.1.5962.99.1.217222191.146280326.1640894762031.2.0](https://viewer.imaging.datacommons.cancer.gov/slim/studies/2.25.211094631316408413440371843585977094852/series/1.3.6.1.4.1.5962.99.1.217222191.146280326.1640894762031.2.0)
 
+## Deploying your own viewer
+
 You can share the viewer URLs if you want to refer to visualizations of the specific items from IDC. You can also use this functionality if you want to visualize specific items from your notebook or a custom dashboard (e.g., a Google DataStudio dashboard).
+
+If you want to visualize your own images, or if you would like to combine IDC images with the analysis results or annotations you generated, you do have several options:
+
+* You can use Google FireCloud to deploy [OHIF](https://github.com/OHIF/Viewers) v2 radiology or [Slim](https://github.com/ImagingDataCommons/slim) microscopy viewers as web applications, without having to use virtual machines or docker, and for free!
+  * [OHIF FireCloud deployment tutorial](https://tinyurl.com/idc-ohif-gcp)
+  * [Slim FireCloud deployment tutorial](https://tinyurl.com/idc-slim-gcp)
+* If you want to visualize images inside a Colab/Jupyter notebook - you can use [itkWidgets](https://github.com/InsightSoftwareConsortium/itkwidgets) - details in [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part3_exploring_cohorts.ipynb)
+* You can use open source [VolView](https://volview.kitware.com/) zero-footprint viewer to visualize and volume render any image series by simply pointing it to the cloud bucket with the files - see details in [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part3_exploring_cohorts.ipynb)

@@ -1,6 +1,12 @@
-# Cohort manifests
+---
+hidden: true
+---
 
-The cohort manifest identifies the sources of data in your cohort and allows you to store the content of the cohort outside of the portal, and download the files corresponding to the cohort.&#x20;
+# Manifests: selecting data subsets
+
+Manifest contains references that can be used to download the files corresponding to your data selection. You can also archive manifests of items you selected in the IDC Portal for subsequent retrieval, or for sharing with your collaborators or readers of your paper.&#x20;
+
+You can create manifests using&#x20;
 
 To export a cohort manifest, [Create a cohort](data-exploration-and-cohorts/understanding-cohorts.md) or click **Cohorts** on the top menu bar and select a cohort you previously created. Click the **Export Cohort Manifest** button: the Export Cohort Manifest dialog box appears. There are three options for exporting the cohort manifest, which serve different needs:
 

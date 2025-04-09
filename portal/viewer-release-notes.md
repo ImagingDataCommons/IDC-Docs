@@ -3,13 +3,12 @@
 {% hint style="danger" %}
 The version of the viewer is available from the "About" menu for the OHIF (radiology) viewer, and "Get app info" menu for the Slim (pathology) viewers. Both of those menus are in the upper right corner of the window.
 
-<img src="../.gitbook/assets/ohif_version (1).png" alt="radiology viewer version location" data-size="original">![pathology viewer version location](../.gitbook/assets/slim\_version.png)
+<img src="../.gitbook/assets/ohif_version (1).png" alt="radiology viewer version location" data-size="original"><img src="../.gitbook/assets/slim_version.png" alt="pathology viewer version location" data-size="original">
 {% endhint %}
 
 ## v2-legacy - 8 Jun 2023 - OHIF
 
-The final OHIF v2 published version is 4.12.45. Upstream changes based on v2 will be accessible 
-through the v2-legacy branch (will not be published to NPM).
+The final OHIF v2 published version is 4.12.45. Upstream changes based on v2 will be accessible through the v2-legacy branch (will not be published to NPM).
 
 Main highlights from v2-legacy since 4.12.45:
 
@@ -17,7 +16,7 @@ Main highlights from v2-legacy since 4.12.45:
 * Update SEG tolerance popup and update SEG thumbnail warning: Jump to first segment item image and show warning message only once on onChange events
 * Update to issues and PR templates
 * Address segmentation visibility toggle applied to all segmentations instead of the active one only
-* Update dcmjs version so it throws 'Failed to find the reference image in the source data. Cannot load this segmentation' error instead of logging a warning to console 
+* Update dcmjs version so it throws 'Failed to find the reference image in the source data. Cannot load this segmentation' error instead of logging a warning to console
 * Address eye icon for segment not shown when segment name is long
 * Change message for segmentation when it fails to load duo to orientation tolerance
 
