@@ -36,16 +36,49 @@ dcm = dcmread(blob.open("rb"), stop_before_pixels=True)
 dcm = dcmread(blob.open("rb"), specific_tags=[0x0008_0070, 0x0008_1090])
 ```
 
-Reading only metadata or only specific attributes will *usually* reduce the amount of data that needs to be pulled down and therefore make the loading process faster.
+Reading only metadata or only specific attributes will reduce the amount of data that needs to be pulled down some under circumstances and therefore make the loading process faster.
+This depends on the size of the attributes being retrieved, the `chunk_size` (a parameter of the `open()` method that controls how much data is pulled in each HTTP request to the server), and the position of the requested element within the file (since it is necessary to seek through the file until the requested attributes are found, but any data after the requested attributes need not be pulled).
 
-This works because running the [open][4] method on a Blob object returns a [BlobReader][5] object, which has a "file-like" interface (specifically the ``seek``, ``read``, and ``tell`` methods). There are further parameters of the `open()` method that may improve performance, for example the `chunk_size`, which you may wish to explore if performance is important to you.
+This works because running the [open][4] method on a Blob object returns a [BlobReader][5] object, which has a "file-like" interface (specifically the ``seek``, ``read``, and ``tell`` methods).
 
 ##### From AWS S3 blobs
 
-The `smart_open` [package][15] wraps an S3 client to expose a "file-like" interface for accessing blobs. It can be installed with `pip install 'smart_open[s3]'`.
+The `boto3` package provides a Python API for accessing S3 blobs. It can be installed with `pip install boto3`.
+In order to access open IDC data without providing AWS credentials, it is necessary to configure your own client object such that it does not require signing. This is demonstrated in the following example, which repeats the above example using the counterpart of the same blob on AWS S3.
+If you want to read an entire file, we recommend using a temporary buffer like this:
 
-In order to be able to access open IDC data without providing AWS credentials, it is necessary to configure your own client object such that it does not require signing. This is demonstrated in the following example, which repeats the above example using the counterpart of the same blob on AWS S3.
+```python
 
+from io import BytesIO
+from pydicom import dcmread
+
+import boto3
+from botocore import UNSIGNED
+from botocore.config import Config
+
+
+# Path (within the idc-open-data bucket) to an IDC CT image on AWS S3
+blob_key = "f44633af-5e76-4e01-a7fe-63764fc7e8c2/e36b336b-3550-48c9-8457-c853eab14e25.dcm"
+
+# Configure a client to avoid the need for AWS credentials
+s3_client = boto3.client('s3', config=Config(signature_version=UNSIGNED))
+
+with BytesIO() as buf:
+    # Dowload file contents to an in-memory buffer
+    s3_client.download_fileobj("idc-open-data", blob_key, buf)
+
+    # Use pydicom to read from the in-memory buffer
+    buf.seek(0)
+    dcm = pydicom.dcmread(buf)
+
+```
+
+Unlike `google-cloud-storage`, `boto3` does not provide a file-like interface to access data in blobs.
+Instead, the `smart_open` [package][15] is a third-party package that wraps an S3 client to expose a "file-like" interface.
+It can be installed with `pip install 'smart_open[s3]'`.
+However, we have found that the buffering behavior of this package (which is intended for streaming) is not well matched to the use case of reading DICOM metadata, resulting in many unnecassary requests while reading the metadata of DICOM files (see [this](https://github.com/piskvorky/smart_open/issues/712) issue).
+Therefore while the following will work, we recommend using the approach in the above example (downloading the whole file) in most cases even if you only want to read the metadata as it will likely be much faster.
+The exception to this is when reading only the metadata of very large images where the total amount of pixel data dwarfs the amount of metadata (or using frame-level access to such images, see below).
 
 ```python
 from pydicom import dcmread
@@ -71,13 +104,6 @@ dcm = dcmread(
 dcm = dcmread(
     smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)),
     stop_before_pixels=True,
-)
-
-# Read only specific attributes, identified by their tag
-# (here the Manufacturer and ManufacturerModelName attributes)
-dcm = dcmread(
-    smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)),
-    specific_tags=[0x0008_0070, 0x0008_1090],
 )
 ```
 
