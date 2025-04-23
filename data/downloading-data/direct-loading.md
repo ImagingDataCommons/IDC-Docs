@@ -26,14 +26,17 @@ blob = bucket.blob(
 )
 
 # Read the whole file directly from the blob
-dcm = dcmread(blob.open("rb"))
+with blob.open("rb") as reader:
+    dcm = dcmread(reader)
 
 # Read metadata only (no pixel data)
-dcm = dcmread(blob.open("rb"), stop_before_pixels=True)
+with blob.open("rb") as reader:
+    dcm = dcmread(reader, stop_before_pixels=True)
 
 # Read only specific attributes, identified by their tag
 # (here the Manufacturer and ManufacturerModelName attributes)
-dcm = dcmread(blob.open("rb"), specific_tags=[0x0008_0070, 0x0008_1090])
+with blob.open("rb") as reader:
+    dcm = dcmread(reader, specific_tags=[0x0008_0070, 0x0008_1090])
 ```
 
 Reading only metadata or only specific attributes will reduce the amount of data that needs to be pulled down some under circumstances and therefore make the loading process faster. This depends on the size of the attributes being retrieved, the `chunk_size` (a parameter of the `open()` method that controls how much data is pulled in each HTTP request to the server), and the position of the requested element within the file (since it is necessary to seek through the file until the requested attributes are found, but any data after the requested attributes need not be pulled).
@@ -61,12 +64,12 @@ blob_key = "f44633af-5e76-4e01-a7fe-63764fc7e8c2/e36b336b-3550-48c9-8457-c853eab
 s3_client = boto3.client('s3', config=Config(signature_version=UNSIGNED))
 
 with BytesIO() as buf:
-    # Dowload file contents to an in-memory buffer
+    # Download entire file contents to an in-memory buffer
     s3_client.download_fileobj("idc-open-data", blob_key, buf)
 
     # Use pydicom to read from the in-memory buffer
     buf.seek(0)
-    dcm = pydicom.dcmread(buf)
+    dcm = dcmread(buf)
 
 ```
 
@@ -88,15 +91,12 @@ s3_client = boto3.client('s3', config=Config(signature_version=UNSIGNED))
 url = 's3://idc-open-data/f44633af-5e76-4e01-a7fe-63764fc7e8c2/e36b336b-3550-48c9-8457-c853eab14e25.dcm'
 
 # Read the whole file directly from the blob
-dcm = dcmread(
-    smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)),
-)
+with smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)) as reader:
+    dcm = dcmread(reader)
 
 # Read metadata only (no pixel data)
-dcm = dcmread(
-    smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)),
-    stop_before_pixels=True,
-)
+with smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)) as reader:
+    dcm = dcmread(reader, stop_before_pixels=True)
 ```
 
 You may want to look into the the other options of `smart_open`'s `open` [method][16] to improve performance (in particular the `buffering` parameter).
@@ -129,19 +129,17 @@ blob = bucket.blob(
 )
 
 # Read directly from the blob object using lazy frame retrieval
-im = hd.imread(
-    blob.open(mode="rb"),
-    lazy_frame_retrieval=True
-)
+with blob.open(mode="rb") as reader:
+    im = hd.imread(reader, lazy_frame_retrieval=True)
 
-# Grab an arbitrary region of tile full pixel matrix
-region = im.get_total_pixel_matrix(
-    row_start=15000,
-    row_end=15512,
-    column_start=17000,
-    column_end=17512,
-    dtype=np.uint8
-)
+    # Grab an arbitrary region of tile full pixel matrix
+    region = im.get_total_pixel_matrix(
+        row_start=15000,
+        row_end=15512,
+        column_start=17000,
+        column_end=17512,
+        dtype=np.uint8
+    )
 
 # Show the region
 plt.imshow(region)
@@ -173,19 +171,17 @@ blob = bucket.blob(
 )
 
 # Open the blob with "segread" using the "lazy frame retrieval" option
-seg = hd.seg.segread(
-    blob.open(mode="rb"),
-    lazy_frame_retrieval=True
-)
+with blob.open(mode="rb") as reader:
+    seg = hd.seg.segread(reader, lazy_frame_retrieval=True)
 
-# Find the segment number corresponding to the liver segment
-selected_segment_numbers = seg.get_segment_numbers(segment_label="Liver")
+    # Find the segment number corresponding to the liver segment
+    selected_segment_numbers = seg.get_segment_numbers(segment_label="Liver")
 
-# Read in the selected segments lazily
-volume = seg.get_volume(
-    segment_numbers=selected_segment_numbers,
-    combine_segments=True,
-)
+    # Read in the selected segments lazily
+    volume = seg.get_volume(
+        segment_numbers=selected_segment_numbers,
+        combine_segments=True,
+    )
 ```
 
 See [this][11] page for more information on highdicom's `Image` class, and [this][12] page for the `Segmentation` class.
