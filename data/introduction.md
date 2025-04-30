@@ -4,7 +4,7 @@
 
 Most of the data in IDC is received from the data collection initiatives/projects supported by US National Cancer Institute. Whenever source images or image-derived data is not in the DICOM format, it is harmonized into DICOM as part of the ingestion.&#x20;
 
-IDC sources of data include:
+As of data release v21, IDC sources of data include:
 
 * [The Cancer Imaging Archive (TCIA) (ongoing)](https://www.cancerimagingarchive.net/)
   * all DICOM files from the public collections are mirrored in IDC
