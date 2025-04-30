@@ -39,14 +39,14 @@ Please cite the latest paper from the IDC team. Please also make sure you acknow
 
 IDC and TCIA are partners in providing FAIR data for cancer imaging researchers. While some of the functions between the two resources are similar, there are also key differences. The table below provides a summary of similarities and differences.
 
-| Function                                                                | **IDC**                                          | TCIA |
-| ----------------------------------------------------------------------- | ------------------------------------------------ | ---- |
-| De-identification                                                       | no, IDC can only host data already de-identified | yes  |
-| Cloud-based data co-located with compute resources                      | yes                                              | no   |
-| Conversion of pathology images and image-derived data into DICOM format | yes                                              | no   |
-| Private data collections                                                | no                                               | yes  |
-| Public data collections                                                 | yes                                              | yes  |
-| Version control of the data                                             | [yes](data/data-versioning.md)                   | no   |
+| Function                                                                | **IDC**                                          | TCIA    |
+| ----------------------------------------------------------------------- | ------------------------------------------------ | ------- |
+| De-identification                                                       | no, IDC can only host data already de-identified | yes     |
+| Cloud-based data co-located with compute resources                      | yes                                              | no      |
+| Conversion of pathology images and image-derived data into DICOM format | yes                                              | no      |
+| Private data collections                                                | no                                               | yes     |
+| Public data collections                                                 | yes                                              | yes     |
+| Version control of the data                                             | [yes](data/data-versioning.md)                   | partial |
 
 ## Where do I learn more about other components of CRDC?
 
@@ -54,7 +54,7 @@ The main website for the Cancer Research Data Commons (CRDC) is [https://datacom
 
 ## What about non-imaging data that accompanies IDC collections?
 
-Clinical data that was shared by the submitters is available for a number of imaging collections in IDC. Please see [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/advanced\_topics/clinical\_data\_intro.ipynb) on how to search that data and how to link clinical data with imaging metadata!
+Clinical data that was shared by the submitters is available for a number of imaging collections in IDC. Please see [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/advanced_topics/clinical_data_intro.ipynb) on how to search that data and how to link clinical data with imaging metadata!
 
 Many of the imaging collections are also accompanied by the genomics or proteomics data. CRDC [Cancer Data Aggregator (CDA)](https://cda.readthedocs.io/en/latest/) provides the API to locate such related datasets.
 
@@ -62,6 +62,6 @@ Many of the imaging collections are also accompanied by the genomics or proteomi
 
 IDC Portal gives you access to just a small subset of the metadata accompanying IDC images. If you want to learn more about what is available, you have several options:
 
-* [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part2\_searching\_basics.ipynb) from our Getting Started tutorial series explains how to use [`idc-index`](https://github.com/ImagingDataCommons/idc-index) - a python package that aims to simplify access to IDC data
-* [this more advanced notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting\_started/part3\_exploring\_cohorts.ipynb) will help you get started with searching IDC metadata in BigQuery, which gives you access to all of the DICOM metadata extracted from IDC-hosted files
+* [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) from our Getting Started tutorial series explains how to use [`idc-index`](https://github.com/ImagingDataCommons/idc-index) - a python package that aims to simplify access to IDC data
+* [this more advanced notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part3_exploring_cohorts.ipynb) will help you get started with searching IDC metadata in BigQuery, which gives you access to all of the DICOM metadata extracted from IDC-hosted files
 * if you are not comfortable writing queries or coding in pyhon, you can use [this DataStudio dashboard](https://datastudio.google.com/reporting/ab96379c-e134-414f-8996-188e678f1b70/page/KHtxB) to search using some of the attributes that are not available through the portal. You can also [extend this dashboard](cookbook/data-studio/cohort-dashboard.md) to include additional attributes.

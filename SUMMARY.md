@@ -21,13 +21,6 @@
 * [Requesting GCP cloud credits](introduction/requesting-gcp-cloud-credits.md)
 * [Requesting AWS cloud credits](introduction/requesting-aws-cloud-credits.md)
 
-## Tutorials
-
-* [Portal tutorial](tutorials/portal-tutorial.md)
-* [Python notebook tutorials](https://github.com/ImagingDataCommons/IDC-Tutorials)
-* [Slide microscopy](tutorials/slide-microscopy/README.md)
-  * [Using QuPath for visualization](tutorials/slide-microscopy/qpath-for-sm-visualization.md)
-
 ## Data
 
 * [Introduction](data/introduction.md)
@@ -46,6 +39,13 @@
   * [Downloading data with s5cmd](data/downloading-data/downloading-data-with-s5cmd.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
+
+## Tutorials
+
+* [Portal tutorial](tutorials/portal-tutorial.md)
+* [Python notebook tutorials](https://github.com/ImagingDataCommons/IDC-Tutorials)
+* [Slide microscopy](tutorials/slide-microscopy/README.md)
+  * [Using QuPath for visualization](tutorials/slide-microscopy/qpath-for-sm-visualization.md)
 
 ## DICOM
 

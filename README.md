@@ -20,7 +20,7 @@ layout:
 **Would you rather discuss your questions in an meeting with an expert from the IDC team? Book a 1-on-1 support session here:** [**https://tinyurl.com/idc-help-request**](https://tinyurl.com/idc-help-request)
 {% endhint %}
 
-[**NCI Imaging Data Commons** **(IDC)**](https://imaging.datacommons.cancer.gov) is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools and resources. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.&#x20;
+[**NCI Imaging Data Commons** **(IDC)**](https://imaging.datacommons.cancer.gov) is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.&#x20;
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>IDC data release v20 summary; see live dashboard <a href="https://lookerstudio.google.com/reporting/04cf5976-4ea0-4fee-a749-8bfd162f2e87/page/p_s7mk6eybqc">here</a>.</p></figcaption></figure>
 
@@ -38,9 +38,9 @@ IDC is as much about data as it is about what you can do with the data! We maint
 
 * **exploration**: start with the [IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/) to get an idea of the data available
 * **visualization**: examine images and image-derived annotations and analysis results from the convenience of your browser using integrated OHIF, VolView and Slim open source viewers
-* **programmatic access**: use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) we provide to perform search, download and other operations programmatically
+* **programmatic access**: use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) to perform search, download and other operations programmatically
 * **cohort building**: use rich and extensive metadata to build subsets of data programmatically using `idc-index` or BigQuery SQL
-* **download**: use your favorite S3 API client or `idc-index`, to efficiently fetch any of the IDC files from our public buckets
+* **download**: use your favorite S3 API client or `idc-index` to efficiently fetch any of the IDC files from our public buckets
 * **analysis**: conveniently access IDC files and metadata from the tools that are cloud-native, such as Google Colab or Looker; fetch IDC data directly into 3D Slicer using [SlicerIDCBrowser extension](https://github.com/ImagingDataCommons/SlicerIDCBrowser/)
 
 {% hint style="info" %}

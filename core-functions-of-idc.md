@@ -2,7 +2,9 @@
 
 ## Easy and efficient access to public cancer imaging data
 
-We ingest and distribute datasets from variety of sources and contributors, primarily focusing on large data collection initiatives sponsored by US National Cancer Institute. At this time, we do not have resources to prioritize receipt of the imaging data from individual PIs (but we are encouraging submissions of annotations for existing IDC data!). Nevertheless, if you feel you might have a compelling dataset, please email us at [support+submissions@canceridc.dev](https://mail.google.com/mail/?view=cm\&fs=1\&tf=1\&to=support+submissions@canceridc.dev).
+We ingest and distribute datasets from variety of sources and contributors, primarily focusing on large data collection initiatives sponsored by US National Cancer Institute.&#x20;
+
+At this time, we do not have resources to prioritize receipt of the imaging data from individual PIs (but we are encouraging submissions of annotations/analysis results for existing IDC data!). Nevertheless, if you feel you might have a compelling dataset, please email us at [support+submissions@canceridc.dev](https://mail.google.com/mail/?view=cm\&fs=1\&tf=1\&to=support+submissions@canceridc.dev).
 
 On ingestion, we harmonize images and image-derived data into DICOM format for interoperability, whenever data is represented in a non-DICOM format.
 
