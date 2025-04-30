@@ -28,7 +28,7 @@ Whenever IDC replicates data from a publicly available source, we include the re
 
 <figure><img src="../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
-* `source_doi` metadata column contains Digital Object Identifier (DOI) at the granularity of the individual files and is available both via [python `idc-index` package](https://github.com/ImagingDataCommons/idc-index) and BigQuery interfaces
+* `source_doi` metadata column contains Digital Object Identifier (DOI) at the granularity of the individual files and is available both via [python `idc-index` package](https://github.com/ImagingDataCommons/idc-index) (see [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) on how to access it) and BigQuery interfaces
 
 {% hint style="info" %}
 Whenever source data is harmonized into DICOM, the DOI will correspond to a Zenodo entry for the result of harmonization, which in turn will reference the location where data can be accessed in the native format (if available). As an example, IDC NLM-Visible-Human-Project collection refers to this DOI that describes the dataset resulting from the original dataset harmonized into DICOM [https://doi.org/10.5281/zenodo.12690049](https://doi.org/10.5281/zenodo.12690049), which in turn references the [NLM Visible Human project page](https://www.nlm.nih.gov/research/visible/visible_human.html) containing information on accessing the original files collected by the project.
