@@ -20,6 +20,8 @@ As of data release v21, IDC sources of data include:
 * [Genotype-Tissue Expression Project (GTex)](https://commonfund.nih.gov/GTEx)
   * digital pathology slides harmonized into DICOM SM
 
+The list of all of the IDC collections is available in IDC Portal here: [https://portal.imaging.datacommons.cancer.gov/collections/](https://portal.imaging.datacommons.cancer.gov/collections/).
+
 ## Data provenance
 
 Whenever IDC replicates data from a publicly available source, we include the reference to the origin:
@@ -31,7 +33,7 @@ Whenever IDC replicates data from a publicly available source, we include the re
 * `source_doi` metadata column contains Digital Object Identifier (DOI) at the granularity of the individual files and is available both via [python `idc-index` package](https://github.com/ImagingDataCommons/idc-index) (see [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) on how to access it) and BigQuery interfaces
 
 {% hint style="info" %}
-Whenever source data is harmonized into DICOM, the DOI will correspond to a Zenodo entry for the result of harmonization, which in turn will reference the location where data can be accessed in the native format (if available). As an example, IDC NLM-Visible-Human-Project collection refers to this DOI that describes the dataset resulting from the original dataset harmonized into DICOM [https://doi.org/10.5281/zenodo.12690049](https://doi.org/10.5281/zenodo.12690049), which in turn references the [NLM Visible Human project page](https://www.nlm.nih.gov/research/visible/visible_human.html) containing information on accessing the original files collected by the project.
+Whenever source data is harmonized into DICOM, the DOI will correspond to a Zenodo entry for the result of harmonization, which in turn will reference the location where data can be accessed in the native format (if available). As an example, IDC NLM-Visible-Human-Project collection refers to this DOI that describes the dataset resulting from the original dataset harmonized into DICOM [https://doi.org/10.5281/zenodo.12690049](https://doi.org/10.5281/zenodo.12690049), which in turn references the [NLM Visible Human project page](https://www.nlm.nih.gov/research/visible/visible_human.html) containing information on accessing the original files collected by the project.&#x20;
 {% endhint %}
 
 Check out [Data release notes](data-release-notes.md) for information about the collections added in the individual IDC data releases.
