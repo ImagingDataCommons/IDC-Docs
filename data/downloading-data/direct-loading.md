@@ -12,6 +12,7 @@ All of the image data available from IDC is replicated between public Google Clo
 ```python
 from idc_index import IDCClient
 
+
 # Create IDCClient for looking up bucket URLs
 idc_client = IDCClient()
 
@@ -213,7 +214,7 @@ for instance_file_url in file_urls:
     with blob.open("rb") as reader:
         dcm = dcmread(reader, specific_tags=[keyword_dict['TotalPixelMatrixColumns']])
         total_columns = dcm.TotalPixelMatrixColumns
-        if total_columns>largest_dimension:
+        if total_columns > largest_dimension:
             largest_dimension = total_columns
             base_layer_blob = blob
 
@@ -291,7 +292,7 @@ See [this][11] page for more information on highdicom's `Image` class, and [this
 
 ### The importance of offset tables for slide microscopy (SM) images
 
-Achieving good performance for the Slide Microscopy frame-level retrievals requires the presence of a "Basic Offset Table" or "Extended Offset Table" in the file. These tables specify the starting positions of each frame within the file's byte stream. Without an offset table being present, libraries such as highdicom have to parse through the pixel data to find markers that tell it where frame boundaries are, which involves pulling down significantly more data and is therefore very slow. This mostly eliminates the potential speed benefits of frame-level retrieval. Unfortunately there is no simple way to know whether a file has an offset table without downloading the pixel data and checking it. If you find that an image takes a long time to load initially, it is probably because highdicom is constucting the offset table itself because it wasn't included in the file.
+Achieving good performance for the Slide Microscopy frame-level retrievals requires the presence of either a "Basic Offset Table" or "Extended Offset Table" in the file. These tables specify the starting positions of each frame within the file's byte stream. Without an offset table being present, libraries such as highdicom have to parse through the pixel data to find markers that tell it where frame boundaries are, which involves pulling down significantly more data and is therefore very slow. This mostly eliminates the potential speed benefits of frame-level retrieval. Unfortunately there is no simple way to know whether a file has an offset table without downloading the pixel data and checking it. If you find that an image takes a long time to load initially, it is probably because highdicom is constucting the offset table itself because it wasn't included in the file.
 
 Most IDC images do include an offset table, but some of the older pathology slide images do not. [This page][14] contains some notes about whether individual collections include offset tables.
 
