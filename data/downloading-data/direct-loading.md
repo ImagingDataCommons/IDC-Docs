@@ -12,16 +12,20 @@ All of the image data available from IDC is replicated between public Google Clo
 ```python
 from idc_index import IDCClient
 
-# create IDCClient() for looking up bucket URLs
+# Create IDCClient for looking up bucket URLs
 idc_client = IDCClient()
 
-# get the list of GCS file URLs in Google bucket from SeriesInstanceUID
-gcs_file_urls = idc_client.get_series_file_URLs(seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
-                                   source_bucket_location="gcs")
+# Get the list of GCS file URLs in Google bucket from SeriesInstanceUID
+gcs_file_urls = idc_client.get_series_file_URLs(
+    seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
+    source_bucket_location="gcs",
+)
 
-# get the list of AWS file URLs in Google bucket from SeriesInstanceUID
-aws_file_urls = idc_client.get_series_file_URLs(seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
-                                   source_bucket_location="aws")
+# Get the list of AWS file URLs in AWS bucket from SeriesInstanceUID
+aws_file_urls = idc_client.get_series_file_URLs(
+    seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
+    source_bucket_location="aws",
+)
 ```
 
 ##### From Google Cloud Storage blobs
@@ -32,30 +36,31 @@ To read from a GCS blob with Pydicom, first create a storage client and blob obj
 
 ```python
 from pydicom import dcmread
-from google.cloud import storage
-
 from pydicom.datadict import keyword_dict
-
+from google.cloud import storage
 from idc_index import IDCClient
 
-# create IDCClient() for looking up bucket URLs
+
+# Create IDCClient for looking up bucket URLs
 idc_client = IDCClient()
 
 # Create a client and bucket object representing the IDC public data bucket
-client = storage.Client.create_anonymous_client()
+gcs_client = storage.Client.create_anonymous_client()
 
-# get the list of file URLs in Google bucket from SeriesInstanceUID
-file_urls = idc_client.get_series_file_URLs(seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
-                                   source_bucket_location="gcs")
+# This example uses a CT series in the IDC.
+# get the list of file URLs in Google bucket from the SeriesInstanceUID
+file_urls = idc_client.get_series_file_URLs(
+    seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
+    source_bucket_location="gcs",
+)
 
 # URLs will look like this:
 # s3://idc-open-data/668029cf-41bf-4644-b68a-46b8fa99c3bc/f4fe9671-0a99-4b6d-9641-d441f13620d4.dcm
-(_,_,bucket_name,folder_name,file_name) = file_urls[0].split("/")
+(_, _, bucket_name, folder_name, file_name) = file_urls[0].split("/")
 blob_key = f"{folder_name}/{file_name}"
 
-bucket = client.bucket(bucket_name)
-
-# This is the path (within the above bucket) to a CT image in the IDC
+# These objects represent the bucket and a single image blob within the bucket
+bucket = gcs_client.bucket(bucket_name)
 blob = bucket.blob(blob_key)
 
 # Read the whole file directly from the blob
@@ -69,8 +74,10 @@ with blob.open("rb") as reader:
 # Read only specific attributes, identified by their tag
 # (here the Manufacturer and ManufacturerModelName attributes)
 with blob.open("rb") as reader:
-    dcm = dcmread(reader, specific_tags=[keyword_dict['Manufacturer'],
-                                         keyword_dict['ManufacturerModelName']])
+    dcm = dcmread(
+        reader,
+        specific_tags=[keyword_dict['Manufacturer'], keyword_dict['ManufacturerModelName']],
+    )
     print(dcm)
 ```
 
@@ -89,22 +96,23 @@ from pydicom import dcmread
 import boto3
 from botocore import UNSIGNED
 from botocore.config import Config
-
 from idc_index import IDCClient
 
-# create IDCClient() for looking up bucket URLs
+
+# Create IDCClient for looking up bucket URLs
 idc_client = IDCClient()
 
-# get the list of file URLs in AWS bucket from SeriesInstanceUID
-file_urls = idc_client.get_series_file_URLs(seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
-                                   source_bucket_location="aws")
+# This example uses a CT series in the IDC (same as above).
+# Get the list of file URLs in AWS bucket from SeriesInstanceUID
+file_urls = idc_client.get_series_file_URLs(
+    seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
+    source_bucket_location="aws",
+)
 
 # URLs will look like this:
 # s3://idc-open-data/668029cf-41bf-4644-b68a-46b8fa99c3bc/f4fe9671-0a99-4b6d-9641-d441f13620d4.dcm
-(_,_,bucket_name,folder_name,file_name) = file_urls[0].split("/")
+(_, _, bucket_name, folder_name, file_name) = file_urls[0].split("/")
 blob_key = f"{folder_name}/{file_name}"
-
-bucket = client.bucket(bucket_name)
 
 # Configure a client to avoid the need for AWS credentials
 s3_client = boto3.client('s3', config=Config(signature_version=UNSIGNED))
@@ -130,23 +138,20 @@ import smart_open
 
 from idc_index import IDCClient
 
-# create IDCClient() for looking up bucket URLs
+# Create IDCClient for looking up bucket URLs
 idc_client = IDCClient()
 
-# get the list of file URLs in AWS bucket from SeriesInstanceUID
-file_urls = idc_client.get_series_file_URLs(seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
-                                   source_bucket_location="aws")
+# Get the list of file URLs in AWS bucket from SeriesInstanceUID
+file_urls = idc_client.get_series_file_URLs(
+    seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
+    source_bucket_location="aws"
+)
 
 # URL to an IDC CT image on AWS S3
 url = file_urls[0]
 
 # Configure a client to avoid the need for AWS credentials
 s3_client = boto3.client('s3', config=Config(signature_version=UNSIGNED))
-
-# Read the whole file directly from the blob
-dcm = dcmread(
-    smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)),
-)
 
 # Read the whole file directly from the blob
 with smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)) as reader:
@@ -175,42 +180,42 @@ import highdicom as hd
 import matplotlib.pyplot as plt
 from google.cloud import storage
 from pydicom import dcmread
-
 from pydicom.datadict import keyword_dict
 
 from idc_index import IDCClient
 
-# create IDCClient() for looking up bucket URLs
+# Create IDCClient for looking up bucket URLs
 idc_client = IDCClient()
 
-# get the list of file URLs in AWS bucket from SeriesInstanceUID
-# in this case we are using a series from the IDC CCDI-MCI collection
-file_urls = idc_client.get_series_file_URLs(seriesInstanceUID="1.3.6.1.4.1.5962.99.1.1900325859.924065538.1719887277027.4.0",
-                                   source_bucket_location="gcs")
+# Get the list of file URLs in AWS bucket from SeriesInstanceUID
+# In this case we are using a series from the IDC CCDI-MCI collection
+file_urls = idc_client.get_series_file_URLs(
+    seriesInstanceUID="1.3.6.1.4.1.5962.99.1.1900325859.924065538.1719887277027.4.0",
+    source_bucket_location="gcs"
+)
 
-(_,_,bucket_name,folder_name,file_name) = file_urls[0].split("/")
+( _, _, bucket_name, folder_name, file_name) = file_urls[0].split("/")
 
 # Create a storage client and use it to access the IDC's public data package
-client = storage.Client.create_anonymous_client()
-bucket = client.bucket(bucket_name)
+gcs_client = storage.Client.create_anonymous_client()
+bucket = gcs_client.bucket(bucket_name)
 
-# go over series instances to find the base (largest matrix) layer
-# based on TotalPixelMatrixColumns value 
+# Go over series instances to find the base (largest matrix) layer
+# based on TotalPixelMatrixColumns value
 largest_dimension = 0
 base_layer_blob = None
 for instance_file_url in file_urls:
-  (_,_,_,folder_name,file_name) = instance_file_url.split("/")
-  blob_name = f"{folder_name}/{file_name}"
-  
-  blob = bucket.blob(blob_name)
+    (_, _, _, folder_name, file_name) = instance_file_url.split("/")
+    blob_name = f"{folder_name}/{file_name}"
 
-  with blob.open("rb") as reader:
-    dcm = dcmread(reader, specific_tags=[keyword_dict['TotalPixelMatrixColumns']])
-    total_columns = dcm.TotalPixelMatrixColumns
-    if total_columns>largest_dimension:
-      largest_dimension = total_columns
-      base_layer_blob = blob
+    blob = bucket.blob(blob_name)
 
+    with blob.open("rb") as reader:
+        dcm = dcmread(reader, specific_tags=[keyword_dict['TotalPixelMatrixColumns']])
+        total_columns = dcm.TotalPixelMatrixColumns
+        if total_columns>largest_dimension:
+            largest_dimension = total_columns
+            base_layer_blob = blob
 
 # Read directly from the blob object using lazy frame retrieval
 with base_layer_blob.open(mode="rb") as reader:
@@ -242,27 +247,28 @@ As a further example, we use lazy frame retrieval to load only a specific set of
 ```python
 import highdicom as hd
 from google.cloud import storage
-
-# create IDCClient() for looking up bucket URLs
 from idc_index import IDCClient
+
+
+# Create IDCClient for looking up bucket URLs
 idc_client = IDCClient()
 
 # Get the file URL corresponding to the segmentation of a CT series
-# containing a large number of different organs - the same one as used in the 
+# containing a large number of different organs - the same one as used in the
 # IDC Portal front page
-file_urls = idc_client.get_series_file_URLs(seriesInstanceUID="1.2.276.0.7230010.3.1.3.313263360.15787.1706310178.804490",
-                                   source_bucket_location="gcs")
+file_urls = idc_client.get_series_file_URLs(
+    seriesInstanceUID="1.2.276.0.7230010.3.1.3.313263360.15787.1706310178.804490",
+    source_bucket_location="gcs"
+)
 
-(_,_,bucket_name,folder_name,file_name) = file_urls[0].split("/")
+(_, _, bucket_name, folder_name, file_name) = file_urls[0].split("/")
 
 # Create a storage client and use it to access the IDC's public data package
-client = storage.Client.create_anonymous_client()
-bucket = client.bucket(bucket_name)
+gcs_client = storage.Client.create_anonymous_client()
+bucket = gcs_client.bucket(bucket_name)
 
 blob_name = f"{folder_name}/{file_name}"
-blob = bucket.blob(
-    blob_name
-)
+blob = bucket.blob(blob_name)
 
 # Open the blob with "segread" using the "lazy frame retrieval" option
 with blob.open(mode="rb") as reader:
@@ -277,17 +283,31 @@ with blob.open(mode="rb") as reader:
         combine_segments=True,
     )
 
-# print dimensions of the liver segment volume
+# Print dimensions of the liver segment volume
 print(volume.shape)
 ```
 
 See [this][11] page for more information on highdicom's `Image` class, and [this][12] page for the `Segmentation` class.
 
-### The importance of offset tables for SM modality
+### The importance of offset tables for slide microscopy (SM) images
 
 Achieving good performance for the Slide Microscopy frame-level retrievals requires the presence of a "Basic Offset Table" or "Extended Offset Table" in the file. These tables specify the starting positions of each frame within the file's byte stream. Without an offset table being present, libraries such as highdicom have to parse through the pixel data to find markers that tell it where frame boundaries are, which involves pulling down significantly more data and is therefore very slow. This mostly eliminates the potential speed benefits of frame-level retrieval. Unfortunately there is no simple way to know whether a file has an offset table without downloading the pixel data and checking it. If you find that an image takes a long time to load initially, it is probably because highdicom is constucting the offset table itself because it wasn't included in the file.
 
 Most IDC images do include an offset table, but some of the older pathology slide images do not. [This page][14] contains some notes about whether individual collections include offset tables.
+
+You can also check whether an image file (including pixel data) has an offset table using pydicom like this:
+
+```python
+import pydicom
+
+
+dcm = pydicom.dcmread("...")  # Any method to read from file/cloud storage
+
+
+print("Has Extended Offset Table:", "ExtendedOffsetTable" in dcm)
+print("Has Basic Offset Table:", dcm.Pixeldata[4:8] != b'\x00\x00\x00\x00')
+
+```
 
 
 [1]: https://cloud.google.com/python/docs/reference/storage/latest/
