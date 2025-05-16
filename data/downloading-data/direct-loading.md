@@ -188,35 +188,31 @@ from idc_index import IDCClient
 # Create IDCClient for looking up bucket URLs
 idc_client = IDCClient()
 
-# Get the list of file URLs in AWS bucket from SeriesInstanceUID
-# In this case we are using a series from the IDC CCDI-MCI collection
-file_urls = idc_client.get_series_file_URLs(
-    seriesInstanceUID="1.3.6.1.4.1.5962.99.1.1900325859.924065538.1719887277027.4.0",
-    source_bucket_location="gcs"
-)
+# install additional component of idc-index to resolve SM instances to file URLs
+idc_client.fetch_index("sm_instance_index")
 
-( _, _, bucket_name, folder_name, file_name) = file_urls[0].split("/")
+# given SeriesInstanceUID of an SM series, find the instance that corresponds to the
+# highest resolution base layer of the image pyramid
+query = """
+SELECT SOPInstanceUID, TotalPixelMatrixColumns
+FROM sm_instance_index
+WHERE SeriesInstanceUID = '1.3.6.1.4.1.5962.99.1.1900325859.924065538.1719887277027.4.0'
+ORDER BY TotalPixelMatrixColumns DESC
+LIMIT 1
+"""
+result = idc_client.sql_query(query)
+
+# get URL corresponding to the base layer instance in the Google Storage bucket
+base_layer_file_url = idc_client.get_instance_file_URL(sopInstanceUID=result.iloc[0]["SOPInstanceUID"], source_bucket_location="gcs")
 
 # Create a storage client and use it to access the IDC's public data package
 gcs_client = storage.Client.create_anonymous_client()
+
+(_,_, bucket_name, folder_name, file_name) = base_layer_file_url.split("/")
+blob_key = f"{folder_name}/{file_name}"
+
 bucket = gcs_client.bucket(bucket_name)
-
-# Go over series instances to find the base (largest matrix) layer
-# based on TotalPixelMatrixColumns value
-largest_dimension = 0
-base_layer_blob = None
-for instance_file_url in file_urls:
-    (_, _, _, folder_name, file_name) = instance_file_url.split("/")
-    blob_name = f"{folder_name}/{file_name}"
-
-    blob = bucket.blob(blob_name)
-
-    with blob.open("rb") as reader:
-        dcm = dcmread(reader, specific_tags=[keyword_dict['TotalPixelMatrixColumns']])
-        total_columns = dcm.TotalPixelMatrixColumns
-        if total_columns > largest_dimension:
-            largest_dimension = total_columns
-            base_layer_blob = blob
+base_layer_blob = bucket.blob(blob_key)
 
 # Read directly from the blob object using lazy frame retrieval
 with base_layer_blob.open(mode="rb") as reader:
