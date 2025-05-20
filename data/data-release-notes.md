@@ -10,6 +10,108 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## V21 - May 2025
+
+{% hint style="success" %}
+#### Release counts
+
+Files: 4,5784,454 (+174,244)
+
+Series: 950,888 (+3,308)
+
+Studies: 149,577 (+2,070)
+
+Cases: 71,082 (+1,893)
+
+Collections: 150 (+1)
+
+Analysis results collections: 17 (no change)
+
+Disk size: 87.49 TB (+1.94 TB)
+{% endhint %}
+
+#### New radiology collections
+
+1. [CMB-BRCA](https://www.cancerimagingarchive.net/collection/cmb-brca/)
+2. [VAREPOP-APOLLO](https://www.cancerimagingarchive.net/collection/varepop-apollo/)
+
+#### Revised radiology collections
+
+1. [CMB-LCA](https://www.cancerimagingarchive.net/collection/cmb-lca/)
+2. [CMB-MEL](https://www.cancerimagingarchive.net/collection/cmb-mel/)
+3. [CMB-MML](https://www.cancerimagingarchive.net/collection/cmb-mml/)
+4. [CMB-PCA](https://www.cancerimagingarchive.net/collection/cmb-pca/)
+5. [CPTAC-AML](https://www.cancerimagingarchive.net/collection/cptac-aml/)
+6. [CPTAC-PDA](https://www.cancerimagingarchive.net/collection/cptac-pda/)
+
+#### Revised radiology collections
+
+1. [CCDI-MCI](https://doi.org/10.5281/zenodo.11099086)
+
+#### Revised analysis results
+
+1. [RMS-Mutation-Prediction-Expert-Annotations](https://doi.org/10.5281/zenodo.10462857)
+
+#### New clinical metadata tables
+
+1. bamf\_aimi\_annotations\_brain\_mr\_qa\_results
+2. bamf\_aimi\_annotations\_breast\_fdg\_pet\_ct\_qa\_results
+3. bamf\_aimi\_annotations\_breast\_mr\_qa\_results
+4. bamf\_aimi\_annotations\_kidney\_ct\_qa\_results
+5. bamf\_aimi\_annotations\_liver2\_ct\_qa\_results
+6. bamf\_aimi\_annotations\_liver\_ct\_qa\_results
+7. bamf\_aimi\_annotations\_liver\_mr\_qa\_results
+8. bamf\_aimi\_annotations\_lung2\_ct\_qa\_results
+9. bamf\_aimi\_annotations\_lung\_ct\_qa\_results
+10. bamf\_aimi\_annotations\_lung\_fdg\_pet\_ct\_qa\_results
+11. bamf\_aimi\_annotations\_prostate\_mr\_qa\_results
+12. cptac\_aml\_demographic\_classification
+13. varepop\_apollo\_clinical
+
+#### Renamed clinical metadata tables
+
+1. nlst\_canc
+   1. Previously nlst\_clinical
+
+#### Retired clinical metadata tables
+
+1. acrin\_nsclc\_fdg\_pet\_bamf\_lung\_pet\_ct\_segmentation
+   1. Subsumed by bamf\_aimi\_annotations\_lung\_fdg\_pet\_ct\_qa\_results
+2. anti\_pd\_1\_lung\_bamf\_lung\_ct\_segmentation
+   1. Subsumed by bamf\_aimi\_annotations\_lung\_ct\_qa\_results
+3. anti\_pd\_1\_lung\_bamf\_lung\_fdg\_pet\_ct\_segmenation
+   1. Subsumed by bamf\_aimi\_annotations\_lung\_fdg\_pet\_ct\_qa\_results
+4. lung\_pet\_ct\_dx\_bamf\_lung\_ct\_segmentation
+   1. Subsumed by bamf\_aimi\_annotations\_lung\_ct\_qa\_results
+5. lung\_pet\_ct\_dx\_bamf\_lung\_fdg\_pet\_ct\_segmenation
+   1. Subsumed by bamf\_aimi\_annotations\_lung\_fdg\_pet\_ct\_qa\_results
+6. nsclc\_radiogenomics\_bamf\_lung\_ct\_segmentation
+   1. Subsumed by bamf\_aimi\_annotations\_lung\_ct\_qa\_results
+7. nsclc\_radiogenomics\_bamf\_lung\_fdg\_pet\_ct\_segmenation
+   1. Subsumed by bamf\_aimi\_annotations\_lung\_fdg\_pet\_ct\_qa\_results
+8. prostatex\_bamf\_segmentations
+   1. Subsumed by bamf\_aimi\_annotations\_prostate\_mr\_qa\_results
+9. qin\_breast\_bamf\_breast\_segmentation
+   1. Subsumed by bamf\_aimi\_annotations\_breast\_fdg\_pet\_ct\_qa\_results
+10. rider\_lung\_pet\_ct\_bamf\_lung\_ct\_segmentation
+    1. Subsumed by bamf\_aimi\_annotations\_lung\_ct\_qa\_results
+11. rider\_lung\_pet\_ct\_bamf\_lung\_fdg\_pet\_ct\_segmenation
+    1. Subsumed by bamf\_aimi\_annotations\_lung\_fdg\_pet\_ct\_qa\_results
+12. tcga\_kirc\_bamf\_kidney\_segmentation
+    1. Subsumed by bamf\_aimi\_annotations\_kidney\_ct\_qa\_results
+13. tcga\_lihc\_bamf\_liver\_ct\_segmentation
+    1. Subsumed by bamf\_aimi\_annotations\_liver\_ct\_qa\_results
+14. tcga\_lihc\_bamf\_liver\_mr\_segmentation
+    1. Subsumed by amf\_aimi\_annotations\_liver\_mr\_qa\_results
+15. tcga\_luad\_bamf\_lung\_ct\_segmentation
+    1. Subsumed by bamf\_aimi\_annotations\_lung\_ct\_qa\_results
+16. tcga\_luad\_bamf\_lung\_mr\_segmentation
+    1. Subsumed by bamf\_aimi\_annotations\_lung\_fdg\_pet\_ct\_qa\_results
+17. tcga\_lusc\_lung\_ct\_segmentation
+    1. Subsumed by bamf\_aimi\_annotations\_lung\_ct\_qa\_results
+18. tcga\_lusc\_lung\_mr\_segmentation
+    1. Subsumed by bamf\_aimi\_annotations\_lung\_fdg\_pet\_ct\_qa\_results
+
 ## V20 - November 2024
 
 #### New radiology collections
