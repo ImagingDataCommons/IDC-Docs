@@ -44,7 +44,7 @@ Disk size: 87.49 TB (+1.94 TB)
 5. [CPTAC-AML](https://www.cancerimagingarchive.net/collection/cptac-aml/)
 6. [CPTAC-PDA](https://www.cancerimagingarchive.net/collection/cptac-pda/)
 
-#### Revised radiology collections
+#### Revised pathology collections
 
 1. [CCDI-MCI](https://doi.org/10.5281/zenodo.11099086)
 
