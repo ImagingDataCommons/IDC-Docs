@@ -3,7 +3,7 @@
 {% hint style="info" %}
 Data hosted by IDC is ingested from several sources, including [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/), [Genomics Data Commons (GDC)](https://gdc.cancer.gov/), [Clinical Proteomic Tumor Analysis Consortium (CPTAC)](https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/clinical-proteomic-tumor-analysis-consortium-cptac) and [Human Tumor Atlas Network (HTAN)](https://humantumoratlas.org/).
 
-Please refer to the license and terms of use, which are defined in the `license_url` and `source_doi` or `source_doi` of the IDC BigQuery [`dicom_all` table](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc_current\&t=dicom_all\&page=table). You can filter the data by license type in the [IDC Portal](https://imaging.datacommons.cancer.gov/).
+Please refer to the license and terms of use, which are defined in the `license_url` and `source_doi` or `source_url` of the IDC BigQuery [`dicom_all` table](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc_current\&t=dicom_all\&page=table). You can filter the data by license type in the [IDC Portal](https://imaging.datacommons.cancer.gov/), or programmatically, as demonstrated in [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb).
 {% endhint %}
 
 ## IDC releases summary view
