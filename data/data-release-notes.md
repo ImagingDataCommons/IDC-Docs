@@ -15,7 +15,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 {% hint style="success" %}
 #### Release counts
 
-Files: 4,5784,454 (+174,244)
+Files: 45,784,454 (+174,244)
 
 Series: 950,888 (+3,308)
 
