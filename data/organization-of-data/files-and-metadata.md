@@ -6,7 +6,7 @@ We gratefully acknowledge [Google Public Data Program](https://console.cloud.goo
 
 Let's start with the overall principles of how we organize data in IDC.
 
-IDC brings you (as of v18) over 60 TB of publicly available DICOM images and image-derived content. We share those with you as DICOM files, and those DICOM files are available in cloud-based **storage buckets** - both in Google and AWS.&#x20;
+IDC brings you (as of v21) over 85 TB of publicly available DICOM images and image-derived content. We share those with you as DICOM files, and those DICOM files are available in cloud-based **storage buckets** - both in Google and AWS.&#x20;
 
 Sharing just the files, however, is not particularly helpful. With that much data, it is no longer practical to just download all of those files to later sort through them to select those you need.&#x20;
 
@@ -444,6 +444,3 @@ and similarly for AWS buckets, thus making it easy to transfer all instances in 
 
 Because file names are more or less opaque, the user will not typically select files by listing the contents of a bucket. Instead, one should use either the IDC Portal or IDC BigQuery tables to identify items of interest and, then, generate a manifest of objects that can be passed to a utility like s5cmd.
 
-## DICOM Stores
-
-IDC utilizes a single Google Healthcare DICOM store to host all of the instances in the current IDC version. That store, however, is primarily intended to support visualization of the data using the OHIF and Slim viewers. At this time, we do not support access of the hosted data via DICOMWeb interface by IDC users. See more details in the [discussion here](https://discourse.canceridc.dev/t/dicomweb-access-to-hosted-collections/69), and please comment about your use case if you have a need to access data via the DICOMweb interface.

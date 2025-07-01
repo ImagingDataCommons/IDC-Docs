@@ -28,6 +28,7 @@
 * [Data versioning](data/data-versioning.md)
 * [Organization of data](data/organization-of-data/README.md)
   * [Files and metadata](data/organization-of-data/files-and-metadata.md)
+  * [DICOM stores](data/organization-of-data/dicom-stores.md)
   * [Clinical data](data/organization-of-data/clinical.md)
   * [Resolving CRDC Globally Unique Identifiers (GUIDs)](data/organization-of-data/guids-and-uuids.md)
   * [Deprecated functionality](data/organization-of-data/deprecated-functionality/README.md)
