@@ -3,14 +3,14 @@
 An IDC manifest may include study and/or series _GUIDs_ that can be resolved to the underlying DICOM instance files in GCS. Such use of GUIDs in a manifest enables a much shorter manifest compared to a list of per-instance GCS URLs. Also, as explained below, a GUID is expected to be resolvable even when the data which it represents has been moved.
 
 {% hint style="info" %}
-From the [GA4GH Data Repository Service API](https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.0.0/docs/#\_introduction) specification:
+From the [GA4GH Data Repository Service API](https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.0.0/docs/#_introduction) specification:
 
 "The Data Repository Service (DRS) API provides a generic interface to data repositories so data consumers, including workflow systems, can access data objects in a single, standard way regardless of where they are stored and how they are managed. The primary functionality of DRS is to map a logical ID to a means for physically retrieving the data represented by the ID."
 {% endhint %}
 
 In IDC, we use the term _GUID_ to mean a persistent identifier that can be resolved to a GA4GH DrsObject. GUID persistence ensures that the data which the GUID represents can continue to be located and accessed even if it has been moved to a different hosting site.
 
-As described in the [Data Versioning](../../data-versioning.md) section, a UUID identifies a particular version of an IDC data object. There is a UUID for every version of every DICOM instance, series, and study in IDC hosted data. Each such UUID can be used to form a GUID that is registered by the NCI Cancer Research Data Commons (CRDC), and can be used to access the data that defines that object.
+As described in the [Data Versioning](../../../data-versioning.md) section, a UUID identifies a particular version of an IDC data object. There is a UUID for every version of every DICOM instance, series, and study in IDC hosted data. Each such UUID can be used to form a GUID that is registered by the NCI Cancer Research Data Commons (CRDC), and can be used to access the data that defines that object.
 
 This is a typical UUID:\
 `641121f1-5ca0-42cc-9156-fb5538c14355`\

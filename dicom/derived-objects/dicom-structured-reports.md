@@ -15,5 +15,5 @@ Open source DCMTK [dsr2html](https://support.dcmtk.org/docs/dsr2html.html) tool 
 Tools referenced above can be used to 1) extract qualitative evaluations and quantitative measurements fro the SR-TID1500 document; 2) generate standard-compliant SR-TID1500 objects.
 
 {% hint style="info" %}
-SR-TID1500-specific metadata attributes are available in the table views maintained by IDC. See details [here](../../data/organization-of-data/organization-of-data-v1.md).
+SR-TID1500-specific metadata attributes are available in the table views maintained by IDC. See details [here](../../data/organization-of-data/deprecated-functionality/organization-of-data-v1.md).
 {% endhint %}
