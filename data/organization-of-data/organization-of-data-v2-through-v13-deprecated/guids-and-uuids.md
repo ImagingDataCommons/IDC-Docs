@@ -10,7 +10,7 @@ From the [GA4GH Data Repository Service API](https://ga4gh.github.io/data-reposi
 
 In IDC, we use the term _GUID_ to mean a persistent identifier that can be resolved to a GA4GH DrsObject. GUID persistence ensures that the data which the GUID represents can continue to be located and accessed even if it has been moved to a different hosting site.
 
-As described in the [Data Versioning](../../../data-versioning.md) section, a UUID identifies a particular version of an IDC data object. There is a UUID for every version of every DICOM instance, series, and study in IDC hosted data. Each such UUID can be used to form a GUID that is registered by the NCI Cancer Research Data Commons (CRDC), and can be used to access the data that defines that object.
+As described in the [Data Versioning](../../data-versioning.md) section, a UUID identifies a particular version of an IDC data object. There is a UUID for every version of every DICOM instance, series, and study in IDC hosted data. Each such UUID can be used to form a GUID that is registered by the NCI Cancer Research Data Commons (CRDC), and can be used to access the data that defines that object.
 
 This is a typical UUID:\
 `641121f1-5ca0-42cc-9156-fb5538c14355`\
