@@ -93,7 +93,7 @@ This works because running the [open](https://cloud.google.com/python/docs/refer
 
 **From AWS S3 blobs**
 
-The `s3fs` package provides "file-like" interface for accessing S3 blobs. It can be installed with `pip install s3fs`. The following example repeats the above example using the counterpart of the same blob on AWS S3.
+The `s3fs` [package](https://s3fs.readthedocs.io/en/latest/) provides "file-like" interface for accessing S3 blobs. It can be installed with `pip install s3fs`. The following example repeats the above example using the counterpart of the same blob on AWS S3.
 
 ```python
 import s3fs
