@@ -74,12 +74,12 @@ with blob.open("rb") as reader:
     dcm = dcmread(reader)
 
 # Read metadata only (no pixel data)
-with blob.open("rb") as reader:
+with blob.open("rb", chunk_size=5_000) as reader:
     dcm = dcmread(reader, stop_before_pixels=True)
 
 # Read only specific attributes, identified by their tag
 # (here the Manufacturer and ManufacturerModelName attributes)
-with blob.open("rb") as reader:
+with blob.open("rb", chunk_size=5_000) as reader:
     dcm = dcmread(
         reader,
         specific_tags=[keyword_dict['Manufacturer'], keyword_dict['ManufacturerModelName']],
@@ -87,21 +87,19 @@ with blob.open("rb") as reader:
     print(dcm)
 ```
 
-Reading only metadata or only specific attributes will reduce the amount of data that needs to be pulled down under some circumstances and therefore make the loading process faster. This depends on the size of the attributes being retrieved, the `chunk_size` (a parameter of the `open()` method that controls how much data is pulled in each HTTP request to the server), and the position of the requested element within the file (since it is necessary to seek through the file until the requested attributes are found, but any data after the requested attributes need not be pulled).
+Reading only metadata or only specific attributes will reduce the amount of data that needs to be pulled down under some circumstances and therefore make the loading process faster. This depends on the size of the attributes being retrieved, the `chunk_size` (a parameter of the `open()` method that controls how much data is pulled in each HTTP request to the server), and the position of the requested element within the file (since it is necessary to seek through the file until the requested attributes are found, but any data after the requested attributes need not be pulled). If you are not retrieving entire images, we strongly recommend specifying a `chunk_size` (in bytes) because the default value is around 40MB, which is typically far larger than the optimal value for accessing metadata attributes or individual frames (see later).
 
 This works because running the [open](https://cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.blob.Blob#google_cloud_storage_blob_Blob_open) method on a Blob object returns a [BlobReader](https://cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.fileio.BlobReader) object, which has a "file-like" interface (specifically the `seek`, `read`, and `tell` methods).
 
 **From AWS S3 blobs**
 
-The `boto3` package provides a Python API for accessing S3 blobs. It can be installed with `pip install boto3`. In order to access open IDC data without providing AWS credentials, it is necessary to configure your own client object such that it does not require signing. This is demonstrated in the following example, which repeats the above example using the counterpart of the same blob on AWS S3. If you want to read an entire file, we recommend using a temporary buffer like this:
+The `s3fs` package provides "file-like" interface for accessing S3 blobs. It can be installed with `pip install s3fs`. The following example repeats the above example using the counterpart of the same blob on AWS S3.
 
 ```python
-from io import BytesIO
+import s3fs
 from pydicom import dcmread
+from pydicom.datadict import keyword_dict
 
-import boto3
-from botocore import UNSIGNED
-from botocore.config import Config
 from idc_index import IDCClient
 
 
@@ -115,70 +113,39 @@ file_urls = idc_client.get_series_file_URLs(
     source_bucket_location="aws",
 )
 
-# URLs will look like this:
-# s3://idc-open-data/668029cf-41bf-4644-b68a-46b8fa99c3bc/f4fe9671-0a99-4b6d-9641-d441f13620d4.dcm
-(_, _, bucket_name, folder_name, file_name) = file_urls[0].split("/")
-blob_key = f"{folder_name}/{file_name}"
-
 # Configure a client to avoid the need for AWS credentials
-s3_client = boto3.client('s3', config=Config(signature_version=UNSIGNED))
-
-with BytesIO() as buf:
-    # Download entire file contents to an in-memory buffer
-    s3_client.download_fileobj("idc-open-data", blob_key, buf)
-
-    # Use pydicom to read from the in-memory buffer
-    buf.seek(0)
-    dcm = dcmread(buf)
-```
-
-Unlike `google-cloud-storage`, `boto3` does not provide a file-like interface to access data in blobs. Instead, the `smart_open` [package](https://github.com/piskvorky/smart_open) is a third-party package that wraps an S3 client to expose a "file-like" interface. It can be installed with `pip install 'smart_open[s3]'`. However, we have found that the buffering behavior of this package (which is intended for streaming) is not well matched to the use case of reading DICOM metadata, resulting in many unnecassary requests while reading the metadata of DICOM files (see [this](https://github.com/piskvorky/smart_open/issues/712) issue). Therefore while the following will work, we recommend using the approach in the above example (downloading the whole file) in most cases even if you only want to read the metadata as it will likely be much faster. The exception to this is when reading only the metadata of very large images where the total amount of pixel data dwarfs the amount of metadata (or using frame-level access to such images, see below).
-
-```python
-from pydicom import dcmread
-
-import boto3
-from botocore import UNSIGNED
-from botocore.config import Config
-import smart_open
-
-from idc_index import IDCClient
-
-# Create IDCClient for looking up bucket URLs
-idc_client = IDCClient()
-
-# Get the list of file URLs in AWS bucket from SeriesInstanceUID
-file_urls = idc_client.get_series_file_URLs(
-    seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
-    source_bucket_location="aws"
+s3_client = s3fs.S3FileSystem(
+  anon=True,  # no credentials needed to access pubilc data
+  default_block_size=50_000,  # ~50kB data pulled in each request
+  use_ssl=False  # disable encryption for a speed boost
 )
 
-# URL to an IDC CT image on AWS S3
-url = file_urls[0]
-
-# Configure a client to avoid the need for AWS credentials
-s3_client = boto3.client('s3', config=Config(signature_version=UNSIGNED))
-
-# Read the whole file directly from the blob
-with smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)) as reader:
+with s3_client.open(file_urls[0], 'rb') as reader:
     dcm = dcmread(reader)
 
 # Read metadata only (no pixel data)
-with smart_open.open(url, mode="rb", transport_params=dict(client=s3_client)) as reader:
+with s3_client.open(file_urls[0], 'rb') as reader:
     dcm = dcmread(reader, stop_before_pixels=True)
+
+# Read only specific attributes, identified by their tag
+# (here the Manufacturer and ManufacturerModelName attributes)
+with s3_client.open(file_urls[0], 'rb') as reader:
+    dcm = dcmread(
+        reader,
+        specific_tags=[keyword_dict['Manufacturer'], keyword_dict['ManufacturerModelName']],
+    )
+    print(dcm)
 ```
 
-You may want to look into the the other options of `smart_open`'s `open` [method](https://github.com/piskvorky/smart_open/blob/master/help.txt) to improve performance (in particular the `buffering` parameter).
-
-In the remainder of the examples, we will use only the GCS access method for brevity. However, you should be able to straightforwardly swap out the opened GCS blob for the opened AWS S3 blob to achieve the same effect with Amazon S3.
+Similar to the `chunk_size` parameter in GCS, the `default_block_size` is crucially important for determining how efficient this is. Its default value is around 50MB, which will result in orders of magnitude more data than necessary being pulled than is needed to retrieve metadata. In the above example, we set it to 50kB.
 
 ### Frame-level access with Highdicom
 
-[Highdicom](https://highdicom.readthedocs.io) is a higher-level library providing several features to work with images and image-derived DICOM objects. As of the release 0.25.1, its various reading methods (including [imread](https://highdicom.readthedocs.io/en/latest/package.html#highdicom.imread), [segread](https://highdicom.readthedocs.io/en/latest/package.html#highdicom.seg.segread), [annread](https://highdicom.readthedocs.io/en/latest/package.html#highdicom.ann.annread), and [srread](https://highdicom.readthedocs.io/en/latest/package.html#highdicom.sr.srread)) can read any file-like object, including Google Cloud blobs and anything opened with `smart_open` (including S3 blobs).
+[Highdicom](https://highdicom.readthedocs.io) is a higher-level library providing several features to work with images and image-derived DICOM objects. As of the release 0.25.1, its various reading methods (including [imread](https://highdicom.readthedocs.io/en/latest/package.html#highdicom.imread), [segread](https://highdicom.readthedocs.io/en/latest/package.html#highdicom.seg.segread), [annread](https://highdicom.readthedocs.io/en/latest/package.html#highdicom.ann.annread), and [srread](https://highdicom.readthedocs.io/en/latest/package.html#highdicom.sr.srread)) can read any file-like object, including Google Cloud blobs and S3 blobs opened with `s3fs`.
 
 A particularly useful feature when working with blobs is ["lazy" frame retrieval](https://highdicom.readthedocs.io/en/latest/image.html#lazy) for images and segmentations. This downloads only the image metadata when the file is initially loaded, uses it to create a frame-level index, and downloads specific frames as and when they are requested by the user. This is especially useful for large multiframe files (such as those found in slide microscopy or multi-segment binary or fractional segmentations) as it can significantly reduce the amount of data that needs to be downloaded to access a subset of the frames.
 
-In this first example, we use lazy frame retrieval to load only a specific spatial patch from a large whole slide image from the IDC.
+In this first example, we use lazy frame retrieval to load only a specific spatial patch from a large whole slide image from the IDC using GCS.
 
 ```python
 import numpy as np
@@ -186,17 +153,16 @@ import highdicom as hd
 import matplotlib.pyplot as plt
 from google.cloud import storage
 from pydicom import dcmread
-from pydicom.datadict import keyword_dict
 
 from idc_index import IDCClient
 
 # Create IDCClient for looking up bucket URLs
 idc_client = IDCClient()
 
-# install additional component of idc-index to resolve SM instances to file URLs
+# Install additional component of idc-index to resolve SM instances to file URLs
 idc_client.fetch_index("sm_instance_index")
 
-# given SeriesInstanceUID of an SM series, find the instance that corresponds to the
+# Given SeriesInstanceUID of an SM series, find the instance that corresponds to the
 # highest resolution base layer of the image pyramid
 query = """
 SELECT SOPInstanceUID, TotalPixelMatrixColumns
@@ -207,10 +173,13 @@ LIMIT 1
 """
 result = idc_client.sql_query(query)
 
-# get URL corresponding to the base layer instance in the Google Storage bucket
-base_layer_file_url = idc_client.get_instance_file_URL(sopInstanceUID=result.iloc[0]["SOPInstanceUID"], source_bucket_location="gcs")
+# Get URL corresponding to the base layer instance in the Google Storage bucket
+base_layer_file_url = idc_client.get_instance_file_URL(
+    sopInstanceUID=result.iloc[0]["SOPInstanceUID"],
+    source_bucket_location="gcs"
+)
 
-# Create a storage client and use it to access the IDC's public data package
+# Create a storage client and use it to access the IDC's public data bucket
 gcs_client = storage.Client.create_anonymous_client()
 
 (_,_, bucket_name, folder_name, file_name) = base_layer_file_url.split("/")
@@ -220,7 +189,7 @@ bucket = gcs_client.bucket(bucket_name)
 base_layer_blob = bucket.blob(blob_key)
 
 # Read directly from the blob object using lazy frame retrieval
-with base_layer_blob.open(mode="rb") as reader:
+with base_layer_blob.open(mode="rb", chunk_size=500_000) as reader:
     im = hd.imread(reader, lazy_frame_retrieval=True)
 
     # Grab an arbitrary region of tile full pixel matrix
@@ -241,7 +210,69 @@ Running this code should produce an output that looks like this:
 
 <div align="center"><img src="../../.gitbook/assets/slide_screenshot.png" alt="Screenshot of slide region" height="454" width="524"></div>
 
-As a further example, we use lazy frame retrieval to load only a specific set of segments from a large multi-organ segmentation of a CT image in the IDC stored in binary format (in binary segmentations, each segment is stored using a separate set of frames).
+The next example repeats this on the same image in AWS S3:
+
+```python
+import numpy as np
+import highdicom as hd
+import matplotlib.pyplot as plt
+from pydicom import dcmread
+import s3fs
+
+from idc_index import IDCClient
+
+# Create IDCClient for looking up bucket URLs
+idc_client = IDCClient()
+
+# Install additional component of idc-index to resolve SM instances to file URLs
+idc_client.fetch_index("sm_instance_index")
+
+# Given SeriesInstanceUID of an SM series, find the instance that corresponds to the
+# highest resolution base layer of the image pyramid
+query = """
+SELECT SOPInstanceUID, TotalPixelMatrixColumns
+FROM sm_instance_index
+WHERE SeriesInstanceUID = '1.3.6.1.4.1.5962.99.1.1900325859.924065538.1719887277027.4.0'
+ORDER BY TotalPixelMatrixColumns DESC
+LIMIT 1
+"""
+result = idc_client.sql_query(query)
+
+# Get URL corresponding to the base layer instance in the AWS S3 bucket
+base_layer_file_url = idc_client.get_instance_file_URL(
+    sopInstanceUID=result.iloc[0]["SOPInstanceUID"],
+    source_bucket_location="aws"
+)
+
+# Create a storage client and use it to access the IDC's public data bucket
+# Configure a client to avoid the need for AWS credentials
+s3_client = s3fs.S3FileSystem(
+  anon=True,  # no credentials needed to access pubilc data
+  default_block_size=500_000,  # ~500kB data pulled in each request
+  use_ssl=False  # disable encryption for a speed boost
+)
+
+# Read directly from the blob object using lazy frame retrieval
+with s3_client.open(base_layer_file_url, 'rb') as reader:
+    im = hd.imread(reader, lazy_frame_retrieval=True)
+
+    # Grab an arbitrary region of tile full pixel matrix
+    region = im.get_total_pixel_matrix(
+        row_start=15000,
+        row_end=15512,
+        column_start=17000,
+        column_end=17512,
+        dtype=np.uint8
+    )
+
+# Show the region
+plt.imshow(region)
+plt.show()
+```
+
+In both cases, we set the `chunk_size`/`default_block_size` to around 500kB, which should be enough to ensure each frame can be retrieved in a single request while minimizing further unnecessary data retrieval.
+
+As a further example, we use lazy frame retrieval to load only a specific set of segments from a large multi-organ segmentation of a CT image in the IDC stored in binary format (in binary segmentations, each segment is stored using a separate set of frames) using GCS.
 
 ```python
 import highdicom as hd
@@ -270,7 +301,7 @@ blob_name = f"{folder_name}/{file_name}"
 blob = bucket.blob(blob_name)
 
 # Open the blob with "segread" using the "lazy frame retrieval" option
-with blob.open(mode="rb") as reader:
+with blob.open(mode="rb", chunk_size=500_000) as reader:
     seg = hd.seg.segread(reader, lazy_frame_retrieval=True)
 
     # Find the segment number corresponding to the liver segment
