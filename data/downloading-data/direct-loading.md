@@ -24,7 +24,7 @@ idc_client = IDCClient()
 # Get the list of GCS file URLs in Google bucket from SeriesInstanceUID
 gcs_file_urls = idc_client.get_series_file_URLs(
     seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
-    source_bucket_location="gcs",
+    source_bucket_location="gcp",
 )
 
 # Get the list of AWS file URLs in AWS bucket from SeriesInstanceUID
@@ -57,7 +57,7 @@ gcs_client = storage.Client.create_anonymous_client()
 # get the list of file URLs in Google bucket from the SeriesInstanceUID
 file_urls = idc_client.get_series_file_URLs(
     seriesInstanceUID="1.3.6.1.4.1.14519.5.2.1.131619305319442714547556255525285829796",
-    source_bucket_location="gcs",
+    source_bucket_location="gcp",
 )
 
 # URLs will look like this:
@@ -176,7 +176,7 @@ result = idc_client.sql_query(query)
 # Get URL corresponding to the base layer instance in the Google Storage bucket
 base_layer_file_url = idc_client.get_instance_file_URL(
     sopInstanceUID=result.iloc[0]["SOPInstanceUID"],
-    source_bucket_location="gcs"
+    source_bucket_location="gcp"
 )
 
 # Create a storage client and use it to access the IDC's public data bucket
@@ -288,7 +288,7 @@ idc_client = IDCClient()
 # IDC Portal front page
 file_urls = idc_client.get_series_file_URLs(
     seriesInstanceUID="1.2.276.0.7230010.3.1.3.313263360.15787.1706310178.804490",
-    source_bucket_location="gcs"
+    source_bucket_location="gcp"
 )
 
 (_, _, bucket_name, folder_name, file_name) = file_urls[0].split("/")
