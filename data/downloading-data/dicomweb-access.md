@@ -1,5 +1,10 @@
-# Accessing data through DICOMweb
+# IDC DICOMweb data access
 
+{% hint style="info" %}
+We welcome your questions or comments on this documentation page content! Please start a thread on [IDC forum](https://discourse.canceridc.dev), and we will be happy to help you!
+{% endhint %}
+
+## Background 
 The DICOMweb interface is available for accessing IDC data. This interface could be especially useful for efficiently downloading small(er) parts of large digital pathology images. While the entire pathology whole-slide image (WSI) pyramid can reach gigabytes in size, the part that is needed for a specific visualization or analysis task can be rather small and localized to the specific image tiles at a given resolution.  
 
 {% hint style="info" %}
