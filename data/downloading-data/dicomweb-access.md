@@ -151,7 +151,7 @@ plt.imshow(region)
 plt.show()
 ```
 
-<div align="center"><img src="../../.gitbook/assets/slide_screenshot_dcmweb.png" alt="Screenshot of slide region" height="454" width="524"></div>
+<div align="center"><img src="../../.gitbook/assets/slide_screenshot_dcmweb.png" alt="Screenshot of slide region" height="454" width="454"></div>
 
 ### ez-wsi-dicomweb
 
@@ -215,7 +215,7 @@ plt.imshow(region)
 plt.show()
 ```
 
-<div align="center"><img src="../../.gitbook/assets/slide_screenshot_dcmweb.png" alt="Screenshot of slide region" height="454" width="524"></div>
+<div align="center"><img src="../../.gitbook/assets/slide_screenshot_dcmweb.png" alt="Screenshot of slide region" height="454" width="454"></div>
 
 ## Iterating through tiles using DICOMweb
 
