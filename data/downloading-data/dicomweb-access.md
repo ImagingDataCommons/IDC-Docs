@@ -73,8 +73,8 @@ Note that you can use wsidicom with both, the IDC-maintained and the Google-main
 
 The following code snippets show exemplarily how to use each of the libraries to access a subregion from a DICOM slide identified by the following UIDs we selected earlier:
  
-- DICOM StudyInstanceUID = 2.25.25332367070577326639024635995523878122
-- DICOM SeriesInstanceUID = 1.3.6.1.4.1.5962.99.1.3380245274.1362068963.1639762817818.2.0
+- sample_study_uid = 2.25.25332367070577326639024635995523878122
+- sample_series_uid = 1.3.6.1.4.1.5962.99.1.3380245274.1362068963.1639762817818.2.0
 
 ### wsidicom
 
@@ -126,21 +126,17 @@ import matplotlib.pyplot as plt
 
 wsidicom_client = wsidicom.WsiDicomWebClient(dw_client)  
 slide = wsidicom.WsiDicom.open_web(wsidicom_client,  
-    study_uid='2.25.25332367070577326639024635995523878122',  
-    series_uids='1.3.6.1.4.1.5962.99.1.3380245274.1362068963.1639762817818.2.0'  
+    study_uid=sample_study_uid,  
+    series_uids=sample_series_uid  
 )  
 print(slide)
 ```
 
-`[0]: Pyramid of levels:` 
-
-      `[0]: Level: 0, size: Size(width=171359, height=74498) px, mpp: SizeMm(width=0.2472, height=0.2472) um/px Instances:         [0]: default z: 0.0 default path: 1 ImageData <wsidicom.web.wsidicom_web_image_data.WsiDicomWebImageData object at 0x7d0f16444c50>`
-
-      `[1]: Level: 2, size: Size(width=42839, height=18624) px, mpp: SizeMm(width=0.988817311328, height=0.988817311328) um/px Instances:         [0]: default z: 0.0 default path: 1 ImageData <wsidicom.web.wsidicom_web_image_data.WsiDicomWebImageData object at 0x7d0f16445410>`
-      
-      `[2]: Level: 4, size: Size(width=10709, height=4656) px, mpp: SizeMm(width=3.955546250817, height=3.955546250817) um/px Instances:         [0]: default z: 0.0 default path: 1 ImageData <wsidicom.web.wsidicom_web_image_data.WsiDicomWebImageData object at 0x7d0f165271d0>`
-      
-      `[3]: Level: 6, size: Size(width=2677, height=1164) px, mpp: SizeMm(width=15.823662607396, height=15.823662607396) um/px Instances:         [0]: default z: 0.0 default path: 1 ImageData <wsidicom.web.wsidicom_web_image_data.WsiDicomWebImageData object at 0x7d0f14192750>`
+`[0]: Pyramid of levels:`   
+>> `[0]: Level: 0, size: Size(width=171359, height=74498) px, mpp: SizeMm(width=0.2472, height=0.2472) um/px Instances:         [0]: default z: 0.0 default path: 1 ImageData <wsidicom.web.wsidicom_web_image_data.WsiDicomWebImageData object at 0x7d0f16444c50>`  
+>>  `[1]: Level: 2, size: Size(width=42839, height=18624) px, mpp: SizeMm(width=0.988817311328, height=0.988817311328) um/px Instances:         [0]: default z: 0.0 default path: 1 ImageData <wsidicom.web.wsidicom_web_image_data.WsiDicomWebImageData object at 0x7d0f16445410>`  
+>> `[2]: Level: 4, size: Size(width=10709, height=4656) px, mpp: SizeMm(width=3.955546250817, height=3.955546250817) um/px Instances:         [0]: default z: 0.0 default path: 1 ImageData <wsidicom.web.wsidicom_web_image_data.WsiDicomWebImageData object at 0x7d0f165271d0>`  
+>> `[3]: Level: 6, size: Size(width=2677, height=1164) px, mpp: SizeMm(width=15.823662607396, height=15.823662607396) um/px Instances:         [0]: default z: 0.0 default path: 1 ImageData <wsidicom.web.wsidicom_web_image_data.WsiDicomWebImageData object at 0x7d0f14192750>`  
 
 To access a certain part of a slide, wsidicom offers the `read_region()` functionality: 
 
@@ -170,13 +166,11 @@ from google.colab import auth
 auth.authenticate_user()
 
 google_dicom_store_url = 'https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/idc-store-v20/dicomWeb'  
-study_uid = '2.25.25332367070577326639024635995523878122'  
-series_uid = '1.3.6.1.4.1.5962.99.1.3380245274.1362068963.1639762817818.2.0'
 
 series_path_str = (  
       f'{google_dicom_store_url}'  
-      f'/studies/{study_uid}'  
-      f'/series/{series_uid}'  
+      f'/studies/{sample_study_uid}'  
+      f'/series/{sample_series_uid}'  
 )  
 series_path = dicom_path.FromString(series_path_str)  
 dcf = dicomweb_credential_factory.CredentialFactory()  
@@ -202,9 +196,9 @@ for level in ds.levels:
     print(f'Level {level.level_index} has pixel dimensions (row, col): {level.height, level.width}')
 ```
 
-`Level 1 has pixel dimensions (row, col): (74498, 171359)`
-`Level 2 has pixel dimensions (row, col): (18624, 42839)`
-`Level 3 has pixel dimensions (row, col): (4656, 10709)`
+`Level 1 has pixel dimensions (row, col): (74498, 171359)`  
+`Level 2 has pixel dimensions (row, col): (18624, 42839)`  
+`Level 3 has pixel dimensions (row, col): (4656, 10709)`  
 `Level 4 has pixel dimensions (row, col): (1164, 2677)`
 
 ```python
