@@ -2,33 +2,9 @@
 
 ## Manifests
 
-A _manifest_ is a table of access methods and other metadata of the objects in some _cohort_. There are two manifest endpoints. The _**POST**_ _**/cohorts/manifest/{cohort\_id}**_ API endpoint returns a manifest of some previously defined cohort. Parameters are send to the endpoint in the request body. The JSON schema of the _**manifestBody**_ can be seen on the IDC API v2 UI page. Here is an example:
+A _manifest_ is a table of access methods and other metadata of the objects in some _cohort_. The _**POST**_ _**/cohorts/manifest/preview**_ API endpoint
 
-{% code overflow="wrap" %}
-```
-{
-  "fields": [
-    "Age_At_Diagnosis",
-    "aws_bucket",
-    "crdc_series_uuid",
-    "Modality",
-    "SliceThickness"
-  ],
-  "counts": false,
-  "group_size": false,
-  "sql": false,
-  "page_size": 1000
-}
-```
-{% endcode %}
-
-The _**fields**_ parameter of the body indicates the fields whose values are to be included in the returned manifests. _The /f_**ields** API endpoint returns a list of the fields that can be included in a manifest.&#x20;
-
-The _**counts**_, _**group\_size**_, _**sql**_ and  _**page\_size**_ parameters will be described in subsequent sections.
-
-Every row in the returned manifest will include one value for each of the above fields.
-
-The _**POST /cohorts/manifest/preview**_ API accepts both a _fields_ list, and a cohort definition in the _**manifestPreviewBody**_. Here is an example _manifestPreviewBody_:
+The _**POST /cohorts/manifest/preview**_ API accepts both a _fields_ list, and a cohort definition in the _**manifestPreviewBody**_, and returns a manifest. The JSON schema of the _**manifestBody**_ can be seen on the IDC API v2 UI page. Here is an example:
 
 ```
 {
@@ -68,23 +44,22 @@ The _**POST /cohorts/manifest/preview**_ API accepts both a _fields_ list, and a
     
 ```
 
-This endpoint behaves like the following API sequence:
+As previously mentioned, it behaves as if a cohort is created, a manifest for that cohort is returned and the new cohort is deleted.
 
-```
-POST /cohorts    #Create a cohort
-POST /cohorts/manifest/{cohort_id} # Get a manifest for the new cohort
-DELETE /cohorts/{cohort_id} # Delete the new cohort
-```
+The _**filters**_ parameter specifies a _filter set_ that defines the cohort.
 
-That is, it behaves as if a cohort is created, a manifest for that cohort is returned and the new cohort is deleted.
+The _**fields**_ parameter of the body indicates the fields whose values are to be included in the returned manifests. _The /f_**ields** API endpoint returns a list of the fields that can be included in a manifest.&#x20;
 
-The _**/cohorts/manifest/{cohort\_id}**_ endpoint returns a _**manifestResponse**_ JSON object and the _**/cohorts/manifest/preview**_ returns a _**manifestPreviewResponse**_ JSON object. Here is an example _manifestResponse_:
+The _**counts**_, _**group\_size**_, _**sql**_ and  _**page\_size**_ parameters will be described in subsequent sections.
+
+Every row in the returned manifest will include one value for each of the items in the _fields_ parameter.
+
+The _**/cohorts/manifest/preview**_ returns a _**manifestPreviewResponse**_ JSON object. Here is an example _manifestResponse_:
 
 ```
 {
   "code": 200,
   "cohort_def": {
-    "cohort_id": 23,
     "description": "Example description",
     "user_email": "somebody@somemail.com",
     "filterSet": {
@@ -149,11 +124,13 @@ The _**/cohorts/manifest/{cohort\_id}**_ endpoint returns a _**manifestResponse*
 
 ```
 
-The cohort definition is included so that the manifest is self-documenting. The _**manifest\_data**_ component of the _**manifest**_ component contains a row for each distinct combination of the requested fields in the cohort. The idc\_data\_version in the _**cohort\_def**_ is the IDC version when the cohort was created. To generate the manifest, the cohort's filter is applied against the data in that IDC version.
+The cohort definition is included so that the manifest is self-documenting. The _**manifest\_data**_ component of the _**manifest**_ component contains a row for each distinct combination of the requested fields in the cohort.&#x20;
 
-The structure of the _**manifestPreviewResponse**_ returned by the /_**cohorts/manifest/preview**_ API endpoint is identical to the _**manifestResponse**_ except that it does not have a _cohort\_id_ or _user\_email_ component.&#x20;
+Because the /_**cohorts/manifest/preview**_ API endpoint is always applied against the current IDC version, the idc\_data\_version in the _**cohort\_def**_ is always that of the current IDC version.  This version information can be useful if the _**cohort\_def**_ is saved.
 
-Because the /_**cohorts/manifest/preview**_ API endpoint is always applied against the current IDC version, the idc\_data\_version in the _**cohort\_def**_ is always that of the current IDC version.&#x20;
+The _**totalFound**_ value at the end of the manifest tells us that there are 626 rows in the manifest, meaning the manifest contains 626 different combinations of _Modality, SliceThickness, age\_at\_diagnosis, aws\_bucket,_ and crdc\_series uuid.&#x20;
+
+The _**rowsReturned**_ value indicates that all the rows in the manifest were return in the first "page". If not all the rows had been returned, we can ask for additional "pages" as described in the next section.
 
 The _**next\_page**_ value is described in the next section.
 
@@ -170,7 +147,7 @@ We use the term _**group**_ to indicate the set of all instances in the cohort h
 
 implicitly define a _group_ of instances in the cohort, each of which has those values.
 
-When the _**group\_size**_ parameter in the _manifestBody_ or _manifestPreviewBody_ is _true,_ the resulting manifest includes the total size in bytes of the instances in the corresponding group. Following is a fragment of the manifest for the same cohort above, but where the _fields_ list includes _group\_size:_
+When the _**group\_size**_ parameter in the _manifestPreviewBody_ is _true,_ the resulting manifest includes the total size in bytes of the instances in the corresponding group. Following is a fragment of the manifest for the same cohort above, but where the _fields_ list has "_group\_size": true:_
 
 ```
 {
@@ -247,17 +224,15 @@ When the _**group\_size**_ parameter in the _manifestBody_ or _manifestPreviewBo
 
 Here we see that the instances in the group corresponding to the first result row have a total size of 2,690,320B.
 
-The _**totalFound**_ value at the end of the manifest tells us that there are 626 rows in the manifest, meaning the manifest contains 626 different combinations of _Modality, SliceThickness, age\_at\_diagnosis, aws\_bucket,_ and crdc\_series uuid. (The group size does not add to the combinatorics.) The _**rowsReturned**_ value indicates that all the rows in the manifest were return in the first "page". If not all the rows had been returned, we can ask for additional "pages" as described in the next section.
-
 The _group\_size_ parameter is optional and defaults to _false_ .
 
 ### Manifest granularity
 
-If the _**counts**_ parameter is _true_, the resulting manifest will selectively include counts of the instances, series, studies, patients and collections in each group. Which counts are included in a manifest is determined by the _**granularity**_ and which, in turn, is determined by certain of the possible fields in the _fields_ parameter list of the _**manifestBody**_ or _**manifestPreviewBody**_.
+If the _**counts**_ parameter is _true_, the resulting manifest will selectively include counts of the instances, series, studies, patients and collections in each group. Which counts are included in a manifest is determined by the _**granularity,**_ and which, in turn, is determined by certain of the possible fields in the _fields_ parameter list of the _**manifestPreviewBody**_.
 
-For example, if the _fields_ parameter list includes the SOPInstanceUID field, there will one group per instance in the manifest. Thus the manifest has _**instance granularity**_. A manifest has one of instance, series, study, patient, collection or version granularity.
+For example, if the _fields_ parameter list includes the SOPInstanceUID field, there will one group per instance in the manifest. Thus the manifest has _**instance granularity**_. A manifest has just one of instance, series, study, patient, collection or version granularity.
 
-For a given manifest granularity,  and when _**counts**_ is True, counts of the "lower level" objects are reported in the manifest. Thus, if a cohort has _**series granularity**_, then the count of all instances in each group is reported. If a cohort has study granularity, then the count of all instances in each group and of all series in each group is reported. And so on. This is described in detail in the remainder of this section.
+For a given manifest granularity,  and when _**counts**_ is True, counts of the "lower level" objects are reported in the manifest. Thus, if a cohort has _**series granularity**_, then the count of all instances in each group is reported. If a cohort has study granularity, then the count of all instances in each group and of all series in each group are reported. And so on. This is described in detail in the remainder of this section.
 
 In the following, manifest examples are based on this _filterSet:_
 
@@ -303,13 +278,13 @@ Both of these fields are unique to each instance. Therefore the resulting manife
 }
 ```
 
-Each row will include the _SOPInstanceUID, Modality_ and _SliceThickness_ of the corresponding instance.
+Each row will include the _SOPInstanceUID, and the Modality_ and _SliceThickness_ of the corresponding instance.
 
-_The counts_ parameter is ignored because there are no 'lower level' objects than instances,&#x20;
+_The counts_ parameter is ignored because there are no 'lower level' objects than instances in the DICOM hierarchy.
 
 #### Series granularity
 
-A manifest will have _**series granularity**_ if it goes not have _**instance granularity**_ and the _**fields**_ parameter list includes one or more of thee field:
+A manifest will have _**series granularity**_ if it does not have _**instance granularity**_ and the _**fields**_ parameter list includes one or more of thee field:
 
 * _SeriesInstanceUID_
 * _crdc\_series\_uuid_
@@ -332,7 +307,7 @@ If the _counts_ parameter is _true_, each row of the manifest will have:
 
 * an _**instance\_count**_ value that is the count of instances in the _group_ corresponding to the row
 
-If the above _**fields**_ then this is a fragment of the _series granularity_ manifest of our example cohort:
+Given the above _**fields,**_ then this is a fragment of the _series granularity_ manifest of our example cohort:
 
 <pre><code>{
   "code": 200,
@@ -413,7 +388,7 @@ This tells us that the group of instances corresponding to the first row of the 
 
 #### Study Granularity
 
-A manifest will have _**study granularity**_ if it goes _not_ have _**series**_**&#x20;or&#x20;**_**instance granularity**_ and the queryFields list includes one or more of the fields:
+A manifest will have _**study granularity**_ if it does _not_ have _**series**_**&#x20;or&#x20;**_**instance granularity**_ and the queryFields list includes one or more of the fields:
 
 * _StudyInstanceUID_
 * _crdc\_study\_uuid_
@@ -431,7 +406,7 @@ Both of these fields are unique to each study, and therefore the resulting manif
 ]
 </code></pre>
 
-Similarly, _SliceThickness_ can vary not only among the instances in a series, but among series in a study. Therefore, the resulting manifest may have multiple rows for a study, and which differ from each other in both _SliceThickness_ and _Modality._
+_SliceThickness_ can vary not only among the instances in a series, but among series in a study. Therefore, the resulting manifest may have multiple rows for a study, and which differ from each other in both _SliceThickness_ and _Modality._
 
 If _counts_ is in the _fields_ list, each row of the manifest will have:
 
@@ -637,9 +612,7 @@ A manifest will have _**collection granularity**_ if it goes not have _patient,_
 
 Because the _collection\_id_ is unique to each collection in a cohort (more accurately, all instances in a collection have the same _collection\_id_), there will be at least one row per collection in the resulting manifest. It is common for a collection to have patients of different ages. Therefore, the resulting manifest may well have more than one row per patient.
 
-If the fields list is as follows:
-
-then this is a fragment of the _collection granularity_ manifest of our example cohort:
+If the fields list is as above, then this is a fragment of the _collection granularity_ manifest of our example cohort:
 
 ```
 {

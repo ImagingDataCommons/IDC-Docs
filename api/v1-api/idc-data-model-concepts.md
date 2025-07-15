@@ -2,9 +2,9 @@
 
 The IDC API is based on several IDC Data Model Concepts.
 
-## Cohorta
+## Cohorts
 
-"_In statistics, marketing and demography, a **cohort** is a group of_ [_subjects_](https://en.wikipedia.org/wiki/Research\_subject) _who share a defining characteristic (typically subjects who experienced a common event in a selected time period, such as birth or graduation)._" ([Wikipedia](https://en.wikipedia.org/wiki/Cohort\_\(statistics\)))
+"_In statistics, marketing and demography, a **cohort** is a group of_ [_subjects_](https://en.wikipedia.org/wiki/Research_subject) _who share a defining characteristic (typically subjects who experienced a common event in a selected time period, such as birth or graduation)._" ([Wikipedia](https://en.wikipedia.org/wiki/Cohort_\(statistics\)))
 
 In IDC, a _cohort_ is a set of subjects (DICOM patients) that are identified by applying a **Filter** **Set** to the **Data** **Sources** of some **IDC** **data** **version**. Because a _cohort_ is defined with respect to an _IDC data version_, the set of subjects in the _cohort_, as well as all metadata associated with those subjects, is exactly and repeatably defined.
 
@@ -73,8 +73,8 @@ _Data sources_ are versioned. That is, when the data in a _data source_ changes,
 
 Both the IDC Web App and API expose selected fields in the various _data sources_ against which queries can be performed. Each _attribute_ has a data type, one of:
 
-* String An _attribute_ with data type String may have an arbitrary string value. For example, the possible values of a StudyDescription _attribute_ are arbitrary. When the values array of a (String attribute, \[values]) pair contains a single value, an SQL _LIKE_ operator is used and standard SQL syntax and semantics are supported. Thus a ('StudyDescription",\["%SKULL%"]) will match any StudyDescription that contains "SKULL", When the values array of a (String attribute, \[values]) pair contains more that one value, an SQL _UNNEST_ operator is used and standard SQL syntax and semantics are supported. See the [Google BigQuery](https://cloud.google.com/bigquery/docs/reference/standard-sql/operators#comparison\_operators) documentation for details.
-* Categorical String An _attribute_ with data type Categorical String will have one of a defined set of string values. For example, Modality is an _attribute_, and has possible values 'CT', 'MR', 'SR', etc. In this case, the values are defined by the DICOM specification. The defined values of other Categorical String attributes may be established by other entities. When the values array of a (Categorical String attribute, \[values]) pair contains a single value, an SQL _LIKE_ operator is used and standard SQL syntax and semantics are supported. Thus a ('StudyDescription",\["%SKULL%"]) will match any StudyDescription that contains "SKULL", When the values array of a (Categorical String attribute, \[values]) pair contains more that one value, an SQL _UNNEST_ operator is used and standard SQL syntax and semantics are supported. See the [Google BigQuery](https://cloud.google.com/bigquery/docs/reference/standard-sql/operators#comparison\_operators) documentation for details.
+* String An _attribute_ with data type String may have an arbitrary string value. For example, the possible values of a StudyDescription _attribute_ are arbitrary. When the values array of a (String attribute, \[values]) pair contains a single value, an SQL _LIKE_ operator is used and standard SQL syntax and semantics are supported. Thus a ('StudyDescription",\["%SKULL%"]) will match any StudyDescription that contains "SKULL", When the values array of a (String attribute, \[values]) pair contains more that one value, an SQL _UNNEST_ operator is used and standard SQL syntax and semantics are supported. See the [Google BigQuery](https://cloud.google.com/bigquery/docs/reference/standard-sql/operators#comparison_operators) documentation for details.
+* Categorical String An _attribute_ with data type Categorical String will have one of a defined set of string values. For example, Modality is an _attribute_, and has possible values 'CT', 'MR', 'SR', etc. In this case, the values are defined by the DICOM specification. The defined values of other Categorical String attributes may be established by other entities. When the values array of a (Categorical String attribute, \[values]) pair contains a single value, an SQL _LIKE_ operator is used and standard SQL syntax and semantics are supported. Thus a ('StudyDescription",\["%SKULL%"]) will match any StudyDescription that contains "SKULL", When the values array of a (Categorical String attribute, \[values]) pair contains more that one value, an SQL _UNNEST_ operator is used and standard SQL syntax and semantics are supported. See the [Google BigQuery](https://cloud.google.com/bigquery/docs/reference/standard-sql/operators#comparison_operators) documentation for details.
 * Continuous Numeric An _attribute_ with data type Continuous Number will have a numeric (float) value. For example, age\_at\_diagnosis is an _attribute_ of data type Continuous Numeric. In order to enable relative numeric queries, the API exposes 6 variations of each Continuous Numeric attributes as filter set _attribute_ names. These variations are the base _attribute_ name with no suffix, as well as the base _attribute_ name with one of the suffixes: \__gt_, \__gte_, \__btw_, \__btwe_, \__ebtw_, \__ebtwe_, \__lte_, \__lt_. The value array of the \__\*btw\*_ variations must contain exactly two numeric values, in numeric order (least value first). The value array of the other variations must contain exactly one numeric values. The (attribute, value array) pair for a Continuous Numeric \_attribute\_ is satisfied according to the suffix as follows:
   * \<no suffix>: If an _attribute_ is equal to the value in the value array
   * gt: If an _attribute_ is greater than the value in the value array
@@ -118,10 +118,6 @@ A _manifest_ is a list of access methods and other metadata of the data objects 
 ## **IDC API UI**
 
 The [IDC API UI](https://api.imaging.datacommons.cancer.gov/v1/swagger) can be used to see details about the syntax for each call, and also provides an interface to test requests.
-
-## Authenticating to the UI
-
-Some of the API calls require authentication. This is denoted by a small lock symbol. Authentication can be performed by clicking on the ‘Authorize’ button at the top right of the page.
 
 ## Make a Request
 

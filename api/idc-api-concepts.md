@@ -26,8 +26,6 @@ The _GET_ /analysis\_results endpoint returns a list of the _analysis results, w
 
 ## Filter Sets
 
-Filters sets were previously introduced in [Exploring data and Cohorts](../portal/data-exploration-and-cohorts/). In this section we describe how filter sets are specified to the API.&#x20;
-
 A _filter set_ selects some set of DICOM objects in IDC hosted data, and is a set of conditions, where each condition is defined by an **attribute** and an array of values. An attribute identifies a field (column) in some data source (BQ table). Each _filter set_ also includes the _IDC data version_ upon which it operates.
 
 Filter sets are JSON encoded.  Here is an example _filter set_:
@@ -110,47 +108,17 @@ Both the IDC Web App and API expose selected fields against which queries can be
 
 ## Cohorts
 
-The API supports defining and saving cohorts, as well as accessing the user's previously saved cohorts, whether defined through the portal or the API. Through the API, the user can obtain  information about their previously defined cohorts, including the definition of each cohort in terms of a filter set and IDC version. The user can also obtain a manifest of the objects in the cohort. The data in the manifest is highly configurable and can be used, with suitable tools, to obtain DICOM files from cloud storage. A manifest returned by the API can include values from a large set of fields.
+A _cohort_ is the set of DICOM objects in IDC hosted data selected by a _filter set._
 
-The _**POST /cohorts**_ API endpoint creates and saves a cohort as defined by a set of _filters_ and other cohort metadata. Here is an example JSON encoded cohort definition. :
+The API no longer supports user defined cohorts. However, the _**POST**_**&#x20;/cohorts/manifest/preview** endpoint effectively creates a cohort, queries the cohort to obtain a manifest of metadata of the objects in the cohort, and then deletes the cohort. The data in the manifest is highly configurable and can be used, with suitable tools, to obtain DICOM files from cloud storage. A manifest returned by the API can include values from a large set of fields.
 
-<pre><code>{
-<strong>  "name": "mycohort",
-</strong>  "description": "Example description",
-  "filters": {
-    "collection_id": [
-      "TCGA-LUAD",
-      "TCGA-KIRC"
-    ],
-    "Modality": [
-      "CT",
-      "MR"
-    ],
-    "race": [
-      "WHITE"
-    ],
-    "age_at_diagnosis_btw": [
-      53, 69
-    ]
-  }
-}
-</code></pre>
-
-&#x20;Note that the cohort definition does not include an _idc\_data\_version,_ because the cohort's version is implicitly the current IDC version when defining a new cohort.
-
-The new cohort is saved under the IDC account of the caller of the API endpoint. The GET /cohorts API endpoint returns a list of the currently saved cohorts of the caller.&#x20;
-
-The _**DELETE /cohorts/{cohort\_id}**_ endpoint deletes a cohort as specified by its _cohort\_id._ The _**DELETE /cohorts**_ API endpoint deletes zero or more cohorts as specified by a list of _cohort\_ids_. A user may only delete their own cohorts.
+Manifests are discussed in the next section.
 
 ## **IDC API UI**
 
-The [IDC API UI](https://api.imaging.datacommons.cancer.gov/v1/swagger) can be used to see details about the syntax for each call, and also provides an interface to test requests. Each endpoint is also documented the [Endpoint Details](endpoint-details.md) section.
+The [IDC API UI](https://api.imaging.datacommons.cancer.gov/v2/swagger) can be used to see details about the syntax of each call, and also provides an interface to test requests. Each endpoint is also documented the [Endpoint Details](endpoint-details.md) section.
 
-## Authenticating to the UI
-
-Some of the API calls require authentication. This is denoted by a small lock symbol. Authentication can be performed by clicking on the ‘Authorize’ button at the top right of the page.
-
-## Make a Request
+### Make a Request
 
 For a quick demonstration of the syntax of an API call, test the [GET /collections](https://api.imaging.datacommons.cancer.gov/v2/swagger#/data%20model/getCollections) request. You can experiment with this endpoint by clicking the ‘Try it out’ button, and then the 'Execute' button.
 
