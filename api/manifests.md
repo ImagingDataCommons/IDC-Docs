@@ -265,6 +265,8 @@ A manifest will have _**instance granularity**_ if the _fields_ parameter list i
 
 * _**SOPInstanceUID**_
 * _**crdc\_instance\_uuid**_
+* _**gcs\_url**_
+* _**aws\_url**_
 
 Both of these fields are unique to each instance. Therefore the resulting manifest will include one row for each instance in the specified cohort. For example, the following _**fields**_ list will result in a manifest having a row per instance:
 
