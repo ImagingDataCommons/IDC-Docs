@@ -36,18 +36,137 @@ Within each bucket files are organized in folders, each folder containing files 
 
 Corresponding files have the same object name in GCS and S3, though the name of the containing buckets will be different.
 
-## Metadata Tables
+## Metadata
 
 IDC metadata tables are provided to help you navigate IDC content and narrow down to the specific files that meet your research interests.
 
-As a step in data ingestion process (summarized [earlier](./)), IDC extracts all of the DICOM metadata, merges it with collection-level and some other metadata attributes not available from DICOM, ingests collection-level clinical tables and stores the result in Google BigQuery tables searchable using SQL queries.
+As a step in data ingestion process (summarized [earlier](./)), IDC extracts all of the DICOM metadata, merges it with collection-level and some other metadata attributes not available from DICOM, ingests collection-level clinical tables and stores the result in **Google BigQuery tables**. Google [BigQuery (BQ)](https://cloud.google.com/bigquery) is a massively-parallel analytics engine ideal for working with tabular data.  Data stored in BQ can be accessed using [standard SQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql) queries. We talk more about those in the subsequent sections of the documentation!
 
-{% hint style="info" %}
-Google [BigQuery (BQ)](https://cloud.google.com/bigquery) is a massively-parallel analytics engine ideal for working with tabular data. Data stored in BQ can be accessed using [standard SQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql) queries.
+Searching BigQuery tables requires you to sign in with a Google Account! If this poses a problem for you, there are several alternatives.
+
+{% hint style="danger" %}
+`idc-index` provides access to the metadata aggregated at the DICOM series level. BigQuery and Parquet files provide metadata at the granularity of individual DICOM instances (files).
 {% endhint %}
+
+#### Python _idc-index_ package
 
 A small subset of most critical metadata attributes available in IDC BigQuery tables is extracted and made available via [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index).&#x20;
 
-If you are just starting with IDC, you can skip the details covering the content of BigQuery tables, and proceed to [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) that will help you learn basics of searching IDC metadata using `idc-index`.&#x20;
+If you are just starting with IDC, you can skip the details covering the content of BigQuery tables, and proceed to [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) that will help you learn basics of searching IDC metadata using `idc-index`. But for the sake of example, you would select and download MR DICOM series available in IDC as follows.
 
-Otherwise you can proceed to the next section to learn about organization of IDC BigQuery tables.
+```bash
+pip install --upgrade idc-index
+```
+
+{% code overflow="wrap" %}
+```python
+from idc_index import IDCClient
+
+# instantiate the client
+client = IDCClient()
+
+# define and execute the query
+selection_query = """
+SELECT SeriesInstanceUID
+FROM index
+WHERE Modality = 'MR'
+"""
+selection_result = client.sql_query(selection_query)
+
+# download the first series from the list
+client.download_dicom_series(seriesInstanceUID=selection_result["SeriesInstanceUID"].values[0],downloadDir=".")
+```
+{% endcode %}
+
+#### Parquet files available via a cloud bucket
+
+We export all the content available via BigQuery into Parquet ([https://parquet.apache.org/](https://parquet.apache.org/)) files available from our public AWS bucket! Using open-source tools such as DuckDB ([https://duckdb.org/](https://duckdb.org/)) you can query those files using SQL queries, without relying on BigQuery (although, running complex queries may require significant resources from your runtime environment!).&#x20;
+
+The exported Parquet files are located in the IDC-maintained AWS `idc-open-metadata` bucket, which is updated every time IDC has a new data release. The exported tables are organized under the folder `bigquery_export` in that bucket, with each sub-folder corresponding to a BigQuery dataset.
+
+Assuming you have `s5cmd` installed, you can list the exported datasets as follows.
+
+{% code overflow="wrap" %}
+```
+$ s5cmd --no-sign-request ls s3://idc-open-metadata/bigquery_export/
+                                  DIR  idc_current/
+                                  DIR  idc_current_clinical/
+                                  DIR  idc_v1/
+                                  DIR  idc_v10/
+                                  DIR  idc_v11/
+                                  DIR  idc_v11_clinical/
+                                  DIR  idc_v12/
+                                  DIR  idc_v12_clinical/
+                                  DIR  idc_v13/
+                                  DIR  idc_v13_clinical/
+                                  DIR  idc_v14/
+                                  DIR  idc_v14_clinical/
+                                  DIR  idc_v15/
+                                  DIR  idc_v15_clinical/
+                                  DIR  idc_v16/
+                                  DIR  idc_v16_clinical/
+                                  DIR  idc_v17/
+                                  DIR  idc_v17_clinical/
+                                  DIR  idc_v18/
+                                  DIR  idc_v18_clinical/
+                                  DIR  idc_v19/
+                                  DIR  idc_v19_clinical/
+                                  DIR  idc_v2/
+                                  DIR  idc_v20/
+                                  DIR  idc_v20_clinical/
+                                  DIR  idc_v21/
+                                  DIR  idc_v21_clinical/
+                                  DIR  idc_v3/
+                                  DIR  idc_v4/
+                                  DIR  idc_v5/
+                                  DIR  idc_v6/
+                                  DIR  idc_v7/
+                                  DIR  idc_v8/
+                                  DIR  idc_v9/
+```
+{% endcode %}
+
+As an example, the `dicom_all` table for the latest (current) IDC release will be in `s3://idc-open-metadata/bigquery_export/idc_current/dicom_all` (since the table is quite large, the export result is not a single file, but a folder containing thousands of Parquet files.
+
+{% code overflow="wrap" %}
+```
+$ s5cmd --no-sign-request ls s3://idc-open-metadata/bigquery_export/idc_current/dicom_all/
+2024/11/23 18:01:07           7545045  000000000000.parquet
+2024/11/23 18:01:07           7687834  000000000001.parquet
+2024/11/23 18:01:07           7409070  000000000002.parquet
+2024/11/23 18:01:07           7527558  000000000003.parquet
+...
+...
+2024/11/23 18:00:14           7501451  000000004997.parquet
+2024/11/23 18:00:14           7521972  000000004998.parquet
+2024/11/23 18:00:14           7575037  000000004999.parquet
+2024/09/12 18:20:05            588723  000000005000.parquet
+```
+{% endcode %}
+
+You can query those tables/parquet files without downloading them, as shown in the following snippet. Depending on the query you are trying to execute, you may need a lot of patience!
+
+{% code overflow="wrap" %}
+```python
+import duckdb
+
+# Connect to DuckDB (in-memory)
+con = duckdb.connect()
+
+# Install and load the httpfs extension for S3 access
+con.execute("INSTALL httpfs;")
+con.execute("LOAD httpfs;")
+
+# No credentials needed for public buckets
+
+# Query all Parquet files in the public S3 folder
+selection_query = """
+SELECT SeriesInstanceUID
+FROM read_parquet('s3://idc-open-metadata/bigquery_export/idc_current/dicom_all/*.parquet') AS dicom_all
+WHERE Modality = 'MR'
+LIMIT 1
+"""
+selection_result = con.execute(selection_query).fetchdf()
+print(selection_result['SeriesInstanceUID'].values[0])
+```
+{% endcode %}
