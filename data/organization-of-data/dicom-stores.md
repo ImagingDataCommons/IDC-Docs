@@ -41,9 +41,9 @@ This DICOM store is documented in [https://cloud.google.com/healthcare-api/docs/
 **Limitations**:
 
 * most, but not all of the IDC data is available in this store
-* authentication is required
+* authentication is required (anyone signed in with a Google account can access this interface, no whitelisting is required!)
 * since this DICOM store is not maintained directly by the IDC team, it may be lagging behind the current IDC release in content
 
 ## DICOMweb usage tutorials
 
-We do not yet have a dedicated IDC tutorial on this topic. In the meantime, you can consult the Google Healthcare documentation page for instructions: [https://cloud.google.com/healthcare-api/docs/how-tos/dicomweb](https://cloud.google.com/healthcare-api/docs/how-tos/dicomweb), or use any other tutorial/resource on the use of DICOMweb!
+Check out [this tutorial](../downloading-data/dicomweb-access.md) and the accompanying Colab notebook to learn more.
