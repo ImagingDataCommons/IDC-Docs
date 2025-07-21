@@ -1,15 +1,13 @@
 # Organization of data
 
-This section describes the current organization of IDC data. The organization of data was static from IDC Version 2  through IDC Version 13 except that [clinical data](organization-of-data-v2-through-v13-deprecated/clinical.md) was added in Version 11. Development of the clinical data resource is an ongoing project. From IDC v14, our data [became available](https://registry.opendata.aws/nci-imaging-data-commons/) from the Amazon AWS Open Data Registry, and the files in storage buckets were organized into series-level folders.
+IDC provides a variety of interfaces to access both the data (as files) and metadata (to subset files and build cohorts). The flow of data and the relationship between the various components IDC uses is summarized in the following figure.
 
-### IDC data model
+{% embed url="https://docs.google.com/presentation/d/1UVpNVyVy3xIYLDnm4rtgAUmSu-uKQo5krekI9DSMT8o/edit?usp=sharing" %}
 
-### [Files and metadata](files-and-metadata.md)
+We maintain the following resources to enable access to IDC data:
 
-### [GA4GH DRS objects](https://learn.canceridc.dev/data/organization-of-data/guids-and-uuids)
-
-### [Clinical Data](organization-of-data-v2-through-v13-deprecated/clinical.md)
-
-### [Organization of data, v1 through V13 (deprecated)](./#organization-of-data-v1-through-v13-deprecated)
-
-### [Organization of data in v1 (deprecated)](organization-of-data-v1.md)
+* [Cloud storage buckets](./#files-and-metadata): files maintained by IDC are mirrored between Google and AWS public storage buckets that provide fee-free egress without requiring login. The buckets organize files by DICOM series, each series stored in a separate folder. Given the large overall size of data in IDC, you will likely need to use one of the search interfaces to identify relevant series first.
+* BigQuery tables: collection-level metadata, DICOM metadata, [clinical data tables](clinical.md) available via SQL query interface.
+* Python API: pip-installable [idc-index package](https://idc-index.readthedocs.io/en/latest/) provides programmatic interface and command-line tools to search IDC data using most important metadata attributes, and to download files corresponding to the selected cohorts from the cloud buckets
+* [REST API](broken-reference): alternative language-independent API for selecting subsets of data
+* [DICOMweb](dicom-stores.md): DICOM files and metadata queries available from Google Healthcare DICOM stores

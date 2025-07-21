@@ -1,6 +1,8 @@
 # Getting Started
 
-<mark style="color:red;">Note: As of 15-July-2025, support for user defined cohorts has been removed from the both the IDC API V1 and the IDC API V2. The API documentation has been revised accordingly.</mark>
+{% hint style="danger" %}
+As of 15-July-2025, support for user defined cohorts has been removed from the both the IDC API V1 and the IDC API V2. The API documentation has been revised accordingly.
+{% endhint %}
 
 This section describes version 2 of the IDC REST API . The documentation for the version 1 API will be found [here](https://learn.canceridc.dev/api/v1-api).
 

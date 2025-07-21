@@ -42,7 +42,7 @@ In order to reproduce the result of such analysis, it must be possible to precis
 
 Because an IDC version exactly defines the set of data against which the filter/query is applied, and because all versions of all data, except data removed due to PHI/PII concerns, should continue to be available, a cohort is therefore persistent over the course of the evolution of IDC data.
 
-## DICOM Entities are versioned
+
 
 There are various reasons that can cause modification of the existing collections in IDC:
 
