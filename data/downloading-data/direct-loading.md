@@ -335,7 +335,7 @@ dcm = pydicom.dcmread("...")  # Any method to read from file/cloud storage
 
 
 print("Has Extended Offset Table:", "ExtendedOffsetTable" in dcm)
-print("Has Basic Offset Table:", dcm.Pixeldata[4:8] != b'\x00\x00\x00\x00')
+print("Has Basic Offset Table:", dcm.PixelData[4:8] != b'\x00\x00\x00\x00')
 
 ```
 
@@ -350,6 +350,8 @@ from google.cloud import storage
 
 # Create a storage client and use it to access the IDC's public data package
 gcs_client = storage.Client.create_anonymous_client()
+
+# Blob object for the particular file you want to check
 blob = (
     gcs_client
     .bucket("idc-open-data")
@@ -357,14 +359,19 @@ blob = (
 )
 
 
+# Open the blob object for remote reading with a ~500kB chunk size
 with blob.open(mode="rb", chunk_size=500_000) as reader:
+    # Wrap the reader in a DicomIO for compatibility with pydicom
     buf = DicomIO(reader)
 
     # Read the file with stop_before_pixels=True, this moves the cursor
     # position to the start of the pixel data attribute
     dcm = dcmread(buf, stop_before_pixels=True)
 
-    print("Has Extended Offset Table:", "ExtendedOffsetTable" in dcm)
+    # The presence of the extended offset table in the loaded metadata can be
+    # checked straightforwardly
+    has_extended_offset_table = "ExtendedOffsetTable" in dcm 
+    print("Has Extended Offset Table:", has_extended_offset_table)
 
     # Read the next tag, should be the pixel data tag
     tag = buf.read(4)
@@ -373,8 +380,8 @@ with blob.open(mode="rb", chunk_size=500_000) as reader:
     # Read the 32bit length of the pixel data's basic offset table
     length = buf.read(4)
 
-    # If the length of offset table is non-zero, the offset table exists
-    has_basic_offset = length != b'\x00\x00\x00\x00'
-    print("Has Basic Offset Table:", has_basic_offset)
+    # If the length of the offset table is non-zero, the offset table exists
+    has_basic_offset_table = length != b'\x00\x00\x00\x00'
+    print("Has Basic Offset Table:", has_basic_offset_table)
 
 ```
