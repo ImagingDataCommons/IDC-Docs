@@ -26,7 +26,7 @@ https://proxy.imaging.datacommons.cancer.gov/current/viewer-only-no-downloads-se
 
 ### DICOM store maintained by Google Healthcare
 
-This store replicates all of the data from the `idc-open-data` bucket (see related discussion on why IDC uses multiple cloud buckets to organize the data in [this forum thread](https://discourse.canceridc.dev/t/what-is-the-difference-between-the-three-aws-buckets/459)), which is limited to the data available without commercial use constraints (i.e., under CC-BY license), and does not have the data that was flagged by TCIA as potentially containing patient faces.&#x20;
+This store replicates all of the data from the `idc-open-data` bucket, which contains most of the data in IDC (learn more about the organization of data in IDC buckets from [this documentation article](files-and-metadata.md#storage-buckets)).&#x20;
 
 DICOMweb URL (note the store name includes the IDC data release version that corresponds to its content: `idc-store-v21`):
 
