@@ -338,3 +338,43 @@ print("Has Extended Offset Table:", "ExtendedOffsetTable" in dcm)
 print("Has Basic Offset Table:", dcm.Pixeldata[4:8] != b'\x00\x00\x00\x00')
 
 ```
+
+To do this from a remote Google Cloud Storage blob without needing to pull all the pixel data, you can do something like this:
+
+```python
+
+from pydicom import dcmread
+from pydicom.filebase import DicomIO
+from google.cloud import storage
+
+
+# Create a storage client and use it to access the IDC's public data package
+gcs_client = storage.Client.create_anonymous_client()
+blob = (
+    gcs_client
+    .bucket("idc-open-data")
+    .blob("3a84b4b8-b9c1-45e5-99db-d778fd5218f8/155b267a-02fb-41d3-abd7-a807df84ef3f.dcm")
+)
+
+
+with blob.open(mode="rb", chunk_size=500_000) as reader:
+    buf = DicomIO(reader)
+
+    # Read the file with stop_before_pixels=True, this moves the cursor
+    # position to the start of the pixel data attribute
+    dcm = dcmread(buf, stop_before_pixels=True)
+
+    print("Has Extended Offset Table:", "ExtendedOffsetTable" in dcm)
+
+    # Read the next tag, should be the pixel data tag
+    tag = buf.read(4)
+    assert tag == b'\xe0\x7f\x10\x00'
+
+    # Read the 32bit length of the pixel data's basic offset table
+    length = buf.read(4)
+
+    # If the length of offset table is non-zero, the offset table exists
+    has_basic_offset = length != b'\x00\x00\x00\x00'
+    print("Has Basic Offset Table:", has_basic_offset)
+
+```
