@@ -74,7 +74,7 @@ pip install ez-wsi-dicomweb
 `wsidicom` is based upon the [dicomweb\_client](https://github.com/ImagingDataCommons/dicomweb-client) Python library, while `ez-wsi-dicomweb` includes its own DICOMweb implementation.
 
 {% hint style="danger" %}
-Note that you can use `wsidicom` with both, the IDC-maintained and the Google-maintained DICOM store, while `ez-wsi-dicomweb` only works with the Google-maintained store.
+Note that you can use `wsidicom` with both the IDC-maintained and the Google-maintained DICOM store, while `ez-wsi-dicomweb` only works with the Google-maintained store.
 {% endhint %}
 
 The following code snippets show exemplarily how to use each of the libraries to access a subregion from a DICOM slide identified by the following UIDs we selected earlier:
@@ -106,7 +106,7 @@ auth.authenticate_user()
 session = create_session_from_gcp_credentials()
 
 # Set-up a DICOMwebClient using the dicomweb_client library  
-google_dicom_store_url = 'https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/idc-store-v20/dicomWeb'  
+google_dicom_store_url = 'https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/idc-store-v21/dicomWeb'  
 dw_client = DICOMwebClient(  
     url=dicom_store_url,  
     session=session  
