@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # 🚀 Getting started
 
 We want Imaging Data Commons to be your companion in your cancer imaging research activities - from discovering relevant data to sharing your analysis results and showcasing the tools you developed!&#x20;

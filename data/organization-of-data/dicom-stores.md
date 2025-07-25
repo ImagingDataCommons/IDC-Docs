@@ -52,6 +52,10 @@ Check out [this tutorial](../downloading-data/dicomweb-access.md) and the accomp
 
 ### When you say most data is available in the Google Healthcare maintained DICOM store - what is "most"?
 
+_TL;DR: as of IDC v21, it is 95.89% of all of the DICOM series available in IDC (IDC-maintained DICOM store has all of the 100%)._
+
+<figure><img src="../../.gitbook/assets/v21_gcs_bucket_breakdown.png" alt="" width="375"><figcaption></figcaption></figure>
+
 Google Healthcare maintained DICOM store contains the latest versions of the DICOM series stored in the `idc-open-data` Google Storage bucket (see [this article](files-and-metadata.md#storage-buckets) for details on buckets organization).
 
 You can get the exact number of DICOM series in each of the buckets with the following python code (before running it, do `pip install --upgrade idc-index`):
@@ -82,6 +86,8 @@ idc-open-data-two    4473
 ```
 
 ### Are the two DICOM stores kept in sync?
+
+_TL;DR: our goal is to have the two stores in sync within 1-2 weeks of each IDC data release._
 
 The DICOM store maintained by IDC is updated by the IDC team with each new release.&#x20;
 
