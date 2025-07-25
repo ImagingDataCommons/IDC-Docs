@@ -71,7 +71,7 @@ ORDER BY num_series DESC
 c.sql_query(query)
 ```
 
-As of IDC v21, the result of running the code above is the following.
+As of IDC v21, the result of running the code above is the following, showing that 95.89% of DICOM series in IDC are available from the Google Healthcare DICOM store (IDC-maintained DICOM store has all of the 100%).
 
 ```
 
