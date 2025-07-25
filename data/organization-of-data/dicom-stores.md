@@ -47,3 +47,42 @@ This DICOM store is documented in [https://cloud.google.com/healthcare-api/docs/
 ## DICOMweb usage tutorials
 
 Check out [this tutorial](../downloading-data/dicomweb-access.md) and the accompanying Colab notebook to learn more.
+
+## Frequently Asked Questions
+
+### When you say most data is available in the Google Healthcare maintained DICOM store - what is "most"?
+
+Google Healthcare maintained DICOM store contains the latest versions of the DICOM series stored in the `idc-open-data` Google Storage bucket (see [this article](files-and-metadata.md#storage-buckets) for details on buckets organization).
+
+You can get the exact number of DICOM series in each of the buckets with the following python code (before running it, do `pip install --upgrade idc-index`):
+
+```python
+from idc_index import IDCClient
+
+c=IDCClient()
+
+query = """
+SELECT aws_bucket, COUNT(DISTINCT(SeriesInstanceUID)) AS num_series
+FROM index
+GROUP BY aws_bucket
+ORDER BY num_series DESC
+"""
+
+c.sql_query(query)
+```
+
+As of IDC v21, the result of running the code above is the following.
+
+```
+
+aws_bucket	   num_series
+idc-open-data	   911781
+idc-open-data-cr    34634
+idc-open-data-two    4473
+```
+
+### Are the two DICOM stores kept in sync?
+
+The DICOM store maintained by IDC is updated by the IDC team with each new release.&#x20;
+
+The DICOM store maintained by Google Healthcare is populated after the release. We hope to have that done within 1-2 weeks after the IDC release. As a new release of IDC data is out, there will be a new DICOM store maintained by Google Healthcare, and the connection to the IDC release version will be indicated in the store name. I.e., when IDC v22 is released, whenever you are able to access `https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/` **idc-store-v22**`/dicomWeb` , it is expected to be in sync.
