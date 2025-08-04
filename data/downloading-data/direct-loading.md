@@ -392,5 +392,5 @@ with blob.open(mode="rb", chunk_size=500_000) as reader:
         length = reader.read(4)
 
         # If the length of the offset table is non-zero, the offset table exists
-        has_basic_offset_table = length != b'\x00\x00\x00\x00'
+        has_basic_offset_table = (length != b'\x00\x00\x00\x00')
         print("Has Basic Offset Table:", has_basic_offset_table)
