@@ -334,8 +334,20 @@ import pydicom
 dcm = pydicom.dcmread("...")  # Any method to read from file/cloud storage
 
 
-print("Has Extended Offset Table:", "ExtendedOffsetTable" in dcm)
-print("Has Basic Offset Table:", dcm.PixelData[4:8] != b'\x00\x00\x00\x00')
+if not dcm.file_meta.TransferSyntaxUID.is_encapsulated:
+    print(
+        "This image does not use an encapsulated (compressed) transfer "
+        "syntax, so offset tables are not required."
+    )
+else:
+    # Check metadata for the extended offset table
+    print("Has Extended Offset Table:", "ExtendedOffsetTable" in dcm)
+
+    # The start of the PixelData element will be a 4 byte item tag for the offset table,
+    # which should always be present. The following 4 bytes gives the length of the offset
+    # table. If it is non-zero, the offset table is present
+    has_basic_offset_table = dcm.PixelData[4:8] != b'\x00\x00\x00\x00'
+    print("Has Basic Offset Table:", has_basic_offset_table)
 
 ```
 
