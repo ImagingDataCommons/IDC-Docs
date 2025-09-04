@@ -12,10 +12,10 @@ The [DICOMweb](https://www.dicomstandard.org/using/dicomweb) interface is availa
 New to DICOM WSI? Check out our [introductory tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/pathomics/getting_started_with_digital_pathology.ipynb) to learn how slide microscopy images are organized in DICOM.
 {% endhint %}
 
-Detailed information on the DICOMweb endpoints that are available to access IDC data is provided here. In brief, there are two DICOM stores - the [IDC-maintained DICOM store](https://learn.canceridc.dev/data/organization-of-data/dicom-stores#idc-maintained-dicom-store-via-proxy) and the [Google-maintained DICOM store](https://learn.canceridc.dev/data/organization-of-data/dicom-stores#dicom-store-maintained-by-google-healthcare) - available and we recommend that you familiarize yourself with the documentation to learn about the differences between the two, and select the option that is optimal for your use case.
+Detailed information on the DICOMweb endpoints that are available to access IDC data is provided here. In brief, there are two DICOM stores available - the [IDC-maintained DICOM store](https://learn.canceridc.dev/data/organization-of-data/dicom-stores#idc-maintained-dicom-store-via-proxy) and the [Google-maintained DICOM store](https://learn.canceridc.dev/data/organization-of-data/dicom-stores#dicom-store-maintained-by-google-healthcare) - we recommend that you familiarize yourself with the documentation to learn about the differences between the two, and select the option that is optimal for your use case.
 
 {% hint style="success" %}
-Code snippets included in this article are also replicated in [this Google Colab tutorial notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/advanced_topics/idc_dcmweb_access.ipynb) for your convenience.
+Code snippets included in this article are also replicated in [this Google Colab tutorial notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/advanced_topics/idc_dicomweb_access.ipynb) for your convenience.
 {% endhint %}
 
 ## Unique identifiers: locating the relevant slides
