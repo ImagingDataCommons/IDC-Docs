@@ -8,35 +8,25 @@ Our team includes the following sites and project leads:
 
 * Brigham and Women's Hospital, Boston, MA, USA (BWH)
   * Andrey Fedorov, PhD, and Ron Kikinis, MD - Co-PIs of the project
-  * Hugo Aerts, PhD
-  * Cosmin Ciausu, MS
   * Deepa Krishnaswamy, PhD
   * Katie Mastrogiacomo
   * Maria Loy
 * Institute for Systems Biology, Seattle, WA, USA (ISB)
   * David Gibbs, PhD - site PI
-  * William Longabaugh, MS
   * William Clifford, MS
   * Suzanne Paquette, MS
-  * George White
-  * Ilya Shmulevich, PhD
 * General Dynamics Information Technology, Bethesda, MD, USA (GDIT)
   * David Pot, PhD - site PI
-  * Poojitha Gundluru
   * Fabian Seidl
-  * Prema Venkatesun
-  * Anthony Le
 * Fraunhofer MEVIS, Bremen, Germany (Fraunhofer MEVIS)
   * André Homeyer, PhD - site PI
   * Daniela Schacherer, MS
   * Henning Höfener, PhD
 * Massachusetts General Hospital, Boston, MA, USA (MGH)
   * Chris Bridge, DPhil - site PI
-  * Chris Gorman, PhD
 * Radical Imaging LLC, Boston, MA, USA (Radical Imaging)
   * Rob Lewis, PhD - site PI
   * Igor Octaviano
-  * Pedro Kohler
 * PixelMed Publishing, Bangor, PA, USA (PixelMed)
   * David Clunie, MB, BS - site PI
 * Isomics Inc, Cambridge, MA, USA (Isomics)
@@ -55,6 +45,15 @@ Oversight:
 
 We are grateful to the following individuals who contributed to IDC in the past, but are no longer directly involved in the development of IDC.
 
+* William Longabaugh, MS (ISB)
+* George White (ISB)
+* Ilya Shmulevich, PhD (ISB)
+* Poojitha Gundluru (GDIT)
+* Prema Venkatesun (GDIT)
+* Chris Gorman, PhD (MGH)
+* Pedro Kohler (Radical Imaging)
+* Hugo Aerts, PhD (BWH)
+* Cosmin Ciausu, MS (BWH)
 * Keyvan Farahani (NCI)
 * Markus Herrmann (MGH)
 * Davide Punzo (Radical Imaging)
