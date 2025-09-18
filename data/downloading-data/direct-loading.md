@@ -334,7 +334,83 @@ import pydicom
 dcm = pydicom.dcmread("...")  # Any method to read from file/cloud storage
 
 
-print("Has Extended Offset Table:", "ExtendedOffsetTable" in dcm)
-print("Has Basic Offset Table:", dcm.Pixeldata[4:8] != b'\x00\x00\x00\x00')
+if not dcm.file_meta.TransferSyntaxUID.is_encapsulated:
+    print(
+        "This image does not use an encapsulated (compressed) transfer "
+        "syntax, so offset tables are not required."
+    )
+else:
+    # Check metadata for the extended offset table
+    print("Has Extended Offset Table:", "ExtendedOffsetTable" in dcm)
 
+    # The start of the PixelData element will be a 4 byte item tag for the offset table,
+    # which should always be present. The following 4 bytes gives the length of the offset
+    # table. If it is non-zero, the offset table is present
+    has_basic_offset_table = dcm.PixelData[4:8] != b'\x00\x00\x00\x00'
+    print("Has Basic Offset Table:", has_basic_offset_table)
+
+```
+
+To do this from a remote Google Cloud Storage blob without needing to pull all the pixel data, you can do something like this:
+
+```python
+import os
+from pydicom import dcmread
+from google.cloud import storage
+
+
+def check_offset_table(blob_key: str):
+    """Print information on the offset table in an IDC blob."""
+    # Create a storage client and use it to access the IDC's public data package
+    gcs_client = storage.Client.create_anonymous_client()
+
+    # Blob object for the particular file you want to check
+    blob = gcs_client.bucket("idc-open-data").blob(blob_key)
+
+    # Open the blob object for remote reading with a ~500kB chunk size
+    with blob.open(mode="rb", chunk_size=500_000) as reader:
+        # Read the file with stop_before_pixels=True, this moves the cursor
+        # position to the start of the pixel data attribute
+        dcm = dcmread(reader, stop_before_pixels=True)
+
+        if not dcm.file_meta.TransferSyntaxUID.is_encapsulated:
+            print(
+                "This image does not use an encapsulated (compressed) transfer "
+                "syntax, so offset tables are not required."
+            )
+        else:
+            # The presence of the extended offset table in the loaded metadata can be
+            # checked straightforwardly
+            has_extended_offset_table = "ExtendedOffsetTable" in dcm
+            print("Has Extended Offset Table:", has_extended_offset_table)
+
+            # Read the next tag, should be the pixel data tag
+            tag = reader.read(4)
+            assert tag == b'\xe0\x7f\x10\x00', "Expected pixel data tag"
+
+            # Skip over VR (2 bytes), reserved (2 bytes), and pixel data length (4
+            # bytes), giving 8 bytes total. Refer to
+            # https://dicom.nema.org/medical/dicom/current/output/chtml/part05/sect_A.4.html#table_A.4-2
+            reader.seek(8, os.SEEK_CUR)
+
+            # Read the item tag for the offset table item
+            item_tag = reader.read(4)
+            assert item_tag == b'\xfe\xff\x00\xe0', "Expected item tag"
+
+            # Read the 32bit length of the pixel data's basic offset table
+            length = reader.read(4)
+
+            # If the length of the offset table is non-zero, the offset table exists
+            has_basic_offset_table = (length != b'\x00\x00\x00\x00')
+            print("Has Basic Offset Table:", has_basic_offset_table)
+
+
+# Example with no offset table (NLST-LSS collection)
+check_offset_table("4a30ffd2-8489-427b-9a83-03f4cf28534d/ad46e1e3-b37c-434b-a67a-5bacbcc608d9.dcm")
+
+# Example with basic offset table (CCDI-MCI collection)
+check_offset_table("763fe058-7d25-4ba7-9b29-fd3d6c41dc4b/210f0529-c767-4795-9acf-bad2f4877427.dcm")
+
+# Example with extended offset table (CMB-MML collection)
+check_offset_table("79f38b50-4df4-4358-9271-f28aeac573d7/23b9272a-34ef-49ca-833f-84329a18c1e4.dcm")
 ```
