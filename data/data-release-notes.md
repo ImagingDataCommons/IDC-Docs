@@ -10,6 +10,87 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## V22 - Sept 2025
+
+{% hint style="success" %}
+Release counts
+
+Files: 46,695,167 (+910,713)
+
+Series: 965,407 (+14,519)
+
+Studies: 159,593 (+10,016)
+
+Cases: 79,214 (+8,132)
+
+Collections: 161 (+11)
+
+Analysis results collections: 17 (no change)
+
+Disk size: 93.11 TB (+5.62 TB)
+{% endhint %}
+
+#### New radiology collections
+
+1. [CBIS-DDSM](https://www.cancerimagingarchive.net/collection/cbis-ddsm/)
+2. [CC-Radiomics-Phantom](https://www.cancerimagingarchive.net/collection/cc-radiomics-phantom/)
+3. [CC-Radiomics-Phantom-2](https://www.cancerimagingarchive.net/collection/cc-radiomics-phantom-2/)
+4. [CC-Radiomics-Phantom-3](https://www.cancerimagingarchive.net/collection/cc-radiomics-phantom-3/)
+5. [CT4Harmonization-Multicentric](https://www.cancerimagingarchive.net/collection/ct4harmonization-multicentric/)
+6. [QIBA-CT-Liver-Phantom](https://www.cancerimagingarchive.net/collection/qiba-ct-liver-phantom/)
+7. [QIN-BREAST-02](https://www.cancerimagingarchive.net/collection/qin-breast-02/)
+8. [QIN PET Phantom](https://www.cancerimagingarchive.net/collection/qin-pet-phantom/)
+9. [RIDER PHANTOM MRI](https://www.cancerimagingarchive.net/collection/rider-phantom-mri/)
+10. [RIDER PHANTOM PET-CT](https://www.cancerimagingarchive.net/collection/rider-phantom-pet-ct/)
+
+#### New pathology collections
+
+1. [BoneMarrowWSI-PediatricLeukemia](https://doi.org/10.5281/zenodo.14933087)
+
+#### Revised radiology collections
+
+1. [CMB-AML](https://www.cancerimagingarchive.net/collection/cmb-aml/)
+2. [CMB-BRCA](https://www.cancerimagingarchive.net/collection/cmb-brca/)
+3. [CMB-CRC](https://www.cancerimagingarchive.net/collection/cmb-crc/)
+4. [CMB-GEC](https://www.cancerimagingarchive.net/collection/cmb-gec/)
+5. [CMB-LCA](https://www.cancerimagingarchive.net/collection/cmb-lca/)
+6. [CMB-MEL](https://www.cancerimagingarchive.net/collection/cmb-mel/)
+7. [CMB-MML](https://www.cancerimagingarchive.net/collection/cmb-mml/)
+8. [CMB-OV](https://www.cancerimagingarchive.net/collection/cmb-ov/)
+9. [CMB-PCA](https://www.cancerimagingarchive.net/collection/cmb-pca/)
+10. [CPTAC-CCRCC](https://www.cancerimagingarchive.net/collection/cptac-ccrcc/)
+11. [CPTAC-LUAD](https://www.cancerimagingarchive.net/collection/cptac-luad/)
+12. [VAREPOP-APOLLO](https://www.cancerimagingarchive.net/collection/varepop-apollo/)
+
+#### Revised pathology collections
+
+1. [CCDI-MCI](https://doi.org/10.5281/zenodo.11099086)
+2. [CMB-AML](https://doi.org/10.5281/zenodo.13993759)
+3. [CMB-BRCA](https://doi.org/10.5281/zenodo.13993761)
+4. [CMB-CRC](https://doi.org/10.5281/zenodo.13993769)
+5. [CMB-GEC](https://doi.org/10.5281/zenodo.13993773)
+6. [CMB-LCA](https://doi.org/10.5281/zenodo.13993776)
+7. [CMB-MEL](https://doi.org/10.5281/zenodo.13993787)
+8. [CMB-MML](https://doi.org/10.5281/zenodo.13993792)
+9. [CMB-OV](https://doi.org/10.5281/zenodo.13993796)
+10. [CMB-PCA](https://doi.org/10.5281/zenodo.13993798)
+11. [NLST](https://testing-portal.canceridc.dev/collections/)
+
+#### New clinical metadata tables
+
+1. bonemarrowwsi\_pediatricleukemia\_clinical
+2. cbis\_ddsm\_calc\_case\_description\_test\_set
+3. cbis\_ddsm\_calc\_case\_description\_train\_set
+4. cbis\_ddsm\_mass\_case\_description\_test\_set
+5. cbis\_ddsm\_mass\_case\_description\_train\_set
+6. cc\_radiomics\_phantom\_3\_chest\_settings
+7. cc\_radiomics\_phantom\_3\_head\_settings
+8. cc\_radiomics\_phantom\_3\_manufacturer
+
+#### Revised clinical metadata tables
+
+1. varepop\_apollo\_clinical
+
 ## V21 - May 2025
 
 {% hint style="success" %}
@@ -41,8 +122,9 @@ Disk size: 87.49 TB (+1.94 TB)
 2. [CMB-MEL](https://www.cancerimagingarchive.net/collection/cmb-mel/)
 3. [CMB-MML](https://www.cancerimagingarchive.net/collection/cmb-mml/)
 4. [CMB-PCA](https://www.cancerimagingarchive.net/collection/cmb-pca/)
-5. [CPTAC-AML](https://www.cancerimagingarchive.net/collection/cptac-aml/)
-6. [CPTAC-PDA](https://www.cancerimagingarchive.net/collection/cptac-pda/)
+5. [CPTAC-CCRCC](https://www.cancerimagingarchive.net/collection/cptac-ccrcc/)
+6. [CPTAC-AML](https://www.cancerimagingarchive.net/collection/cptac-aml/)
+7. [CPTAC-PDA](https://www.cancerimagingarchive.net/collection/cptac-pda/)
 
 #### Revised pathology collections
 
