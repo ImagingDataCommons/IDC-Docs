@@ -1,5 +1,29 @@
 # Frequently asked questions
 
+## What is the difference between IDC and TCIA?
+
+IDC and TCIA are partners in providing FAIR data for cancer imaging researchers.&#x20;
+
+TCIA provides unique service to work with data submitters to de-identify cancer imaging data and make it available for download.
+
+The mission of IDC is to support efficient access and use of the cancer imaging data, after it was de-identified and released. Some of the highlights that make IDC unique are the following:
+
+* while all of the public TCIA DICOM collections are available in IDC, there is a growing amount of data in IDC that is not available anywhere else:
+  * DICOM digital pathology collections from prominent initiatives: Childhood Cancer Data Initiative (CCDI), GTEx, TCGA, CPTAC, HTAN, CMB
+  * image analysis results available only from IDC, such as TotalSegmentator segmentations and radiomics features for most of the CT images in the NLST collection
+* IDC makes the data available in public cloud buckets, the egress is free (TCIA provides download from on-premises servers at a single institution): chances are your will be able to download data from IDC much faster than from TCIA
+* IDC maintains superior community recognized tools to support the use of the data:&#x20;
+  * modern OHIF Viewer v3 for radiology data, with support of visualization of annotations and segmentations;&#x20;
+  * Slim viewer for digital pathology and annotations
+  * highly capable IDC Portal
+* IDC offers standard interfaces for data access: S3 API for file download, DICOMweb for interoperability with DICOM tools, SQL for searching all of the DICOM metadata (TCIA offers various non-standard, in-house interfaces and APIs for data access)
+* All of the data (radiology and digital pathology images, annotations, segmentations, image-derived features) available in IDC is harmonized into DICOM representation, which means&#x20;
+  * interoperability: you can use IDC data with any DICOM-compatible tool
+  * metadata: every single file in IDC is accompanied by metadata that follows DICOM data model, and is associated with unique identifiers, allowing you to build reproducible cohorts
+  * uniform representation: you don't need to customize your processing pipelines to a specific collection, and can build cohorts combining data across collections
+* IDC data is easier to access from cloud computing resources, allowing you to more easily experiment with the new analysis tools and scale your computation
+* IDC data is versioned: you will be able to access the exact files you analyzed in a given verison of IDC even if there were any updates to the collection after you accessed it, helping you achieve reproducibility of your analyses
+
 ## How to download data from IDC?
 
 Check out the [downloading-data](data/downloading-data/ "mention") documentation page!
@@ -23,7 +47,7 @@ If you would like to use the cloud for analysis of the data, we recommend you st
 
 ## What is the status of IDC?
 
-IDC pilot release took place in Fall 2020, followed by the production release in September 2021.&#x20;
+IDC pilot release took place in Fall 2020, followed by the production release in September 2021. IDC team is continuously refining the capabilities of IDC Portal and various tools, and publishes new data releases every 3-4 months.
 
 ## What data is available?
 
@@ -34,19 +58,6 @@ We host most of the public collections from [The Cancer Imaging Archive (TCIA)](
 Please cite the latest paper from the IDC team. Please also make sure you acknowledge the specific data collections you used in your analysis.
 
 > Fedorov, A., Longabaugh, W. J. R., Pot, D., Clunie, D. A., Pieper, S. D., Gibbs, D. L., Bridge, C., Herrmann, M. D., Homeyer, A., Lewis, R., Aerts, H. J. W. L., Krishnaswamy, D., Thiriveedhi, V. K., Ciausu, C., Schacherer, D. P., Bontempi, D., Pihl, T., Wagner, U., Farahani, K., Kim, E. & Kikinis, R. National cancer institute imaging data commons: Toward transparency, reproducibility, and scalability in imaging artificial intelligence. _Radiographics_ 43, (2023). [https://doi.org/10.1148/rg.230180](https://doi.org/10.1148/rg.230180)
-
-## What is the difference between IDC and TCIA?
-
-IDC and TCIA are partners in providing FAIR data for cancer imaging researchers. While some of the functions between the two resources are similar, there are also key differences. The table below provides a summary of similarities and differences.
-
-| Function                                                                | **IDC**                                          | TCIA    |
-| ----------------------------------------------------------------------- | ------------------------------------------------ | ------- |
-| De-identification                                                       | no, IDC can only host data already de-identified | yes     |
-| Cloud-based data co-located with compute resources                      | yes                                              | no      |
-| Conversion of pathology images and image-derived data into DICOM format | yes                                              | no      |
-| Private data collections                                                | no                                               | yes     |
-| Public data collections                                                 | yes                                              | yes     |
-| Version control of the data                                             | [yes](data/data-versioning.md)                   | partial |
 
 ## Where do I learn more about other components of CRDC?
 
