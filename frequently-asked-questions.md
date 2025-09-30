@@ -6,12 +6,15 @@ IDC and TCIA are partners in providing FAIR data for cancer imaging researchers.
 
 TCIA provides unique service to work with data submitters to de-identify cancer imaging data and make it available for download.
 
-The mission of IDC is to support efficient access and use of the cancer imaging data, after it was de-identified and released. Some of the highlights that make IDC unique are the following:
+The mission of IDC is to support efficient access and use of the cancer imaging data, after it was de-identified and released.&#x20;
+
+Here are some of the highlights that make IDC unique:
 
 * **Unique datasets:** while all of the public TCIA DICOM collections are available in IDC, there is a growing amount of data in IDC that is not available anywhere else:
   * DICOM digital pathology collections from prominent initiatives: Childhood Cancer Data Initiative (CCDI), GTEx, TCGA, CPTAC, HTAN, CMB
   * image analysis results available only from IDC, such as TotalSegmentator segmentations and radiomics features for most of the CT images in the NLST collection
 * **Cloud-native:** IDC makes the data available in public cloud buckets, the egress is free (TCIA provides download from on-premises servers at a single institution): chances are your will be able to download data from IDC much faster than from TCIA
+* **Partnerships with cloud vendors:** IDC collaborates with Public Datasets Programs of Amazon Web Services and Google Cloud to support hosting and free out-of-cloud egress, contributing to improved accessibility, sustainability and longevity of the resource
 * **State of the art tools:** IDC maintains superior community recognized tools to support the use of the data:&#x20;
   * modern OHIF Viewer v3 for radiology data, with support of visualization of annotations and segmentations;&#x20;
   * Slim viewer for digital pathology and annotations
@@ -23,6 +26,7 @@ The mission of IDC is to support efficient access and use of the cancer imaging 
   * uniform representation: you don't need to customize your processing pipelines to a specific collection, and can build cohorts combining data across collections
 * **Co-location with cloud compute resources:** IDC data is easier to access from cloud computing resources, allowing you to more easily experiment with the new analysis tools and scale your computation
 * **Versioning:** IDC data is versioned: you will be able to access the exact files you analyzed in a given verison of IDC even if there were any updates to the collection after you accessed it, helping you achieve reproducibility of your analyses
+* **Open-source tool stack:** all of the tools developed by IDC are shared under permissive licenses to support community contribution, reuse and sustainability
 
 ## How to download data from IDC?
 
