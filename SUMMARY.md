@@ -39,6 +39,7 @@
       * [Clinical data](data/organization-of-data/organization-of-data-v2-through-v13-deprecated/clinical.md)
 * [Data versioning](data/data-versioning.md)
 * [Downloading data](data/downloading-data/README.md)
+  * [IDC Portal](data/downloading-data/idc-portal.md)
   * [idc-index and 3D Slicer](data/downloading-data/downloading-data.md)
   * [s5cmd](data/downloading-data/downloading-data-with-s5cmd.md)
   * [DICOMweb](data/downloading-data/dicomweb-access.md)

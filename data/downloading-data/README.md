@@ -6,6 +6,7 @@ If you have questions or feedback about the download tools provided by IDC, plea
 
 IDC supports a variety of interfaces for fetching individual images, cohorts (groups of images), or portions of images, using desktop application, command-line interface, or programmatic API. These interfaces are covered in the subsequent pages. You should select the specific approach to accessing IDC data depending on your requirements.
 
+* Download **directly from** [**IDC Portal**](idc-portal.md): no prerequisites other than a Chrome web browser!
 * [idc-index](https://learn.canceridc.dev/data/downloading-data/downloading-data#command-line-or-programmatic-download-idc-index-python-package) interface: **command-line and Python API interface** to download images corresponding to the specific patient/study/series, or a cohort defined by a manifest
 * [3D Slicer](downloading-data.md) interface: **desktop application** to download images corresponding to the specific patient/study/series, or a cohort defined by a manifest
 * [s5cmd](downloading-data-with-s5cmd.md): **command-line interface** to download images for a cohort defined by a manifest (unlike `idc-index`, does not organize downloaded images into folders corresponding to IDC data model hierarchy)
