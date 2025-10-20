@@ -44,6 +44,7 @@
   * [s5cmd](data/downloading-data/downloading-data-with-s5cmd.md)
   * [DICOMweb](data/downloading-data/dicomweb-access.md)
   * [Directly loading DICOM objects from Google Cloud or AWS in Python](data/downloading-data/direct-loading.md)
+  * [Additional tools](data/downloading-data/additional-tools.md)
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
