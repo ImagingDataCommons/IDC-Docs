@@ -10,6 +10,100 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## V23 - Nov 2025
+
+{% hint style="success" %}
+Release counts
+
+Files: 46,870,903 (+175,736)
+
+Series: 994,073 (+28,666)
+
+Studies: 160,199 (+606)
+
+Cases: 79,889 (+355)
+
+Collections: 161 (no change)
+
+Analysis results collections: 23 (+6)
+
+Disk size: 95.33 TB (+2.22 TB)
+{% endhint %}
+
+#### New radiology collections
+
+#### New pathology collections
+
+#### New analysis results
+
+1. [Lung-PET-CT-Dx-Annotations](https://doi.org/10.5281/zenodo.16989819)\
+   Collections analyzed:
+   1. Lung-PET-CT-Dx
+2. [NLST-Sybil](https://doi.org/10.5281/zenodo.15643334)\
+   Collections analyzed:
+   1. NLST
+3. [NLSTSeg](https://doi.org/10.5281/zenodo.17362624)\
+   Collections analyzed
+   1. NLST
+4. [PROSTATEx-Targets](https://doi.org/10.5281/zenodo.15643312)\
+   Collections analyzed:
+   1. ProstateX
+5. [TCGA-GBM360](https://doi.org/10.5281/zenodo.17470190)\
+   Collections analyzed:
+   1. TCGA-GBM
+6. [TCGA-SBU-TIL-Maps](https://doi.org/10.5281/zenodo.16966285)\
+   Collections analyzed:
+   1. [TCGA-ACC](htpps://doi.org/10.5281/zenodo.12690035)
+   2. [TCGA-BLCA](https://doi.org/10.5281/zenodo.12690045)
+   3. &#x20;[TCGA-BRCA](https://doi.org/10.5281/zenodo.12689962)
+   4. &#x20;[TCGA-CESC](https://doi.org/10.5281/zenodo.12689956)
+   5. &#x20;[TCGA-COAD](https://doi.org/10.5281/zenodo.12689970)
+   6. [TCGA-ESCA](https://doi.org/10.5281/zenodo.12690012)
+   7. [TCGA-HNSC](https://doi.org/10.5281/zenodo.12690033)
+   8. [TCGA-KIRC](https://doi.org/10.5281/zenodo.12689952)
+   9. [TCGA-LUAD](https://doi.org/10.5281/zenodo.12689915)
+   10. &#x20;[TCGA-LUSC](https://doi.org/10.5281/zenodo.12690008)
+   11. [TCGA-MESO](https://doi.org/10.5281/zenodo.12689966)
+   12. [TCGA-OV](https://doi.org/10.5281/zenodo.12689954)
+   13. &#x20;[TCGA-PAAD](https://doi.org/10.5281/zenodo.12689972)
+   14. &#x20;[TCGA-PRAD](https://doi.org/10.5281/zenodo.12689935)
+   15. &#x20;[TCGA-READ](https://doi.org/10.5281/zenodo.12689998)
+   16. [TCGA-SARC](https://doi.org/10.5281/zenodo.12689917)
+   17. &#x20;[TCGA-SKCM](https://doi.org/10.5281/zenodo.12690039)
+   18. &#x20;[TCGA-STAD](https://doi.org/10.5281/zenodo.12690037)
+   19. [TCGA-TGCT](https://doi.org/10.5281/zenodo.12689995)
+   20. [TCGA-THYM](https://doi.org/10.5281/zenodo.12689913)
+   21. &#x20;[TCGA-UCEC](https://doi.org/10.5281/zenodo.12689968)
+   22. &#x20;[TCGA-UVM](https://doi.org/10.5281/zenodo.12690041)
+
+#### Revised radiology collections
+
+1. [CMB-BRCA](https://www.cancerimagingarchive.net/collection/cmb-brca/)
+2. [CMB-CRC](https://www.cancerimagingarchive.net/collection/cmb-crc/)
+3. [CMB-LCA](https://www.cancerimagingarchive.net/collection/cmb-lca/)
+4. [CMB-MEL](https://www.cancerimagingarchive.net/collection/cmb-mel/)
+5. [CMB-MML](https://www.cancerimagingarchive.net/collection/cmb-mml/)
+6. [CMB-OV](https://www.cancerimagingarchive.net/collection/cmb-ov/)
+7. [CMB-PCA](https://doi.org/10.5281/zenodo.13993798)
+8. [VAREPOP-APOLLO](https://www.cancerimagingarchive.net/collection/varepop-apollo/)
+9. [CPTAC-CCRCC](https://www.cancerimagingarchive.net/collection/cptac-ccrcc/)
+10. [CPTAC-LUAD](https://www.cancerimagingarchive.net/collection/cptac-luad/)
+11. [VAREPOP-APOLLO](https://www.cancerimagingarchive.net/collection/varepop-apollo/)
+
+#### Revised pathology collections
+
+1. [BoneMarrowWSI-PediatricLeukemia](https://doi.org/10.5281/zenodo.14933087)
+2. [CCDI-MCI](https://doi.org/10.5281/zenodo.11099086)
+3. [TCGA-BRCA](https://doi.org/10.5281/zenodo.17486654)
+
+#### Revised analysis results
+
+#### New clinical metadata tables
+
+#### Revised clinical metadata tables
+
+1. varepop\_apollo\_clinical
+
 ## V22 - Sept 2025
 
 {% hint style="success" %}
@@ -229,12 +323,10 @@ Disk size: 87.49 TB (+1.94 TB)
 
 #### Revised analysis results
 
-1. [BAMF-AIMI-Annotations\
-   ](https://doi.org/10.5281/zenodo.8345959)\
+1. [BAMF-AIMI-Annotations<br>](https://doi.org/10.5281/zenodo.8345959)\
    Collections analyzed:
    1. &#x20;[UPENN-GBM](https://doi.org/10.5281/zenodo.8345959)
-2.  [Pan-Cancer-Nuclei-Seg-DICOM\
-    ](https://doi.org/10.5281/zenodo.11099004)\
+2.  [Pan-Cancer-Nuclei-Seg-DICOM<br>](https://doi.org/10.5281/zenodo.11099004)\
     Collections analyzed:
 
     1. [TCGA-BLCA](https://doi.org/10.5281/zenodo.12690045)
@@ -291,8 +383,7 @@ Disk size: 87.49 TB (+1.94 TB)
     34. 1.2.826.0.1.3680043.10.511.3.98258035017480972315346136181769675
 3.  [RMS-Mutation-Prediction-Expert-Annotations ](https://doi.org/10.5281/zenodo.10462857)
 
-    **WARNING**: After the release of v20, it was discovered that a mistake had been made during data conversion that affected the newly-released segmentations accompanying the "RMS-Mutation-Prediction" collection. Segmentations released in v20 for this collection have the segment labels for alveolar rhabdomyosarcoma (ARMS) and embryonal rhabdomyosarcoma (ERMS) switched in the metadata relative to the correct labels. Thus segment 3 in the released files is labelled in the metadata (the SegmentSequence) as ARMS but should correctly be interpreted as ERMS, and conversely segment 4 in the released files is labelled as ERMS but should be correctly interpreted as ARMS. We apologize for the mistake and any confusion that it has caused, and will be releasing a corrected version of the files in the next release as soon as possible.[\
-    ](https://doi.org/10.5281/zenodo.10462857)\
+    **WARNING**: After the release of v20, it was discovered that a mistake had been made during data conversion that affected the newly-released segmentations accompanying the "RMS-Mutation-Prediction" collection. Segmentations released in v20 for this collection have the segment labels for alveolar rhabdomyosarcoma (ARMS) and embryonal rhabdomyosarcoma (ERMS) switched in the metadata relative to the correct labels. Thus segment 3 in the released files is labelled in the metadata (the SegmentSequence) as ARMS but should correctly be interpreted as ERMS, and conversely segment 4 in the released files is labelled as ERMS but should be correctly interpreted as ARMS. We apologize for the mistake and any confusion that it has caused, and will be releasing a corrected version of the files in the next release as soon as possible.[<br>](https://doi.org/10.5281/zenodo.10462857)\
     Collections analyzed:
 
     1. [RMS-Mutation-Prediction](https://doi.org/10.5281/zenodo.8225131)
