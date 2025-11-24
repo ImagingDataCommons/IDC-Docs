@@ -16,4 +16,4 @@ If you reach your daily quota, but feel you have a compelling cancer imaging res
 
 We are continuously monitoring the usage of the proxy. Depending on the actual costs and usage, this policy may be revisited in the future to restrict access via the DICOMweb interface for any uses other than IDC viewers.
 
-\
+<br>

@@ -45,8 +45,7 @@ The API can be accessed from the command line using curl or wget. Here we discus
 
 You access an API endpoint by sending an HTTP request to the IDC API server. The server replies with a response that either contains the data you requested, or a status indicator. An API request URL has the following structure:&#x20;
 
-`<BaseURL><API version><QueryEndpoint>?<QueryParameters>.` \
-
+`<BaseURL><API version><QueryEndpoint>?<QueryParameters>.` <br>
 
 The \<BaseURL> of the IDC API is `https://api.imaging.datacommons.cancer.gov.`\
 For example, this _curl_ command requests metadata on all IDC collections from the V2 API:

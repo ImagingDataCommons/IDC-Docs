@@ -30,4 +30,4 @@ See the full list, as curated by Google Scholar, [here](https://scholar.google.c
 8. Diaz-Pinto, A., Alle, S., Nath, V., Tang, Y., Ihsani, A., Asad, M., Pérez-García, F., Mehta, P., Li, W., Flores, M., Roth, H. R., Vercauteren, T., Xu, D., Dogra, P., Ourselin, S., Feng, A. & Cardoso, M. J. MONAI Label: A framework for AI-assisted interactive labeling of 3D medical images. _arXiv \[cs.HC]_ (2022). at <[http://arxiv.org/abs/2203.12362](http://arxiv.org/abs/2203.12362)>&#x20;
 9.
 
-    \
+    <br>
