@@ -6,6 +6,16 @@ The version of the viewer is available from the "About" menu for the OHIF (radio
 <img src="../.gitbook/assets/ohif_version (1).png" alt="radiology viewer version location" data-size="original"><img src="../.gitbook/assets/slim_version.png" alt="pathology viewer version location" data-size="original">
 {% endhint %}
 
+
+
+IDC viewers release notes are maintained via GitHub Releases. Once you identified the version of the deployed viewer using the instructions above, you can locate the corresponding release notes in the following:
+
+* **OHIF v3** release notes: [https://github.com/OHIF/Viewers/releases](https://github.com/OHIF/Viewers/releases)
+* **Slim** release notes: [https://github.com/ImagingDataCommons/slim/releases](https://github.com/ImagingDataCommons/slim/releases)
+  * a significant portion of functionality available in Slim is implemented in the **dicom-microscopy-viewer** package, its releases are available here: [https://github.com/ImagingDataCommons/dicom-microscopy-viewer/releases](https://github.com/ImagingDataCommons/dicom-microscopy-viewer/releases)
+
+***
+
 ## v2-legacy - 8 Jun 2023 - OHIF
 
 The final OHIF v2 published version is 4.12.45. Upstream changes based on v2 will be accessible through the v2-legacy branch (will not be published to NPM).

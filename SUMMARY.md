@@ -78,8 +78,8 @@
 * [Manifests: selecting data subsets](portal/cohort-manifests.md)
 * [Visualizing images](portal/visualization.md)
 * [Proxy policy](portal/proxy-policy.md)
-* [Viewer release notes](portal/viewer-release-notes.md)
 * [Portal release notes](portal/release-notes.md)
+* [Viewer release notes](portal/viewer-release-notes.md)
 * [Portal known issues](portal/portal-known-issues.md)
 
 ## API

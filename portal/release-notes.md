@@ -8,46 +8,54 @@ _canceridc.\<date of webapp deployment in YYYYMMDDHHMM>.\<first 6 characters of 
 where revision hash corresponds to that of the [IDC WebApp repo](https://github.com/ImagingDataCommons/IDC-WebApp).
 {% endhint %}
 
+**Portal release notes are maintained at** [**https://github.com/ImagingDataCommons/IDC-WebApp/releases**](https://github.com/ImagingDataCommons/IDC-WebApp/releases)**.**
+
+***
+
 ## 18.0 April 9, 2024 (canceridc.202404091237.841769c)
 
 * on the Explore Images page the IDC internal id for each collection can now be copied from the Collections table by clicking the corresponding copy icon
-
 * on the Explore Images page the IDC case id can now be copied from the Selected Cases table by clicking the corresponding copy icon
 
 ## 17.0 December 19, 2023 (canceridc.202312191019.53f66ba)
+
 Main highlights of this release include:
 
 * add a choice of several viewers (OHIF v2, OHIF v3, VolView, Slim) for viewing image files
 
-
 ## 16.0 September 15, 2023 (canceridc.202309151254.a6dfd6a)
+
 Main highlights of this release include:
 
 * s5cmd file manifests can now be generated from the Explore images page for individual studies and series
 
 ## 15.0 July 14, 2023 (canceridc.202307141313.c80a691)
+
 Main highlights of this release include:
 
 * The file manifest for a filter can be downloaded without logging into the portal and creating a persistent cohort
 
 ## 14.0 May 3, 2023 (canceridc.202305031458.443ea83)
+
 Main highlights of this release include:
 
-* The Export Cohort Manifest popup now includes options to download manifests that can be used by [s5cmd](https://github.com/peak/s5cmd) to download image files from IDC's s3 buckets in GCP or AWS. Instructions are provided for using s5cmd with these manifests  
+* The Export Cohort Manifest popup now includes options to download manifests that can be used by [s5cmd](https://github.com/peak/s5cmd) to download image files from IDC's s3 buckets in GCP or AWS. Instructions are provided for using s5cmd with these manifests
 
 ## 13.0 March 7, 2023 (canceridc.202303071044.57def9a)
+
 Main highlights of this release include:
 
 * Three new Original Image attributes Max Total Pixel Matrix Columns, Max Total Pixel Matrix Rows, and Min Pixel Spacing are added.
 * Two new Quantitative Analysis attributes Sphericity (Quant) and Volume of Mesh are added.
-* Default attribute value order is changed from alphanumeric (by value name) to value count. 
+* Default attribute value order is changed from alphanumeric (by value name) to value count.
 
 ## 12.0 - November 2, 2022 (canceridc.202211092039.87ca478)
+
 Main highlights of this release include:
 
 * As limited access collections have been removed from IDC, the portal is now simplified by removing the option of selecting different access levels. All collections in the portal are public.
 * A warning message appears on the cohort browser page when a user views a cohort that used the Access filter attribute. That attribute is no longer applied if the user migrates the cohort to the current version.
-* On the explorer page the reset button has been moved to improve viewability. 
+* On the explorer page the reset button has been moved to improve viewability.
 
 ## 11.0 - September 8, 2022 (canceridc.202209081302.acb8ce3)
 
@@ -57,7 +65,7 @@ This was primarily a data release. There were no significant changes to the port
 
 Main highlights of this release include:
 
-* User control over how selection of multiple filter modalities defines the cohort. Previously when multiple modalities were selected the cohort would include the cases that had ANY of the selected modalities. Now the user can choose if the cohort includes the cases that contain ANY of the selected modaltiies or just those that have ALL of the selected modalities.  
+* User control over how selection of multiple filter modalities defines the cohort. Previously when multiple modalities were selected the cohort would include the cases that had ANY of the selected modalities. Now the user can choose if the cohort includes the cases that contain ANY of the selected modaltiies or just those that have ALL of the selected modalities.
 
 ## 9.0 - May 19, 2022 (canceridc.202205191051)
 
