@@ -26,9 +26,9 @@ The functionality supported by those tools should be self-explanatory, or can be
 If you want to report a problem related to visualization of a specific study in the IDC Viewer, please use the "Debug Info" tool to collect debugging information. Please report the issue on the [IDC Discourse](https://discourse.canceridc.dev/c/support/feedback-and-features/7), including the entire content of the debugging information to help us investigate the issue.
 {% endhint %}
 
-### Visualizing annotations
+### Visualizing radiology annotations
 
-IDC Viewer supports visualization of DICOM Segmentation objects (SEG) and DICOM Radiotherapy Structure Sets (RTSTRUCT). When available in a given study, you will see those modalities labeled as such in the left-hand panel of the viewer, as shown below. To see a specific SEG or RTSTRUCT, double-click on the corresponding thumbnail. After that you can open the RTSTRUCT/SEG panel in the upper right corner to jump to the locations of the specific structure sets or segments, and to control their individual visibility.
+IDC Viewer supports visualization of annotations stored as DICOM Segmentation objects (SEG), DICOM Radiotherapy Structure Sets (RTSTRUCT), and certain annotations stored in DICOM TID1500 Structured Reports. When available in a given study, you will see those modalities labeled as such in the left-hand panel of the viewer, as shown below. To load, double-click on the corresponding thumbnail in the series list in the left panel. After that you can open the navigation panel in the upper right corner to jump to the locations of the specific structure sets or segments, and to control their individual visibility.
 
 <figure><img src="https://github.com/ImagingDataCommons/IDC-Docs/releases/download/v20/viewer.gif" alt=""><figcaption></figcaption></figure>
 
@@ -42,9 +42,15 @@ Below is an example of series objects that are not viewable at the series level.
 
 ## IDC pathology viewer functionality
 
-The IDC pathology viewer allows for interactive visualization of digital slide microscopy (SM) images.
+The IDC pathology viewer allows for interactive visualization of digital slide microscopy (SM) images. Left panel will show all digital slides available in a given study. Click on the thumbnail to open a specific slide. Right panel will summarize the information about slide image channels, and will list annotations, analysis results, and presentation states when available.&#x20;
 
-![Slim Viewer Screenshot](../.gitbook/assets/viewer-pathology-screenshot.png)
+IDC viewer support visualization of DICOM Segmentations (binary and fractional), Parametric Maps, planar annotations stored as DICOM TID1500 Structured Reports (SR modality) or bulk annotations (ANN modality).
+
+### Visualizing slide microscopy annotations
+
+Whenever annotations or segmentations are available for the slide you opened, you will see the corresponding sections populated in the bottom-right portion of the window. Expand those to see what is avaialble and to toggle visualization.
+
+<figure><img src="https://github.com/ImagingDataCommons/IDC-Docs/releases/download/v23/slim_bmdeep_demo.gif" alt=""><figcaption></figcaption></figure>
 
 ## Configuring the IDC Viewer URL
 
