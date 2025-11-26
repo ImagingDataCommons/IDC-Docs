@@ -48,7 +48,11 @@ IDC viewer support visualization of DICOM Segmentations (binary and fractional),
 
 ### Visualizing slide microscopy annotations
 
-Whenever annotations or segmentations are available for the slide you opened, you will see the corresponding sections populated in the bottom-right portion of the window. Expand those to see what is avaialble and to toggle visualization.
+Whenever annotations or segmentations are available for the slide you opened, you will see the corresponding sections populated in the bottom-right portion of the window. Expand those to see what is available and to toggle visualization.
+
+{% hint style="warning" %}
+Note that sometime only small regions of the image are annotated. You can double-click on the specific annotation group in the "Annotation Groups" section to zoom into the section of the image where that group is located!
+{% endhint %}
 
 <figure><img src="https://github.com/ImagingDataCommons/IDC-Docs/releases/download/v23/slim_bmdeep_demo.gif" alt=""><figcaption></figcaption></figure>
 
