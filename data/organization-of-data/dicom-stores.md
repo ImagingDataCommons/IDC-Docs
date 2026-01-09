@@ -28,11 +28,11 @@ https://proxy.imaging.datacommons.cancer.gov/current/viewer-only-no-downloads-se
 
 This store replicates all of the data from the `idc-open-data` bucket, which contains most of the data in IDC (learn more about the organization of data in IDC buckets from [this documentation article](files-and-metadata.md#storage-buckets)).&#x20;
 
-DICOMweb URL (note the store name includes the IDC data release version that corresponds to its content: `idc-store-v21`):
+DICOMweb URL (note the store name includes the IDC data release version that corresponds to its content: `idc-store-v23`):
 
 {% code overflow="wrap" %}
 ```
-https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/idc-store-v21/dicomWeb
+https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/idc-store-v23/dicomWeb
 ```
 {% endcode %}
 
@@ -91,4 +91,4 @@ _TL;DR: our goal is to have the two stores in sync within 1-2 weeks of each IDC 
 
 The DICOM store maintained by IDC is updated by the IDC team with each new release.&#x20;
 
-The DICOM store maintained by Google Healthcare is populated after the release. We hope to have that done within 1-2 weeks after the IDC release. As a new release of IDC data is out, there will be a new DICOM store maintained by Google Healthcare, and the connection to the IDC release version will be indicated in the store name. I.e., when IDC v22 is released, whenever you are able to access `https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/` **idc-store-v22**`/dicomWeb` , it is expected to be in sync.
+The DICOM store maintained by Google Healthcare is populated after the release. We hope to have that done within 1-2 weeks after the IDC release. As a new release of IDC data is out, there will be a new DICOM store maintained by Google Healthcare, and the connection to the IDC release version will be indicated in the store name. I.e., when the new IDC data release is out, whenever you are able to access `https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/` **idc-store-v\<release\_number>**`/dicomWeb` , it is expected to be in sync.
