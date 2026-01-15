@@ -12,6 +12,14 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 ## V23 - Nov 2025
 
+{% hint style="info" %}
+There are two rows, not one, for every instance in the _DICOM converted Slide Microscopy images for the TCGA-BRCA_ collection in the `dicom_all` and `auxiliary_metadata` BigQuery tables in the `bigquery-public-data.idc_current` and `bigquery-public-data.idc_v23` datasets. The collection's DOI is `doi.org/10.5281/zenodo.12689962` .
+
+The rows in each pair are identical except that one row has the `Creative Commons Attribution 3.0 Unported License` (`CC BY 3.0`) and the other row the `Creative Commons Attribution 4.0 International License` (`CC BY 4.0`). The correct license for this collection is `CC BY 3.0`. The rows having the `CC BY 4.0` license can be ignored.&#x20;
+
+This error will be corrected in the next IDC release.
+{% endhint %}
+
 {% hint style="success" %}
 Release counts
 
