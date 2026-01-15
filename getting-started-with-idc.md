@@ -1,5 +1,9 @@
 # 🚀 Getting started
 
+{% hint style="info" %}
+**If you are looking for the instructions on how to download data from IDC, check out the** [**Downloading data**](data/downloading-data/) **section of the documentation.**
+{% endhint %}
+
 We want Imaging Data Commons to be your companion in your cancer imaging research activities - from discovering relevant data to sharing your analysis results and showcasing the tools you developed!&#x20;
 
 <figure><img src=".gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
