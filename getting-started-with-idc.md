@@ -1,6 +1,10 @@
 # 🚀 Getting started
 
 {% hint style="info" %}
+**Try out the natural language interface to IDC using this LLM skill:** [**https://github.com/ImagingDataCommons/idc-claude-skill**](https://github.com/ImagingDataCommons/idc-claude-skill)
+{% endhint %}
+
+{% hint style="info" %}
 **If you are looking for the instructions on how to download data from IDC, check out the** [**Downloading data**](data/downloading-data/) **section of the documentation.**
 {% endhint %}
 
