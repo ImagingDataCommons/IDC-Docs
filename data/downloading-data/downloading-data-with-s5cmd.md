@@ -1,4 +1,4 @@
-# Downloading data with s5cmd
+# s5cmd
 
 {% hint style="info" %}
 Make sure you first review the[ ](./)[Downloading data](./) section to learn about the simpler interfaces that provide access to IDC data.
@@ -11,7 +11,7 @@ With this approach you will follow a a 2-step process covered on this page:
 * **Step 1:** create a manifest - a list of the storage bucket URLs of the files to be downloaded. if you want to download the content of the cohort defined in the IDC Portal, [export the `s5cmd` manifest fist](../../portal/cohort-manifests.md), and proceed to Step 2. Alternatively, you can use BigQuery SQL as discussed below to generate the manifest;
 * **Step 2**: given the manifest, download files to your computer or to a cloud VM using `s5cmd` command line tool.
 
-To learn more about using Google BigQuery SQL with IDC, check out part 3 of our ["Getting started" tutorial series](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started), which demonstrates how to query and download IDC data!
+To learn more about using Google BigQuery SQL with IDC, check out part 3 of our ["Getting started" tutorial series](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting_started), which demonstrates how to query and download IDC data!
 
 ### Step 1: Create the manifest
 
@@ -21,7 +21,7 @@ You will need to complete prerequisites described in [getting-started-with-gcp.m
 
 A download manifest can be created using either the IDC Portal, or by executing a BQ query. **If you have generated a manifest using the IDC Portal, as discussed** [**here**](../../portal/cohort-manifests.md)**, proceed to Step 2!** In the remainder of this section we describe creating a manifest from a BigQuery query.
 
-The [`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc\_current\&t=dicom\_all\&page=table) BigQuery table discussed in [this documentation article](https://learn.canceridc.dev/data/organization-of-data/files-and-metadata#bigquery-tables) can be used to subset the files you need based on the DICOM metadata attributes as needed, utilizing the SQL query interface. The `gcs_url` and `aws_url` columns contain Google Cloud Storage and AWS S3 URLs, respectively, that can be used to retrieve the files.
+The [`dicom_all`](https://console.cloud.google.com/bigquery?p=bigquery-public-data\&d=idc_current\&t=dicom_all\&page=table) BigQuery table discussed in [this documentation article](https://learn.canceridc.dev/data/organization-of-data/files-and-metadata#bigquery-tables) can be used to subset the files you need based on the DICOM metadata attributes as needed, utilizing the SQL query interface. The `gcs_url` and `aws_url` columns contain Google Cloud Storage and AWS S3 URLs, respectively, that can be used to retrieve the files.
 
 Start with the query templates provided below, modify them based on your needs, and save the result in a file `query.txt`. The specific values for `PatientID`, `SeriesInstanceUID`, `StudyInstanceUID` are chosen to serve as examples.
 
@@ -111,11 +111,8 @@ Install `s5cmd` following the instructions in [https://github.com/peak/s5cmd#ins
 
 You can verify if your setup was successful by running the following command: it should successfully download one file from IDC.
 
-{% code overflow="wrap" %}
-```shell
-s5cmd --no-sign-request --endpoint-url https://storage.googleapis.com cp s3://public-datasets-idc/cdac3f73-4fc9-4e0d-913b-b64aa3100977/902b4588-6f10-4342-9c80-f1054e67ee83.dcm .
-```
-{% endcode %}
+<pre class="language-shell" data-overflow="wrap"><code class="lang-shell"><strong>s5cmd --no-sign-request --endpoint-url https://storage.googleapis.com cp s3://idc-open-data/cdac3f73-4fc9-4e0d-913b-b64aa3100977/902b4588-6f10-4342-9c80-f1054e67ee83.dcm .
+</strong></code></pre>
 
 Once `s5cmd` is installed, you can use `s5cmd run` command to download the files corresponding to the manifest.
 

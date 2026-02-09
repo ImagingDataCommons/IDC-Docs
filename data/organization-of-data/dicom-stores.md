@@ -56,7 +56,7 @@ _TL;DR: as of IDC v21, it is 95.89% of all of the DICOM series available in IDC 
 
 <figure><img src="../../.gitbook/assets/v21_gcs_bucket_breakdown.png" alt="" width="375"><figcaption></figcaption></figure>
 
-Google Healthcare maintained DICOM store contains the latest versions of the DICOM series stored in the `idc-open-data` Google Storage bucket (see [this article](files-and-metadata.md#storage-buckets) for details on buckets organization).
+The Google Healthcare maintained DICOM store contains the latest versions of the DICOM series stored in the `idc-open-data` Google Storage bucket (see [this article](files-and-metadata.md#storage-buckets) for details on buckets organization).
 
 You can get the exact number of DICOM series in each of the buckets with the following python code (before running it, do `pip install --upgrade idc-index`):
 

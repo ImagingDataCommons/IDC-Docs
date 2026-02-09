@@ -6,7 +6,7 @@ We gratefully acknowledge [Google Public Data Program](https://console.cloud.goo
 
 Let's start with the overall principles of how we organize data in IDC.
 
-IDC brings you (as of v21) over 85 TB of publicly available DICOM images and image-derived content. We share those with you as DICOM files, and those DICOM files are available in cloud-based **storage buckets** - both in Google and AWS.&#x20;
+IDC brings you (as of v23) over 95 TB of publicly available DICOM images and image-derived content. We share those with you as DICOM files, and those DICOM files are available in cloud-based **storage buckets** - both in Google and AWS.&#x20;
 
 Sharing just the files, however, is not particularly helpful. With that much data, it is no longer practical to just download all of those files to later sort through them to select those you need.&#x20;
 
@@ -26,13 +26,13 @@ Storage Buckets are basic containers in Google Cloud Storage and AWS S3 that pro
 
 All IDC DICOM file data for all IDC data versions across all of the [collections hosted by IDC](https://imaging.datacommons.cancer.gov/collections/) are mirrored between Google Cloud Storage (GCS) and AWS S3 buckets.&#x20;
 
-Currently all DICOM files are maintained in buckets that allow for free egress within or out of the cloud. This is enabled through the partnership of IDC with [Google Public Data Program](https://console.cloud.google.com/marketplace/product/gcp-public-data-idc/nci-idc-data) and the [AWS Open Data Sponsorship Program](https://registry.opendata.aws/nci-imaging-data-commons/).
+Currently all DICOM files are maintained in buckets that allow for free egress within or out of the cloud. This is enabled through the partnership of IDC with [Google Public Data Program](https://console.cloud.google.com/marketplace/product/gcp-public-data-idc/nci-idc-data) and the [AWS Open Data Sponsorship Program](https://registry.opendata.aws/nci-imaging-data-commons/).&#x20;
 
 <figure><img src="../../.gitbook/assets/v21_gcs_bucket_breakdown.png" alt="" width="375"><figcaption></figcaption></figure>
 
 <table><thead><tr><th>Data category</th><th width="424.5574951171875">Cloud provider and bucket name</th></tr></thead><tbody><tr><td>Data covered by a non-restrictive license (CC-BY or like) and not labeled as such that <strong>may</strong> contain head scans. This category contains >90% of the data in IDC.</td><td><strong>AWS</strong>: <code>idc-open-data</code><br><strong>GCS</strong>: <code>idc-open-data</code><br>(until IDC v19, we utilized GCS bucket <code>public-datasets-idc</code> before it was superseded by <code>idc-open-data</code>)</td></tr><tr><td>Collections that <strong>may</strong> contain head scans. This is done for the collections that were labeled as such by TCIA, in case there is a change in policy and we need to treat such images in any special way in the future.</td><td><strong>AWS</strong>: <code>idc-open-data-two</code><br><strong>GCS</strong>: <code>idc-open-idc1</code></td></tr><tr><td>Data that is covered by a license that restricts commercial use (CC-NC). Note that the license information is available programmatically at the granularity of the individual files, as explained in <a href="https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part3_exploring_cohorts.ipynb">this tutorial</a> - you do not need to check the bucket name to get the license information!</td><td><strong>AWS</strong>: <code>idc-open-data-cr</code><br><strong>GCS</strong>: <code>idc-open-cr</code></td></tr></tbody></table>
 
-Within each bucket files are organized in folders, each folder containing files corresponding to a single DICOM series. On ingestion, we assign each DICOM series and each DICOM instance a UUID, in order to be able to support [data versioning](../data-versioning.md) (when needed). These UUIDs are available in our metadata indices, and are used to organized the content of the buckets: for each version of a DICOM instance having instance UUID `instance_uuid` in a version of a series version having UUID `series_uuid`, the file name is:
+Within each bucket files are organized in folders, each folder containing files corresponding to a single DICOM series. On ingestion, we assign each DICOM series and each DICOM instance a UUID, in order to be able to support [data versioning](../data-versioning.md) (when needed). These UUIDs are available in our metadata indices, and are used to organize the content of the buckets: for each version of a DICOM instance having instance UUID `instance_uuid` in a version of a series version having UUID `series_uuid`, the file name is:
 
 `<series_uuid>/<instance_uuid>.dcm`
 
@@ -52,9 +52,9 @@ Searching BigQuery tables requires you to sign in with a Google Account! If this
 
 #### Python _idc-index_ package
 
-A small subset of most critical metadata attributes available in IDC BigQuery tables is extracted and made available via [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index).&#x20;
+A small subset of most critical metadata attributes available in IDC BigQuery tables is extracted and made available via the [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index).&#x20;
 
-If you are just starting with IDC, you can skip the details covering the content of BigQuery tables, and proceed to [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) that will help you learn basics of searching IDC metadata using `idc-index`. But for the sake of example, you would select and download MR DICOM series available in IDC as follows.
+If you are just starting with IDC, you can skip the details covering the content of BigQuery tables, and proceed to [this tutorial](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) that will help you learn the basics of searching IDC metadata using `idc-index`. But for the sake of example, you would select and download MR DICOM series available in IDC as follows.
 
 ```bash
 pip install --upgrade idc-index
@@ -82,15 +82,13 @@ client.download_dicom_series(seriesInstanceUID=selection_result["SeriesInstanceU
 
 #### Parquet files available via a cloud bucket
 
-We export all the content available via BigQuery into Parquet ([https://parquet.apache.org/](https://parquet.apache.org/)) files available from our public AWS bucket! Using open-source tools such as DuckDB ([https://duckdb.org/](https://duckdb.org/)) you can query those files using SQL queries, without relying on BigQuery (although, running complex queries may require significant resources from your runtime environment!).&#x20;
+While the idc-index is based on a series level subset of IDC BQ data, we also export all the content available via BigQuery into Parquet ([https://parquet.apache.org/](https://parquet.apache.org/)) files, and which are available from our public AWS bucket! Using open-source tools such as DuckDB ([https://duckdb.org/](https://duckdb.org/)) you can query those files using SQL queries, without relying on BigQuery (although, running complex queries may require significant resources from your runtime environment!).&#x20;
 
 The exported Parquet files are located in the IDC-maintained AWS `idc-open-metadata` bucket, which is updated every time IDC has a new data release. The exported tables are organized under the folder `bigquery_export` in that bucket, with each sub-folder corresponding to a BigQuery dataset.
 
 Assuming you have `s5cmd` installed, you can list the exported datasets as follows.
 
-{% code overflow="wrap" %}
-```
-$ s5cmd --no-sign-request ls s3://idc-open-metadata/bigquery_export/
+<pre data-overflow="wrap"><code>$ s5cmd --no-sign-request ls s3://idc-open-metadata/bigquery_export/
                                   DIR  idc_current/
                                   DIR  idc_current_clinical/
                                   DIR  idc_v1/
@@ -116,19 +114,22 @@ $ s5cmd --no-sign-request ls s3://idc-open-metadata/bigquery_export/
                                   DIR  idc_v2/
                                   DIR  idc_v20/
                                   DIR  idc_v20_clinical/
-                                  DIR  idc_v21/
-                                  DIR  idc_v21_clinical/
-                                  DIR  idc_v3/
-                                  DIR  idc_v4/
+<strong>                                  DIR  idc_v21/
+</strong>                                  DIR  idc_v21_clinical/
+                                  DIR  idc_v22/
+                                  DIR  idc_v22_clinical/
+                                  DIR  idc_v23/
+                                  DIR  idc_v23_clinical/
+<strong>                                  DIR  idc_v3/
+</strong>                                  DIR  idc_v4/
                                   DIR  idc_v5/
                                   DIR  idc_v6/
                                   DIR  idc_v7/
                                   DIR  idc_v8/
                                   DIR  idc_v9/
-```
-{% endcode %}
+</code></pre>
 
-As an example, the `dicom_all` table for the latest (current) IDC release will be in `s3://idc-open-metadata/bigquery_export/idc_current/dicom_all` (since the table is quite large, the export result is not a single file, but a folder containing thousands of Parquet files.
+The `idc_current` and `idc_current_clinical` datasets always contain the most recent version of data. As an example, the `dicom_all` table for the latest (current) IDC release can be accessed as `s3://idc-open-metadata/bigquery_export/idc_current/dicom_all` (since the table is quite large, the export result is not a single file, but a folder containing thousands of Parquet files.
 
 {% code overflow="wrap" %}
 ```

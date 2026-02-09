@@ -36,8 +36,8 @@ s5cmd --no-sign-request ls s3://idc-open-data/e127d258-37c2-47bb-a7d1-1faa7f47f4
 
 {% code title="GCS bucket example" overflow="wrap" %}
 ```bash
-s5cmd --no-sign-request --endpoint-url https://storage.googleapis.com ls s3://public-datasets-idc/e127d258-37c2-47bb-a7d1-1faa7f47f47a/5dce0cf0-4694-4dff-8f9e-2785bf179267.dcm
-   3308170  2023-04-01T01:21:31Z  gs://public-datasets-idc/e127d258-37c2-47bb-a7d1-1faa7f47f47a/5dce0cf0-4694-4dff-8f9e-2785bf179267.dcm
+s5cmd --no-sign-request --endpoint-url https://storage.googleapis.com ls s3://idc-open-data/e127d258-37c2-47bb-a7d1-1faa7f47f47a/5dce0cf0-4694-4dff-8f9e-2785bf179267.dcm
+   3308170  2023-04-01T01:21:31Z  gs://idc-open-data/e127d258-37c2-47bb-a7d1-1faa7f47f47a/5dce0cf0-4694-4dff-8f9e-2785bf179267.dcm
 TOTAL: 1 objects, 3308402 bytes (3.16 MiB)
 ```
 {% endcode %}
@@ -77,7 +77,7 @@ From the [GA4GH Data Repository Service API](https://ga4gh.github.io/data-reposi
 "The Data Repository Service (DRS) API provides a generic interface to data repositories so data consumers, including workflow systems, can access data objects in a single, standard way regardless of where they are stored and how they are managed. The primary functionality of DRS is to map a logical ID to a means for physically retrieving the data represented by the ID."
 {% endhint %}
 
-Each such UUID can be used to form a [`DRS ID`](https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.0.0/docs/#_drs_ids) that has been indexed by the [NCI CRDC Data Commons Framework](https://dcf.gen3.org/) (DCF), and can be used to access data that defines that object. In particular this data includes the GCS and AWS URLs of the DICOM instance file. Though the GCS or AWS URL of an instance might change over time, the UUID of an instance can always be resolved to obtain its current URLs. Thus, for long term curation of data, it is recommended to record instance UUIDs.
+Each instance UUID can be used to form a [`DRS ID`](https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.0.0/docs/#_drs_ids) that has been indexed by the [NCI CRDC Data Commons Framework](https://dcf.gen3.org/) (DCF), and can be used to access data that defines that object. In particular this data includes the GCS and AWS URLs of the DICOM instance file. Though the GCS or AWS URL of an instance might change over time, the UUID of an instance can always be resolved to obtain its current URLs. Thus, for long term curation of data, it is recommended to record instance UUIDs.
 
 The data object returned by the server is a GA4GH DRS [`DrsObject`](https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.0.0/docs/#_drs_ids)`:`
 
@@ -86,7 +86,11 @@ This is a typical IDC instance UUID:\
 of a (version of a) DICOM instance, and this is the corresponding DRS ID:\
 `dg.4DFC/641121f1-5ca0-42cc-9156-fb5538c14355`
 
-A DRS ID can be resolved by appending it to the following URL, which is the resolution service within CRDC: `https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/` . For example, the following `curl` command:
+A DRS ID can be resolved by appending it to the following URL, which is the resolution service within CRDC:
+
+&#x20;`https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/` .&#x20;
+
+For example, the following `curl` command:
 
 `>> curl https://nci-crdc.datacommons.io/ga4gh/drs/v1/objects/dg.4DFC/641121f1-5ca0-42cc-9156-fb5538c14355`
 
@@ -98,7 +102,7 @@ returns this DrsObject:
     {
       "access_id": "gs",
       "access_url": {
-        "url": "gs://public-datasets-idc/cc9c8541-949d-48d9-beaf-7028aa4906dc/641121f1-5ca0-42cc-9156-fb5538c14355.dcm"
+        "url": "gs://idc-open-data/cc9c8541-949d-48d9-beaf-7028aa4906dc/641121f1-5ca0-42cc-9156-fb5538c14355.dcm"
       },
       "region": "",
       "type": "gs"
@@ -134,7 +138,7 @@ returns this DrsObject:
 }
 ```
 
-AS can be seen, the `access_methods` component in the returned DrsObject includes a URL for each of the corresponding files in Google GCS and AWS S3.
+As can be seen, the `access_methods` component in the returned DrsObject includes a URL for each of the corresponding files in Google GCS and AWS S3.&#x20;
 
 
 

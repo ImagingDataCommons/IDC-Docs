@@ -4,7 +4,7 @@
 
 Most of the data in IDC is received from the data collection initiatives/projects supported by US National Cancer Institute. Whenever source images or image-derived data is not in the DICOM format, it is harmonized into DICOM as part of the ingestion.&#x20;
 
-As of data release v21, IDC sources of data include:
+As of data release v23, IDC sources of data include:
 
 * [The Cancer Imaging Archive (TCIA) (ongoing)](https://www.cancerimagingarchive.net/)
   * all DICOM files from the public collections are mirrored in IDC
@@ -19,6 +19,8 @@ As of data release v21, IDC sources of data include:
   * v1 of the Visible Human images harmonized into DICOM MR/CT/XC
 * [Genotype-Tissue Expression Project (GTex)](https://commonfund.nih.gov/GTEx)
   * digital pathology slides harmonized into DICOM SM
+* [BoneMarrowWSI-PediatricLeukemia](https://doi.org/10.5281/zenodo.14933087)
+  * a comprehensive dataset of bone marrow aspirate smear whole slide images with expert annotations and clinical data in pediatric leukemia
 
 The list of all of the IDC collections is available in IDC Portal here: [https://portal.imaging.datacommons.cancer.gov/collections/](https://portal.imaging.datacommons.cancer.gov/collections/).
 

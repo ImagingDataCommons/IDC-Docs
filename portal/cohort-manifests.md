@@ -23,8 +23,8 @@ To export a cohort manifest, [Create a cohort](data-exploration-and-cohorts/unde
 # To download the files in this manifest, first install s5cmd (https://github.com/peak/s5cmd),
 # then run the following command:
 # s5cmd --no-sign-request --endpoint-url https://storage.googleapis.com run cohorts_996_20230504_80755_gcs.s5cmd
-cp s3://public-datasets-idc/6079cc3b-4b0f-41ec-bdbb-c6e754e88229/* .
-cp s3://public-datasets-idc/a1e77e5c-299f-49ef-a659-f4484e0cedd2/* .
+cp s3://idc-open-data/6079cc3b-4b0f-41ec-bdbb-c6e754e88229/* .
+cp s3://idc-open-data/a1e77e5c-299f-49ef-a659-f4484e0cedd2/* .
 ...
 ```
 {% endcode %}
