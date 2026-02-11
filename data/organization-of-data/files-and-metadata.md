@@ -4,6 +4,60 @@
 We gratefully acknowledge [Google Public Data Program](https://console.cloud.google.com/marketplace/product/bigquery-public-data/nci-idc-data) and the [AWS Open Data Sponsorship Program](https://registry.opendata.aws/nci-imaging-data-commons/) that support public hosting of IDC-curated content, and cover out-of-cloud egress fees!
 {% endhint %}
 
+```mermaid
+graph TB
+    DCM["<b>DICOM FILES (.dcm)</b><br/>Named by crdc_instance_uuid, grouped by crdc_series_uuid"]
+
+    DCM -->|"stored in"| BUCKETS
+
+    subgraph BUCKETS["CLOUD STORAGE BUCKETS (AWS S3 + GCS mirrors)"]
+        direction LR
+        B1["idc-open-data<br/>~90%, CC BY"]
+        B2["idc-open-data-two / idc1<br/>head scans"]
+        B3["idc-open-data-cr / cr<br/>~4%, CC BY-NC"]
+    end
+
+    B1 & B2 & B3 -->|"all 3 buckets proxied"| PROXY
+    B1 -->|"replicated into"| GHC
+
+    subgraph STORES["DICOMweb / DICOM STORES"]
+        direction LR
+        PROXY["IDC Public Proxy<br/>No auth, 100% coverage"]
+        GHC["Google Healthcare API<br/>Auth required, ~96% coverage"]
+    end
+
+    GHC -->|"DICOM metadata exported to"| BQ
+
+    subgraph BQ["BigQuery (GCP auth + billing)"]
+        BQ_DESC["All 4000+ DICOM tags &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/>Tables: dicom_all, dicom_metadata, clinical"]
+    end
+
+    BQ -->|"~50 key columns queried via SQL"| IDX
+    BQ -->|"tables exported to"| S3BQ
+    S3BQ["Parquet files in AWS S3"]
+
+    subgraph IDX["idc-index PARQUET FILES (no auth)"]
+        IDX_DESC["~50 key columns per series, bundled in Python package &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/>Auto-loaded: index, prior_versions_index<br/>On-demand: collections, seg, sm, ann, clinical, contrast"]
+    end
+
+    IDX -.->|"SeriesInstanceUID for DICOMweb queries"| STORES
+    IDX -.->|"series_aws_url / crdc_series_uuid maps to bucket paths"| BUCKETS
+
+    style DCM fill:#fff3e0,stroke:#FF9800,stroke-width:2px,color:#000
+    style BUCKETS fill:#e8f4fd,stroke:#2196F3,stroke-width:2px,color:#000
+    style B1 fill:#e8f4fd,stroke:#2196F3,color:#000
+    style B2 fill:#e8f4fd,stroke:#2196F3,color:#000
+    style B3 fill:#e8f4fd,stroke:#2196F3,color:#000
+    style STORES fill:#f3e5f5,stroke:#9C27B0,stroke-width:2px,color:#000
+    style PROXY fill:#f3e5f5,stroke:#9C27B0,color:#000
+    style GHC fill:#f3e5f5,stroke:#9C27B0,color:#000
+    style BQ fill:#fce4ec,stroke:#E91E63,stroke-width:2px,color:#000
+    style BQ_DESC fill:#fce4ec,stroke:none,color:#000
+    style IDX fill:#e8f5e9,stroke:#4CAF50,stroke-width:2px,color:#000
+    style S3BQ fill:#e8f4fd,stroke:#2196F3,stroke-width:2px,color:#000
+    style IDX_DESC fill:#e8f5e9,stroke:none,color:#000
+```
+
 Let's start with the overall principles of how we organize data in IDC.
 
 IDC brings you (as of v23) over 95 TB of publicly available DICOM images and image-derived content. We share those with you as DICOM files, and those DICOM files are available in cloud-based **storage buckets** - both in Google and AWS.&#x20;
