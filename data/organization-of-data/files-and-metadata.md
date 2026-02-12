@@ -17,7 +17,7 @@ graph TB
         B3["idc-open-data-cr / cr<br/>~4%, CC BY-NC"]
     end
 
-    B1 & B2 & B3 -->|"all 3 buckets proxied"| PROXY
+    B1 & B2 & B3 -->|"all 3 buckets imported"| PROXY
     B1 -->|"replicated into"| GHC
 
     subgraph STORES["DICOMweb / DICOM STORES"]
