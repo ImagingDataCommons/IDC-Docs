@@ -43,6 +43,7 @@ This DICOM store is documented in [https://cloud.google.com/healthcare-api/docs/
 * most, but not all of the IDC data is available in this store
 * authentication with a Google account is required (anyone signed in with a Google account can access this interface, no whitelisting is required!)
 * since this DICOM store is not maintained directly by the IDC team, it may lag behind the latest IDC release in content in the future
+* If you experience errors accessing this store, fill out this form to whitelist specific account for access. You can see current status from the [IDC health page](https://imagingdatacommons.github.io/idc-health-monitor/).
 
 ## DICOMweb usage tutorials
 
