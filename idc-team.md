@@ -8,7 +8,6 @@ Our team includes the following sites and project leads:
 
 * Brigham and Women's Hospital, Boston, MA, USA (BWH)
   * Andrey Fedorov, PhD, and Ron Kikinis, MD - Co-PIs of the project
-  * Deepa Krishnaswamy, PhD
   * Katie Mastrogiacomo
   * Maria Loy
 * Institute for Systems Biology, Seattle, WA, USA (ISB)
@@ -45,6 +44,7 @@ Oversight:
 
 We are grateful to the following individuals who contributed to IDC in the past, but are no longer directly involved in the development of IDC.
 
+* Deepa Krishnaswamy, PhD (BWH)
 * William Longabaugh, MS (ISB)
 * George White (ISB)
 * Ilya Shmulevich, PhD (ISB)
