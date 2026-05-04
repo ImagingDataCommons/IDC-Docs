@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Manifests: selecting data subsets
 
 Manifest contains references that can be used to download the files corresponding to your data selection. You can also archive manifests of items you selected in the IDC Portal for subsequent retrieval, or for sharing with your collaborators or readers of your paper.&#x20;

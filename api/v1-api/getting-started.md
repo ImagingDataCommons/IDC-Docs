@@ -1,3 +1,7 @@
+{% hint style="warning" %}
+**Deprecated.** The V1 API was deprecated as of July 2025. This page is preserved for historical reference. See the main [API section](../README.md) for current documentation.
+{% endhint %}
+
 # Getting Started
 
 <mark style="color:red;">Note: As of 15-July-2025, support for user defined cohorts has been removed from the both the IDC API V1 and the IDC API V2. The API documentation has been revised accordingly.</mark>

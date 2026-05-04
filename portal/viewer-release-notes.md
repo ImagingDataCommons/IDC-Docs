@@ -475,7 +475,7 @@ Main highlights of this release include:
 * Replace instance dropdown to slider for dicom tag browser;
 * Add error page and not found pages if failed to retrieve study data.
 
-## 4.8.5 - Jannuary 2021 - OHIF
+## 4.8.5 - January 2021 - OHIF
 
 **The OHIF Viewer** is a zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](http://ohif.org). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support [DICOMweb](https://www.dicomstandard.org/using/dicomweb).
 

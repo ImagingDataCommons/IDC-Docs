@@ -54,7 +54,7 @@ $ idc download 1.2.840.113654.2.55.305538394446738410906709753576946604022
 #### Programmatic download
 
 ```python
-from idc_index import index
+from idc_index import IDCClient
 
 client = IDCClient()
 

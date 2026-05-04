@@ -25,7 +25,7 @@ IDC is as much about data as it is about what you can do with the data! We maint
 * **programmatic access**: use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) to perform search, download and other operations programmatically
 * **cohort building**: use rich and extensive metadata to build subsets of data programmatically using `idc-index` or BigQuery SQL
 * **download**: use your favorite S3 API client or `idc-index` to efficiently fetch any of the IDC files from our public buckets
-* **analysis**: conveniently access IDC files and metadata from the tools that are cloud-native, such as Google Colab or Looker; fetch IDC data directly into 3D Slicer using [SlicerIDCBrowser extension](https://github.com/ImagingDataCommons/SlicerIDCBrowser/)
+* **analysis**: conveniently access IDC files and metadata from the tools that are cloud-native, such as Google Colab; fetch IDC data directly into 3D Slicer using [SlicerIDCBrowser extension](https://github.com/ImagingDataCommons/SlicerIDCBrowser/)
 
 {% hint style="info" %}
 The overview of IDC is available in this open access publication. If you use IDC, please acknowledge us by citing it!
