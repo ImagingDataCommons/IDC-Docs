@@ -4,7 +4,7 @@
 As of 15-July-2025, support for user defined cohorts has been removed from the both the IDC API V1 and the IDC API V2. The API documentation has been revised accordingly.
 {% endhint %}
 
-This section describes version 2 of the IDC REST API . The documentation for the version 1 API will be found [here](https://learn.canceridc.dev/api/v1-api).
+This section describes version 2 of the IDC REST API.
 
 This API is designed for use by developers of image analysis and data mining tools to directly query the public resources of the IDC and retrieve information into their applications. The API complements the IDC web application but eliminates the need for users to visit the IDC web pages to perform manifest export, and transfer of image data to some local file system.
 
