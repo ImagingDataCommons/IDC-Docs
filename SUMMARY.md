@@ -31,12 +31,6 @@
   * [DICOM stores](data/organization-of-data/dicom-stores.md)
   * [Clinical data](data/organization-of-data/clinical.md)
   * [UUIDs and GUIDs](data/organization-of-data/guids-and-uuids.md)
-  * [Deprecated functionality](data/organization-of-data/deprecated-functionality/README.md)
-    * [Organization of data in v1 (deprecated)](data/organization-of-data/organization-of-data-v1.md)
-    * [Organization of data, v2 through V13 (deprecated)](data/organization-of-data/organization-of-data-v2-through-v13-deprecated/README.md)
-      * [Files and metadata](data/organization-of-data/organization-of-data-v2-through-v13-deprecated/files-and-metadata.md)
-      * [Resolving CRDC Globally Unique Identifiers (GUIDs)](data/organization-of-data/organization-of-data-v2-through-v13-deprecated/guids-and-uuids.md)
-      * [Clinical data](data/organization-of-data/organization-of-data-v2-through-v13-deprecated/clinical.md)
 * [Data versioning](data/data-versioning.md)
 * [Downloading data](data/downloading-data/README.md)
   * [IDC Portal](data/downloading-data/idc-portal.md)
@@ -89,24 +83,21 @@
 * [Manifests](api/manifests.md)
 * [Accessing the API](api/accessing-the-api.md)
 * [Endpoint Details](api/endpoint-details.md)
-* [V1 API](api/v1-api/README.md)
-  * [Getting Started](api/v1-api/getting-started.md)
-  * [IDC Data Model Concepts](api/v1-api/idc-data-model-concepts.md)
-  * [Accessing the API](api/v1-api/accessing-the-api.md)
-  * [Endpoint Details](api/v1-api/endpoint-details.md)
-  * [Release Notes](api/v1-api/release-notes.md)
 
 ## Cookbook
 
 * [Colab notebooks](cookbook/notebooks.md)
 * [BigQuery](cookbook/bigquery.md)
-* [Looker dashboards](cookbook/data-studio/README.md)
+* [Data Studio dashboards](cookbook/data-studio/README.md)
   * [Dashboard for your cohort](cookbook/data-studio/cohort-dashboard.md)
   * [More dashboard examples](cookbook/data-studio/more-dashboard-examples.md)
 * [ACCESS allocations](cookbook/access-allocations.md)
 * [Compute engine](cookbook/virtual-machines/README.md)
   * [3D Slicer desktop VM](cookbook/virtual-machines/idc-desktop.md)
-  * [Using a BQ Manifest to Load DICOM Files onto a VM](cookbook/virtual-machines/using-a-bq-manifest-to-load-dicom-files-onto-a-vm.md)
   * [Using VS Code with GCP VMs](cookbook/virtual-machines/using-vs-code-with-gcp-vms.md)
   * [Security considerations](cookbook/virtual-machines/security-considerations.md)
 * [NCI Cloud Resources](cookbook/nci-data-commons-cloud-resources.md)
+
+## Archive
+
+* [Archive](archive.md)

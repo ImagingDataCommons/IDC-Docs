@@ -98,6 +98,6 @@ At this time, most GUIDs have not been registered with the CRDC. If such a GUID 
 {% endhint %}
 
 {% hint style="warning" %}
-As discussed in the _Organization of data_ section of this document, the DICOM instance file naming convention changed with IDC version 2. At this time, when an instance GUID is resolved, the returned DrsObject may method may include a URI to the V1 GCS bucket location. Those GUID will re-indexed such that in the future they point to the new GCS bucket location.
+As discussed in the _Organization of data_ section of this document, the DICOM instance file naming convention changed with IDC version 2. At this time, when an instance GUID is resolved, the returned DrsObject may method may include a URI to the V1 GCS bucket location. Those GUIDs will be re-indexed such that in the future they point to the new GCS bucket location.
 {% endhint %}
 

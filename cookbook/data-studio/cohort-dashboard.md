@@ -1,12 +1,12 @@
 ---
 description: >-
-  Use IDC-provided Looker Studio template to build a custom dashboard for your
+  Use IDC-provided Data Studio template to build a custom dashboard for your
   cohort
 ---
 
 # Dashboard for your cohort
 
-You can use [this Looker Studio template](http://bit.ly/3jdCmON) to build a custom dashboard for your own cohort, which will look like the screenshot below in three relatively simple steps.
+You can use [this Data Studio template](http://bit.ly/3jdCmON) to build a custom dashboard for your own cohort, which will look like the screenshot below in three relatively simple steps.
 
 ![Screenshot of the DataStudio dashboard template you can use to explore your cohort.](<../../.gitbook/assets/image (11).png>)
 

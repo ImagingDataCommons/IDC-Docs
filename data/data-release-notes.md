@@ -61,7 +61,7 @@ Disk size: 95.33 TB (+2.22 TB)
    1. TCGA-GBM
 6. [TCGA-SBU-TIL-Maps](https://doi.org/10.5281/zenodo.16966285)\
    Collections analyzed:
-   1. [TCGA-ACC](htpps://doi.org/10.5281/zenodo.12690035)
+   1. [TCGA-ACC](https://doi.org/10.5281/zenodo.12690035)
    2. [TCGA-BLCA](https://doi.org/10.5281/zenodo.12690045)
    3. &#x20;[TCGA-BRCA](https://doi.org/10.5281/zenodo.12689962)
    4. &#x20;[TCGA-CESC](https://doi.org/10.5281/zenodo.12689956)
@@ -398,7 +398,7 @@ Disk size: 87.49 TB (+1.94 TB)
 
 #### New Clinical Metadata Tables
 
-1. [mediastinal\_lymph\_node\_seg\_clinical](https://ortal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=mediastinal_lymph_node_seg)
+1. [mediastinal\_lymph\_node\_seg\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=mediastinal_lymph_node_seg)
 2. [spine\_mets\_ct\_seg\_clinical](https://testing-portal.canceridc.dev/explore/filters/?collection_id=spine_mets_ct_seg)
 
 ## v19 - September 2024

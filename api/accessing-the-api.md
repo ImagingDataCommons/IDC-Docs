@@ -62,7 +62,7 @@ We expect that most API access will be programmed access, and, moreover, that mo
 In Python, we can issue the following request to obtain a list of the collections in the current IDC version:
 
 <pre><code><strong>response = requests.get("https://api.imaging.datacommons.cancer.gov/v2/collections")
-</strong><strong>collections = response.json['collections']
+</strong><strong>collections = response.json()['collections']
 </strong></code></pre>
 
 ## Paged queries

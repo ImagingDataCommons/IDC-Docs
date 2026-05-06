@@ -43,5 +43,5 @@ We recommend you use one of the following tools to interpret the content of the 
 Tools referenced above can be used to 1) extract volumetrically reconstructed mask images corresponding to the individual segments stored in DICOM SEG; 2) extract segment-specific metadata describing its content; 3) generate standard-compliant DICOM SEG objects from research formats.
 
 {% hint style="info" %}
-SEG-specific metadata attributes are available in the table views maintained by IDC. See details [here](../../data/organization-of-data/organization-of-data-v1.md).
+SEG-specific metadata attributes are available in the table views maintained by IDC. See details [here](../../data/organization-of-data/bigquery-tables.md).
 {% endhint %}

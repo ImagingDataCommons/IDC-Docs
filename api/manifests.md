@@ -649,7 +649,7 @@ If the fields list is as above, then this is a fragment of the _collection granu
       {
         "Modality": "CT",
         "SliceThickness": null,
-        "collection_id": "tcga_luad"
+        "collection_id": "tcga_luad",
         "instance_count": "212",
         "patient_count": "1",
         "series_count": "2",
@@ -687,7 +687,7 @@ If the fields list is as above, then this is a fragment of the _collection granu
     ],
     "rowsReturned": 88,
     "totalFound": 88
-  }
+  },
   "next_page": "",
 }
 ```
@@ -782,7 +782,7 @@ then this is a fragment of the _version granularity_ manifest of our example coh
     ],
     "rowsReturned": 87,
     "totalFound": 87
-  }
+  },
   "next_page": "",
 }
 ```

@@ -4,7 +4,7 @@ The following components and capabilities are being developed by IDC:
 
 * [Cloud-hosted imaging data collections](../data/introduction.md)
 * [Search and cohort building portal](../portal/getting-started.md) (IDC Portal)
-* Visualization of the hosted imaging data supported by the integrated [OHIF Viewer](https://github.com/OHIF/Viewers) (radiology data) and [SliM viewer](https://github.com/MGHComputationalPathology/slim) (digital pathology data)
+* Visualization of the hosted imaging data supported by the integrated [OHIF Viewer](https://github.com/OHIF/Viewers) (radiology data), [SliM viewer](https://github.com/MGHComputationalPathology/slim) (digital pathology data), and [VolView](https://volview.kitware.com/) (volumetric 3D rendering of CT and MRI data)
 * [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) to support programmatic use of the IDC functionality
 * [Interactive self-guided tutorials](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started) to help you get started
 

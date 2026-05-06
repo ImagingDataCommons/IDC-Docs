@@ -2,7 +2,7 @@
 
 ## Resources maintained by the IDC team
 
-* **Portal:** [https://imaging.datacommons.cancer.gov](https://portal.imaging.datacommons.cancer.gov)
+* **Portal:** [https://portal.imaging.datacommons.cancer.gov](https://portal.imaging.datacommons.cancer.gov)
 * Discourse (community forum): [https://discourse.canceridc.dev/](https://discourse.canceridc.dev/)
 * Documentation: [https://learn.canceridc.dev/](https://learn.canceridc.dev/)
 * GitHub organization: [https://github.com/ImagingDataCommons](https://github.com/ImagingDataCommons)
@@ -15,5 +15,4 @@ If you did not find the images you need in IDC, you can consider the following r
 
 * [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/): while most of the public DICOM collections from TCIA are available in IDC, we do not replicate limited access TCIA collections
 * [Open-Access Medical Imaging Repositories](https://www.aylward.org/notes/open-access-medical-image-repositories): list curated by Stephen Aylward
-* [Medical Image Repositories](https://www.ucl.ac.uk/child-health/about-us/support-services/library/resources-z/medical-image-repositories): list curated by University College London&#x20;
-* [Finding Medical Images](https://hslguides.med.nyu.edu/medicalimages): list curated by New York Univestity Health Sciences Library
+* [Finding Medical Images](https://hslguides.med.nyu.edu/medicalimages): list curated by New York University Health Sciences Library

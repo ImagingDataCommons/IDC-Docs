@@ -247,7 +247,7 @@ base_layer_file_url = idc_client.get_instance_file_URL(
 # Create a storage client and use it to access the IDC's public data bucket
 # Configure a client to avoid the need for AWS credentials
 s3_client = s3fs.S3FileSystem(
-  anon=True,  # no credentials needed to access pubilc data
+  anon=True,  # no credentials needed to access public data
   default_block_size=500_000,  # ~500kB data pulled in each request
   use_ssl=False  # disable encryption for a speed boost
 )
