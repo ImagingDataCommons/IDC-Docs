@@ -33,4 +33,4 @@ Notebook demonstrating deployment and application of abdominal structures segmen
   * [https://github.com/JoaoSantinha/Medical\_Image\_Analysis\_Workshop](https://github.com/JoaoSantinha/Medical\_Image\_Analysis\_Workshop)
 * Google Colab Tips for Power Users: [https://amitness.com/2020/06/google-colaboratory-tips/](https://amitness.com/2020/06/google-colaboratory-tips/)
 * Mounting GCS bucket using `gcsfuse`: [https://pub.towardsai.net/connect-colab-to-gcs-bucket-using-gcsfuse-29f4f844d074](https://pub.towardsai.net/connect-colab-to-gcs-bucket-using-gcsfuse-29f4f844d074)
-* Almost-free Jupyter Notebooks on Google Cloud: [https://www.tensorops.ai/post/almost-free-jupyter-notebooks-on-google-cloud](https://www.tensorops.ai/post/almost-free-jupyter-notebooks-on-google-cloud)
+

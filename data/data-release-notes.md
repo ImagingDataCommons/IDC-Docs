@@ -398,7 +398,7 @@ Disk size: 87.49 TB (+1.94 TB)
 
 #### New Clinical Metadata Tables
 
-1. [mediastinal\_lymph\_node\_seg\_clinical](https://ortal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=mediastinal_lymph_node_seg)
+1. [mediastinal\_lymph\_node\_seg\_clinical](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=mediastinal_lymph_node_seg)
 2. [spine\_mets\_ct\_seg\_clinical](https://testing-portal.canceridc.dev/explore/filters/?collection_id=spine_mets_ct_seg)
 
 ## v19 - September 2024
