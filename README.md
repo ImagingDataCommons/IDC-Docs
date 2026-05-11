@@ -4,9 +4,9 @@
 **Try out the natural language interface to IDC using this LLM skill:** [**https://github.com/ImagingDataCommons/idc-claude-skill**](https://github.com/ImagingDataCommons/idc-claude-skill)
 {% endhint %}
 
-[**NCI Imaging Data Commons** **(IDC)**](https://imaging.datacommons.cancer.gov) is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.&#x20;
+[**NCI Imaging Data Commons** **(IDC)**](https://imaging.datacommons.cancer.gov) is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.
 
-<figure><img src=".gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 ## Highlights
 
