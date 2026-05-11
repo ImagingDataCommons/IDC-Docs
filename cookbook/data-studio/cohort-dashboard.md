@@ -20,7 +20,7 @@ Export the cohort manifest as a BigQuery table, and take note of the location of
 
 Open the dashboard template following this link: [http://bit.ly/3jdCmON](http://bit.ly/3jdCmON), and click "Use template" to make a copy of the dashboard.
 
-![](<../../.gitbook/assets/image (16) (1).png>)
+![](<../../.gitbook/assets/image (16).png>)
 
 When prompted, do not change the default options, and click "Copy Report".
 
@@ -53,7 +53,7 @@ ON
   all_of_idc.SOPInstanceUID = my_cohort.SOPInstanceUID
 ```
 
-Once you updated the query, click "Reconnect" in the upper right corner.&#x20;
+Once you updated the query, click "Reconnect" in the upper right corner.
 
 {% hint style="warning" %}
 Make sure you select a valid Billing Project that you can use to support the queries!

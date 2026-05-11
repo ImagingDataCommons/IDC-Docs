@@ -1,4 +1,4 @@
-# Downloading data
+# idc-index and 3D Slicer
 
 Depending on whether you would like to download data interactively or programmatically, we provide two recommended tools to help you.
 
@@ -22,9 +22,7 @@ Have a .s5cmd manifest file you downloaded from IDC Portal or from the records i
 idc download manifest_file.s5cmd
 ```
 
-You can use the same command to download files corresponding to any collection, patient, study or series, referred to by the identifiers you can copy from the portal!&#x20;
-
-
+You can use the same command to download files corresponding to any collection, patient, study or series, referred to by the identifiers you can copy from the portal!
 
 <figure><img src="../../.gitbook/assets/2024-09-04_17-58-05.gif" alt=""><figcaption><p>Copy collection ID from the IDC Portal interface</p></figcaption></figure>
 
@@ -90,8 +88,8 @@ IDC maintains [SlicerIDCBrowser](https://github.com/ImagingDataCommons/SlicerIDC
 Once installed, you can use SlicerIDCBrowser in one of the two modes:
 
 1. **As an interface to explore IDC data**: you can select individual collections, cases and DICOM studies and download items of interest directly into 3D Slicer for subsequent visualization and analysis.
-2. **As download tool**: download IDC content based on the manifest you created using IDC Portal, or identifiers of the individual cases, DICOM studies or series.&#x20;
+2. **As download tool**: download IDC content based on the manifest you created using IDC Portal, or identifiers of the individual cases, DICOM studies or series.
 
 <figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Copy identifiers for the studies/series of interest from the IDC Portal</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Insert the identifiers in the appropriate fields, or download content defined by the s5cmd manifest</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Insert the identifiers in the appropriate fields, or download content defined by the s5cmd manifest</p></figcaption></figure>
