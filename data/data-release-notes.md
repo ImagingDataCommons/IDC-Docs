@@ -10,12 +10,78 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRXGj6pT16xHtmyqsSSd1sVqbvUThLyDCZkHtpFROX-TEW4-sxdFRar6sr3NPxNPheWcgD_Cf0qmhmx/pubchart?oid=395334291&#x26;format=image" alt=""><figcaption></figcaption></figure>
 
+## V24 - May 2026
+
+#### New Collections
+
+| Collection                  | Program   | Cancer Type                          | Modality                          | Patients | Series | Source            |
+| --------------------------- | --------- | ------------------------------------ | --------------------------------- | -------- | ------ | ----------------- |
+| CDDP-EAGLE-1                | NIH       | Lung Adenocarcinoma                  | SM                                | 49       | 49     | GDC               |
+| CGCI-BLGSP                  | CGCI      | Burkitt Lymphoma                     | SM                                | 388      | 1,933  | GDC               |
+| CGCI-HTMCP-CC               | CGCI      | Cervical Squamous Cell Carcinoma     | SM                                | 211      | 525    | GDC               |
+| CGCI-HTMCP-DLBCL            | CGCI      | Diffuse Large B-Cell Lymphoma        | SM                                | 43       | 496    | GDC               |
+| CGCI-HTMCP-LC               | CGCI      | Non-Small Cell Carcinoma             | SM                                | 27       | 84     | GDC               |
+| HCMI-CMDC                   | HCMI      | Various (pan-cancer)                 | SM                                | 382      | 810    | GDC               |
+| PDXNet                      | NIH       | Various (pan-cancer PDX)             | SM                                | 919      | 919    | PDXNet Consortium |
+| UW-CIRP-Mouse-PET-CT-NSCLC  | NIH       | Lung Squamous Cell Carcinoma         | PT, CT, RTSTRUCT                  | 14       | 75     | UW Co-CIRP        |
+| HTAN-TNP-SARDANA            | HTAN      | Colon Mucinous Adenocarcinoma        | SM, PR                            | 1        | 3      | HTAN/Synapse      |
+| CPTAC-STAD                  | CPTAC     | Stomach Adenocarcinoma               | CT, US                            | 20       | 99     | TCIA              |
+| CATCH                       | Community | Canine cutaneous tumors (7 subtypes) | SM                                | 282      | 350    | TCIA              |
+| LDCT-and-Projection-data    | Community | Lung Cancer                          | CT                                | 200      | 698    | TCIA              |
+| PSMA-PET-CT-Lesions         | Community | Prostate Cancer                      | CT, PT, SEG                       | 378      | 1,791  | TCIA              |
+| Spinal-Multiple-Myeloma-SEG | Community | Multiple Myeloma                     | CT, SEG                           | 67       | 720    | TCIA              |
+| EAY131                      | NCTN      | Pan-cancer (46 types)                | CT, MR, PT, RTSTRUCT, SEG, NM, XA | 2,813    | 30,293 | TCIA              |
+
+**CDDP-EAGLE-1** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=cddp_eagle_1) | [DOI 10.5281/zenodo.17372206](https://doi.org/10.5281/zenodo.17372206)) — 49 H\&E-stained frozen section whole slide images of primary lung adenocarcinoma from the EAGLE population-based case-control study (Lombardy, Italy). Converted from GDC Aperio SVS to DICOM SM.
+
+**CGCI-BLGSP** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=cgci_blgsp) | [DOI 10.5281/zenodo.17381396](https://doi.org/10.5281/zenodo.17381396)) — 1,933 whole slide images from 388 subjects in the Burkitt Lymphoma Genome Sequencing Project. Includes H\&E and immunohistochemistry stains (BCL2, BCL6, CD10, Ki-67, CD20, CD3, CD5, CD79a), EBER in situ hybridization, and Wright-Giemsa. Both FFPE and frozen sections. Converted from GDC Aperio SVS to DICOM SM.
+
+**CGCI-HTMCP-CC** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=cgci_htmcp_cc) | [DOI 10.5281/zenodo.17381404](https://doi.org/10.5281/zenodo.17381404)) — 525 whole slide images from 211 subjects in the HIV+ Tumor Molecular Characterization Project - Cervical Cancer, part of CGCI. Includes H\&E and p16 stains for most subjects, plus additional IHC markers (BER-EP4, MOC31, P40, P63, CEA, ER, PR, VIM, TP53, CD56, CHR, SYN) for subsets. Converted from GDC Aperio SVS to DICOM SM.
+
+**CGCI-HTMCP-DLBCL** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=cgci_htmcp_dlbcl) | [DOI 10.5281/zenodo.17381412](https://doi.org/10.5281/zenodo.17381412)) — 496 whole slide images from 43 subjects in the HIV+ Tumor Molecular Characterization Project - Diffuse Large B-Cell Lymphoma, part of CGCI. Includes H\&E and IHC/ISH stains (BCL2, BCL6, CD10, CD20, CD3, CD79a, EBER, Ki-67, MUM1, TP53) for most subjects, plus INT and CD138 for subsets. Converted from GDC Aperio SVS to DICOM SM.
+
+**CGCI-HTMCP-LC** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=cgci_htmcp_lc) | [DOI 10.5281/zenodo.17381428](https://doi.org/10.5281/zenodo.17381428)) — 84 whole slide images from 27 subjects in the HIV+ Tumor Molecular Characterization Project - Lung Cancer, part of CGCI. Includes H\&E, P40, and TTF1 stains for most subjects, plus CHR, SYN, and P16 for subsets. Converted from GDC Aperio SVS to DICOM SM.
+
+**HCMI-CMDC** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=hcmi_cmdc) | [DOI 10.5281/zenodo.17381441](https://doi.org/10.5281/zenodo.17381441)) — 810 H\&E-stained whole slide images from 382 subjects in the Human Cancer Models Initiative Cancer Model Development Center. Pan-cancer collection spanning 20+ cancer types (colorectal, pancreatic, esophageal, breast, brain, melanoma, lung, and others) with both FFPE and frozen tumor and normal sections. Converted from GDC Aperio SVS to DICOM SM.
+
+**PDXNet** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=pdxnet) | [DOI 10.5281/zenodo.16967600](https://doi.org/10.5281/zenodo.16967600)) — A pan-cancer repository of >1,000 patient-derived xenograft (PDX) and paired parental tumor H\&E whole slide images from the NCI PDXNet Consortium. Covers 29+ cancer types across 22 anatomic sites, with associated genomic, clinical, and pathologic annotation data. Contributed by BCM, Huntsman, MDACC, Wistar, WUSTL, and JAX. Converted from TIFF/SVS to DICOM SM.
+
+**UW-CIRP-Mouse-PET-CT-NSCLC** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=uw_cirp_mouse_pet_ct_nsclc) | [DOI 10.5281/zenodo.17257735](https://doi.org/10.5281/zenodo.17257735)) — 18F-FDG PET/CT imaging of 14 genetically-engineered mouse models of lung squamous cell carcinoma from the NCI Co-CIRP program. 25 imaging sessions with 75 series (25 PT, 25 CT, 25 RTSTRUCT segmentations) on Siemens Inveon PET/CT. 11 animals imaged pre- and post-therapy (anti-PD-L1 + CXCR2 antagonist), 3 baseline-only.
+
+**HTAN-TNP-SARDANA** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=htan_tnp_sardana) | [DOI 10.5281/zenodo.18488943](https://doi.org/10.5281/zenodo.18488943)) — CyCIF and H\&E whole slide images of a single colorectal cancer specimen from the HTAN SARDANA Trans-Network Project. 265 DICOM instances across 3 series: 240 CyCIF SM, 6 H\&E SM, and 19 presentation state (PR) instances. \~20 CyCIF markers targeting immune, epithelial, stromal, and proliferation cell populations.
+
+**CPTAC-STAD** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=cptac_stad) | [DOI 10.7937/jw9a-8k71](https://doi.org/10.7937/jw9a-8k71)) — 99 radiology series (98 CT, 1 US) from 20 patients in the Clinical Proteomic Tumor Analysis Consortium Stomach Adenocarcinoma cohort. Images acquired as standard-of-care radiology (predominantly abdominal/abdominopelvic CT) prior to pathological diagnosis, made publicly available by TCIA. Sourced as-is in DICOM from TCIA.
+
+**CATCH** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=catch) | [DOI 10.5281/zenodo.18526942](https://doi.org/10.5281/zenodo.18526942)) — 350 H\&E-stained whole slide images of seven canine cutaneous tumor subtypes (melanoma, mast cell tumor, squamous cell carcinoma, peripheral nerve sheath tumor, trichoblastoma, histiocytoma, plasmacytoma) from 282 patients. Includes 12,424 polygon annotations for 13 histologic classes. Original Aperio SVS images from TCIA converted to DICOM SM.
+
+**LDCT-and-Projection-data** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=ldct_and_projection_data) | [DOI 10.7937/9npb-2637](https://doi.org/10.7937/9npb-2637)) — Low-dose CT images and projection data from 200 patients at Mayo Clinic, including non-contrast head CT, low-dose chest CT for pulmonary nodule screening, and contrast-enhanced abdominal CT. CT projection data provided in the open DICOM-CT-PD format. Sourced as-is in DICOM from TCIA.
+
+**PSMA-PET-CT-Lesions** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=psma_pet_ct_lesions) | [DOI 10.7937/r7ep-3x37](https://doi.org/10.7937/r7ep-3x37)) — 597 whole-body PSMA-PET/CT studies from 378 male patients with suspected or diagnosed prostate carcinoma, acquired at LMU University Hospital Munich (2014-2022). All PSMA-avid tumor lesions manually segmented on PET images in 3D. Includes CT, PET, and DICOM SEG segmentation masks. Used in the autoPET III and IV Grand Challenges. Sourced as-is in DICOM from TCIA.
+
+**Spinal-Multiple-Myeloma-SEG** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=spinal_multiple_myeloma_seg) | [DOI 10.7937/k4qv-hh78](https://doi.org/10.7937/k4qv-hh78)) — Dual-energy low-dose CT scans from 67 patients with multiple myeloma acquired at University Hospital Brno (2020-2023). Includes conventional CT, virtual monoenergetic images (40/80/120 keV), calcium-suppressed images, and DICOM SEG segmentation masks of vertebrae (with type classification) and myeloma lesions. 576 CT series plus 144 SEG series. Supporting clinical and demographic data provided as TSV. Sourced as-is in DICOM from TCIA. (Note: 67 unique PatientIDs with 72 studies — 5 patients have 2 scans each.)
+
+**EAY131** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=eay131) | [DOI 10.7937/c5ke-yx42](https://doi.org/10.7937/c5ke-yx42)) — Imaging and clinical data for 2,813 "unmatched" patients from the NCI MATCH Screening Trial (NCT02465060), performed by the ECOG-ACRIN Cancer Research Group. 30,293 series across CT (13,166), RTSTRUCT (14,395), SEG (1,404), MR (1,100), PT (222), NM (5), and XA (1) modalities. Covers 46 cancer types. Includes accompanying clinical/demographic data. Sourced as-is in DICOM from TCIA.
+
+#### New Analysis Results
+
+| Analysis Result          | Program | Cancer Type           | Modality      | Subjects | Series | Source |
+| ------------------------ | ------- | --------------------- | ------------- | -------- | ------ | ------ |
+| EAY131-Tumor-Annotations | NCTN    | Pan-cancer (46 types) | RTSTRUCT, SEG | 2,487    | 15,799 | TCIA   |
+
+**EAY131-Tumor-Annotations** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=eay131) | [DOI 10.7937/q9rn-m510](https://doi.org/10.7937/q9rn-m510)) — Tumor segmentations, seed points, and negative findings assessments for 2,487 subjects from the EAY131 collection. Annotations follow RECIST 1.1 (CT/MR/USG) and PERCIST (PET) criteria, created by an international team of radiologists and reviewed by US board-certified radiologists. Includes longitudinal lesion tracking via SNOMED-CT codes and Tracking UID tags. Also includes a CSV metadata report with lesion volumes. Created by Petr Jordan and Michael Rozenfeld.
+
+#### Updated Collections
+
+| Collection                      | Change Summary                                                                       | Patients (delta) | Series (delta) | Source                  |
+| ------------------------------- | ------------------------------------------------------------------------------------ | ---------------- | -------------- | ----------------------- |
+| BoneMarrowWSI-PediatricLeukemia | Replaced all 1,033 ANN series with 1,027 new ANN; removed 1 SM series from 1 patient | -1               | -7             | BMDeep/Fraunhofer MEVIS |
+
 ## V23 - Nov 2025
 
 {% hint style="info" %}
 There are two rows, not one, for every instance in the _DICOM converted Slide Microscopy images for the TCGA-BRCA_ collection in the `dicom_all` and `auxiliary_metadata` BigQuery tables in the `bigquery-public-data.idc_current` and `bigquery-public-data.idc_v23` datasets. The collection's DOI is `doi.org/10.5281/zenodo.12689962` .
 
-The rows in each pair are identical except that one row has the `Creative Commons Attribution 3.0 Unported License` (`CC BY 3.0`) and the other row the `Creative Commons Attribution 4.0 International License` (`CC BY 4.0`). The correct license for this collection is `CC BY 3.0`. The rows having the `CC BY 4.0` license can be ignored.&#x20;
+The rows in each pair are identical except that one row has the `Creative Commons Attribution 3.0 Unported License` (`CC BY 3.0`) and the other row the `Creative Commons Attribution 4.0 International License` (`CC BY 4.0`). The correct license for this collection is `CC BY 3.0`. The rows having the `CC BY 4.0` license can be ignored.
 
 This error will be corrected in the next IDC release.
 {% endhint %}
@@ -63,26 +129,26 @@ Disk size: 95.33 TB (+2.22 TB)
    Collections analyzed:
    1. [TCGA-ACC](https://doi.org/10.5281/zenodo.12690035)
    2. [TCGA-BLCA](https://doi.org/10.5281/zenodo.12690045)
-   3. &#x20;[TCGA-BRCA](https://doi.org/10.5281/zenodo.12689962)
-   4. &#x20;[TCGA-CESC](https://doi.org/10.5281/zenodo.12689956)
-   5. &#x20;[TCGA-COAD](https://doi.org/10.5281/zenodo.12689970)
+   3. [TCGA-BRCA](https://doi.org/10.5281/zenodo.12689962)
+   4. [TCGA-CESC](https://doi.org/10.5281/zenodo.12689956)
+   5. [TCGA-COAD](https://doi.org/10.5281/zenodo.12689970)
    6. [TCGA-ESCA](https://doi.org/10.5281/zenodo.12690012)
    7. [TCGA-HNSC](https://doi.org/10.5281/zenodo.12690033)
    8. [TCGA-KIRC](https://doi.org/10.5281/zenodo.12689952)
    9. [TCGA-LUAD](https://doi.org/10.5281/zenodo.12689915)
-   10. &#x20;[TCGA-LUSC](https://doi.org/10.5281/zenodo.12690008)
+   10. [TCGA-LUSC](https://doi.org/10.5281/zenodo.12690008)
    11. [TCGA-MESO](https://doi.org/10.5281/zenodo.12689966)
    12. [TCGA-OV](https://doi.org/10.5281/zenodo.12689954)
-   13. &#x20;[TCGA-PAAD](https://doi.org/10.5281/zenodo.12689972)
-   14. &#x20;[TCGA-PRAD](https://doi.org/10.5281/zenodo.12689935)
-   15. &#x20;[TCGA-READ](https://doi.org/10.5281/zenodo.12689998)
+   13. [TCGA-PAAD](https://doi.org/10.5281/zenodo.12689972)
+   14. [TCGA-PRAD](https://doi.org/10.5281/zenodo.12689935)
+   15. [TCGA-READ](https://doi.org/10.5281/zenodo.12689998)
    16. [TCGA-SARC](https://doi.org/10.5281/zenodo.12689917)
-   17. &#x20;[TCGA-SKCM](https://doi.org/10.5281/zenodo.12690039)
-   18. &#x20;[TCGA-STAD](https://doi.org/10.5281/zenodo.12690037)
+   17. [TCGA-SKCM](https://doi.org/10.5281/zenodo.12690039)
+   18. [TCGA-STAD](https://doi.org/10.5281/zenodo.12690037)
    19. [TCGA-TGCT](https://doi.org/10.5281/zenodo.12689995)
    20. [TCGA-THYM](https://doi.org/10.5281/zenodo.12689913)
-   21. &#x20;[TCGA-UCEC](https://doi.org/10.5281/zenodo.12689968)
-   22. &#x20;[TCGA-UVM](https://doi.org/10.5281/zenodo.12690041)
+   21. [TCGA-UCEC](https://doi.org/10.5281/zenodo.12689968)
+   22. [TCGA-UVM](https://doi.org/10.5281/zenodo.12690041)
 
 #### Revised radiology collections
 
@@ -196,7 +262,7 @@ Disk size: 93.11 TB (+5.62 TB)
 ## V21 - May 2025
 
 {% hint style="success" %}
-#### Release counts
+**Release counts**
 
 Files: 45,784,454 (+174,244)
 
@@ -303,7 +369,7 @@ Disk size: 87.49 TB (+1.94 TB)
 1. [Mediastinal-Lymph-Node-SEG](https://www.cancerimagingarchive.net/collection/mediastinal-lymph-node-seg/)
 2. [Spine-Mets-CT-SEG](https://doi.org/10.7937/kh36-ds04)
 
-#### New pathology collections&#x20;
+#### New pathology collections
 
 1. [CMB-BRCA](https://doi.org/10.5281/zenodo.13993761)
 2. [CMB-OV](https://doi.org/10.5281/zenodo.13993796)
@@ -333,24 +399,24 @@ Disk size: 87.49 TB (+1.94 TB)
 
 1. [BAMF-AIMI-Annotations<br>](https://doi.org/10.5281/zenodo.8345959)\
    Collections analyzed:
-   1. &#x20;[UPENN-GBM](https://doi.org/10.5281/zenodo.8345959)
+   1. [UPENN-GBM](https://doi.org/10.5281/zenodo.8345959)
 2.  [Pan-Cancer-Nuclei-Seg-DICOM<br>](https://doi.org/10.5281/zenodo.11099004)\
     Collections analyzed:
 
     1. [TCGA-BLCA](https://doi.org/10.5281/zenodo.12690045)
-    2. &#x20;[TCGA-BRCA](https://doi.org/10.5281/zenodo.12689962)
-    3. &#x20;[TCGA-CESC](https://doi.org/10.5281/zenodo.12689956)
-    4. &#x20;[TCGA-COAD](https://doi.org/10.5281/zenodo.12689970)
-    5. [ TCGA-GBM](https://doi.org/10.5281/zenodo.12690010)
+    2. [TCGA-BRCA](https://doi.org/10.5281/zenodo.12689962)
+    3. [TCGA-CESC](https://doi.org/10.5281/zenodo.12689956)
+    4. [TCGA-COAD](https://doi.org/10.5281/zenodo.12689970)
+    5. [TCGA-GBM](https://doi.org/10.5281/zenodo.12690010)
     6. [TCGA-LUAD](https://doi.org/10.5281/zenodo.12689915)
-    7. &#x20;[TCGA-LUSC](https://doi.org/10.5281/zenodo.12690008)
-    8. &#x20;[TCGA-PAAD](https://doi.org/10.5281/zenodo.12689972)
-    9. &#x20;[TCGA-PRAD](https://doi.org/10.5281/zenodo.12689935)
-    10. &#x20;[TCGA-READ](https://doi.org/10.5281/zenodo.12689998)
-    11. &#x20;[TCGA-SKCM](https://doi.org/10.5281/zenodo.12690039)
-    12. &#x20;[TCGA-STAD](https://doi.org/10.5281/zenodo.12690037)
-    13. &#x20;[TCGA-UCEC](https://doi.org/10.5281/zenodo.12689968)
-    14. &#x20;[TCGA-UVM](https://doi.org/10.5281/zenodo.12690041)
+    7. [TCGA-LUSC](https://doi.org/10.5281/zenodo.12690008)
+    8. [TCGA-PAAD](https://doi.org/10.5281/zenodo.12689972)
+    9. [TCGA-PRAD](https://doi.org/10.5281/zenodo.12689935)
+    10. [TCGA-READ](https://doi.org/10.5281/zenodo.12689998)
+    11. [TCGA-SKCM](https://doi.org/10.5281/zenodo.12690039)
+    12. [TCGA-STAD](https://doi.org/10.5281/zenodo.12690037)
+    13. [TCGA-UCEC](https://doi.org/10.5281/zenodo.12689968)
+    14. [TCGA-UVM](https://doi.org/10.5281/zenodo.12690041)
 
     \
     The segmentation of an instance in each of the following series was excluded due to having a DICOM PixelData size greater than or equal to 2GB:
@@ -389,7 +455,7 @@ Disk size: 87.49 TB (+1.94 TB)
     32. 1.2.826.0.1.3680043.10.511.3.95666157880521064637011880609274546
     33. 1.2.826.0.1.3680043.10.511.3.96676982370873257329281821215166082
     34. 1.2.826.0.1.3680043.10.511.3.98258035017480972315346136181769675
-3.  [RMS-Mutation-Prediction-Expert-Annotations ](https://doi.org/10.5281/zenodo.10462857)
+3.  [RMS-Mutation-Prediction-Expert-Annotations](https://doi.org/10.5281/zenodo.10462857)
 
     **WARNING**: After the release of v20, it was discovered that a mistake had been made during data conversion that affected the newly-released segmentations accompanying the "RMS-Mutation-Prediction" collection. Segmentations released in v20 for this collection have the segment labels for alveolar rhabdomyosarcoma (ARMS) and embryonal rhabdomyosarcoma (ERMS) switched in the metadata relative to the correct labels. Thus segment 3 in the released files is labelled in the metadata (the SegmentSequence) as ARMS but should correctly be interpreted as ERMS, and conversely segment 4 in the released files is labelled as ERMS but should be correctly interpreted as ARMS. We apologize for the mistake and any confusion that it has caused, and will be releasing a corrected version of the files in the next release as soon as possible.[<br>](https://doi.org/10.5281/zenodo.10462857)\
     Collections analyzed:
