@@ -14,7 +14,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 ## V24 - May 2026
 
-#### New Collections
+### New Collections
 
 | Collection                  | Program   | Cancer Type                          | Modality                          | Patients | Series | Source            |
 | --------------------------- | --------- | ------------------------------------ | --------------------------------- | -------- | ------ | ----------------- |
@@ -64,7 +64,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 **EAY131** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=eay131) | [DOI 10.7937/c5ke-yx42](https://doi.org/10.7937/c5ke-yx42)) — Imaging and clinical data for 2,813 "unmatched" patients from the NCI MATCH Screening Trial (NCT02465060), performed by the ECOG-ACRIN Cancer Research Group. 30,293 series across CT (13,166), RTSTRUCT (14,395), SEG (1,404), MR (1,100), PT (222), NM (5), and XA (1) modalities. Covers 46 cancer types. Includes accompanying clinical/demographic data. Sourced as-is in DICOM from TCIA.
 
-#### New Analysis Results
+### New Analysis Results
 
 | Analysis Result          | Program | Cancer Type           | Modality      | Subjects | Series | Source |
 | ------------------------ | ------- | --------------------- | ------------- | -------- | ------ | ------ |
@@ -72,11 +72,80 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 **EAY131-Tumor-Annotations** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=eay131) | [DOI 10.7937/q9rn-m510](https://doi.org/10.7937/q9rn-m510)) — Tumor segmentations, seed points, and negative findings assessments for 2,487 subjects from the EAY131 collection. Annotations follow RECIST 1.1 (CT/MR/USG) and PERCIST (PET) criteria, created by an international team of radiologists and reviewed by US board-certified radiologists. Includes longitudinal lesion tracking via SNOMED-CT codes and Tracking UID tags. Also includes a CSV metadata report with lesion volumes. Created by Petr Jordan and Michael Rozenfeld.
 
-#### Updated Collections
+### Revised Collections
 
-| Collection                      | Change Summary                                                                       | Patients (delta) | Series (delta) | Source                  |
-| ------------------------------- | ------------------------------------------------------------------------------------ | ---------------- | -------------- | ----------------------- |
-| BoneMarrowWSI-PediatricLeukemia | Replaced all 1,033 ANN series with 1,027 new ANN; removed 1 SM series from 1 patient | -1               | -7             | BMDeep/Fraunhofer MEVIS |
+| Collection                                     | Change Summary                                                                                                                                                                                                                                                                          | Patients (delta) | Series (delta) | Source              |
+|------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ---------------- | -------------- | ------------------- |
+| BoneMarrowWSI-PediatricLeukemia                | Replaced all 1,033 ANN series with 1,027 new ANN; removed 1 SM series from 1 patient                                                                                                                                                                                                    | -1               | -7             | BMDeep/Fraunhofer MEVIS |
+| ACRIN-NSCLC-FDG-PET                            | modality was changed from SC to OT in 4 series                                                                                                                                                                                                                                          | 0 | 0 | https://www.cancerimagingarchive.net/collection/acrin-nsclc-fdg-pet/ |
+| Anti-PD-1_Lung | modality was changed from SC to OT in 3 series                                                                                                                                                                                                                                          | 0 | 0 | https://www.cancerimagingarchive.net/collection/anti-pd-1_lung/
+| Phantom FDA | Phantom FDA DICOM instance data moved to gs://idc-open-data and s3://idc-open-data buckets from gs://idc-open-cr and s3://idc-open-data-cr buckets respectively. The Phantom FDA data in gs://idc-open-cr and s3://idc-open-data-cr will be available through IDC versions v24 and v25. | 0 | 0 | |
+
+### New metadata BQ Tables (non-clinical)
+
+| Table Name                | Description                                                                                |
+|---------------------------|--------------------------------------------------------------------------------------------|
+| program_metadata | Metadata about each IDC program |
+
+### Revised BQ Tables (non-clinical)
+
+- analysis_results_metadata
+    - added columns:
+      - analysis_result_id
+    - column id changes:
+      - ID --> analysis_result_name
+      - Title --> analysis_result_title
+      - CancerTypes --> cancer_types
+      - TumorLocations --> tumor_locations
+      - Subjects -->s ubjects
+      - Collections --> collections
+      - Modalities --> modalities
+      - Updated --> updated
+      - Description --> description
+    - deprecated columns
+      - ID
+      - Title
+      - CancerTypes
+      - TumorLocations
+- auxiliary_metadata
+  - column id changes
+    - submitter_case_id --> Patient_id
+  - deprecated columns
+    - submitter_case_id
+    - Access 
+- dicom_metadata_curated
+  - added columns  
+    cancer_types
+- original_collection_metadata
+  - added columns
+    - sources.source_id
+    - sources.source_name
+    - sources.source_type
+  - column id changes
+    - CancerTypes --> cancer_types
+    - TumorLocations --> tumor_locations
+    - Subject --> subjects
+    - Species --> species
+    - Sources --> sources
+    - Sources.ImageTypes --> sources.modalities
+    - Sources.Citation --> source.citation
+    - SupportingData --> supporting_data
+    - Program --> program_id
+    - Status --> status
+    - Updated --> updated
+    - Description --> description
+  - Deprecated columns
+    - Sources.Access
+    - Sources.ImageTypes
+    - CancerTypes
+    - TumorLocations
+    - SupportingData
+    - Program
+
+### New clinical metadata BQ tables
+
+- ldct_and_projection_data_abdomen_v9
+- ldct_and_projection_data_chest_v9
 
 ## V23 - Nov 2025
 
