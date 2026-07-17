@@ -68,6 +68,20 @@ curl -s https://api.imaging.datacommons.cancer.gov/v3/licenses \
 
 The same applies to `citations`, `cohort/counts`, and the manifest endpoints — `SeriesInstanceUID`, `StudyInstanceUID`, and `PatientID` are all filterable attributes.
 
+### Licenses for a manifest
+
+The manifest itself (`cohort/manifest.txt`, or the `series` / `download` payload of `cohort/manifest`) does **not** carry license information — it's just download URLs. Because a manifest is defined by a cohort filter, the license breakdown for exactly the manifest's contents is the `licenses` response for the **same filter**. Build the manifest and check its licenses with one filter reused across both endpoints.
+
+If you want the license on **each row** of a manifest, build the manifest with SQL instead and select the `license_short_name` column alongside the series URL:
+
+```bash
+curl -s https://api.imaging.datacommons.cancer.gov/v3/sql \
+  -H 'content-type: application/json' \
+  -d '{"sql": "SELECT SeriesInstanceUID, license_short_name, series_aws_url FROM index WHERE collection_id = '"'"'nlst'"'"'", "max_rows": 5}'
+```
+
+Every series URL you can `SELECT` this way *is* a manifest, so this gives you a per-series manifest with the license attached.
+
 ## Citations
 
 When you publish results using IDC data, include the per-dataset citations **and** acknowledge IDC itself by citing the IDC paper ([Fedorov et al., 10.1148/rg.230180](https://doi.org/10.1148/rg.230180)).
