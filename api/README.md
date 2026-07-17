@@ -1,11 +1,11 @@
-# API
+# API overview
 
 The IDC API provides programmatic access to IDC metadata and data: discover what is in IDC, build cohorts with attribute filters, retrieve download manifests, run read-only SQL queries, explore clinical data, and generate citations and license summaries for your selections.
 
 The API is live in production at:
 
 ```
-https://api.imaging.datacommons.cancer.gov
+https://api.imaging.datacommons.cancer.gov/v3
 ```
 
 All IDC data is public and open — **no authentication, account, or credentials are required** to use the API.
@@ -17,7 +17,7 @@ The current API release is version 3 (v3), in **beta**. The `/v3` contract may s
 The same capabilities are available through two surfaces, which share a single backend:
 
 * **REST API** (documented in this section) — plain HTTP/JSON for scripts, applications, and notebooks. Interactive Swagger UI at [https://api.imaging.datacommons.cancer.gov/v3/docs](https://api.imaging.datacommons.cancer.gov/v3/docs), OpenAPI specification at [/v3/openapi.json](https://api.imaging.datacommons.cancer.gov/v3/openapi.json).
-* **MCP server** — the same capabilities exposed as [Model Context Protocol](https://modelcontextprotocol.io/) tools, so LLM agents (Claude and others) can query IDC directly. See the [MCP section](../mcp/README.md) of this documentation.
+* **MCP server** — the same capabilities exposed as [Model Context Protocol](https://modelcontextprotocol.io/) tools, so LLM agents (Claude and others) can query IDC directly. See the [MCP section](../mcp/) of this documentation.
 
 Because both surfaces are implemented over one core, anything you can do over REST you can also do over MCP, and vice versa.
 

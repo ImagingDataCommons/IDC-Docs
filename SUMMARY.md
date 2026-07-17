@@ -78,7 +78,7 @@
 
 ## API
 
-* [API](api/README.md)
+* [API overview](api/README.md)
 * [Getting Started](api/getting-started.md)
 * [IDC API Concepts](api/idc-api-concepts.md)
 * [Endpoint Details](api/endpoint-details.md)
