@@ -11,7 +11,7 @@ https://api.imaging.datacommons.cancer.gov
 All IDC data is public and open — **no authentication, account, or credentials are required** to use the API.
 
 {% hint style="info" %}
-The current API release is version 3 (v3), in **beta** (`3.0.0b2`). The `/v3` contract may still change in response to feedback before the final `3.0.0` release. If you have feedback, please let us know on the [IDC support forum](https://discourse.canceridc.dev)!
+The current API release is version 3 (v3), in **beta**. The `/v3` contract may still change in response to feedback before the final `3.0.0` release. To see exactly which beta build is deployed, call [`GET /v3/version`](endpoint-details.md) — the `api_version` field reports the running release. If you have feedback, please let us know on the [IDC support forum](https://discourse.canceridc.dev)!
 {% endhint %}
 
 The same capabilities are available through two surfaces, which share a single backend:

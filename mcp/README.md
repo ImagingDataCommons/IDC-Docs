@@ -13,7 +13,7 @@ https://api.imaging.datacommons.cancer.gov/mcp
 It is public and **unauthenticated** — no API key, account, or config file needed. Point a client at the URL and ask it to find an imaging cohort.
 
 {% hint style="info" %}
-The MCP server and the REST API are two surfaces over one backend, released together as version 3, currently in **beta** (`3.0.0b2`). The contract may still change in response to feedback before the final `3.0.0` release. Feedback is welcome on the [IDC support forum](https://discourse.canceridc.dev).
+The MCP server and the REST API are two surfaces over one backend, released together as version 3, currently in **beta**. The contract may still change in response to feedback before the final `3.0.0` release. To see exactly which beta build is deployed, ask your agent to call the [`get_idc_version` tool](tools.md) (or call the REST API's [`GET /v3/version`](../api/endpoint-details.md)) — the `api_version` field reports the running release. Feedback is welcome on the [IDC support forum](https://discourse.canceridc.dev).
 {% endhint %}
 
 ## One backend, two surfaces
