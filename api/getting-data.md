@@ -52,6 +52,22 @@ curl -s https://api.imaging.datacommons.cancer.gov/v3/licenses \
 
 `licenses` returns the series count and size per license, so you can see at a glance whether the selection is commercial-friendly.
 
+The filter is an ordinary [cohort filter](idc-api-concepts.md#filter-syntax), so you can check the license at any granularity — a whole collection, or a single study or series by its UID:
+
+```bash
+# license of one study
+curl -s https://api.imaging.datacommons.cancer.gov/v3/licenses \
+  -H 'content-type: application/json' \
+  -d '{"terms": {"StudyInstanceUID": ["1.3.6.1.4.1.14519.5.2.1.7695.4164.129908397467389975396031099306"]}}'
+
+# license of one series
+curl -s https://api.imaging.datacommons.cancer.gov/v3/licenses \
+  -H 'content-type: application/json' \
+  -d '{"terms": {"SeriesInstanceUID": ["1.3.6.1.4.1.14519.5.2.1.7695.4164.174071765480311650274095134055"]}}'
+```
+
+The same applies to `citations`, `cohort/counts`, and the manifest endpoints — `SeriesInstanceUID`, `StudyInstanceUID`, and `PatientID` are all filterable attributes.
+
 ## Citations
 
 When you publish results using IDC data, include the per-dataset citations **and** acknowledge IDC itself by citing the IDC paper ([Fedorov et al., 10.1148/rg.230180](https://doi.org/10.1148/rg.230180)).
