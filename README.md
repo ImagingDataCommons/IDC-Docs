@@ -1,7 +1,7 @@
 # Welcome!
 
 {% hint style="warning" %}
-**Try out the natural language interface to IDC using this LLM skill:** [**https://github.com/ImagingDataCommons/idc-claude-skill**](https://github.com/ImagingDataCommons/idc-claude-skill)
+**New: query IDC from your LLM agent with the** [**IDC MCP server**](mcp/README.md) **and the** [**REST API (v3)**](api/README.md)**, or with this natural-language** [**agent skill**](https://github.com/ImagingDataCommons/imaging-data-commons-skill)**.**
 {% endhint %}
 
 [**NCI Imaging Data Commons** **(IDC)**](https://imaging.datacommons.cancer.gov) is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.
@@ -22,7 +22,8 @@ IDC is as much about data as it is about what you can do with the data! We maint
 
 * **exploration**: start with the [IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/) to get an idea of the data available
 * **visualization**: examine images and image-derived annotations and analysis results from the convenience of your browser using integrated OHIF, VolView and Slim open source viewers
-* **programmatic access**: use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) to perform search, download and other operations programmatically
+* **programmatic access**: use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) to perform search, download and other operations programmatically, or the language-agnostic [REST API](api/README.md) over plain HTTP
+* **LLM agents**: point Claude or any other agent at the [IDC MCP server](mcp/README.md) to discover, subset, and download IDC data in plain conversation
 * **cohort building**: use rich and extensive metadata to build subsets of data programmatically using `idc-index` or BigQuery SQL
 * **download**: use your favorite S3 API client or `idc-index` to efficiently fetch any of the IDC files from our public buckets
 * **analysis**: conveniently access IDC files and metadata from the tools that are cloud-native, such as Google Colab; fetch IDC data directly into 3D Slicer using [SlicerIDCBrowser extension](https://github.com/ImagingDataCommons/SlicerIDCBrowser/)
