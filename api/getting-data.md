@@ -94,4 +94,20 @@ curl -s https://api.imaging.datacommons.cancer.gov/v3/citations \
   -d '{"filters": {"terms": {"collection_id": ["nlst"]}}, "citation_format": "bibtex"}'
 ```
 
-The response carries the per-dataset citations (from the cohort's source DOIs) and the IDC paper as a separate acknowledgment, so you can drop both straight into your manuscript. See [Publications](../publications.md) for more on citing and acknowledging IDC.
+The response carries the per-dataset citations (from the cohort's source DOIs) and the IDC paper as a separate acknowledgment, so you can drop both straight into your manuscript.
+
+Like `licenses`, the filter is an ordinary [cohort filter](idc-api-concepts.md#filter-syntax) (wrapped in `filters` here), so you can get the citations for a single study or series just as easily — the endpoint resolves the correct source dataset(s) from whatever the selection covers:
+
+```bash
+# citations for one study
+curl -s https://api.imaging.datacommons.cancer.gov/v3/citations \
+  -H 'content-type: application/json' \
+  -d '{"filters": {"terms": {"StudyInstanceUID": ["1.3.6.1.4.1.14519.5.2.1.7695.4164.129908397467389975396031099306"]}}, "citation_format": "apa"}'
+
+# citations for one series
+curl -s https://api.imaging.datacommons.cancer.gov/v3/citations \
+  -H 'content-type: application/json' \
+  -d '{"filters": {"terms": {"SeriesInstanceUID": ["1.3.6.1.4.1.14519.5.2.1.7695.4164.174071765480311650274095134055"]}}, "citation_format": "apa"}'
+```
+
+See [Publications](../publications.md) for more on citing and acknowledging IDC.
