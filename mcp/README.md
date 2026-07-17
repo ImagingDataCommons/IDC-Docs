@@ -25,9 +25,9 @@ The MCP server and the REST API share a single core, so a capability is implemen
 
 Because the two surfaces share a backend, the [data model](../api/idc-api-concepts.md#the-data-model) and [query surfaces](../api/idc-api-concepts.md#the-query-surfaces-and-how-they-relate) documented for the REST API apply unchanged to MCP.
 
-## Relation to the IDC Claude Skill
+## Relation to the Imaging Data Commons Skill
 
-The [IDC Claude Skill](https://github.com/ImagingDataCommons/idc-claude-skill) is a *different access path* to the same data. It has the agent write and run Python directly against [`idc-index`](https://github.com/ImagingDataCommons/idc-index) inside a code-execution sandbox (Claude Code, or Claude Desktop / claude.ai with code execution enabled) — no server involved, and no network round trip for metadata, but it only works where the client can execute Python locally.
+The [Imaging Data Commons Skill](https://github.com/ImagingDataCommons/imaging-data-commons-skill) is a *different access path* to the same data. An [Agent Skill](https://agentskills.io/) that works with Claude and any other agent that supports the format, it has the agent write and run Python directly against [`idc-index`](https://github.com/ImagingDataCommons/idc-index) inside a code-execution sandbox (e.g. Claude Code, or Claude Desktop / claude.ai with code execution enabled) — no server involved, and no network round trip for metadata, but it only works where the client can execute Python locally.
 
 The MCP server (and the REST API) instead expose the same `idc-index` data as callable tools over the network, for clients that can't or don't want to run code: remote-MCP connectors, non-Python agent frameworks, or a curated tool surface instead of hand-written SQL. Both share the same data model and the same ground-first workflow.
 

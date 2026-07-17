@@ -1,7 +1,7 @@
 # 🚀 Getting started
 
 {% hint style="info" %}
-**New: query IDC from your LLM agent with the** [**IDC MCP server**](mcp/README.md) **and the** [**REST API (v3)**](api/README.md)**, or with this natural-language** [**LLM skill**](https://github.com/ImagingDataCommons/idc-claude-skill)**.**
+**New: query IDC from your LLM agent with the** [**IDC MCP server**](mcp/README.md) **and the** [**REST API (v3)**](api/README.md)**, or with this natural-language** [**agent skill**](https://github.com/ImagingDataCommons/imaging-data-commons-skill)**.**
 {% endhint %}
 
 {% hint style="info" %}

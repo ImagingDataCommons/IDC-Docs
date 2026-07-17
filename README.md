@@ -1,7 +1,7 @@
 # Welcome!
 
 {% hint style="warning" %}
-**New: query IDC from your LLM agent with the** [**IDC MCP server**](mcp/README.md) **and the** [**REST API (v3)**](api/README.md)**, or with this natural-language** [**LLM skill**](https://github.com/ImagingDataCommons/idc-claude-skill)**.**
+**New: query IDC from your LLM agent with the** [**IDC MCP server**](mcp/README.md) **and the** [**REST API (v3)**](api/README.md)**, or with this natural-language** [**agent skill**](https://github.com/ImagingDataCommons/imaging-data-commons-skill)**.**
 {% endhint %}
 
 [**NCI Imaging Data Commons** **(IDC)**](https://imaging.datacommons.cancer.gov) is a cloud-based environment containing publicly available cancer imaging data co-located with analysis and exploration tools. IDC is a node within the broader NCI [Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/) infrastructure that provides secure access to a large, comprehensive, and expanding collection of cancer research data.
