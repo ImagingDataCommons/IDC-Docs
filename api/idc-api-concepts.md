@@ -49,20 +49,22 @@ In one paragraph: **Discovery** hands you the lay of the land *and the vocabular
 Cohort filters (used by `cohort/counts`, `cohort/manifest`, `cohort/manifest.txt`, `licenses`, and `citations`) have two parts:
 
 * **`terms`** — `{attribute: [values]}` for equality / membership. Values are **OR**'d *within* an attribute and **AND**'d *across* attributes. For example, `{"Modality": ["CT", "MR"], "collection_id": ["nlst"]}` means "(CT OR MR) AND in the nlst collection."
-* **`ranges`** — `{attribute: {"gte": x, "lte": y}}` for numeric ranges.
+* **`ranges`** — `{attribute: {"gte": x, "lte": y}}` for the numeric and date attributes (e.g. `instanceCount`, `series_size_MB`, `StudyDate`). Either bound may be omitted for an open-ended range.
 
 ```json
 {
-  "terms": {"Modality": ["MR"], "BodyPartExamined": ["BREAST"]},
-  "ranges": {"age_at_diagnosis": {"gte": 65, "lte": 75}}
+  "terms": {"Modality": ["CT"], "collection_id": ["nlst"]},
+  "ranges": {"instanceCount": {"gte": 100, "lte": 200}}
 }
 ```
 
 {% hint style="info" %}
-This is a different, simpler filter syntax than the earlier V2 API (which used per-attribute suffixes like `age_at_diagnosis_btw`). If you are migrating from V2, note that ranges are now expressed with `gte`/`lte` inside a `ranges` object.
+This is a different, simpler filter syntax than the earlier V2 API (which used per-attribute suffixes like `_btw`). If you are migrating from V2, note that ranges are now expressed with `gte`/`lte` inside a `ranges` object.
 {% endhint %}
 
-Always **ground your values first** with `GET /v3/attributes` (what you can filter on) and `GET /v3/attributes/{attr}/values` (the real values and their correct casing). Don't guess values.
+These structured filters are not SQL — they operate only on the `index` table's filterable attributes. For a range on a property that isn't a filterable attribute (for example a clinical value such as patient age, which lives in the [clinical tables](querying-with-sql.md#clinical-non-imaging-data)), use the [SQL surface](querying-with-sql.md) instead.
+
+Always **ground your values first** with `GET /v3/attributes` (what you can filter on — including which attributes are `term` vs `range`) and `GET /v3/attributes/{attr}/values` (the real values and their correct casing). Don't guess values.
 
 ## Recommended workflow
 
