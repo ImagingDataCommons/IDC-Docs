@@ -14,9 +14,9 @@ Ground the schema before you write a query: `GET /v3/tables` lists the available
 **Cohort or SQL?** Use **Cohort** when your selection is attribute filters over series metadata (equality/IN + ranges on the one `index` table) — it's structured and validated. Use **SQL** for anything relational or aggregate, and for properties only a specialized index holds. Anything you can `SELECT series_aws_url FROM index WHERE …` for *is* a manifest, so SQL can also produce download URLs directly.
 {% endhint %}
 
-## Why guarded SQL is safe
+## Limits of the SQL endpoint
 
-`POST /v3/sql` accepts arbitrary SQL, but the data is **public** (nothing secret) and the DuckDB connection is opened **read-only** (nothing to modify), so the classic SQL-injection consequences don't apply. The connection is further hardened per DuckDB's [Securing DuckDB](https://duckdb.org/docs/stable/operations_manual/securing_duckdb/overview) guidance: external file/network access disabled, no extensions, memory/row/time caps, configuration locked. Only single read-only `SELECT`/`WITH` statements are accepted, and a server row cap and per-query timeout apply. Size-capped results carry a `truncated` flag — for bulk *series*, use the cohort/manifest surface rather than dumping rows through SQL.
+`POST /v3/sql` accepts arbitrary SQL, but the data is public and the connection is read-only — you can't break anything. What you *will* run into are the guardrails: only single read-only `SELECT`/`WITH` statements are accepted, and a server row cap and per-query timeout apply. Size-capped results carry a `truncated` flag — for bulk *series*, use the cohort/manifest surface rather than dumping rows through SQL. For the full threat model and hardening details, see the [API security documentation](https://github.com/ImagingDataCommons/IDC-REST-MCP/blob/main/SECURITY.md).
 
 ## Tables available to SQL
 
