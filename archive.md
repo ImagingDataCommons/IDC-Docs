@@ -2,9 +2,19 @@
 
 This page links to historical versions of documentation that has been removed from the main navigation. The content is preserved in the repository's git history and can be accessed via the links below.
 
+## IDC V2 API
+
+Documentation for the IDC REST API version 2, superseded by the current [API (v3)](api/README.md). The V2 endpoints remain operational for now on the legacy backend, but are no longer the recommended way to access IDC programmatically.
+
+* [Getting Started](https://github.com/ImagingDataCommons/IDC-Docs/blob/aa7ae7d/api/getting-started.md)
+* [IDC API Concepts](https://github.com/ImagingDataCommons/IDC-Docs/blob/aa7ae7d/api/idc-api-concepts.md)
+* [Manifests](https://github.com/ImagingDataCommons/IDC-Docs/blob/aa7ae7d/api/manifests.md)
+* [Accessing the API](https://github.com/ImagingDataCommons/IDC-Docs/blob/aa7ae7d/api/accessing-the-api.md)
+* [Endpoint Details](https://github.com/ImagingDataCommons/IDC-Docs/blob/aa7ae7d/api/endpoint-details.md)
+
 ## IDC V1 API
 
-Documentation for the IDC REST API version 1, superseded by the [V2 API](api/getting-started.md).
+Documentation for the IDC REST API version 1, superseded by the [V2 API](#idc-v2-api) and the current [API (v3)](api/README.md).
 
 * [Getting Started](https://github.com/ImagingDataCommons/IDC-Docs/blob/570c98c/api/v1-api/getting-started.md)
 * [IDC Data Model Concepts](https://github.com/ImagingDataCommons/IDC-Docs/blob/570c98c/api/v1-api/idc-data-model-concepts.md)

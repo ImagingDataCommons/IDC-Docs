@@ -1,25 +1,58 @@
 # Getting Started
 
-{% hint style="danger" %}
-As of 15-July-2025, support for user defined cohorts has been removed from the both the IDC API V1 and the IDC API V2. The API documentation has been revised accordingly.
+The IDC REST API is available at the base URL `https://api.imaging.datacommons.cancer.gov`, with all endpoints under the `/v3` prefix. No authentication is required — you can try every example on this page from any terminal with `curl`.
+
+{% hint style="info" %}
+The interactive [Swagger UI](https://api.imaging.datacommons.cancer.gov/v3/docs) documents every endpoint with a filled-in request/response example, and lets you execute requests directly from the browser. The machine-readable OpenAPI specification is at [/v3/openapi.json](https://api.imaging.datacommons.cancer.gov/v3/openapi.json).
 {% endhint %}
 
-This section describes version 2 of the IDC REST API.
+## Your first calls
 
-This API is designed for use by developers of image analysis and data mining tools to directly query the public resources of the IDC and retrieve information into their applications. The API complements the IDC web application but eliminates the need for users to visit the IDC web pages to perform manifest export, and transfer of image data to some local file system.
+Check which IDC data release the API is serving, and the headline totals:
 
-The IDC API conforms to the [OpenAPI 2.0](https://swagger.io/specification/) specification which "_defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection_."
+```bash
+curl -s https://api.imaging.datacommons.cancer.gov/v3/version
+curl -s https://api.imaging.datacommons.cancer.gov/v3/stats
+```
+
+List the collections (datasets) available in IDC, or look at one in detail:
+
+```bash
+curl -s https://api.imaging.datacommons.cancer.gov/v3/collections
+curl -s https://api.imaging.datacommons.cancer.gov/v3/collections/nlst
+```
+
+## Build your first cohort
+
+Before filtering, discover the valid values of the attribute you want to filter on — don't guess:
+
+```bash
+curl -s 'https://api.imaging.datacommons.cancer.gov/v3/attributes/Modality/values?limit=10'
+```
+
+Then check how big your selection is (cheap), and request a page of matching series together with a ready-to-use download payload:
+
+```bash
+# distinct patient/study/series counts for the filter
+curl -s https://api.imaging.datacommons.cancer.gov/v3/cohort/counts \
+  -H 'content-type: application/json' \
+  -d '{"terms": {"Modality": ["MR"], "BodyPartExamined": ["BREAST"]}}'
+
+# counts + a page of series + download payload
+curl -s https://api.imaging.datacommons.cancer.gov/v3/cohort/manifest \
+  -H 'content-type: application/json' \
+  -d '{"filters": {"terms": {"Modality": ["MR"], "BodyPartExamined": ["BREAST"]}}, "page_size": 3}'
+```
+
+The `manifest` response includes `idc` CLI commands you can run as-is to download the matching files directly from public cloud buckets — see [Getting the data](getting-data.md).
+
+## Where to go next
+
+* [IDC API Concepts](idc-api-concepts.md) explains the data model, the query surfaces, and the recommended workflow — worth reading before you go beyond simple filters.
+* [Endpoint Details](endpoint-details.md) lists every endpoint with worked examples.
+* [Querying with SQL](querying-with-sql.md) covers questions that attribute filters can't express — joins, aggregations, and clinical data.
+* Prefer to have an LLM agent do the querying? Point it at the [IDC MCP server](../mcp/README.md) — the same capabilities, exposed as agent tools.
 
 {% hint style="info" %}
 If you have feedback about the desired features of the IDC API, please let us know via the IDC [support forum](https://discourse.canceridc.dev).
 {% endhint %}
-
-The API is a RESTful interface, accessed through web URLs. There is no software that an application developer needs to download in order to use the API. The application developer can build their own access routines using just the API documentation provided. The interface employs a set of predefined query functions that access IDC data sources.
-
-The IDC API is intended to enable exploration of IDC hosted data without the need to understand and use the Structure Query Language (SQL). To this end, data exploration capabilities through the IDC API are limited. However, IDC data is hosted using the standard capabilities of the the Google Cloud Platform (GCP) Storage (GCS) and BigQuery (BQ) components. Therefore, all of the capabilities provided by GCP to access GCS storage buckets and BQ tables are available for more advanced interaction with that data.
-
-## Other API Documentation
-
-[SwaggerUI](https://swagger.io/tools/swagger-ui/) is a web based interface that allows users to try out APIs and easily view their documentation. You can access the IDC API SwaggerUI [here](https://api.imaging.datacommons.cancer.gov/v1/swagger).
-
-This [Google Colab notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/idc_api/How_to_use_the_IDC_V2_API.ipynb) serves as an interactive tutorial to accessing the IDC API using Python.

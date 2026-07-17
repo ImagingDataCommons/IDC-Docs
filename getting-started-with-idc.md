@@ -1,7 +1,7 @@
 # 🚀 Getting started
 
 {% hint style="info" %}
-**Try out the natural language interface to IDC using this LLM skill:** [**https://github.com/ImagingDataCommons/idc-claude-skill**](https://github.com/ImagingDataCommons/idc-claude-skill)
+**New: query IDC from your LLM agent with the** [**IDC MCP server**](mcp/README.md) **and the** [**REST API (v3)**](api/README.md)**, or with this natural-language** [**LLM skill**](https://github.com/ImagingDataCommons/idc-claude-skill)**.**
 {% endhint %}
 
 {% hint style="info" %}
@@ -25,6 +25,7 @@ We have many tools to help you search data in IDC, so that you download only wha
 * you can do basic filtering/subsetting of the data using IDC Portal, but if you are developer, you will want to learn how to use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) for programmatic access. [This python notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) will introduce you to the basics of `idc-index` for interaction with IDC content.
 * search clinical data: many of the IDC collections are accompanied by clinical data, which we parsed for you into searchable tabular representation - no need to download or parse CSV/Excel/PDF files! Dive into searching clinical data using [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/exploring_clinical_data.ipynb).
 * if advanced content does not scare you, check out [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part3_exploring_cohorts.ipynb) to learn how to search **all** of the metadata accompanying IDC using SQL and Google BigQuery.
+* prefer plain HTTP, or want an LLM agent to do the searching? The [IDC REST API](api/README.md) exposes discovery, cohort building, downloads, SQL and citations over HTTP/JSON, and the [IDC MCP server](mcp/README.md) exposes the same capabilities as tools for Claude and other agents.
 
 ### **Download the data you liked**
 

@@ -78,11 +78,18 @@
 
 ## API
 
+* [API](api/README.md)
 * [Getting Started](api/getting-started.md)
 * [IDC API Concepts](api/idc-api-concepts.md)
-* [Manifests](api/manifests.md)
-* [Accessing the API](api/accessing-the-api.md)
 * [Endpoint Details](api/endpoint-details.md)
+* [Querying with SQL](api/querying-with-sql.md)
+* [Getting the data](api/getting-data.md)
+
+## MCP
+
+* [MCP server](mcp/README.md)
+* [Getting started](mcp/getting-started.md)
+* [Tools and resources](mcp/tools.md)
 
 ## Cookbook
 
