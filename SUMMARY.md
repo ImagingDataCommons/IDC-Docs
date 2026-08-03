@@ -42,6 +42,15 @@
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
+## AI assistants
+
+* [Start here](agents/README.md)
+* [Hosted server (MCP)](mcp/README.md)
+  * [Connecting a client](mcp/getting-started.md)
+  * [Tools and resources](mcp/tools.md)
+* [IDC agent skill](agents/skill/README.md)
+  * [Setting up the skill](agents/skill/setup.md)
+
 ## Tutorials
 
 * [Portal tutorial](tutorials/portal-tutorial.md)
@@ -75,15 +84,6 @@
 * [Portal release notes](portal/release-notes.md)
 * [Viewer release notes](portal/viewer-release-notes.md)
 * [Portal known issues](portal/portal-known-issues.md)
-
-## AI assistants
-
-* [Start here](agents/README.md)
-* [Hosted server (MCP)](mcp/README.md)
-  * [Connecting a client](mcp/getting-started.md)
-  * [Tools and resources](mcp/tools.md)
-* [IDC agent skill](agents/skill/README.md)
-  * [Setting up the skill](agents/skill/setup.md)
 
 ## REST API
 
