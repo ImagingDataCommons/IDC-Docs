@@ -51,6 +51,15 @@
 * [IDC agent skill](agents/skill/README.md)
   * [Setting up the skill](agents/skill/setup.md)
 
+## REST API
+
+* [Overview](api/README.md)
+* [Your first API calls](api/getting-started.md)
+* [Core concepts](api/idc-api-concepts.md)
+* [Endpoint reference](api/endpoint-details.md)
+* [Querying with SQL](api/querying-with-sql.md)
+* [Getting the data](api/getting-data.md)
+
 ## Tutorials
 
 * [Portal tutorial](tutorials/portal-tutorial.md)
@@ -84,15 +93,6 @@
 * [Portal release notes](portal/release-notes.md)
 * [Viewer release notes](portal/viewer-release-notes.md)
 * [Portal known issues](portal/portal-known-issues.md)
-
-## REST API
-
-* [Overview](api/README.md)
-* [Your first API calls](api/getting-started.md)
-* [Core concepts](api/idc-api-concepts.md)
-* [Endpoint reference](api/endpoint-details.md)
-* [Querying with SQL](api/querying-with-sql.md)
-* [Getting the data](api/getting-data.md)
 
 ## Cookbook
 
