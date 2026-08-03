@@ -9,5 +9,6 @@ We maintain the following resources to enable access to IDC data:
 * [Cloud storage buckets](./#files-and-metadata): files maintained by IDC are mirrored between Google and AWS public storage buckets that provide fee-free egress without requiring login. The buckets organize files by DICOM series, each series stored in a separate folder. Given the large overall size of data in IDC, you will likely need to use one of the search interfaces to identify relevant series first.
 * BigQuery tables: collection-level metadata, DICOM metadata, [clinical data tables](clinical.md) available via SQL query interface.
 * Python API: pip-installable [idc-index package](https://idc-index.readthedocs.io/en/latest/) provides a programmatic interface and command-line tools to search IDC data using most important metadata attributes, and to download files corresponding to the selected cohorts from the cloud buckets
-* [REST API and MCP server](../../api/README.md): language-independent HTTP API (v3) for discovering, subsetting, and downloading data, plus an [MCP server](../../mcp/README.md) exposing the same capabilities to LLM agents
+* [REST API](../../api/README.md): language-independent HTTP API (v3) for discovering, subsetting, and downloading data
+* [AI assistant access](../../agents/README.md): the same capabilities exposed to Claude and other LLM agents, via a hosted MCP server or the IDC agent skill
 * [DICOMweb](dicom-stores.md): DICOM files and metadata queries available from Google Healthcare DICOM stores

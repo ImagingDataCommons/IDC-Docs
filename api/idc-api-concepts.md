@@ -1,6 +1,6 @@
-# IDC API Concepts
+# IDC data model and query surfaces
 
-This page explains the data model behind the API, the distinct "surfaces" the API exposes, and the recommended workflow for getting from a question to the data.
+This page explains the data model behind IDC's programmatic interfaces — the [REST API](README.md), the [MCP server](../mcp/README.md), and the [agent skill](../agents/skill/README.md) — along with the distinct "surfaces" they expose and the recommended workflow for getting from a question to the data. It is written in terms of the REST API's endpoints, but the concepts apply unchanged to the other two.
 
 ## The data model
 

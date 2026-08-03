@@ -6,7 +6,8 @@ The following components and capabilities are being developed by IDC:
 * [Search and cohort building portal](../portal/getting-started.md) (IDC Portal)
 * Visualization of the hosted imaging data supported by the integrated [OHIF Viewer](https://github.com/OHIF/Viewers) (radiology data), [SliM viewer](https://github.com/MGHComputationalPathology/slim) (digital pathology data), and [VolView](https://volview.kitware.com/) (volumetric 3D rendering of CT and MRI data)
 * [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) to support programmatic use of the IDC functionality
-* [REST API and MCP server](../api/README.md) for language-agnostic HTTP access and for LLM agents (via the [Model Context Protocol](../mcp/README.md)) to query IDC directly
+* [REST API](../api/README.md) for language-agnostic HTTP access to search, cohort building and downloads
+* [AI assistant access](../agents/README.md) — a hosted MCP server and an agent skill that let Claude and other LLM agents query IDC directly
 * [Interactive self-guided tutorials](https://github.com/ImagingDataCommons/IDC-Tutorials/tree/master/notebooks/getting\_started) to help you get started
 
 IDC is being built utilizing the Google Cloud Platform (GCP) as the foundation. We use a range of products developed by GCP, most notably Google Healthcare, to implement the capabilities listed above. We discuss the role of the major GCP components used by IDC in [this section](google-cloud-platform/).
