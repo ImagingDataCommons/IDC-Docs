@@ -1,10 +1,10 @@
-# Endpoint Details
+# Endpoint reference
 
 This page is the endpoint reference for the IDC REST API, with a worked `curl` example for each surface. Every endpoint is also documented interactively at the [Swagger UI](https://api.imaging.datacommons.cancer.gov/v3/docs), which shows a filled-in request/response for each route and lets you execute it in the browser.
 
 All endpoints are under the base URL `https://api.imaging.datacommons.cancer.gov` with the `/v3` prefix. The examples below use `localhost:8000` only where noted; against the hosted service, substitute the base URL above.
 
-## Endpoint reference
+## All endpoints
 
 | Method & path | Purpose |
 |---|---|

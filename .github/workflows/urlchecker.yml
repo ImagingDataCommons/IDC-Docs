@@ -33,6 +33,7 @@ jobs:
             --exclude 'cancer\.gov'
             --exclude 'access-ci\.org'
             --exclude 'towardsai\.net'
+            --exclude 'claude\.ai'
             '**/*.md'
             '**/*.py'
             '**/*.rst'

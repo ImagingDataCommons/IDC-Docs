@@ -1,4 +1,4 @@
-# API overview
+# The IDC REST API
 
 The IDC API provides programmatic access to IDC metadata and data: discover what is in IDC, build cohorts with attribute filters, retrieve download manifests, run read-only SQL queries, explore clinical data, and generate citations and license summaries for your selections.
 
@@ -14,12 +14,9 @@ All IDC data is public and open — **no authentication, account, or credentials
 The current API release is version 3 (v3), in **beta**. The `/v3` contract may still change in response to feedback before the final `3.0.0` release. To see exactly which beta build is deployed, call [`GET /v3/version`](endpoint-details.md) — the `api_version` field reports the running release. If you have feedback, please let us know on the [IDC support forum](https://discourse.canceridc.dev)!
 {% endhint %}
 
-The same capabilities are available through two surfaces, which share a single backend:
+Explore every endpoint interactively in the [Swagger UI](https://api.imaging.datacommons.cancer.gov/v3/docs), or fetch the machine-readable [OpenAPI specification](https://api.imaging.datacommons.cancer.gov/v3/openapi.json).
 
-* **REST API** (documented in this section) — plain HTTP/JSON for scripts, applications, and notebooks. Interactive Swagger UI at [https://api.imaging.datacommons.cancer.gov/v3/docs](https://api.imaging.datacommons.cancer.gov/v3/docs), OpenAPI specification at [/v3/openapi.json](https://api.imaging.datacommons.cancer.gov/v3/openapi.json).
-* **MCP server** — the same capabilities exposed as [Model Context Protocol](https://modelcontextprotocol.io/) tools, so LLM agents (Claude and others) can query IDC directly. See the [MCP section](../mcp/) of this documentation.
-
-Because both surfaces are implemented over one core, anything you can do over REST you can also do over MCP, and vice versa.
+Writing the calls yourself is only one way in — the same capabilities are also exposed as agent tools. If you would rather have an AI assistant do the querying, see [Using IDC with an AI assistant](../agents/README.md).
 
 ## What you can do
 
@@ -32,9 +29,9 @@ Because both surfaces are implemented over one core, anything you can do over RE
 
 ## In this section
 
-* [Getting Started](getting-started.md) — your first API calls.
-* [IDC API Concepts](idc-api-concepts.md) — the data model, the query surfaces, and the recommended workflow.
-* [Endpoint Details](endpoint-details.md) — the endpoint reference and worked examples.
+* [Your first API calls](getting-started.md) — get something back in a couple of minutes.
+* [Core concepts](idc-api-concepts.md) — the data model, the query surfaces, and the recommended workflow.
+* [Endpoint reference](endpoint-details.md) — every endpoint, with worked examples.
 * [Querying with SQL](querying-with-sql.md) — the guarded SQL surface and the tables available to it.
 * [Getting the data](getting-data.md) — manifests, download commands, licenses, and citations.
 

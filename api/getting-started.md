@@ -1,4 +1,4 @@
-# Getting Started
+# Your first API calls
 
 The IDC REST API is available at the base URL `https://api.imaging.datacommons.cancer.gov`, with all endpoints under the `/v3` prefix. No authentication is required — you can try every example on this page from any terminal with `curl`.
 
@@ -48,10 +48,10 @@ The `manifest` response includes `idc` CLI commands you can run as-is to downloa
 
 ## Where to go next
 
-* [IDC API Concepts](idc-api-concepts.md) explains the data model, the query surfaces, and the recommended workflow — worth reading before you go beyond simple filters.
-* [Endpoint Details](endpoint-details.md) lists every endpoint with worked examples.
+* [Core concepts](idc-api-concepts.md) explains the data model, the query surfaces, and the recommended workflow — worth reading before you go beyond simple filters.
+* [Endpoint reference](endpoint-details.md) lists every endpoint with worked examples.
 * [Querying with SQL](querying-with-sql.md) covers questions that attribute filters can't express — joins, aggregations, and clinical data.
-* Prefer to have an LLM agent do the querying? Point it at the [IDC MCP server](../mcp/README.md) — the same capabilities, exposed as agent tools.
+* Prefer to have an LLM agent do the querying? See [Using IDC with an AI assistant](../agents/README.md) — the same capabilities, exposed as agent tools.
 
 {% hint style="info" %}
 If you have feedback about the desired features of the IDC API, please let us know via the IDC [support forum](https://discourse.canceridc.dev).

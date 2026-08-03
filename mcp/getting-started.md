@@ -1,4 +1,4 @@
-# Getting started
+# Connecting a client to the IDC MCP server
 
 The IDC MCP server is public and unauthenticated at **`https://api.imaging.datacommons.cancer.gov/mcp`**. Point any spec-conformant MCP client at that URL — there is no API key, config file, or account to set up.
 
@@ -47,4 +47,4 @@ The hosted service uses **streamable-HTTP, configured stateless with plain-JSON 
 * **No session handshake is needed to script it** — you can `POST` a `tools/list` or `tools/call` directly (set `Accept: application/json, text/event-stream`); you don't have to `initialize` first or carry an `Mcp-Session-Id` header.
 * **Session-bound MCP features are not available** (server→client sampling, elicitation, resource subscriptions, streamed progress) — the server exposes only client-initiated tools and static resources.
 
-Once connected, see [Tools and resources](tools.md) for what the server can do, and the [API Concepts](../api/idc-api-concepts.md) page for the shared data model and recommended workflow.
+Once connected, see [Tools and resources](tools.md) for what the server can do, and the [Core concepts](../api/idc-api-concepts.md) page for the shared data model and recommended workflow. To compare this server with the [IDC agent skill](../agents/skill/README.md), see [Using IDC with an AI assistant](../agents/README.md).
