@@ -36,7 +36,7 @@ Whichever path you pick, you are querying the same thing in the same way:
 
 The hosted server and the REST API additionally share a single backend, so a capability is implemented once and exposed in both.
 
-## Before you trust the answer
+## Precautions
 
 {% hint style="warning" %}
 **Check the assistant's work before you act on it.** Assistants can invent plausible-looking collection names, modality codes, or attribute values. A well-behaved agent grounds every filter value against IDC first — but you should still sanity-check that the collections it names are real ones, and **always look at the reported case/series counts and the total download size before starting a download**. IDC holds well over 100 TB.
