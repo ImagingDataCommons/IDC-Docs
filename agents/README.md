@@ -1,27 +1,33 @@
-# Using IDC with an AI assistant
+# Start here
 
-You can ask an AI assistant to search IDC, size and refine a cohort, check licenses, generate citations, and hand you a download command — in plain conversation, without writing any code.
+_You can ask an AI assistant to search IDC, size and refine a cohort, check licenses, generate citations, and hand you a download command — in plain conversation, without writing any code._
 
 There are two ways to give an assistant that ability, and a third option if you would rather write the code yourself.
 
 ## Which one should I use?
 
-| Your situation | Use |
-|---|---|
-| You want the fastest start, or your assistant cannot run code | **[Hosted server (MCP)](../mcp/README.md)** — paste one URL into your client. Nothing to install, no account, no API key. |
-| You want the widest coverage, and your assistant can run Python (Claude Code, Cursor, Codex, Gemini CLI; claude.ai or Claude Desktop with code execution enabled) | **[IDC agent skill](skill/README.md)** — adds BigQuery, DICOMweb, direct bucket access, and the digital-pathology and clinical-data guides that the hosted server does not expose. |
-| You are writing the script, application, or notebook yourself | **[REST API](../api/README.md)** — plain HTTP/JSON, in any language. |
+| Your situation                                                                                                                                                    | Use                                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| You want the fastest start, or your assistant cannot run code                                                                                                     | [**Hosted server (MCP)**](../mcp/) — paste one URL into your client. Nothing to install, no account, no API key.                                                          |
+| You want the widest coverage, and your assistant can run Python (Claude Code, Cursor, Codex, Gemini CLI; claude.ai or Claude Desktop with code execution enabled) | [**IDC agent skill**](skill/) — adds BigQuery, DICOMweb, direct bucket access, and the digital-pathology and clinical-data guides that the hosted server does not expose. |
+| You are writing the script, application, or notebook yourself                                                                                                     | [**REST API**](../api/) — plain HTTP/JSON, in any language.                                                                                                               |
 
 These are not mutually exclusive. A good default is to start with the hosted server, then add the skill when you need the extra reach — the skill's own setup guide recommends running both.
+
+{% hint style="info" %}
+A common question we hear from the users: "Why can't I just use vanilla LLM? It seems to know about IDC already!". It is true that it is easiest to use vanilla LLM. The problem is that without IDC MCP or skill, it is very likely to ground its answer in web search, which will often be imprecise, incomplete, or plain wrong. The help you understand the difference, we prepared the following slides.
+{% endhint %}
+
+{% embed url="https://docs.google.com/presentation/d/1o58PYZze-HdAdaE5FD6AdX8GkTOv5L8-mijdoOJs2KY/edit?usp=sharing" %}
 
 ## What you can ask for
 
 Once connected, requests like these work without further prompting:
 
-* *"Find breast MRI in IDC, show the counts and total size, and give me a download command."*
-* *"Which IDC collections have prostate MRI with expert segmentations?"*
-* *"How much CT data is there for lung cancer, and how much of it is cleared for commercial use?"*
-* *"Generate citations for the collections in my cohort."*
+* _"Find breast MRI in IDC, show the counts and total size, and give me a download command."_
+* _"Which IDC collections have prostate MRI with expert segmentations?"_
+* _"How much CT data is there for lung cancer, and how much of it is cleared for commercial use?"_
+* _"Generate citations for the collections in my cohort."_
 
 The assistant discovers the valid filter values first, sizes the cohort, and returns the download commands on its own.
 
@@ -49,8 +55,8 @@ Two more things worth knowing:
 
 ## In this section
 
-* [Hosted server (MCP)](../mcp/README.md) — what the server is and how it relates to the REST API.
+* [Hosted server (MCP)](../mcp/) — what the server is and how it relates to the REST API.
   * [Connecting a client](../mcp/getting-started.md) — point claude.ai, Claude Desktop, or any MCP client at it.
   * [Tools and resources](../mcp/tools.md) — the full list of capabilities it exposes.
-* [IDC agent skill](skill/README.md) — what the skill adds, and when it is worth the extra setup.
+* [IDC agent skill](skill/) — what the skill adds, and when it is worth the extra setup.
   * [Setting up the skill](skill/setup.md) — installation, and the settings that trip people up.
