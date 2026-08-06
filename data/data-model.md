@@ -74,12 +74,15 @@ IDC's metadata treats the two as peers explicitly. A collection is composed of o
 What is different is _where the content sits_. An analysis result brings no images, patients or studies of its own; it enriches data that is already in IDC. So each derived series belongs to two collections at the same time, and IDC records both:
 
 * `collection_id` - the original collection that supplied the analyzed images. A derived series carries this exactly like the images it describes, which is what places it in the right patient and study.
-* `analysis_result_id` - the analysis result that contributed it. Non-empty for derived content only.
+* `analysis_result_id` - the analysis result that contributed it. Set for derived series only; NULL for originally submitted images.
 
 The two are **orthogonal grouping axes, not a hierarchy**: an analysis result is not nested under one original collection - `tcga_sbu_til_maps` spans 23 of them - which is why the [IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/) offers analysis results as a search scope of their own, alongside programs and collections. Filter on whichever axis you actually mean.
 
-{% hint style="danger" %}
-Because derived series carry the `collection_id` of the images they analyze, filtering by `collection_id` alone returns analysis result series along with the original images. To select only originally submitted data, add `analysis_result_id IS NULL` - note that the value is NULL, not an empty string. Conversely, to select a contributed analysis result, filter on its `analysis_result_id`: filtering on the collections it covers would sweep in all of their original imaging too.
+{% hint style="warning" %}
+**A `collection_id` filter returns both axes at once.** Derived series carry the `collection_id` of the images they analyze, so filtering on a collection returns the analysis results contributed to it alongside its original images - and there can be far more of those than you expect. `collection_id = 'nlst'` matches 590,572 series, but only 204,346 of them are NLST's own images; the other 386,226 were contributed by analysis results. 55 of the 176 collections contain derived series.
+
+* **Original images only**: add `analysis_result_id IS NULL`. That is SQL, so it applies wherever you query `index` with SQL - `idc-index`, `POST /v3/sql`, the MCP `run_sql` tool, or BigQuery. The column is genuinely NULL for original data, not an empty string, so `= ''` matches nothing. There is no cohort-filter equivalent: `analysis_result_id` is a filterable term, but its only values are the 24 analysis result ids, so no term means "none".
+* **One analysis result**: filter on its `analysis_result_id` - which does work on every surface - rather than on the collections it spans. `tcga_sbu_til_maps` contributed 21,030 series across 23 collections; selecting those 23 collections instead returns 66,878 series, most of them original imaging you did not ask for.
 {% endhint %}
 
 Two properties of derived content follow from all this:
