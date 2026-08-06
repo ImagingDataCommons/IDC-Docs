@@ -25,6 +25,7 @@
 
 * [Introduction](data/introduction.md)
 * [Data model](data/data-model.md)
+* [Licensing and attribution](data/licensing.md)
 * [Organization of data](data/organization-of-data/README.md)
   * [Files and metadata](data/organization-of-data/files-and-metadata.md)
   * [BigQuery tables](data/organization-of-data/bigquery-tables.md)

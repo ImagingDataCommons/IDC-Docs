@@ -68,7 +68,7 @@ Despite the name, an analysis result is _not_ a separate collection in the metad
 Filtering by `collection_id` alone returns analysis result series along with the original images. To select only originally submitted data, add `analysis_result_id IS NULL` - note that the value is NULL, not an empty string.
 {% endhint %}
 
-Provenance and licensing follow the analysis result, not the collection: series within a single study can carry different `source_DOI` and `license_short_name` values. License information is available programmatically at series granularity - see [files-and-metadata.md](organization-of-data/files-and-metadata.md "mention") and [data-versioning.md](data-versioning.md "mention").
+Provenance and licensing follow the analysis result, not the collection: series within a single study can carry different `source_DOI` and `license_short_name` values. License information is available programmatically at series granularity - see [licensing.md](licensing.md "mention").
 
 ## The model on a concrete example
 
