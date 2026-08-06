@@ -56,19 +56,25 @@ Each collection will contain data for one or more cases, or **patients**. Data f
 
 ## Analysis results
 
-The **Analysis results collection** is a very important concept in IDC. An analysis result is the DICOM encoded result of some analysis performed on data from one or more original collections. Such analysis results are often contributed by investigators unrelated to those that submitted the analyzed images, and may span images across multiple collections.
+The **Analysis Results collection** is a very important concept in IDC, and the peer of the Original Collection introduced above. An analysis result - we use the shorter form from here on - is the DICOM encoded result of some analysis performed on data from one or more original collections. Such analysis results are often contributed by investigators unrelated to those that submitted the analyzed images, and may span images across multiple collections.
 
-Despite the name, an analysis result is _not_ a separate collection in the metadata. Its series are added into the existing hierarchy of the original collection they analyze:
+An analysis result is a collection in its own right. It has its own identifier, title, DOI, license, description and citation, recorded in `analysis_results_index` just as original collections are recorded in `collections_index`. That grouping is what establishes the provenance of the derived content and gives credit to the people who produced it - they are cited for their contribution, and their terms of reuse travel with it.
 
-* every analysis result series carries the `collection_id` of the source collection, exactly like the images it was derived from, **and** a non-empty `analysis_result_id`;
-* analysis results do not introduce new patients, and almost always attach to a study that already exists, alongside the images they describe - which is why you see them overlaid when you open the study in the viewer;
-* analysis results are not nested under a Program, which is why the portal lists them separately from Original Collections.
+What is different is _where the content sits_. An analysis result brings no images, patients or studies of its own; it enriches data that is already in IDC. So each derived series belongs to two collections at the same time, and IDC records both:
+
+* `collection_id` - the original collection that supplied the analyzed images. A derived series carries this exactly like the images it describes, which is what places it in the right patient and study.
+* `analysis_result_id` - the analysis result that contributed it. Non-empty for derived content only.
+
+The two are **orthogonal grouping axes, not a hierarchy**: an analysis result is not nested under one original collection - `tcga_sbu_til_maps` spans 23 of them - which is why the [IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/) offers analysis results as a search scope of their own, alongside programs and collections. Filter on whichever axis you actually mean.
 
 {% hint style="danger" %}
-Filtering by `collection_id` alone returns analysis result series along with the original images. To select only originally submitted data, add `analysis_result_id IS NULL` - note that the value is NULL, not an empty string.
+Because derived series carry the `collection_id` of the images they analyze, filtering by `collection_id` alone returns analysis result series along with the original images. To select only originally submitted data, add `analysis_result_id IS NULL` - note that the value is NULL, not an empty string. Conversely, to select a contributed dataset, filter on its `analysis_result_id`: filtering on the collections it covers would sweep in all of their original imaging too.
 {% endhint %}
 
-Provenance and licensing follow the analysis result, not the collection: series within a single study can carry different `source_DOI` and `license_short_name` values. License information is available programmatically at series granularity - see [licensing.md](licensing.md "mention").
+Two properties of derived content follow from all this:
+
+* **Analysis results do not introduce new patients**, and almost always attach to a study that already exists, alongside the images they describe - which is why you see them overlaid when you open the study in the viewer. As of v24, every patient with derived series also has original imaging, and only 260 of the ~92,000 studies containing derived series consist of derived series alone.
+* **Provenance and licensing follow the analysis result, not the original collection**: series within a single study can carry different `source_DOI` and `license_short_name` values. License information is available programmatically at series granularity - see [licensing.md](licensing.md "mention").
 
 ## The model on a concrete example
 
@@ -105,7 +111,7 @@ CLINICAL_DATA for ProstateX-0217, across 4 of the 6 clinical tables for this col
 
 What this single patient illustrates:
 
-* **Analysis results are not a separate collection.** All four derived series carry `collection_id = 'prostatex'`, just like the MR images; what marks them is a non-null `analysis_result_id`.
+* **A derived series belongs to two collections at once.** All four carry `collection_id = 'prostatex'`, just like the MR images, _and_ the `analysis_result_id` of the analysis result that contributed them - which is where their DOI and license come from.
 * **They attach to the existing study.** No new patient, no new study - the SEG and SR objects land in the same `StudyInstanceUID` as the images they describe.
 * **One study can carry several licenses and DOIs.** Here, three DOIs under CC BY 3.0 and two under CC BY 4.0. Licensing and provenance attach at the series level.
 * **A study accretes content over releases.** The images arrived in IDC v2, the BAMF segmentation in v19, the lesion annotations in v23.

@@ -32,7 +32,7 @@ Every license used in IDC - CC BY and CC BY-NC alike - requires **attribution**.
 
 There are two reasons a collection ends up mixed.
 
-**Analysis results carry their own license.** Analysis results are grafted onto the collection they analyze and keep its `collection_id`, but their license comes from whoever contributed them. In NSCLC-Radiomics, the original CT images are CC BY-NC 3.0, while the AI-derived annotations added later are CC BY 4.0:
+**Analysis results carry their own license.** An analysis result is a collection in its own right, with its own DOI, license and citation, but its series keep the `collection_id` of the images they analyze (see [data-model.md](data-model.md "mention")) - so they sit inside the original collection under different terms. In NSCLC-Radiomics, the original CT images are CC BY-NC 3.0, while the AI-derived annotations added later are CC BY 4.0:
 
 ```
 license_short_name  series  size_GB
