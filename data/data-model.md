@@ -21,7 +21,7 @@ erDiagram
         string collection_id PK
         string collection_name
         string program_id FK
-        record sources "one per contributing dataset"
+        record sources "one per contributing source"
     }
     CASE {
         string PatientID PK
@@ -69,7 +69,7 @@ The **Analysis Results collection** is a very important concept in IDC, and the 
 
 An analysis result is a collection in its own right. It has its own identifier, title, DOI, license, description and citation, recorded in `analysis_results_index` just as original collections are recorded in `collections_index`. That grouping is what establishes the provenance of the derived content and gives credit to the people who produced it - they are cited for their contribution, and their terms of reuse travel with it.
 
-IDC's metadata treats the two as peers explicitly. The `sources` field of `collections_index` lists every dataset that contributed content to a collection, each entry carrying its own `source_doi`, `license`, `citation` and `source_title`, and tagged with a `source_type` of either `original_data` or `analysis_result`. For an analysis result, the `source_id` in that list is its `analysis_result_id`.
+IDC's metadata treats the two as peers explicitly. A collection is composed of one or more **contributing sources**, listed in the `sources` field of `collections_index`. Each entry carries its own `source_doi`, `license`, `citation` and `source_title`, and is tagged with a `source_type` of either `original_data` or `analysis_result`. For an analysis result, the `source_id` in that list is its `analysis_result_id`.
 
 What is different is _where the content sits_. An analysis result brings no images, patients or studies of its own; it enriches data that is already in IDC. So each derived series belongs to two collections at the same time, and IDC records both:
 
@@ -79,13 +79,13 @@ What is different is _where the content sits_. An analysis result brings no imag
 The two are **orthogonal grouping axes, not a hierarchy**: an analysis result is not nested under one original collection - `tcga_sbu_til_maps` spans 23 of them - which is why the [IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/) offers analysis results as a search scope of their own, alongside programs and collections. Filter on whichever axis you actually mean.
 
 {% hint style="danger" %}
-Because derived series carry the `collection_id` of the images they analyze, filtering by `collection_id` alone returns analysis result series along with the original images. To select only originally submitted data, add `analysis_result_id IS NULL` - note that the value is NULL, not an empty string. Conversely, to select a contributed dataset, filter on its `analysis_result_id`: filtering on the collections it covers would sweep in all of their original imaging too.
+Because derived series carry the `collection_id` of the images they analyze, filtering by `collection_id` alone returns analysis result series along with the original images. To select only originally submitted data, add `analysis_result_id IS NULL` - note that the value is NULL, not an empty string. Conversely, to select a contributed analysis result, filter on its `analysis_result_id`: filtering on the collections it covers would sweep in all of their original imaging too.
 {% endhint %}
 
 Two properties of derived content follow from all this:
 
 * **Analysis results do not introduce new patients**, and almost always attach to a study that already exists, alongside the images they describe - which is why you see them overlaid when you open the study in the viewer. As of v24, every patient with derived series also has original imaging, and only 260 of the ~92,000 studies containing derived series consist of derived series alone.
-* **Provenance and licensing follow the contributing dataset, not the collection**: series within a single study can carry different `source_DOI` and `license_short_name` values, which is why the diagram above places both attributes on SERIES. Derived content is not the only reason - a collection can have several original sources too, as NLST does with its CT images (CC BY 4.0) and its DICOM-converted slide microscopy (CC BY 3.0). As of v24, 37 of the 176 collections have more than one original source. License information is available programmatically at series granularity - see [licensing.md](licensing.md "mention").
+* **Provenance and licensing follow the contributing source, not the collection**: series within a single study can carry different `source_DOI` and `license_short_name` values, which is why the diagram above places both attributes on SERIES. Derived content is not the only reason - a collection can have several original sources too, as NLST does with its CT images (CC BY 4.0) and its DICOM-converted slide microscopy (CC BY 3.0). As of v24, 37 of the 176 collections have more than one original source. License information is available programmatically at series granularity - see [licensing.md](licensing.md "mention").
 
 ## The model on a concrete example
 

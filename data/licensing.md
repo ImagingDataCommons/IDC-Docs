@@ -30,7 +30,7 @@ Every license used in IDC - CC BY and CC BY-NC alike - requires **attribution**.
 
 `license_short_name` is a series-level attribute, exactly like `source_DOI` (see [data-model.md](data-model.md "mention")). Do not assume that the license of a collection tells you the license of everything you selected from it: **39 of the 176 collections in IDC carry more than one license.**
 
-That is because a collection is not licensed as a whole. It is assembled from one or more **contributing datasets**, each bringing its own DOI, license and citation - `collections_index` records them in its `sources` field, tagged `original_data` or `analysis_result`. A collection carries several licenses whenever its sources do, which happens in two ways.
+That is because a collection is not licensed as a whole. It is composed of one or more **contributing sources**, each bringing its own DOI, license and citation - `collections_index` records them in its `sources` field, tagged `original_data` or `analysis_result`. A collection carries several licenses whenever its sources do, which happens in two ways.
 
 **A contributed analysis result brings its own license.** An analysis result is a collection in its own right, but its series keep the `collection_id` of the images they analyze - so they sit inside the original collection under different terms. In NSCLC-Radiomics, the original CT images are CC BY-NC 3.0, while the AI-derived annotations added later are CC BY 4.0:
 
@@ -136,7 +136,7 @@ Treat this table as a snapshot, not as a check you can rely on. Licenses are ass
 
 ## Attribution and citation
 
-Attribution is a condition of every license in IDC, and - like the license itself - it attaches to the series. Each series records the dataset it came from in `source_DOI`, and that dataset, not IDC and not the collection, is what you cite. So the citations you owe are determined by the set of `source_DOI` values present in your selection, whatever shape that selection has:
+Attribution is a condition of every license in IDC, and - like the license itself - it attaches to the series. Each series records the source it came from in `source_DOI`, and that source, not IDC and not the collection, is what you cite. So the citations you owe are determined by the set of `source_DOI` values present in your selection, whatever shape that selection has:
 
 ```sql
 SELECT source_DOI, license_short_name, COUNT(*) AS series
@@ -163,7 +163,7 @@ This selection covers two DOIs, so two citations come back - one for the origina
 
 Had you selected only the CT images, only the first citation would apply - and the non-commercial restriction along with it. `apa`, `bibtex`, `csl-json` and `turtle` formats are supported.
 
-In addition to the per-dataset citations, please acknowledge IDC itself by citing the IDC overview publication:
+In addition to the per-source citations, please acknowledge IDC itself by citing the IDC overview publication:
 
 > Fedorov, A., Longabaugh, W. J. R., Pot, D., et al. _National Cancer Institute Imaging Data Commons: Toward Transparency, Reproducibility, and Scalability in Imaging Artificial Intelligence_. RadioGraphics (2023). [https://doi.org/10.1148/rg.230180](https://doi.org/10.1148/rg.230180)
 
