@@ -30,9 +30,9 @@ Every license used in IDC - CC BY and CC BY-NC alike - requires **attribution**.
 
 `license_short_name` is a series-level attribute, exactly like `source_DOI` (see [data-model.md](data-model.md "mention")). Do not assume that the license of a collection tells you the license of everything you selected from it: **39 of the 176 collections in IDC carry more than one license.**
 
-There are two reasons a collection ends up mixed.
+That is because a collection is not licensed as a whole. It is assembled from one or more **contributing datasets**, each bringing its own DOI, license and citation - `collections_index` records them in its `sources` field, tagged `original_data` or `analysis_result`. A collection carries several licenses whenever its sources do, which happens in two ways.
 
-**Analysis results carry their own license.** An analysis result is a collection in its own right, with its own DOI, license and citation, but its series keep the `collection_id` of the images they analyze (see [data-model.md](data-model.md "mention")) - so they sit inside the original collection under different terms. In NSCLC-Radiomics, the original CT images are CC BY-NC 3.0, while the AI-derived annotations added later are CC BY 4.0:
+**A contributed analysis result brings its own license.** An analysis result is a collection in its own right, but its series keep the `collection_id` of the images they analyze - so they sit inside the original collection under different terms. In NSCLC-Radiomics, the original CT images are CC BY-NC 3.0, while the AI-derived annotations added later are CC BY 4.0:
 
 ```
 license_short_name  series  size_GB
@@ -40,7 +40,7 @@ license_short_name  series  size_GB
       CC BY-NC 3.0    1265     34.9     <- original CT images
 ```
 
-**Different components of the same collection can differ.** In NLST, the 203,087 original CT series are CC BY 4.0 while the 1,259 slide microscopy series in the same collection are CC BY 3.0 - both are original data, with no analysis result involved.
+**A collection can have several original sources too.** NLST is assembled from two `original_data` sources released under different terms: the CT images from TCIA (`10.7937/tcia.hmq8-j677`, 203,087 series, CC BY 4.0) and the DICOM-converted slide microscopy images (`10.5281/zenodo.12689650`, 1,259 series, CC BY 3.0). No analysis result is involved here - this is simply what the collection is made of.
 
 {% hint style="danger" %}
 **The bucket name is not a license label.** It is tempting to read `idc-open-data-cr` as "the non-commercial bucket", but the mapping is not reliable: all 4,433 CC BY-NC 3.0 series of the Phantom FDA collection are stored in `idc-open-data`. Always read `license_short_name` from the metadata - never infer the license from `aws_bucket` or from the URL you downloaded from.
