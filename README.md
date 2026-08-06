@@ -12,7 +12,7 @@
 
 * **>95 TB of data**: IDC contains radiology, brightfield (H\&E) and fluorescence slide microscopy images, along with image-derived data (annotations, segmentations, quantitative measurements) and accompanying clinical data
 * **free**: all of the data in IDC is publicly available: no registration, no access requests
-* **commercial-friendly**: >95% of the data in IDC is covered by the permissive CC-BY license, which allows commercial reuse (small subset of data is covered by the CC-NC license); each file in IDC is tagged with the license to make it easier for you to understand and follow the rules
+* **commercial-friendly**: >95% of the data in IDC is covered by the permissive CC-BY license, which allows commercial reuse (small subset of data is covered by the CC-NC license); IDC metadata records the license for each individual DICOM series, so you can check and follow the rules for exactly the data you selected - see [Licensing and attribution](data/licensing.md)
 * **cloud-based**: all of the data in IDC is available from both Google and AWS public buckets: fast and free to download, no out-of-cloud egress fees
 * **harmonized**: all of the images and image-derived data in IDC is harmonized into standard DICOM representation
 
