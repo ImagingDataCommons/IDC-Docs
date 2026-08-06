@@ -51,7 +51,7 @@ license_short_name  series  size_GB
 {% endhint %}
 
 {% hint style="info" %}
-**The license is not inside the DICOM file.** It is metadata that IDC maintains alongside the files, not a DICOM attribute, so it does not travel with the `.dcm` files you download. Record `license_short_name` together with your selection (or keep the manifest that produced it). It is also worth re-checking after a version bump: license assignments are among the mutable metadata IDC may revise between releases - see `mutable_metadata` in [bigquery-tables.md](organization-of-data/bigquery-tables.md "mention").
+**The license is not inside the DICOM file.** It is metadata that IDC maintains alongside the files, not a DICOM attribute, so it does not travel with the `.dcm` files you download. Nothing is lost, though: the `SeriesInstanceUID` _is_ in the file, and it is the only thing you need to retrieve the license again at any later time - through `idc-index`, the REST API, BigQuery or an AI assistant, as shown below. Prefer looking it up to relying on a value you recorded earlier: license assignments are among the mutable metadata IDC may revise between releases - see `mutable_metadata` in [bigquery-tables.md](organization-of-data/bigquery-tables.md "mention").
 {% endhint %}
 
 ## Checking the license for your selection
@@ -71,6 +71,14 @@ WHERE collection_id = 'nsclc_radiomics'
 GROUP BY license_short_name
 ORDER BY series DESC
 """)
+```
+
+The same table resolves a file you already have on disk back to its terms, given only the `SeriesInstanceUID` you can read out of it:
+
+```sql
+SELECT license_short_name, source_DOI
+FROM index
+WHERE SeriesInstanceUID = '1.3.6.1.4.1.14519.5.2.1.7695.4164.174071765480311650274095134055'
 ```
 
 To keep only data you can use commercially, filter on an explicit allowlist rather than excluding the restrictions you happen to know about:
