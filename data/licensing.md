@@ -51,10 +51,16 @@ license_short_name  series  size_GB
 {% endhint %}
 
 {% hint style="info" %}
-**The license is not inside the DICOM file.** It is metadata that IDC maintains alongside the files, not a DICOM attribute, so it does not travel with the `.dcm` files you download. Nothing is lost, though: the `SeriesInstanceUID` _is_ in the file, and it is the only thing you need to retrieve the license again at any later time - through `idc-index`, the REST API, BigQuery or an AI assistant, as shown below. Prefer looking it up to relying on a value you recorded earlier: license assignments are among the mutable metadata IDC may revise between releases - see `mutable_metadata` in [bigquery-tables.md](organization-of-data/bigquery-tables.md "mention").
+**The license is not inside the DICOM file.** It is metadata that IDC maintains alongside the files, not a DICOM attribute, so it does not travel with the `.dcm` files you download. Nothing is lost, though: the `SeriesInstanceUID` _is_ in the file, and it is the only thing you need to retrieve the license again at any later time - through `idc-index`, an AI assistant, the REST API or BigQuery, as shown below. Prefer looking it up to relying on a value you recorded earlier: license assignments are among the mutable metadata IDC may revise between releases - see `mutable_metadata` in [bigquery-tables.md](organization-of-data/bigquery-tables.md "mention").
 {% endhint %}
 
 ## Checking the license for your selection
+
+Every IDC interface can answer this. They are listed here from fewest prerequisites to most.
+
+### IDC Portal
+
+Nothing to install: the Explore page lets you filter data by license type, so you can restrict a cohort to commercially reusable data before building a manifest.
 
 ### `idc-index`
 
@@ -90,9 +96,9 @@ WHERE Modality = 'CT'
   AND license_short_name IN ('CC BY 3.0', 'CC BY 4.0')
 ```
 
-### BigQuery
+### AI assistants
 
-BigQuery gives you the license at the granularity of the individual instance, with the full name and the URL of the license text: `license_short_name`, `license_long_name` and `license_url` are columns of the `dicom_all` and `auxiliary_metadata` tables. See [bigquery-tables.md](organization-of-data/bigquery-tables.md "mention").
+Ask the assistant for the license breakdown of your cohort before you download it; the `get_licenses` tool answers exactly the question below. See [Using IDC with an AI assistant](../agents/README.md).
 
 ### REST API
 
@@ -111,13 +117,9 @@ curl -s https://api.imaging.datacommons.cancer.gov/v3/licenses \
 
 The response summarizes the series matched by the filter, so you can check the license at any granularity - a whole collection, or a single study or series by its UID. See [getting-data.md](../api/getting-data.md "mention").
 
-### AI assistants
+### BigQuery
 
-Ask the assistant for the license breakdown of your cohort before you download it; the `get_licenses` tool answers exactly the question above. See [Using IDC with an AI assistant](../agents/README.md).
-
-### IDC Portal
-
-The Explore page lets you filter data by license type, so you can restrict a cohort to commercially reusable data before building a manifest.
+Listed last because it is the only option here that needs a Google Cloud project of your own to run queries under - but it is also the most detailed. BigQuery gives you the license at the granularity of the individual instance, with the full name and the URL of the license text: `license_short_name`, `license_long_name` and `license_url` are columns of the `dicom_all` and `auxiliary_metadata` tables. See [bigquery-tables.md](organization-of-data/bigquery-tables.md "mention").
 
 ## Collections that are not entirely CC BY
 
