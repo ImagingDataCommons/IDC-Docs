@@ -13,30 +13,35 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Exclusion policy: prefer --accept over --exclude. A site that refuses
+      # to answer a bot (403/405/406/429) is not a broken link, and excluding
+      # its domain stops us noticing when the link really does die. Only
+      # exclude what can never return a meaningful status:
+      #   localhost                     - not reachable from CI by definition
+      #   linkedin.com                  - serves HTTP 999 to datacenter IPs
+      #   storage.googleapis.com        - only occurrence is inside an HTML <a>
+      #                                   in a fenced code block, so it is
+      #                                   extracted malformed
+      #   docs.google.com               - one embedded doc is login-gated (401);
+      #                                   fix the content, then drop this
+      #   viewer.imaging...cancer.gov   - SPA, deep links 404 to a plain client
+      #   proxy.imaging...cancer.gov    - quota-limited proxy
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
             --no-progress
+            --max-concurrency 8
+            --max-retries 5
+            --retry-wait-time 5
+            --timeout 30
+            --accept '100..=103,200..=299,403,405,406,429'
             --exclude 'localhost'
             --exclude 'linkedin\.com'
             --exclude 'storage\.googleapis\.com'
+            --exclude 'docs\.google\.com'
             --exclude 'viewer\.imaging\.datacommons\.cancer\.gov'
             --exclude 'proxy\.imaging\.datacommons\.cancer\.gov'
-            --exclude 'doi\.org'
-            --exclude 'dicom\.nema\.org'
-            --exclude 'console\.cloud\.google\.com'
-            --exclude 'cloud\.google\.com'
-            --exclude 'docs\.google\.com'
-            --exclude 'scholar\.google\.com'
-            --exclude 'mayo\.edu'
-            --exclude 'cancer\.gov'
-            --exclude 'access-ci\.org'
-            --exclude 'towardsai\.net'
-            --exclude 'claude\.ai'
-            --exclude 'dicom\.offis\.de'
-            --exclude 'peerj\.com'
-            --exclude 'support\.dcmtk\.org'
             '**/*.md'
             '**/*.py'
             '**/*.rst'
