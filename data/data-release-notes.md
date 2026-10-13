@@ -8,11 +8,9 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 ## IDC releases summary view
 
-##
+<figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/chart.png" alt=""><figcaption></figcaption></figure>
-
-## v25 - Oct 2026
+## V25 - Oct 2026
 
 | Text                     | Count |
 | ------------------------ | ----: |
