@@ -12,6 +12,308 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 <figure><img src="../.gitbook/assets/chart.png" alt=""><figcaption></figcaption></figure>
 
+## v25 - Oct 2026
+
+| Text                     | Count |
+| ------------------------ | ----: |
+| New collections          |     3 |
+| New analysis results     |     2 |
+| Updated collections      |    66 |
+| Updated analysis results |     1 |
+| Clinical tables added    |    80 |
+| Clinical tables removed  |     2 |
+
+#### New Collections
+
+| Collection         | Program   | Cancer Type                                    | Modality         | Patients | Series | Source                     |
+| ------------------ | --------- | ---------------------------------------------- | ---------------- | -------: | -----: | -------------------------- |
+| FDG-PET-CT-Lesions | Community | Lymphoma, Melanoma, Non-small Cell Lung Cancer | CT, PT, SEG      |      900 |  3,042 | The Cancer Imaging Archive |
+| MRI-DIR            | Community | Head and Neck Squamous Cell Carcinoma          | CT, MR, RTSTRUCT |        9 |     61 | The Cancer Imaging Archive |
+| QIN-SARCOMA        | QIN       | Sarcomas                                       | MR               |       15 |  2,168 | The Cancer Imaging Archive |
+
+**FDG-PET-CT-Lesions** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=fdg_pet_ct_lesions) | [DOI 10.7937/gkr0-xv29](https://doi.org/10.7937/gkr0-xv29)) — 1,014 whole-body FDG-PET/CT studies from 900 patients acquired at University Hospital Tübingen (2014-2018): 501 studies of patients with malignant lymphoma, melanoma or non-small cell lung cancer, and 513 negative controls. All FDG-avid tumor lesions manually segmented on the PET images, provided as DICOM SEG. Used in the autoPET MICCAI 2022 challenge. IDC hosts the defaced images that TCIA released under CC BY 4.0 in version 2; the original, non-defaced images remain TCIA Restricted and are not included. Sourced as-is in DICOM from TCIA.
+
+**MRI-DIR** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=mri_dir) | [DOI 10.7937/K9/TCIA.2018.3f08iejt](https://doi.org/10.7937/K9/TCIA.2018.3f08iejt)) — Two image sets built at MD Anderson to measure deformable image registration accuracy in MRI. A porcine phantom implanted with ten 0.35 mm gold markers was immobilized and compressed into four positions and imaged at each with CT and with T1- and T2-weighted MR; the markers resolve on CT but fall below the MR voxel size, so they give ground-truth landmarks without interfering with MR-to-MR registration. Alongside it, eight synthetic subjects derived from 28 head and neck squamous cell carcinoma patients scanned before, during and after radiotherapy — four synthetic pre-treatment images in each of T1 and T2 weighting, each carrying four synthetic post-treatment images and an RTSTRUCT contouring the parotid, submandibular and sublingual glands. 9 subjects, 25 studies, 61 series, 3,596 instances. The accompanying deformation vector fields stay on TCIA as a MATLAB package and are not part of the DICOM ingest. Sourced as-is in DICOM from TCIA.
+
+**QIN-SARCOMA** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=qin_sarcoma) | [DOI 10.7937/K9/TCIA.2016.fXL9sESs](https://doi.org/10.7937/K9/TCIA.2016.fXL9sESs)) — Longitudinal DCE-MRI of 15 patients with soft-tissue sarcoma, acquired at Oregon Health & Science University to assess response to preoperative chemoradiation, with up to three imaging time points per patient. 38 studies, 2,168 MR series. Formerly limited-access; TCIA made the collection public in April 2026. Sourced as-is in DICOM from TCIA.
+
+#### New Analysis Results
+
+| Analysis Result    | Program    | Cancer Type                                                                                       | Modality | Subjects | Series | Source                |
+| ------------------ | ---------- | ------------------------------------------------------------------------------------------------- | -------- | -------: | -----: | --------------------- |
+| LIDC-annot-NLST501 | NCI Trials | Lung Cancer, Healthy Controls (non-cancer)                                                        | CT, SEG  |      501 |  2,028 | Median Technologies   |
+| RCC-AID            | TCGA       | Clear Cell Renal Cell Carcinoma, Papillary Renal Cell Carcinoma, Chromophobe Renal Cell Carcinoma | SEG      |       91 |    129 | Community contributor |
+
+**LIDC-annot-NLST501** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis_results_id=LIDC-annot-NLST501) | [DOI 10.7937/y2dx-e334](https://doi.org/10.7937/y2dx-e334)) — LIDC-IDRI-style annotations of lung nodules on 501 NLST chest CT scans, built and curated by Median Technologies. Each scan was read independently four times by 20 board-certified radiologists engaged through Ingedata, giving 2,004 DICOM Segmentations (501 × 4) that carry the 6,505 most suspicious lesions — 6,418 Nodule and 87 Mass segments — together with a whole-lung mask inferred with TotalSegmentator v2.4.0, for 8,509 segments in all. The reader is recorded in PersonIdentificationCodeSequence and the independent read database in InstitutionCodeSequence. The cohort is deliberately cancer-enriched: 152 of the 501 patients have histopathology-confirmed lung cancer and 349 do not, verified against IDC's `nlst_canc` clinical table. IDC hosts the DICOM portion — the segmentations plus 24 corrected CT series, published under new SeriesInstanceUIDs within the original NLST studies, which replace source series that had duplicate slices, several acquisitions in one series, or missing slices. The 501 source CT series are already in IDC as part of [NLST](https://doi.org/10.7937/tcia.hmq8-j677); the NIfTI masks and the accompanying CSV tables remain on TCIA. Sourced as-is in DICOM from TCIA.
+
+**RCC-AID** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis_results_id=RCC-AID) | [DOI 10.5281/zenodo.22284133](https://doi.org/10.5281/zenodo.22284133)) — Voxel-level annotations of the kidney and of renal masses and cysts over the TCGA renal cell carcinoma collections: one DICOM Segmentation per annotated CT scan, 129 scans from 91 patients across TCGA-KIRC (85), TCGA-KIRP (26) and TCGA-KICH (18). Annotated with a model-initialised, human-corrected workflow and published in NIfTI as the RCC-AID dataset ([10.5281/zenodo.20719257](https://doi.org/10.5281/zenodo.20719257), CC BY 4.0) and described in [MELBA 2026](https://doi.org/10.59275/j.melba.2026-2dg2); converted to DICOM by IDC with dcmqi 1.5.7, coding the segmented structures as Kidney, Mass and Cyst per DICOM PS3.16 and referencing the exact source image instances each annotation applies to. Conversion performed by IDC.
+
+**These are the archive's first LABELMAP segmentations.** As of v24 `seg_index` holds 172,908 BINARY and 17,238 FRACTIONAL series and no LABELMAP at all, so nothing downstream has been exercised against the type. A BINARY variant was generated in parallel and verified to decode identically, as a fallback if LABELMAP support proves insufficient.
+
+#### Updated Collections
+
+**JPEG 2000 whole-slide images corrected across 52 collections.** 40,660 slide microscopy instances — about 10% of the archive's 391,932 SM instances — are replaced to correct the DICOM attributes that tell a decoder how to interpret their JPEG 2000 pixel data. The symptom was colour corruption on affected slides, reported against OpenSlide in [openslide/openslide#772](https://github.com/openslide/openslide/issues/772).
+
+Every replaced instance keeps its SOPInstanceUID, so no patient, study or series is added or removed and no derived dataset has to change: the SEG and ANN instances that reference these images continue to resolve. What changes is the metadata described below and, as for any replaced instance, the `crdc_instance_uuid`, which is reminted on ingestion.
+
+**The pixel data is not re-encoded.** The encapsulated JPEG 2000 codestreams are carried over byte for byte — in the instances compared in full, the entire Pixel Data element, fragment boundaries included, has the same MD5 before and after. The images are not recompressed, and nothing is lost. What was wrong, and is now fixed, is the metadata that says how those bytes are to be read.
+
+The correction reaches beyond the `YBR_ICT` images named in the issue title: of the 40,660 replaced instances, 38,732 use JPEG 2000 lossy (`1.2.840.10008.1.2.4.91`) and 1,928 JPEG 2000 lossless (`1.2.840.10008.1.2.4.90`). For the lossy instances, Photometric Interpretation (0028,0004) was wrong in both directions:
+
+| v24 value | v25 value      | Instances |
+| --------- | -------------- | --------: |
+| `YBR_ICT` | `YBR_FULL_422` |    23,729 |
+| `RGB`     | `YBR_ICT`      |    15,003 |
+
+A decoder that trusts the attribute therefore applied a colour transform the codestream had not applied, or skipped one it had — which is the rendering behaviour the OpenSlide issue describes. These replacements also carry a second Contributing Equipment Sequence item recording the tool that made the edit as Modifying Equipment (DCM 109103).
+
+The 1,928 JPEG 2000 lossless instances keep their Photometric Interpretation — 1,598 `YBR_RCT` and 330 `MONOCHROME2`, unchanged in both value and count between v24 and v25. In those compared in full, the only difference from the published instance lies in Data Set Trailing Padding (FFFC,FFFC), which carries a copy of the source Aperio TIFF directory: its compression tag moves from 33003 (JPEG 2000 YCbCr) to 33005 (JPEG 2000 RGB). Nothing a DICOM reader interprets changes for them.
+
+A further 14,270 uncompressed ancillary images (thumbnail, label and overview) were restaged alongside them but proved byte-identical to what IDC already publishes; those are excluded from the manifests and are not re-ingested.
+
+Object sizes move by a median of +0.0006%, in both directions and by under 1% in every case, and the metadata accounts for all of it: the added equipment item and the longer Photometric Interpretation value grow the header by 358 bytes, while a replacement whose published counterpart carried a Basic Offset Table drops it — 4 bytes per frame, 411,840 bytes on the 102,960-frame CATCH slide examined, which is exactly that slide's 411,482-byte net shrink.
+
+| Collection              | SM instances replaced |
+| ----------------------- | --------------------: |
+| CGCI-BLGSP              |                 5,180 |
+| NLST                    |                 3,766 |
+| TCGA-LUAD               |                 2,414 |
+| TCGA-COAD               |                 2,296 |
+| TCGA-KIRC               |                 1,752 |
+| TCGA-LUSC               |                 1,714 |
+| HCMI-CMDC               |                 1,709 |
+| TCGA-PRAD               |                 1,548 |
+| TCGA-HNSC               |                 1,512 |
+| RMS-Mutation-Prediction |                 1,484 |
+| CGCI-HTMCP-DLBCL        |                 1,433 |
+| TCGA-STAD               |                 1,380 |
+| TCGA-GBM                |                 1,204 |
+| CATCH                   |                 1,200 |
+| CPTAC-COAD              |                 1,195 |
+| TCGA-KIRP               |                 1,168 |
+| TCGA-LGG                |                 1,121 |
+| CGCI-HTMCP-CC           |                 1,010 |
+| CPTAC-BRCA              |                   980 |
+| TCGA-READ               |                   868 |
+| CCDI-MCI                |                   679 |
+| TCGA-TGCT               |                   672 |
+| CPTAC-OV                |                   554 |
+| TCGA-THYM               |                   468 |
+| TCGA-PAAD               |                   391 |
+| HTAN-TNP-SARDANA        |                   246 |
+| TCGA-CESC               |                   243 |
+| CGCI-HTMCP-LC           |                   231 |
+| TCGA-UCEC               |                   217 |
+| TCGA-LIHC               |                   204 |
+| HTAN-VANDERBILT         |                   165 |
+| TCGA-BRCA               |                   161 |
+| TCGA-SARC               |                   160 |
+| CDDP-EAGLE-1            |                   157 |
+| ICDC-Glioma             |                   134 |
+| TCGA-DLBC               |                   123 |
+| TCGA-KICH               |                   106 |
+| TCGA-BLCA               |                   103 |
+| CPTAC-SAR               |                    93 |
+| TCGA-SKCM               |                    93 |
+| HTAN-OHSU               |                    90 |
+| TCGA-ACC                |                    75 |
+| TCGA-MESO               |                    72 |
+| TCGA-ESCA               |                    68 |
+| TCGA-OV                 |                    63 |
+| TCGA-PCPG               |                    51 |
+| CPTAC-UCEC              |                    27 |
+| TCGA-UVM                |                    26 |
+| CPTAC-LUAD              |                    21 |
+| CPTAC-CM                |                    15 |
+| TCGA-THCA               |                    14 |
+| TCGA-CHOL               |                     4 |
+| **52 collections**      |            **40,660** |
+
+**HTAN presentation states re-encoded with a standard palette LUT.** All 324 Advanced Blending Presentation State instances in IDC, spread across 107 series in four HTAN collections, are replaced. The published instances encoded each channel's pseudo-color palette as a **segmented** Palette Color Lookup Table, which the presentation state IODs do not permit. They also declared 16 bits per entry while writing entries in the 0–255 range. Read as the standard defines it, a 16-bit entry of 255 is under 0.4% of full intensity, so a conformant viewer renders every channel near-black. The replacements carry the same palettes expanded to an ordinary 256-entry, 8-bit Palette Color Lookup Table.
+
+Unlike the JPEG 2000 reconversion above, these replacements carry **new SOPInstanceUIDs and SeriesInstanceUIDs**: each of the 107 series is superseded by a new series in the same study, with the same number of instances. The slide microscopy images the presentation states reference keep their UIDs, so those references continue to resolve. A link or script that names a presentation state by its old UID will need the new one.
+
+Each new instance was checked against the one it supersedes. For HTAN-WUSTL, HTAN-HMS and HTAN-OHSU the replacements are the published instances re-encoded: expanding the old segmented table reproduces the new 8-bit table entry for entry, and no other attribute differs apart from the two UIDs. The 19 HTAN-TNP-SARDANA replacements were instead regenerated from the collection's channel configuration, as the originals were. They reference the same 132 slide microscopy instances with the same blending inputs and VOI windows, and carry the same palettes. The exception is four channels of one instance, whose ramps are truncated rather than rounded, so some entries are one lower. They also drop ContentDate and ContentTime, which the presentation state IODs do not use.
+
+| Collection        | PR series | PR instances replaced |
+| ----------------- | --------: | --------------------: |
+| HTAN-WUSTL        |        78 |                   234 |
+| HTAN-HMS          |        15 |                    45 |
+| HTAN-OHSU         |        13 |                    26 |
+| HTAN-TNP-SARDANA  |         1 |                    19 |
+| **4 collections** |   **107** |               **324** |
+
+**Radiology added to ten TCIA collections.** TCIA published new versions of nine Cancer Moonshot Biobank collections and of Vestibular-Schwannoma-MC-RC, each adding radiology images. IDC ingests the added images as TCIA delivered them, in DICOM and without conversion: 246 patients, 3,512 series and 401,190 instances. The update is purely additive. No study, series or instance UID in it is already in IDC, in these collections or any other, and each collection's radiology in IDC now matches TCIA's CC BY 4.0 radiology download in patients, studies, series and images.
+
+Of the 246 patients, 84 are new to IDC. Another 65 already had pathology in IDC and now gain radiology, and the remaining 97 gain further studies. CMB-OV gains its first MR series; its radiology in IDC was CT only.
+
+Two parts of the TCIA releases are not included. The same TCIA versions add pathology slides to eight of the CMB collections, which are not part of this update. And seven of the CMB collections keep their images of the head in a separate download under the TCIA Restricted license, which IDC does not host.
+
+| Collection                  | TCIA version | Patients with new series | Patients (delta) | Series (delta) | Instances (delta) | Modality       |
+| --------------------------- | ------------ | -----------------------: | ---------------: | -------------: | ----------------: | -------------- |
+| CMB-LCA                     | 10 → 12      |                       56 |               15 |          1,124 |           160,066 | CT, MR, PT, US |
+| CMB-CRC                     | 9 → 11       |                       28 |               10 |            764 |            89,049 | CT, MR, US     |
+| CMB-BRCA                    | 4 → 6        |                       27 |                8 |            546 |            73,375 | CT, MR, US     |
+| CMB-MML                     | 9 → 11       |                       51 |                9 |            462 |            17,377 | CR, CT, MR, XA |
+| CMB-OV                      | 3 → 4        |                        8 |                0 |            234 |            24,380 | CT, MR         |
+| Vestibular-Schwannoma-MC-RC | 1 → 2        |                       60 |               36 |            133 |             8,016 | MR             |
+| CMB-GEC                     | 7 → 9        |                        6 |                2 |            123 |            15,893 | CT             |
+| CMB-PCA                     | 10 → 12      |                        8 |                3 |             73 |             6,068 | CT, MR         |
+| CMB-MEL                     | 10 → 12      |                        1 |                0 |             50 |             6,923 | CT, PT, US     |
+| CMB-AML                     | 7 → 9        |                        1 |                1 |              3 |                43 | CT             |
+| **10 collections**          |              |                  **246** |           **84** |      **3,512** |       **401,190** |                |
+
+**EA1141 corrected and completed.** TCIA published version 2 of [EA1141](https://doi.org/10.7937/2BAS-HR33) on 2026-05-19, correcting a malformed UID in the DICOM header and supplying images that version 1 had left out. IDC ingests the update as TCIA delivered it, in DICOM and without conversion: 196,328 staged instances over 251 patients, 400 studies and 1,045 series.
+
+Unlike the ten collections above, this update is not additive. **447** of the staged instances are new to IDC — three new mammography series of one image each, plus 444 previously missing images in 403 existing series across 233 patients and 304 studies, exactly what TCIA's change log describes. A further **45,121** keep a SOPInstanceUID already published in v24 but change the bytes behind it, so they are replacements rather than additions. The remaining **150,760** are byte-identical to the files IDC already stores and need no action at all. No study, series or instance UID in the update appears in any IDC collection other than EA1141.
+
+That three-way split is established by MD5, not inferred. Every staged object is named for a `crdc_instance_uuid`; 150,760 of them reuse the UUID IDC assigned in v24, and for all 150,760 the object's MD5 and size match `instance_hash` and `instance_size` in `idc_current.dicom_all`, with no mismatch anywhere on a reused UUID. The other 45,568 objects — the 45,121 replacements plus the 447 additions — carry freshly minted UUIDs. TCIA re-delivered whole series rather than only the files it corrected: all 1,045 staged series hold at least one changed or new instance, while 374 of them also carry unchanged files.
+
+The correction itself reaches 45,114 instances (44,757 MR, 357 MG), whose `ReferencedStudySequence` gave the Referenced SOP Class UID as `1.2.840.100008.3.1.2.3.1` — a malformed UID carrying an extra digit — where it should read `1.2.840.10008.3.1.2.3.1`. 44,836 of those also move from Implicit to Explicit VR Little Endian; both are uncompressed, so no pixel data changes.
+
+One change is not in TCIA's change log: seven mammography instances drop the word "EMPLOYEE" from StudyDescription, "MAMMO-DIGITAL SCREENING EMPLOYEE W/ TOMO" becoming "MAMMO-DIGITAL SCREENING W/ TOMO". These seven are the only replacements whose Referenced SOP Class UID was already correct, so between the two changes every one of the 45,121 is accounted for.
+
+With the update applied, EA1141 in IDC matches TCIA's CC BY 4.0 download exactly.
+
+| Collection | TCIA version | Instances added | Instances replaced | Series (total) | Instances (total) | Modality   |
+| ---------- | ------------ | --------------: | -----------------: | -------------: | ----------------: | ---------- |
+| EA1141     | 1 → 2        |             447 |             45,121 |         14,343 |           855,640 | CT, MG, MR |
+
+**Every updated collection**, with what changed in `dicom_all`:
+
+| Collection                      | Change                                                                                                 | Patients (delta) | Series (delta) | Instances (delta) | Modality                       | DOI                                                                |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------: | -------------: | ----------------: | ------------------------------ | ------------------------------------------------------------------ |
+| BoneMarrowWSI-PediatricLeukemia | 7 series and 13 instances added                                                                        |               +1 |             +7 |               +13 | ANN, SM                        | [10.5281/zenodo.14933087](https://doi.org/10.5281/zenodo.14933087) |
+| CATCH                           | 350 series and 350 instances added; 1,200 instances replaced, UIDs kept; adds ANN                      |                0 |           +350 |              +350 | ANN, SM                        | [10.5281/zenodo.18526942](https://doi.org/10.5281/zenodo.18526942) |
+| CCDI-MCI                        | 679 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.11099086](https://doi.org/10.5281/zenodo.11099086) |
+| CDDP-EAGLE-1                    | 157 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.17372206](https://doi.org/10.5281/zenodo.17372206) |
+| CGCI-BLGSP                      | 5,180 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.17381396](https://doi.org/10.5281/zenodo.17381396) |
+| CGCI-HTMCP-CC                   | 1,010 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.17381404](https://doi.org/10.5281/zenodo.17381404) |
+| CGCI-HTMCP-DLBCL                | 1,433 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.17381412](https://doi.org/10.5281/zenodo.17381412) |
+| CGCI-HTMCP-LC                   | 231 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.17381428](https://doi.org/10.5281/zenodo.17381428) |
+| CMB-AML                         | 3 series and 43 instances added                                                                        |               +1 |             +3 |               +43 | CT, MR, SM, XA                 | [10.7937/pcte-6m66](https://doi.org/10.7937/pcte-6m66)             |
+| CMB-BRCA                        | 546 series and 73,375 instances added                                                                  |               +8 |           +546 |           +73,375 | CT, MG, MR, PT, SM, US         | [10.7937/dx22-8j71](https://doi.org/10.7937/dx22-8j71)             |
+| CMB-CRC                         | 764 series and 89,049 instances added                                                                  |              +10 |           +764 |           +89,049 | CT, DX, MR, NM, PT, SM, US, XA | [10.7937/djg7-gz87](https://doi.org/10.7937/djg7-gz87)             |
+| CMB-GEC                         | 123 series and 15,893 instances added                                                                  |               +2 |           +123 |           +15,893 | CT, MR, PT, SM                 | [10.7937/e7kh-r486](https://doi.org/10.7937/e7kh-r486)             |
+| CMB-LCA                         | 1,124 series and 160,066 instances added                                                               |              +15 |         +1,124 |          +160,066 | CT, DX, MR, NM, PT, SM, US     | [10.7937/3cx3-s132](https://doi.org/10.7937/3cx3-s132)             |
+| CMB-MEL                         | 50 series and 6,923 instances added                                                                    |                0 |            +50 |            +6,923 | CT, MR, PT, SM, US             | [10.7937/gwsp-wh72](https://doi.org/10.7937/gwsp-wh72)             |
+| CMB-MML                         | 462 series and 17,377 instances added                                                                  |               +9 |           +462 |           +17,377 | CR, CT, DX, MR, PT, SM, XA     | [10.7937/szkb-sw39](https://doi.org/10.7937/szkb-sw39)             |
+| CMB-OV                          | 234 series and 24,380 instances added; adds MR                                                         |                0 |           +234 |           +24,380 | CT, MR, SM                     | [10.7937/4nx6-e061](https://doi.org/10.7937/4nx6-e061)             |
+| CMB-PCA                         | 73 series and 6,068 instances added                                                                    |               +3 |            +73 |            +6,068 | CT, DX, MR, NM, PT, RF, SM     | [10.7937/25t7-6y12](https://doi.org/10.7937/25t7-6y12)             |
+| CPTAC-BRCA                      | 980 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12666759](https://doi.org/10.5281/zenodo.12666759) |
+| CPTAC-CM                        | 15 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | CT, MR, PT, SM                 | [10.5281/zenodo.12666775](https://doi.org/10.5281/zenodo.12666775) |
+| CPTAC-COAD                      | 1,195 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12666784](https://doi.org/10.5281/zenodo.12666784) |
+| CPTAC-LUAD                      | 21 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | CT, MR, PT, SM                 | [10.5281/zenodo.12666813](https://doi.org/10.5281/zenodo.12666813) |
+| CPTAC-OV                        | 554 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12666842](https://doi.org/10.5281/zenodo.12666842) |
+| CPTAC-SAR                       | 93 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | CT, MR, PT, SM                 | [10.5281/zenodo.12666862](https://doi.org/10.5281/zenodo.12666862) |
+| CPTAC-UCEC                      | 27 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | CT, MR, PT, SM, US             | [10.5281/zenodo.12666865](https://doi.org/10.5281/zenodo.12666865) |
+| EA1141                          | 3 series and 447 instances added; 45,121 instances replaced, UIDs kept                                 |                0 |             +3 |              +447 | CT, MG, MR                     | [10.7937/2bas-hr33](https://doi.org/10.7937/2bas-hr33)             |
+| HCMI-CMDC                       | 1,709 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.17381441](https://doi.org/10.5281/zenodo.17381441) |
+| HTAN-HMS                        | 15 series and 45 instances added; 15 series and 45 instances removed                                   |                0 |              0 |                 0 | PR, SM                         | [10.5281/zenodo.12666872](https://doi.org/10.5281/zenodo.12666872) |
+| HTAN-OHSU                       | 13 series and 26 instances added; 13 series and 26 instances removed; 90 instances replaced, UIDs kept |                0 |              0 |                 0 | PR, SM                         | [10.5281/zenodo.12689950](https://doi.org/10.5281/zenodo.12689950) |
+| HTAN-TNP-SARDANA                | 1 series and 19 instances added; 1 series and 19 instances removed; 246 instances replaced, UIDs kept  |                0 |              0 |                 0 | PR, SM                         | [10.5281/zenodo.18488943](https://doi.org/10.5281/zenodo.18488943) |
+| HTAN-VANDERBILT                 | 165 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12690006](https://doi.org/10.5281/zenodo.12690006) |
+| HTAN-WUSTL                      | 78 series and 234 instances added; 78 series and 234 instances removed                                 |                0 |              0 |                 0 | PR, SM                         | [10.5281/zenodo.12689993](https://doi.org/10.5281/zenodo.12689993) |
+| ICDC-Glioma                     | 134 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | MR, SM                         | [10.5281/zenodo.12690000](https://doi.org/10.5281/zenodo.12690000) |
+| NLST                            | 3,766 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | CT, SM                         | [10.5281/zenodo.12689650](https://doi.org/10.5281/zenodo.12689650) |
+| RMS-Mutation-Prediction         | 1,484 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.8225131](https://doi.org/10.5281/zenodo.8225131)   |
+| TCGA-ACC                        | 75 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12690035](https://doi.org/10.5281/zenodo.12690035) |
+| TCGA-BLCA                       | 103 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | CR, CT, DX, MR, PT, SM         | [10.5281/zenodo.12690045](https://doi.org/10.5281/zenodo.12690045) |
+| TCGA-BRCA                       | 161 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | MG, MR, SM                     | [10.5281/zenodo.12689962](https://doi.org/10.5281/zenodo.12689962) |
+| TCGA-CESC                       | 243 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | MR, SM                         | [10.5281/zenodo.12689956](https://doi.org/10.5281/zenodo.12689956) |
+| TCGA-CHOL                       | 4 instances replaced, UIDs kept                                                                        |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12689990](https://doi.org/10.5281/zenodo.12689990) |
+| TCGA-COAD                       | 2,296 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | CT, OT, SM                     | [10.5281/zenodo.12689970](https://doi.org/10.5281/zenodo.12689970) |
+| TCGA-DLBC                       | 123 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12690047](https://doi.org/10.5281/zenodo.12690047) |
+| TCGA-ESCA                       | 68 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | CT, SM                         | [10.5281/zenodo.12690012](https://doi.org/10.5281/zenodo.12690012) |
+| TCGA-GBM                        | 1,204 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12690010](https://doi.org/10.5281/zenodo.12690010) |
+| TCGA-HNSC                       | 1,512 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12690033](https://doi.org/10.5281/zenodo.12690033) |
+| TCGA-KICH                       | 106 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | CT, MR, SM                     | [10.5281/zenodo.12690004](https://doi.org/10.5281/zenodo.12690004) |
+| TCGA-KIRC                       | 1,752 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | CR, CT, MR, SM                 | [10.5281/zenodo.12689952](https://doi.org/10.5281/zenodo.12689952) |
+| TCGA-KIRP                       | 1,168 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | CT, MR, PT, SM                 | [10.5281/zenodo.12689919](https://doi.org/10.5281/zenodo.12689919) |
+| TCGA-LGG                        | 1,121 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12689948](https://doi.org/10.5281/zenodo.12689948) |
+| TCGA-LIHC                       | 204 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | CT, MR, PT, SM                 | [10.5281/zenodo.12690002](https://doi.org/10.5281/zenodo.12690002) |
+| TCGA-LUAD                       | 2,414 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | CT, NM, PT, SM                 | [10.5281/zenodo.12689915](https://doi.org/10.5281/zenodo.12689915) |
+| TCGA-LUSC                       | 1,714 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | CT, NM, PT, SM                 | [10.5281/zenodo.12690008](https://doi.org/10.5281/zenodo.12690008) |
+| TCGA-MESO                       | 72 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12689966](https://doi.org/10.5281/zenodo.12689966) |
+| TCGA-OV                         | 63 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | CT, MR, OT, SM                 | [10.5281/zenodo.12689954](https://doi.org/10.5281/zenodo.12689954) |
+| TCGA-PAAD                       | 391 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12689972](https://doi.org/10.5281/zenodo.12689972) |
+| TCGA-PCPG                       | 51 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12689964](https://doi.org/10.5281/zenodo.12689964) |
+| TCGA-PRAD                       | 1,548 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | CT, MR, PT, SM                 | [10.5281/zenodo.12689935](https://doi.org/10.5281/zenodo.12689935) |
+| TCGA-READ                       | 868 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | CT, MR, SM                     | [10.5281/zenodo.12689998](https://doi.org/10.5281/zenodo.12689998) |
+| TCGA-SARC                       | 160 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | CT, MR, SM                     | [10.5281/zenodo.12689917](https://doi.org/10.5281/zenodo.12689917) |
+| TCGA-SKCM                       | 93 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12690039](https://doi.org/10.5281/zenodo.12690039) |
+| TCGA-STAD                       | 1,380 instances replaced, UIDs kept                                                                    |                0 |              0 |                 0 | CT, SM                         | [10.5281/zenodo.12690037](https://doi.org/10.5281/zenodo.12690037) |
+| TCGA-TGCT                       | 672 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12689995](https://doi.org/10.5281/zenodo.12689995) |
+| TCGA-THCA                       | 14 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | CT, PT, SM                     | [10.5281/zenodo.12689958](https://doi.org/10.5281/zenodo.12689958) |
+| TCGA-THYM                       | 468 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12689913](https://doi.org/10.5281/zenodo.12689913) |
+| TCGA-UCEC                       | 217 instances replaced, UIDs kept                                                                      |                0 |              0 |                 0 | CR, CT, MR, PT, SM             | [10.5281/zenodo.12689968](https://doi.org/10.5281/zenodo.12689968) |
+| TCGA-UVM                        | 26 instances replaced, UIDs kept                                                                       |                0 |              0 |                 0 | SM                             | [10.5281/zenodo.12690041](https://doi.org/10.5281/zenodo.12690041) |
+| Vestibular-Schwannoma-MC-RC     | 133 series and 8,016 instances added                                                                   |              +36 |           +133 |            +8,016 | MR                             | [10.7937/hrzh-2n82](https://doi.org/10.7937/hrzh-2n82)             |
+
+#### Updated Analysis Results
+
+| Analysis Result             | Change                             | Subjects (delta) | Series (delta) | Instances (delta) | Modality | DOI                                                                |
+| --------------------------- | ---------------------------------- | ---------------: | -------------: | ----------------: | -------- | ------------------------------------------------------------------ |
+| Pan-Cancer-Nuclei-Seg-DICOM | 20 series and 54 instances removed |                0 |            -20 |               -54 | ANN, SEG | [10.5281/zenodo.11099004](https://doi.org/10.5281/zenodo.11099004) |
+
+**Pan-Cancer-Nuclei-Seg-DICOM** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis_results_id=Pan-Cancer-Nuclei-Seg-DICOM) | [DOI 10.5281/zenodo.11099004](https://doi.org/10.5281/zenodo.11099004)) — Deletion only; no new data. Ten TCGA-LUAD whole-slide images each carried two visually identical ANN series and two visually identical SEG series. One complete series of each pair is removed — 20 series, 54 instances in total — leaving one copy of every annotation in place. No series is partially deleted and no other collection in the analysis result is affected.
+
+#### Clinical Tables
+
+_Tables in the `idc_v25_clinical` BigQuery dataset compared with `idc_v24_clinical`. A table is updated when its content changed._
+
+| Collection or Analysis Result | Added                                                                                                                                                                                                                   | Updated | Removed                                                                    |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------- |
+| CPTAC-BRCA                    | `cptac_brca_clinical`                                                                                                                                                                                                   | —       | —                                                                          |
+| CPTAC-CCRCC                   | `cptac_ccrcc_clinical`                                                                                                                                                                                                  | —       | —                                                                          |
+| CPTAC-COAD                    | `cptac_coad_clinical`                                                                                                                                                                                                   | —       | —                                                                          |
+| CPTAC-GBM                     | `cptac_gbm_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| CPTAC-HNSCC                   | `cptac_hnscc_clinical`                                                                                                                                                                                                  | —       | —                                                                          |
+| CPTAC-LSCC                    | `cptac_lscc_clinical`                                                                                                                                                                                                   | —       | —                                                                          |
+| CPTAC-LUAD                    | `cptac_luad_clinical`                                                                                                                                                                                                   | —       | —                                                                          |
+| CPTAC-OV                      | `cptac_ov_clinical`                                                                                                                                                                                                     | —       | —                                                                          |
+| CPTAC-PDA                     | `cptac_pda_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| CPTAC-UCEC                    | `cptac_ucec_clinical`                                                                                                                                                                                                   | —       | —                                                                          |
+| FDG-PET-CT-Lesions            | `fdg_pet_ct_lesions_clinical`                                                                                                                                                                                           | —       | —                                                                          |
+| HTAN-HMS                      | `htan_hms_demographics`, `htan_hms_diagnosis`, `htan_hms_exposure`, `htan_hms_familyhistory`, `htan_hms_followup`, `htan_hms_moleculartest`, `htan_hms_therapy`                                                         | —       | —                                                                          |
+| HTAN-OHSU                     | `htan_ohsu_demographics`, `htan_ohsu_diagnosis`, `htan_ohsu_exposure`, `htan_ohsu_familyhistory`, `htan_ohsu_followup`, `htan_ohsu_moleculartest`, `htan_ohsu_therapy`                                                  | —       | —                                                                          |
+| HTAN-TNP-SARDANA              | `htan_tnp_sardana_demographics`, `htan_tnp_sardana_diagnosis`, `htan_tnp_sardana_exposure`, `htan_tnp_sardana_familyhistory`, `htan_tnp_sardana_followup`, `htan_tnp_sardana_moleculartest`, `htan_tnp_sardana_therapy` | —       | —                                                                          |
+| HTAN-VANDERBILT               | `htan_vanderbilt_demographics`, `htan_vanderbilt_diagnosis`, `htan_vanderbilt_exposure`, `htan_vanderbilt_familyhistory`, `htan_vanderbilt_followup`, `htan_vanderbilt_moleculartest`, `htan_vanderbilt_therapy`        | —       | —                                                                          |
+| HTAN-WUSTL                    | `htan_wustl_demographics`, `htan_wustl_diagnosis`, `htan_wustl_exposure`, `htan_wustl_familyhistory`, `htan_wustl_followup`, `htan_wustl_therapy`                                                                       | —       | —                                                                          |
+| LDCT-and-Projection-data      | `ldct_and_projection_data_abdomen_v11`, `ldct_and_projection_data_chest_v11`, `ldct_and_projection_data_head_v11`                                                                                                       | —       | `ldct_and_projection_data_abdomen_v9`, `ldct_and_projection_data_chest_v9` |
+| TCGA-ACC                      | `tcga_acc_clinical`                                                                                                                                                                                                     | —       | —                                                                          |
+| TCGA-BLCA                     | `tcga_blca_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-BRCA                     | `tcga_brca_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-CESC                     | `tcga_cesc_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-CHOL                     | `tcga_chol_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-COAD                     | `tcga_coad_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-DLBC                     | `tcga_dlbc_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-ESCA                     | `tcga_esca_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-GBM                      | `tcga_gbm_clinical`                                                                                                                                                                                                     | —       | —                                                                          |
+| TCGA-HNSC                     | `tcga_hnsc_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-KICH                     | `tcga_kich_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-KIRC                     | `tcga_kirc_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-KIRP                     | `tcga_kirp_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-LGG                      | `tcga_lgg_clinical`                                                                                                                                                                                                     | —       | —                                                                          |
+| TCGA-LIHC                     | `tcga_lihc_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-LUAD                     | `tcga_luad_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-LUSC                     | `tcga_lusc_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-MESO                     | `tcga_meso_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-OV                       | `tcga_ov_clinical`                                                                                                                                                                                                      | —       | —                                                                          |
+| TCGA-PAAD                     | `tcga_paad_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-PCPG                     | `tcga_pcpg_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-PRAD                     | `tcga_prad_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-READ                     | `tcga_read_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-SARC                     | `tcga_sarc_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-SKCM                     | `tcga_skcm_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-STAD                     | `tcga_stad_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-TGCT                     | `tcga_tgct_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-THCA                     | `tcga_thca_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-THYM                     | `tcga_thym_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-UCEC                     | `tcga_ucec_clinical`                                                                                                                                                                                                    | —       | —                                                                          |
+| TCGA-UCS                      | `tcga_ucs_clinical`                                                                                                                                                                                                     | —       | —                                                                          |
+| TCGA-UVM                      | `tcga_uvm_clinical`                                                                                                                                                                                                     | —       | —                                                                          |
+
 ## V24 - May 2026
 
 ### New Collections
@@ -74,78 +376,78 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 ### Revised Collections
 
-| Collection                                     | Change Summary                                                                                                                                                                                                                                                                          | Patients (delta) | Series (delta) | Source              |
-|------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ---------------- | -------------- | ------------------- |
-| BoneMarrowWSI-PediatricLeukemia                | Replaced all 1,033 ANN series with 1,027 new ANN; removed 1 SM series from 1 patient                                                                                                                                                                                                    | -1               | -7             | BMDeep/Fraunhofer MEVIS |
-| ACRIN-NSCLC-FDG-PET                            | modality was changed from SC to OT in 4 series                                                                                                                                                                                                                                          | 0 | 0 | https://www.cancerimagingarchive.net/collection/acrin-nsclc-fdg-pet/ |
-| Anti-PD-1_Lung | modality was changed from SC to OT in 3 series                                                                                                                                                                                                                                          | 0 | 0 | https://www.cancerimagingarchive.net/collection/anti-pd-1_lung/
-| Phantom FDA | Phantom FDA DICOM instance data moved to gs://idc-open-data and s3://idc-open-data buckets from gs://idc-open-cr and s3://idc-open-data-cr buckets respectively. The Phantom FDA data in gs://idc-open-cr and s3://idc-open-data-cr will be available through IDC versions v24 and v25. | 0 | 0 | |
+| Collection                      | Change Summary                                                                                                                                                                                                                                                                          | Patients (delta) | Series (delta) | Source                                                               |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------- | -------------------------------------------------------------------- |
+| BoneMarrowWSI-PediatricLeukemia | Replaced all 1,033 ANN series with 1,027 new ANN; removed 1 SM series from 1 patient                                                                                                                                                                                                    | -1               | -7             | BMDeep/Fraunhofer MEVIS                                              |
+| ACRIN-NSCLC-FDG-PET             | modality was changed from SC to OT in 4 series                                                                                                                                                                                                                                          | 0                | 0              | https://www.cancerimagingarchive.net/collection/acrin-nsclc-fdg-pet/ |
+| Anti-PD-1\_Lung                 | modality was changed from SC to OT in 3 series                                                                                                                                                                                                                                          | 0                | 0              | https://www.cancerimagingarchive.net/collection/anti-pd-1\_lung/     |
+| Phantom FDA                     | Phantom FDA DICOM instance data moved to gs://idc-open-data and s3://idc-open-data buckets from gs://idc-open-cr and s3://idc-open-data-cr buckets respectively. The Phantom FDA data in gs://idc-open-cr and s3://idc-open-data-cr will be available through IDC versions v24 and v25. | 0                | 0              |                                                                      |
 
 ### New metadata BQ Tables (non-clinical)
 
-| Table Name                | Description                                                                                |
-|---------------------------|--------------------------------------------------------------------------------------------|
-| program_metadata | Metadata about each IDC program |
+| Table Name        | Description                     |
+| ----------------- | ------------------------------- |
+| program\_metadata | Metadata about each IDC program |
 
 ### Revised BQ Tables (non-clinical)
 
-- analysis_results_metadata
-    - added columns:
-      - analysis_result_id
-    - column id changes:
-      - ID --> analysis_result_name
-      - Title --> analysis_result_title
-      - CancerTypes --> cancer_types
-      - TumorLocations --> tumor_locations
-      - Subjects -->s ubjects
-      - Collections --> collections
-      - Modalities --> modalities
-      - Updated --> updated
-      - Description --> description
-    - deprecated columns
-      - ID
-      - Title
-      - CancerTypes
-      - TumorLocations
-- auxiliary_metadata
-  - column id changes
-    - submitter_case_id --> Patient_id
-  - deprecated columns
-    - submitter_case_id
-    - Access 
-- dicom_metadata_curated
-  - added columns  
-    cancer_types
-- original_collection_metadata
-  - added columns
-    - sources.source_id
-    - sources.source_name
-    - sources.source_type
-  - column id changes
-    - CancerTypes --> cancer_types
-    - TumorLocations --> tumor_locations
-    - Subject --> subjects
-    - Species --> species
-    - Sources --> sources
-    - Sources.ImageTypes --> sources.modalities
-    - Sources.Citation --> source.citation
-    - SupportingData --> supporting_data
-    - Program --> program_id
-    - Status --> status
-    - Updated --> updated
-    - Description --> description
-  - Deprecated columns
-    - Sources.Access
-    - Sources.ImageTypes
-    - CancerTypes
-    - TumorLocations
-    - SupportingData
-    - Program
+* analysis\_results\_metadata
+  * added columns:
+    * analysis\_result\_id
+  * column id changes:
+    * ID --> analysis\_result\_name
+    * Title --> analysis\_result\_title
+    * CancerTypes --> cancer\_types
+    * TumorLocations --> tumor\_locations
+    * Subjects -->s ubjects
+    * Collections --> collections
+    * Modalities --> modalities
+    * Updated --> updated
+    * Description --> description
+  * deprecated columns
+    * ID
+    * Title
+    * CancerTypes
+    * TumorLocations
+* auxiliary\_metadata
+  * column id changes
+    * submitter\_case\_id --> Patient\_id
+  * deprecated columns
+    * submitter\_case\_id
+    * Access
+* dicom\_metadata\_curated
+  * added columns\
+    cancer\_types
+* original\_collection\_metadata
+  * added columns
+    * sources.source\_id
+    * sources.source\_name
+    * sources.source\_type
+  * column id changes
+    * CancerTypes --> cancer\_types
+    * TumorLocations --> tumor\_locations
+    * Subject --> subjects
+    * Species --> species
+    * Sources --> sources
+    * Sources.ImageTypes --> sources.modalities
+    * Sources.Citation --> source.citation
+    * SupportingData --> supporting\_data
+    * Program --> program\_id
+    * Status --> status
+    * Updated --> updated
+    * Description --> description
+  * Deprecated columns
+    * Sources.Access
+    * Sources.ImageTypes
+    * CancerTypes
+    * TumorLocations
+    * SupportingData
+    * Program
 
 ### New clinical metadata BQ tables
 
-- ldct_and_projection_data_abdomen_v9
-- ldct_and_projection_data_chest_v9
+* ldct\_and\_projection\_data\_abdomen\_v9
+* ldct\_and\_projection\_data\_chest\_v9
 
 ## V23 - Nov 2025
 
