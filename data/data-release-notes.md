@@ -21,7 +21,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 | Clinical tables added    |    80 |
 | Clinical tables removed  |     2 |
 
-#### New Collections
+### New Collections
 
 | Collection         | Program   | Cancer Type                                    | Modality         | Patients | Series | Source                     |
 | ------------------ | --------- | ---------------------------------------------- | ---------------- | -------: | -----: | -------------------------- |
@@ -35,7 +35,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 **QIN-SARCOMA** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=qin_sarcoma) | [DOI 10.7937/K9/TCIA.2016.fXL9sESs](https://doi.org/10.7937/K9/TCIA.2016.fXL9sESs)) — Longitudinal DCE-MRI of 15 patients with soft-tissue sarcoma, acquired at Oregon Health & Science University to assess response to preoperative chemoradiation, with up to three imaging time points per patient. 38 studies, 2,168 MR series. Formerly limited-access; TCIA made the collection public in April 2026. Sourced as-is in DICOM from TCIA.
 
-#### New Analysis Results
+### New Analysis Results
 
 | Analysis Result    | Program    | Cancer Type                                                                                       | Modality | Subjects | Series | Source                |
 | ------------------ | ---------- | ------------------------------------------------------------------------------------------------- | -------- | -------: | -----: | --------------------- |
@@ -48,7 +48,7 @@ Please refer to the license and terms of use, which are defined in the `license_
 
 **These are the archive's first LABELMAP segmentations.** As of v24 `seg_index` holds 172,908 BINARY and 17,238 FRACTIONAL series and no LABELMAP at all, so nothing downstream has been exercised against the type. A BINARY variant was generated in parallel and verified to decode identically, as a fallback if LABELMAP support proves insufficient.
 
-#### Updated Collections
+### Updated Collections
 
 **JPEG 2000 whole-slide images corrected across 52 collections.** 40,660 slide microscopy instances — about 10% of the archive's 391,932 SM instances — are replaced to correct the DICOM attributes that tell a decoder how to interpret their JPEG 2000 pixel data. The symptom was colour corruption on affected slides, reported against OpenSlide in [openslide/openslide#772](https://github.com/openslide/openslide/issues/772).
 
@@ -256,7 +256,7 @@ With the update applied, EA1141 in IDC matches TCIA's CC BY 4.0 download exactly
 
 **Pan-Cancer-Nuclei-Seg-DICOM** ([IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/filters/?analysis_results_id=Pan-Cancer-Nuclei-Seg-DICOM) | [DOI 10.5281/zenodo.11099004](https://doi.org/10.5281/zenodo.11099004)) — Deletion only; no new data. Ten TCGA-LUAD whole-slide images each carried two visually identical ANN series and two visually identical SEG series. One complete series of each pair is removed — 20 series, 54 instances in total — leaving one copy of every annotation in place. No series is partially deleted and no other collection in the analysis result is affected.
 
-#### Clinical Tables
+### Clinical Tables
 
 _Tables in the `idc_v25_clinical` BigQuery dataset compared with `idc_v24_clinical`. A table is updated when its content changed._
 
