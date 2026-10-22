@@ -16,7 +16,7 @@ The current API release is version 3 (v3), in **beta**. The `/v3` contract may s
 
 Explore every endpoint interactively in the [Swagger UI](https://api.imaging.datacommons.cancer.gov/v3/docs), or fetch the machine-readable [OpenAPI specification](https://api.imaging.datacommons.cancer.gov/v3/openapi.json).
 
-Writing the calls yourself is only one way in — the same capabilities are also exposed as agent tools. If you would rather have an AI assistant do the querying, see [Using IDC with an AI assistant](../agents/README.md).
+Writing the calls yourself is only one way in — the same capabilities are also exposed as agent tools. If you would rather have an LLM assistant do the querying, see [Using IDC with an LLM assistant](../agents/README.md).
 
 ## What you can do
 

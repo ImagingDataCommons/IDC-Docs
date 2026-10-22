@@ -1,7 +1,7 @@
 # 🚀 Getting started
 
 {% hint style="info" %}
-**New: query IDC from your AI assistant in plain conversation — see** [**Using IDC with an AI assistant**](agents/README.md) **— or call the** [**REST API (v3)**](api/README.md) **directly.**
+**New: query IDC from your large language model (LLM) assistant in plain conversation — see** [**Using IDC with an LLM assistant**](agents/README.md) **— or call the** [**REST API (v3)**](api/README.md) **directly.**
 {% endhint %}
 
 {% hint style="info" %}
@@ -25,7 +25,7 @@ We have many tools to help you search data in IDC, so that you download only wha
 * you can do basic filtering/subsetting of the data using IDC Portal, but if you are developer, you will want to learn how to use [`idc-index` python package](https://github.com/ImagingDataCommons/idc-index) for programmatic access. [This python notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part2_searching_basics.ipynb) will introduce you to the basics of `idc-index` for interaction with IDC content.
 * search clinical data: many of the IDC collections are accompanied by clinical data, which we parsed for you into searchable tabular representation - no need to download or parse CSV/Excel/PDF files! Dive into searching clinical data using [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/exploring_clinical_data.ipynb).
 * if advanced content does not scare you, check out [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/getting_started/part3_exploring_cohorts.ipynb) to learn how to search **all** of the metadata accompanying IDC using SQL and Google BigQuery.
-* prefer plain HTTP, or want an AI assistant to do the searching? The [IDC REST API](api/README.md) exposes discovery, cohort building, downloads, SQL and citations over HTTP/JSON, and the same capabilities are available to Claude and other agents — see [Using IDC with an AI assistant](agents/README.md).
+* prefer plain HTTP, or want an LLM assistant to do the searching? The [IDC REST API](api/README.md) exposes discovery, cohort building, downloads, SQL and citations over HTTP/JSON, and the same capabilities are available to Claude and other agents — see [Using IDC with an LLM assistant](agents/README.md).
 
 ### **Download the data you liked**
 
@@ -36,11 +36,11 @@ We provide various tools for downloading data from IDC, as discussed in the [Dow
 
 ### **Experiment with analysis tools**
 
-We want to make it easier to understand performance of the latest advances in AI on real-world cancer imaging data!
+We want to make it easier to understand performance of the latest advances in machine learning (ML) on real-world cancer imaging data!
 
-* if you have a Google account, you have free access to Google Colab, which allows you to run python notebooks on cloud VMs equipped with GPU - for free! Combined with `idc-index` for data access, this makes it rather easy to experiment with the latest AI tools! As an example, take a look at [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/MedSAM_with_IDC.ipynb) that allows you to apply MedSAM model to IDC data. You will find a growing number of notebooks to help you use IDC in [this repository](https://github.com/ImagingDataCommons/IDC-Tutorials).
+* if you have a Google account, you have free access to Google Colab, which allows you to run python notebooks on cloud VMs equipped with GPU - for free! Combined with `idc-index` for data access, this makes it rather easy to experiment with the latest ML tools! As an example, take a look at [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/MedSAM_with_IDC.ipynb) that allows you to apply MedSAM model to IDC data. You will find a growing number of notebooks to help you use IDC in [this repository](https://github.com/ImagingDataCommons/IDC-Tutorials).
 * use IDC to develop HuggingFace spaces that demonstrate the power of your models on real data: see [this space](https://huggingface.co/spaces/ImagingDataCommons/SegVolOnIDC) we developed for SegVol
-* growing number of AI medical imaging models is being curated on the [MHub.ai](https://mhub.ai) platform; see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/mhubai_tutorial.ipynb) to learn how to apply those models on data from IDC
+* growing number of medical imaging ML models is being curated on the [MHub.ai](https://mhub.ai) platform; see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/analysis/mhubai_tutorial.ipynb) to learn how to apply those models on data from IDC
 
 How about accompanying your next publication by a working demonstration notebook on relevant samples from IDC? You can see an example how we did this in [this recent publication](https://dx.doi.org/10.1016/j.cmpb.2023.107839).
 

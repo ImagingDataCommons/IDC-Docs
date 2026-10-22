@@ -10,5 +10,5 @@ We maintain the following resources to enable access to IDC data:
 * BigQuery tables: collection-level metadata, DICOM metadata, [clinical data tables](clinical.md) available via SQL query interface.
 * Python API: pip-installable [idc-index package](https://idc-index.readthedocs.io/en/latest/) provides a programmatic interface and command-line tools to search IDC data using most important metadata attributes, and to download files corresponding to the selected cohorts from the cloud buckets
 * [REST API](../../api/README.md): language-independent HTTP API (v3) for discovering, subsetting, and downloading data
-* [AI assistant access](../../agents/README.md): the same capabilities exposed to Claude and other LLM agents, via a hosted MCP server or the IDC agent skill
+* [LLM assistant access](../../agents/README.md): the same capabilities exposed to Claude and other LLM agents, via a hosted MCP server or the IDC agent skill
 * [DICOMweb](dicom-stores.md): DICOM files and metadata queries available from Google Healthcare DICOM stores

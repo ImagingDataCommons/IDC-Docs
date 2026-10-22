@@ -1,6 +1,6 @@
 # The IDC agent skill
 
-The [Imaging Data Commons Skill](https://github.com/ImagingDataCommons/imaging-data-commons-skill) is an [Agent Skill](https://agentskills.io/): a packaged set of instructions, reference guides, and helper scripts that an AI assistant loads on demand when you ask it about cancer imaging data.
+The [Imaging Data Commons Skill](https://github.com/ImagingDataCommons/imaging-data-commons-skill) is an [Agent Skill](https://agentskills.io/): a packaged set of instructions, reference guides, and helper scripts that a large language model (LLM) assistant loads on demand when you ask it about cancer imaging data.
 
 It is not Claude-specific. It follows the open Agent Skills format, so it works with Claude (claude.ai, Claude Desktop, Claude Code, API) and with any other agent that supports the format — or you can load its instruction file into any assistant's context by hand.
 
@@ -46,7 +46,7 @@ They overlap, and running both is the recommended setup.
 * The skill adds the surfaces listed above, and does its metadata work locally rather than over the network.
 * If your assistant can run Python, there is no downside to having both installed — the skill's own setup guide walks through adding the server alongside it.
 
-If you would rather see the three access paths side by side, see [Using IDC with an AI assistant](../README.md).
+If you would rather see the three access paths side by side, see [Using IDC with an LLM assistant](../README.md).
 
 ## Staying current
 

@@ -31,9 +31,9 @@ Although IDC data is stored in DICOM format, it can be converted into alternativ
 
 ## Support of continuous enrichment of data
 
-We welcome you to apply to contribute analysis results and annotations of the images available in IDC! These can be expert manual annotations, analysis results generated using AI tools, segmentations, contours, metadata attributes describing the data (e.g., annotation of the scan type), expert evaluation of the quality of existing AI-generated annotations in IDC.
+We welcome you to apply to contribute analysis results and annotations of the images available in IDC! These can be expert manual annotations, analysis results generated using machine learning (ML) tools, segmentations, contours, metadata attributes describing the data (e.g., annotation of the scan type), expert evaluation of the quality of existing ML-generated annotations in IDC.
 
-If you would like your annotations/analysis results to be considered, you must establish the value of your contribution (e.g., describe the qualifications of the experts performing manual annotations, demonstrate robustness of the AI tool you are applying to images with a peer-reviewed publication or other type of evidence), and be willing to share your contribution under a permissive Creative Commons Attribution [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/deed.en).&#x20;
+If you would like your annotations/analysis results to be considered, you must establish the value of your contribution (e.g., describe the qualifications of the experts performing manual annotations, demonstrate robustness of the ML tool you are applying to images with a peer-reviewed publication or other type of evidence), and be willing to share your contribution under a permissive Creative Commons Attribution [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/deed.en).&#x20;
 
 See more details on our curation policy [here](https://zenodo.org/communities/nci-idc/curation-policy), and reach out by sending email to [support+submissions@canceridc.dev](https://mail.google.com/mail/?view=cm\&fs=1\&tf=1\&to=support+submissions@canceridc.dev) with any questions or inquries. Every application will be reviewed by IDC stakeholders.
 
@@ -51,5 +51,5 @@ IDC is a component of the broader NCI [Cancer Research Data Commons (CRDC)](http
 
 * [Cancer Data Aggregator (CDA)](https://cda.readthedocs.io/en/latest/) can be used to find data related to the images in IDC in [Genomics Data Commons](https://portal.gdc.cancer.gov/), [Proteomics Data Commons](https://pdc.cancer.gov/pdc/) and [Integrated Canine Data Commons](https://caninecommons.cancer.gov/)
 * Broad [FireCloud](https://firecloud.terra.bio/) and [Seven Bridges Cancer Genimics Cloud](https://www.cancergenomicscloud.org/) (SB-CGC) can be used to apply analysis tools to the data in IDC (you can read more about how this can be done in [this preprint](https://doi.org/10.21203/rs.3.rs-4351526/v1) from the IDC team)
-* [MHub.AI](https://mhub.ai/) platform curates a growing number of cancer imaging AI models that can be applied directly to the DICOM data available in IDC
+* [MHub.AI](https://mhub.ai/) platform curates a growing number of cancer imaging ML models that can be applied directly to the DICOM data available in IDC
 

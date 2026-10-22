@@ -43,7 +43,7 @@
 * [Data release notes](data/data-release-notes.md)
 * [Data known issues](data/data-known-issues.md)
 
-## AI assistants
+## LLM assistants <a href="#ai-assistants" id="ai-assistants"></a>
 
 * [Start here](agents/README.md)
 * [Hosted server (MCP)](mcp/README.md)

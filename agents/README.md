@@ -1,6 +1,6 @@
 # Start here
 
-_You can ask an AI assistant to search IDC, size and refine a cohort, check licenses, generate citations, and hand you a download command — in plain conversation, without writing any code._
+_You can ask an assistant built on a large language model (LLM) to search IDC, size and refine a cohort, check licenses, generate citations, and hand you a download command — in plain conversation, without writing any code._
 
 There are two ways to give an assistant that ability, and a third option if you would rather write the code yourself.
 
