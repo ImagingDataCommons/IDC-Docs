@@ -32,7 +32,7 @@ Every license used in IDC - CC BY and CC BY-NC alike - requires **attribution**.
 
 That is because a collection is not licensed as a whole. It is composed of one or more **contributing sources**, each bringing its own DOI, license and citation - `collections_index` records them in its `sources` field, tagged `original_data` or `analysis_result`. A collection carries several licenses whenever its sources do, which happens in two ways.
 
-**A contributed analysis result brings its own license.** An analysis result is a collection in its own right, but its series keep the `collection_id` of the images they analyze - so they sit inside the original collection under different terms. In NSCLC-Radiomics, the original CT images are CC BY-NC 3.0, while the AI-derived annotations added later are CC BY 4.0:
+**A contributed analysis result brings its own license.** An analysis result is a collection in its own right, but its series keep the `collection_id` of the images they analyze - so they sit inside the original collection under different terms. In NSCLC-Radiomics, the original CT images are CC BY-NC 3.0, while the annotations added later, derived using machine learning (ML), are CC BY 4.0:
 
 ```
 license_short_name  series  size_GB
@@ -51,7 +51,7 @@ license_short_name  series  size_GB
 {% endhint %}
 
 {% hint style="info" %}
-**The license is not inside the DICOM file.** It is metadata that IDC maintains alongside the files, not a DICOM attribute, so it does not travel with the `.dcm` files you download. Nothing is lost, though: the `SeriesInstanceUID` _is_ in the file, and it is the only thing you need to retrieve the license again at any later time - through `idc-index`, an AI assistant, the REST API or BigQuery, as shown below. Prefer looking it up to relying on a value you recorded earlier: license assignments are among the mutable metadata IDC may revise between releases - see `mutable_metadata` in [bigquery-tables.md](organization-of-data/bigquery-tables.md "mention").
+**The license is not inside the DICOM file.** It is metadata that IDC maintains alongside the files, not a DICOM attribute, so it does not travel with the `.dcm` files you download. Nothing is lost, though: the `SeriesInstanceUID` _is_ in the file, and it is the only thing you need to retrieve the license again at any later time - through `idc-index`, an LLM assistant, the REST API or BigQuery, as shown below. Prefer looking it up to relying on a value you recorded earlier: license assignments are among the mutable metadata IDC may revise between releases - see `mutable_metadata` in [bigquery-tables.md](organization-of-data/bigquery-tables.md "mention").
 {% endhint %}
 
 ## Checking the license for your selection
@@ -96,9 +96,9 @@ WHERE Modality = 'CT'
   AND license_short_name IN ('CC BY 3.0', 'CC BY 4.0')
 ```
 
-### AI assistants
+### LLM assistants <a href="#ai-assistants" id="ai-assistants"></a>
 
-Ask the assistant for the license breakdown of your cohort before you download it; the `get_licenses` tool answers exactly the question below. See [Using IDC with an AI assistant](../agents/README.md).
+Ask the assistant for the license breakdown of your cohort before you download it; the `get_licenses` tool answers exactly the question below. See [Using IDC with an LLM assistant](../agents/README.md).
 
 ### REST API
 
@@ -157,7 +157,7 @@ GROUP BY source_DOI, license_short_name
 
 The same selection can span several DOIs and several licenses at once. Even selecting a single patient can do it: in the PROSTATEx example in [data-model.md](data-model.md "mention"), one patient's study spans five DOIs from four contributing groups, under two different licenses.
 
-You do not have to assemble the citations by hand. `POST /v3/citations` (or the `get_citations` tool, if you are working through an AI assistant) resolves the `source_DOI` values of the series matched by your filter into formatted citations. The filter below happens to name a collection, but any cohort filter works - down to a single `SeriesInstanceUID`:
+You do not have to assemble the citations by hand. `POST /v3/citations` (or the `get_citations` tool, if you are working through an LLM assistant) resolves the `source_DOI` values of the series matched by your filter into formatted citations. The filter below happens to name a collection, but any cohort filter works - down to a single `SeriesInstanceUID`:
 
 ```bash
 curl -s https://api.imaging.datacommons.cancer.gov/v3/citations \
@@ -165,7 +165,7 @@ curl -s https://api.imaging.datacommons.cancer.gov/v3/citations \
   -d '{"filters": {"terms": {"collection_id": ["nsclc_radiomics"]}}, "citation_format": "apa"}'
 ```
 
-This selection covers two DOIs, so two citations come back - one for the original images, one for the AI-derived annotations that were added to the same collection:
+This selection covers two DOIs, so two citations come back - one for the original images, one for the ML-derived annotations that were added to the same collection:
 
 > Aerts, H. J. W. L., Wee, L., Rios Velazquez, E., et al. (2019). _Data From NSCLC-Radiomics_ (Version 4) \[Dataset]. The Cancer Imaging Archive. [https://doi.org/10.7937/K9/TCIA.2015.PF0M9REI](https://doi.org/10.7937/K9/TCIA.2015.PF0M9REI)
 >

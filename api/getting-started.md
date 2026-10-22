@@ -51,7 +51,7 @@ The `manifest` response includes `idc` CLI commands you can run as-is to downloa
 * [Core concepts](idc-api-concepts.md) explains the data model, the query surfaces, and the recommended workflow — worth reading before you go beyond simple filters.
 * [Endpoint reference](endpoint-details.md) lists every endpoint with worked examples.
 * [Querying with SQL](querying-with-sql.md) covers questions that attribute filters can't express — joins, aggregations, and clinical data.
-* Prefer to have an LLM agent do the querying? See [Using IDC with an AI assistant](../agents/README.md) — the same capabilities, exposed as agent tools.
+* Prefer to have an LLM agent do the querying? See [Using IDC with an LLM assistant](../agents/README.md) — the same capabilities, exposed as agent tools.
 
 {% hint style="info" %}
 If you have feedback about the desired features of the IDC API, please let us know via the IDC [support forum](https://discourse.canceridc.dev).

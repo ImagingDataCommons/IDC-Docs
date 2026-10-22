@@ -22,7 +22,7 @@ The MCP server and the [REST API](../api/README.md) are two surfaces over a sing
 
 Because the two share a backend, the [data model](../api/idc-api-concepts.md#the-data-model) and [query surfaces](../api/idc-api-concepts.md#the-query-surfaces-and-how-they-relate) documented for the REST API apply unchanged to MCP.
 
-For how this server compares with the [IDC agent skill](../agents/skill/README.md) — the other way to give an assistant access to IDC — see [Using IDC with an AI assistant](../agents/README.md).
+For how this server compares with the [IDC agent skill](../agents/skill/README.md) — the other way to give an assistant access to IDC — see [Using IDC with an LLM assistant](../agents/README.md).
 
 ## In this section
 
