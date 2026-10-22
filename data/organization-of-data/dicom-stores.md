@@ -28,7 +28,7 @@ https://proxy.imaging.datacommons.cancer.gov/current/viewer-only-no-downloads-se
 
 This store replicates all of the data from the `idc-open-data` bucket, which contains most of the data in IDC (learn more about the organization of data in IDC buckets from [this documentation article](files-and-metadata.md#storage-buckets)).
 
-DICOMweb URL (note the store name includes the IDC data release version that corresponds to its content: `idc-store-v23`):
+DICOMweb URL (note the store name includes the IDC data release version that corresponds to its content: `idc-store-v24`):
 
 {% code overflow="wrap" %}
 ```
