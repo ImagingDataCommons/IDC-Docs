@@ -1,6 +1,6 @@
 # DICOM stores
 
-If you would like to access IDC data via [DICOMweb interface](https://www.dicomstandard.org/using/dicomweb), you have two options:&#x20;
+If you would like to access IDC data via [DICOMweb interface](https://www.dicomstandard.org/using/dicomweb), you have two options:
 
 1. IDC-maintained DICOM store available via proxy
 2. DICOM store maintained by Google Healthcare
@@ -26,17 +26,17 @@ https://proxy.imaging.datacommons.cancer.gov/current/viewer-only-no-downloads-se
 
 ### DICOM store maintained by Google Healthcare
 
-This store replicates all of the data from the `idc-open-data` bucket, which contains most of the data in IDC (learn more about the organization of data in IDC buckets from [this documentation article](files-and-metadata.md#storage-buckets)).&#x20;
+This store replicates all of the data from the `idc-open-data` bucket, which contains most of the data in IDC (learn more about the organization of data in IDC buckets from [this documentation article](files-and-metadata.md#storage-buckets)).
 
 DICOMweb URL (note the store name includes the IDC data release version that corresponds to its content: `idc-store-v23`):
 
 {% code overflow="wrap" %}
 ```
-https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/idc-store-v23/dicomWeb
+https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/idc-store-v24/dicomWeb
 ```
 {% endcode %}
 
-This DICOM store is documented in [https://cloud.google.com/healthcare-api/docs/resources/public-datasets/idc](https://cloud.google.com/healthcare-api/docs/resources/public-datasets/idc).&#x20;
+This DICOM store is documented in [https://cloud.google.com/healthcare-api/docs/resources/public-datasets/idc](https://cloud.google.com/healthcare-api/docs/resources/public-datasets/idc).
 
 **Limitations**:
 
@@ -90,6 +90,6 @@ idc-open-data-two    4473
 
 _TL;DR: our goal is to have the two stores in sync within 1-2 weeks of each IDC data release._
 
-The DICOM store maintained by IDC is updated by the IDC team with each new release.&#x20;
+The DICOM store maintained by IDC is updated by the IDC team with each new release.
 
 The DICOM store maintained by Google Healthcare is populated after the release. We hope to have that done within 1-2 weeks after the IDC release. As a new release of IDC data is out, there will be a new DICOM store maintained by Google Healthcare, and the connection to the IDC release version will be indicated in the store name. I.e., when the new IDC data release is out, whenever you are able to access `https://healthcare.googleapis.com/v1/projects/nci-idc-data/locations/us-central1/datasets/idc/dicomStores/` **idc-store-v\<release\_number>**`/dicomWeb` , it is expected to be in sync.
