@@ -21,7 +21,7 @@ Annotations need standard codes to describe what was annotated. See [Coding sche
 
 Open-source tools that can help:
 
-* [dcmqi](https://github.com/QIICR/dcmqi): command-line tools that need no programming; you describe the content in JSON files. They convert segmentations from research formats such as NIfTI and NRRD into DICOM SEG, and tabular data, such as radiomics features derived from segmentations, into DICOM SR.
+* [dcmqi](https://github.com/QIICR/dcmqi): command-line tools that need no programming; you describe the content in JSON files. They convert segmentations from research formats such as NIfTI and NRRD into DICOM SEG, and tabular data, such as radiomics features derived from segmentations, into DICOM SR. The tools can be installed with `pip install dcmqi` (see the [PyPI dcmqi package](https://pypi.org/project/dcmqi/)).
 * [highdicom](https://github.com/ImagingDataCommons/highdicom): a Python library for creating DICOM SEG, SR, ANN and other objects. Using it means writing Python code.
 * [wsidicomizer](https://github.com/imi-bigpicture/wsidicomizer): converts whole slide images from vendor formats into DICOM SM
 * [dciodvfy](https://www.dclunie.com/dicom3tools.html), part of dicom3tools: checks DICOM files against the standard (can be installed from the [PyPI dicom3tools package](https://pypi.org/project/dicom3tools/))
