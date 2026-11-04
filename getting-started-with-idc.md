@@ -55,10 +55,9 @@ With the cloud, you can do things that are simply impossible to do with your loc
 
 If you have an algorithm, that you evaluated/published, that can enrich data in IDC with analysis results and you want to contribute those, or if you are a domain expert and would like to publish results of manual annotations you prepared - we want to hear from you!
 
-* IDC maintains a [Zenodo community](https://zenodo.org/communities/nci-idc) where we curate contributions of analysis results and other datasets produced by IDC (see the [expert annotations of the RMS-Mutations-Prediction microscopy images collection](https://zenodo.org/records/10462858) as one example of such contribution)
-* through a dedicated Zenodo record you will have a citation and DOI to get credit for your work; your data is ingested from Zenodo into IDC, and citation will be generated for the users of your data in IDC
-* once your data is in IDC, it should be easier to discover it, combine with other datasets, visualize and use from analysis workflows (as an example, see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/collections_demos/rms_mutation_prediction/RMS-Mutation-Prediction-Expert-Annotations_exploration.ipynb) accompanying the RMS annotations)
-* email us at [support+submissions@canceridc.dev](https://mail.google.com/mail/?view=cm\&fs=1\&tf=1\&to=support+submissions@canceridc.dev) to inquire about contributing your annotations/analysis results to IDC!
+* contributions get a DOI and a citation, so you get credit for your work and users of your data in IDC are pointed to the citation. For example, see the [expert annotations of the RMS-Mutation-Prediction microscopy images collection](https://zenodo.org/records/10462858) in the [IDC Zenodo community](https://zenodo.org/communities/nci-idc).
+* once your data is in IDC, it should be easier to discover it, combine it with other datasets, visualize it and use it in analysis workflows. As an example, see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/collections_demos/rms_mutation_prediction/RMS-Mutation-Prediction-Expert-Annotations_exploration.ipynb) accompanying the RMS annotations.
+* see [Contributing data](contributing-data.md) for the requirements and the process, and email us at [support+submissions@canceridc.dev](mailto:support+submissions@canceridc.dev) to get started!
 
 ### Questions?
 

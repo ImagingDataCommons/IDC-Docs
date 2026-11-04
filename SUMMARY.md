@@ -3,6 +3,7 @@
 * [Welcome!](README.md)
 * [🚀 Getting started](getting-started-with-idc.md)
 * [Core functions](core-functions-of-idc.md)
+* [Contributing data](contributing-data.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Support](support.md)
 * [Key pointers](idc-key-pointers.md)

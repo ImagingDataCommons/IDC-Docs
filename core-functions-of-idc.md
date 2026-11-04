@@ -4,7 +4,7 @@
 
 We ingest and distribute datasets from variety of sources and contributors, primarily focusing on large data collection initiatives sponsored by US National Cancer Institute.&#x20;
 
-At this time, we do not have resources to prioritize receipt of the imaging data from individual PIs (but we are encouraging submissions of annotations/analysis results for existing IDC data!). Nevertheless, if you feel you might have a compelling dataset, please email us at [support+submissions@canceridc.dev](https://mail.google.com/mail/?view=cm\&fs=1\&tf=1\&to=support+submissions@canceridc.dev).
+IDC prioritizes original image collections from NCI-funded driving projects and selected initiatives, and considers other strong datasets case by case. We also welcome annotations and analysis results for the images already in IDC. In addition, we identify valuable existing public datasets and convert them to DICOM ourselves. See [Contributing data](contributing-data.md) to learn how to contribute or suggest a dataset.
 
 On ingestion, we harmonize images and image-derived data into DICOM format for interoperability, whenever data is represented in a non-DICOM format.
 
@@ -33,17 +33,11 @@ Although IDC data is stored in DICOM format, it can be converted into alternativ
 
 We welcome you to apply to contribute analysis results and annotations of the images available in IDC! These can be expert manual annotations, analysis results generated using machine learning (ML) tools, segmentations, contours, metadata attributes describing the data (e.g., annotation of the scan type), expert evaluation of the quality of existing ML-generated annotations in IDC.
 
-If you would like your annotations/analysis results to be considered, you must establish the value of your contribution (e.g., describe the qualifications of the experts performing manual annotations, demonstrate robustness of the ML tool you are applying to images with a peer-reviewed publication or other type of evidence), and be willing to share your contribution under a permissive Creative Commons Attribution [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/deed.en).&#x20;
+To be considered, a contribution must demonstrate its value. For example, describe the qualifications of the experts who made manual annotations, or show the robustness of the ML tool with a peer-reviewed publication or other evidence. We strongly prefer that contributions are shared under the Creative Commons Attribution [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/deed.en). IDC stakeholders review every application, and IDC's capacity limits how many contributions we can take on and when.
 
-See more details on our curation policy [here](https://zenodo.org/communities/nci-idc/curation-policy), and reach out by sending email to [support+submissions@canceridc.dev](https://mail.google.com/mail/?view=cm\&fs=1\&tf=1\&to=support+submissions@canceridc.dev) with any questions or inquries. Every application will be reviewed by IDC stakeholders.
+If your contribution is accepted, we work with you to choose the appropriate DICOM object type and convert your data. Your contribution gets a DOI and a citation, so you receive recognition for your work. Once it is published in IDC, your data is searchable and viewable in the IDC Portal, and can be downloaded efficiently using `idc-index`.
 
-If your contribution is accepted by the IDC stakeholders:
-
-* we will work with you to choose the appropriate DICOM object type for your data and convert it into DICOM representation
-* upon conversion, we will create a Zenodo entry under the[NCI Imaging Data Commons Zenodo community](https://zenodo.org/communities/nci-idc/) for your contribution so that you get the Digital Object Identifier (DOI), citation and recognition of your contribution
-* once published in IDC
-  * your data will become searchable and viewable in IDC Portal, so it is easier for the users of your data to discover and work with your data
-  * files can be downloaded very efficiently using S3 interface and `idc-index`
+See [Contributing data](contributing-data.md) for the requirements and the process.
 
 ## Integration of cancer imaging data with other components of CRDC
 
