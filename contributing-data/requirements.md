@@ -42,4 +42,45 @@ How closely IDC reviews the documentation depends on the type of data:
 
 All data in IDC is in DICOM. If your data is in another format, IDC considers it only when conversion to DICOM is feasible. IDC then either converts it or guides you through the conversion (see [Preparing data in DICOM](preparing-data-in-dicom.md)).
 
+## Annotations of images in IDC
+
+{% hint style="warning" %}
+If you annotate or analyze images that are already in IDC, keep track of exactly which images each annotation or result applies to, using their DICOM UIDs. This is a prerequisite for converting your results to DICOM: without it, IDC cannot link your results to the images they describe.
+{% endhint %}
+
+The practices below make conversion possible and avoid rework. They are easiest to follow if you plan for them before you start annotating.
+
+### Track the images by UID
+
+* Record the SeriesInstanceUID of every series you annotated or analyzed. For annotations that apply to specific slices, frames or slides, also record the SOPInstanceUID of each image.
+* File names, folder paths or patient IDs alone are not enough, because they cannot be matched reliably to the images in IDC.
+* If you converted the images to another format for annotation, such as NIfTI, keep the mapping from each converted file back to the series and images it was made from.
+* Note which IDC data release you downloaded the images from. In idc-index, `IDCClient.get_idc_version()` returns it.
+
+Every DICOM file carries its UIDs in its header, and the IDC Portal manifests and idc-index list the SeriesInstanceUID of every series.
+
+### Preserve geometry
+
+* Annotate on the original pixel grid of the images.
+* If you converted the images to another format for annotation, do not resample, crop, flip or reorient the results. If you had to, record exactly what was done, so that the results can be mapped back to the original images.
+* Check how your conversion tool handled each series. Some tools split a series into several volumes, for example by acquisition number or echo, or reorder its slices. Record which images went into each volume. In the RCC-AID dataset, for example, series had been split by acquisition number before annotation, so each label map covered only part of its series (see [rcc-aid-conversion](https://github.com/ImagingDataCommons/rcc-aid-conversion)).
+* For point and region annotations, record whether coordinates are in pixels or in physical units. For slides, also record which image and resolution level the coordinates refer to.
+
+### Define every label
+
+* Provide a dictionary that says what each label value or class name means: the structure or finding, and its laterality where that applies. IDC uses it to describe each segment with standard codes (see [Coding schemes](../dicom/coding-schemes.md)).
+* For tabular results, such as measurements or radiomics features, define each column and its units, and link each row to the UIDs of the images and to the region it measures.
+
+### Record how the results were made
+
+* whether the annotations are manual, semi-automatic (for example, created by a model and corrected by a person) or automatic
+* who made them and their qualifications, per reader when several readers annotated the same images
+* the name, version and settings of the model or software used, including any software used to extract features
+
+DICOM needs this information. A DICOM segmentation, for example, must state whether each segment was made manually, semi-automatically or automatically, and must name the algorithm when one was used.
+
+### Record negative findings
+
+Record which images were reviewed and found to have nothing to annotate, separately from images that were never reviewed. Otherwise the two cannot be told apart: both are images without annotations.
+
 Ready to get in touch? See [Contribution process](contribution-process.md).

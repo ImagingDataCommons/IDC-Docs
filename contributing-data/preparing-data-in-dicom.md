@@ -4,6 +4,8 @@
 Converting data to DICOM is currently not easy. Please get in touch with IDC before you spend much time on conversion. IDC is happy for you to do the conversion yourself and will advise and guide you. Conversion results that have issues may need to be redone, and we do not want to waste your time.
 {% endhint %}
 
+To convert annotations of images in IDC, you need to know exactly which images, identified by their DICOM UIDs, each annotation applies to. See [Annotations of images in IDC](requirements.md#annotations-of-images-in-idc).
+
 ## Choosing a DICOM object
 
 IDC will confirm the right DICOM representation for your data before you start. As a rough guide:
