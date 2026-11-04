@@ -77,7 +77,7 @@ When IDC selects a dataset, it tries to reach the original authors. It invites t
 
 | Route | Dataset | What happened |
 | --- | --- | --- |
-| Through TCIA | LIDC-annot-NLST501 ([10.7937/y2dx-e334](https://doi.org/10.7937/y2dx-e334)) | Median Technologies published lung nodule segmentations on 501 NLST chest CT scans through TCIA, with the segmentations already converted to DICOM. IDC distributes the DICOM; the NIfTI masks and CSV tables remain on TCIA. |
+| Through TCIA | MRI-DIR ([10.7937/K9/TCIA.2018.3f08iejt](https://doi.org/10.7937/K9/TCIA.2018.3f08iejt)) | MR and CT images of a porcine phantom and of synthetic head and neck subjects, built at MD Anderson to measure the accuracy of deformable image registration, and published by TCIA. IDC distributes the DICOM images; the deformation vector fields, a MATLAB package, remain on TCIA. |
 | Direct: original collection | BoneMarrowWSI-PediatricLeukemia ([10.5281/zenodo.14933087](https://doi.org/10.5281/zenodo.14933087)) | Bone marrow aspirate smear slides with expert annotations and clinical data for 246 pediatric leukemia cases. Converted to DICOM SM and ANN by IDC. |
 | Direct: derived data | RMS-Mutation-Prediction-Expert-Annotations ([10.5281/zenodo.10462857](https://doi.org/10.5281/zenodo.10462857)) | Expert annotations of the slides in the RMS-Mutation-Prediction collection already in IDC. Converted to DICOM by IDC. |
 | Selected by IDC | RCC-AID ([10.5281/zenodo.22284133](https://doi.org/10.5281/zenodo.22284133)) | Kidney, tumor and cyst annotations of TCGA CT scans, published in NIfTI under CC BY 4.0 ([10.5281/zenodo.20719257](https://doi.org/10.5281/zenodo.20719257)). IDC selected the dataset and converted it to DICOM SEG. |
