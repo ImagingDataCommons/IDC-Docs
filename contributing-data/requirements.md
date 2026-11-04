@@ -38,6 +38,8 @@ How closely IDC reviews the documentation depends on the type of data:
 * **Digital pathology slides in vendor formats** are easier. IDC converts them to DICOM and controls which metadata is carried over.
 * **DICOM radiology** is riskier, because identifying information can remain in many places in the DICOM headers and in the pixel data. TCIA is currently the only entity IDC recognizes as qualified to de-identify DICOM radiology.
 
+If you annotate images that are already in IDC, make sure that annotating and converting them does not add identifying information back. See [Avoid adding identifying information](#avoid-adding-identifying-information).
+
 ## DICOM format
 
 All data in IDC is in DICOM. If your data is in another format, IDC considers it only when conversion to DICOM is feasible. IDC then either converts it or guides you through the conversion (see [Preparing data in DICOM](preparing-data-in-dicom.md)).
@@ -74,7 +76,7 @@ Every DICOM file carries its UIDs in its header, and the IDC Portal manifests an
 ### Record how the results were made
 
 * whether the annotations are manual, semi-automatic (for example, created by a model and corrected by a person) or automatic
-* who made them and their qualifications, per reader when several readers annotated the same images
+* who made them and their qualifications, per reader when several readers annotated the same images. In the data itself, identify readers by codes (see [Avoid adding identifying information](#avoid-adding-identifying-information)).
 * the name, version and settings of the model or software used, including any software used to extract features
 
 DICOM needs this information. A DICOM segmentation, for example, must state whether each segment was made manually, semi-automatically or automatically, and must name the algorithm when one was used.
@@ -82,5 +84,15 @@ DICOM needs this information. A DICOM segmentation, for example, must state whet
 ### Record negative findings
 
 Record which images were reviewed and found to have nothing to annotate, separately from images that were never reviewed. Otherwise the two cannot be told apart: both are images without annotations.
+
+### Avoid adding identifying information
+
+The images in IDC are de-identified. Identifying information about patients (PHI), or about other people (PII), can still be added back while you annotate or convert, especially if you convert to DICOM yourself. Make sure none of the following ends up in your results:
+
+* patient names, medical record numbers, dates or other identifiers in file names, folder paths or labels. Some tools write these into the files they produce.
+* names or other details of the people who annotated or converted the data. Software can pick these up from user accounts or computer names. In the data, identify annotators by codes such as "Reader 1" instead, and give their names and qualifications to IDC separately.
+* identifying details in free-text fields, such as comments, labels or segment descriptions
+
+If you convert to DICOM yourself, inspect the headers of the files you produce before you submit them, for example with [pydicom](https://pydicom.github.io/) or dcmdump.
 
 Ready to get in touch? See [Contribution process](contribution-process.md).
