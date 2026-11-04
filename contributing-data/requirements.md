@@ -25,7 +25,7 @@ Tell IDC why the data is worth hosting. Examples:
 ## De-identification
 
 {% hint style="warning" %}
-IDC does not de-identify data, and does not check the results of de-identification. Making sure the data is de-identified is your responsibility.
+IDC does not de-identify data, and does not check the results of de-identification. Making sure the data is de-identified is the submitter's responsibility.
 {% endhint %}
 
 You have two options:
