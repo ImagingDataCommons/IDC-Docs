@@ -6,6 +6,7 @@
 * [Contributing data](contributing-data/README.md)
   * [Requirements](contributing-data/requirements.md)
   * [Contribution process](contributing-data/contribution-process.md)
+  * [Annotating images in IDC](contributing-data/annotating-images-in-idc.md)
   * [Preparing data in DICOM](contributing-data/preparing-data-in-dicom.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Support](support.md)

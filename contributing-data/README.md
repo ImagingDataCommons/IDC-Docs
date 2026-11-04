@@ -4,6 +4,7 @@ IDC hosts public, de-identified cancer imaging data and image-derived data, all 
 
 * [Requirements](requirements.md): what IDC requires of a contribution
 * [Contribution process](contribution-process.md): the steps from the first email to publication
+* [Annotating images in IDC](annotating-images-in-idc.md): how to annotate or analyze images in IDC so that the results can be converted to DICOM
 * [Preparing data in DICOM](preparing-data-in-dicom.md): guidance and tools for converting data yourself
 
 Once your data is in IDC:

@@ -6,7 +6,7 @@ This page describes how a contribution made directly to IDC proceeds, from the f
 
 1. **Get in touch first.** Email [support+submissions@canceridc.dev](mailto:support+submissions@canceridc.dev) before you convert or upload anything. Keep this first email brief. A sentence or two on each of the points below is enough for IDC's initial assessment, and you don't need to prepare detailed documentation at this stage. Cover:
    * what the data is: images or derived data, modalities, cancer types, number of subjects, approximate size
-   * for derived data, which IDC collections it applies to, and whether you recorded the DICOM UIDs of the images you annotated (see [Requirements](requirements.md#annotations-of-images-in-idc))
+   * for derived data, which IDC collections it applies to, and whether you recorded the DICOM UIDs of the images you annotated (see [Annotating images in IDC](annotating-images-in-idc.md#track-the-images-by-uid))
    * the current format, and where the data is now (for example, whether it is already published with a DOI)
    * how it was de-identified, and by whom
    * the license you intend to use
