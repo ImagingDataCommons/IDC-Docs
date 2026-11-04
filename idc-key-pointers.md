@@ -13,6 +13,6 @@
 
 If you did not find the images you need in IDC, you can consider the following resources:
 
-* [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/): while most of the public DICOM collections from TCIA are available in IDC, we do not replicate limited access TCIA collections
+* [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/): the public DICOM collections published by TCIA are available from IDC, but IDC does not host TCIA's limited-access collections or the non-DICOM data that TCIA publishes
 * [Open-Access Medical Imaging Repositories](https://www.aylward.org/notes/open-access-medical-image-repositories): list curated by Stephen Aylward
 * [Finding Medical Images](https://hslguides.med.nyu.edu/medicalimages): list curated by New York University Health Sciences Library

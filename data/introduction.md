@@ -7,7 +7,7 @@ Most of the data in IDC is received from the data collection initiatives/project
 As of data release v23, IDC sources of data include:
 
 * [The Cancer Imaging Archive (TCIA) (ongoing)](https://www.cancerimagingarchive.net/)
-  * all DICOM files from the public collections are mirrored in IDC
+  * all DICOM files from the public collections; IDC is the only place to download them
   * a subset of digital pathology collections and analysis results harmonized from vendor-specific representation (as available from TCIA) into DICOM Slide Microscopy (SM) format&#x20;
 * [Childhood Cancer Data Initiative (CCDI) (ongoing)](https://www.cancer.gov/research/areas/childhood/childhood-cancer-data-initiative)
   * digital pathology slides harmonized into DICOM SM
@@ -26,7 +26,7 @@ The list of all of the IDC collections is available in IDC Portal here: [https:/
 
 ## Data provenance
 
-Whenever IDC replicates data from a publicly available source, we include the reference to the origin:
+Whenever IDC hosts data that originates from another source, we include the reference to the origin:
 
 * from the IDC Portal Explore page, click on the "i" icon next to the collection in the collections list&#x20;
 
@@ -47,4 +47,6 @@ Simplified workflow for IDC data ingestion is summarized in the following diagra
 {% embed url="https://docs.google.com/presentation/d/1UVpNVyVy3xIYLDnm4rtgAUmSu-uKQo5krekI9DSMT8o/edit?slide=id.g2fbbb94d529_0_76#slide=id.g2fbbb94d529_0_76" %}
 IDC data ingestion workflow
 {% endembed %}
+
+If you would like to contribute data to IDC, or suggest a dataset for IDC to add, see [Contributing data](../contributing-data/README.md).
 
