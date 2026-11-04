@@ -57,7 +57,7 @@ If you have an algorithm, that you evaluated/published, that can enrich data in 
 
 * contributions get a DOI and a citation, so you get credit for your work and users of your data in IDC are pointed to the citation. For example, see the [expert annotations of the RMS-Mutation-Prediction microscopy images collection](https://zenodo.org/records/10462858) in the [IDC Zenodo community](https://zenodo.org/communities/nci-idc).
 * once your data is in IDC, it should be easier to discover it, combine it with other datasets, visualize it and use it in analysis workflows. As an example, see [this notebook](https://github.com/ImagingDataCommons/IDC-Tutorials/blob/master/notebooks/collections_demos/rms_mutation_prediction/RMS-Mutation-Prediction-Expert-Annotations_exploration.ipynb) accompanying the RMS annotations.
-* see [Contributing data](contributing-data.md) for the requirements and the process, and email us at [support+submissions@canceridc.dev](mailto:support+submissions@canceridc.dev) to get started!
+* see [Contributing data](contributing-data/README.md) for the requirements and the process, and email us at [support+submissions@canceridc.dev](mailto:support+submissions@canceridc.dev) to get started!
 
 ### Questions?
 

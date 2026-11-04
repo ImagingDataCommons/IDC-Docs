@@ -4,7 +4,7 @@
 
 We ingest and distribute datasets from variety of sources and contributors, primarily focusing on large data collection initiatives sponsored by US National Cancer Institute.&#x20;
 
-IDC prioritizes original image collections from NCI-funded driving projects and selected initiatives, and considers other strong datasets case by case. We also welcome annotations and analysis results for the images already in IDC. In addition, we identify valuable existing public datasets and convert them to DICOM ourselves. See [Contributing data](contributing-data.md) to learn how to contribute or suggest a dataset.
+IDC prioritizes original image collections from NCI-funded driving projects and selected initiatives, and considers other strong datasets case by case. We also welcome annotations and analysis results for the images already in IDC. In addition, we identify valuable existing public datasets and convert them to DICOM ourselves. See [Contributing data](contributing-data/README.md) to learn how to contribute or suggest a dataset.
 
 On ingestion, we harmonize images and image-derived data into DICOM format for interoperability, whenever data is represented in a non-DICOM format.
 
@@ -37,7 +37,7 @@ To be considered, a contribution must demonstrate its value. For example, descri
 
 If your contribution is accepted, we work with you to choose the appropriate DICOM object type and convert your data. Your contribution gets a DOI and a citation, so you receive recognition for your work. Once it is published in IDC, your data is searchable and viewable in the IDC Portal, and can be downloaded efficiently using `idc-index`.
 
-See [Contributing data](contributing-data.md) for the requirements and the process.
+See [Contributing data](contributing-data/README.md) for the requirements and the process.
 
 ## Integration of cancer imaging data with other components of CRDC
 

@@ -48,5 +48,5 @@ Simplified workflow for IDC data ingestion is summarized in the following diagra
 IDC data ingestion workflow
 {% endembed %}
 
-If you would like to contribute data to IDC, or suggest a dataset for IDC to add, see [Contributing data](../contributing-data.md).
+If you would like to contribute data to IDC, or suggest a dataset for IDC to add, see [Contributing data](../contributing-data/README.md).
 

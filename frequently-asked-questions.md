@@ -44,7 +44,7 @@ Data reaches IDC in three ways:
 
 All data in IDC must be public, de-identified, and in DICOM or feasible to convert to DICOM. The CC BY 4.0 license is strongly preferred.
 
-See [Contributing data](contributing-data.md) for the requirements and the process, or email [support+submissions@canceridc.dev](mailto:support+submissions@canceridc.dev).
+See [Contributing data](contributing-data/README.md) for the requirements and the process, or email [support+submissions@canceridc.dev](mailto:support+submissions@canceridc.dev).
 
 ## How much does it cost to use the cloud?
 
