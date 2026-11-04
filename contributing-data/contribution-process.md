@@ -12,14 +12,15 @@ This page describes how a contribution made directly to IDC proceeds, from the f
    * the license you intend to use
    * evidence of value, as described in [Requirements](requirements.md#evidence-of-value)
    * whether clinical data accompanies the images
-2. **Review.** IDC reviews your proposal and replies with feedback. If it looks promising, IDC sends you a metadata template to describe the dataset. Unless the data was de-identified by an entity IDC already recognizes, IDC also asks for documentation of how it was de-identified.
-3. **Upload.** If your contribution is accepted, IDC gives you a location to upload your data and explains how.
-4. **Conversion.** If your data is not in DICOM, IDC converts it, or you convert it with IDC's guidance (see [Preparing data in DICOM](preparing-data-in-dicom.md)). IDC works with you to choose the appropriate DICOM object type.
-5. **Review before release.** IDC gives you access to view the converted data and its metadata, so you can confirm it is correct before it is published.
-6. **DOI.**
+2. **Initial assessment.** IDC reviews your email and replies with feedback. If the proposal looks promising, IDC sends you a metadata template to describe the dataset.
+3. **Detailed description.** You fill in the metadata template, describing the dataset in detail. Unless the data was de-identified by an entity IDC already recognizes, you also submit documentation of how it was de-identified (see [De-identification](requirements.md#de-identification)). IDC reviews these documents, may ask for more information, and decides whether to accept the contribution.
+4. **Upload.** If your contribution is accepted, IDC gives you a location to upload your data and explains how.
+5. **Conversion.** If your data is not in DICOM, IDC converts it, or you convert it with IDC's guidance (see [Preparing data in DICOM](preparing-data-in-dicom.md)). IDC works with you to choose the appropriate DICOM object type.
+6. **Review before release.** IDC gives you access to view the converted data and its metadata, so you can confirm it is correct before it is published.
+7. **DOI.**
    * If your data was already in DICOM and published with a DOI, that DOI is reused.
    * If IDC converted your data, IDC creates a record with its own DOI for the DICOM version in the [NCI Imaging Data Commons Zenodo community](https://zenodo.org/communities/nci-idc/). The record always cites and acknowledges your original dataset. When that dataset has a DOI, the record's metadata links to it as the source the DICOM version is derived from (Zenodo's "is derived from" relation). Its co-authors are the people who collected the data, the people outside the IDC team who helped with the conversion, and the IDC team members who worked on the conversion.
-7. **Release.** Your data is published in a future IDC data release and listed in the [data release notes](../data/data-release-notes.md). IDC does not commit to a date: timing depends on the data and on IDC's capacity.
+8. **Release.** Your data is published in a future IDC data release and listed in the [data release notes](../data/data-release-notes.md). IDC does not commit to a date: timing depends on the data and on IDC's capacity.
 
 ## Clinical data
 

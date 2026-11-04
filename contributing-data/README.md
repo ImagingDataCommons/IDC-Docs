@@ -26,11 +26,13 @@ There are three routes:
 ```mermaid
 flowchart LR
     T(["Through TCIA"]) --> T1("TCIA de-identifies,<br/>curates, publishes")
-    D(["Directly to IDC"]) --> D1("Brief email,<br/>IDC review")
-    D1 -- accepted --> D2("Upload, convert,<br/>you review")
+    D(["Directly to IDC"]) --> D1("Initial email,<br/>first assessment")
+    D1 -- if promising --> D2("Detailed description<br/>of the dataset")
+    D2 --> D3("IDC review")
+    D3 -- if accepted --> D4("Upload, convert,<br/>you review")
     S(["Suggest a dataset"]) -- if selected --> S1("IDC converts,<br/>assigns DOI")
     T1 --> R[("IDC data<br/>release")]
-    D2 --> R
+    D4 --> R
     S1 --> R
 
     classDef tcia fill:#E3EEFA,stroke:#3A7BC8,color:#173A63
@@ -38,7 +40,7 @@ flowchart LR
     classDef select fill:#FCEEDD,stroke:#D4832A,color:#5A3610
     classDef idc fill:#2F3E5C,stroke:#8EA4CC,stroke-width:2px,color:#FFFFFF
     class T,T1 tcia
-    class D,D1,D2 direct
+    class D,D1,D2,D3,D4 direct
     class S,S1 select
     class R idc
 ```
@@ -61,6 +63,8 @@ You can contribute two kinds of data directly:
 {% hint style="info" %}
 If you have annotations or analysis results for images already in IDC, please contribute them directly to IDC rather than through TCIA. This makes the process simpler and the conversion to DICOM more straightforward, and your results are likely to be available in IDC sooner.
 {% endhint %}
+
+Contributing directly takes several steps. A short first email is enough to start. If IDC finds the proposal promising, you then describe the dataset in detail, and IDC decides whether to accept it based on that description. Only an accepted contribution moves on to upload, conversion to DICOM and your review of the result.
 
 See [Requirements](requirements.md) for what IDC requires, and [Contribution process](contribution-process.md) for the steps.
 
