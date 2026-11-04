@@ -33,6 +33,8 @@ Although IDC data is stored in DICOM format, it can be converted into alternativ
 
 We welcome you to apply to contribute analysis results and annotations of the images available in IDC! These can be expert manual annotations, analysis results generated using machine learning (ML) tools, segmentations, contours, metadata attributes describing the data (e.g., annotation of the scan type), expert evaluation of the quality of existing ML-generated annotations in IDC.
 
+Please contribute these directly to IDC rather than through TCIA. This makes the process simpler and the conversion to DICOM more straightforward, and your results are likely to be available in IDC sooner.
+
 To be considered, a contribution must demonstrate its value. For example, describe the qualifications of the experts who made manual annotations, or show the robustness of the ML tool with a peer-reviewed publication or other evidence. We strongly prefer that contributions are shared under the Creative Commons Attribution [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/deed.en). IDC stakeholders review every application, and IDC's capacity limits how many contributions we can take on and when.
 
 If your contribution is accepted, we work with you to choose the appropriate DICOM object type and convert your data. Your contribution gets a DOI and a citation, so you receive recognition for your work. Once it is published in IDC, your data is searchable and viewable in the IDC Portal, and can be downloaded efficiently using `idc-index`.

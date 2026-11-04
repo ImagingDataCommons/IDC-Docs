@@ -48,7 +48,7 @@ flowchart LR
 
 TCIA also accepts and distributes data that is not in DICOM, which IDC does not host. If your data cannot be converted to DICOM, TCIA may be the better route. Contact TCIA directly for its submission process.
 
-TCIA is one route, not the only one.
+TCIA is one route, not the only one. If you have annotations or analysis results for images already in IDC, contribute them [directly to IDC](#directly-to-idc) instead.
 
 ### Directly to IDC
 
@@ -56,6 +56,10 @@ You can contribute two kinds of data directly:
 
 * **Original collections**, meaning images that are not yet in IDC. IDC prioritizes NCI-funded driving projects and selected initiatives. Other strong datasets can be proposed and are reviewed case by case, without a guarantee of acceptance.
 * **Derived data for images already in IDC**: expert annotations, segmentations and other results produced by ML models, radiomics features, quality labels and similar. Anyone may apply. Acceptance depends on the value of the contribution. IDC's capacity limits how many contributions it can take on and when.
+
+{% hint style="info" %}
+If you have annotations or analysis results for images already in IDC, please contribute them directly to IDC rather than through TCIA. This makes the process simpler and the conversion to DICOM more straightforward, and your results are likely to be available in IDC sooner.
+{% endhint %}
 
 See [Requirements](requirements.md) for what IDC requires, and [Contribution process](contribution-process.md) for the steps.
 

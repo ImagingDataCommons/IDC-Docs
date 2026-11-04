@@ -39,7 +39,7 @@ Data reaches IDC in three ways:
 * **through [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/).** TCIA de-identifies, curates and publishes collections, and IDC is the only place to download the public DICOM collections that TCIA publishes.
 * **directly to IDC.**
   * IDC prioritizes original image collections from NCI-funded driving projects and selected initiatives, and considers other strong datasets case by case.
-  * IDC welcomes derived data, such as expert annotations or results produced by ML models, for the images already in IDC.
+  * IDC welcomes derived data, such as expert annotations or results produced by ML models, for the images already in IDC. Please contribute these directly to IDC rather than through TCIA: the process is simpler, and your results are likely to be available in IDC sooner.
 * **IDC selects an existing public dataset** and converts it to DICOM. Anyone can suggest a dataset.
 
 All data in IDC must be public, de-identified, and in DICOM or feasible to convert to DICOM. The CC BY 4.0 license is strongly preferred.
