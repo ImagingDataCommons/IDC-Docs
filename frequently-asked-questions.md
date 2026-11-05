@@ -2,7 +2,7 @@
 
 ## What is the difference between IDC and TCIA?
 
-IDC and TCIA are partners in providing FAIR data for cancer imaging researchers.&#x20;
+IDC and TCIA are partners in providing [FAIR data](fair/README.md) for cancer imaging researchers.&#x20;
 
 TCIA provides a unique service: it works with data submitters to de-identify, curate and publish cancer imaging data. TCIA distributes the non-DICOM data it publishes. The public DICOM collections it publishes are distributed by IDC, which is the only place to download them.
 

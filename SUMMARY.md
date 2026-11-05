@@ -3,6 +3,7 @@
 * [Welcome!](README.md)
 * [🚀 Getting started](getting-started-with-idc.md)
 * [Core functions](core-functions-of-idc.md)
+* [FAIR principles](fair/README.md)
 * [Contributing data](contributing-data/README.md)
   * [Requirements](contributing-data/requirements.md)
   * [Contribution process](contributing-data/contribution-process.md)
