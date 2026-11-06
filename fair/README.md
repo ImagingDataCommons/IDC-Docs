@@ -1,6 +1,6 @@
-# IDC and the FAIR principles
+# Is IDC data FAIR?
 
-The FAIR Guiding Principles ([Wilkinson et al., 2016](https://doi.org/10.1038/sdata.2016.18)) describe what makes research data **F**indable, **A**ccessible, **I**nteroperable and **R**eusable, by people and, above all, by software. This page explains how the data in NCI Imaging Data Commons (IDC) meets each of the 15 principles, what evidence supports each claim, and where the gaps are.
+Yes. The data in NCI Imaging Data Commons (IDC) meets all 15 of the FAIR Guiding Principles ([Wilkinson et al., 2016](https://doi.org/10.1038/sdata.2016.18)) for **F**indable, **A**ccessible, **I**nteroperable and **R**eusable data. This page sets out the evidence for each principle, the known gaps, and how to check the claims yourself.
 
 It is written for two kinds of readers:
 
