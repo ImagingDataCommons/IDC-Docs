@@ -72,7 +72,7 @@ IDC is the National Cancer Institute's cloud-based repository of public cancer i
 | Studies                                                                      |    168,507 |
 | Series                                                                       |  1,044,191 |
 | Instances (files)                                                            | 58,784,975 |
-| Total size                                                                   |    95.3 TB |
+| Total size                                                                   |    99.9 TB |
 
 ### How imaging data is organized
 
@@ -120,7 +120,7 @@ _What it asks:_ the description of the data is detailed enough for someone to de
 _What IDC provides:_
 
 * The main metadata table describes each series with **31 fields**: patient, study and series descriptions, equipment manufacturer and model, dates, modality, encoding, license and size.
-* Specialized tables add the detail that general catalogs usually drop: CT acquisition and reconstruction parameters (21 fields), MR sequence parameters (22), PET radiopharmaceutical and reconstruction parameters (21), and tables for pathology slides, segmentations, radiotherapy structure sets, pathology annotations, contrast agents and 3D volume geometry.
+* Specialized tables add the detail that general catalogs usually drop: CT acquisition and reconstruction parameters (20 fields), MR sequence parameters (21), PET radiopharmaceutical and reconstruction parameters (20), and tables for pathology slides, segmentations, radiotherapy structure sets, pathology annotations, contrast agents and 3D volume geometry.
 * Beyond these curated tables, **the DICOM attributes of every file are searchable**, without login, in the metadata IDC publishes with each release (see [Files and metadata](../data/organization-of-data/files-and-metadata.md)).
 
 _Known gap:_ the body part examined, which is recorded by the site that acquired the scan, is missing for 11.7% of CT, 33.1% of MR, 45.0% of PET and 94.0% of ultrasound series. It is complete for mammography and radiography. This is the most visible weakness of IDC's metadata, because anatomy is one of the first filters users reach for. See [Help wanted](#help-wanted).
@@ -214,7 +214,7 @@ _What IDC provides:_ this is IDC's defining property.
 
 Readers from the FAIR community often take "knowledge representation language" to mean RDF or OWL. DICOM is a formal information model - object definitions, a data dictionary, coded structured-reporting templates - with standard JSON and XML encodings (PS3.18 Annex F, PS3.19), which is the sense in which it meets I1.
 
-260 series use the retired Explicit VR Big Endian transfer syntax, which some modern toolkits handle poorly. 18 series in the Lung-Fused-CT-Pathology collection use the Modality value `FUSION`, which is not a DICOM defined term; this is how the data was submitted (see [Inherited from source data](#inherited-from-source-data)). The full counts are in [Evidence and reproduction](evidence.md).
+260 series use the retired Explicit VR Big Endian transfer syntax, which some modern toolkits handle poorly. In the Lung-Fused-CT-Pathology collection, 18 series use the Modality value `FUSION`, which is not a DICOM defined term, and 12 CT images carry the Modality `SEG`, which the CT Image object does not allow; this is how the data was submitted (see [Inherited from source data](#inherited-from-source-data)). The full counts are in [Evidence and reproduction](evidence.md).
 
 </details>
 
@@ -370,7 +370,7 @@ IDC is deliberately conservative about changing DICOM data as its source deliver
 Known issues of this kind:
 
 * 1,492 segmentation series do not name the series they annotate ([I3](#i3)).
-* Some values fall outside DICOM's lists: 835 series with non-standard body part values, 462 segmentation series with the algorithm type `SEMIAUTOMATED`, and 18 series with the modality `FUSION` ([I1](#i1), [I2](#i2)).
+* Some values fall outside DICOM's lists: 835 series with non-standard body part values, 462 segmentation series with the algorithm type `SEMIAUTOMATED`, and 30 series with a modality that DICOM does not allow for them ([I1](#i1), [I2](#i2)).
 * Some segmentations use retired or local coding schemes ([I2](#i2)).
 
 ### In progress <a href="#in-progress" id="in-progress"></a>
