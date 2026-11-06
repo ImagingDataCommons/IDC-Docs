@@ -3,7 +3,7 @@
 This page backs up the claims in [Is IDC data FAIR?](README.md) For each principle it gives the numbers behind the claims, where they come from, and the queries that reproduce them. Everything here runs on a laptop, without a login or a cloud account.
 
 {% hint style="info" %}
-All numbers are for IDC data release v25, obtained on 5 November 2026. External records - DataCite, the registries and the DICOM standard - were read on the same day. The same queries run against a later release will give different numbers.
+All numbers are for IDC data release v25, obtained on 5 November 2026. External records - DataCite, the registries and the DICOM standard - were read on the same day. The same queries run against a later release will give different numbers. If a query here gives a different result on v25, or you think it measures the wrong thing, please tell us in the [IDC User Forum](https://discourse.canceridc.dev/) or at [support@canceridc.dev](mailto:support@canceridc.dev).
 {% endhint %}
 
 ## Sources <a href="#sources" id="sources"></a>

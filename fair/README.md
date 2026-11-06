@@ -8,7 +8,7 @@ It is written for two kinds of readers:
 * **If you want to check the claims**, each principle has an expandable note for specialists, and [Evidence and reproduction](evidence.md) gives the method, the full tables and the queries to rerun them.
 
 {% hint style="info" %}
-This is a self-assessment by the IDC team. It is not a certified FAIR score, and IDC was not benchmarked against other repositories. Counts are as of IDC data release v25 (October 2026), and will change with each release.
+This is a self-assessment by the IDC team. It is not a certified FAIR score, and IDC was not benchmarked against other repositories. Counts are as of IDC data release v25 (October 2026), and will change with each release. If you find an error, or disagree with any part of this assessment, please tell us in the [IDC User Forum](https://discourse.canceridc.dev/) or at [support@canceridc.dev](mailto:support@canceridc.dev).
 {% endhint %}
 
 ## Summary <a href="#summary" id="summary"></a>
@@ -422,6 +422,8 @@ Known issues of this kind:
 * **Not evaluated:** portal usability, service uptime, documentation quality, and machine-readable metadata on dataset landing pages.
 * **One release.** The figures describe v25, and will change with future releases.
 * **Some gaps are legitimate.** Body part is optional in DICOM, and does not apply to pathology slides.
+
+Corrections and disagreements are welcome, from data users, data submitters, funders and anyone assessing IDC. Please open a topic in the [IDC User Forum](https://discourse.canceridc.dev/) (preferred) or write to [support@canceridc.dev](mailto:support@canceridc.dev).
 
 ## Glossary <a href="#glossary" id="glossary"></a>
 
