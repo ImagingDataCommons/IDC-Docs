@@ -18,7 +18,7 @@ IDC meets all 15 FAIR principles. In plain terms:
 * **Every one of its 1,044,191 image series has a permanent, unique identifier**, and every series is linked to a citable dataset with a DOI.
 * **Anyone can download any of it**, from Amazon Web Services or Google Cloud, with no registration, no access request and no fees.
 * **All images and annotations are stored in DICOM, the international standard for medical imaging** - including the results of AI analysis - so standard software can open all of them.
-* **Every series carries its license**, and about 97% of series allow commercial reuse.
+* **Every series carries its license**, and more than 95% of series allow commercial reuse.
 * **Every series records who contributed it, who de-identified it and who converted it to DICOM.**
 * **The complete metadata of every release since the first one is still openly available**, so an analysis can be traced back to exactly the data it used.
 
@@ -26,8 +26,9 @@ The gaps are in the descriptions that came with the data, not in access to it:
 
 * **The body part examined is missing for many scans** - a third of MRI and nearly half of PET series - which makes searching by anatomy unreliable.
 * **Clinical (non-imaging) data accompanies 100 of the 179 collections, and is not harmonized across them.**
+* **For 14 of the 242 datasets, the license IDC records differs from the license in the dataset's DOI record.** These are [under review](#r1-1).
 
-Both are places where [IDC welcomes help](#help-wanted).
+The first two are places where [IDC welcomes help](#help-wanted).
 
 ## Status by principle <a href="#status-by-principle" id="status-by-principle"></a>
 
@@ -47,7 +48,7 @@ Each principle is marked **Met** when it holds for essentially all of IDC, with 
 | [**I2**](#i2)        | Vocabularies follow FAIR principles                            | Met, with known gaps | 99.8% of segment codes are SNOMED CT; body part uses DICOM defined terms; clinical data not harmonized                                 |
 | [**I3**](#i3)        | References to other data are explicit                          | Met                  | 99.3% of segmentations, contours and pathology annotations name the series they annotate, and every reference resolves                |
 | [**R1**](#r1)        | Data has many accurate and relevant attributes                 | Met, with known gaps | Equipment, acquisition parameters, 3D-geometry checks; clinical tables for 100 of 179 collections                                      |
-| [**R1.1**](#r1-1)    | Data has a clear, accessible usage license                     | Met                  | 100% of series labelled; license URL per dataset; SPDX identifiers in DataCite and on this page                                        |
+| [**R1.1**](#r1-1)    | Data has a clear, accessible usage license                     | Met, with known gaps | 100% of series labelled; license URL per dataset; SPDX identifiers in DataCite and on this page; labels of 14 of 242 datasets disagree with their DOI records and are under review |
 | [**R1.2**](#r1-2)    | Data has detailed provenance                                   | Met                  | Per-series DOI, record of who contributed, de-identified and converted it, version history, and how each segmentation was made         |
 | [**R1.3**](#r1-3)    | Data meets domain-relevant community standards                 | Met                  | Native DICOM throughout; data submitted in other formats converted to DICOM                                                            |
 
@@ -293,11 +294,45 @@ _What IDC provides:_
 | CC BY-NC 3.0                               | `CC-BY-NC-3.0`  |   5,851 | **not allowed** |
 | NLM Terms and Conditions; May 21, 2019     | none            |      39 | see terms       |
 
-About 97% of series allow commercial reuse. Every license requires attribution. See [Licensing and attribution](../data/licensing.md) for how to check the license of your selection and how to cite it.
+As labelled in v25, about 97% of series allow commercial reuse; however the review below is resolved, the share stays above 95%. Every license requires attribution. See [Licensing and attribution](../data/licensing.md) for how to check the license of your selection and how to cite it.
+
+_Known gap:_ IDC compared its license labels with the license recorded in DataCite for each of the 242 dataset DOIs. They agree for 228. For 14 datasets (29,827 series) they disagree, and all 14 are under review. For three of them, the disagreement decides whether commercial use is allowed:
+
+| Dataset                        | Series | IDC label (v25) | DOI record (DataCite) | Status                                                                                       |
+| ------------------------------ | -----: | --------------- | --------------------- | -------------------------------------------------------------------------------------------- |
+| ACRIN-6698                     | 18,747 | CC BY 4.0       | CC BY-NC 4.0          | TCIA's collection page and the DOI record disagree; reported to TCIA (ticket TH-60573)       |
+| Phantom FDA                    |  4,433 | CC BY-NC 3.0    | CC BY 4.0             | CC BY 4.0 is correct; TCIA has corrected it, and IDC's metadata will follow in a future release |
+| NSCLC-Radiomics-Interobserver1 |     64 | CC BY-NC 3.0    | CC BY 3.0             | Under review                                                                                 |
+
+For the other 11, the two differ only in the version of the license (3.0 or 4.0), or the DOI record lists more than one license.
 
 {% hint style="warning" %}
-The 4,433 series of the Phantom FDA collection are labelled CC BY-NC 3.0 in the v25 metadata, but their license is CC BY 4.0. TCIA has corrected the license, and IDC's metadata will follow in a future release.
+Until the review is complete, assume that the more restrictive of the two licenses applies to the datasets in this table, except Phantom FDA, whose license is CC BY 4.0.
 {% endhint %}
+
+<details>
+
+<summary>For specialists</summary>
+
+The comparison took the SPDX identifiers from the `rightsList` of each DOI's DataCite record (retrieved through the DataCite REST API in November 2026) and compared them with the SPDX identifier of the license IDC records for that DOI. The 11 datasets whose labels differ in version or list more than one license:
+
+| Dataset                          | DOI                             | Series | IDC label (v25) | DOI record (DataCite)                              |
+| -------------------------------- | ------------------------------- | -----: | --------------- | -------------------------------------------------- |
+| NLST, slide microscopy           | `10.5281/zenodo.12689650`       |  1,259 | CC BY 3.0       | CC BY 4.0                                          |
+| CPTAC-LSCC, slide microscopy     | `10.5281/zenodo.12666807`       |  1,081 | CC BY 4.0       | CC BY 3.0                                          |
+| RIDER Lung CT                    | `10.7937/k9/tcia.2015.u1x8a5nr` |    936 | CC BY 4.0       | CC BY 3.0                                          |
+| CPTAC-CCRCC, slide microscopy    | `10.5281/zenodo.12666768`       |    782 | CC BY 4.0       | CC BY 3.0                                          |
+| LDCT-and-Projection-data         | `10.7937/9npb-2637`             |    698 | CC BY 4.0       | NIH Controlled Data Access Policy; CC BY 3.0       |
+| CPTAC-PDA, slide microscopy      | `10.5281/zenodo.12666859`       |    557 | CC BY 4.0       | CC BY 3.0                                          |
+| CPTAC-GBM, slide microscopy      | `10.5281/zenodo.12666788`       |    462 | CC BY 4.0       | CC BY 3.0                                          |
+| CPTAC-HNSCC, slide microscopy    | `10.5281/zenodo.12666803`       |    390 | CC BY 4.0       | CC BY 3.0                                          |
+| QIN-Breast-02                    | `10.7937/tcia.2019.4cfm06rr`    |    235 | CC BY 4.0       | CC BY 4.0; CC BY 3.0                               |
+| CPTAC-AML, slide microscopy      | `10.5281/zenodo.12666740`       |    122 | CC BY 4.0       | CC BY 3.0                                          |
+| MRI-DIR                          | `10.7937/k9/tcia.2018.3f08iejt` |     61 | CC BY 4.0       | CC BY 4.0; CC BY 3.0                               |
+
+The seven Zenodo records are IDC's own: they describe IDC's DICOM conversions of pathology slides, and their provenance record names IDC as contributor and converter, so correcting them falls to IDC. The others are TCIA records. The NLM Visible Human dataset is not a disagreement: both records name the NLM terms, which have no SPDX identifier.
+
+</details>
 
 ### R1.2. Data is associated with detailed provenance <a href="#r1-2" id="r1-2"></a>
 
@@ -340,11 +375,11 @@ Known issues of this kind:
 
 * **Dataset landing pages** are limited or missing for many datasets, and some are owned by the submitter. IDC is populating collection pages of its own.
 * **Registry records.** re3data cannot yet list DICOM as IDC's standard, because DICOM is not among the standards re3data allows; we are contacting its maintainers.
-* **License correction.** The Phantom FDA license correction will reach IDC's metadata in a future release ([R1.1](#r1-1)).
+* **License review.** The 14 datasets whose IDC license label disagrees with their DOI record are under review: with TCIA for its datasets, and by IDC for the records of its own DICOM conversions. Corrections will reach IDC's metadata in future releases, starting with Phantom FDA ([R1.1](#r1-1)).
 
 ## What this means for data users
 
-* **Check the license before commercial use.** Filter on the license of each series rather than inferring it from the collection - see [Licensing and attribution](../data/licensing.md).
+* **Check the license before commercial use.** Filter on the license of each series rather than inferring it from the collection - see [Licensing and attribution](../data/licensing.md). For the datasets whose license is [under review](#r1-1), assume the more restrictive license until the review is complete.
 * **Do not search by body part alone.** Combine it with collection descriptions, and for segmentations use the coded anatomy in `seg_index`.
 * **Record the IDC release and the series UUIDs, or the download manifest.** Earlier versions remain available, so this makes an analysis exactly reproducible.
 * **Cite both the dataset DOIs and the IDC paper** - see [Licensing and attribution](../data/licensing.md).
