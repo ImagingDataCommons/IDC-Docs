@@ -113,6 +113,8 @@ The IDC UUID doubles as the storage prefix (`s3://<bucket>/<crdc_series_uuid>/`)
 
 </details>
 
+_Evidence:_ [queries and results](evidence.md#f1)
+
 ### F2. Data is described with rich metadata <a href="#f2" id="f2"></a>
 
 _What it asks:_ the description of the data is detailed enough for someone to decide whether it is relevant.
@@ -133,11 +135,15 @@ Body Part Examined (0018,0015) is Type 3 (optional) in the General Series Module
 
 </details>
 
+_Evidence:_ [queries and results](evidence.md#f2)
+
 ### F3. Metadata clearly includes the identifier of the data it describes <a href="#f3" id="f3"></a>
 
 _What it asks:_ the description and the data cannot become separated.
 
 _What IDC provides:_ every metadata record carries the identifiers of the series and the location to download it from. Derived objects also name the series they annotate (see [I3](#i3)). In the other direction, each DICOM file carries its own identifiers in its header, so a downloaded file can always be matched back to its metadata and its license.
+
+_Evidence:_ [queries and results](evidence.md#f1)
 
 ### F4. Data is registered or indexed in a searchable resource <a href="#f4" id="f4"></a>
 
@@ -149,6 +155,8 @@ _What IDC provides:_
 * **Cloud catalogs.** IDC is listed in the [AWS Registry of Open Data](https://registry.opendata.aws/nci-imaging-data-commons/) and in the [Google Cloud public datasets](https://cloud.google.com/healthcare-api/docs/resources/public-datasets/idc) program.
 * **DOI registration.** All 242 dataset DOIs, from TCIA (`10.7937/...`) and Zenodo (`10.5281/...`), are registered with DataCite and publicly findable there, which makes them discoverable through DataCite-indexed search services.
 * **IDC's own search tools.** The [IDC Portal](https://portal.imaging.datacommons.cancer.gov/explore/) in a web browser, the [`idc-index`](https://github.com/ImagingDataCommons/idc-index) Python package for SQL search on a laptop, the [REST API](../api/README.md), an [MCP server](../mcp/README.md) for LLM assistants, and BigQuery.
+
+_Evidence:_ [queries and results](evidence.md#f4)
 
 ## Accessible
 
@@ -173,6 +181,8 @@ IDC offers two DICOMweb endpoints (see [DICOM stores](../data/organization-of-da
 
 </details>
 
+_Evidence:_ [queries and results](evidence.md#a1)
+
 ### A1.1. The protocol is open, free and universally implementable <a href="#a1-1" id="a1-1"></a>
 
 Files are downloaded over HTTPS through the standard cloud storage interfaces, which many free tools implement, such as [`s5cmd`](../data/downloading-data/downloading-data-with-s5cmd.md), the AWS and Google Cloud command-line tools, and the `idc` command of `idc-index`. DICOMweb is part of the DICOM standard (PS3.18) and is implemented by open-source and commercial software alike. The [REST API](../api/README.md) is plain HTTP and is described in OpenAPI.
@@ -195,6 +205,8 @@ _What IDC provides:_
 * Every current series records the release it **first appeared** in and the release it was **last revised** in. 49,304 series (4.7%) have been revised since they were first released.
 * Dataset DOIs resolve to landing pages hosted by TCIA and Zenodo, which persist independently of IDC.
 
+_Evidence:_ [queries and results](evidence.md#a2)
+
 ## Interoperable
 
 ### I1. Data uses a formal, accessible, shared language for knowledge representation <a href="#i1" id="i1"></a>
@@ -214,9 +226,11 @@ _What IDC provides:_ this is IDC's defining property.
 
 Readers from the FAIR community often take "knowledge representation language" to mean RDF or OWL. DICOM is a formal information model - object definitions, a data dictionary, coded structured-reporting templates - with standard JSON and XML encodings (PS3.18 Annex F, PS3.19), which is the sense in which it meets I1.
 
-260 series use the retired Explicit VR Big Endian transfer syntax, which some modern toolkits handle poorly. In the Lung-Fused-CT-Pathology collection, 18 series use the Modality value `FUSION`, which is not a DICOM defined term, and 12 CT images carry the Modality `SEG`, which the CT Image object does not allow; this is how the data was submitted (see [Inherited from source data](#inherited-from-source-data)). The full counts are in [Evidence and reproduction](evidence.md).
+260 series use the retired Explicit VR Big Endian transfer syntax, which some modern toolkits handle poorly. In the Lung-Fused-CT-Pathology collection, 18 series use the Modality value `FUSION`, which is not a DICOM defined term, and 12 CT images carry the Modality `SEG`, which the CT Image object does not allow; this is how the data was submitted (see [Inherited from source data](#inherited-from-source-data)).
 
 </details>
+
+_Evidence:_ [queries and results](evidence.md#i1)
 
 ### I2. Metadata uses vocabularies that follow FAIR principles <a href="#i2" id="i2"></a>
 
@@ -243,6 +257,8 @@ Besides SNOMED CT, segment property types use the retired SNOMED-RT designator `
 
 </details>
 
+_Evidence:_ [queries and results](evidence.md#i2)
+
 ### I3. Metadata includes qualified references to other data <a href="#i3" id="i3"></a>
 
 _What it asks:_ derived data says exactly what it was derived from. An outline of a tumor must say which scan it was drawn on.
@@ -268,6 +284,8 @@ References were checked at series level, not at instance or frame level. Structu
 
 </details>
 
+_Evidence:_ [queries and results](evidence.md#i3)
+
 ## Reusable
 
 ### R1. Data is richly described with accurate and relevant attributes <a href="#r1" id="r1"></a>
@@ -280,6 +298,8 @@ _What IDC provides:_
 * **Clinical data:** 235 tables - demographics, diagnosis, staging, therapy, outcomes - accompany **100 of the 179 collections (56%)**, with a data dictionary of 10,661 entries. See [Clinical data](../data/organization-of-data/clinical.md).
 
 _Known gap:_ 79 collections have no clinical tables in IDC. Some may have clinical data at their original source.
+
+_Evidence:_ [queries and results](evidence.md#r1)
 
 ### R1.1. Data is released with a clear and accessible usage license <a href="#r1-1" id="r1-1"></a>
 
@@ -336,6 +356,8 @@ The seven Zenodo records are IDC's own: they describe IDC's DICOM conversions of
 
 </details>
 
+_Evidence:_ [queries and results](evidence.md#r1-1)
+
 ### R1.2. Data is associated with detailed provenance <a href="#r1-2" id="r1-2"></a>
 
 _What it asks:_ you can tell who produced the data, how, and how it has changed.
@@ -347,6 +369,8 @@ _What IDC provides:_
 * Every series records **when it entered IDC and when it was last revised**, and earlier versions are retained (see [A2](#a2)).
 * **Segmentations record how they were made:** 85.3% automatic (AI), 7.6% manual, 5.5% semi-automatic, and 1.6% mixed or non-standard. Users who need expert-drawn labels can filter on this.
 * Because every series resolves to a DOI, **citations can be generated automatically**: `idc-index` and the MCP server produce them in APA, BibTeX and other formats. The TCGA-BRCA collection, for example, yields five dataset citations, plus the IDC paper.
+
+_Evidence:_ [queries and results](evidence.md#r1-2)
 
 ### R1.3. Data meets domain-relevant community standards <a href="#r1-3" id="r1-3"></a>
 
