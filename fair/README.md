@@ -78,12 +78,14 @@ IDC is the National Cancer Institute's cloud-based repository of public cancer i
 
 Medical imaging data has a four-level hierarchy, and IDC counts most things at the **series** level:
 
-| Level        | What it is                                                     | Photo analogy                  |
-| ------------ | -------------------------------------------------------------- | ------------------------------ |
-| **Patient**  | One (de-identified) person                                     | One family                     |
-| **Study**    | One imaging visit or exam, such as a chest CT on a given day   | One photo album from one trip  |
-| **Series**   | One acquisition within the exam, or one set of annotations on it | One roll of film             |
-| **Instance** | One file, such as one image slice                              | One photo                      |
+| Level        | What it is                                                                | Example: one lung cancer screening exam                                                                                                                                                   |
+| ------------ | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Patient**  | One (de-identified) person                                                | A participant in a lung cancer screening trial                                                                                                                                            |
+| **Study**    | One imaging exam, such as a chest CT on a given day                       | The participant's screening CT from one year of the trial                                                                                                                                 |
+| **Series**   | One set of images from the exam, or one set of annotations made on them   | A typical exam in IDC has about eight series: the CT images, often reconstructed more than once for different purposes, plus AI segmentations of organs and reports of measurements made from them |
+| **Instance** | One file, such as one image slice                                         | One of about 150 cross-sectional slices in a CT series                                                                                                                                    |
+
+In pathology, one scanned slide is one series.
 
 **DICOM** is the international standard for medical images, used by essentially every clinical scanner and hospital image archive. Each DICOM file carries both the pixels and a structured header describing the equipment, the acquisition and the (de-identified) patient - comparable to the information a phone stores with a photo, but far richer and standardized. See [Introduction to DICOM](../dicom/introduction.md).
 
