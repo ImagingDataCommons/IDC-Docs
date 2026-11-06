@@ -46,7 +46,7 @@ Each principle is marked **Met** when it holds for essentially all of IDC, with 
 | [**A2**](#a2)        | Metadata stays accessible when the data no longer is           | Met                  | Full metadata of every release, v1 to v25, openly available; version history lists 13,208 series no longer in IDC                      |
 | [**I1**](#i1)        | A formal, shared language represents the data                  | Met                  | All data in DICOM (ISO 12052): 38 object types, 25 modality codes, only DICOM-defined encodings                                        |
 | [**I2**](#i2)        | Vocabularies follow FAIR principles                            | Met, with known gaps | 99.8% of segment codes are SNOMED CT; body part uses DICOM defined terms; clinical data not harmonized                                 |
-| [**I3**](#i3)        | References to other data are explicit                          | Met                  | 99.3% of segmentations, contours and pathology annotations name the series they annotate, and every reference resolves                |
+| [**I3**](#i3)        | References to other data are explicit                          | Met                  | For 99.3% of segmentations, contours and pathology annotations, the series they annotate is identified in IDC                         |
 | [**R1**](#r1)        | Data has many accurate and relevant attributes                 | Met, with known gaps | Equipment, acquisition parameters, 3D-geometry checks; clinical tables for 100 of 179 collections                                      |
 | [**R1.1**](#r1-1)    | Data has a clear, accessible usage license                     | Met, with known gaps | 100% of series labelled; license URL per dataset; SPDX identifiers in DataCite and on this page; labels of 14 of 242 datasets disagree with their DOI records and are under review |
 | [**R1.2**](#r1-2)    | Data has detailed provenance                                   | Met                  | Per-series DOI, record of who contributed, de-identified and converted it, version history, and how each segmentation was made         |
@@ -131,7 +131,7 @@ _Known gap:_ the body part examined, which is recorded by the site that acquired
 
 <summary>For specialists</summary>
 
-Body Part Examined (0018,0015) is Type 3 (optional) in the General Series Module, so these gaps are conformant. It does not apply to slide microscopy, where `sm_index` records the anatomic location the specimen was taken from. What a segmentation outlines is recorded separately, as coded segment properties (see [I2](#i2)), and does not depend on Body Part Examined.
+Body Part Examined (0018,0015) is Type 3 (optional) in the General Series Module, so these gaps are conformant. It does not apply to slide microscopy, where the anatomic location the specimen was taken from is coded in Primary Anatomic Structure Sequence (0008,2228), within Specimen Description Sequence (0040,0560). What a segmentation outlines is coded separately for each segment, in Segmented Property Type Code Sequence (0062,000F) (see [I2](#i2)), and does not depend on Body Part Examined.
 
 </details>
 
@@ -141,7 +141,7 @@ _Evidence:_ [queries and results](evidence.md#f2)
 
 _What it asks:_ the description and the data cannot become separated.
 
-_What IDC provides:_ every metadata record carries the identifiers of the series and the location to download it from. Derived objects also name the series they annotate (see [I3](#i3)). In the other direction, each DICOM file carries its own identifiers in its header, so a downloaded file can always be matched back to its metadata and its license.
+_What IDC provides:_ every metadata record carries the identifiers of the series and the location to download it from. Derived objects also reference the images they annotate (see [I3](#i3)). In the other direction, each DICOM file carries its own identifiers in its header, so a downloaded file can always be matched back to its metadata and its license.
 
 _Evidence:_ [queries and results](evidence.md#f1)
 
@@ -201,7 +201,7 @@ _What IDC provides:_
 
 * **A stated policy.** Each data release is a fixed snapshot, and "all versions of all data, except data removed due to PHI/PII concerns, should continue to be available" (see [Data versioning](../data/data-versioning.md)).
 * **The complete metadata of every release, from v1 to v25**, is published in a public bucket and can be read without login (see [Files and metadata](../data/organization-of-data/files-and-metadata.md)). This covers releases whose data has since been revised or removed.
-* **A version history** (`prior_versions_index`) lists 71,042 earlier versions of series that the current release no longer serves, including 13,208 series no longer in IDC, each with the releases that served it.
+* **A version history**, built from the metadata of every earlier release, lists 71,042 earlier versions of series that the current release no longer serves, including 13,208 series no longer in IDC, each with the releases that served it.
 * Every current series records the release it **first appeared** in and the release it was **last revised** in. 49,304 series (4.7%) have been revised since they were first released.
 * Dataset DOIs resolve to landing pages hosted by TCIA and Zenodo, which persist independently of IDC.
 
@@ -265,20 +265,22 @@ _What it asks:_ derived data says exactly what it was derived from. An outline o
 
 _What IDC provides:_
 
-| Derived object type                | Series  | Name the series they annotate | Of those, the series exists in IDC |
-| ---------------------------------- | ------: | ----------------------------: | ---------------------------------: |
-| Segmentations (SEG)                | 193,283 |              191,791 (99.2%) |                     191,791 (100%) |
-| Radiotherapy structure sets (RTSTRUCT) | 19,366 |              19,366 (100%) |                      19,366 (100%) |
-| Pathology annotations (ANN)        |   7,448 |                 7,448 (100%) |                       7,448 (100%) |
-| **Total**                          | **220,097** |        **218,605 (99.3%)** |                 **218,605 (100%)** |
+| Derived object type                    | Series      | The series they annotate is identified in IDC |
+| -------------------------------------- | ----------: | --------------------------------------------: |
+| Segmentations (SEG)                    | 193,283     |                               191,791 (99.2%) |
+| Radiotherapy structure sets (RTSTRUCT) | 19,366      |                                 19,366 (100%) |
+| Pathology annotations (ANN)            | 7,448       |                                  7,448 (100%) |
+| **Total**                              | **220,097** |                           **218,605 (99.3%)** |
 
-Every recorded reference points to a series that actually exists in IDC. Each of the 26 analysis results also names the collections it analyzed and its own DOI.
+Each of the 26 analysis results also names the collections it analyzed and its own DOI.
 
-_Known gap:_ 1,492 segmentation series do not name the series they annotate. Nearly all of them came this way from their submitters.
+_Known gap:_ for 1,492 segmentation series, the series they annotate could not be identified: either the segmentation does not reference the images it was drawn on, or the images it references are not in IDC. Nearly all of them came this way from their submitters.
 
 <details>
 
 <summary>For specialists</summary>
+
+Radiotherapy structure sets and pathology annotations name the series they annotate directly, in RT Referenced Series Sequence (3006,0014) and Referenced Series Sequence (0008,1115) respectively, and every series they name is in IDC. A segmentation is traced through the first source image it references, in Referenced Series Sequence (0008,1115), Referenced Image Sequence (0008,1140) or Source Image Sequence (0008,2112), which is then looked up in IDC; this check cannot tell a missing reference from a reference to images outside IDC.
 
 References were checked at series level, not at instance or frame level. Structured reports (270,687 SR series) were not included in this check.
 
@@ -365,7 +367,7 @@ _What it asks:_ you can tell who produced the data, how, and how it has changed.
 _What IDC provides:_
 
 * Every series links to the **DOI of the dataset** it belongs to, which describes the project that produced it.
-* Every series has a **provenance record** naming who contributed it to IDC, who provided the source material, who de-identified it and who converted it to DICOM (in `collections_index` for original data, and in `analysis_results_index` for analysis results).
+* Every series has a **provenance record** naming who contributed it to IDC, who provided the source material, who de-identified it and who converted it to DICOM. This record is IDC metadata rather than part of the DICOM files, and is available through `idc-index`, BigQuery, and the SQL interfaces of the REST API and the MCP server.
 * Every series records **when it entered IDC and when it was last revised**, and earlier versions are retained (see [A2](#a2)).
 * **Segmentations record how they were made:** 85.3% automatic (AI), 7.6% manual, 5.5% semi-automatic, and 1.6% mixed or non-standard. Users who need expert-drawn labels can filter on this.
 * Because every series resolves to a DOI, **citations can be generated automatically**: `idc-index` and the MCP server produce them in APA, BibTeX and other formats. The TCGA-BRCA collection, for example, yields five dataset citations, plus the IDC paper.
@@ -393,7 +395,7 @@ IDC is deliberately conservative about changing DICOM data as its source deliver
 
 Known issues of this kind:
 
-* 1,492 segmentation series do not name the series they annotate ([I3](#i3)).
+* For 1,492 segmentation series, the series they annotate could not be identified ([I3](#i3)).
 * Some values fall outside DICOM's lists: 835 series with non-standard body part values, 462 segmentation series with the algorithm type `SEMIAUTOMATED`, and 30 series with a modality that DICOM does not allow for them ([I1](#i1), [I2](#i2)).
 * Some segmentations use retired or local coding schemes ([I2](#i2)).
 
@@ -406,7 +408,7 @@ Known issues of this kind:
 ## What this means for data users
 
 * **Check the license before commercial use.** Filter on the license of each series rather than inferring it from the collection - see [Licensing and attribution](../data/licensing.md). For the datasets whose license is [under review](#r1-1), assume the more restrictive license until the review is complete.
-* **Do not search by body part alone.** Combine it with collection descriptions, and for segmentations use the coded anatomy in `seg_index`.
+* **Do not search by body part alone.** Combine it with collection descriptions, and for segmentations use the anatomy coded for each segment instead (see [I2](#i2)).
 * **Record the IDC release and the series UUIDs, or the download manifest.** Earlier versions remain available, so this makes an analysis exactly reproducible.
 * **Cite both the dataset DOIs and the IDC paper** - see [Licensing and attribution](../data/licensing.md).
 * **Check for clinical data early.** 79 collections have no clinical tables in IDC, which matters for outcome studies.

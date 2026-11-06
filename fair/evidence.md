@@ -16,6 +16,12 @@ All numbers are for IDC data release v25, obtained on 5 November 2026. External 
 | DICOM standard, edition 2026d: [PS3.16 Annex L](https://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html)        | Body Part Examined defined terms                                                             |
 | The [re3data](https://www.re3data.org/repository/r3d100014074) and [FAIRsharing](https://fairsharing.org/10.25504/FAIRsharing.0b5a1d) records of IDC | Registry listings                                                                 |
 
+### Where the metadata comes from <a href="#where-the-metadata-comes-from" id="where-the-metadata-comes-from"></a>
+
+IDC's metadata starts in the DICOM files. IDC loads the files into its DICOM stores, exports the attributes of every file to BigQuery, and adds its own metadata there: collections, licenses, provenance and versions. The BigQuery tables are also exported as parquet to the public bucket above. `idc-index` packages subsets of these tables, chosen for convenience, as parquet files that it installs or downloads on first use; the SQL that builds each subset is public in the [`idc-index-data`](https://github.com/ImagingDataCommons/idc-index-data) repository. The REST API and the MCP server query the same subsets.
+
+This page uses `idc-index` only because it runs locally without a login. Each section names the DICOM attribute behind the columns it queries, so the same results can be obtained from BigQuery or from the files themselves.
+
 ## Setup <a href="#setup" id="setup"></a>
 
 ```bash
@@ -88,7 +94,7 @@ The number of series equals the number of distinct Series Instance UIDs and of d
 
 `index` has 31 columns. The modality-specific tables `ct_index`, `mr_index` and `pt_index` have 21, 22 and 21 columns, one of which is the series identifier; `DESCRIBE ct_index` lists them.
 
-Body part examined, missing or empty, by modality:
+Body Part Examined (0018,0015), the `BodyPartExamined` column of `index`, missing or empty, by modality:
 
 ```sql
 SELECT Modality,
@@ -137,6 +143,8 @@ s5cmd --no-sign-request cp 's3://idc-open-data/ec673959-b31f-47bb-acac-3a93fa8a2
 ```
 
 ### A2. Metadata of earlier versions <a href="#a2" id="a2"></a>
+
+`prior_versions_index` lists the versions of series that earlier releases served and the current release does not. It is IDC metadata, built from the metadata of every earlier release.
 
 ```sql
 SELECT
@@ -281,7 +289,7 @@ Exceptions, all in data as submitted:
 
 ### I2. Vocabularies <a href="#i2" id="i2"></a>
 
-**Segment codes.** `idc-index` records what each segment represents by name only, so the coding schemes come from the parquet export. This runs in DuckDB directly, outside `idc-index`, and takes a few minutes:
+**Segment codes.** Each segment of a segmentation codes what it represents in Segmented Property Type Code Sequence (0062,000F). `idc-index` keeps only the code meanings, so the coding schemes come from the BigQuery `segmentations` table, which lists the segments of every segmentation, read here from its parquet export. This runs in DuckDB directly, outside `idc-index`, and takes a few minutes:
 
 ```python
 import duckdb
@@ -348,7 +356,7 @@ Of 76 distinct values, 61 are defined terms and cover 574,115 of the 574,950 ser
 | `FUSION`           |     18 | `BD CT ABD WO_W C` |      2 |
 |                    |        | `BODY`             |      1 |
 
-**Segment Algorithm Type.** DICOM allows `AUTOMATIC`, `SEMIAUTOMATIC` and `MANUAL`. A series whose segments differ is recorded with a combined value:
+**Segment Algorithm Type.** Segment Algorithm Type (0062,0008) is recorded for each segment, and DICOM allows only `AUTOMATIC`, `SEMIAUTOMATIC` and `MANUAL`. The `AlgorithmType` column of `seg_index` combines the distinct values in a series into one, such as `AUTOMATIC,MANUAL`:
 
 ```sql
 SELECT AlgorithmType, COUNT(*) AS series,
@@ -395,7 +403,12 @@ ORDER BY series DESC
 | RTSTRUCT    |  19,366 |                        19,366 |                19,366 |
 | ANN         |   7,448 |                         7,448 |                 7,448 |
 
-Segmentation series that name no source series, by where they came from:
+The two last columns mean different things for different object types:
+
+* **RTSTRUCT and ANN** name the series they annotate directly, in RT Referenced Series Sequence (3006,0014) and Referenced Series Sequence (0008,1115) respectively. The last column checks that each series they name is in IDC.
+* **SEG**: `seg_index` finds the source series by taking the first source image a segmentation references, in Referenced Series Sequence (0008,1115), Referenced Image Sequence (0008,1140) or Source Image Sequence (0008,2112), and looking it up in IDC (see the [SQL](https://github.com/ImagingDataCommons/idc-index-data/blob/main/assets/seg_index.sql)). The two columns are therefore equal by construction, and a segmentation that references no images cannot be told apart from one that references images outside IDC.
+
+Segmentation series whose source series could not be identified, by where they came from:
 
 ```sql
 SELECT i.collection_id,
@@ -501,7 +514,7 @@ All 242 DOIs are `findable`. The licenses agree for 228 and disagree for 14, whi
 
 ### R1.2. Provenance <a href="#r1-2" id="r1-2"></a>
 
-Each data source has a provenance record: who contributed it to IDC, who provided the source material, who de-identified it and who converted it to DICOM.
+Each data source has a provenance record: who contributed it to IDC, who provided the source material, who de-identified it and who converted it to DICOM. It is IDC metadata, not part of the DICOM files. `idc-index` keeps it in `collections_index`, for each source of original data, and in `analysis_results_index`; in BigQuery it is in `original_collections_metadata` and `analysis_results_metadata`.
 
 ```sql
 SELECT 'original data' AS kind, COUNT(*) AS sources, COUNT(src.provenance) AS with_provenance
